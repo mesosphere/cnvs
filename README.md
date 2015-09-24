@@ -49,7 +49,7 @@ Like many LESS or SASS projects, Canvas relies on variables to drive style defin
 
 #### Scenario #1 (Statically-Defined Styles)
 
-```
+```css
 /* Styles */
 
 p {
@@ -67,7 +67,7 @@ h1 {
 
 #### Scenario #2 (Variable-Driven Styles)
 
-```
+```less
 /* Variables */
 
 @body-text-font-size:              12px;
@@ -103,7 +103,7 @@ With one exception, Canvas is self-contained.  It will compile stand-alone.  Thr
 
 It's recommended that you setup a simple build script, like the GULP script below, to pull in the `less-color-lighten` dependency, and include them during your LESS Compilation.
 
-```
+```js
 // Dependencies
 
 var autoprefixer = require("gulp-autoprefixer");
