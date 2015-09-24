@@ -1,0 +1,1300 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+template.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Color Swatches
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.color-swatches {
+
+  margin-bottom: -(@base-spacing-unit * 0.5);
+
+  .color-swatch {
+
+    margin-bottom: @base-spacing-unit * 0.5;
+
+    .color-swatch-cell {
+
+      display: block;
+      background: @neutral;
+      width: 100%;
+      height: 50px;
+      .border-radius(6px);
+      .box-shadow(inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1));
+
+    }
+
+    &.white {
+
+      .color-swatch-cell {
+
+        background: @white;
+
+      }
+
+    }
+
+    &.black {
+
+      .color-swatch-cell {
+
+        background: @black;
+
+      }
+
+    }
+
+    &.neutral {
+
+      .color-swatch-cell {
+
+        background: @neutral;
+
+      }
+
+    }
+
+    &.purple {
+
+      .color-swatch-cell {
+
+        background: @purple;
+
+      }
+
+    }
+
+    &.blue {
+
+      .color-swatch-cell {
+
+        background: @blue;
+
+      }
+
+    }
+
+    &.red {
+
+      .color-swatch-cell {
+
+        background: @red;
+
+      }
+
+    }
+
+    &.orange {
+
+      .color-swatch-cell {
+
+        background: @orange;
+
+      }
+
+    }
+
+    &.yellow {
+
+      .color-swatch-cell {
+
+        background: @yellow;
+
+      }
+
+    }
+
+    &.green {
+
+      .color-swatch-cell {
+
+        background: @green;
+
+      }
+
+    }
+
+    &.pink {
+
+      .color-swatch-cell {
+
+        background: @pink;
+
+      }
+
+    }
+
+    &.cyan {
+
+      .color-swatch-cell {
+
+        background: @cyan;
+
+      }
+
+    }
+
+    &.orchid {
+
+      .color-swatch-cell {
+
+        background: @orchid;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Color Blend
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.color-blend {
+
+  .clearfix();
+  display: block;
+  width: 100%;
+  height: 50px;
+  .border-radius(6px);
+  .box-shadow(inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1));
+  overflow: hidden;
+  margin-bottom: @base-spacing-unit * 0.5;
+
+  .color-blend-base {
+
+    float: left;
+    display: block;
+    width: 20%;
+    height: 100%;
+    background: @neutral;
+
+  }
+
+  .color-blend-spectrum {
+
+    float: left;
+    display: block;
+    width: 80%;
+    height: 100%;
+
+    .color-blend-spectrum-cell {
+
+      float: left;
+      display: block;
+      width: (100% / 19);
+      height: 50%;
+      background: @neutral;
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Color Blend (Neutral)
+  ----------------------------------------------------------------------------- */
+
+  &.neutral {
+
+    .color-blend-base {
+
+      background: @neutral;
+
+    }
+
+    .color-blend-spectrum {
+
+      .color-blend-spectrum-cell {
+
+        &.color-blend-spectrum-cell-lighten-5 {
+
+          background: color-lighten(@neutral, 5);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-10 {
+
+          background: color-lighten(@neutral, 10);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-15 {
+
+          background: color-lighten(@neutral, 15);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-20 {
+
+          background: color-lighten(@neutral, 20);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-25 {
+
+          background: color-lighten(@neutral, 25);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-30 {
+
+          background: color-lighten(@neutral, 30);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-35 {
+
+          background: color-lighten(@neutral, 35);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-40 {
+
+          background: color-lighten(@neutral, 40);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-45 {
+
+          background: color-lighten(@neutral, 45);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-50 {
+
+          background: color-lighten(@neutral, 50);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-55 {
+
+          background: color-lighten(@neutral, 55);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-60 {
+
+          background: color-lighten(@neutral, 60);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-65 {
+
+          background: color-lighten(@neutral, 65);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-70 {
+
+          background: color-lighten(@neutral, 70);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-75 {
+
+          background: color-lighten(@neutral, 75);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-80 {
+
+          background: color-lighten(@neutral, 80);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-85 {
+
+          background: color-lighten(@neutral, 85);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-90 {
+
+          background: color-lighten(@neutral, 90);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-95 {
+
+          background: color-lighten(@neutral, 95);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-100 {
+
+          background: color-lighten(@neutral, 100);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-5 {
+
+          background: color-lighten(@neutral, -5);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-10 {
+
+          background: color-lighten(@neutral, -10);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-15 {
+
+          background: color-lighten(@neutral, -15);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-20 {
+
+          background: color-lighten(@neutral, -20);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-25 {
+
+          background: color-lighten(@neutral, -25);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-30 {
+
+          background: color-lighten(@neutral, -30);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-35 {
+
+          background: color-lighten(@neutral, -35);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-40 {
+
+          background: color-lighten(@neutral, -40);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-45 {
+
+          background: color-lighten(@neutral, -45);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-50 {
+
+          background: color-lighten(@neutral, -50);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-55 {
+
+          background: color-lighten(@neutral, -55);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-60 {
+
+          background: color-lighten(@neutral, -60);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-65 {
+
+          background: color-lighten(@neutral, -65);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-70 {
+
+          background: color-lighten(@neutral, -70);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-75 {
+
+          background: color-lighten(@neutral, -75);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-80 {
+
+          background: color-lighten(@neutral, -80);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-85 {
+
+          background: color-lighten(@neutral, -85);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-90 {
+
+          background: color-lighten(@neutral, -90);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-95 {
+
+          background: color-lighten(@neutral, -95);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-100 {
+
+          background: color-lighten(@neutral, -100);
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  /* -----------------------------------------------------------------------------
+  Color Blend (Purple)
+  ----------------------------------------------------------------------------- */
+
+  &.purple {
+
+    .color-blend-base {
+
+      background: @purple;
+
+    }
+
+    .color-blend-spectrum {
+
+      .color-blend-spectrum-cell {
+
+        &.color-blend-spectrum-cell-lighten-5 {
+
+          background: color-lighten(@purple, 5);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-10 {
+
+          background: color-lighten(@purple, 10);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-15 {
+
+          background: color-lighten(@purple, 15);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-20 {
+
+          background: color-lighten(@purple, 20);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-25 {
+
+          background: color-lighten(@purple, 25);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-30 {
+
+          background: color-lighten(@purple, 30);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-35 {
+
+          background: color-lighten(@purple, 35);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-40 {
+
+          background: color-lighten(@purple, 40);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-45 {
+
+          background: color-lighten(@purple, 45);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-50 {
+
+          background: color-lighten(@purple, 50);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-55 {
+
+          background: color-lighten(@purple, 55);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-60 {
+
+          background: color-lighten(@purple, 60);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-65 {
+
+          background: color-lighten(@purple, 65);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-70 {
+
+          background: color-lighten(@purple, 70);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-75 {
+
+          background: color-lighten(@purple, 75);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-80 {
+
+          background: color-lighten(@purple, 80);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-85 {
+
+          background: color-lighten(@purple, 85);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-90 {
+
+          background: color-lighten(@purple, 90);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-95 {
+
+          background: color-lighten(@purple, 95);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-100 {
+
+          background: color-lighten(@purple, 100);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-5 {
+
+          background: color-lighten(@purple, -5);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-10 {
+
+          background: color-lighten(@purple, -10);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-15 {
+
+          background: color-lighten(@purple, -15);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-20 {
+
+          background: color-lighten(@purple, -20);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-25 {
+
+          background: color-lighten(@purple, -25);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-30 {
+
+          background: color-lighten(@purple, -30);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-35 {
+
+          background: color-lighten(@purple, -35);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-40 {
+
+          background: color-lighten(@purple, -40);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-45 {
+
+          background: color-lighten(@purple, -45);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-50 {
+
+          background: color-lighten(@purple, -50);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-55 {
+
+          background: color-lighten(@purple, -55);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-60 {
+
+          background: color-lighten(@purple, -60);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-65 {
+
+          background: color-lighten(@purple, -65);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-70 {
+
+          background: color-lighten(@purple, -70);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-75 {
+
+          background: color-lighten(@purple, -75);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-80 {
+
+          background: color-lighten(@purple, -80);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-85 {
+
+          background: color-lighten(@purple, -85);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-90 {
+
+          background: color-lighten(@purple, -90);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-95 {
+
+          background: color-lighten(@purple, -95);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-100 {
+
+          background: color-lighten(@purple, -100);
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  /* -----------------------------------------------------------------------------
+  Color Blend (Blue)
+  ----------------------------------------------------------------------------- */
+
+  &.blue {
+
+    .color-blend-base {
+
+      background: @blue;
+
+    }
+
+    .color-blend-spectrum {
+
+      .color-blend-spectrum-cell {
+
+        &.color-blend-spectrum-cell-lighten-5 {
+
+          background: color-lighten(@blue, 5);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-10 {
+
+          background: color-lighten(@blue, 10);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-15 {
+
+          background: color-lighten(@blue, 15);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-20 {
+
+          background: color-lighten(@blue, 20);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-25 {
+
+          background: color-lighten(@blue, 25);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-30 {
+
+          background: color-lighten(@blue, 30);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-35 {
+
+          background: color-lighten(@blue, 35);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-40 {
+
+          background: color-lighten(@blue, 40);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-45 {
+
+          background: color-lighten(@blue, 45);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-50 {
+
+          background: color-lighten(@blue, 50);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-55 {
+
+          background: color-lighten(@blue, 55);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-60 {
+
+          background: color-lighten(@blue, 60);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-65 {
+
+          background: color-lighten(@blue, 65);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-70 {
+
+          background: color-lighten(@blue, 70);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-75 {
+
+          background: color-lighten(@blue, 75);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-80 {
+
+          background: color-lighten(@blue, 80);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-85 {
+
+          background: color-lighten(@blue, 85);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-90 {
+
+          background: color-lighten(@blue, 90);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-95 {
+
+          background: color-lighten(@blue, 95);
+
+        }
+
+        &.color-blend-spectrum-cell-lighten-100 {
+
+          background: color-lighten(@blue, 100);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-5 {
+
+          background: color-lighten(@blue, -5);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-10 {
+
+          background: color-lighten(@blue, -10);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-15 {
+
+          background: color-lighten(@blue, -15);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-20 {
+
+          background: color-lighten(@blue, -20);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-25 {
+
+          background: color-lighten(@blue, -25);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-30 {
+
+          background: color-lighten(@blue, -30);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-35 {
+
+          background: color-lighten(@blue, -35);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-40 {
+
+          background: color-lighten(@blue, -40);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-45 {
+
+          background: color-lighten(@blue, -45);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-50 {
+
+          background: color-lighten(@blue, -50);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-55 {
+
+          background: color-lighten(@blue, -55);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-60 {
+
+          background: color-lighten(@blue, -60);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-65 {
+
+          background: color-lighten(@blue, -65);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-70 {
+
+          background: color-lighten(@blue, -70);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-75 {
+
+          background: color-lighten(@blue, -75);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-80 {
+
+          background: color-lighten(@blue, -80);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-85 {
+
+          background: color-lighten(@blue, -85);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-90 {
+
+          background: color-lighten(@blue, -90);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-95 {
+
+          background: color-lighten(@blue, -95);
+
+        }
+
+        &.color-blend-spectrum-cell-darken-100 {
+
+          background: color-lighten(@blue, -100);
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: Mini (@screen-mini) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+  }
+
+}
+
+
+
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: Small (@screen-small) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Color Swatches
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .color-swatches {
+
+      margin-bottom: -(@base-spacing-unit-screen-small * 0.5);
+
+      .color-swatch {
+
+        margin-bottom: @base-spacing-unit-screen-small * 0.5;
+
+        .color-swatch-cell {
+
+          height: 60px;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Color Blend
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .color-blend {
+
+      height: 60px;
+      margin-bottom: @base-spacing-unit-screen-small * 0.5;
+
+      .color-blend-base {
+
+        width: 20%;
+
+      }
+
+      .color-blend-spectrum {
+
+        width: 80%;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: Medium (@screen-medium) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Color Swatches
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .color-swatches {
+
+      margin-bottom: -(@base-spacing-unit-screen-medium * 0.5);
+
+      .color-swatch {
+
+        margin-bottom: @base-spacing-unit-screen-medium * 0.5;
+
+        .color-swatch-cell {
+
+          height: 80px;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Color Blend
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .color-blend {
+
+      height: 80px;
+      margin-bottom: @base-spacing-unit-screen-medium * 0.5;
+
+      .color-blend-base {
+
+        width: 20%;
+
+      }
+
+      .color-blend-spectrum {
+
+        width: 80%;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: Large (@screen-large) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Color Swatches
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .color-swatches {
+
+      margin-bottom: -(@base-spacing-unit-screen-large * 0.5);
+
+      .color-swatch {
+
+        margin-bottom: @base-spacing-unit-screen-large * 0.5;
+
+        .color-swatch-cell {
+
+          height: 80px;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Color Blend
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .color-blend {
+
+      height: 80px;
+      margin-bottom: @base-spacing-unit-screen-large * 0.5;
+
+      .color-blend-base {
+
+        width: 20%;
+
+      }
+
+      .color-blend-spectrum {
+
+        width: 80%;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@screen-resolution-2x-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Resolution: 2x
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+}
+
+
+
+
+
+
+& when (@screen-resolution-3x-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Resolution: 3x
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+
+  }
+
+}
