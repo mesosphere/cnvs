@@ -53,15 +53,15 @@ Like many LESS or SASS projects, Canvas relies on variables to drive style defin
 /* Styles */
 
 p {
-    font-size: 12px;
-    line-height: 18px;
-    margin: 0px 15px;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0px 15px;
 }
 
 h1 {
-    font-size: 24px;
-    line-height: 32px;
-    margin: 45px 30px;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 45px 30px;
 }
 ```
 
@@ -83,15 +83,15 @@ h1 {
 /* Styles */
 
 p {
-    font-size: @body-text-font-size;
-    line-height: @body-text-line-height;
-    margin: @body-text-margin-top @body-text-margin-bottom;
+  font-size: @body-text-font-size;
+  line-height: @body-text-line-height;
+  margin: @body-text-margin-top @body-text-margin-bottom;
 }
 
 h1 {
-    font-size: @heading-h1-text-font-size;
-    line-height: @heading-h1-text-line-height;
-    margin: @heading-h1-text-margin-top @heading-h1-text-margin-bottom;
+  font-size: @heading-h1-text-font-size;
+  line-height: @heading-h1-text-line-height;
+  margin: @heading-h1-text-margin-top @heading-h1-text-margin-bottom;
 }
 ```
 
