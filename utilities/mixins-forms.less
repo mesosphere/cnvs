@@ -1,0 +1,449 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+utilities/mixins-forms.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Form Control Variant Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+.form-control-variant(@variant-class: 'default') {
+
+  @form-control-variant-text-color: "form-control-@{variant-class}-text-color";
+  @form-control-variant-text-font-family: "form-control-@{variant-class}-text-font-family";
+  @form-control-variant-text-font-style: "form-control-@{variant-class}-text-font-style";
+  @form-control-variant-text-font-weight: "form-control-@{variant-class}-text-font-weight";
+  @form-control-variant-text-transform: "form-control-@{variant-class}-text-transform";
+  @form-control-variant-text-shadow: "form-control-@{variant-class}-text-shadow";
+  @form-control-variant-text-rendering: "form-control-@{variant-class}-text-rendering";
+  @form-control-variant-background-color: "form-control-@{variant-class}-background-color";
+  @form-control-variant-background-gradient-color-top: "form-control-@{variant-class}-background-gradient-color-top";
+  @form-control-variant-background-gradient-color-bottom: "form-control-@{variant-class}-background-gradient-color-bottom";
+  @form-control-variant-border-width: "form-control-@{variant-class}-border-width";
+  @form-control-variant-border-color: "form-control-@{variant-class}-border-color";
+  @form-control-variant-border-style: "form-control-@{variant-class}-border-style";
+  @form-control-variant-border-top-width: "form-control-@{variant-class}-border-top-width";
+  @form-control-variant-border-top-color: "form-control-@{variant-class}-border-top-color";
+  @form-control-variant-border-top-style: "form-control-@{variant-class}-border-top-style";
+  @form-control-variant-border-right-width: "form-control-@{variant-class}-border-right-width";
+  @form-control-variant-border-right-color: "form-control-@{variant-class}-border-right-color";
+  @form-control-variant-border-right-style: "form-control-@{variant-class}-border-right-style";
+  @form-control-variant-border-bottom-width: "form-control-@{variant-class}-border-bottom-width";
+  @form-control-variant-border-bottom-color: "form-control-@{variant-class}-border-bottom-color";
+  @form-control-variant-border-bottom-style: "form-control-@{variant-class}-border-bottom-style";
+  @form-control-variant-border-left-width: "form-control-@{variant-class}-border-left-width";
+  @form-control-variant-border-left-color: "form-control-@{variant-class}-border-left-color";
+  @form-control-variant-border-left-style: "form-control-@{variant-class}-border-left-style";
+  @form-control-variant-shadow: "form-control-@{variant-class}-shadow";
+  @form-control-variant-placeholder-text-color: "form-control-@{variant-class}-placeholder-text-color";
+
+  & when not (@@form-control-variant-text-color = null) {
+
+    color: @@form-control-variant-text-color;
+
+  }
+
+  & when not (@@form-control-variant-text-font-family = null) {
+
+    font-family: @@form-control-variant-text-font-family;
+
+  }
+
+  & when not (@@form-control-variant-text-font-style = null) {
+
+    font-style: @@form-control-variant-text-font-style;
+
+  }
+
+  & when not (@@form-control-variant-text-font-weight = null) {
+
+    font-weight: @@form-control-variant-text-font-weight;
+
+  }
+
+  & when not (@@form-control-variant-text-transform = null) {
+
+    text-transform: @@form-control-variant-text-transform;
+
+  }
+
+  & when not (@@form-control-variant-text-shadow = null) {
+
+    text-shadow: @@form-control-variant-text-shadow;
+
+  }
+
+  & when not (@@form-control-variant-text-rendering = null) {
+
+    text-rendering: @@form-control-variant-text-rendering;
+
+  }
+
+  & when not (@@form-control-variant-background-color = null) {
+
+    background: @@form-control-variant-background-color;
+
+  }
+
+  & when not (@@form-control-variant-background-gradient-color-top = null) and not (@@form-control-variant-background-gradient-color-bottom = null) {
+
+    #gradient > .vertical(@@form-control-variant-background-gradient-color-top, @@form-control-variant-background-gradient-color-bottom);
+
+  }
+
+  & when not (@@form-control-variant-border-width = null) {
+
+    border-width: @@form-control-variant-border-width;
+
+  }
+
+  & when not (@@form-control-variant-border-color = null) {
+
+    border-color: @@form-control-variant-border-color;
+
+  }
+
+  & when not (@@form-control-variant-border-style = null) {
+
+    border-style: @@form-control-variant-border-style;
+
+  }
+
+  & when not (@@form-control-variant-border-top-width = null) {
+
+    border-top-width: @@form-control-variant-border-top-width;
+
+  }
+
+  & when not (@@form-control-variant-border-top-color = null) {
+
+    border-top-color: @@form-control-variant-border-top-color;
+
+  }
+
+  & when not (@@form-control-variant-border-top-style = null) {
+
+    border-top-style: @@form-control-variant-border-top-style;
+
+  }
+
+  & when not (@@form-control-variant-border-right-width = null) {
+
+    border-right-width: @@form-control-variant-border-right-width;
+
+  }
+
+  & when not (@@form-control-variant-border-right-color = null) {
+
+    border-right-color: @@form-control-variant-border-right-color;
+
+  }
+
+  & when not (@@form-control-variant-border-right-style = null) {
+
+    border-right-style: @@form-control-variant-border-right-style;
+
+  }
+
+  & when not (@@form-control-variant-border-bottom-width = null) {
+
+    border-bottom-width: @@form-control-variant-border-bottom-width;
+
+  }
+
+  & when not (@@form-control-variant-border-bottom-color = null) {
+
+    border-bottom-color: @@form-control-variant-border-bottom-color;
+
+  }
+
+  & when not (@@form-control-variant-border-bottom-style = null) {
+
+    border-bottom-style: @@form-control-variant-border-bottom-style;
+
+  }
+
+  & when not (@@form-control-variant-border-left-width = null) {
+
+    border-left-width: @@form-control-variant-border-left-width;
+
+  }
+
+  & when not (@@form-control-variant-border-left-color = null) {
+
+    border-left-color: @@form-control-variant-border-left-color;
+
+  }
+
+  & when not (@@form-control-variant-border-left-style = null) {
+
+    border-left-style: @@form-control-variant-border-left-style;
+
+  }
+
+  & when not (@@form-control-variant-shadow = null) {
+
+    .box-shadow(@@form-control-variant-shadow);
+
+  }
+
+  & when not (@@form-control-variant-placeholder-text-color = null) {
+
+    .placeholder(@@form-control-variant-placeholder-text-color);
+
+  }
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Form Control Size Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.form-control-size-variant(@variant-size, @variant-screen-size) {
+
+  @form-control-variant-val-text-font-size: null;
+  @form-control-variant-val-text-font-size-scale: 1.0;
+
+  @form-control-variant-val-text-line-height: null;
+  @form-control-variant-val-text-line-height-scale: 1.0;
+
+  @form-control-variant-val-height: null;
+  @form-control-variant-val-height-scale: 1.0;
+
+  @form-control-variant-val-padding-horizontal: null;
+  @form-control-variant-val-padding-horizontal-scale: 1.0;
+
+  @form-control-variant-val-border-radius: null;
+  @form-control-variant-val-border-radius-scale: 1.0;
+
+
+
+  & when (@variant-size = '') {
+
+    & when (@variant-screen-size = '') {
+
+      @form-control-variant-text-font-size: "form-control-text-font-size";
+      @form-control-variant-val-text-font-size: @@form-control-variant-text-font-size;
+
+      @form-control-variant-text-line-height: "form-control-text-line-height";
+      @form-control-variant-val-text-line-height: @@form-control-variant-text-line-height;
+
+      @form-control-variant-height: "form-control-height";
+      @form-control-variant-val-height: @@form-control-variant-height;
+
+      @form-control-variant-padding-horizontal: "form-control-padding-horizontal";
+      @form-control-variant-val-padding-horizontal: @@form-control-variant-padding-horizontal;
+
+      @form-control-variant-border-radius: "form-control-border-radius";
+      @form-control-variant-val-border-radius: @@form-control-variant-border-radius;
+
+      .form-control-size-variant-definitions(@form-control-variant-val-text-font-size, @form-control-variant-val-text-font-size-scale, @form-control-variant-val-text-line-height, @form-control-variant-val-text-line-height-scale, @form-control-variant-val-height, @form-control-variant-val-height-scale, @form-control-variant-val-padding-horizontal, @form-control-variant-val-padding-horizontal-scale, @form-control-variant-val-border-radius, @form-control-variant-val-border-radius-scale);
+
+    }
+
+    & when not (@variant-screen-size = '') {
+
+      @form-control-variant-text-font-size: "form-control-text-font-size";
+      @form-control-variant-val-text-font-size: @@form-control-variant-text-font-size;
+
+      @form-control-variant-text-font-size-scale: "form-control-text-font-size-scale-@{variant-screen-size}";
+      @form-control-variant-val-text-font-size-scale: @@form-control-variant-text-font-size-scale;
+
+      @form-control-variant-text-line-height: "form-control-text-line-height";
+      @form-control-variant-val-text-line-height: @@form-control-variant-text-line-height;
+
+      @form-control-variant-text-line-height-scale: "form-control-text-line-height-scale-@{variant-screen-size}";
+      @form-control-variant-val-text-line-height-scale: @@form-control-variant-text-line-height-scale;
+
+      @form-control-variant-height: "form-control-height";
+      @form-control-variant-val-height: @@form-control-variant-height;
+
+      @form-control-variant-height-scale: "form-control-height-scale-@{variant-screen-size}";
+      @form-control-variant-val-height-scale: @@form-control-variant-height-scale;
+
+      @form-control-variant-padding-horizontal: "form-control-padding-horizontal";
+      @form-control-variant-val-padding-horizontal: @@form-control-variant-padding-horizontal;
+
+      @form-control-variant-padding-horizontal-scale: "form-control-padding-horizontal-scale-@{variant-screen-size}";
+      @form-control-variant-val-padding-horizontal-scale: @@form-control-variant-padding-horizontal-scale;
+
+      @form-control-variant-border-radius: "form-control-border-radius";
+      @form-control-variant-val-border-radius: @@form-control-variant-border-radius;
+
+      @form-control-variant-border-radius-scale: "form-control-border-radius-scale-@{variant-screen-size}";
+      @form-control-variant-val-border-radius-scale: @@form-control-variant-border-radius-scale;
+
+      .form-control-size-variant-definitions(@form-control-variant-val-text-font-size, @form-control-variant-val-text-font-size-scale, @form-control-variant-val-text-line-height, @form-control-variant-val-text-line-height-scale, @form-control-variant-val-height, @form-control-variant-val-height-scale, @form-control-variant-val-padding-horizontal, @form-control-variant-val-padding-horizontal-scale, @form-control-variant-val-border-radius, @form-control-variant-val-border-radius-scale);
+
+    }
+
+  }
+
+  & when not (@variant-size = '') {
+
+    & when (@variant-screen-size = '') {
+
+      @form-control-variant-text-font-size: "form-control-@{variant-size}-text-font-size";
+      @form-control-variant-val-text-font-size: @@form-control-variant-text-font-size;
+
+      @form-control-variant-text-line-height: "form-control-@{variant-size}-text-line-height";
+      @form-control-variant-val-text-line-height: @@form-control-variant-text-line-height;
+
+      @form-control-variant-height: "form-control-@{variant-size}-height";
+      @form-control-variant-val-height: @@form-control-variant-height;
+
+      @form-control-variant-padding-horizontal: "form-control-@{variant-size}-padding-horizontal";
+      @form-control-variant-val-padding-horizontal: @@form-control-variant-padding-horizontal;
+
+      @form-control-variant-border-radius: "form-control-@{variant-size}-border-radius";
+      @form-control-variant-val-border-radius: @@form-control-variant-border-radius;
+
+      .form-control-size-variant-definitions(@form-control-variant-val-text-font-size, @form-control-variant-val-text-font-size-scale, @form-control-variant-val-text-line-height, @form-control-variant-val-text-line-height-scale, @form-control-variant-val-height, @form-control-variant-val-height-scale, @form-control-variant-val-padding-horizontal, @form-control-variant-val-padding-horizontal-scale, @form-control-variant-val-border-radius, @form-control-variant-val-border-radius-scale);
+
+    }
+
+    & when not (@variant-screen-size = '') {
+
+      @form-control-variant-text-font-size: "form-control-@{variant-size}-text-font-size";
+      @form-control-variant-val-text-font-size: @@form-control-variant-text-font-size;
+
+      @form-control-variant-text-font-size-scale: "form-control-@{variant-size}-text-font-size-scale-@{variant-screen-size}";
+      @form-control-variant-val-text-font-size-scale: @@form-control-variant-text-font-size-scale;
+
+      @form-control-variant-text-line-height: "form-control-@{variant-size}-text-line-height";
+      @form-control-variant-val-text-line-height: @@form-control-variant-text-line-height;
+
+      @form-control-variant-text-line-height-scale: "form-control-@{variant-size}-text-line-height-scale-@{variant-screen-size}";
+      @form-control-variant-val-text-line-height-scale: @@form-control-variant-text-line-height-scale;
+
+      @form-control-variant-height: "form-control-@{variant-size}-height";
+      @form-control-variant-val-height: @@form-control-variant-height;
+
+      @form-control-variant-height-scale: "form-control-@{variant-size}-height-scale-@{variant-screen-size}";
+      @form-control-variant-val-height-scale: @@form-control-variant-height-scale;
+
+      @form-control-variant-padding-horizontal: "form-control-@{variant-size}-padding-horizontal";
+      @form-control-variant-val-padding-horizontal: @@form-control-variant-padding-horizontal;
+
+      @form-control-variant-padding-horizontal-scale: "form-control-@{variant-size}-padding-horizontal-scale-@{variant-screen-size}";
+      @form-control-variant-val-padding-horizontal-scale: @@form-control-variant-padding-horizontal-scale;
+
+      @form-control-variant-border-radius: "form-control-@{variant-size}-border-radius";
+      @form-control-variant-val-border-radius: @@form-control-variant-border-radius;
+
+      @form-control-variant-border-radius-scale: "form-control-@{variant-size}-border-radius-scale-@{variant-screen-size}";
+      @form-control-variant-val-border-radius-scale: @@form-control-variant-border-radius-scale;
+
+      .form-control-size-variant-definitions(@form-control-variant-val-text-font-size, @form-control-variant-val-text-font-size-scale, @form-control-variant-val-text-line-height, @form-control-variant-val-text-line-height-scale, @form-control-variant-val-height, @form-control-variant-val-height-scale, @form-control-variant-val-padding-horizontal, @form-control-variant-val-padding-horizontal-scale, @form-control-variant-val-border-radius, @form-control-variant-val-border-radius-scale);
+
+    }
+
+  }
+
+}
+
+
+
+.form-control-size-variant-definitions(@text-font-size, @text-font-size-scale, @text-line-height, @text-line-height-scale, @height, @height-scale, @padding-horizontal, @padding-horizontal-scale, @border-radius, @border-radius-scale) {
+
+  & when not (@text-font-size = null) {
+
+    font-size: floor(@text-font-size * @text-font-size-scale);
+
+  }
+
+  & when not (@text-line-height = null) {
+
+    line-height: floor(@text-line-height * @text-line-height-scale);
+
+  }
+
+  & when not (@height = null) {
+
+    height: floor(@height * @height-scale);
+    padding-top: floor((floor(@height * @height-scale) - floor(@text-line-height * @text-line-height-scale)) / 2);
+    padding-bottom: floor((floor(@height * @height-scale) - floor(@text-line-height * @text-line-height-scale)) / 2);
+
+  }
+
+  & when not (@padding-horizontal = null) {
+
+    padding-left: floor(@padding-horizontal * @padding-horizontal-scale);
+    padding-right: floor(@padding-horizontal * @padding-horizontal-scale);
+
+  }
+
+  & when not (@border-radius = null) {
+
+    .border-radius(@border-radius * @border-radius-scale);
+
+  }
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Form Control Group Variant Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+.form-control-group-variant(@variant-class: 'default') {
+
+  @form-control-variant-border-width: "form-control-@{variant-class}-border-width";
+  @form-control-variant-border-top-width: "form-control-@{variant-class}-border-top-width";
+  @form-control-variant-border-right-width: "form-control-@{variant-class}-border-right-width";
+  @form-control-variant-border-bottom-width: "form-control-@{variant-class}-border-bottom-width";
+  @form-control-variant-border-left-width: "form-control-@{variant-class}-border-left-width";
+
+  & when not (@@form-control-variant-border-width = null) {
+
+    margin-top: -1 * @@form-control-variant-border-width !important;
+    margin-bottom: -1 * @@form-control-variant-border-width !important;
+
+  }
+
+  & when not (@@form-control-variant-border-top-width = null) {
+
+    margin-top: -1 *@@form-control-variant-border-top-width !important;
+
+  }
+
+  & when not (@@form-control-variant-border-bottom-width = null) {
+
+    margin-bottom: -1 * @@form-control-variant-border-bottom-width !important;
+
+  }
+
+}

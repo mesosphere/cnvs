@@ -1,0 +1,1181 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+variables/variables-dropdown-menus.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-width-minimum:                                                   160px;
+@dropdown-menu-padding-horizontal:                                              @base-spacing-unit * 0.5;
+@dropdown-menu-padding-vertical:                                                @base-spacing-unit * 0.25;
+@dropdown-menu-offset-horizontal:                                               0px;
+@dropdown-menu-offset-vertical:                                                 2px;
+@dropdown-menu-border-radius:                                                   @button-border-radius;
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-scale-screen-mini-enabled:                                       @screen-mini-enabled;
+@dropdown-menu-scale-screen-small-enabled:                                      @screen-small-enabled;
+@dropdown-menu-scale-screen-medium-enabled:                                     @screen-medium-enabled;
+@dropdown-menu-scale-screen-large-enabled:                                      @screen-large-enabled;
+
+@dropdown-menu-scale-screen-mini:                                               1.0;
+@dropdown-menu-scale-screen-small:                                              1.1;
+@dropdown-menu-scale-screen-medium:                                             1.2;
+@dropdown-menu-scale-screen-large:                                              1.2;
+
+@dropdown-menu-padding-horizontal-scale-screen-mini:                            @dropdown-menu-scale-screen-mini;
+@dropdown-menu-padding-horizontal-scale-screen-small:                           @dropdown-menu-scale-screen-small;
+@dropdown-menu-padding-horizontal-scale-screen-medium:                          @dropdown-menu-scale-screen-medium;
+@dropdown-menu-padding-horizontal-scale-screen-large:                           @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-padding-vertical-scale-screen-mini:                              @dropdown-menu-scale-screen-mini;
+@dropdown-menu-padding-vertical-scale-screen-small:                             @dropdown-menu-scale-screen-small;
+@dropdown-menu-padding-vertical-scale-screen-medium:                            @dropdown-menu-scale-screen-medium;
+@dropdown-menu-padding-vertical-scale-screen-large:                             @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-border-radius-scale-screen-mini:                                 @button-border-radius-scale-screen-mini;
+@dropdown-menu-border-radius-scale-screen-small:                                @button-border-radius-scale-screen-small;
+@dropdown-menu-border-radius-scale-screen-medium:                               @button-border-radius-scale-screen-medium;
+@dropdown-menu-border-radius-scale-screen-large:                                @button-border-radius-scale-screen-large;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Styling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-default-background-color:                                        @white;
+@dropdown-menu-default-background-gradient-color-top:                           none;
+@dropdown-menu-default-background-gradient-color-bottom:                        none;
+@dropdown-menu-default-border-width:                                            0px;
+@dropdown-menu-default-border-color:                                            none;
+@dropdown-menu-default-border-top-width:                                        @dropdown-menu-default-border-width;
+@dropdown-menu-default-border-top-color:                                        @dropdown-menu-default-border-color;
+@dropdown-menu-default-border-right-width:                                      @dropdown-menu-default-border-width;
+@dropdown-menu-default-border-right-color:                                      @dropdown-menu-default-border-color;
+@dropdown-menu-default-border-bottom-width:                                     @dropdown-menu-default-border-width;
+@dropdown-menu-default-border-bottom-color:                                     @dropdown-menu-default-border-color;
+@dropdown-menu-default-border-left-width:                                       @dropdown-menu-default-border-width;
+@dropdown-menu-default-border-left-color:                                       @dropdown-menu-default-border-color;
+@dropdown-menu-default-shadow:                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu (Inverse) Styling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-inverse-enabled:                                                 @dropdown-menu-enabled;
+@dropdown-menu-inverse-background-color:                                        color-lighten(@neutral, 5);
+@dropdown-menu-inverse-background-gradient-color-top:                           none;
+@dropdown-menu-inverse-background-gradient-color-bottom:                        none;
+@dropdown-menu-inverse-border-width:                                            @dropdown-menu-default-border-width;
+@dropdown-menu-inverse-border-color:                                            none;
+@dropdown-menu-inverse-border-top-width:                                        @dropdown-menu-inverse-border-width;
+@dropdown-menu-inverse-border-top-color:                                        @dropdown-menu-inverse-border-color;
+@dropdown-menu-inverse-border-right-width:                                      @dropdown-menu-inverse-border-width;
+@dropdown-menu-inverse-border-right-color:                                      @dropdown-menu-inverse-border-color;
+@dropdown-menu-inverse-border-bottom-width:                                     @dropdown-menu-inverse-border-width;
+@dropdown-menu-inverse-border-bottom-color:                                     @dropdown-menu-inverse-border-color;
+@dropdown-menu-inverse-border-left-width:                                       @dropdown-menu-inverse-border-width;
+@dropdown-menu-inverse-border-left-color:                                       @dropdown-menu-inverse-border-color;
+@dropdown-menu-inverse-shadow:                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu Header
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Header Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-header-text-font-size:                                           @dropdown-menu-list-item-text-font-size * 0.85;
+@dropdown-menu-header-text-line-height:                                         @dropdown-menu-list-item-text-line-height;
+@dropdown-menu-header-height-minimum:                                           @dropdown-menu-header-text-line-height;
+@dropdown-menu-header-padding-horizontal:                                       @dropdown-menu-padding-horizontal;
+@dropdown-menu-header-margin-vertical-top:                                      @dropdown-menu-padding-vertical * 1.5;
+@dropdown-menu-header-margin-vertical-bottom:                                   @dropdown-menu-padding-vertical * 0.5;
+@dropdown-menu-header-margin-horizontal:                                        -@dropdown-menu-padding-horizontal;
+@dropdown-menu-header-border-radius:                                            0px;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Header Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-header-scale-screen-mini-enabled:                                @dropdown-menu-scale-screen-mini-enabled;
+@dropdown-menu-header-scale-screen-small-enabled:                               @dropdown-menu-scale-screen-small-enabled;
+@dropdown-menu-header-scale-screen-medium-enabled:                              @dropdown-menu-scale-screen-medium-enabled;
+@dropdown-menu-header-scale-screen-large-enabled:                               @dropdown-menu-scale-screen-large-enabled;
+
+@dropdown-menu-header-text-font-size-scale-screen-mini:                         @body-text-font-size-scale-screen-mini;
+@dropdown-menu-header-text-font-size-scale-screen-small:                        @body-text-font-size-scale-screen-small;
+@dropdown-menu-header-text-font-size-scale-screen-medium:                       @body-text-font-size-scale-screen-medium;
+@dropdown-menu-header-text-font-size-scale-screen-large:                        @body-text-font-size-scale-screen-large;
+
+@dropdown-menu-header-text-line-height-scale-screen-mini:                       @body-text-line-height-scale-screen-mini;
+@dropdown-menu-header-text-line-height-scale-screen-small:                      @body-text-line-height-scale-screen-small;
+@dropdown-menu-header-text-line-height-scale-screen-medium:                     @body-text-line-height-scale-screen-medium;
+@dropdown-menu-header-text-line-height-scale-screen-large:                      @body-text-line-height-scale-screen-large;
+
+@dropdown-menu-header-height-scale-screen-mini:                                 @dropdown-menu-scale-screen-mini;
+@dropdown-menu-header-height-scale-screen-small:                                @dropdown-menu-scale-screen-small;
+@dropdown-menu-header-height-scale-screen-medium:                               @dropdown-menu-scale-screen-medium;
+@dropdown-menu-header-height-scale-screen-large:                                @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-header-padding-horizontal-scale-screen-mini:                     @dropdown-menu-padding-horizontal-scale-screen-mini;
+@dropdown-menu-header-padding-horizontal-scale-screen-small:                    @dropdown-menu-padding-horizontal-scale-screen-small;
+@dropdown-menu-header-padding-horizontal-scale-screen-medium:                   @dropdown-menu-padding-horizontal-scale-screen-medium;
+@dropdown-menu-header-padding-horizontal-scale-screen-large:                    @dropdown-menu-padding-horizontal-scale-screen-large;
+
+@dropdown-menu-header-margin-vertical-scale-screen-mini:                        @dropdown-menu-scale-screen-mini;
+@dropdown-menu-header-margin-vertical-scale-screen-small:                       @dropdown-menu-scale-screen-small;
+@dropdown-menu-header-margin-vertical-scale-screen-medium:                      @dropdown-menu-scale-screen-medium;
+@dropdown-menu-header-margin-vertical-scale-screen-large:                       @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-header-margin-horizontal-scale-screen-mini:                      @dropdown-menu-scale-screen-mini;
+@dropdown-menu-header-margin-horizontal-scale-screen-small:                     @dropdown-menu-scale-screen-small;
+@dropdown-menu-header-margin-horizontal-scale-screen-medium:                    @dropdown-menu-scale-screen-medium;
+@dropdown-menu-header-margin-horizontal-scale-screen-large:                     @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-header-border-radius-scale-screen-mini:                          @dropdown-menu-scale-screen-mini;
+@dropdown-menu-header-border-radius-scale-screen-small:                         @dropdown-menu-scale-screen-small;
+@dropdown-menu-header-border-radius-scale-screen-medium:                        @dropdown-menu-scale-screen-medium;
+@dropdown-menu-header-border-radius-scale-screen-large:                         @dropdown-menu-scale-screen-large;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Header (Default) Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-header-default-text-color:                                       color-lighten(@neutral, 60);
+@dropdown-menu-header-default-text-font-family:                                 @font-family-sans-serif;
+@dropdown-menu-header-default-text-font-style:                                  normal;
+@dropdown-menu-header-default-text-font-weight:                                 400;
+@dropdown-menu-header-default-text-transform:                                   uppercase;
+@dropdown-menu-header-default-text-shadow:                                      none;
+@dropdown-menu-header-default-text-decoration:                                  none;
+@dropdown-menu-header-default-text-rendering:                                   optimizelegibility;
+@dropdown-menu-header-default-background-color:                                 none;
+@dropdown-menu-header-default-background-gradient-color-top:                    none;
+@dropdown-menu-header-default-background-gradient-color-bottom:                 none;
+@dropdown-menu-header-default-border-width:                                     0px;
+@dropdown-menu-header-default-border-color:                                     none;
+@dropdown-menu-header-default-border-top-width:                                 @dropdown-menu-header-default-border-width;
+@dropdown-menu-header-default-border-top-color:                                 @dropdown-menu-header-default-border-color;
+@dropdown-menu-header-default-border-right-width:                               @dropdown-menu-header-default-border-width;
+@dropdown-menu-header-default-border-right-color:                               @dropdown-menu-header-default-border-color;
+@dropdown-menu-header-default-border-bottom-width:                              @dropdown-menu-header-default-border-width;
+@dropdown-menu-header-default-border-bottom-color:                              @dropdown-menu-header-default-border-color;
+@dropdown-menu-header-default-border-left-width:                                @dropdown-menu-header-default-border-width;
+@dropdown-menu-header-default-border-left-color:                                @dropdown-menu-header-default-border-color;
+@dropdown-menu-header-default-caret-color:                                      @dropdown-menu-header-default-text-color;
+@dropdown-menu-header-default-shadow:                                           none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Header (Inverse) Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-header-inverse-enabled:                                          @dropdown-menu-inverse-enabled;
+@dropdown-menu-header-inverse-text-color:                                       color-lighten(@neutral, 40);
+@dropdown-menu-header-inverse-text-font-family:                                 @font-family-sans-serif;
+@dropdown-menu-header-inverse-text-font-style:                                  normal;
+@dropdown-menu-header-inverse-text-font-weight:                                 400;
+@dropdown-menu-header-inverse-text-transform:                                   uppercase;
+@dropdown-menu-header-inverse-text-shadow:                                      none;
+@dropdown-menu-header-inverse-text-decoration:                                  none;
+@dropdown-menu-header-inverse-text-rendering:                                   optimizelegibility;
+@dropdown-menu-header-inverse-background-color:                                 none;
+@dropdown-menu-header-inverse-background-gradient-color-top:                    none;
+@dropdown-menu-header-inverse-background-gradient-color-bottom:                 none;
+@dropdown-menu-header-inverse-border-width:                                     0px;
+@dropdown-menu-header-inverse-border-color:                                     none;
+@dropdown-menu-header-inverse-border-top-width:                                 @dropdown-menu-header-inverse-border-width;
+@dropdown-menu-header-inverse-border-top-color:                                 @dropdown-menu-header-inverse-border-color;
+@dropdown-menu-header-inverse-border-right-width:                               @dropdown-menu-header-inverse-border-width;
+@dropdown-menu-header-inverse-border-right-color:                               @dropdown-menu-header-inverse-border-color;
+@dropdown-menu-header-inverse-border-bottom-width:                              @dropdown-menu-header-inverse-border-width;
+@dropdown-menu-header-inverse-border-bottom-color:                              @dropdown-menu-header-inverse-border-color;
+@dropdown-menu-header-inverse-border-left-width:                                @dropdown-menu-header-inverse-border-width;
+@dropdown-menu-header-inverse-border-left-color:                                @dropdown-menu-header-inverse-border-color;
+@dropdown-menu-header-inverse-caret-color:                                      @dropdown-menu-header-inverse-text-color;
+@dropdown-menu-header-inverse-shadow:                                           none;
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu Divider
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Divider Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-divider-height:                                                  1px;
+@dropdown-menu-divider-padding-horizontal:                                      @dropdown-menu-padding-horizontal;
+@dropdown-menu-divider-margin-vertical-top:                                     @dropdown-menu-padding-vertical;
+@dropdown-menu-divider-margin-vertical-bottom:                                  @dropdown-menu-padding-vertical;
+@dropdown-menu-divider-margin-horizontal:                                       -@dropdown-menu-padding-horizontal;
+@dropdown-menu-divider-border-radius:                                           0px;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Divider Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-divider-scale-screen-mini-enabled:                               @dropdown-menu-scale-screen-mini-enabled;
+@dropdown-menu-divider-scale-screen-small-enabled:                              @dropdown-menu-scale-screen-small-enabled;
+@dropdown-menu-divider-scale-screen-medium-enabled:                             @dropdown-menu-scale-screen-medium-enabled;
+@dropdown-menu-divider-scale-screen-large-enabled:                              @dropdown-menu-scale-screen-large-enabled;
+
+@dropdown-menu-divider-height-scale-screen-mini:                                1.0;
+@dropdown-menu-divider-height-scale-screen-small:                               1.0;
+@dropdown-menu-divider-height-scale-screen-medium:                              1.0;
+@dropdown-menu-divider-height-scale-screen-large:                               1.0;
+
+@dropdown-menu-divider-padding-horizontal-scale-screen-mini:                    @dropdown-menu-padding-horizontal-scale-screen-mini;
+@dropdown-menu-divider-padding-horizontal-scale-screen-small:                   @dropdown-menu-padding-horizontal-scale-screen-small;
+@dropdown-menu-divider-padding-horizontal-scale-screen-medium:                  @dropdown-menu-padding-horizontal-scale-screen-medium;
+@dropdown-menu-divider-padding-horizontal-scale-screen-large:                   @dropdown-menu-padding-horizontal-scale-screen-large;
+
+@dropdown-menu-divider-margin-vertical-scale-screen-mini:                       @dropdown-menu-scale-screen-mini;
+@dropdown-menu-divider-margin-vertical-scale-screen-small:                      @dropdown-menu-scale-screen-small;
+@dropdown-menu-divider-margin-vertical-scale-screen-medium:                     @dropdown-menu-scale-screen-medium;
+@dropdown-menu-divider-margin-vertical-scale-screen-large:                      @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-divider-margin-horizontal-scale-screen-mini:                     @dropdown-menu-scale-screen-mini;
+@dropdown-menu-divider-margin-horizontal-scale-screen-small:                    @dropdown-menu-scale-screen-small;
+@dropdown-menu-divider-margin-horizontal-scale-screen-medium:                   @dropdown-menu-scale-screen-medium;
+@dropdown-menu-divider-margin-horizontal-scale-screen-large:                    @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-divider-border-radius-scale-screen-mini:                         @dropdown-menu-scale-screen-mini;
+@dropdown-menu-divider-border-radius-scale-screen-small:                        @dropdown-menu-scale-screen-small;
+@dropdown-menu-divider-border-radius-scale-screen-medium:                       @dropdown-menu-scale-screen-medium;
+@dropdown-menu-divider-border-radius-scale-screen-large:                        @dropdown-menu-scale-screen-large;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Divider (Default) Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-divider-default-background-color:                                @border-color;
+@dropdown-menu-divider-default-background-gradient-color-top:                   none;
+@dropdown-menu-divider-default-background-gradient-color-bottom:                none;
+@dropdown-menu-divider-default-border-width:                                    0px;
+@dropdown-menu-divider-default-border-color:                                    none;
+@dropdown-menu-divider-default-border-top-width:                                @dropdown-menu-divider-default-border-width;
+@dropdown-menu-divider-default-border-top-color:                                @dropdown-menu-divider-default-border-color;
+@dropdown-menu-divider-default-border-right-width:                              @dropdown-menu-divider-default-border-width;
+@dropdown-menu-divider-default-border-right-color:                              @dropdown-menu-divider-default-border-color;
+@dropdown-menu-divider-default-border-bottom-width:                             @dropdown-menu-divider-default-border-width;
+@dropdown-menu-divider-default-border-bottom-color:                             @dropdown-menu-divider-default-border-color;
+@dropdown-menu-divider-default-border-left-width:                               @dropdown-menu-divider-default-border-width;
+@dropdown-menu-divider-default-border-left-color:                               @dropdown-menu-divider-default-border-color;
+@dropdown-menu-divider-default-shadow:                                          none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Divider (Inverse) Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-divider-inverse-enabled:                                         @dropdown-menu-inverse-enabled;
+@dropdown-menu-divider-inverse-background-color:                                @border-color-inverse;
+@dropdown-menu-divider-inverse-background-gradient-color-top:                   none;
+@dropdown-menu-divider-inverse-background-gradient-color-bottom:                none;
+@dropdown-menu-divider-inverse-border-width:                                    @dropdown-menu-divider-default-border-width;
+@dropdown-menu-divider-inverse-border-color:                                    none;
+@dropdown-menu-divider-inverse-border-top-width:                                @dropdown-menu-divider-inverse-border-width;
+@dropdown-menu-divider-inverse-border-top-color:                                @dropdown-menu-divider-inverse-border-color;
+@dropdown-menu-divider-inverse-border-right-width:                              @dropdown-menu-divider-inverse-border-width;
+@dropdown-menu-divider-inverse-border-right-color:                              @dropdown-menu-divider-inverse-border-color;
+@dropdown-menu-divider-inverse-border-bottom-width:                             @dropdown-menu-divider-inverse-border-width;
+@dropdown-menu-divider-inverse-border-bottom-color:                             @dropdown-menu-divider-inverse-border-color;
+@dropdown-menu-divider-inverse-border-left-width:                               @dropdown-menu-divider-inverse-border-width;
+@dropdown-menu-divider-inverse-border-left-color:                               @dropdown-menu-divider-inverse-border-color;
+@dropdown-menu-divider-inverse-shadow:                                          none;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu List
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-margin-horizontal:                                          -1 * @dropdown-menu-padding-horizontal;
+@dropdown-menu-list-margin-vertical:                                            @dropdown-menu-padding-vertical;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-scale-screen-mini-enabled:                                  @dropdown-menu-scale-screen-mini-enabled;
+@dropdown-menu-list-scale-screen-small-enabled:                                 @dropdown-menu-scale-screen-small-enabled;
+@dropdown-menu-list-scale-screen-medium-enabled:                                @dropdown-menu-scale-screen-medium-enabled;
+@dropdown-menu-list-scale-screen-large-enabled:                                 @dropdown-menu-scale-screen-large-enabled;
+
+@dropdown-menu-list-margin-horizontal-scale-screen-mini:                        @dropdown-menu-padding-horizontal-scale-screen-mini;
+@dropdown-menu-list-margin-horizontal-scale-screen-small:                       @dropdown-menu-padding-horizontal-scale-screen-small;
+@dropdown-menu-list-margin-horizontal-scale-screen-medium:                      @dropdown-menu-padding-horizontal-scale-screen-medium;
+@dropdown-menu-list-margin-horizontal-scale-screen-large:                       @dropdown-menu-padding-horizontal-scale-screen-large;
+
+@dropdown-menu-list-margin-vertical-scale-screen-mini:                          @dropdown-menu-padding-vertical-scale-screen-mini;
+@dropdown-menu-list-margin-vertical-scale-screen-small:                         @dropdown-menu-padding-vertical-scale-screen-small;
+@dropdown-menu-list-margin-vertical-scale-screen-medium:                        @dropdown-menu-padding-vertical-scale-screen-medium;
+@dropdown-menu-list-margin-vertical-scale-screen-large:                         @dropdown-menu-padding-vertical-scale-screen-large;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu List Item
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-text-font-size:                                        @button-small-text-font-size;
+@dropdown-menu-list-item-text-line-height:                                      @button-small-text-line-height;
+@dropdown-menu-list-item-height:                                                26px;
+@dropdown-menu-list-item-padding-horizontal:                                    @dropdown-menu-padding-horizontal;
+@dropdown-menu-list-item-margin-vertical:                                       0px;
+@dropdown-menu-list-item-margin-horizontal:                                     0px;
+@dropdown-menu-list-item-border-radius:                                         0px;
+
+@dropdown-menu-list-item-text-color:                                            @body-text-color;
+@dropdown-menu-list-item-text-font-family:                                      @font-family-sans-serif;
+@dropdown-menu-list-item-text-font-style:                                       normal;
+@dropdown-menu-list-item-text-font-weight:                                      400;
+@dropdown-menu-list-item-text-transform:                                        none;
+@dropdown-menu-list-item-text-shadow:                                           none;
+@dropdown-menu-list-item-text-decoration:                                       none;
+@dropdown-menu-list-item-text-rendering:                                        optimizelegibility;
+@dropdown-menu-list-item-background-color:                                      none;
+@dropdown-menu-list-item-background-gradient-color-top:                         none;
+@dropdown-menu-list-item-background-gradient-color-bottom:                      none;
+@dropdown-menu-list-item-border-width:                                          0px;
+@dropdown-menu-list-item-border-color:                                          none;
+@dropdown-menu-list-item-border-top-width:                                      @dropdown-menu-list-item-border-width;
+@dropdown-menu-list-item-border-top-color:                                      @dropdown-menu-list-item-border-color;
+@dropdown-menu-list-item-border-right-width:                                    @dropdown-menu-list-item-border-width;
+@dropdown-menu-list-item-border-right-color:                                    @dropdown-menu-list-item-border-color;
+@dropdown-menu-list-item-border-bottom-width:                                   @dropdown-menu-list-item-border-width;
+@dropdown-menu-list-item-border-bottom-color:                                   @dropdown-menu-list-item-border-color;
+@dropdown-menu-list-item-border-left-width:                                     @dropdown-menu-list-item-border-width;
+@dropdown-menu-list-item-border-left-color:                                     @dropdown-menu-list-item-border-color;
+@dropdown-menu-list-item-caret-color:                                           @dropdown-menu-list-item-text-color;
+@dropdown-menu-list-item-shadow:                                                none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item Styles (Inverse)
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-inverse-enabled:                                       @dropdown-menu-inverse-enabled;
+
+@dropdown-menu-list-item-inverse-text-color:                                    @body-text-inverse-color;
+@dropdown-menu-list-item-inverse-text-font-family:                              @font-family-sans-serif;
+@dropdown-menu-list-item-inverse-text-font-style:                               normal;
+@dropdown-menu-list-item-inverse-text-font-weight:                              400;
+@dropdown-menu-list-item-inverse-text-transform:                                none;
+@dropdown-menu-list-item-inverse-text-shadow:                                   none;
+@dropdown-menu-list-item-inverse-text-decoration:                               none;
+@dropdown-menu-list-item-inverse-text-rendering:                                optimizelegibility;
+@dropdown-menu-list-item-inverse-background-color:                              none;
+@dropdown-menu-list-item-inverse-background-gradient-color-top:                 none;
+@dropdown-menu-list-item-inverse-background-gradient-color-bottom:              none;
+@dropdown-menu-list-item-inverse-border-width:                                  0px;
+@dropdown-menu-list-item-inverse-border-color:                                  none;
+@dropdown-menu-list-item-inverse-border-top-width:                              @dropdown-menu-list-item-inverse-border-width;
+@dropdown-menu-list-item-inverse-border-top-color:                              @dropdown-menu-list-item-inverse-border-color;
+@dropdown-menu-list-item-inverse-border-right-width:                            @dropdown-menu-list-item-inverse-border-width;
+@dropdown-menu-list-item-inverse-border-right-color:                            @dropdown-menu-list-item-inverse-border-color;
+@dropdown-menu-list-item-inverse-border-bottom-width:                           @dropdown-menu-list-item-inverse-border-width;
+@dropdown-menu-list-item-inverse-border-bottom-color:                           @dropdown-menu-list-item-inverse-border-color;
+@dropdown-menu-list-item-inverse-border-left-width:                             @dropdown-menu-list-item-inverse-border-width;
+@dropdown-menu-list-item-inverse-border-left-color:                             @dropdown-menu-list-item-inverse-border-color;
+@dropdown-menu-list-item-inverse-caret-color:                                   @dropdown-menu-list-item-inverse-text-color;
+@dropdown-menu-list-item-inverse-shadow:                                        none;
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-scale-screen-mini-enabled:                             @dropdown-menu-list-scale-screen-mini-enabled;
+@dropdown-menu-list-item-scale-screen-small-enabled:                            @dropdown-menu-list-scale-screen-small-enabled;
+@dropdown-menu-list-item-scale-screen-medium-enabled:                           @dropdown-menu-list-scale-screen-medium-enabled;
+@dropdown-menu-list-item-scale-screen-large-enabled:                            @dropdown-menu-list-scale-screen-large-enabled;
+
+@dropdown-menu-list-item-text-font-size-scale-screen-mini:                      @button-small-text-font-size-scale-screen-mini;
+@dropdown-menu-list-item-text-font-size-scale-screen-small:                     @button-small-text-font-size-scale-screen-small;
+@dropdown-menu-list-item-text-font-size-scale-screen-medium:                    @button-small-text-font-size-scale-screen-medium;
+@dropdown-menu-list-item-text-font-size-scale-screen-large:                     @button-small-text-font-size-scale-screen-large;
+
+@dropdown-menu-list-item-text-line-height-scale-screen-mini:                    @button-small-text-line-height-scale-screen-mini;
+@dropdown-menu-list-item-text-line-height-scale-screen-small:                   @button-small-text-line-height-scale-screen-small;
+@dropdown-menu-list-item-text-line-height-scale-screen-medium:                  @button-small-text-line-height-scale-screen-medium;
+@dropdown-menu-list-item-text-line-height-scale-screen-large:                   @button-small-text-line-height-scale-screen-large;
+
+@dropdown-menu-list-item-height-scale-screen-mini:                              @dropdown-menu-scale-screen-mini;
+@dropdown-menu-list-item-height-scale-screen-small:                             @dropdown-menu-scale-screen-small;
+@dropdown-menu-list-item-height-scale-screen-medium:                            @dropdown-menu-scale-screen-medium;
+@dropdown-menu-list-item-height-scale-screen-large:                             @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-list-item-padding-horizontal-scale-screen-mini:                  @dropdown-menu-padding-horizontal-scale-screen-mini;
+@dropdown-menu-list-item-padding-horizontal-scale-screen-small:                 @dropdown-menu-padding-horizontal-scale-screen-small;
+@dropdown-menu-list-item-padding-horizontal-scale-screen-medium:                @dropdown-menu-padding-horizontal-scale-screen-medium;
+@dropdown-menu-list-item-padding-horizontal-scale-screen-large:                 @dropdown-menu-padding-horizontal-scale-screen-large;
+
+@dropdown-menu-list-item-margin-vertical-scale-screen-mini:                     @dropdown-menu-scale-screen-mini;
+@dropdown-menu-list-item-margin-vertical-scale-screen-small:                    @dropdown-menu-scale-screen-small;
+@dropdown-menu-list-item-margin-vertical-scale-screen-medium:                   @dropdown-menu-scale-screen-medium;
+@dropdown-menu-list-item-margin-vertical-scale-screen-large:                    @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-list-item-margin-horizontal-scale-screen-mini:                   @dropdown-menu-scale-screen-mini;
+@dropdown-menu-list-item-margin-horizontal-scale-screen-small:                  @dropdown-menu-scale-screen-small;
+@dropdown-menu-list-item-margin-horizontal-scale-screen-medium:                 @dropdown-menu-scale-screen-medium;
+@dropdown-menu-list-item-margin-horizontal-scale-screen-large:                  @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-list-item-border-radius-scale-screen-mini:                       @dropdown-menu-scale-screen-mini;
+@dropdown-menu-list-item-border-radius-scale-screen-small:                      @dropdown-menu-scale-screen-small;
+@dropdown-menu-list-item-border-radius-scale-screen-medium:                     @dropdown-menu-scale-screen-medium;
+@dropdown-menu-list-item-border-radius-scale-screen-large:                      @dropdown-menu-scale-screen-large;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu List Item (Default)
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default) State: Normal
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-text-color:                                    color-lighten(@neutral, 40);
+@dropdown-menu-list-item-default-text-font-family:                              @font-family-sans-serif;
+@dropdown-menu-list-item-default-text-font-style:                               normal;
+@dropdown-menu-list-item-default-text-font-weight:                              400;
+@dropdown-menu-list-item-default-text-transform:                                none;
+@dropdown-menu-list-item-default-text-shadow:                                   none;
+@dropdown-menu-list-item-default-text-decoration:                               none;
+@dropdown-menu-list-item-default-text-rendering:                                optimizelegibility;
+@dropdown-menu-list-item-default-background-color:                              none;
+@dropdown-menu-list-item-default-background-gradient-color-top:                 none;
+@dropdown-menu-list-item-default-background-gradient-color-bottom:              none;
+@dropdown-menu-list-item-default-border-width:                                  0px;
+@dropdown-menu-list-item-default-border-color:                                  none;
+@dropdown-menu-list-item-default-border-top-width:                              @dropdown-menu-list-item-default-border-width;
+@dropdown-menu-list-item-default-border-top-color:                              @dropdown-menu-list-item-default-border-color;
+@dropdown-menu-list-item-default-border-right-width:                            @dropdown-menu-list-item-default-border-width;
+@dropdown-menu-list-item-default-border-right-color:                            @dropdown-menu-list-item-default-border-color;
+@dropdown-menu-list-item-default-border-bottom-width:                           @dropdown-menu-list-item-default-border-width;
+@dropdown-menu-list-item-default-border-bottom-color:                           @dropdown-menu-list-item-default-border-color;
+@dropdown-menu-list-item-default-border-left-width:                             @dropdown-menu-list-item-default-border-width;
+@dropdown-menu-list-item-default-border-left-color:                             @dropdown-menu-list-item-default-border-color;
+@dropdown-menu-list-item-default-caret-color:                                   @dropdown-menu-list-item-default-text-color;
+@dropdown-menu-list-item-default-shadow:                                        none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default) State: Hover
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-hover-text-color:                              color-lighten(@neutral, 30);
+@dropdown-menu-list-item-default-hover-text-font-family:                        @font-family-sans-serif;
+@dropdown-menu-list-item-default-hover-text-font-style:                         normal;
+@dropdown-menu-list-item-default-hover-text-font-weight:                        400;
+@dropdown-menu-list-item-default-hover-text-transform:                          none;
+@dropdown-menu-list-item-default-hover-text-shadow:                             none;
+@dropdown-menu-list-item-default-hover-text-decoration:                         none;
+@dropdown-menu-list-item-default-hover-text-rendering:                          optimizelegibility;
+@dropdown-menu-list-item-default-hover-background-color:                        color-lighten(@neutral, 95);
+@dropdown-menu-list-item-default-hover-background-gradient-color-top:           none;
+@dropdown-menu-list-item-default-hover-background-gradient-color-bottom:        none;
+@dropdown-menu-list-item-default-hover-border-width:                            0px;
+@dropdown-menu-list-item-default-hover-border-color:                            none;
+@dropdown-menu-list-item-default-hover-border-top-width:                        @dropdown-menu-list-item-default-hover-border-width;
+@dropdown-menu-list-item-default-hover-border-top-color:                        @dropdown-menu-list-item-default-hover-border-color;
+@dropdown-menu-list-item-default-hover-border-right-width:                      @dropdown-menu-list-item-default-hover-border-width;
+@dropdown-menu-list-item-default-hover-border-right-color:                      @dropdown-menu-list-item-default-hover-border-color;
+@dropdown-menu-list-item-default-hover-border-bottom-width:                     @dropdown-menu-list-item-default-hover-border-width;
+@dropdown-menu-list-item-default-hover-border-bottom-color:                     @dropdown-menu-list-item-default-hover-border-color;
+@dropdown-menu-list-item-default-hover-border-left-width:                       @dropdown-menu-list-item-default-hover-border-width;
+@dropdown-menu-list-item-default-hover-border-left-color:                       @dropdown-menu-list-item-default-hover-border-color;
+@dropdown-menu-list-item-default-hover-caret-color:                             @dropdown-menu-list-item-default-hover-text-color;
+@dropdown-menu-list-item-default-hover-shadow:                                  none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default) State: Active
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-active-text-color:                             color-lighten(@neutral, 20);
+@dropdown-menu-list-item-default-active-text-font-family:                       @font-family-sans-serif;
+@dropdown-menu-list-item-default-active-text-font-style:                        normal;
+@dropdown-menu-list-item-default-active-text-font-weight:                       400;
+@dropdown-menu-list-item-default-active-text-transform:                         none;
+@dropdown-menu-list-item-default-active-text-shadow:                            none;
+@dropdown-menu-list-item-default-active-text-decoration:                        none;
+@dropdown-menu-list-item-default-active-text-rendering:                         optimizelegibility;
+@dropdown-menu-list-item-default-active-background-color:                       color-lighten(@neutral, 90);
+@dropdown-menu-list-item-default-active-background-gradient-color-top:          none;
+@dropdown-menu-list-item-default-active-background-gradient-color-bottom:       none;
+@dropdown-menu-list-item-default-active-border-width:                           0px;
+@dropdown-menu-list-item-default-active-border-color:                           none;
+@dropdown-menu-list-item-default-active-border-top-width:                       @dropdown-menu-list-item-default-active-border-width;
+@dropdown-menu-list-item-default-active-border-top-color:                       @dropdown-menu-list-item-default-active-border-color;
+@dropdown-menu-list-item-default-active-border-right-width:                     @dropdown-menu-list-item-default-active-border-width;
+@dropdown-menu-list-item-default-active-border-right-color:                     @dropdown-menu-list-item-default-active-border-color;
+@dropdown-menu-list-item-default-active-border-bottom-width:                    @dropdown-menu-list-item-default-active-border-width;
+@dropdown-menu-list-item-default-active-border-bottom-color:                    @dropdown-menu-list-item-default-active-border-color;
+@dropdown-menu-list-item-default-active-border-left-width:                      @dropdown-menu-list-item-default-active-border-width;
+@dropdown-menu-list-item-default-active-border-left-color:                      @dropdown-menu-list-item-default-active-border-color;
+@dropdown-menu-list-item-default-active-caret-color:                            @dropdown-menu-list-item-default-active-text-color;
+@dropdown-menu-list-item-default-active-shadow:                                 none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default) State: Selected
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-selected-text-color:                           @dropdown-menu-list-item-default-active-text-color;
+@dropdown-menu-list-item-default-selected-text-font-family:                     @dropdown-menu-list-item-default-active-text-font-family;
+@dropdown-menu-list-item-default-selected-text-font-style:                      @dropdown-menu-list-item-default-active-text-font-style;
+@dropdown-menu-list-item-default-selected-text-font-weight:                     @dropdown-menu-list-item-default-active-text-font-weight;
+@dropdown-menu-list-item-default-selected-text-transform:                       @dropdown-menu-list-item-default-active-text-transform;
+@dropdown-menu-list-item-default-selected-text-shadow:                          @dropdown-menu-list-item-default-active-text-shadow;
+@dropdown-menu-list-item-default-selected-text-decoration:                      @dropdown-menu-list-item-default-active-text-decoration;
+@dropdown-menu-list-item-default-selected-text-rendering:                       @dropdown-menu-list-item-default-active-text-rendering;
+@dropdown-menu-list-item-default-selected-background-color:                     @dropdown-menu-list-item-default-active-background-color;
+@dropdown-menu-list-item-default-selected-background-gradient-color-top:        @dropdown-menu-list-item-default-active-background-gradient-color-top;
+@dropdown-menu-list-item-default-selected-background-gradient-color-bottom:     @dropdown-menu-list-item-default-active-background-gradient-color-bottom;
+@dropdown-menu-list-item-default-selected-border-width:                         @dropdown-menu-list-item-default-active-border-width;
+@dropdown-menu-list-item-default-selected-border-color:                         @dropdown-menu-list-item-default-active-border-color;
+@dropdown-menu-list-item-default-selected-border-top-width:                     @dropdown-menu-list-item-default-selected-border-width;
+@dropdown-menu-list-item-default-selected-border-top-color:                     @dropdown-menu-list-item-default-selected-border-color;
+@dropdown-menu-list-item-default-selected-border-right-width:                   @dropdown-menu-list-item-default-selected-border-width;
+@dropdown-menu-list-item-default-selected-border-right-color:                   @dropdown-menu-list-item-default-selected-border-color;
+@dropdown-menu-list-item-default-selected-border-bottom-width:                  @dropdown-menu-list-item-default-selected-border-width;
+@dropdown-menu-list-item-default-selected-border-bottom-color:                  @dropdown-menu-list-item-default-selected-border-color;
+@dropdown-menu-list-item-default-selected-border-left-width:                    @dropdown-menu-list-item-default-selected-border-width;
+@dropdown-menu-list-item-default-selected-border-left-color:                    @dropdown-menu-list-item-default-selected-border-color;
+@dropdown-menu-list-item-default-selected-caret-color:                          @dropdown-menu-list-item-default-selected-text-color;
+@dropdown-menu-list-item-default-selected-shadow:                               @dropdown-menu-list-item-default-active-shadow;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default) State: Disabled
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-disabled-text-color:                           @dropdown-menu-list-item-text-color;
+@dropdown-menu-list-item-default-disabled-text-font-family:                     @dropdown-menu-list-item-text-font-family;
+@dropdown-menu-list-item-default-disabled-text-font-style:                      @dropdown-menu-list-item-text-font-style;
+@dropdown-menu-list-item-default-disabled-text-font-weight:                     @dropdown-menu-list-item-text-font-weight;
+@dropdown-menu-list-item-default-disabled-text-transform:                       @dropdown-menu-list-item-text-transform;
+@dropdown-menu-list-item-default-disabled-text-shadow:                          @dropdown-menu-list-item-text-shadow;
+@dropdown-menu-list-item-default-disabled-text-decoration:                      @dropdown-menu-list-item-text-decoration;
+@dropdown-menu-list-item-default-disabled-text-rendering:                       @dropdown-menu-list-item-text-rendering;
+@dropdown-menu-list-item-default-disabled-background-color:                     @dropdown-menu-list-item-background-color;
+@dropdown-menu-list-item-default-disabled-background-gradient-color-top:        @dropdown-menu-list-item-background-gradient-color-top;
+@dropdown-menu-list-item-default-disabled-background-gradient-color-bottom:     @dropdown-menu-list-item-background-gradient-color-bottom;
+@dropdown-menu-list-item-default-disabled-border-width:                         @dropdown-menu-list-item-border-width;
+@dropdown-menu-list-item-default-disabled-border-color:                         @dropdown-menu-list-item-border-color;
+@dropdown-menu-list-item-default-disabled-border-top-width:                     @dropdown-menu-list-item-default-disabled-border-width;
+@dropdown-menu-list-item-default-disabled-border-top-color:                     @dropdown-menu-list-item-default-disabled-border-color;
+@dropdown-menu-list-item-default-disabled-border-right-width:                   @dropdown-menu-list-item-default-disabled-border-width;
+@dropdown-menu-list-item-default-disabled-border-right-color:                   @dropdown-menu-list-item-default-disabled-border-color;
+@dropdown-menu-list-item-default-disabled-border-bottom-width:                  @dropdown-menu-list-item-default-disabled-border-width;
+@dropdown-menu-list-item-default-disabled-border-bottom-color:                  @dropdown-menu-list-item-default-disabled-border-color;
+@dropdown-menu-list-item-default-disabled-border-left-width:                    @dropdown-menu-list-item-default-disabled-border-width;
+@dropdown-menu-list-item-default-disabled-border-left-color:                    @dropdown-menu-list-item-default-disabled-border-color;
+@dropdown-menu-list-item-default-disabled-caret-color:                          @dropdown-menu-list-item-default-disabled-text-color;
+@dropdown-menu-list-item-default-disabled-shadow:                               @dropdown-menu-list-item-shadow;
+@dropdown-menu-list-item-default-disabled-opacity:                              0.5;
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu List Item (Default, Inverse)
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-inverse-enabled:                                       @dropdown-menu-inverse-enabled;
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default, Inverse) State: Normal
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-inverse-text-color:                            color-lighten(@white, 0);
+@dropdown-menu-list-item-default-inverse-text-font-family:                      @font-family-sans-serif;
+@dropdown-menu-list-item-default-inverse-text-font-style:                       normal;
+@dropdown-menu-list-item-default-inverse-text-font-weight:                      400;
+@dropdown-menu-list-item-default-inverse-text-transform:                        none;
+@dropdown-menu-list-item-default-inverse-text-shadow:                           none;
+@dropdown-menu-list-item-default-inverse-text-decoration:                       none;
+@dropdown-menu-list-item-default-inverse-text-rendering:                        optimizelegibility;
+@dropdown-menu-list-item-default-inverse-background-color:                      none;
+@dropdown-menu-list-item-default-inverse-background-gradient-color-top:         none;
+@dropdown-menu-list-item-default-inverse-background-gradient-color-bottom:      none;
+@dropdown-menu-list-item-default-inverse-border-width:                          0px;
+@dropdown-menu-list-item-default-inverse-border-color:                          none;
+@dropdown-menu-list-item-default-inverse-border-top-width:                      @dropdown-menu-list-item-default-inverse-border-width;
+@dropdown-menu-list-item-default-inverse-border-top-color:                      @dropdown-menu-list-item-default-inverse-border-color;
+@dropdown-menu-list-item-default-inverse-border-right-width:                    @dropdown-menu-list-item-default-inverse-border-width;
+@dropdown-menu-list-item-default-inverse-border-right-color:                    @dropdown-menu-list-item-default-inverse-border-color;
+@dropdown-menu-list-item-default-inverse-border-bottom-width:                   @dropdown-menu-list-item-default-inverse-border-width;
+@dropdown-menu-list-item-default-inverse-border-bottom-color:                   @dropdown-menu-list-item-default-inverse-border-color;
+@dropdown-menu-list-item-default-inverse-border-left-width:                     @dropdown-menu-list-item-default-inverse-border-width;
+@dropdown-menu-list-item-default-inverse-border-left-color:                     @dropdown-menu-list-item-default-inverse-border-color;
+@dropdown-menu-list-item-default-inverse-caret-color:                           @dropdown-menu-list-item-default-inverse-text-color;
+@dropdown-menu-list-item-default-inverse-shadow:                                none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default, Inverse) State: Hover
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-inverse-hover-text-color:                      color-lighten(@white, 0);
+@dropdown-menu-list-item-default-inverse-hover-text-font-family:                @font-family-sans-serif;
+@dropdown-menu-list-item-default-inverse-hover-text-font-style:                 normal;
+@dropdown-menu-list-item-default-inverse-hover-text-font-weight:                400;
+@dropdown-menu-list-item-default-inverse-hover-text-transform:                  none;
+@dropdown-menu-list-item-default-inverse-hover-text-shadow:                     none;
+@dropdown-menu-list-item-default-inverse-hover-text-decoration:                 none;
+@dropdown-menu-list-item-default-inverse-hover-text-rendering:                  optimizelegibility;
+@dropdown-menu-list-item-default-inverse-hover-background-color:                color-lighten(@neutral, 10);
+@dropdown-menu-list-item-default-inverse-hover-background-gradient-color-top:   none;
+@dropdown-menu-list-item-default-inverse-hover-background-gradient-color-bottom:none;
+@dropdown-menu-list-item-default-inverse-hover-border-width:                    0px;
+@dropdown-menu-list-item-default-inverse-hover-border-color:                    none;
+@dropdown-menu-list-item-default-inverse-hover-border-top-width:                @dropdown-menu-list-item-default-inverse-hover-border-width;
+@dropdown-menu-list-item-default-inverse-hover-border-top-color:                @dropdown-menu-list-item-default-inverse-hover-border-color;
+@dropdown-menu-list-item-default-inverse-hover-border-right-width:              @dropdown-menu-list-item-default-inverse-hover-border-width;
+@dropdown-menu-list-item-default-inverse-hover-border-right-color:              @dropdown-menu-list-item-default-inverse-hover-border-color;
+@dropdown-menu-list-item-default-inverse-hover-border-bottom-width:             @dropdown-menu-list-item-default-inverse-hover-border-width;
+@dropdown-menu-list-item-default-inverse-hover-border-bottom-color:             @dropdown-menu-list-item-default-inverse-hover-border-color;
+@dropdown-menu-list-item-default-inverse-hover-border-left-width:               @dropdown-menu-list-item-default-inverse-hover-border-width;
+@dropdown-menu-list-item-default-inverse-hover-border-left-color:               @dropdown-menu-list-item-default-inverse-hover-border-color;
+@dropdown-menu-list-item-default-inverse-hover-caret-color:                     @dropdown-menu-list-item-default-inverse-hover-text-color;
+@dropdown-menu-list-item-default-inverse-hover-shadow:                          none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default, Inverse) State: Active
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-inverse-active-text-color:                     color-lighten(@white, 0);
+@dropdown-menu-list-item-default-inverse-active-text-font-family:               @font-family-sans-serif;
+@dropdown-menu-list-item-default-inverse-active-text-font-style:                normal;
+@dropdown-menu-list-item-default-inverse-active-text-font-weight:               400;
+@dropdown-menu-list-item-default-inverse-active-text-transform:                 none;
+@dropdown-menu-list-item-default-inverse-active-text-shadow:                    none;
+@dropdown-menu-list-item-default-inverse-active-text-decoration:                none;
+@dropdown-menu-list-item-default-inverse-active-text-rendering:                 optimizelegibility;
+@dropdown-menu-list-item-default-inverse-active-background-color:               color-lighten(@neutral, 20);
+@dropdown-menu-list-item-default-inverse-active-background-gradient-color-top:  none;
+@dropdown-menu-list-item-default-inverse-active-background-gradient-color-bottom: none;
+@dropdown-menu-list-item-default-inverse-active-border-width:                   0px;
+@dropdown-menu-list-item-default-inverse-active-border-color:                   none;
+@dropdown-menu-list-item-default-inverse-active-border-top-width:               @dropdown-menu-list-item-default-inverse-active-border-width;
+@dropdown-menu-list-item-default-inverse-active-border-top-color:               @dropdown-menu-list-item-default-inverse-active-border-color;
+@dropdown-menu-list-item-default-inverse-active-border-right-width:             @dropdown-menu-list-item-default-inverse-active-border-width;
+@dropdown-menu-list-item-default-inverse-active-border-right-color:             @dropdown-menu-list-item-default-inverse-active-border-color;
+@dropdown-menu-list-item-default-inverse-active-border-bottom-width:            @dropdown-menu-list-item-default-inverse-active-border-width;
+@dropdown-menu-list-item-default-inverse-active-border-bottom-color:            @dropdown-menu-list-item-default-inverse-active-border-color;
+@dropdown-menu-list-item-default-inverse-active-border-left-width:              @dropdown-menu-list-item-default-inverse-active-border-width;
+@dropdown-menu-list-item-default-inverse-active-border-left-color:              @dropdown-menu-list-item-default-inverse-active-border-color;
+@dropdown-menu-list-item-default-inverse-active-caret-color:                    @dropdown-menu-list-item-default-inverse-active-text-color;
+@dropdown-menu-list-item-default-inverse-active-shadow:                         none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default, Inverse) State: Selected
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-inverse-selected-text-color:                   @dropdown-menu-list-item-default-inverse-active-text-color;
+@dropdown-menu-list-item-default-inverse-selected-text-font-family:             @dropdown-menu-list-item-default-inverse-active-text-font-family;
+@dropdown-menu-list-item-default-inverse-selected-text-font-style:              @dropdown-menu-list-item-default-inverse-active-text-font-style;
+@dropdown-menu-list-item-default-inverse-selected-text-font-weight:             @dropdown-menu-list-item-default-inverse-active-text-font-weight;
+@dropdown-menu-list-item-default-inverse-selected-text-transform:               @dropdown-menu-list-item-default-inverse-active-text-transform;
+@dropdown-menu-list-item-default-inverse-selected-text-shadow:                  @dropdown-menu-list-item-default-inverse-active-text-shadow;
+@dropdown-menu-list-item-default-inverse-selected-text-decoration:              @dropdown-menu-list-item-default-inverse-active-text-decoration;
+@dropdown-menu-list-item-default-inverse-selected-text-rendering:               @dropdown-menu-list-item-default-inverse-active-text-rendering;
+@dropdown-menu-list-item-default-inverse-selected-background-color:             @dropdown-menu-list-item-default-inverse-active-background-color;
+@dropdown-menu-list-item-default-inverse-selected-background-gradient-color-top: @dropdown-menu-list-item-default-inverse-active-background-gradient-color-top;
+@dropdown-menu-list-item-default-inverse-selected-background-gradient-color-bottom: @dropdown-menu-list-item-default-inverse-active-background-gradient-color-bottom;
+@dropdown-menu-list-item-default-inverse-selected-border-width:                 @dropdown-menu-list-item-default-inverse-active-border-width;
+@dropdown-menu-list-item-default-inverse-selected-border-color:                 @dropdown-menu-list-item-default-inverse-active-border-color;
+@dropdown-menu-list-item-default-inverse-selected-border-top-width:             @dropdown-menu-list-item-default-inverse-selected-border-width;
+@dropdown-menu-list-item-default-inverse-selected-border-top-color:             @dropdown-menu-list-item-default-inverse-selected-border-color;
+@dropdown-menu-list-item-default-inverse-selected-border-right-width:           @dropdown-menu-list-item-default-inverse-selected-border-width;
+@dropdown-menu-list-item-default-inverse-selected-border-right-color:           @dropdown-menu-list-item-default-inverse-selected-border-color;
+@dropdown-menu-list-item-default-inverse-selected-border-bottom-width:          @dropdown-menu-list-item-default-inverse-selected-border-width;
+@dropdown-menu-list-item-default-inverse-selected-border-bottom-color:          @dropdown-menu-list-item-default-inverse-selected-border-color;
+@dropdown-menu-list-item-default-inverse-selected-border-left-width:            @dropdown-menu-list-item-default-inverse-selected-border-width;
+@dropdown-menu-list-item-default-inverse-selected-border-left-color:            @dropdown-menu-list-item-default-inverse-selected-border-color;
+@dropdown-menu-list-item-default-inverse-selected-caret-color:                  @dropdown-menu-list-item-default-inverse-selected-text-color;
+@dropdown-menu-list-item-default-inverse-selected-shadow:                       @dropdown-menu-list-item-default-inverse-active-shadow;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Default, Inverse) State: Disabled
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-default-inverse-disabled-text-color:                   @dropdown-menu-list-item-inverse-text-color;
+@dropdown-menu-list-item-default-inverse-disabled-text-font-family:             @dropdown-menu-list-item-inverse-text-font-family;
+@dropdown-menu-list-item-default-inverse-disabled-text-font-style:              @dropdown-menu-list-item-inverse-text-font-style;
+@dropdown-menu-list-item-default-inverse-disabled-text-font-weight:             @dropdown-menu-list-item-inverse-text-font-weight;
+@dropdown-menu-list-item-default-inverse-disabled-text-transform:               @dropdown-menu-list-item-inverse-text-transform;
+@dropdown-menu-list-item-default-inverse-disabled-text-shadow:                  @dropdown-menu-list-item-inverse-text-shadow;
+@dropdown-menu-list-item-default-inverse-disabled-text-decoration:              @dropdown-menu-list-item-inverse-text-decoration;
+@dropdown-menu-list-item-default-inverse-disabled-text-rendering:               @dropdown-menu-list-item-inverse-text-rendering;
+@dropdown-menu-list-item-default-inverse-disabled-background-color:             @dropdown-menu-list-item-inverse-background-color;
+@dropdown-menu-list-item-default-inverse-disabled-background-gradient-color-top: @dropdown-menu-list-item-inverse-background-gradient-color-top;
+@dropdown-menu-list-item-default-inverse-disabled-background-gradient-color-bottom: @dropdown-menu-list-item-inverse-background-gradient-color-bottom;
+@dropdown-menu-list-item-default-inverse-disabled-border-width:                 @dropdown-menu-list-item-border-width;
+@dropdown-menu-list-item-default-inverse-disabled-border-color:                 @dropdown-menu-list-item-border-color;
+@dropdown-menu-list-item-default-inverse-disabled-border-top-width:             @dropdown-menu-list-item-default-inverse-disabled-border-width;
+@dropdown-menu-list-item-default-inverse-disabled-border-top-color:             @dropdown-menu-list-item-default-inverse-disabled-border-color;
+@dropdown-menu-list-item-default-inverse-disabled-border-right-width:           @dropdown-menu-list-item-default-inverse-disabled-border-width;
+@dropdown-menu-list-item-default-inverse-disabled-border-right-color:           @dropdown-menu-list-item-default-inverse-disabled-border-color;
+@dropdown-menu-list-item-default-inverse-disabled-border-bottom-width:          @dropdown-menu-list-item-default-inverse-disabled-border-width;
+@dropdown-menu-list-item-default-inverse-disabled-border-bottom-color:          @dropdown-menu-list-item-default-inverse-disabled-border-color;
+@dropdown-menu-list-item-default-inverse-disabled-border-left-width:            @dropdown-menu-list-item-default-inverse-disabled-border-width;
+@dropdown-menu-list-item-default-inverse-disabled-border-left-color:            @dropdown-menu-list-item-default-inverse-disabled-border-color;
+@dropdown-menu-list-item-default-inverse-disabled-caret-color:                  @dropdown-menu-list-item-default-inverse-disabled-text-color;
+@dropdown-menu-list-item-default-inverse-disabled-shadow:                       @dropdown-menu-list-item-inverse-shadow;
+@dropdown-menu-list-item-default-inverse-disabled-opacity:                      0.5;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu List Item (Danger)
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+@dropdown-menu-list-item-danger-enabled:                                        true;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger) State:  Normal
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-text-color:                                     color-lighten(@red, 0);
+@dropdown-menu-list-item-danger-text-font-family:                               @font-family-sans-serif;
+@dropdown-menu-list-item-danger-text-font-style:                                normal;
+@dropdown-menu-list-item-danger-text-font-weight:                               400;
+@dropdown-menu-list-item-danger-text-transform:                                 none;
+@dropdown-menu-list-item-danger-text-shadow:                                    none;
+@dropdown-menu-list-item-danger-text-decoration:                                none;
+@dropdown-menu-list-item-danger-text-rendering:                                 optimizelegibility;
+@dropdown-menu-list-item-danger-background-color:                               none;
+@dropdown-menu-list-item-danger-background-gradient-color-top:                  none;
+@dropdown-menu-list-item-danger-background-gradient-color-bottom:               none;
+@dropdown-menu-list-item-danger-border-width:                                   0px;
+@dropdown-menu-list-item-danger-border-color:                                   none;
+@dropdown-menu-list-item-danger-border-top-width:                               @dropdown-menu-list-item-danger-border-width;
+@dropdown-menu-list-item-danger-border-top-color:                               @dropdown-menu-list-item-danger-border-color;
+@dropdown-menu-list-item-danger-border-right-width:                             @dropdown-menu-list-item-danger-border-width;
+@dropdown-menu-list-item-danger-border-right-color:                             @dropdown-menu-list-item-danger-border-color;
+@dropdown-menu-list-item-danger-border-bottom-width:                            @dropdown-menu-list-item-danger-border-width;
+@dropdown-menu-list-item-danger-border-bottom-color:                            @dropdown-menu-list-item-danger-border-color;
+@dropdown-menu-list-item-danger-border-left-width:                              @dropdown-menu-list-item-danger-border-width;
+@dropdown-menu-list-item-danger-border-left-color:                              @dropdown-menu-list-item-danger-border-color;
+@dropdown-menu-list-item-danger-caret-color:                                    @dropdown-menu-list-item-danger-text-color;
+@dropdown-menu-list-item-danger-shadow:                                         none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger) State:  Hover
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-hover-text-color:                               color-lighten(@red, -20);
+@dropdown-menu-list-item-danger-hover-text-font-family:                         @font-family-sans-serif;
+@dropdown-menu-list-item-danger-hover-text-font-style:                          normal;
+@dropdown-menu-list-item-danger-hover-text-font-weight:                         400;
+@dropdown-menu-list-item-danger-hover-text-transform:                           none;
+@dropdown-menu-list-item-danger-hover-text-shadow:                              none;
+@dropdown-menu-list-item-danger-hover-text-decoration:                          none;
+@dropdown-menu-list-item-danger-hover-text-rendering:                           optimizelegibility;
+@dropdown-menu-list-item-danger-hover-background-color:                         color-lighten(@red, 90);
+@dropdown-menu-list-item-danger-hover-background-gradient-color-top:            none;
+@dropdown-menu-list-item-danger-hover-background-gradient-color-bottom:         none;
+@dropdown-menu-list-item-danger-hover-border-width:                             0px;
+@dropdown-menu-list-item-danger-hover-border-color:                             none;
+@dropdown-menu-list-item-danger-hover-border-top-width:                         @dropdown-menu-list-item-danger-hover-border-width;
+@dropdown-menu-list-item-danger-hover-border-top-color:                         @dropdown-menu-list-item-danger-hover-border-color;
+@dropdown-menu-list-item-danger-hover-border-right-width:                       @dropdown-menu-list-item-danger-hover-border-width;
+@dropdown-menu-list-item-danger-hover-border-right-color:                       @dropdown-menu-list-item-danger-hover-border-color;
+@dropdown-menu-list-item-danger-hover-border-bottom-width:                      @dropdown-menu-list-item-danger-hover-border-width;
+@dropdown-menu-list-item-danger-hover-border-bottom-color:                      @dropdown-menu-list-item-danger-hover-border-color;
+@dropdown-menu-list-item-danger-hover-border-left-width:                        @dropdown-menu-list-item-danger-hover-border-width;
+@dropdown-menu-list-item-danger-hover-border-left-color:                        @dropdown-menu-list-item-danger-hover-border-color;
+@dropdown-menu-list-item-danger-hover-caret-color:                              @dropdown-menu-list-item-danger-hover-text-color;
+@dropdown-menu-list-item-danger-hover-shadow:                                   none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger) State:  Active
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-active-text-color:                              color-lighten(@red, -40);
+@dropdown-menu-list-item-danger-active-text-font-family:                        @font-family-sans-serif;
+@dropdown-menu-list-item-danger-active-text-font-style:                         normal;
+@dropdown-menu-list-item-danger-active-text-font-weight:                        400;
+@dropdown-menu-list-item-danger-active-text-transform:                          none;
+@dropdown-menu-list-item-danger-active-text-shadow:                             none;
+@dropdown-menu-list-item-danger-active-text-decoration:                         none;
+@dropdown-menu-list-item-danger-active-text-rendering:                          optimizelegibility;
+@dropdown-menu-list-item-danger-active-background-color:                        color-lighten(@red, 80);
+@dropdown-menu-list-item-danger-active-background-gradient-color-top:           none;
+@dropdown-menu-list-item-danger-active-background-gradient-color-bottom:        none;
+@dropdown-menu-list-item-danger-active-border-width:                            0px;
+@dropdown-menu-list-item-danger-active-border-color:                            none;
+@dropdown-menu-list-item-danger-active-border-top-width:                        @dropdown-menu-list-item-danger-active-border-width;
+@dropdown-menu-list-item-danger-active-border-top-color:                        @dropdown-menu-list-item-danger-active-border-color;
+@dropdown-menu-list-item-danger-active-border-right-width:                      @dropdown-menu-list-item-danger-active-border-width;
+@dropdown-menu-list-item-danger-active-border-right-color:                      @dropdown-menu-list-item-danger-active-border-color;
+@dropdown-menu-list-item-danger-active-border-bottom-width:                     @dropdown-menu-list-item-danger-active-border-width;
+@dropdown-menu-list-item-danger-active-border-bottom-color:                     @dropdown-menu-list-item-danger-active-border-color;
+@dropdown-menu-list-item-danger-active-border-left-width:                       @dropdown-menu-list-item-danger-active-border-width;
+@dropdown-menu-list-item-danger-active-border-left-color:                       @dropdown-menu-list-item-danger-active-border-color;
+@dropdown-menu-list-item-danger-active-caret-color:                             @dropdown-menu-list-item-danger-active-text-color;
+@dropdown-menu-list-item-danger-active-shadow:                                  none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger) State:  Selected
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-selected-text-color:                            @dropdown-menu-list-item-danger-active-text-color;
+@dropdown-menu-list-item-danger-selected-text-font-family:                      @dropdown-menu-list-item-danger-active-text-font-family;
+@dropdown-menu-list-item-danger-selected-text-font-style:                       @dropdown-menu-list-item-danger-active-text-font-style;
+@dropdown-menu-list-item-danger-selected-text-font-weight:                      @dropdown-menu-list-item-danger-active-text-font-weight;
+@dropdown-menu-list-item-danger-selected-text-transform:                        @dropdown-menu-list-item-danger-active-text-transform;
+@dropdown-menu-list-item-danger-selected-text-shadow:                           @dropdown-menu-list-item-danger-active-text-shadow;
+@dropdown-menu-list-item-danger-selected-text-decoration:                       @dropdown-menu-list-item-danger-active-text-decoration;
+@dropdown-menu-list-item-danger-selected-text-rendering:                        @dropdown-menu-list-item-danger-active-text-rendering;
+@dropdown-menu-list-item-danger-selected-background-color:                      @dropdown-menu-list-item-danger-active-background-color;
+@dropdown-menu-list-item-danger-selected-background-gradient-color-top:         @dropdown-menu-list-item-danger-active-background-gradient-color-top;
+@dropdown-menu-list-item-danger-selected-background-gradient-color-bottom:      @dropdown-menu-list-item-danger-active-background-gradient-color-bottom;
+@dropdown-menu-list-item-danger-selected-border-width:                          @dropdown-menu-list-item-danger-active-border-width;
+@dropdown-menu-list-item-danger-selected-border-color:                          @dropdown-menu-list-item-danger-active-border-color;
+@dropdown-menu-list-item-danger-selected-border-top-width:                      @dropdown-menu-list-item-danger-selected-border-width;
+@dropdown-menu-list-item-danger-selected-border-top-color:                      @dropdown-menu-list-item-danger-selected-border-color;
+@dropdown-menu-list-item-danger-selected-border-right-width:                    @dropdown-menu-list-item-danger-selected-border-width;
+@dropdown-menu-list-item-danger-selected-border-right-color:                    @dropdown-menu-list-item-danger-selected-border-color;
+@dropdown-menu-list-item-danger-selected-border-bottom-width:                   @dropdown-menu-list-item-danger-selected-border-width;
+@dropdown-menu-list-item-danger-selected-border-bottom-color:                   @dropdown-menu-list-item-danger-selected-border-color;
+@dropdown-menu-list-item-danger-selected-border-left-width:                     @dropdown-menu-list-item-danger-selected-border-width;
+@dropdown-menu-list-item-danger-selected-border-left-color:                     @dropdown-menu-list-item-danger-selected-border-color;
+@dropdown-menu-list-item-danger-selected-caret-color:                           @dropdown-menu-list-item-danger-selected-text-color;
+@dropdown-menu-list-item-danger-selected-shadow:                                @dropdown-menu-list-item-danger-active-shadow;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger) State: Disabled
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-disabled-text-color:                            @dropdown-menu-list-item-text-color;
+@dropdown-menu-list-item-danger-disabled-text-font-family:                      @dropdown-menu-list-item-text-font-family;
+@dropdown-menu-list-item-danger-disabled-text-font-style:                       @dropdown-menu-list-item-text-font-style;
+@dropdown-menu-list-item-danger-disabled-text-font-weight:                      @dropdown-menu-list-item-text-font-weight;
+@dropdown-menu-list-item-danger-disabled-text-transform:                        @dropdown-menu-list-item-text-transform;
+@dropdown-menu-list-item-danger-disabled-text-shadow:                           @dropdown-menu-list-item-text-shadow;
+@dropdown-menu-list-item-danger-disabled-text-decoration:                       @dropdown-menu-list-item-text-decoration;
+@dropdown-menu-list-item-danger-disabled-text-rendering:                        @dropdown-menu-list-item-text-rendering;
+@dropdown-menu-list-item-danger-disabled-background-color:                      @dropdown-menu-list-item-background-color;
+@dropdown-menu-list-item-danger-disabled-background-gradient-color-top:         @dropdown-menu-list-item-background-gradient-color-top;
+@dropdown-menu-list-item-danger-disabled-background-gradient-color-bottom:      @dropdown-menu-list-item-background-gradient-color-bottom;
+@dropdown-menu-list-item-danger-disabled-border-width:                          @dropdown-menu-list-item-border-width;
+@dropdown-menu-list-item-danger-disabled-border-color:                          @dropdown-menu-list-item-border-color;
+@dropdown-menu-list-item-danger-disabled-border-top-width:                      @dropdown-menu-list-item-danger-disabled-border-width;
+@dropdown-menu-list-item-danger-disabled-border-top-color:                      @dropdown-menu-list-item-danger-disabled-border-color;
+@dropdown-menu-list-item-danger-disabled-border-right-width:                    @dropdown-menu-list-item-danger-disabled-border-width;
+@dropdown-menu-list-item-danger-disabled-border-right-color:                    @dropdown-menu-list-item-danger-disabled-border-color;
+@dropdown-menu-list-item-danger-disabled-border-bottom-width:                   @dropdown-menu-list-item-danger-disabled-border-width;
+@dropdown-menu-list-item-danger-disabled-border-bottom-color:                   @dropdown-menu-list-item-danger-disabled-border-color;
+@dropdown-menu-list-item-danger-disabled-border-left-width:                     @dropdown-menu-list-item-danger-disabled-border-width;
+@dropdown-menu-list-item-danger-disabled-border-left-color:                     @dropdown-menu-list-item-danger-disabled-border-color;
+@dropdown-menu-list-item-danger-disabled-caret-color:                           @dropdown-menu-list-item-danger-disabled-text-color;
+@dropdown-menu-list-item-danger-disabled-shadow:                                @dropdown-menu-list-item-shadow;
+@dropdown-menu-list-item-danger-disabled-opacity:                               0.5;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu List Item (Danger, Inverse)
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-inverse-enabled:                                @dropdown-menu-inverse-enabled;
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger, Inverse) State:  Normal
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-inverse-text-color:                             color-lighten(@red, 0);
+@dropdown-menu-list-item-danger-inverse-text-font-family:                       @font-family-sans-serif;
+@dropdown-menu-list-item-danger-inverse-text-font-style:                        normal;
+@dropdown-menu-list-item-danger-inverse-text-font-weight:                       400;
+@dropdown-menu-list-item-danger-inverse-text-transform:                         none;
+@dropdown-menu-list-item-danger-inverse-text-shadow:                            none;
+@dropdown-menu-list-item-danger-inverse-text-decoration:                        none;
+@dropdown-menu-list-item-danger-inverse-text-rendering:                         optimizelegibility;
+@dropdown-menu-list-item-danger-inverse-background-color:                       none;
+@dropdown-menu-list-item-danger-inverse-background-gradient-color-top:          none;
+@dropdown-menu-list-item-danger-inverse-background-gradient-color-bottom:       none;
+@dropdown-menu-list-item-danger-inverse-border-width:                           0px;
+@dropdown-menu-list-item-danger-inverse-border-color:                           none;
+@dropdown-menu-list-item-danger-inverse-border-top-width:                       @dropdown-menu-list-item-danger-inverse-border-width;
+@dropdown-menu-list-item-danger-inverse-border-top-color:                       @dropdown-menu-list-item-danger-inverse-border-color;
+@dropdown-menu-list-item-danger-inverse-border-right-width:                     @dropdown-menu-list-item-danger-inverse-border-width;
+@dropdown-menu-list-item-danger-inverse-border-right-color:                     @dropdown-menu-list-item-danger-inverse-border-color;
+@dropdown-menu-list-item-danger-inverse-border-bottom-width:                    @dropdown-menu-list-item-danger-inverse-border-width;
+@dropdown-menu-list-item-danger-inverse-border-bottom-color:                    @dropdown-menu-list-item-danger-inverse-border-color;
+@dropdown-menu-list-item-danger-inverse-border-left-width:                      @dropdown-menu-list-item-danger-inverse-border-width;
+@dropdown-menu-list-item-danger-inverse-border-left-color:                      @dropdown-menu-list-item-danger-inverse-border-color;
+@dropdown-menu-list-item-danger-inverse-caret-color:                            @dropdown-menu-list-item-danger-inverse-text-color;
+@dropdown-menu-list-item-danger-inverse-shadow:                                 none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger, Inverse) State:  Hover
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-inverse-hover-text-color:                       color-lighten(@red, 0);
+@dropdown-menu-list-item-danger-inverse-hover-text-font-family:                 @font-family-sans-serif;
+@dropdown-menu-list-item-danger-inverse-hover-text-font-style:                  normal;
+@dropdown-menu-list-item-danger-inverse-hover-text-font-weight:                 400;
+@dropdown-menu-list-item-danger-inverse-hover-text-transform:                   none;
+@dropdown-menu-list-item-danger-inverse-hover-text-shadow:                      none;
+@dropdown-menu-list-item-danger-inverse-hover-text-decoration:                  none;
+@dropdown-menu-list-item-danger-inverse-hover-text-rendering:                   optimizelegibility;
+@dropdown-menu-list-item-danger-inverse-hover-background-color:                 color-lighten(@neutral, 10);
+@dropdown-menu-list-item-danger-inverse-hover-background-gradient-color-top:    none;
+@dropdown-menu-list-item-danger-inverse-hover-background-gradient-color-bottom: none;
+@dropdown-menu-list-item-danger-inverse-hover-border-width:                     0px;
+@dropdown-menu-list-item-danger-inverse-hover-border-color:                     none;
+@dropdown-menu-list-item-danger-inverse-hover-border-top-width:                 @dropdown-menu-list-item-danger-inverse-hover-border-width;
+@dropdown-menu-list-item-danger-inverse-hover-border-top-color:                 @dropdown-menu-list-item-danger-inverse-hover-border-color;
+@dropdown-menu-list-item-danger-inverse-hover-border-right-width:               @dropdown-menu-list-item-danger-inverse-hover-border-width;
+@dropdown-menu-list-item-danger-inverse-hover-border-right-color:               @dropdown-menu-list-item-danger-inverse-hover-border-color;
+@dropdown-menu-list-item-danger-inverse-hover-border-bottom-width:              @dropdown-menu-list-item-danger-inverse-hover-border-width;
+@dropdown-menu-list-item-danger-inverse-hover-border-bottom-color:              @dropdown-menu-list-item-danger-inverse-hover-border-color;
+@dropdown-menu-list-item-danger-inverse-hover-border-left-width:                @dropdown-menu-list-item-danger-inverse-hover-border-width;
+@dropdown-menu-list-item-danger-inverse-hover-border-left-color:                @dropdown-menu-list-item-danger-inverse-hover-border-color;
+@dropdown-menu-list-item-danger-inverse-hover-caret-color:                      @dropdown-menu-list-item-danger-inverse-hover-text-color;
+@dropdown-menu-list-item-danger-inverse-hover-shadow:                           none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger, Inverse) State:  Active
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-inverse-active-text-color:                      color-lighten(@red, 0);
+@dropdown-menu-list-item-danger-inverse-active-text-font-family:                @font-family-sans-serif;
+@dropdown-menu-list-item-danger-inverse-active-text-font-style:                 normal;
+@dropdown-menu-list-item-danger-inverse-active-text-font-weight:                400;
+@dropdown-menu-list-item-danger-inverse-active-text-transform:                  none;
+@dropdown-menu-list-item-danger-inverse-active-text-shadow:                     none;
+@dropdown-menu-list-item-danger-inverse-active-text-decoration:                 none;
+@dropdown-menu-list-item-danger-inverse-active-text-rendering:                  optimizelegibility;
+@dropdown-menu-list-item-danger-inverse-active-background-color:                color-lighten(@neutral, 20);
+@dropdown-menu-list-item-danger-inverse-active-background-gradient-color-top:   none;
+@dropdown-menu-list-item-danger-inverse-active-background-gradient-color-bottom:  none;
+@dropdown-menu-list-item-danger-inverse-active-border-width:                    0px;
+@dropdown-menu-list-item-danger-inverse-active-border-color:                    none;
+@dropdown-menu-list-item-danger-inverse-active-border-top-width:                @dropdown-menu-list-item-danger-inverse-active-border-width;
+@dropdown-menu-list-item-danger-inverse-active-border-top-color:                @dropdown-menu-list-item-danger-inverse-active-border-color;
+@dropdown-menu-list-item-danger-inverse-active-border-right-width:              @dropdown-menu-list-item-danger-inverse-active-border-width;
+@dropdown-menu-list-item-danger-inverse-active-border-right-color:              @dropdown-menu-list-item-danger-inverse-active-border-color;
+@dropdown-menu-list-item-danger-inverse-active-border-bottom-width:             @dropdown-menu-list-item-danger-inverse-active-border-width;
+@dropdown-menu-list-item-danger-inverse-active-border-bottom-color:             @dropdown-menu-list-item-danger-inverse-active-border-color;
+@dropdown-menu-list-item-danger-inverse-active-border-left-width:               @dropdown-menu-list-item-danger-inverse-active-border-width;
+@dropdown-menu-list-item-danger-inverse-active-border-left-color:               @dropdown-menu-list-item-danger-inverse-active-border-color;
+@dropdown-menu-list-item-danger-inverse-active-caret-color:                     @dropdown-menu-list-item-danger-inverse-active-text-color;
+@dropdown-menu-list-item-danger-inverse-active-shadow:                          none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger, Inverse) State:  Selected
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-inverse-selected-text-color:                    @dropdown-menu-list-item-danger-inverse-active-text-color;
+@dropdown-menu-list-item-danger-inverse-selected-text-font-family:              @dropdown-menu-list-item-danger-inverse-active-text-font-family;
+@dropdown-menu-list-item-danger-inverse-selected-text-font-style:               @dropdown-menu-list-item-danger-inverse-active-text-font-style;
+@dropdown-menu-list-item-danger-inverse-selected-text-font-weight:              @dropdown-menu-list-item-danger-inverse-active-text-font-weight;
+@dropdown-menu-list-item-danger-inverse-selected-text-transform:                @dropdown-menu-list-item-danger-inverse-active-text-transform;
+@dropdown-menu-list-item-danger-inverse-selected-text-shadow:                   @dropdown-menu-list-item-danger-inverse-active-text-shadow;
+@dropdown-menu-list-item-danger-inverse-selected-text-decoration:               @dropdown-menu-list-item-danger-inverse-active-text-decoration;
+@dropdown-menu-list-item-danger-inverse-selected-text-rendering:                @dropdown-menu-list-item-danger-inverse-active-text-rendering;
+@dropdown-menu-list-item-danger-inverse-selected-background-color:              @dropdown-menu-list-item-danger-inverse-active-background-color;
+@dropdown-menu-list-item-danger-inverse-selected-background-gradient-color-top:  @dropdown-menu-list-item-danger-inverse-active-background-gradient-color-top;
+@dropdown-menu-list-item-danger-inverse-selected-background-gradient-color-bottom:  @dropdown-menu-list-item-danger-inverse-active-background-gradient-color-bottom;
+@dropdown-menu-list-item-danger-inverse-selected-border-width:                  @dropdown-menu-list-item-danger-inverse-active-border-width;
+@dropdown-menu-list-item-danger-inverse-selected-border-color:                  @dropdown-menu-list-item-danger-inverse-active-border-color;
+@dropdown-menu-list-item-danger-inverse-selected-border-top-width:              @dropdown-menu-list-item-danger-inverse-selected-border-width;
+@dropdown-menu-list-item-danger-inverse-selected-border-top-color:              @dropdown-menu-list-item-danger-inverse-selected-border-color;
+@dropdown-menu-list-item-danger-inverse-selected-border-right-width:            @dropdown-menu-list-item-danger-inverse-selected-border-width;
+@dropdown-menu-list-item-danger-inverse-selected-border-right-color:            @dropdown-menu-list-item-danger-inverse-selected-border-color;
+@dropdown-menu-list-item-danger-inverse-selected-border-bottom-width:           @dropdown-menu-list-item-danger-inverse-selected-border-width;
+@dropdown-menu-list-item-danger-inverse-selected-border-bottom-color:           @dropdown-menu-list-item-danger-inverse-selected-border-color;
+@dropdown-menu-list-item-danger-inverse-selected-border-left-width:             @dropdown-menu-list-item-danger-inverse-selected-border-width;
+@dropdown-menu-list-item-danger-inverse-selected-border-left-color:             @dropdown-menu-list-item-danger-inverse-selected-border-color;
+@dropdown-menu-list-item-danger-inverse-selected-caret-color:                   @dropdown-menu-list-item-danger-inverse-selected-text-color;
+@dropdown-menu-list-item-danger-inverse-selected-shadow:                        @dropdown-menu-list-item-danger-inverse-active-shadow;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item (Danger, Inverse) State: Disabled
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-danger-inverse-disabled-text-color:                    @dropdown-menu-list-item-inverse-text-color;
+@dropdown-menu-list-item-danger-inverse-disabled-text-font-family:              @dropdown-menu-list-item-inverse-text-font-family;
+@dropdown-menu-list-item-danger-inverse-disabled-text-font-style:               @dropdown-menu-list-item-inverse-text-font-style;
+@dropdown-menu-list-item-danger-inverse-disabled-text-font-weight:              @dropdown-menu-list-item-inverse-text-font-weight;
+@dropdown-menu-list-item-danger-inverse-disabled-text-transform:                @dropdown-menu-list-item-inverse-text-transform;
+@dropdown-menu-list-item-danger-inverse-disabled-text-shadow:                   @dropdown-menu-list-item-inverse-text-shadow;
+@dropdown-menu-list-item-danger-inverse-disabled-text-decoration:               @dropdown-menu-list-item-inverse-text-decoration;
+@dropdown-menu-list-item-danger-inverse-disabled-text-rendering:                @dropdown-menu-list-item-inverse-text-rendering;
+@dropdown-menu-list-item-danger-inverse-disabled-background-color:              @dropdown-menu-list-item-inverse-background-color;
+@dropdown-menu-list-item-danger-inverse-disabled-background-gradient-color-top:  @dropdown-menu-list-item-inverse-background-gradient-color-top;
+@dropdown-menu-list-item-danger-inverse-disabled-background-gradient-color-bottom:  @dropdown-menu-list-item-inverse-background-gradient-color-bottom;
+@dropdown-menu-list-item-danger-inverse-disabled-border-width:                  @dropdown-menu-list-item-border-width;
+@dropdown-menu-list-item-danger-inverse-disabled-border-color:                  @dropdown-menu-list-item-border-color;
+@dropdown-menu-list-item-danger-inverse-disabled-border-top-width:              @dropdown-menu-list-item-danger-inverse-disabled-border-width;
+@dropdown-menu-list-item-danger-inverse-disabled-border-top-color:              @dropdown-menu-list-item-danger-inverse-disabled-border-color;
+@dropdown-menu-list-item-danger-inverse-disabled-border-right-width:            @dropdown-menu-list-item-danger-inverse-disabled-border-width;
+@dropdown-menu-list-item-danger-inverse-disabled-border-right-color:            @dropdown-menu-list-item-danger-inverse-disabled-border-color;
+@dropdown-menu-list-item-danger-inverse-disabled-border-bottom-width:           @dropdown-menu-list-item-danger-inverse-disabled-border-width;
+@dropdown-menu-list-item-danger-inverse-disabled-border-bottom-color:           @dropdown-menu-list-item-danger-inverse-disabled-border-color;
+@dropdown-menu-list-item-danger-inverse-disabled-border-left-width:             @dropdown-menu-list-item-danger-inverse-disabled-border-width;
+@dropdown-menu-list-item-danger-inverse-disabled-border-left-color:             @dropdown-menu-list-item-danger-inverse-disabled-border-color;
+@dropdown-menu-list-item-danger-inverse-disabled-caret-color:                   @dropdown-menu-list-item-danger-inverse-disabled-text-color;
+@dropdown-menu-list-item-danger-inverse-disabled-shadow:                        @dropdown-menu-list-item-inverse-shadow;
+@dropdown-menu-list-item-danger-inverse-disabled-opacity:                       0.5;

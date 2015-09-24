@@ -1,0 +1,1637 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+components/carousel.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@carousel-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Carousel
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .carousel{
+
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    left: -100%;
+    list-style: none;
+    .translateX(100%);
+    .clearfix();
+    margin-top: @carousel-margin-top;
+    margin-bottom: @carousel-margin-bottom;
+
+
+
+    /* -----------------------------------------------------------------------------
+    Margins With Pagination
+    ----------------------------------------------------------------------------- */
+
+    + .carousel-pagination {
+
+      margin-top: @carousel-pagination-margin-top - @carousel-margin-bottom;
+      margin-bottom: @carousel-margin-bottom + @carousel-pagination-margin-bottom;
+
+      &.short,
+      &.short-top {
+
+        margin-top: @carousel-pagination-short-margin-top - @carousel-margin-bottom;
+
+      }
+
+      &.tall,
+      &.tall-top {
+
+        margin-top: @carousel-pagination-tall-margin-top - @carousel-margin-bottom;
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Flush Bottom
+    ----------------------------------------------------------------------------- */
+
+    &.flush-bottom {
+
+      margin-bottom: 0px;
+
+      /* -----------------------------------------------------------------------------
+      Margins With Pagination
+      ----------------------------------------------------------------------------- */
+
+      + .carousel-pagination {
+
+        margin-top: @carousel-pagination-margin-top;
+        margin-bottom: 0px;
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Short
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      margin-top: @carousel-short-margin-top;
+      margin-bottom: @carousel-short-margin-bottom;
+
+      /* -----------------------------------------------------------------------------
+      Margins With Pagination
+      ----------------------------------------------------------------------------- */
+
+      + .carousel-pagination {
+
+        margin-top: @carousel-pagination-margin-top - @carousel-short-margin-bottom;
+        margin-bottom: @carousel-short-margin-bottom + @carousel-pagination-short-margin-bottom;
+
+        &.short,
+        &.short-top {
+
+          margin-top: @carousel-pagination-short-margin-top - @carousel-short-margin-bottom;
+
+        }
+
+      }
+
+    }
+
+    &.short-top {
+
+      margin-top: @carousel-short-margin-top;
+
+    }
+
+    &.short-bottom {
+
+      margin-bottom: @carousel-short-margin-bottom;
+
+      /* -----------------------------------------------------------------------------
+      Margins With Pagination
+      ----------------------------------------------------------------------------- */
+
+      + .carousel-pagination {
+
+        margin-top: @carousel-pagination-short-margin-top - @carousel-short-margin-bottom;
+        margin-bottom: @carousel-short-margin-bottom + @carousel-pagination-short-margin-bottom;
+
+        &.short,
+        &.short-top {
+
+          margin-top: @carousel-pagination-short-margin-top - @carousel-short-margin-bottom;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Tall
+    ----------------------------------------------------------------------------- */
+
+    &.tall {
+
+      margin-top: @carousel-tall-margin-top;
+      margin-bottom: @carousel-tall-margin-bottom;
+
+      /* -----------------------------------------------------------------------------
+      Margins With Pagination
+      ----------------------------------------------------------------------------- */
+
+      + .carousel-pagination {
+
+        margin-top: @carousel-pagination-margin-top - @carousel-tall-margin-bottom;
+        margin-bottom: @carousel-tall-margin-bottom + @carousel-pagination-tall-margin-bottom;
+
+        &.tall,
+        &.tall-top {
+
+          margin-top: @carousel-pagination-tall-margin-top - @carousel-short-margin-bottom;
+
+        }
+
+      }
+
+    }
+
+    &.tall-top {
+
+      margin-top: @carousel-tall-margin-top;
+
+    }
+
+    &.tall-bottom {
+
+      margin-bottom: @carousel-tall-margin-bottom;
+
+      /* -----------------------------------------------------------------------------
+      Margins With Pagination
+      ----------------------------------------------------------------------------- */
+
+      + .carousel-pagination {
+
+        margin-top: @carousel-pagination-margin-top - @carousel-tall-margin-bottom;
+        margin-bottom: @carousel-tall-margin-bottom + @carousel-pagination-tall-margin-bottom;
+
+        &.tall,
+        &.tall-top {
+
+          margin-top: @carousel-pagination-tall-margin-top - @carousel-short-margin-bottom;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Reversing
+    ----------------------------------------------------------------------------- */
+
+    &.is-reversing {
+
+      .translateX(-100%);
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Transition
+    ----------------------------------------------------------------------------- */
+
+    &.is-set {
+
+      .transform(none);
+      .transition(transform 1.0s cubic-bezier(0.23, 1, 0.32, 1));
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Carousel Item
+    ----------------------------------------------------------------------------- */
+
+    .carousel-item {
+
+      .transition(e('opacity 0.5s ease'));
+      flex: 1 0 100%;
+      margin: 0px;
+      padding: 0px;
+      order: 2;
+      .opacity(0);
+
+      &:before {
+
+        display: none;
+
+      }
+
+      &.is-leaving {
+
+        order: 1;
+
+      }
+
+      &.active {
+
+        .opacity(1.0);
+
+      }
+
+    }
+
+  }
+
+
+
+
+
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Carousel Pagination
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .carousel-pagination {
+
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    line-height: 0px;
+    font-size: 0px;
+    height: auto;
+    .clearfix();
+    margin-top: @carousel-pagination-margin-top;
+    margin-bottom: @carousel-pagination-margin-bottom;
+
+
+
+    /* -----------------------------------------------------------------------------
+    Short
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      margin-top: @carousel-pagination-short-margin-top;
+      margin-bottom: @carousel-pagination-short-margin-bottom;
+
+    }
+
+    &.short-top {
+
+      margin-top: @carousel-pagination-short-margin-top;
+
+    }
+
+    &.short-bottom {
+
+      margin-bottom: @carousel-pagination-short-margin-bottom;
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Tall
+    ----------------------------------------------------------------------------- */
+
+    &.tall {
+
+      margin-top: @carousel-pagination-tall-margin-top;
+      margin-bottom: @carousel-pagination-tall-margin-bottom;
+
+    }
+
+    &.tall-top {
+
+      margin-top: @carousel-pagination-tall-margin-top;
+
+    }
+
+    &.tall-bottom {
+
+      margin-bottom: @carousel-pagination-tall-margin-bottom;
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Carousel Pagination Item
+    ----------------------------------------------------------------------------- */
+
+    li {
+
+      position: relative;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding: 0px;
+      margin: 0px;
+      .transition(e('all 0.2s ease'));
+      .carousel-pagination-size-variant('');
+      .carousel-pagination-variant('default');
+
+      a {
+
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+      }
+
+      &:hover {
+
+        .carousel-pagination-variant('default-hover');
+
+      }
+
+      &:active {
+
+        .carousel-pagination-variant('default-active');
+
+      }
+
+      &.active {
+
+        .carousel-pagination-variant('default-selected');
+
+      }
+
+      span {
+
+        display: none;
+
+      }
+
+      &:before {
+
+        display: none;
+
+      }
+
+      &:last-child {
+
+        margin-right: 0px;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@carousel-enabled) and (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: Mini (@screen-mini) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@carousel-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Carousel
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .carousel{
+
+        margin-top: @carousel-margin-top * @carousel-margin-top-scale-screen-mini;
+        margin-bottom: @carousel-margin-bottom * @carousel-margin-bottom-scale-screen-mini;
+
+
+
+        /* -----------------------------------------------------------------------------
+        Margins With Pagination
+        ----------------------------------------------------------------------------- */
+
+        + .carousel-pagination {
+
+          margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+          margin-bottom: (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-mini) + (@carousel-pagination-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini);
+
+          &.short,
+          &.short-top {
+
+            margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+
+          }
+
+          &.tall,
+          &.tall-top {
+
+            margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Flush Bottom
+        ----------------------------------------------------------------------------- */
+
+        &.flush-bottom {
+
+          margin-bottom: 0px;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-mini);
+            margin-bottom: 0px;
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Short
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          margin-top: @carousel-short-margin-top * @carousel-margin-top-scale-screen-mini;
+          margin-bottom: @carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+            margin-bottom: (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini) + (@carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini);
+
+            &.short,
+            &.short-top {
+
+              margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+
+            }
+
+          }
+
+        }
+
+        &.short-top {
+
+          margin-top: @carousel-short-margin-top * @carousel-margin-top-scale-screen-mini;
+
+        }
+
+        &.short-bottom {
+
+          margin-bottom: @carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+            margin-bottom: (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini) + (@carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini);
+
+            &.short,
+            &.short-top {
+
+              margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+
+            }
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Tall
+        ----------------------------------------------------------------------------- */
+
+        &.tall {
+
+          margin-top: @carousel-tall-margin-top * @carousel-margin-top-scale-screen-mini;
+          margin-bottom: @carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-mini;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+            margin-bottom: (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-mini) + (@carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini);
+
+            &.tall,
+            &.tall-top {
+
+              margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+
+            }
+
+          }
+
+        }
+
+        &.tall-top {
+
+          margin-top: @carousel-tall-margin-top * @carousel-margin-top-scale-screen-mini;
+
+        }
+
+        &.tall-bottom {
+
+          margin-bottom: @carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-mini;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+            margin-bottom: (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-mini) + (@carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini);
+
+            &.tall,
+            &.tall-top {
+
+              margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-mini) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-mini);
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Carousel Pagination
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .carousel-pagination {
+
+        margin-top: @carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-mini;
+        margin-bottom: @carousel-pagination-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini;
+
+
+
+        /* -----------------------------------------------------------------------------
+        Short
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          margin-top: @carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-mini;
+          margin-bottom: @carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini;
+
+        }
+
+        &.short-top {
+
+          margin-top: @carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-mini;
+
+        }
+
+        &.short-bottom {
+
+          margin-bottom: @carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Tall
+        ----------------------------------------------------------------------------- */
+
+        &.tall {
+
+          margin-top: @carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-mini;
+          margin-bottom: @carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini;
+
+        }
+
+        &.tall-top {
+
+          margin-top: @carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-mini;
+
+        }
+
+        &.tall-bottom {
+
+          margin-bottom: @carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-mini;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Carousel Pagination Item
+        ----------------------------------------------------------------------------- */
+
+        li {
+
+          .carousel-pagination-size-variant('screen-mini');
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@carousel-enabled) and (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: Small (@screen-small) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@carousel-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Carousel
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .carousel{
+
+        margin-top: @carousel-margin-top * @carousel-margin-top-scale-screen-small;
+        margin-bottom: @carousel-margin-bottom * @carousel-margin-bottom-scale-screen-small;
+
+
+
+        /* -----------------------------------------------------------------------------
+        Margins With Pagination
+        ----------------------------------------------------------------------------- */
+
+        + .carousel-pagination {
+
+          margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+          margin-bottom: (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-small) + (@carousel-pagination-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small);
+
+          &.short,
+          &.short-top {
+
+            margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+
+          }
+
+          &.tall,
+          &.tall-top {
+
+            margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Flush Bottom
+        ----------------------------------------------------------------------------- */
+
+        &.flush-bottom {
+
+          margin-bottom: 0px;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-small);
+            margin-bottom: 0px;
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Short
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          margin-top: @carousel-short-margin-top * @carousel-margin-top-scale-screen-small;
+          margin-bottom: @carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+            margin-bottom: (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small) + (@carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small);
+
+            &.short,
+            &.short-top {
+
+              margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+
+            }
+
+          }
+
+        }
+
+        &.short-top {
+
+          margin-top: @carousel-short-margin-top * @carousel-margin-top-scale-screen-small;
+
+        }
+
+        &.short-bottom {
+
+          margin-bottom: @carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+            margin-bottom: (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small) + (@carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small);
+
+            &.short,
+            &.short-top {
+
+              margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+
+            }
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Tall
+        ----------------------------------------------------------------------------- */
+
+        &.tall {
+
+          margin-top: @carousel-tall-margin-top * @carousel-margin-top-scale-screen-small;
+          margin-bottom: @carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-small;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+            margin-bottom: (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-small) + (@carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small);
+
+            &.tall,
+            &.tall-top {
+
+              margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+
+            }
+
+          }
+
+        }
+
+        &.tall-top {
+
+          margin-top: @carousel-tall-margin-top * @carousel-margin-top-scale-screen-small;
+
+        }
+
+        &.tall-bottom {
+
+          margin-bottom: @carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-small;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+            margin-bottom: (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-small) + (@carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small);
+
+            &.tall,
+            &.tall-top {
+
+              margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-small) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-small);
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Carousel Pagination
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .carousel-pagination {
+
+        margin-top: @carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-small;
+        margin-bottom: @carousel-pagination-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small;
+
+
+
+        /* -----------------------------------------------------------------------------
+        Short
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          margin-top: @carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-small;
+          margin-bottom: @carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small;
+
+        }
+
+        &.short-top {
+
+          margin-top: @carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-small;
+
+        }
+
+        &.short-bottom {
+
+          margin-bottom: @carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Tall
+        ----------------------------------------------------------------------------- */
+
+        &.tall {
+
+          margin-top: @carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-small;
+          margin-bottom: @carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small;
+
+        }
+
+        &.tall-top {
+
+          margin-top: @carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-small;
+
+        }
+
+        &.tall-bottom {
+
+          margin-bottom: @carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-small;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Carousel Pagination Item
+        ----------------------------------------------------------------------------- */
+
+        li {
+
+          .carousel-pagination-size-variant('screen-small');
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@carousel-enabled) and (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: Medium (@screen-medium) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@carousel-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Carousel
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .carousel{
+
+        margin-top: @carousel-margin-top * @carousel-margin-top-scale-screen-medium;
+        margin-bottom: @carousel-margin-bottom * @carousel-margin-bottom-scale-screen-medium;
+
+
+
+        /* -----------------------------------------------------------------------------
+        Margins With Pagination
+        ----------------------------------------------------------------------------- */
+
+        + .carousel-pagination {
+
+          margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+          margin-bottom: (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-medium) + (@carousel-pagination-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium);
+
+          &.short,
+          &.short-top {
+
+            margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+
+          }
+
+          &.tall,
+          &.tall-top {
+
+            margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Flush Bottom
+        ----------------------------------------------------------------------------- */
+
+        &.flush-bottom {
+
+          margin-bottom: 0px;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-medium);
+            margin-bottom: 0px;
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Short
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          margin-top: @carousel-short-margin-top * @carousel-margin-top-scale-screen-medium;
+          margin-bottom: @carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+            margin-bottom: (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium) + (@carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium);
+
+            &.short,
+            &.short-top {
+
+              margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+
+            }
+
+          }
+
+        }
+
+        &.short-top {
+
+          margin-top: @carousel-short-margin-top * @carousel-margin-top-scale-screen-medium;
+
+        }
+
+        &.short-bottom {
+
+          margin-bottom: @carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+            margin-bottom: (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium) + (@carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium);
+
+            &.short,
+            &.short-top {
+
+              margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+
+            }
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Tall
+        ----------------------------------------------------------------------------- */
+
+        &.tall {
+
+          margin-top: @carousel-tall-margin-top * @carousel-margin-top-scale-screen-medium;
+          margin-bottom: @carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-medium;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+            margin-bottom: (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-medium) + (@carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium);
+
+            &.tall,
+            &.tall-top {
+
+              margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+
+            }
+
+          }
+
+        }
+
+        &.tall-top {
+
+          margin-top: @carousel-tall-margin-top * @carousel-margin-top-scale-screen-medium;
+
+        }
+
+        &.tall-bottom {
+
+          margin-bottom: @carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-medium;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+            margin-bottom: (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-medium) + (@carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium);
+
+            &.tall,
+            &.tall-top {
+
+              margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-medium) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-medium);
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Carousel Pagination
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .carousel-pagination {
+
+        margin-top: @carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-medium;
+        margin-bottom: @carousel-pagination-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium;
+
+
+
+        /* -----------------------------------------------------------------------------
+        Short
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          margin-top: @carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-medium;
+          margin-bottom: @carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium;
+
+        }
+
+        &.short-top {
+
+          margin-top: @carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-medium;
+
+        }
+
+        &.short-bottom {
+
+          margin-bottom: @carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Tall
+        ----------------------------------------------------------------------------- */
+
+        &.tall {
+
+          margin-top: @carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-medium;
+          margin-bottom: @carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium;
+
+        }
+
+        &.tall-top {
+
+          margin-top: @carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-medium;
+
+        }
+
+        &.tall-bottom {
+
+          margin-bottom: @carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-medium;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Carousel Pagination Item
+        ----------------------------------------------------------------------------- */
+
+        li {
+
+          .carousel-pagination-size-variant('screen-medium');
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@carousel-enabled) and (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: Large (@screen-large) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@carousel-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Carousel
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .carousel{
+
+        margin-top: @carousel-margin-top * @carousel-margin-top-scale-screen-large;
+        margin-bottom: @carousel-margin-bottom * @carousel-margin-bottom-scale-screen-large;
+
+
+
+        /* -----------------------------------------------------------------------------
+        Margins With Pagination
+        ----------------------------------------------------------------------------- */
+
+        + .carousel-pagination {
+
+          margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+          margin-bottom: (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-large) + (@carousel-pagination-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large);
+
+          &.short,
+          &.short-top {
+
+            margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+
+          }
+
+          &.tall,
+          &.tall-top {
+
+            margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Flush Bottom
+        ----------------------------------------------------------------------------- */
+
+        &.flush-bottom {
+
+          margin-bottom: 0px;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-large);
+            margin-bottom: 0px;
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Short
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          margin-top: @carousel-short-margin-top * @carousel-margin-top-scale-screen-large;
+          margin-bottom: @carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+            margin-bottom: (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large) + (@carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large);
+
+            &.short,
+            &.short-top {
+
+              margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+
+            }
+
+          }
+
+        }
+
+        &.short-top {
+
+          margin-top: @carousel-short-margin-top * @carousel-margin-top-scale-screen-large;
+
+        }
+
+        &.short-bottom {
+
+          margin-bottom: @carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+            margin-bottom: (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large) + (@carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large);
+
+            &.short,
+            &.short-top {
+
+              margin-top: (@carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+
+            }
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Tall
+        ----------------------------------------------------------------------------- */
+
+        &.tall {
+
+          margin-top: @carousel-tall-margin-top * @carousel-margin-top-scale-screen-large;
+          margin-bottom: @carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-large;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+            margin-bottom: (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-large) + (@carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large);
+
+            &.tall,
+            &.tall-top {
+
+              margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+
+            }
+
+          }
+
+        }
+
+        &.tall-top {
+
+          margin-top: @carousel-tall-margin-top * @carousel-margin-top-scale-screen-large;
+
+        }
+
+        &.tall-bottom {
+
+          margin-bottom: @carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-large;
+
+          /* -----------------------------------------------------------------------------
+          Margins With Pagination
+          ----------------------------------------------------------------------------- */
+
+          + .carousel-pagination {
+
+            margin-top: (@carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+            margin-bottom: (@carousel-tall-margin-bottom * @carousel-margin-bottom-scale-screen-large) + (@carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large);
+
+            &.tall,
+            &.tall-top {
+
+              margin-top: (@carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-large) - (@carousel-short-margin-bottom * @carousel-margin-bottom-scale-screen-large);
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Carousel Pagination
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .carousel-pagination {
+
+        margin-top: @carousel-pagination-margin-top * @carousel-pagination-margin-top-scale-screen-large;
+        margin-bottom: @carousel-pagination-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large;
+
+
+
+        /* -----------------------------------------------------------------------------
+        Short
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          margin-top: @carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-large;
+          margin-bottom: @carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large;
+
+        }
+
+        &.short-top {
+
+          margin-top: @carousel-pagination-short-margin-top * @carousel-pagination-margin-top-scale-screen-large;
+
+        }
+
+        &.short-bottom {
+
+          margin-bottom: @carousel-pagination-short-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Tall
+        ----------------------------------------------------------------------------- */
+
+        &.tall {
+
+          margin-top: @carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-large;
+          margin-bottom: @carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large;
+
+        }
+
+        &.tall-top {
+
+          margin-top: @carousel-pagination-tall-margin-top * @carousel-pagination-margin-top-scale-screen-large;
+
+        }
+
+        &.tall-bottom {
+
+          margin-bottom: @carousel-pagination-tall-margin-bottom * @carousel-pagination-margin-bottom-scale-screen-large;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Carousel Pagination Item
+        ----------------------------------------------------------------------------- */
+
+        li {
+
+          .carousel-pagination-size-variant('screen-large');
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@screen-resolution-2x-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Resolution: 2x
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+}
+
+
+
+
+
+
+& when (@screen-resolution-3x-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Resolution: 3x
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+
+  }
+
+}

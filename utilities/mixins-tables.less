@@ -1,0 +1,349 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+utilities/mixins-tables.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Table Cell Size Variant
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.table-cell-size-variant(@variant-type, @variant-size, @variant-screen-size) {
+
+  @table-cell-variant-val-text-font-size: null;
+  @table-cell-variant-val-text-font-size-scale: 1.0;
+  @table-cell-variant-val-text-line-height: null;
+  @table-cell-variant-val-text-line-height-scale: 1.0;
+  @table-cell-variant-val-padding-horizontal: null;
+  @table-cell-variant-val-padding-horizontal-scale: 1.0;
+  @table-cell-variant-val-padding-vertical: null;
+  @table-cell-variant-val-padding-vertical-scale: 1.0;
+
+  & when (@variant-size = '') {
+
+    & when (@variant-screen-size = '') {
+
+      @table-cell-variant-text-font-size: "@{variant-type}-text-font-size";
+      @table-cell-variant-val-text-font-size: @@table-cell-variant-text-font-size;
+
+      @table-cell-variant-text-line-height: "@{variant-type}-text-line-height";
+      @table-cell-variant-val-text-line-height: @@table-cell-variant-text-line-height;
+
+      @table-cell-variant-padding-horizontal: "@{variant-type}-padding-horizontal";
+      @table-cell-variant-val-padding-horizontal: @@table-cell-variant-padding-horizontal;
+
+      @table-cell-variant-padding-vertical: "@{variant-type}-padding-vertical";
+      @table-cell-variant-val-padding-vertical: @@table-cell-variant-padding-vertical;
+
+      .table-cell-size-variant-definitions(@table-cell-variant-val-text-font-size, @table-cell-variant-val-text-font-size-scale, @table-cell-variant-val-text-line-height, @table-cell-variant-val-text-line-height-scale, @table-cell-variant-val-padding-horizontal, @table-cell-variant-val-padding-horizontal-scale, @table-cell-variant-val-padding-vertical, @table-cell-variant-val-padding-vertical-scale);
+
+    }
+
+    & when not (@variant-screen-size = '') {
+
+      @table-cell-variant-text-font-size: "@{variant-type}-text-font-size";
+      @table-cell-variant-val-text-font-size: @@table-cell-variant-text-font-size;
+
+      @table-cell-variant-text-font-size-scale: "@{variant-type}-text-font-size-scale-@{variant-screen-size}";
+      @table-cell-variant-val-text-font-size-scale: @@table-cell-variant-text-font-size-scale;
+
+      @table-cell-variant-text-line-height: "@{variant-type}-text-line-height";
+      @table-cell-variant-val-text-line-height: @@table-cell-variant-text-line-height;
+
+      @table-cell-variant-text-line-height-scale: "@{variant-type}-text-line-height-scale-@{variant-screen-size}";
+      @table-cell-variant-val-text-line-height-scale: @@table-cell-variant-text-line-height-scale;
+
+      @table-cell-variant-height:  "@{variant-type}-height";
+      @table-cell-variant-val-height: @@table-cell-variant-height;
+
+      @table-cell-variant-padding-horizontal: "@{variant-type}-padding-horizontal";
+      @table-cell-variant-val-padding-horizontal: @@table-cell-variant-padding-horizontal;
+
+      @table-cell-variant-padding-horizontal-scale: "@{variant-type}-padding-horizontal-scale-@{variant-screen-size}";
+      @table-cell-variant-val-padding-horizontal-scale: @@table-cell-variant-padding-horizontal-scale;
+
+      @table-cell-variant-padding-vertical: "@{variant-type}-padding-vertical";
+      @table-cell-variant-val-padding-vertical: @@table-cell-variant-padding-vertical;
+
+      @table-cell-variant-padding-vertical-scale: "@{variant-type}-padding-vertical-scale-@{variant-screen-size}";
+      @table-cell-variant-val-padding-vertical-scale: @@table-cell-variant-padding-vertical-scale;
+
+      .table-cell-size-variant-definitions(@table-cell-variant-val-text-font-size, @table-cell-variant-val-text-font-size-scale, @table-cell-variant-val-text-line-height, @table-cell-variant-val-text-line-height-scale, @table-cell-variant-val-padding-horizontal, @table-cell-variant-val-padding-horizontal-scale, @table-cell-variant-val-padding-vertical, @table-cell-variant-val-padding-vertical-scale);
+
+    }
+
+  }
+
+  & when not (@variant-size = '') {
+
+    & when (@variant-screen-size = '') {
+
+      @table-cell-variant-text-font-size: "@{variant-type}-@{variant-size}-text-font-size";
+      @table-cell-variant-val-text-font-size: @@table-cell-variant-text-font-size;
+
+      @table-cell-variant-text-line-height: "@{variant-type}-@{variant-size}-text-line-height";
+      @table-cell-variant-val-text-line-height: @@table-cell-variant-text-line-height;
+
+      @table-cell-variant-padding-horizontal: "@{variant-type}-@{variant-size}-padding-horizontal";
+      @table-cell-variant-val-padding-horizontal: @@table-cell-variant-padding-horizontal;
+
+      @table-cell-variant-padding-vertical: "@{variant-type}-@{variant-size}-padding-vertical";
+      @table-cell-variant-val-padding-vertical: @@table-cell-variant-padding-vertical;
+
+      .table-cell-size-variant-definitions(@table-cell-variant-val-text-font-size, @table-cell-variant-val-text-font-size-scale, @table-cell-variant-val-text-line-height, @table-cell-variant-val-text-line-height-scale, @table-cell-variant-val-padding-horizontal, @table-cell-variant-val-padding-horizontal-scale, @table-cell-variant-val-padding-vertical, @table-cell-variant-val-padding-vertical-scale);
+
+    }
+
+    & when not (@variant-screen-size = '') {
+
+      @table-cell-variant-text-font-size: "@{variant-type}-@{variant-size}-text-font-size";
+      @table-cell-variant-val-text-font-size: @@table-cell-variant-text-font-size;
+
+      @table-cell-variant-text-font-size-scale: "@{variant-type}-@{variant-size}-text-font-size-scale-@{variant-screen-size}";
+      @table-cell-variant-val-text-font-size-scale: @@table-cell-variant-text-font-size-scale;
+
+      @table-cell-variant-text-line-height: "@{variant-type}-@{variant-size}-text-line-height";
+      @table-cell-variant-val-text-line-height: @@table-cell-variant-text-line-height;
+
+      @table-cell-variant-text-line-height-scale: "@{variant-type}-@{variant-size}-text-line-height-scale-@{variant-screen-size}";
+      @table-cell-variant-val-text-line-height-scale: @@table-cell-variant-text-line-height-scale;
+
+      @table-cell-variant-padding-horizontal: "@{variant-type}-@{variant-size}-padding-horizontal";
+      @table-cell-variant-val-padding-horizontal: @@table-cell-variant-padding-horizontal;
+
+      @table-cell-variant-padding-horizontal-scale: "@{variant-type}-@{variant-size}-padding-horizontal-scale-@{variant-screen-size}";
+      @table-cell-variant-val-padding-horizontal-scale: @@table-cell-variant-padding-horizontal-scale;
+
+      @table-cell-variant-padding-vertical: "@{variant-type}-@{variant-size}-padding-vertical";
+      @table-cell-variant-val-padding-vertical: @@table-cell-variant-padding-vertical;
+
+      @table-cell-variant-padding-vertical-scale: "@{variant-type}-@{variant-size}-padding-vertical-scale-@{variant-screen-size}";
+      @table-cell-variant-val-padding-vertical-scale: @@table-cell-variant-padding-vertical-scale;
+
+      .table-cell-size-variant-definitions(@table-cell-variant-val-text-font-size, @table-cell-variant-val-text-font-size-scale, @table-cell-variant-val-text-line-height, @table-cell-variant-val-text-line-height-scale, @table-cell-variant-val-padding-horizontal, @table-cell-variant-val-padding-horizontal-scale, @table-cell-variant-val-padding-vertical, @table-cell-variant-val-padding-vertical-scale);
+
+    }
+
+  }
+
+}
+
+
+
+.table-cell-size-variant-definitions(@text-font-size, @text-font-size-scale, @text-line-height, @text-line-height-scale, @padding-horizontal, @padding-horizontal-scale, @padding-vertical, @padding-vertical-scale) {
+
+  & when not (@text-font-size = null) {
+
+    font-size: floor(@text-font-size * @text-font-size-scale);
+
+  }
+
+  & when not (@text-line-height = null) {
+
+    line-height: floor(@text-line-height * @text-line-height-scale);
+
+  }
+
+  & when not (@padding-horizontal = null) {
+
+    padding-left: floor(@padding-horizontal * @padding-horizontal-scale);
+    padding-right: floor(@padding-horizontal * @padding-horizontal-scale);
+
+  }
+
+  & when not (@padding-vertical = null) {
+
+    padding-top: floor(@padding-vertical * @padding-vertical-scale);
+    padding-bottom: floor(@padding-vertical * @padding-vertical-scale);
+
+  }
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Table Cell Style Variant
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+.table-cell-style-variant(@variant-type: 'table-cell', @variant-class: 'default') {
+
+  @table-cell-variant-text-color: "@{variant-type}-@{variant-class}-text-color";
+  @table-cell-variant-text-font-family: "@{variant-type}-@{variant-class}-text-font-family";
+  @table-cell-variant-text-font-style: "@{variant-type}-@{variant-class}-text-font-style";
+  @table-cell-variant-text-font-weight: "@{variant-type}-@{variant-class}-text-font-weight";
+  @table-cell-variant-text-transform: "@{variant-type}-@{variant-class}-text-transform";
+  @table-cell-variant-text-shadow: "@{variant-type}-@{variant-class}-text-shadow";
+  @table-cell-variant-text-rendering: "@{variant-type}-@{variant-class}-text-rendering";
+  @table-cell-variant-background-color: "@{variant-type}-@{variant-class}-background-color";
+  @table-cell-variant-background-gradient-color-top: "@{variant-type}-@{variant-class}-background-gradient-color-top";
+  @table-cell-variant-background-gradient-color-bottom: "@{variant-type}-@{variant-class}-background-gradient-color-bottom";
+  @table-cell-variant-border-top-width: "@{variant-type}-@{variant-class}-border-top-width";
+  @table-cell-variant-border-top-color: "@{variant-type}-@{variant-class}-border-top-color";
+  @table-cell-variant-border-top-style: "@{variant-type}-@{variant-class}-border-top-style";
+  @table-cell-variant-border-right-width: "@{variant-type}-@{variant-class}-border-right-width";
+  @table-cell-variant-border-right-color: "@{variant-type}-@{variant-class}-border-right-color";
+  @table-cell-variant-border-right-style: "@{variant-type}-@{variant-class}-border-right-style";
+  @table-cell-variant-border-bottom-width: "@{variant-type}-@{variant-class}-border-bottom-width";
+  @table-cell-variant-border-bottom-color: "@{variant-type}-@{variant-class}-border-bottom-color";
+  @table-cell-variant-border-bottom-style: "@{variant-type}-@{variant-class}-border-bottom-style";
+  @table-cell-variant-border-left-width: "@{variant-type}-@{variant-class}-border-left-width";
+  @table-cell-variant-border-left-color: "@{variant-type}-@{variant-class}-border-left-color";
+  @table-cell-variant-border-left-style: "@{variant-type}-@{variant-class}-border-left-style";
+  @table-cell-variant-shadow: "@{variant-type}-@{variant-class}-shadow";
+  @table-cell-variant-caret-color: "@{variant-type}-@{variant-class}-caret-color";
+
+  & when not (@@table-cell-variant-text-color = null) {
+
+    color: @@table-cell-variant-text-color;
+
+  }
+
+  & when not (@@table-cell-variant-text-font-family = null) {
+
+    font-family: @@table-cell-variant-text-font-family;
+
+  }
+
+  & when not (@@table-cell-variant-text-font-style = null) {
+
+    font-style: @@table-cell-variant-text-font-style;
+
+  }
+
+  & when not (@@table-cell-variant-text-font-weight = null) {
+
+    font-weight: @@table-cell-variant-text-font-weight;
+
+  }
+
+  & when not (@@table-cell-variant-text-transform = null) {
+
+    text-transform: @@table-cell-variant-text-transform;
+
+  }
+
+  & when not (@@table-cell-variant-text-shadow = null) {
+
+    text-shadow: @@table-cell-variant-text-shadow;
+
+  }
+
+  & when not (@@table-cell-variant-text-rendering = null) {
+
+    text-rendering: @@table-cell-variant-text-rendering;
+
+  }
+
+  & when not (@@table-cell-variant-background-color = null) {
+
+    background: @@table-cell-variant-background-color;
+
+  }
+
+  & when not (@@table-cell-variant-background-gradient-color-top = null) and not (@@table-cell-variant-background-gradient-color-bottom = null) {
+
+    #gradient > .vertical(@@table-cell-variant-background-gradient-color-top, @@table-cell-variant-background-gradient-color-bottom);
+
+  }
+
+  & when not (@@table-cell-variant-border-top-width = null) {
+
+    border-top-width: @@table-cell-variant-border-top-width;
+
+  }
+
+  & when not (@@table-cell-variant-border-top-color = null) {
+
+    border-top-color: @@table-cell-variant-border-top-color;
+
+  }
+
+  & when not (@@table-cell-variant-border-top-style = null) {
+
+    border-top-style: @@table-cell-variant-border-top-style;
+
+  }
+
+  & when not (@@table-cell-variant-border-right-width = null) {
+
+    border-right-width: @@table-cell-variant-border-right-width;
+
+  }
+
+  & when not (@@table-cell-variant-border-right-color = null) {
+
+    border-right-color: @@table-cell-variant-border-right-color;
+
+  }
+
+  & when not (@@table-cell-variant-border-right-style = null) {
+
+    border-right-style: @@table-cell-variant-border-right-style;
+
+  }
+
+  & when not (@@table-cell-variant-border-bottom-width = null) {
+
+    border-bottom-width: @@table-cell-variant-border-bottom-width;
+
+  }
+
+  & when not (@@table-cell-variant-border-bottom-color = null) {
+
+    border-bottom-color: @@table-cell-variant-border-bottom-color;
+
+  }
+
+  & when not (@@table-cell-variant-border-bottom-style = null) {
+
+    border-bottom-style: @@table-cell-variant-border-bottom-style;
+
+  }
+
+  & when not (@@table-cell-variant-border-left-width = null) {
+
+    border-left-width: @@table-cell-variant-border-left-width;
+
+  }
+
+  & when not (@@table-cell-variant-border-left-color = null) {
+
+    border-left-color: @@table-cell-variant-border-left-color;
+
+  }
+
+  & when not (@@table-cell-variant-border-left-style = null) {
+
+    border-left-style: @@table-cell-variant-border-left-style;
+
+  }
+
+  & when not (@@table-cell-variant-shadow = null) {
+
+    .box-shadow(@@table-cell-variant-shadow);
+
+  }
+
+}

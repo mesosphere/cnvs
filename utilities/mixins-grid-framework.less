@@ -1,0 +1,293 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+utilities/mixins-grid-framework.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Columns
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.make-grid-columns(@columns: @grid-columns-count, @gutter: @grid-gutter-width) {
+
+  .column(@index) when (@index = 1) {
+
+    @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
+
+    .column((@index + 1), @item);
+
+  }
+
+  .column(@index, @list) when (@index =< @columns) {
+
+    @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
+
+    .column((@index + 1), ~"@{list}, @{item}");
+
+  }
+
+  .column(@index, @list) when (@index > @columns) {
+
+    @{list} {
+
+      position: relative;
+      min-height: 1px;
+      padding-left:  (@gutter / 2);
+      padding-right: (@gutter / 2);
+
+    }
+
+  }
+
+  .column(1);
+
+}
+
+/* -----------------------------------------------------------------------------
+Float Grid Columns
+----------------------------------------------------------------------------- */
+
+.float-grid-columns() {
+
+  .column(@index) when (@index = 1) {
+
+    @item: ~".column-@{index}";
+
+    .column((@index + 1), @item);
+
+  }
+
+  .column(@index, @list) when (@index =< @grid-columns-count) {
+
+    @item: ~".column-@{index}";
+
+    .column((@index + 1), ~"@{list}, @{item}");
+
+  }
+
+  .column(@index, @list) when (@index > @grid-columns-count) {
+
+    @{list} {
+
+      padding-left:  (@grid-gutter-width / 2);
+      padding-right: (@grid-gutter-width / 2);
+
+    }
+
+  }
+
+  .column(1);
+
+}
+
+.float-grid-columns(@class) {
+
+  .column(@index, @class) when (@index = 1) {
+
+    @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
+
+    .column((@index + 1), @class, @item);
+
+  }
+
+  .column(@index, @class, @list) when (@index =< @grid-columns-count) {
+
+    @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
+
+    .column((@index + 1), @class, ~"@{list}, @{item}");
+
+  }
+
+  .column(@index, @class, @list) when (@index > @grid-columns-count) {
+
+    @{list} {
+
+      @gutter-width: "grid-gutter-width-screen-@{class}";
+
+      padding-left:  (@@gutter-width / 2);
+      padding-right: (@@gutter-width / 2);
+
+    }
+
+  }
+
+  .column(1, @class);
+
+}
+
+/* -----------------------------------------------------------------------------
+Calculate Grid Columns
+----------------------------------------------------------------------------- */
+
+.calc-grid-column(@index, @type) when (@type = width) and (@index > 0) {
+
+  .column-@{index} {
+
+    float: left;
+    width: percentage((@index / @grid-columns-count));
+
+  }
+
+}
+
+.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+
+  .column-@{class}-@{index} {
+
+    float: left;
+    width: percentage((@index / @grid-columns-count));
+
+  }
+
+}
+
+.calc-grid-column(@index, @type) when (@type = push) and (@index > 0) {
+
+  .column-push-@{index} {
+
+    left: percentage((@index / @grid-columns-count));
+
+  }
+
+}
+
+.calc-grid-column(@index, @class, @type) when (@type = push) and (@index > 0) {
+
+  .column-@{class}-push-@{index} {
+
+    left: percentage((@index / @grid-columns-count));
+
+  }
+
+}
+
+.calc-grid-column(@index, @type) when (@type = push) and (@index = 0) {
+
+  .column-push-0 {
+
+    left: auto;
+
+  }
+
+}
+
+.calc-grid-column(@index, @class, @type) when (@type = push) and (@index = 0) {
+
+  .column-@{class}-push-0 {
+
+    left: auto;
+
+  }
+
+}
+
+.calc-grid-column(@index, @type) when (@type = pull) and (@index > 0) {
+
+  .column-pull-@{index} {
+
+    right: percentage((@index / @grid-columns-count));
+
+  }
+
+}
+
+.calc-grid-column(@index, @class, @type) when (@type = pull) and (@index > 0) {
+
+  .column-@{class}-pull-@{index} {
+
+    right: percentage((@index / @grid-columns-count));
+
+  }
+
+}
+
+.calc-grid-column(@index, @type) when (@type = pull) and (@index = 0) {
+
+  .column-pull-0 {
+
+    right: auto;
+
+  }
+
+}
+
+.calc-grid-column(@index, @class, @type) when (@type = pull) and (@index = 0) {
+
+  .column-@{class}-pull-0 {
+
+    right: auto;
+
+  }
+
+}
+
+.calc-grid-column(@index, @type) when (@type = offset) {
+
+  .column-offset-@{index} {
+
+    margin-left: percentage((@index / @grid-columns-count));
+
+  }
+
+}
+
+.calc-grid-column(@index, @class, @type) when (@type = offset) {
+
+  .column-@{class}-offset-@{index} {
+
+    margin-left: percentage((@index / @grid-columns-count));
+
+  }
+
+}
+
+/* -----------------------------------------------------------------------------
+Make Grid Columns
+----------------------------------------------------------------------------- */
+
+.loop-grid-columns(@index, @type) when (@index >= 0) {
+
+  .calc-grid-column(@index, @type);
+  .loop-grid-columns((@index - 1), @type);
+
+}
+
+.loop-grid-columns(@index, @class, @type) when (@index >= 0) {
+
+  .calc-grid-column(@index, @class, @type);
+  .loop-grid-columns((@index - 1), @class, @type);
+
+}
+
+.make-grid() {
+
+  .float-grid-columns();
+  .loop-grid-columns(@grid-columns-count, width);
+  .loop-grid-columns(@grid-columns-count, pull);
+  .loop-grid-columns(@grid-columns-count, push);
+  .loop-grid-columns(@grid-columns-count, offset);
+
+}
+
+.make-grid(@class) {
+
+  .float-grid-columns(@class);
+  .loop-grid-columns(@grid-columns-count, @class, width);
+  .loop-grid-columns(@grid-columns-count, @class, pull);
+  .loop-grid-columns(@grid-columns-count, @class, push);
+  .loop-grid-columns(@grid-columns-count, @class, offset);
+
+}

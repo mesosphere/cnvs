@@ -1,0 +1,303 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+utilities/mixins-carousel.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Carousel Pagination Variant Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+.carousel-pagination-variant(@variant-class: 'default') {
+
+  @carousel-pagination-variant-text-color: "carousel-pagination-@{variant-class}-text-color";
+  @carousel-pagination-variant-text-font-family: "carousel-pagination-@{variant-class}-text-font-family";
+  @carousel-pagination-variant-text-font-style: "carousel-pagination-@{variant-class}-text-font-style";
+  @carousel-pagination-variant-text-font-weight: "carousel-pagination-@{variant-class}-text-font-weight";
+  @carousel-pagination-variant-text-transform: "carousel-pagination-@{variant-class}-text-transform";
+  @carousel-pagination-variant-text-shadow: "carousel-pagination-@{variant-class}-text-shadow";
+  @carousel-pagination-variant-text-decoration: "carousel-pagination-@{variant-class}-text-decoration";
+  @carousel-pagination-variant-text-rendering: "carousel-pagination-@{variant-class}-text-rendering";
+  @carousel-pagination-variant-background-color: "carousel-pagination-@{variant-class}-background-color";
+  @carousel-pagination-variant-background-gradient-color-top: "carousel-pagination-@{variant-class}-background-gradient-color-top";
+  @carousel-pagination-variant-background-gradient-color-bottom: "carousel-pagination-@{variant-class}-background-gradient-color-bottom";
+  @carousel-pagination-variant-border-width: "carousel-pagination-@{variant-class}-border-width";
+  @carousel-pagination-variant-border-color: "carousel-pagination-@{variant-class}-border-color";
+  @carousel-pagination-variant-border-style: "carousel-pagination-@{variant-class}-border-style";
+  @carousel-pagination-variant-border-top-width: "carousel-pagination-@{variant-class}-border-top-width";
+  @carousel-pagination-variant-border-top-color: "carousel-pagination-@{variant-class}-border-top-color";
+  @carousel-pagination-variant-border-top-style: "carousel-pagination-@{variant-class}-border-top-style";
+  @carousel-pagination-variant-border-right-width: "carousel-pagination-@{variant-class}-border-right-width";
+  @carousel-pagination-variant-border-right-color: "carousel-pagination-@{variant-class}-border-right-color";
+  @carousel-pagination-variant-border-right-style: "carousel-pagination-@{variant-class}-border-right-style";
+  @carousel-pagination-variant-border-bottom-width: "carousel-pagination-@{variant-class}-border-bottom-width";
+  @carousel-pagination-variant-border-bottom-color: "carousel-pagination-@{variant-class}-border-bottom-color";
+  @carousel-pagination-variant-border-bottom-style: "carousel-pagination-@{variant-class}-border-bottom-style";
+  @carousel-pagination-variant-border-left-width: "carousel-pagination-@{variant-class}-border-left-width";
+  @carousel-pagination-variant-border-left-color: "carousel-pagination-@{variant-class}-border-left-color";
+  @carousel-pagination-variant-border-left-style: "carousel-pagination-@{variant-class}-border-left-style";
+  @carousel-pagination-variant-shadow: "carousel-pagination-@{variant-class}-shadow";
+
+  & when not (@@carousel-pagination-variant-text-color = null) {
+
+    color: @@carousel-pagination-variant-text-color;
+
+  }
+
+  & when not (@@carousel-pagination-variant-text-font-family = null) {
+
+    font-family: @@carousel-pagination-variant-text-font-family;
+
+  }
+
+  & when not (@@carousel-pagination-variant-text-font-style = null) {
+
+    font-style: @@carousel-pagination-variant-text-font-style;
+
+  }
+
+  & when not (@@carousel-pagination-variant-text-font-weight = null) {
+
+    font-weight: @@carousel-pagination-variant-text-font-weight;
+
+  }
+
+  & when not (@@carousel-pagination-variant-text-transform = null) {
+
+    text-transform: @@carousel-pagination-variant-text-transform;
+
+  }
+
+  & when not (@@carousel-pagination-variant-text-shadow = null) {
+
+    text-shadow: @@carousel-pagination-variant-text-shadow;
+
+  }
+
+  & when not (@@carousel-pagination-variant-text-decoration = null) {
+
+    text-decoration: @@carousel-pagination-variant-text-decoration;
+
+  }
+
+  & when not (@@carousel-pagination-variant-text-rendering = null) {
+
+    text-rendering: @@carousel-pagination-variant-text-rendering;
+
+  }
+
+  & when not (@@carousel-pagination-variant-background-color = null) {
+
+    background: @@carousel-pagination-variant-background-color;
+
+  }
+
+  & when not (@@carousel-pagination-variant-background-gradient-color-top = null) and not (@@carousel-pagination-variant-background-gradient-color-bottom = null) {
+
+    #gradient > .vertical(@@carousel-pagination-variant-background-gradient-color-top, @@carousel-pagination-variant-background-gradient-color-bottom);
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-width = null) {
+
+    border-width: @@carousel-pagination-variant-border-width;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-color = null) {
+
+    border-color: @@carousel-pagination-variant-border-color;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-style = null) {
+
+    border-style: @@carousel-pagination-variant-border-style;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-top-width = null) {
+
+    border-top-width: @@carousel-pagination-variant-border-top-width;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-top-color = null) {
+
+    border-top-color: @@carousel-pagination-variant-border-top-color;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-top-style = null) {
+
+    border-top-style: @@carousel-pagination-variant-border-top-style;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-right-width = null) {
+
+    border-right-width: @@carousel-pagination-variant-border-right-width;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-right-color = null) {
+
+    border-right-color: @@carousel-pagination-variant-border-right-color;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-right-style = null) {
+
+    border-right-style: @@carousel-pagination-variant-border-right-style;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-bottom-width = null) {
+
+    border-bottom-width: @@carousel-pagination-variant-border-bottom-width;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-bottom-color = null) {
+
+    border-bottom-color: @@carousel-pagination-variant-border-bottom-color;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-bottom-style = null) {
+
+    border-bottom-style: @@carousel-pagination-variant-border-bottom-style;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-left-width = null) {
+
+    border-left-width: @@carousel-pagination-variant-border-left-width;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-left-color = null) {
+
+    border-left-color: @@carousel-pagination-variant-border-left-color;
+
+  }
+
+  & when not (@@carousel-pagination-variant-border-left-style = null) {
+
+    border-left-style: @@carousel-pagination-variant-border-left-style;
+
+  }
+
+  & when not (@@carousel-pagination-variant-shadow = null) {
+
+    .box-shadow(@@carousel-pagination-variant-shadow);
+
+  }
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Carousel Pagination Size Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.carousel-pagination-size-variant(@variant-screen-size) {
+
+  @carousel-pagination-variant-val-size: null;
+  @carousel-pagination-variant-val-size-scale: 1.0;
+
+  @carousel-pagination-variant-val-padding-horizontal: null;
+  @carousel-pagination-variant-val-padding-horizontal-scale: 1.0;
+
+  @carousel-pagination-variant-val-border-radius: null;
+  @carousel-pagination-variant-val-border-radius-scale: 1.0;
+
+
+
+  & when (@variant-screen-size = '') {
+
+    @carousel-pagination-variant-size: "carousel-pagination-size";
+    @carousel-pagination-variant-val-size: @@carousel-pagination-variant-size;
+
+    @carousel-pagination-variant-padding-horizontal: "carousel-pagination-padding-horizontal";
+    @carousel-pagination-variant-val-padding-horizontal: @@carousel-pagination-variant-padding-horizontal;
+
+    @carousel-pagination-variant-border-radius: "carousel-pagination-border-radius";
+    @carousel-pagination-variant-val-border-radius: @@carousel-pagination-variant-border-radius;
+
+    .carousel-pagination-size-variant-definitions(@carousel-pagination-variant-val-size, @carousel-pagination-variant-val-size-scale, @carousel-pagination-variant-val-padding-horizontal, @carousel-pagination-variant-val-padding-horizontal-scale, @carousel-pagination-variant-val-border-radius, @carousel-pagination-variant-val-border-radius-scale);
+
+  }
+
+  & when not (@variant-screen-size = '') {
+
+    @carousel-pagination-variant-size: "carousel-pagination-size";
+    @carousel-pagination-variant-val-size: @@carousel-pagination-variant-size;
+
+    @carousel-pagination-variant-size-scale: "carousel-pagination-size-scale-@{variant-screen-size}";
+    @carousel-pagination-variant-val-size-scale: @@carousel-pagination-variant-size-scale;
+
+    @carousel-pagination-variant-padding-horizontal: "carousel-pagination-padding-horizontal";
+    @carousel-pagination-variant-val-padding-horizontal: @@carousel-pagination-variant-padding-horizontal;
+
+    @carousel-pagination-variant-padding-horizontal-scale: "carousel-pagination-padding-horizontal-scale-@{variant-screen-size}";
+    @carousel-pagination-variant-val-padding-horizontal-scale: @@carousel-pagination-variant-padding-horizontal-scale;
+
+    @carousel-pagination-variant-border-radius: "carousel-pagination-border-radius";
+    @carousel-pagination-variant-val-border-radius: @@carousel-pagination-variant-border-radius;
+
+    @carousel-pagination-variant-border-radius-scale: "carousel-pagination-border-radius-scale-@{variant-screen-size}";
+    @carousel-pagination-variant-val-border-radius-scale: @@carousel-pagination-variant-border-radius-scale;
+
+    .carousel-pagination-size-variant-definitions(@carousel-pagination-variant-val-size, @carousel-pagination-variant-val-size-scale, @carousel-pagination-variant-val-padding-horizontal, @carousel-pagination-variant-val-padding-horizontal-scale, @carousel-pagination-variant-val-border-radius, @carousel-pagination-variant-val-border-radius-scale);
+
+  }
+
+}
+
+
+
+.carousel-pagination-size-variant-definitions(@size, @size-scale, @padding-horizontal, @padding-horizontal-scale, @border-radius, @border-radius-scale) {
+
+  & when not (@size = null) {
+
+    width: floor(@size * @size-scale);
+    height: floor(@size * @size-scale);
+
+  }
+
+  & when not (@padding-horizontal = null) {
+
+    margin-right: floor(@padding-horizontal * @padding-horizontal-scale);
+
+  }
+
+  & when not (@border-radius = null) {
+
+    .border-radius(@border-radius * @border-radius-scale);
+
+  }
+
+}

@@ -1,0 +1,320 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+utilities/mixins-layout.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Clearfix
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.clearfix {
+
+    *zoom: 1;
+
+    &:before,
+    &:after {
+
+        display: table;
+        content: "";
+        line-height: 0;
+
+    }
+
+    &:after {
+
+        clear: both;
+
+    }
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+IE7 Fixes
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.ie7-inline-block() {
+
+    *display: inline;
+    *zoom: 1;
+
+}
+
+.ie7-restore-left-whitespace() {
+
+    *margin-left: .3em;
+
+    &:first-child {
+
+        *margin-left: 0;
+
+    }
+
+}
+
+.ie7-restore-right-whitespace() {
+
+    *margin-right: .3em;
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Focus
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.tab-focus() {
+
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Center Block Elements
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.center-block() {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Sizing
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.size(@width; @height) {
+
+    width: @width;
+    height: @height;
+    behavior: url("@{css3pie-path}PIE.php");
+
+}
+
+.square(@size) {
+
+    .size(@size; @size);
+
+}
+
+.box-sizing(@boxmodel) {
+
+  -webkit-box-sizing: @boxmodel;
+  -moz-box-sizing: @boxmodel;
+  box-sizing: @boxmodel;
+
+}
+
+.backface-visibility(@visibility){
+
+  -webkit-backface-visibility: @visibility;
+  -moz-backface-visibility: @visibility;
+  backface-visibility: @visibility;
+
+}
+
+.background-clip(@clip) {
+
+  -webkit-background-clip: @clip;
+  -moz-background-clip: @clip;
+  background-clip: @clip;
+
+}
+
+.background-size(@size) {
+
+  -webkit-background-size: @size;
+  -moz-background-size: @size;
+  -o-background-size: @size;
+  background-size: @size;
+
+}
+
+.box-sizing-padding-vertical(@height, @content-height) when (@height > @content-height) {
+
+  padding-top: ((@height - @content-height) / 2);
+  padding-bottom: ((@height - @content-height) / 2);
+
+}
+
+.box-sizing-padding-vertical(@height, @content-height) when (@height <= @content-height) {
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Transformations
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.transform(@transform) {
+
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -ms-transform: @transform;
+  -o-transform: @transform;
+  transform: @transform;
+
+}
+
+.rotate(@degrees) {
+
+  -webkit-transform: rotate(@degrees);
+  -moz-transform: rotate(@degrees);
+  -ms-transform: rotate(@degrees);
+  -o-transform: rotate(@degrees);
+  transform: rotate(@degrees);
+
+}
+
+.scale(@ratio) {
+
+  -webkit-transform: scale(@ratio);
+  -moz-transform: scale(@ratio);
+  -ms-transform: scale(@ratio);
+  -o-transform: scale(@ratio);
+  transform: scale(@ratio);
+
+}
+
+.scale(@ratio-x, @ratio-y) {
+
+  -webkit-transform: scale(@ratio-x, @ratio-y);
+  -moz-transform: scale(@ratio-x, @ratio-y);
+  -ms-transform: scale(@ratio-x, @ratio-y);
+  -o-transform: scale(@ratio-x, @ratio-y);
+  transform: scale(@ratio-x, @ratio-y);
+
+}
+
+.scale3d(@ratio-x, @ratio-y, @ratio-z) {
+
+  -webkit-transform: scale3d(@ratio-x, @ratio-y, @ratio-z);
+  -moz-transform: scale3d(@ratio-x, @ratio-y, @ratio-z);
+  -ms-transform: scale3d(@ratio-x, @ratio-y, @ratio-z);
+  -o-transform: scale3d(@ratio-x, @ratio-y, @ratio-z);
+  transform: scale3d(@ratio-x, @ratio-y, @ratio-z);
+
+}
+
+.translate(@x, @y) {
+
+  -webkit-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+
+}
+
+.translateX(@x) {
+
+  -webkit-transform: translateX(@x);
+  -moz-transform: translateX(@x);
+  -ms-transform: translateX(@x);
+  -o-transform: translateX(@x);
+  transform: translateX(@x);
+
+}
+
+.translateY(@y) {
+
+  -webkit-transform: translateY(@y);
+  -moz-transform: translateY(@y);
+  -ms-transform: translateY(@y);
+  -o-transform: translateY(@y);
+  transform: translateY(@y);
+
+}
+
+.translateZ(@z) {
+
+  -webkit-transform: translateZ(@z);
+  -moz-transform: translateZ(@z);
+  -ms-transform: translateZ(@z);
+  -o-transform: translateZ(@z);
+  transform: translateZ(@z);
+
+}
+
+.skew(@x, @y) {
+
+  -webkit-transform: skew(@x, @y);
+  -moz-transform: skew(@x, @y);
+  -ms-transform: skewX(@x) skewY(@y);
+  -o-transform: skew(@x, @y);
+  transform: skew(@x, @y);
+  -webkit-backface-visibility: hidden;
+
+}
+
+.translate3d(@x, @y, @z) {
+
+  -webkit-transform: translate3d(@x, @y, @z);
+  -moz-transform: translate3d(@x, @y, @z);
+  -o-transform: translate3d(@x, @y, @z);
+  transform: translate3d(@x, @y, @z);
+
+}
