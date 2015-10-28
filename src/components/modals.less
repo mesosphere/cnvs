@@ -55,12 +55,12 @@ layout/modal/index.less
 
     &.fade {
 
-      .transition(e('all @{modal-backdrop-transition-duration} ease'));
-      .opacity(0.0);
+      transition: e('all @{modal-backdrop-transition-duration} ease');
+      opacity: 0.0;
 
       &.in {
 
-        .opacity(1.0);
+        opacity: 1.0;
 
       }
 
@@ -106,8 +106,8 @@ layout/modal/index.less
 
     &.fade {
 
-      .transition(e('all @{modal-transition-duration} ease'));
-      .opacity(0.0);
+      transition: e('all @{modal-transition-duration} ease');
+      opacity: 0.0;
       .scale3d(0.5, 0.5, 0.5);
 
       .modal-close {
@@ -118,7 +118,7 @@ layout/modal/index.less
 
       &.in {
 
-        .opacity(1.0);
+        opacity: 1.0;
         .scale3d(1.0, 1.0, 1.0);
 
         .modal-close {
@@ -229,8 +229,8 @@ layout/modal/index.less
       height: @button-large-height;
       margin-left: -(@button-large-height) * 0.5;
       cursor: pointer;
-      .transition(e('all 0.15s ease'));
-      .border-radius(50%);
+      transition: e('all 0.15s ease');
+      border-radius: 50%;
       .box-sizing(content-box);
       border: 1px solid hsla(hue(color(color-lighten(@neutral, 0))), saturation(color(color-lighten(@neutral, 0))), lightness(color(color-lighten(@neutral, 0))), 0.2);
 
@@ -253,7 +253,7 @@ layout/modal/index.less
         margin-left: -(@button-large-height * 0.5) * 0.5;
         .rotate(45deg);
         background-color: @neutral;
-        .opacity(0.8);
+        opacity: 0.8;
 
       }
 
@@ -271,7 +271,7 @@ layout/modal/index.less
         &:before,
         &:after {
 
-          .opacity(0.8);
+          opacity: 0.8;
 
         }
 
@@ -406,7 +406,7 @@ layout/modal/index.less
         &:after {
 
           background-color: @neutral;
-          .opacity(0.8);
+          opacity: 0.8;
 
         }
 
@@ -417,7 +417,7 @@ layout/modal/index.less
           &:before,
           &:after {
 
-            .opacity(0.8);
+            opacity: 0.8;
 
           }
 

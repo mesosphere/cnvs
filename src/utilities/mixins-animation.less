@@ -16,37 +16,6 @@ utilities/mixins-animation.less
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
-Transitions
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.transition(@transition) {
-
-  -webkit-transition: @transition;
-  -moz-transition: @transition;
-  -o-transition: @transition;
-  transition: @transition;
-
-}
-
-.transition-delay(@transition-delay) {
-
-  -webkit-transition-delay: @transition-delay;
-  -moz-transition-delay: @transition-delay;
-  -o-transition-delay: @transition-delay;
-  transition-delay: @transition-delay;
-
-}
-
-
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
 Animation
 
 --------------------------------------------------------------------------------
@@ -54,90 +23,54 @@ Animation
 
 .animation(@animation) {
 
-  -webkit-animation: @animation;
-  -moz-animation: @animation;
-  -ms-animation: @animation;
-  -o-animation: @animation;
   animation: @animation;
 
 }
 
 .animation-name(@animation-name) {
 
-  -webkit-animation-name: @animation-name;
-  -moz-animation-name: @animation-name;
-  -ms-animation-name: @animation-name;
-  -o-animation-name: @animation-name;
   animation-name: @animation-name;
 
 }
 
 .animation-duration(@animation-duration) {
 
-  -webkit-animation-duration: @animation-duration;
-  -moz-animation-duration: @animation-duration;
-  -ms-animation-duration: @animation-duration;
-  -o-animation-duration: @animation-duration;
   animation-duration: @animation-duration;
 
 }
 
 .animation-timing-function(@animation-timing-function) {
 
-  -webkit-animation-timing-function: @animation-timing-function;
-  -moz-animation-timing-function: @animation-timing-function;
-  -ms-animation-timing-function: @animation-timing-function;
-  -o-animation-timing-function: @animation-timing-function;
   animation-timing-function: @animation-timing-function;
 
 }
 
 .animation-iteration-count(@animation-iteration-count) {
 
-  -webkit-animation-iteration-count: @animation-iteration-count;
-  -moz-animation-iteration-count: @animation-iteration-count;
-  -ms-animation-iteration-count: @animation-iteration-count;
-  -o-animation-iteration-count: @animation-iteration-count;
   animation-iteration-count: @animation-iteration-count;
 
 }
 
 .animation-direction(@animation-direction) {
 
-  -webkit-animation-direction: @animation-direction;
-  -moz-animation-direction: @animation-direction;
-  -ms-animation-direction: @animation-direction;
-  -o-animation-direction: @animation-direction;
   animation-direction: @animation-direction;
 
 }
 
 .animation-delay(@animation-delay) {
 
-  -webkit-animation-delay: @animation-delay;
-  -moz-animation-delay: @animation-delay;
-  -ms-animation-delay: @animation-delay;
-  -o-animation-delay: @animation-delay;
   animation-delay: @animation-delay;
 
 }
 
 .animation-play-state(@animation-play-state) {
 
-  -webkit-animation-play-state: @animation-play-state;
-  -moz-animation-play-state: @animation-play-state;
-  -ms-animation-play-state: @animation-play-state;
-  -o-animation-play-state: @animation-play-state;
   animation-play-state: @animation-play-state;
 
 }
 
 .animation-fill-mode(@animation-fill-mode) {
 
-  -webkit-animation-fill-mode: @animation-fill-mode;
-  -moz-animation-fill-mode: @animation-fill-mode;
-  -ms-animation-fill-mode: @animation-fill-mode;
-  -o-animation-fill-mode: @animation-fill-mode;
   animation-fill-mode: @animation-fill-mode;
 
 }
@@ -161,23 +94,19 @@ Animation Keyframes
 Fade In
 ----------------------------------------------------------------------------- */
 
-@-webkit-keyframes fade-in { .fade-in(); }
-@-moz-keyframes fade-in { .fade-in(); }
-@-ms-keyframes fade-in { .fade-in(); }
-@-o-keyframes fade-in { .fade-in(); }
 @keyframes fade-in { .fade-in(); }
 
 .fade-in() {
 
   0% {
 
-    .opacity(0.0);
+    opacity: 0.0;
 
   }
 
   100% {
 
-    .opacity(1.0);
+    opacity: 1.0;
 
   }
 
@@ -189,23 +118,19 @@ Fade In
 Fade Out
 ----------------------------------------------------------------------------- */
 
-@-webkit-keyframes fade-out { .fade-out(); }
-@-moz-keyframes fade-out { .fade-out(); }
-@-ms-keyframes fade-out { .fade-out(); }
-@-o-keyframes fade-out { .fade-out(); }
 @keyframes fade-out { .fade-out(); }
 
 .fade-out() {
 
   0% {
 
-    .opacity(1.0);
+    opacity: 1.0;
 
   }
 
   100% {
 
-    .opacity(0.0);
+    opacity: 0.0;
 
   }
 
@@ -217,24 +142,20 @@ Fade Out
 Zoom In
 ----------------------------------------------------------------------------- */
 
-@-webkit-keyframes zoom-in { .zoom-in(); }
-@-moz-keyframes zoom-in { .zoom-in(); }
-@-ms-keyframes zoom-in { .zoom-in(); }
-@-o-keyframes zoom-in { .zoom-in(); }
 @keyframes zoom-in { .zoom-in(); }
 
 .zoom-in() {
 
   0% {
 
-    .opacity(0);
+    opacity: 0;
     .scale3d(0.5, 0.5, 0.5);
 
   }
 
   50% {
 
-    .opacity(1.0);
+    opacity: 1.0;
     .scale3d(1.0, 1.0, 1.0);
 
   }
@@ -247,31 +168,27 @@ Zoom In
 Zoom Out
 ----------------------------------------------------------------------------- */
 
-@-webkit-keyframes zoom-out { .zoom-out(); }
-@-moz-keyframes zoom-out { .zoom-out(); }
-@-ms-keyframes zoom-out { .zoom-out(); }
-@-o-keyframes zoom-out { .zoom-out(); }
 @keyframes zoom-out { .zoom-out(); }
 
 .zoom-out() {
 
   0% {
 
-    .opacity(1.0);
+    opacity: 1.0;
     .scale3d(1.0, 1.0, 1.0);
 
   }
 
   50% {
 
-    .opacity(0);
+    opacity: 0;
     .scale3d(0.5, 0.5, 0.5);
 
   }
 
   100% {
 
-    .opacity(0);
+    opacity: 0;
     .scale3d(0.5, 0.5, 0.5);
 
   }
