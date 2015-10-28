@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mesosphere UI Components</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="title" content="Mesosphere Canvas">
+    <link rel="stylesheet" href="./canvas.css">
+    <link rel="stylesheet" href="./vendor/prettify.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="./vendor/prettify.js"></script>
+  </head>
+  <body onload="prettyPrint()">
+    <div id="canvas">
+      <div id="page">
+        <div id="page-header" class="canvas-pod canvas-pod-dark page-header-inverse center">
+          <div id="page-header-inner">
+            <div class="container container-pod container-pod-short-top ">
+              <div class="row">
+                <div class="column-small-10 column-small-offset-1 column-medium-8 column-medium-offset-2">
+                  <div class="row">
+                    <div class="column-mini-8 column-mini-offset-2 column-small-10 column-small-offset-1">
+                      <h1 class="page-header-headline flush-top inverse text-align-center inverse short">
+                        Canvas UI System
+                      </h1>
+                    </div>
+                  </div>
+                  <p class="page-header-description lead inverse text-align-center inverse flush-bottom">
+                    Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="page-content">
+          <div class="canvas-pod">
+            <div class="container container-pod">
+              <div class="row">
+                <div class="column-small-9 column-medium-9 column-large-9 column-overflow">
+                  <section id="buttons">
+                    <h1 class="flush-top">
+                      Buttons
+                    </h1>
+                    <p>
+                      Canvas adds support for a range of button states and sizes.  Simply add the <code>.button</code> class to any <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> to get started.
+                    </p>
+                    <div class="example-block flush-bottom">
+                      <div class="example-block-content">
+                        <a href="#" class="button">
+                          Simple Button
+                        </a>
+                      </div>
+                      <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;a href="#" class="button"&gt;
+      Simple Button
+    &lt;/a&gt;
+    </pre>
+                      </div>
+                    </div>
+
+                    <section id="buttons-sizes">
+                      <h2>
+                        Button Sizes
+                      </h2>
+
+                      <p>
+                        By default, buttons display at a standard size, comparable to that of an input field.  Four additional sizes are available: mini, small, large, and jumbo.  Add classes <code>.button-mini</code>, <code>.button-small</code>, <code>.button-large</code>, and <code>.button-jumbo</code> respectively to each button to adjust it's size.
+                      </p>
+
+                      <div class="example-block flush-bottom">
+                        <div class="example-block-content">
+                          <div class="button-collection button-collection-align-middle flush-bottom">
+                            <a href="#" class="button button-jumbo">
+                              Jumbo
+                            </a>
+                            <a href="#" class="button button-large">
+                              Large
+                            </a>
+                            <a href="#" class="button">
+                              Default
+                            </a>
+                            <a href="#" class="button button-small">
+                              Small
+                            </a>
+                            <a href="#" class="button button-mini">
+                              Mini
+                            </a>
+                          </div>
+                        </div>
+                        <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Button: Jumbo --&gt;
+    &lt;a href="#" class="button button-jumbo"&gt;
+      Jumbo
+    &lt;/a&gt;
+
+    &lt;!-- Button: Large --&gt;
+    &lt;a href="#" class="button button-large"&gt;
+      Large
+    &lt;/a&gt;
+
+    &lt;!-- Button: Default --&gt;
+    &lt;a href="#" class="button"&gt;
+      Default
+    &lt;/a&gt;
+
+    &lt;!-- Button: Small --&gt;
+    &lt;a href="#" class="button button-small"&gt;
+      Small
+    &lt;/a&gt;
+
+    &lt;!-- Button: Mini --&gt;
+    &lt;a href="#" class="button button-mini"&gt;
+      Mini
+    &lt;/a&gt;
+    </pre>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section id="buttons-states">
+                      <h2>
+                        Button States
+                      </h2>
+                      <p>
+                        You may wish to display more than the single button type, either to create separation in the importance of various actions or to communicate the state of an action or form.  Button states make this super easy.
+                      </p>
+                      <div class="example-block flush-bottom">
+                        <div class="example-block-content">
+                          <div class="button-collection flush-bottom">
+                            <a href="#" class="button">
+                              Default
+                            </a>
+                            <a href="#" class="button button-primary">
+                              Primary
+                            </a>
+                            <a href="#" class="button button-success">
+                              Success
+                            </a>
+                            <a href="#" class="button button-warning">
+                              Warning
+                            </a>
+                            <a href="#" class="button button-danger">
+                              Danger
+                            </a>
+                          </div>
+                        </div>
+                        <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Button: Default --&gt;
+    &lt;a href="#" class="button"&gt;
+      Default
+    &lt;/a&gt;
+
+    &lt;!-- Button: Primary --&gt;
+    &lt;a href="#" class="button button-primary"&gt;
+      Primary
+    &lt;/a&gt;
+
+    &lt;!-- Button: Success --&gt;
+    &lt;a href="#" class="button button-success"&gt;
+      Success
+    &lt;/a&gt;
+
+    &lt;!-- Button: Warning --&gt;
+    &lt;a href="#" class="button button-warning"&gt;
+      Warning
+    &lt;/a&gt;
+
+    &lt;!-- Button: Danger --&gt;
+    &lt;a href="#" class="button button-danger"&gt;
+      Danger
+    &lt;/a&gt;
+    </pre>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section id="buttons-types">
+                      <h2>
+                        Button Types
+                      </h2>
+                      <p>
+                        We realize that one button shape and style, even with it's available states, may not be enough for the unique needs of your project.  This is why we've include a number of additional button types: rounded, stroke, link.
+                      </p>
+                      <section id="buttons-types-rounded">
+                        <h3>
+                          Rounded Button
+                        </h3>
+                        <p>
+                          Add the class <code>.button-rounded</code> to any <code>.button</code> element to display it with rounded caps.
+                        </p>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-collection flush-bottom">
+                              <a href="#" class="button button-rounded">
+                                Default
+                              </a>
+                              <a href="#" class="button button-rounded button-primary">
+                                Primary
+                              </a>
+                              <a href="#" class="button button-rounded button-success">
+                                Success
+                              </a>
+                              <a href="#" class="button button-rounded button-warning">
+                                Warning
+                              </a>
+                              <a href="#" class="button button-rounded button-danger">
+                                Danger
+                              </a>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Button: Default --&gt;
+    &lt;a href="#" class="button button-rounded"&gt;
+      Default
+    &lt;/a&gt;
+
+    &lt;!-- Button: Primary --&gt;
+    &lt;a href="#" class="button button-rounded button-primary"&gt;
+      Primary
+    &lt;/a&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                      <section id="buttons-types-stroke">
+                        <h3>
+                          Stroke Button
+                        </h3>
+                        <p>
+                          Add the class <code>.button-stroke</code> to any <code>.button</code> element to display it with a thin outer stroke.
+                        </p>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-collection flush-bottom">
+                              <a href="#" class="button button-stroke">
+                                Default
+                              </a>
+                              <a href="#" class="button button-stroke button-primary">
+                                Primary
+                              </a>
+                              <a href="#" class="button button-stroke button-success">
+                                Success
+                              </a>
+                              <a href="#" class="button button-stroke button-warning">
+                                Warning
+                              </a>
+                              <a href="#" class="button button-stroke button-danger">
+                                Danger
+                              </a>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Button: Default --&gt;
+    &lt;a href="#" class="button button-stroke"&gt;
+      Default
+    &lt;/a&gt;
+
+    &lt;!-- Button: Primary --&gt;
+    &lt;a href="#" class="button button-stroke button-primary"&gt;
+      Primary
+    &lt;/a&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                      <section id="buttons-types-link">
+                        <h3>
+                          Link Button
+                        </h3>
+                        <p>
+                          Add the class <code>.button-link</code> to any <code>.button</code> element to display it as "text-only", while retaining the exact size attributes of it's normal button counterpart.
+                        </p>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-collection flush-bottom">
+                              <a href="#" class="button button-link">
+                                Default
+                              </a>
+                              <a href="#" class="button button-link button-primary">
+                                Primary
+                              </a>
+                              <a href="#" class="button button-link button-success">
+                                Success
+                              </a>
+                              <a href="#" class="button button-link button-warning">
+                                Warning
+                              </a>
+                              <a href="#" class="button button-link button-danger">
+                                Danger
+                              </a>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Button: Default --&gt;
+    &lt;a href="#" class="button button-link"&gt;
+      Default
+    &lt;/a&gt;
+
+    &lt;!-- Button: Primary --&gt;
+    &lt;a href="#" class="button button-link button-primary"&gt;
+      Primary
+    &lt;/a&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                      <section id="buttons-types-combine">
+                        <h3>
+                          Combine Button Types
+                        </h3>
+                        <p>
+                          Want a stroke button that has rounded caps?  Go ahead and combine button classes to yield interesting display combinations.
+                        </p>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-collection flush-bottom">
+                              <a href="#" class="button button-stroke button-rounded">
+                                Default
+                              </a>
+                              <a href="#" class="button button-stroke button-rounded button-primary">
+                                Primary
+                              </a>
+                              <a href="#" class="button button-stroke button-rounded button-success">
+                                Success
+                              </a>
+                              <a href="#" class="button button-stroke button-rounded button-warning">
+                                Warning
+                              </a>
+                              <a href="#" class="button button-stroke button-rounded button-danger">
+                                Danger
+                              </a>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Button: Default --&gt;
+    &lt;a href="#" class="button button-stroke button-rounded"&gt;
+      Default
+    &lt;/a&gt;
+
+    &lt;!-- Button: Primary --&gt;
+    &lt;a href="#" class="button button-stroke button-rounded button-primary"&gt;
+      Primary
+    &lt;/a&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
+
+                    <section id="buttons-inverse-styling">
+                      <h2>
+                        Inverse Styling
+                      </h2>
+                      <p>
+                        Add the class <code>.inverse</code> to any <code>.button</code> element to leverage inverse styling.
+                      </p>
+                      <div class="example-block inverse">
+                        <div class="example-block-content">
+                          <div class="button-collection">
+                            <a href="#" class="button button-inverse">
+                              Default
+                            </a>
+                            <a href="#" class="button button-primary button-inverse">
+                              Primary
+                            </a>
+                            <a href="#" class="button button-success button-inverse">
+                              Success
+                            </a>
+                            <a href="#" class="button button-warning button-inverse">
+                              Warning
+                            </a>
+                            <a href="#" class="button button-danger button-inverse">
+                              Danger
+                            </a>
+                          </div>
+                          <div class="button-collection">
+                            <a href="#" class="button button-stroke button-inverse">
+                              Default
+                            </a>
+                            <a href="#" class="button button-primary button-stroke button-inverse">
+                              Primary
+                            </a>
+                            <a href="#" class="button button-success button-stroke button-inverse">
+                              Success
+                            </a>
+                            <a href="#" class="button button-warning button-stroke button-inverse">
+                              Warning
+                            </a>
+                            <a href="#" class="button button-danger button-stroke button-inverse">
+                              Danger
+                            </a>
+                          </div>
+                          <div class="button-collection flush-bottom">
+                            <a href="#" class="button button-link button-inverse">
+                              Default
+                            </a>
+                            <a href="#" class="button button-primary button-link button-inverse">
+                              Primary
+                            </a>
+                            <a href="#" class="button button-success button-link button-inverse">
+                              Success
+                            </a>
+                            <a href="#" class="button button-warning button-link button-inverse">
+                              Warning
+                            </a>
+                            <a href="#" class="button button-danger button-link button-inverse">
+                              Danger
+                            </a>
+                          </div>
+                        </div>
+                        <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;a href="#" class="button button-inverse"&gt;
+      Default
+    &lt;/a&gt;
+    </pre>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section id="buttons-collection">
+                      <h2>
+                        Button Collection
+                      </h2>
+                      <p>
+                        Buttons render easily as objects inline with other elements.  When you have a group of buttons, use the <code>.button-collection</code> element to wrap a set of buttons.  A button collection defines simple rules governing the space between buttons both horizontally and vertically.
+                      </p>
+                      <div class="example-block flush-bottom">
+                        <div class="example-block-content">
+                          <div class="button-collection flush-bottom">
+                            <a href="#" class="button button-primary">
+                              Primary Button
+                            </a>
+                            <a href="#" class="button">
+                              Button
+                            </a>
+                          </div>
+                        </div>
+                        <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Button: Collection --&gt;
+    &lt;div class="button-collection"&gt;
+      &lt;a href="#" class="button button-primary"&gt;
+        Primary Button
+      &lt;/a&gt;
+      &lt;a href="#" class="button"&gt;
+        Button
+      &lt;/a&gt;
+    &lt;/div&gt;
+    </pre>
+                        </div>
+                      </div>
+                      <section id="buttons-collection-vertical-alignment">
+                        <h3>
+                          Button Collection Vertical Alignment
+                        </h3>
+                        <p>
+                          When you have buttons of different sizes in the same <code>.button-collection</code>, you can use the button alignment properties <code>.button-collection-align-top</code>, <code>.button-collection-align-middle</code>, and <code>.button-collection-align-bottom</code> to position them along the top, middle, or baseline axis.
+                        </p>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-collection button-collection-align-vertical-top">
+                              <a href="#" class="button button-jumbo">
+                                Jumbo
+                              </a>
+                              <a href="#" class="button button-large">
+                                Large
+                              </a>
+                              <a href="#" class="button">
+                                Default
+                              </a>
+                              <a href="#" class="button button-small">
+                                Small
+                              </a>
+                              <a href="#" class="button button-mini">
+                                Mini
+                              </a>
+                            </div>
+                            <div class="button-collection button-collection-align-vertical-middle">
+                              <a href="#" class="button button-jumbo">
+                                Jumbo
+                              </a>
+                              <a href="#" class="button button-large">
+                                Large
+                              </a>
+                              <a href="#" class="button">
+                                Default
+                              </a>
+                              <a href="#" class="button button-small">
+                                Small
+                              </a>
+                              <a href="#" class="button button-mini">
+                                Mini
+                              </a>
+                            </div>
+                            <div class="button-collection button-collection-align-vertical-bottom flush-bottom">
+                              <a href="#" class="button button-jumbo">
+                                Jumbo
+                              </a>
+                              <a href="#" class="button button-large">
+                                Large
+                              </a>
+                              <a href="#" class="button">
+                                Default
+                              </a>
+                              <a href="#" class="button button-small">
+                                Small
+                              </a>
+                              <a href="#" class="button button-mini">
+                                Mini
+                              </a>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Button Collection: Align Top--&gt;
+    &lt;div class="button-collection button-collection-align-vertical-top"&gt;
+      &hellip;
+    &lt;/div&gt;
+
+    &lt;!-- Button Collection: Align Middle--&gt;
+    &lt;div class="button-collection button-collection-align-vertical-middle"&gt;
+      &hellip;
+    &lt;/div&gt;
+
+    &lt;!-- Button Collection: Align Bottom--&gt;
+    &lt;div class="button-collection button-collection-align-vertical-bottom"&gt;
+      &hellip;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
+
+                    <section id="buttons-wide">
+                      <h2>
+                        Wide Buttons
+                      </h2>
+                      <p>
+                        Use the class <code>.button-wide</code> when you need a button to fill the entire width of it's parent container.
+                      </p>
+                      <div class="example-block flush-bottom">
+                        <div class="example-block-content">
+                          <div class="button-collection button-collection-align-middle flush-bottom">
+                            <a href="#" class="button button-wide">
+                              Wide Button
+                            </a>
+                            <a href="#" class="button button-primary button-wide">
+                              Wide Button
+                            </a>
+                          </div>
+                        </div>
+                        <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;a href="#" class="button button-wide"&gt;
+      Wide Button
+    &lt;/a&gt;
+    </pre>
+                        </div>
+                      </div>
+                      <section id="buttons-wide-responsive">
+                        <h3>
+                          Responsive Wide Buttons
+                        </h3>
+                        <p>
+                          Optional classes are available when you need a button to fill it's parent container only below a specific screen size.  Add <code>.button-wide-below-screen-mini</code>, replacing <code>-mini</code> with <code>-small</code>, <code>-medium</code>, or <code>-large</code>.  Try it out.  Resize this browser window and observe when the buttons below switch to their wide view.
+                        </p>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-collection button-collection-align-middle flush-bottom">
+                              <a href="#" class="button button-wide button-wide-below-screen-mini">
+                                Wide Button (Mini)
+                              </a>
+                              <a href="#" class="button button-wide button-wide-below-screen-small">
+                                Wide Button (Small)
+                              </a>
+                              <a href="#" class="button button-wide button-wide-below-screen-medium">
+                                Wide Button (Medium)
+                              </a>
+                              <a href="#" class="button button-wide button-wide-below-screen-large">
+                                Wide Button (Large)
+                              </a>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;!-- Wide Button: When Smaller than Screen Mini--&gt;
+    &lt;a href="#" class="button button-wide button-wide-below-screen-mini"&gt;
+      Wide Button (Mini)
+    &lt;/a&gt;
+
+    &lt;!-- Wide Button: When Smaller than Screen Small--&gt;
+    &lt;a href="#" class="button button-wide button-wide-below-screen-small"&gt;
+      Wide Button (Small)
+    &lt;/a&gt;
+
+    &lt;!-- Wide Button: When Smaller than Screen Medium--&gt;
+    &lt;a href="#" class="button button-wide button-wide-below-screen-medium"&gt;
+      Wide Button (Medium)
+    &lt;/a&gt;
+
+    &lt;!-- Wide Button: When Smaller than Screen Large--&gt;
+    &lt;a href="#" class="button button-wide button-wide-below-screen-large"&gt;
+      Wide Button (Large)
+    &lt;/a&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
+
+                    <section id="buttons-button-groups">
+                      <h2>
+                        Button Groups
+                      </h2>
+                      <p>
+                        Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with our buttons plugin.
+                      </p>
+                      <div class="example-block flush-bottom">
+                        <div class="example-block-content">
+                          <div class="button-collection">
+                            <div class="button-group" role="group">
+                              <button type="button" class="button active">
+                                Left
+                              </button>
+                              <button type="button" class="button">
+                                Middle
+                              </button>
+                              <button type="button" class="button">
+                                Right
+                              </button>
+                            </div>
+                          </div>
+                          <div class="button-collection">
+                            <div class="button-group" role="group">
+                              <button type="button" class="button button-primary active">
+                                Left
+                              </button>
+                              <button type="button" class="button button-primary">
+                                Middle
+                              </button>
+                              <button type="button" class="button button-primary">
+                                Right
+                              </button>
+                            </div>
+                          </div>
+                          <div class="button-collection">
+                            <div class="button-group" role="group">
+                              <button type="button" class="button button-success active">
+                                Left
+                              </button>
+                              <button type="button" class="button button-success">
+                                Middle
+                              </button>
+                              <button type="button" class="button button-success">
+                                Right
+                              </button>
+                            </div>
+                          </div>
+                          <div class="button-collection">
+                            <div class="button-group" role="group">
+                              <button type="button" class="button button-warning active">
+                                Left
+                              </button>
+                              <button type="button" class="button button-warning">
+                                Middle
+                              </button>
+                              <button type="button" class="button button-warning">
+                                Right
+                              </button>
+                            </div>
+                          </div>
+                          <div class="button-collection flush-bottom">
+                            <div class="button-group" role="group">
+                              <button type="button" class="button button-danger active">
+                                Left
+                              </button>
+                              <button type="button" class="button button-danger">
+                                Middle
+                              </button>
+                              <button type="button" class="button button-danger">
+                                Right
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-group" role="group"&gt;
+      &lt;button type="button" class="button button-default"&gt;
+        Left
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-default"&gt;
+        Middle
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-default"&gt;
+        Right
+      &lt;/button&gt;
+    &lt;/div&gt;
+    </pre>
+                        </div>
+                      </div>
+                      <section id="buttons-button-groups-styles">
+                        <h3>
+                          Styled Button Groups
+                        </h3>
+                        <p>
+                          Button groups work with all supported button styles.  Add <code>.button-stroke</code> or any other included button style class to your button element.  You can even combine styles.
+                        </p>
+                        <h4>
+                          Stroked Button Groups
+                        </h4>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-collection">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-stroke active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-stroke">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-stroke">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                            <div class="button-collection">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-primary button-stroke active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-primary button-stroke">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-primary button-stroke">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                            <div class="button-collection">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-success button-stroke active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-success button-stroke">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-success button-stroke">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                            <div class="button-collection">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-warning button-stroke active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-warning button-stroke">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-warning button-stroke">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                            <div class="button-collection flush-bottom">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-danger button-stroke active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-danger button-stroke">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-danger button-stroke">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-group" role="group"&gt;
+      &lt;button type="button" class="button button-stroke active"&gt;
+        Left
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-stroke"&gt;
+        Middle
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-stroke"&gt;
+        Right
+      &lt;/button&gt;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                        <h4>
+                          Rounded Button Groups
+                        </h4>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-group" role="group">
+                              <button type="button" class="button button-rounded active">
+                                Left
+                              </button>
+                              <button type="button" class="button button-rounded">
+                                Middle
+                              </button>
+                              <button type="button" class="button button-rounded">
+                                Right
+                              </button>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-group" role="group"&gt;
+      &lt;button type="button" class="button button-rounded active"&gt;
+        Left
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-rounded"&gt;
+        Middle
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-rounded"&gt;
+        Right
+      &lt;/button&gt;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                        <h4>
+                          Combined Style Button Groups
+                        </h4>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-group" role="group">
+                              <button type="button" class="button button-stroke button-rounded active">
+                                Left
+                              </button>
+                              <button type="button" class="button button-stroke button-rounded">
+                                Middle
+                              </button>
+                              <button type="button" class="button button-stroke button-rounded">
+                                Right
+                              </button>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-group" role="group"&gt;
+      &lt;button type="button" class="button button-stroke button-rounded active"&gt;
+        Left
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-stroke button-rounded"&gt;
+        Middle
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-stroke button-rounded"&gt;
+        Right
+      &lt;/button&gt;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                        <h4>
+                          Inverse Styling
+                        </h4>
+                        <div class="example-block inverse">
+                          <div class="example-block-content">
+                            <div class="button-collection">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-stroke button-inverse active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-stroke button-inverse">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-stroke button-inverse">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                            <div class="button-collection">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-primary button-stroke button-inverse active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-primary button-stroke button-inverse">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-primary button-stroke button-inverse">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                            <div class="button-collection">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-success button-stroke button-inverse active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-success button-stroke button-inverse">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-success button-stroke button-inverse">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                            <div class="button-collection">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-warning button-stroke button-inverse active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-warning button-stroke button-inverse">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-warning button-stroke button-inverse">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                            <div class="button-collection flush-bottom">
+                              <div class="button-group" role="group">
+                                <button type="button" class="button button-danger button-stroke button-inverse active">
+                                  Left
+                                </button>
+                                <button type="button" class="button button-danger button-stroke button-inverse">
+                                  Middle
+                                </button>
+                                <button type="button" class="button button-danger button-stroke button-inverse">
+                                  Right
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-group" role="group"&gt;
+      &lt;button type="button" class="button button-stroke button-inverse"&gt;
+        Left
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-stroke button-inverse"&gt;
+        Middle
+      &lt;/button&gt;
+      &lt;button type="button" class="button button-stroke button-inverse"&gt;
+        Right
+      &lt;/button&gt;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
+
+                    <section id="buttons-dropdowns">
+                      <h2>
+                        Button Dropdowns
+                      </h2>
+                      <p>
+                        Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.
+                      </p>
+                      <section id="buttons-dropdowns-single-button">
+                        <h3>
+                          Single Button Dropdowns
+                        </h3>
+                        <p>
+                          Turn a button into a dropdown toggle with some basic markup changes.
+                        </p>
+                        <div class="example-block example-block-overflow">
+                          <div class="example-block-content">
+                            <div class="button-group">
+                              <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                Toggle Button
+                              </button>
+                              <span class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu-list">
+                                  <li>
+                                    <a href="#">
+                                      Action
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      Another action
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      Something else here
+                                    </a>
+                                  </li>
+                                </ul>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-group"&gt;
+      &lt;button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+        Toggle Button
+      &lt;/button&gt;
+      &lt;span class="dropdown-menu" role="menu"&gt;
+        &lt;ul class="dropdown-menu-list"&gt;
+          &lt;li&gt;
+            &lt;a href="#"&gt;
+              Action
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href="#"&gt;
+              Another action
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href="#"&gt;
+              Something else here
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                      <section id="buttons-dropdowns-sizing">
+                        <h3>
+                          Button Dropdown Sizes
+                        </h3>
+                        <p>
+                          Button dropdowns work with buttons of all sizes.
+                        </p>
+                        <div class="example-block example-block-overflow">
+                          <div class="example-block-content">
+                            <div class="button-collection button-collection-align-vertical-center flush-bottom">
+                              <div class="button-group">
+                                <button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Jumbo
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Large
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Medium
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Small
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Mini
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-collection"&gt;
+      &lt;div class="button-group"&gt;
+        &lt;button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+          Jumbo
+        &lt;/button&gt;
+        &lt;span class="dropdown-menu" role="menu"&gt;
+          &hellip;
+        &lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="button-group"&gt;
+        &lt;button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+          Large
+        &lt;/button&gt;
+        &lt;span class="dropdown-menu" role="menu"&gt;
+          &hellip;
+        &lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="button-group"&gt;
+        &lt;button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+          Medium
+        &lt;/button&gt;
+        &lt;span class="dropdown-menu" role="menu"&gt;
+          &hellip;
+        &lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="button-group"&gt;
+        &lt;button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+          Small
+        &lt;/button&gt;
+        &lt;span class="dropdown-menu" role="menu"&gt;
+          &hellip;
+        &lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="button-group"&gt;
+        &lt;button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+          Mini
+        &lt;/button&gt;
+        &lt;span class="dropdown-menu" role="menu"&gt;
+          &hellip;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                      <section id="buttons-dropdowns-styled">
+                        <h3>
+                          Styled Button Dropdown
+                        </h3>
+                        <p>
+                          Button dropdowns work with all supported button styles. Add .button-stroke or any other included button style class to your button dropdown element. You can even combine styles.
+                        </p>
+                        <div class="example-block example-block-overflow">
+                          <div class="example-block-content">
+                            <div class="button-collection button-collection-align-vertical-center flush-bottom">
+                              <div class="button-group">
+                                <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Button
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Button
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Button
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-stroke button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Button
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Button
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-success button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Button
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                              <div class="button-group">
+                                <button type="button" class="button button-danger button-rounded button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  Button
+                                </button>
+                                <span class="dropdown-menu" role="menu">
+                                  <ul class="dropdown-menu-list">
+                                    <li>
+                                      <a href="#">
+                                        Action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Another action
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
+                                        Something else here
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
+
+                    <section id="buttons-controls">
+                      <h2>
+                        Button Controls
+                      </h2>
+                      <p>
+                        Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with our buttons plugin.
+                      </p>
+                      <section id="buttons-controls-toggle">
+                        <h3>
+                          Toggle Buttons
+                        </h3>
+                        <p>
+                          Add <code>data-toggle="button"</code> to activate toggling on a single button.
+                        </p>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                              Toggle Button
+                            </button>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off"&gt;
+      Toggle Button
+    &lt;/button&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                      <section id="buttons-controls-button-groups">
+                        <h3>
+                          Checkbox &amp; Radio Button Groups
+                        </h3>
+                        <p>
+                          Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing checkbox or radio inputs to enable toggling in their respective styles.
+                        </p>
+                        <h4>
+                          Checkbox Button Groups
+                        </h4>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-group" data-toggle="buttons">
+                              <label class="button button-primary active">
+                                <input type="checkbox" autocomplete="off" checked> Checkbox 1
+                              </label>
+                              <label class="button button-primary">
+                                <input type="checkbox" autocomplete="off"> Checkbox 2
+                              </label>
+                              <label class="button button-primary">
+                                <input type="checkbox" autocomplete="off"> Checkbox 3
+                              </label>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-group" data-toggle="buttons"&gt;
+      &lt;label class="button button-primary active"&gt;
+        &lt;input type="checkbox" autocomplete="off" checked&gt; Checkbox 1
+      &lt;/label&gt;
+      &lt;label class="button button-primary"&gt;
+        &lt;input type="checkbox" autocomplete="off"&gt; Checkbox 2
+      &lt;/label&gt;
+      &lt;label class="button button-primary"&gt;
+        &lt;input type="checkbox" autocomplete="off"&gt; Checkbox 3
+      &lt;/label&gt;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                        <h4>
+                          Radio Button Groups
+                        </h4>
+                        <div class="example-block flush-bottom">
+                          <div class="example-block-content">
+                            <div class="button-group" data-toggle="buttons">
+                              <label class="button button-primary active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
+                              </label>
+                              <label class="button button-primary">
+                                <input type="radio" name="options" id="option1" autocomplete="off"> Radio 2
+                              </label>
+                              <label class="button button-primary">
+                                <input type="radio" name="options" id="option1" autocomplete="off"> Radio 3
+                              </label>
+                            </div>
+                          </div>
+                          <div class="example-block-footer example-block-footer-codeblock">
+    <pre class="prettyprint linenums flush-bottom">
+    &lt;div class="button-group" data-toggle="buttons"&gt;
+      &lt;label class="button button-primary active"&gt;
+        &lt;input type="radio" name="options" id="option1" autocomplete="off" checked&gt; Radio 1
+      &lt;/label&gt;
+      &lt;label class="button button-primary"&gt;
+        &lt;input type="radio" name="options" id="option1" autocomplete="off"&gt; Radio 2
+      &lt;/label&gt;
+      &lt;label class="button button-primary"&gt;
+        &lt;input type="radio" name="options" id="option1" autocomplete="off"&gt; Radio 3
+      &lt;/label&gt;
+    &lt;/div&gt;
+    </pre>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
