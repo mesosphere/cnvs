@@ -18,7 +18,8 @@ var dirs = {
   docsStyles: "./docs/styles",
   docsJavascripts: "./docs/javascripts",
   docsDist: "./docs/build",
-  docsVendor: "./docs/vendor/*.*"
+  docsVendor: "./docs/vendor/**/*.*",
+  docsImages: "./docs/images/**/*.*"
 };
 
 var files = {
@@ -40,7 +41,7 @@ gulp.task("html", function () {
 gulp.task("move", function () {
   // the base option sets the relative root for the set of files,
   // preserving the folder structure
-  gulp.src(dirs.docsVendor, {base: dirs.docsSrc})
+  gulp.src([dirs.docsVendor, dirs.docsImages], {base: dirs.docsSrc})
   .pipe(gulp.dest(dirs.docsDist));
 });
 
