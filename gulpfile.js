@@ -9,34 +9,40 @@ var util = require("gulp-util");
 
 // Path Defintions
 var dirs = {
-  dist: "build",
-  styles: "./",
-  vendor: "./vendor/*.*"
+  dist: "./build",
+  src: "./src",
+
+  docsSrc: "./docs",
+  docsStyles: "./docs/styles",
+  docsDist: "./docs/build",
+  docsVendor: "./docs/vendor/*.*"
 };
 
 var files = {
-  lessSrc: "canvas",
-  srcHTML: "index.html"
+  lessMain: "canvas",
+
+  docsLessMain: "docs",
+  docsHTML: dirs.docsSrc + "/" + "index.html"
 };
 
+// Gulp Tasks
 gulp.task("html", function () {
-  return gulp.src(files.srcHTML)
-    .pipe(gulp.dest(dirs.dist));
+  return gulp.src(files.docsHTML)
+    .pipe(gulp.dest(dirs.docsDist));
 });
 
 gulp.task("move", function () {
   // the base option sets the relative root for the set of files,
   // preserving the folder structure
-  gulp.src(dirs.vendor, {base: "./"})
-  .pipe(gulp.dest(dirs.dist));
+  gulp.src(dirs.docsVendor, {base: dirs.docsSrc})
+  .pipe(gulp.dest(dirs.docsDist));
 });
 
-// Gulp Tasks
 gulp.task("less", function () {
-  return gulp.src(dirs.styles + "/" + files.lessSrc + ".less")
+  return gulp.src(dirs.src + "/" + files.lessMain + ".less")
     .pipe(sourcemaps.init())
     .pipe(less({
-      paths: [dirs.styles], // @import paths
+      paths: [dirs.src], // @import paths
       plugins: [colorLighten]
     }))
     .on("error", function (err) {
@@ -49,11 +55,30 @@ gulp.task("less", function () {
     .pipe(gulp.dest(dirs.dist));
 });
 
-gulp.task("watch", function () {
-  gulp.watch(dirs.styles + "/**/*.less", ["less"]);
-  gulp.watch(files.srcHTML, ["html"]);
+gulp.task("docs:less", function () {
+  return gulp.src(dirs.docsStyles + "/" + files.docsLessMain + ".less")
+    .pipe(sourcemaps.init())
+    .pipe(less({
+      paths: [dirs.docsSrc], // @import paths
+      plugins: [colorLighten]
+    }))
+    .on("error", function (err) {
+      util.log(err.message);
+      this.emit("end");
+    })
+    .pipe(autoprefixer({browsers: ["last 2 versions"]}))
+    .pipe(minifyCSS())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(dirs.docsDist));
 });
 
-gulp.task("dist", ["less", "html", "move"]);
+gulp.task("watch", function () {
+  gulp.watch("./**/*.less", ["docs:less"]);
+  gulp.watch(files.docsHTML, ["html"]);
+});
 
-gulp.task("default", ["dist", "watch"]);
+gulp.task("dist", ["less"]);
+
+gulp.task("docs:dist", ["docs:less", "html", "move"]);
+
+gulp.task("default", ["docs:dist", "watch"]);
