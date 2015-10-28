@@ -55,7 +55,7 @@ components/dropdown-menus.less
     min-width: @dropdown-menu-width-minimum;
     padding: @dropdown-menu-padding-vertical @dropdown-menu-padding-horizontal;
     margin: @dropdown-menu-offset-vertical 0 0 @dropdown-menu-offset-horizontal;
-    .border-radius(@dropdown-menu-border-radius);
+    border-radius: @dropdown-menu-border-radius;
     .background-clip(border-box);
     background: @dropdown-menu-default-background-color;
     #gradient > .vertical(@dropdown-menu-default-background-gradient-color-top, @dropdown-menu-default-background-gradient-color-bottom);
@@ -89,7 +89,7 @@ components/dropdown-menus.less
       margin: @dropdown-menu-header-margin-vertical-top @dropdown-menu-header-margin-horizontal @dropdown-menu-header-margin-vertical-bottom;
       font-size: @dropdown-menu-header-text-font-size;
       line-height: @dropdown-menu-header-text-line-height;
-      .border-radius(@dropdown-menu-header-border-radius);
+      border-radius: @dropdown-menu-header-border-radius;
       color: @dropdown-menu-header-default-text-color;
       font-family: @dropdown-menu-header-default-text-font-family;
       font-style: @dropdown-menu-header-default-text-font-style;
@@ -147,7 +147,7 @@ components/dropdown-menus.less
       padding: 0px @dropdown-menu-divider-padding-horizontal;
       margin: @dropdown-menu-divider-margin-vertical-top @dropdown-menu-divider-margin-horizontal @dropdown-menu-divider-margin-vertical-bottom;
       height: @dropdown-menu-divider-height;
-      .border-radius(@dropdown-menu-divider-border-radius);
+      border-radius: @dropdown-menu-divider-border-radius;
       background: @dropdown-menu-divider-default-background-color;
       #gradient > .vertical(@dropdown-menu-divider-default-background-gradient-color-top, @dropdown-menu-divider-default-background-gradient-color-bottom);
       border-top-width: @dropdown-menu-divider-default-border-top-width;
@@ -403,7 +403,7 @@ components/dropdown-menus.less
           a {
 
             cursor: default;
-            .opacity(@dropdown-menu-list-item-default-disabled-opacity);
+            opacity: @dropdown-menu-list-item-default-disabled-opacity;
             color: @dropdown-menu-list-item-default-disabled-text-color;
             font-family: @dropdown-menu-list-item-default-disabled-text-font-family;
             font-style: @dropdown-menu-list-item-default-disabled-text-font-style;
@@ -586,7 +586,7 @@ components/dropdown-menus.less
               a {
 
                 cursor: pointer;
-                .opacity(@dropdown-menu-list-item-danger-disabled-opacity);
+                opacity: @dropdown-menu-list-item-danger-disabled-opacity;
                 color: @dropdown-menu-list-item-danger-disabled-text-color;
                 font-family: @dropdown-menu-list-item-danger-disabled-text-font-family;
                 font-style: @dropdown-menu-list-item-danger-disabled-text-font-style;
@@ -915,7 +915,7 @@ components/dropdown-menus.less
 
                 a {
 
-                  .opacity(@dropdown-menu-list-item-default-inverse-disabled-opacity);
+                  opacity: @dropdown-menu-list-item-default-inverse-disabled-opacity;
                   color: @dropdown-menu-list-item-default-inverse-disabled-text-color;
                   font-family: @dropdown-menu-list-item-default-inverse-disabled-text-font-family;
                   font-style: @dropdown-menu-list-item-default-inverse-disabled-text-font-style;
@@ -1098,7 +1098,7 @@ components/dropdown-menus.less
 
                     a {
 
-                      .opacity(@dropdown-menu-list-item-danger-inverse-disabled-opacity);
+                      opacity: @dropdown-menu-list-item-danger-inverse-disabled-opacity;
                       color: @dropdown-menu-list-item-danger-inverse-disabled-text-color;
                       font-family: @dropdown-menu-list-item-danger-inverse-disabled-text-font-family;
                       font-style: @dropdown-menu-list-item-danger-inverse-disabled-text-font-style;
@@ -1193,7 +1193,7 @@ components/dropdown-menus.less
 
         min-width: floor(@dropdown-menu-width-minimum * @dropdown-menu-scale-screen-mini);
         padding: floor(@dropdown-menu-padding-vertical * @dropdown-menu-padding-vertical-scale-screen-mini) floor(@dropdown-menu-padding-horizontal * @dropdown-menu-padding-horizontal-scale-screen-mini);
-        .border-radius(floor(@dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-mini));
+        border-radius: floor(@dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-mini);
 
 
 
@@ -1216,7 +1216,7 @@ components/dropdown-menus.less
             margin: floor(@dropdown-menu-header-margin-vertical-top * @dropdown-menu-header-margin-vertical-scale-screen-mini) floor(@dropdown-menu-header-margin-horizontal * @dropdown-menu-header-margin-horizontal-scale-screen-mini) floor(@dropdown-menu-header-margin-vertical-bottom * @dropdown-menu-header-margin-vertical-scale-screen-mini);
             font-size: floor(@dropdown-menu-header-text-font-size * @dropdown-menu-header-text-font-size-scale-screen-mini);
             line-height: floor(@dropdown-menu-header-text-line-height * @dropdown-menu-header-text-line-height-scale-screen-mini);
-            .border-radius(floor(@dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-mini));
+            border-radius: floor(@dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-mini);
 
           }
 
@@ -1242,7 +1242,7 @@ components/dropdown-menus.less
             padding: 0px floor(@dropdown-menu-divider-padding-horizontal * @dropdown-menu-divider-padding-horizontal-scale-screen-mini);
             margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-mini) ceil(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-mini) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-mini);
             height: floor(@dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-mini);
-            .border-radius(floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-mini));
+            border-radius: floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-mini);
 
           }
 
@@ -1335,7 +1335,7 @@ components/dropdown-menus.less
 
         min-width: floor(@dropdown-menu-width-minimum * @dropdown-menu-scale-screen-small);
         padding: floor(@dropdown-menu-padding-vertical * @dropdown-menu-padding-vertical-scale-screen-small) floor(@dropdown-menu-padding-horizontal * @dropdown-menu-padding-horizontal-scale-screen-small);
-        .border-radius(floor(@dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-small));
+        border-radius: floor(@dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-small);
 
 
 
@@ -1358,7 +1358,7 @@ components/dropdown-menus.less
             margin: floor(@dropdown-menu-header-margin-vertical-top * @dropdown-menu-header-margin-vertical-scale-screen-small) floor(@dropdown-menu-header-margin-horizontal * @dropdown-menu-header-margin-horizontal-scale-screen-small) floor(@dropdown-menu-header-margin-vertical-bottom * @dropdown-menu-header-margin-vertical-scale-screen-small);
             font-size: floor(@dropdown-menu-header-text-font-size * @dropdown-menu-header-text-font-size-scale-screen-small);
             line-height: floor(@dropdown-menu-header-text-line-height * @dropdown-menu-header-text-line-height-scale-screen-small);
-            .border-radius(floor(@dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-small));
+            border-radius: floor(@dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-small);
 
           }
 
@@ -1384,7 +1384,7 @@ components/dropdown-menus.less
             padding: 0px floor(@dropdown-menu-divider-padding-horizontal * @dropdown-menu-divider-padding-horizontal-scale-screen-small);
             margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-small) ceil(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-small) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-small);
             height: floor(@dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-small);
-            .border-radius(floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-small));
+            border-radius: floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-small);
 
           }
 
@@ -1477,7 +1477,7 @@ components/dropdown-menus.less
 
         min-width: floor(@dropdown-menu-width-minimum * @dropdown-menu-scale-screen-medium);
         padding: floor(@dropdown-menu-padding-vertical * @dropdown-menu-padding-vertical-scale-screen-medium) floor(@dropdown-menu-padding-horizontal * @dropdown-menu-padding-horizontal-scale-screen-medium);
-        .border-radius(floor(@dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-medium));
+        border-radius: floor(@dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-medium);
 
 
 
@@ -1500,7 +1500,7 @@ components/dropdown-menus.less
             margin: floor(@dropdown-menu-header-margin-vertical-top * @dropdown-menu-header-margin-vertical-scale-screen-medium) floor(@dropdown-menu-header-margin-horizontal * @dropdown-menu-header-margin-horizontal-scale-screen-medium) floor(@dropdown-menu-header-margin-vertical-bottom * @dropdown-menu-header-margin-vertical-scale-screen-medium);
             font-size: floor(@dropdown-menu-header-text-font-size * @dropdown-menu-header-text-font-size-scale-screen-medium);
             line-height: floor(@dropdown-menu-header-text-line-height * @dropdown-menu-header-text-line-height-scale-screen-medium);
-            .border-radius(floor(@dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-medium));
+            border-radius: floor(@dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-medium);
 
           }
 
@@ -1526,7 +1526,7 @@ components/dropdown-menus.less
             padding: 0px floor(@dropdown-menu-divider-padding-horizontal * @dropdown-menu-divider-padding-horizontal-scale-screen-medium);
             margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-medium) ceil(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-medium) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-medium);
             height: floor(@dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-medium);
-            .border-radius(floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-medium));
+            border-radius: floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-medium);
 
           }
 
@@ -1619,7 +1619,7 @@ components/dropdown-menus.less
 
         min-width: floor(@dropdown-menu-width-minimum * @dropdown-menu-scale-screen-large);
         padding: floor(@dropdown-menu-padding-vertical * @dropdown-menu-padding-vertical-scale-screen-large) floor(@dropdown-menu-padding-horizontal * @dropdown-menu-padding-horizontal-scale-screen-large);
-        .border-radius(floor(@dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-large));
+        border-radius: floor(@dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-large);
 
 
 
@@ -1642,7 +1642,7 @@ components/dropdown-menus.less
             margin: floor(@dropdown-menu-header-margin-vertical-top * @dropdown-menu-header-margin-vertical-scale-screen-large) floor(@dropdown-menu-header-margin-horizontal * @dropdown-menu-header-margin-horizontal-scale-screen-large) floor(@dropdown-menu-header-margin-vertical-bottom * @dropdown-menu-header-margin-vertical-scale-screen-large);
             font-size: floor(@dropdown-menu-header-text-font-size * @dropdown-menu-header-text-font-size-scale-screen-large);
             line-height: floor(@dropdown-menu-header-text-line-height * @dropdown-menu-header-text-line-height-scale-screen-large);
-            .border-radius(floor(@dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-large));
+            border-radius: floor(@dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-large);
 
           }
 
@@ -1668,7 +1668,7 @@ components/dropdown-menus.less
             padding: 0px floor(@dropdown-menu-divider-padding-horizontal * @dropdown-menu-divider-padding-horizontal-scale-screen-large);
             margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-large) ceil(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-large) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-large);
             height: floor(@dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-large);
-            .border-radius(floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-large));
+            border-radius: floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-large);
 
           }
 

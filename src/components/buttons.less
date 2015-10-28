@@ -37,10 +37,10 @@ components/buttons.less
     .ie7-restore-left-whitespace();
     display: inline-block;
     border-style: solid;
-    .box-sizing(@button-box-sizing);
-    .background-clip(@button-background-clip) !important;
+    box-sizing: @button-box-sizing;
+    background-clip: @button-background-clip !important;
     .button-size-variant('', '');
-    .transition(e('background 0.1s ease, border-color 0.1s ease, box-shadow 0.1s ease, color 0.1s ease'));
+    transition: background 0.1s ease, border-color 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
 
 
     /* -----------------------------------------------------------------------------
@@ -64,7 +64,7 @@ components/buttons.less
 
     &.button-rounded {
 
-      .border-radius(1000px) !important;
+      border-radius: 1000px !important;
 
     }
 
@@ -432,7 +432,7 @@ components/buttons.less
       outline: 0;
       cursor: default !important;
       pointer-events: none;
-      .opacity(@button-default-disabled-opacity);
+      opacity: @button-default-disabled-opacity;
       .button-variant('default-disabled');
 
     }
@@ -502,7 +502,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-default-link-disabled-opacity);
+          opacity: @button-default-link-disabled-opacity;
           .button-variant('default-link-disabled');
 
         }
@@ -576,7 +576,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-default-stroke-disabled-opacity);
+          opacity: @button-default-stroke-disabled-opacity;
           .button-variant('default-stroke-disabled');
 
         }
@@ -650,7 +650,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-default-inverse-disabled-opacity);
+          opacity: @button-default-inverse-disabled-opacity;
           .button-variant('default-inverse-disabled');
 
         }
@@ -720,7 +720,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-default-inverse-link-disabled-opacity);
+              opacity: @button-default-inverse-link-disabled-opacity;
               .button-variant('default-inverse-link-disabled');
 
             }
@@ -794,7 +794,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-default-inverse-stroke-disabled-opacity);
+              opacity: @button-default-inverse-stroke-disabled-opacity;
               .button-variant('default-inverse-stroke-disabled');
 
             }
@@ -879,7 +879,7 @@ components/buttons.less
     &.disabled,
     &[disabled] {
 
-      .opacity(@button-primary-disabled-opacity);
+      opacity: @button-primary-disabled-opacity;
       .button-variant('primary-disabled');
 
     }
@@ -949,7 +949,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-primary-link-disabled-opacity);
+          opacity: @button-primary-link-disabled-opacity;
           .button-variant('primary-link-disabled');
 
         }
@@ -1023,7 +1023,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-primary-stroke-disabled-opacity);
+          opacity: @button-primary-stroke-disabled-opacity;
           .button-variant('primary-stroke-disabled');
 
         }
@@ -1097,7 +1097,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-primary-inverse-disabled-opacity);
+          opacity: @button-primary-inverse-disabled-opacity;
           .button-variant('primary-inverse-disabled');
 
         }
@@ -1167,7 +1167,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-primary-inverse-link-disabled-opacity);
+              opacity: @button-primary-inverse-link-disabled-opacity;
               .button-variant('primary-inverse-link-disabled');
 
             }
@@ -1241,7 +1241,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-primary-inverse-stroke-disabled-opacity);
+              opacity: @button-primary-inverse-stroke-disabled-opacity;
               .button-variant('primary-inverse-stroke-disabled');
 
             }
@@ -1326,7 +1326,7 @@ components/buttons.less
     &.disabled,
     &[disabled] {
 
-      .opacity(@button-success-disabled-opacity);
+      opacity: @button-success-disabled-opacity;
       .button-variant('success-disabled');
 
     }
@@ -1396,7 +1396,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-success-link-disabled-opacity);
+          opacity: @button-success-link-disabled-opacity;
           .button-variant('success-link-disabled');
 
         }
@@ -1470,7 +1470,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-success-stroke-disabled-opacity);
+          opacity: @button-success-stroke-disabled-opacity;
           .button-variant('success-stroke-disabled');
 
         }
@@ -1544,7 +1544,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-success-inverse-disabled-opacity);
+          opacity: @button-success-inverse-disabled-opacity;
           .button-variant('success-inverse-disabled');
 
         }
@@ -1614,7 +1614,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-success-inverse-link-disabled-opacity);
+              opacity: @button-success-inverse-link-disabled-opacity;
               .button-variant('success-inverse-link-disabled');
 
             }
@@ -1688,7 +1688,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-success-inverse-stroke-disabled-opacity);
+              opacity: @button-success-inverse-stroke-disabled-opacity;
               .button-variant('success-inverse-stroke-disabled');
 
             }
@@ -1773,7 +1773,7 @@ components/buttons.less
     &.disabled,
     &[disabled] {
 
-      .opacity(@button-warning-disabled-opacity);
+      opacity: @button-warning-disabled-opacity;
       .button-variant('warning-disabled');
 
     }
@@ -1843,7 +1843,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-warning-link-disabled-opacity);
+          opacity: @button-warning-link-disabled-opacity;
           .button-variant('warning-link-disabled');
 
         }
@@ -1917,7 +1917,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-warning-stroke-disabled-opacity);
+          opacity: @button-warning-stroke-disabled-opacity;
           .button-variant('warning-stroke-disabled');
 
         }
@@ -1991,7 +1991,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-warning-inverse-disabled-opacity);
+          opacity: @button-warning-inverse-disabled-opacity;
           .button-variant('warning-inverse-disabled');
 
         }
@@ -2061,7 +2061,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-warning-inverse-link-disabled-opacity);
+              opacity: @button-warning-inverse-link-disabled-opacity;
               .button-variant('warning-inverse-link-disabled');
 
             }
@@ -2135,7 +2135,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-warning-inverse-stroke-disabled-opacity);
+              opacity: @button-warning-inverse-stroke-disabled-opacity;
               .button-variant('warning-inverse-stroke-disabled');
 
             }
@@ -2220,7 +2220,7 @@ components/buttons.less
     &.disabled,
     &[disabled] {
 
-      .opacity(@button-danger-disabled-opacity);
+      opacity: @button-danger-disabled-opacity;
       .button-variant('danger-disabled');
 
     }
@@ -2290,7 +2290,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-danger-link-disabled-opacity);
+          opacity: @button-danger-link-disabled-opacity;
           .button-variant('danger-link-disabled');
 
         }
@@ -2364,7 +2364,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-danger-stroke-disabled-opacity);
+          opacity: @button-danger-stroke-disabled-opacity;
           .button-variant('danger-stroke-disabled');
 
         }
@@ -2438,7 +2438,7 @@ components/buttons.less
         &.disabled,
         &[disabled] {
 
-          .opacity(@button-danger-inverse-disabled-opacity);
+          opacity: @button-danger-inverse-disabled-opacity;
           .button-variant('danger-inverse-disabled');
 
         }
@@ -2508,7 +2508,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-danger-inverse-link-disabled-opacity);
+              opacity: @button-danger-inverse-link-disabled-opacity;
               .button-variant('danger-inverse-link-disabled');
 
             }
@@ -2582,7 +2582,7 @@ components/buttons.less
             &.disabled,
             &[disabled] {
 
-              .opacity(@button-danger-inverse-stroke-disabled-opacity);
+              opacity: @button-danger-inverse-stroke-disabled-opacity;
               .button-variant('danger-inverse-stroke-disabled');
 
             }
