@@ -6,6 +6,8 @@ var less = require("gulp-less");
 var sourcemaps = require("gulp-sourcemaps");
 var minifyCSS = require("gulp-minify-css");
 var util = require("gulp-util");
+var rename = require("gulp-rename");
+var uglify = require("gulp-uglify");
 
 // Path Defintions
 var dirs = {
@@ -14,6 +16,7 @@ var dirs = {
 
   docsSrc: "./docs",
   docsStyles: "./docs/styles",
+  docsJavascripts: "./docs/javascripts",
   docsDist: "./docs/build",
   docsVendor: "./docs/vendor/*.*"
 };
@@ -22,6 +25,9 @@ var files = {
   lessMain: "canvas",
 
   docsLessMain: "docs",
+  docsScripts: "scripts",
+  docsScriptsDist: "scripts",
+  docsScriptsDistSuffix: ".min",
   docsHTML: dirs.docsSrc + "/" + "index.html"
 };
 
@@ -72,6 +78,22 @@ gulp.task("docs:less", function () {
     .pipe(gulp.dest(dirs.docsDist));
 });
 
+gulp.task("docs:js", function () {
+
+  return gulp.src(dirs.docsJavascripts + "/" + files.docsScripts + ".js")
+    .pipe(uglify({
+      mangle: true,
+      compress: true
+    }))
+    .pipe(rename({
+      basename: files.docsScriptsDist,
+      suffix: files.docsScriptsDistSuffix,
+      extname: ".js"
+    }))
+    .pipe(gulp.dest(dirs.docsDist));
+
+});
+
 gulp.task("watch", function () {
   gulp.watch("./**/*.less", ["docs:less"]);
   gulp.watch(files.docsHTML, ["html"]);
@@ -79,6 +101,6 @@ gulp.task("watch", function () {
 
 gulp.task("dist", ["less"]);
 
-gulp.task("docs:dist", ["docs:less", "html", "move"]);
+gulp.task("docs:dist", ["docs:less", "docs:js", "html", "move"]);
 
 gulp.task("default", ["docs:dist", "watch"]);
