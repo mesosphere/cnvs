@@ -1,63 +1,84 @@
-// dependencies
+// Dependencies
 var autoprefixer = require("gulp-autoprefixer");
 var colorLighten = require("less-color-lighten");
 var gulp = require("gulp");
 var less = require("gulp-less");
+var sourcemaps = require("gulp-sourcemaps");
 var minifyCSS = require("gulp-minify-css");
-var rename = require("gulp-rename");
-var uglify = require("gulp-uglify");
+var util = require("gulp-util");
 
+// Path Defintions
 var dirs = {
-  js: "js",
-  jsDist: "js",
-  styles: "css",
-  stylesDist: "css"
+  dist: "./build",
+  src: "./src",
+
+  docsSrc: "./docs",
+  docsStyles: "./docs/styles",
+  docsDist: "./docs/build",
+  docsVendor: "./docs/vendor/*.*"
 };
 
 var files = {
-  lessSrc: "styles",
-  cssDist: "styles",
-  jsSrc: "scripts",
-  jsDist: "scripts",
-  jsDistSuffix: ".min"
+  lessMain: "canvas",
+
+  docsLessMain: "docs",
+  docsHTML: dirs.docsSrc + "/" + "index.html"
 };
 
+// Gulp Tasks
+gulp.task("html", function () {
+  return gulp.src(files.docsHTML)
+    .pipe(gulp.dest(dirs.docsDist));
+});
+
+gulp.task("move", function () {
+  // the base option sets the relative root for the set of files,
+  // preserving the folder structure
+  gulp.src(dirs.docsVendor, {base: dirs.docsSrc})
+  .pipe(gulp.dest(dirs.docsDist));
+});
+
 gulp.task("less", function () {
-  return gulp.src(dirs.styles + "/" + files.lessSrc + ".less")
+  return gulp.src(dirs.src + "/" + files.lessMain + ".less")
+    .pipe(sourcemaps.init())
     .pipe(less({
-      paths: [dirs.styles], // @import paths
+      paths: [dirs.src], // @import paths
       plugins: [colorLighten]
     }))
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions']
-    }))
-    .pipe(gulp.dest(dirs.stylesDist));
-});
-
-gulp.task("minify-css", ["less"], function () {
-  return gulp.src(dirs.stylesDist + "/" + files.cssDist + ".css")
+    .on("error", function (err) {
+      util.log(err.message);
+      this.emit("end");
+    })
+    .pipe(autoprefixer({browsers: ["last 2 versions"]}))
     .pipe(minifyCSS())
-    .pipe(gulp.dest(dirs.stylesDist));
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(dirs.dist));
 });
 
-gulp.task("minify-js", function () {
-  return gulp.src(dirs.js + "/" + files.jsSrc + ".js")
-    .pipe(uglify({
-      mangle: true,
-      compress: true
+gulp.task("docs:less", function () {
+  return gulp.src(dirs.docsStyles + "/" + files.docsLessMain + ".less")
+    .pipe(sourcemaps.init())
+    .pipe(less({
+      paths: [dirs.docsSrc], // @import paths
+      plugins: [colorLighten]
     }))
-    .pipe(rename({
-      basename: files.jsDist,
-      suffix: files.jsDistSuffix,
-      extname: ".js"
-    }))
-    .pipe(gulp.dest(dirs.jsDist));
+    .on("error", function (err) {
+      util.log(err.message);
+      this.emit("end");
+    })
+    .pipe(autoprefixer({browsers: ["last 2 versions"]}))
+    .pipe(minifyCSS())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(dirs.docsDist));
 });
 
 gulp.task("watch", function () {
-  gulp.watch(dirs.styles + "/**/*.less", ["less"]);
+  gulp.watch("./**/*.less", ["docs:less"]);
+  gulp.watch(files.docsHTML, ["html"]);
 });
 
-gulp.task("default", ["dist", "watch"]);
+gulp.task("dist", ["less"]);
 
-gulp.task("dist", ["less", "minify-css", "minify-js"]);
+gulp.task("docs:dist", ["docs:less", "html", "move"]);
+
+gulp.task("default", ["docs:dist", "watch"]);
