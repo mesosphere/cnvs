@@ -92,7 +92,7 @@ layout/modal/index.less
     max-height: 100%;
     margin: 0px;
     z-index: @z-index-modal + 1;
-    .box-sizing(@modal-box-sizing);
+    box-sizing: @modal-box-sizing;
     .background-clip(@modal-background-clip);
     .modal-element-variant('modal');
 
@@ -231,7 +231,7 @@ layout/modal/index.less
       cursor: pointer;
       transition: e('all 0.15s ease');
       border-radius: 50%;
-      .box-sizing(content-box);
+      box-sizing: content-box;
       border: 1px solid hsla(hue(color(color-lighten(@neutral, 0))), saturation(color(color-lighten(@neutral, 0))), lightness(color(color-lighten(@neutral, 0))), 0.2);
 
       span {
