@@ -1,0 +1,479 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+utilities/mixins-carousel.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Variant Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+.panel-variant(@variant-class: 'default') {
+
+  @panel-variant-background-color: "panel-@{variant-class}-background-color";
+  @panel-variant-background-gradient-color-top: "panel-@{variant-class}-background-gradient-color-top";
+  @panel-variant-background-gradient-color-bottom: "panel-@{variant-class}-background-gradient-color-bottom";
+  @panel-variant-border-width: "panel-@{variant-class}-border-width";
+  @panel-variant-border-color: "panel-@{variant-class}-border-color";
+  @panel-variant-border-style: "panel-@{variant-class}-border-style";
+  @panel-variant-border-top-width: "panel-@{variant-class}-border-top-width";
+  @panel-variant-border-top-color: "panel-@{variant-class}-border-top-color";
+  @panel-variant-border-top-style: "panel-@{variant-class}-border-top-style";
+  @panel-variant-border-right-width: "panel-@{variant-class}-border-right-width";
+  @panel-variant-border-right-color: "panel-@{variant-class}-border-right-color";
+  @panel-variant-border-right-style: "panel-@{variant-class}-border-right-style";
+  @panel-variant-border-bottom-width: "panel-@{variant-class}-border-bottom-width";
+  @panel-variant-border-bottom-color: "panel-@{variant-class}-border-bottom-color";
+  @panel-variant-border-bottom-style: "panel-@{variant-class}-border-bottom-style";
+  @panel-variant-border-left-width: "panel-@{variant-class}-border-left-width";
+  @panel-variant-border-left-color: "panel-@{variant-class}-border-left-color";
+  @panel-variant-border-left-style: "panel-@{variant-class}-border-left-style";
+  @panel-variant-shadow: "panel-@{variant-class}-shadow";
+
+  & when not (@@panel-variant-background-color = null) {
+
+    background: @@panel-variant-background-color;
+
+  }
+
+  & when not (@@panel-variant-background-gradient-color-top = null) and not (@@panel-variant-background-gradient-color-bottom = null) {
+
+    #gradient > .vertical(@@panel-variant-background-gradient-color-top, @@panel-variant-background-gradient-color-bottom);
+
+  }
+
+  & when not (@@panel-variant-border-width = null) {
+
+    border-width: @@panel-variant-border-width;
+
+  }
+
+  & when not (@@panel-variant-border-color = null) {
+
+    border-color: @@panel-variant-border-color;
+
+  }
+
+  & when not (@@panel-variant-border-style = null) {
+
+    border-style: @@panel-variant-border-style;
+
+  }
+
+  & when not (@@panel-variant-border-top-width = null) {
+
+    border-top-width: @@panel-variant-border-top-width;
+
+  }
+
+  & when not (@@panel-variant-border-top-color = null) {
+
+    border-top-color: @@panel-variant-border-top-color;
+
+  }
+
+  & when not (@@panel-variant-border-top-style = null) {
+
+    border-top-style: @@panel-variant-border-top-style;
+
+  }
+
+  & when not (@@panel-variant-border-right-width = null) {
+
+    border-right-width: @@panel-variant-border-right-width;
+
+  }
+
+  & when not (@@panel-variant-border-right-color = null) {
+
+    border-right-color: @@panel-variant-border-right-color;
+
+  }
+
+  & when not (@@panel-variant-border-right-style = null) {
+
+    border-right-style: @@panel-variant-border-right-style;
+
+  }
+
+  & when not (@@panel-variant-border-bottom-width = null) {
+
+    border-bottom-width: @@panel-variant-border-bottom-width;
+
+  }
+
+  & when not (@@panel-variant-border-bottom-color = null) {
+
+    border-bottom-color: @@panel-variant-border-bottom-color;
+
+  }
+
+  & when not (@@panel-variant-border-bottom-style = null) {
+
+    border-bottom-style: @@panel-variant-border-bottom-style;
+
+  }
+
+  & when not (@@panel-variant-border-left-width = null) {
+
+    border-left-width: @@panel-variant-border-left-width;
+
+  }
+
+  & when not (@@panel-variant-border-left-color = null) {
+
+    border-left-color: @@panel-variant-border-left-color;
+
+  }
+
+  & when not (@@panel-variant-border-left-style = null) {
+
+    border-left-style: @@panel-variant-border-left-style;
+
+  }
+
+  & when not (@@panel-variant-shadow = null) {
+
+    .box-shadow(@@panel-variant-shadow);
+
+  }
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Size Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.panel-size-variant(@variant-screen-size) {
+
+  @panel-variant-val-margin-top: null;
+  @panel-variant-val-margin-top-scale: 1.0;
+
+  @panel-variant-val-margin-bottom: null;
+  @panel-variant-val-margin-bottom-scale: 1.0;
+
+  @panel-variant-val-short-margin-top: null;
+  @panel-variant-val-short-margin-bottom: null;
+
+  @panel-variant-val-tall-margin-top: null;
+  @panel-variant-val-tall-margin-bottom: null;
+
+  @panel-variant-val-border-radius: null;
+  @panel-variant-val-border-radius-scale: 1.0;
+
+  & when (@variant-screen-size = '') {
+
+    @panel-variant-margin-top: "panel-margin-top";
+    @panel-variant-val-margin-top: @@panel-variant-margin-top;
+
+    @panel-variant-margin-bottom: "panel-margin-bottom";
+    @panel-variant-val-margin-bottom: @@panel-variant-margin-bottom;
+
+    @panel-variant-short-margin-top: "panel-short-margin-top";
+    @panel-variant-val-short-margin-top: @@panel-variant-short-margin-top;
+
+    @panel-variant-short-margin-bottom: "panel-short-margin-bottom";
+    @panel-variant-val-short-margin-bottom: @@panel-variant-short-margin-bottom;
+
+    @panel-variant-tall-margin-top: "panel-tall-margin-top";
+    @panel-variant-val-tall-margin-top: @@panel-variant-tall-margin-top;
+
+    @panel-variant-tall-margin-bottom: "panel-tall-margin-bottom";
+    @panel-variant-val-tall-margin-bottom: @@panel-variant-tall-margin-bottom;
+
+    @panel-variant-border-radius: "panel-border-radius";
+    @panel-variant-val-border-radius: @@panel-variant-border-radius;
+
+    .panel-size-variant-definitions(@panel-variant-val-margin-top, @panel-variant-val-margin-top-scale, @panel-variant-val-margin-bottom, @panel-variant-val-margin-bottom-scale, @panel-variant-val-short-margin-top, @panel-variant-val-short-margin-bottom, @panel-variant-val-tall-margin-top, @panel-variant-val-tall-margin-bottom, @panel-variant-val-border-radius, @panel-variant-val-border-radius-scale);
+
+  }
+
+  & when not (@variant-screen-size = '') {
+
+    @panel-variant-margin-top: "panel-margin-top";
+    @panel-variant-val-margin-top: @@panel-variant-margin-top;
+
+    @panel-variant-margin-top-scale: "panel-margin-top-scale-@{variant-screen-size}";
+    @panel-variant-val-margin-top-scale: @@panel-variant-margin-top-scale;
+
+    @panel-variant-margin-bottom: "panel-margin-bottom";
+    @panel-variant-val-margin-bottom: @@panel-variant-margin-bottom;
+
+    @panel-variant-margin-bottom-scale: "panel-margin-bottom-scale-@{variant-screen-size}";
+    @panel-variant-val-margin-bottom-scale: @@panel-variant-margin-bottom-scale;
+
+    @panel-variant-short-margin-top: "panel-short-margin-top";
+    @panel-variant-val-short-margin-top: @@panel-variant-short-margin-top;
+
+    @panel-variant-short-margin-bottom: "panel-short-margin-bottom";
+    @panel-variant-val-short-margin-bottom: @@panel-variant-short-margin-bottom;
+
+    @panel-variant-tall-margin-top: "panel-tall-margin-top";
+    @panel-variant-val-tall-margin-top: @@panel-variant-tall-margin-top;
+
+    @panel-variant-tall-margin-bottom: "panel-tall-margin-bottom";
+    @panel-variant-val-tall-margin-bottom: @@panel-variant-tall-margin-bottom;
+
+    @panel-variant-border-radius: "panel-border-radius";
+    @panel-variant-val-border-radius: @@panel-variant-border-radius;
+
+    @panel-variant-border-radius-scale: "panel-border-radius-scale-@{variant-screen-size}";
+    @panel-variant-val-border-radius-scale: @@panel-variant-border-radius-scale;
+
+    .panel-size-variant-definitions(@panel-variant-val-margin-top, @panel-variant-val-margin-top-scale, @panel-variant-val-margin-bottom, @panel-variant-val-margin-bottom-scale, @panel-variant-val-short-margin-top, @panel-variant-val-short-margin-bottom, @panel-variant-val-tall-margin-top, @panel-variant-val-tall-margin-bottom, @panel-variant-val-border-radius, @panel-variant-val-border-radius-scale);
+
+  }
+
+}
+
+
+
+.panel-size-variant-definitions(@margin-top, @margin-top-scale, @margin-bottom, @margin-bottom-scale, @short-margin-top, @short-margin-bottom, @tall-margin-top, @tall-margin-bottom, @border-radius, @border-radius-scale) {
+
+  & when not (@margin-top = null) {
+
+    margin-top: floor(@margin-top * @margin-top-scale);
+
+  }
+
+  & when not (@margin-bottom = null) {
+
+    margin-bottom: floor(@margin-bottom * @margin-bottom-scale);
+
+  }
+
+  & when not (@short-margin-top = null) {
+
+    &.short,
+    &.short-top {
+
+      margin-top: floor(@short-margin-top * @margin-top-scale);
+
+    }
+
+  }
+
+  & when not (@short-margin-bottom = null) {
+
+    &.short,
+    &.short-bottom {
+
+      margin-bottom: floor(@short-margin-bottom * @margin-bottom-scale);
+
+    }
+
+  }
+
+  & when not (@tall-margin-top = null) {
+
+    &.tall,
+    &.tall-top {
+
+      margin-top: floor(@tall-margin-top * @margin-top-scale);
+
+    }
+
+  }
+
+  & when not (@tall-margin-bottom = null) {
+
+    &.tall,
+    &.tall-bottom {
+
+      margin-bottom: floor(@tall-margin-bottom * @margin-bottom-scale);
+
+    }
+
+  }
+
+  & when not (@border-radius = null) {
+
+    .border-radius(@border-radius * @border-radius-scale);
+
+  }
+
+}
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Size Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.panel-component-size-variant(@variant-type, @variant-screen-size) {
+
+  @panel-component-variant-val-padding-horizontal: null;
+  @panel-component-variant-val-padding-horizontal-scale: 1.0;
+
+  @panel-component-variant-val-padding-vertical: null;
+  @panel-component-variant-val-padding-vertical-scale: 1.0;
+
+  @panel-component-variant-val-short-padding-vertical: null;
+
+  @panel-component-variant-val-tall-padding-vertical: null;
+
+  @panel-component-variant-val-border-radius: null;
+  @panel-component-variant-val-border-radius-scale: 1.0;
+
+
+
+  & when (@variant-screen-size = '') {
+
+    @panel-component-variant-padding-horizontal: "panel-@{variant-type}-padding-horizontal";
+    @panel-component-variant-val-padding-horizontal: @@panel-component-variant-padding-horizontal;
+
+    @panel-component-variant-padding-vertical: "panel-@{variant-type}-padding-vertical";
+    @panel-component-variant-val-padding-vertical: @@panel-component-variant-padding-vertical;
+
+    @panel-component-variant-short-padding-vertical: "panel-@{variant-type}-short-padding-vertical";
+    @panel-component-variant-val-short-padding-vertical: @@panel-component-variant-short-padding-vertical;
+
+    @panel-component-variant-tall-padding-vertical: "panel-@{variant-type}-tall-padding-vertical";
+    @panel-component-variant-val-tall-padding-vertical: @@panel-component-variant-tall-padding-vertical;
+
+    @panel-component-variant-border-radius: "panel-@{variant-type}-border-radius";
+    @panel-component-variant-val-border-radius: @@panel-component-variant-border-radius;
+
+    .panel-component-size-variant-definitions(@panel-component-variant-val-padding-horizontal, @panel-component-variant-val-padding-horizontal-scale, @panel-component-variant-val-padding-vertical, @panel-component-variant-val-padding-vertical-scale, @panel-component-variant-val-short-padding-vertical, @panel-component-variant-val-tall-padding-vertical, @panel-component-variant-val-border-radius, @panel-component-variant-val-border-radius-scale);
+
+  }
+
+  & when not (@variant-screen-size = '') {
+
+    @panel-component-variant-padding-horizontal: "panel-@{variant-type}-padding-horizontal";
+    @panel-component-variant-val-padding-horizontal: @@panel-component-variant-padding-horizontal;
+
+    @panel-component-variant-padding-horizontal-scale: "panel-@{variant-type}-padding-horizontal-scale-@{variant-screen-size}";
+    @panel-component-variant-val-padding-horizontal-scale: @@panel-component-variant-padding-horizontal-scale;
+
+    @panel-component-variant-padding-vertical: "panel-@{variant-type}-padding-vertical";
+    @panel-component-variant-val-padding-vertical: @@panel-component-variant-padding-vertical;
+
+    @panel-component-variant-padding-vertical-scale: "panel-@{variant-type}-padding-vertical-scale-@{variant-screen-size}";
+    @panel-component-variant-val-padding-vertical-scale: @@panel-component-variant-padding-vertical-scale;
+
+    @panel-component-variant-short-padding-vertical: "panel-@{variant-type}-short-padding-vertical";
+    @panel-component-variant-val-short-padding-vertical: @@panel-component-variant-short-padding-vertical;
+
+    @panel-component-variant-tall-padding-vertical: "panel-@{variant-type}-tall-padding-vertical";
+    @panel-component-variant-val-tall-padding-vertical: @@panel-component-variant-tall-padding-vertical;
+
+    @panel-component-variant-border-radius: "panel-@{variant-type}-border-radius";
+    @panel-component-variant-val-border-radius: @@panel-component-variant-border-radius;
+
+    @panel-component-variant-border-radius-scale: "panel-@{variant-type}-border-radius-scale-@{variant-screen-size}";
+    @panel-component-variant-val-border-radius-scale: @@panel-component-variant-border-radius-scale;
+
+    .panel-component-size-variant-definitions(@panel-component-variant-val-padding-horizontal, @panel-component-variant-val-padding-horizontal-scale, @panel-component-variant-val-padding-vertical, @panel-component-variant-val-padding-vertical-scale, @panel-component-variant-val-short-padding-vertical, @panel-component-variant-val-tall-padding-vertical, @panel-component-variant-val-border-radius, @panel-component-variant-val-border-radius-scale);
+
+  }
+
+}
+
+
+
+.panel-component-size-variant-definitions(@padding-horizontal, @padding-horizontal-scale, @padding-vertical, @padding-vertical-scale, @short-padding-vertical, @tall-padding-vertical, @border-radius, @border-radius-scale) {
+
+  & when not (@padding-horizontal = null) {
+
+    padding-left: floor(@padding-horizontal * @padding-horizontal-scale);
+    padding-right: floor(@padding-horizontal * @padding-horizontal-scale);
+
+  }
+
+  & when not (@padding-vertical = null) {
+
+    padding-top: floor(@padding-vertical * @padding-vertical-scale);
+    padding-bottom: floor(@padding-vertical * @padding-vertical-scale);
+
+  }
+
+  & when not (@short-padding-vertical = null) {
+
+    padding-top: floor(@padding-vertical * @padding-vertical-scale);
+    padding-bottom: floor(@padding-vertical * @padding-vertical-scale);
+
+    &.short {
+
+      padding-top: floor(@short-padding-vertical * @padding-vertical-scale);
+      padding-bottom: floor(@short-padding-vertical * @padding-vertical-scale);
+
+    }
+    
+    &.short-top {
+
+      padding-top: floor(@short-padding-vertical * @padding-vertical-scale);
+
+    }
+
+    &.short-top {
+
+      padding-bottom: floor(@short-padding-vertical * @padding-vertical-scale);
+
+    }
+
+  }
+
+  & when not (@tall-padding-vertical = null) {
+
+    padding-top: floor(@padding-vertical * @padding-vertical-scale);
+    padding-bottom: floor(@padding-vertical * @padding-vertical-scale);
+
+    &.tall {
+
+      padding-top: floor(@tall-padding-vertical * @padding-vertical-scale);
+      padding-bottom: floor(@tall-padding-vertical * @padding-vertical-scale);
+
+    }
+
+    &.tall-top {
+
+      padding-top: floor(@tall-padding-vertical * @padding-vertical-scale);
+
+    }
+
+    &.tall-top {
+
+      padding-bottom: floor(@tall-padding-vertical * @padding-vertical-scale);
+
+    }
+
+  }
+
+  & when not (@border-radius = null) {
+
+    .border-radius(@border-radius * @border-radius-scale);
+
+  }
+
+}
