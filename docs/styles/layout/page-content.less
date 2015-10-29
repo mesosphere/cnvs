@@ -100,7 +100,7 @@ Page Content
         display: block;
         color: color-lighten(@neutral, 40);
         text-decoration: @header-navigation-link-text-link-text-decoration;
-        .transition(e('padding 0.2s ease, color 0.2s ease'));
+        transition: e('padding 0.2s ease, color 0.2s ease');
         position: relative;
 
         &:before {
@@ -115,8 +115,8 @@ Page Content
           height: 100%;
           background: color-lighten(@neutral, 60);
           border-radius: 0px;
-          .opacity(0);
-          .transition(opacity 0.2s ease);
+          opacity: 0;
+          transition: opacity 0.2s ease;
 
         }
 
@@ -127,7 +127,7 @@ Page Content
 
           &:before {
 
-            .opacity(100);
+            opacity: 100;
 
           }
 
@@ -168,7 +168,7 @@ Page Content
 
           &:before {
 
-            .opacity(100);
+            opacity: 100;
             background: @body-text-link-text-color;
 
           }
