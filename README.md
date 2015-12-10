@@ -1,6 +1,6 @@
 # Canvas
 
-Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/canvas/](mesosphere.github.io/canvas/).
+Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/canvas](http://mesosphere.github.io/canvas/).
 
 ## Getting Started
 
