@@ -52,8 +52,6 @@ var files = {
   }
 };
 
-
-
 gulp.task("html", function () {
 
   return gulp.src(files.docs.html).pipe(gulp.dest(dirs.docs.dist.path));
