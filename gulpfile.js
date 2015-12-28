@@ -1,14 +1,19 @@
-// Dependencies
+// Load plugins
 
-var autoprefixer = require("gulp-autoprefixer");
-var colorLighten = require("less-color-lighten");
-var gulp = require("gulp");
-var less = require("gulp-less");
-var sourcemaps = require("gulp-sourcemaps");
-var minifyCSS = require("gulp-minify-css");
-var util = require("gulp-util");
-var rename = require("gulp-rename");
-var uglify = require("gulp-uglify");
+var autoprefixer  = require("gulp-autoprefixer"),
+    browserSync   = require('browser-sync'),
+    colorLighten  = require("less-color-lighten"),
+    concat        = require("gulp-concat"),
+    gulp          = require("gulp"),
+    less          = require("gulp-less"),
+    minifyCSS     = require("gulp-minify-css"),
+    notify        = require('gulp-notify'),
+    rename        = require("gulp-rename"),
+    sourcemaps    = require("gulp-sourcemaps"),
+    uglify        = require("gulp-uglify"),
+    util          = require("gulp-util");
+
+var reload        = browserSync.reload;
 
 // Path Definitions
 
@@ -17,8 +22,13 @@ var dirs = {
     path: "./",
     styles: "./styles",
     javascripts: "./javascripts",
+    vendor: "./vendor/**/*.*",
+    images: "./images/**/*.*",
+    fonts: "./fonts/**/*.*",
     dist: {
-      path: "./build"
+      path: "./dist",
+      styles: "./dist/styles",
+      javascripts: "./dist/javascripts"
     }
   },
   docs: {
@@ -27,8 +37,11 @@ var dirs = {
     javascripts: "./docs/javascripts",
     vendor: "./docs/vendor/**/*.*",
     images: "./docs/images/**/*.*",
+    fonts: "./docs/fonts/**/*.*",
     dist: {
-      path: "./docs/build"
+      path: "./docs/dist",
+      styles: "./docs/dist/styles",
+      javascripts: "./docs/dist/javascripts"
     }
   }
 };
@@ -37,13 +50,27 @@ var dirs = {
 
 var files = {
   canvas: {
-    styles: "canvas"
+    styles: "canvas",
+    dist: {
+      styles: {
+        filename: "styles",
+        suffix: ".min"
+      },
+      javascripts: {
+        filename: "canvas",
+        suffix: ".min"
+      }
+    }
   },
   docs: {
-    styles: "docs",
+    styles: "styles",
     javascripts: "scripts",
     html: dirs.docs.path + "/" + "index.html",
     dist: {
+      styles: {
+        filename: "styles",
+        suffix: ".min"
+      },
       javascripts: {
         filename: "scripts",
         suffix: ".min"
@@ -52,24 +79,48 @@ var files = {
   }
 };
 
-gulp.task("html", function () {
+// Move Docs html to build folder
 
-  return gulp.src(files.docs.html).pipe(gulp.dest(dirs.docs.dist.path));
+gulp.task("docs:html", function () {
 
-});
-
-// Move files to a new location
-
-gulp.task("move", function () {
-
-  // the base option sets the relative root for the set of files, preserving the folder structure
-  gulp.src([dirs.docs.vendor, dirs.docs.images], {base: dirs.docs.path}).pipe(gulp.dest(dirs.docs.dist.path));
+  return gulp.src(files.docs.html)
+    .pipe(gulp.dest(dirs.docs.dist.path));
 
 });
 
-// Process LESS files
+// Move Canvas files to a new location
 
-gulp.task("less", function () {
+gulp.task("canvas:move", function () {
+
+  return gulp.src([
+      dirs.canvas.vendor,
+      dirs.canvas.images,
+      dirs.canvas.fonts
+    ], {
+      base: dirs.canvas.path
+    })
+    .pipe(gulp.dest(dirs.canvas.dist.path));
+
+});
+
+// Move Docs files to a new location
+
+gulp.task("docs:move", function () {
+
+  return gulp.src([
+      dirs.docs.vendor,
+      dirs.docs.images,
+      dirs.docs.fonts
+    ], {
+      base: dirs.docs.path
+    })
+    .pipe(gulp.dest(dirs.docs.dist.path));
+
+});
+
+// Process Canvas LESS files
+
+gulp.task("canvas:styles", function () {
 
   return gulp.src(dirs.canvas.styles + "/" + files.canvas.styles + ".less")
     .pipe(sourcemaps.init())
@@ -84,15 +135,32 @@ gulp.task("less", function () {
     .pipe(autoprefixer({
       browsers: ["last 2 versions"]
     }))
+    .pipe(rename({
+      basename: files.canvas.dist.styles.filename,
+      extname: ".css"
+    }))
+    .pipe(sourcemaps.write('./', {
+      includeContent: false,
+      sourceRoot: dirs.canvas.styles
+    }))
+    .pipe(gulp.dest(dirs.canvas.dist.styles))
     .pipe(minifyCSS())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dirs.canvas.dist.path));
+    .pipe(rename({
+      basename: files.canvas.dist.styles.filename,
+      suffix: files.canvas.dist.styles.suffix,
+      extname: ".css"
+    }))
+    .pipe(sourcemaps.write('./', {
+      includeContent: false,
+      sourceRoot: dirs.canvas.styles
+    }))
+    .pipe(gulp.dest(dirs.canvas.dist.styles));
 
 });
 
 // Process Docs LESS files
 
-gulp.task("docs:less", function () {
+gulp.task("docs:styles", function () {
 
   return gulp.src(dirs.docs.styles + "/" + files.docs.styles + ".less")
     .pipe(sourcemaps.init())
@@ -107,27 +175,66 @@ gulp.task("docs:less", function () {
     .pipe(autoprefixer({
       browsers: ["last 2 versions"]
     }))
+    .pipe(rename({
+      basename: files.docs.dist.styles.filename,
+      extname: ".css"
+    }))
+    .pipe(sourcemaps.write('./', {
+      includeContent: false,
+      sourceRoot: dirs.docs.styles
+    }))
+    .pipe(gulp.dest(dirs.docs.dist.styles))
     .pipe(minifyCSS())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dirs.docs.dist.path));
+    .pipe(rename({
+      basename: files.docs.dist.styles.filename,
+      suffix: files.docs.dist.styles.suffix,
+      extname: ".css"
+    }))
+    .pipe(sourcemaps.write('./', {
+      includeContent: false,
+      sourceRoot: dirs.docs.styles
+    }))
+    .pipe(gulp.dest(dirs.docs.dist.styles));
 
 });
 
-// Process Docs JS files
+// Process Canvas Javascript files
 
-gulp.task("docs:js", function () {
+gulp.task("canvas:javascripts", function () {
 
-  return gulp.src(dirs.docs.javascripts + "/" + files.docs.javascripts + ".js")
+  return gulp.src(dirs.canvas.javascripts + "/*.js")
+    .pipe(concat(files.canvas.dist.javascripts.filename + ".js"))
+    .pipe(gulp.dest(dirs.canvas.dist.javascripts))
+    .pipe(rename({
+      basename: files.canvas.dist.javascripts.filename,
+      suffix: files.canvas.dist.javascripts.suffix,
+      extname: ".js"
+    }))
     .pipe(uglify({
       mangle: true,
       compress: true
     }))
+    .pipe(gulp.dest(dirs.canvas.dist.javascripts));
+
+});
+
+// Process Docs Javascript files
+
+gulp.task("docs:javascripts", function () {
+
+  return gulp.src(dirs.docs.javascripts + "/*.js")
+    .pipe(concat(files.docs.dist.javascripts.filename + ".js"))
+    .pipe(gulp.dest(dirs.docs.dist.javascripts))
     .pipe(rename({
       basename: files.docs.dist.javascripts.filename,
       suffix: files.docs.dist.javascripts.suffix,
       extname: ".js"
     }))
-    .pipe(gulp.dest(dirs.docs.dist.path));
+    .pipe(uglify({
+      mangle: true,
+      compress: true
+    }))
+    .pipe(gulp.dest(dirs.docs.dist.javascripts));
 
 });
 
@@ -135,19 +242,19 @@ gulp.task("docs:js", function () {
 
 gulp.task("watch", function () {
 
-  gulp.watch("./**/*.less", ["docs:less"]);
+  gulp.watch("./**/*.less", ["docs:styles"]);
   gulp.watch(files.docs.html, ["html"]);
 
 });
 
-// Distribution Gulp Task
+// Canvas Distribution Gulp Task
 
-gulp.task("dist", ["less"]);
+gulp.task("canvas:dist", ["canvas:styles", "canvas:javascripts", "canvas:move"]);
 
 // Docs Distribution Gulp Task
 
-gulp.task("docs:dist", ["docs:less", "docs:js", "html", "move"]);
+gulp.task("docs:dist", ["docs:styles", "docs:javascripts", "docs:html", "docs:move"]);
 
 // Default Gulp Task
 
-gulp.task("default", ["docs:dist", "watch"]);
+gulp.task("default", ["docs:dist", "canvas:dist", "watch"]);
