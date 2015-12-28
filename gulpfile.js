@@ -238,12 +238,24 @@ gulp.task("docs:javascripts", function () {
 
 });
 
+// Wait for Docs Distribution then Launch Server
+
+gulp.task('browser-sync', ['docs:dist'], function() {
+  browserSync({
+    server: {
+      baseDir: 'docs/dist',
+      open: true,
+      notify: false
+    }
+  });
+});
+
 // Watch for file changes
 
 gulp.task("watch", function () {
 
   gulp.watch("./**/*.less", ["docs:styles"]);
-  gulp.watch(files.docs.html, ["html"]);
+  gulp.watch(files.docs.html, ["docs:html"]).on('change', reload);
 
 });
 
@@ -257,4 +269,4 @@ gulp.task("docs:dist", ["docs:styles", "docs:javascripts", "docs:html", "docs:mo
 
 // Default Gulp Task
 
-gulp.task("default", ["docs:dist", "canvas:dist", "watch"]);
+gulp.task("default", ["browser-sync", "docs:dist", "canvas:dist", "watch"]);
