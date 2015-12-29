@@ -2,9 +2,13 @@
 
 var autoprefixer  = require("gulp-autoprefixer"),
     browserSync   = require('browser-sync'),
+    clean         = require('gulp-clean'),
     colorLighten  = require("less-color-lighten"),
     concat        = require("gulp-concat"),
+    cp            = require('child_process')
     gulp          = require("gulp"),
+    htmlmin       = require('gulp-htmlmin'),
+    jekyll        = require('gulp-jekyll');
     less          = require("gulp-less"),
     minifyCSS     = require("gulp-minify-css"),
     notify        = require('gulp-notify'),
@@ -81,10 +85,28 @@ var files = {
 
 // Move Docs html to build folder
 
-gulp.task("docs:html", function () {
+gulp.task('docs:html', ['jekyll'], function() {
 
-  return gulp.src(files.docs.html)
-    .pipe(gulp.dest(dirs.docs.dist.path));
+  gulp.src(dirs.docs.dist.path + '/**/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest(dirs.docs.dist.path))
+    .pipe(browserSync.reload({
+      stream: true,
+      once: true
+    }));
+  /*gulp.src([
+      path.join(dirs.docs.dist.path, '/*.html')
+    ])
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest(dirs.docs.dist.path))
+    .pipe(browserSync.reload({
+      stream: true,
+      once: true
+    }));*/
 
 });
 
@@ -154,7 +176,11 @@ gulp.task("canvas:styles", function () {
       includeContent: false,
       sourceRoot: dirs.canvas.styles
     }))
-    .pipe(gulp.dest(dirs.canvas.dist.styles));
+    .pipe(gulp.dest(dirs.canvas.dist.styles))
+    .pipe(browserSync.reload({
+      stream: true,
+      once: true
+    }));
 
 });
 
@@ -240,14 +266,30 @@ gulp.task("docs:javascripts", function () {
 
 // Wait for Docs Distribution then Launch Server
 
-gulp.task('browser-sync', ['docs:dist'], function() {
+gulp.task('browser-sync', ['jekyll'], function() {
   browserSync({
     server: {
       baseDir: 'docs/dist',
       open: true,
       notify: false
-    }
+    },
+    host: "localhost"
   });
+});
+
+// Start Jekyll Server
+
+gulp.task('jekyll', function (gulpCallBack) {
+
+  var spawn = require('child_process').spawn;
+  var jekyll = spawn('jekyll', ['build', '--source=' + dirs.docs.path, '--destination=' + dirs.docs.dist.path], {
+      stdio: 'inherit'
+    });
+
+  jekyll.on('exit', function(code) {
+    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
+  });
+
 });
 
 // Watch for file changes
@@ -255,7 +297,8 @@ gulp.task('browser-sync', ['docs:dist'], function() {
 gulp.task("watch", function () {
 
   gulp.watch("./**/*.less", ["docs:styles"]);
-  gulp.watch(files.docs.html, ["docs:html"]).on('change', reload);
+  //gulp.watch(files.docs.html).on('change', reload);
+  //gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']).on('change', reload);
 
 });
 
@@ -269,4 +312,4 @@ gulp.task("docs:dist", ["docs:styles", "docs:javascripts", "docs:html", "docs:mo
 
 // Default Gulp Task
 
-gulp.task("default", ["browser-sync", "docs:dist", "canvas:dist", "watch"]);
+gulp.task('default', ['docs:dist', 'canvas:dist', 'browser-sync', 'watch']);
