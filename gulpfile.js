@@ -26,7 +26,7 @@ var dirs = {
     path: "./",
     styles: "./styles",
     javascripts: "./javascripts",
-    vendor: "./vendor/**/*.*",
+    vendor: "./javascripts/vendor/**/*.*",
     images: "./images/**/*.*",
     fonts: "./fonts/**/*.*",
     dist: {
@@ -39,7 +39,7 @@ var dirs = {
     path: "./docs",
     styles: "./docs/styles",
     javascripts: "./docs/javascripts",
-    vendor: "./docs/vendor/**/*.*",
+    vendor: "./docs/javascripts/vendor/**/*.*",
     images: "./docs/images/**/*.*",
     fonts: "./docs/fonts/**/*.*",
     dist: {
@@ -57,7 +57,7 @@ var files = {
     styles: "canvas",
     dist: {
       styles: {
-        filename: "styles",
+        filename: "canvas",
         suffix: ".min"
       },
       javascripts: {
@@ -220,7 +220,11 @@ gulp.task("docs:styles", function () {
       includeContent: false,
       sourceRoot: dirs.docs.styles
     }))
-    .pipe(gulp.dest(dirs.docs.dist.styles));
+    .pipe(gulp.dest(dirs.docs.dist.styles))
+    .pipe(browserSync.reload({
+      stream: true,
+      once: true
+    }));
 
 });
 
@@ -240,7 +244,11 @@ gulp.task("canvas:javascripts", function () {
       mangle: true,
       compress: true
     }))
-    .pipe(gulp.dest(dirs.canvas.dist.javascripts));
+    .pipe(gulp.dest(dirs.canvas.dist.javascripts))
+    .pipe(browserSync.reload({
+      stream: true,
+      once: true
+    }));
 
 });
 
@@ -260,7 +268,11 @@ gulp.task("docs:javascripts", function () {
       mangle: true,
       compress: true
     }))
-    .pipe(gulp.dest(dirs.docs.dist.javascripts));
+    .pipe(gulp.dest(dirs.docs.dist.javascripts))
+    .pipe(browserSync.reload({
+      stream: true,
+      once: true
+    }));
 
 });
 
@@ -296,7 +308,9 @@ gulp.task('jekyll', function (gulpCallBack) {
 
 gulp.task("watch", function () {
 
-  gulp.watch("./**/*.less", ["docs:styles"]);
+  gulp.watch(dirs.docs.styles + "/**/*.less", ["docs:styles"]);
+  gulp.watch(dirs.canvas.styles + "/**/*.less", ["canvas:styles"]);
+
   //gulp.watch(files.docs.html).on('change', reload);
   //gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']).on('change', reload);
 
