@@ -12,6 +12,7 @@ var autoprefixer  = require("gulp-autoprefixer"),
     less          = require("gulp-less"),
     minifyCSS     = require("gulp-minify-css"),
     notify        = require('gulp-notify'),
+    plumber       = require("gulp-plumber"),
     rename        = require("gulp-rename"),
     sourcemaps    = require("gulp-sourcemaps"),
     uglify        = require("gulp-uglify"),
@@ -23,7 +24,7 @@ var reload        = browserSync.reload;
 
 var dirs = {
   canvas: {
-    path: "./",
+    path: ".",
     styles: "./styles",
     javascripts: "./javascripts",
     vendor: "./javascripts/vendor/**/*.*",
@@ -85,10 +86,11 @@ var files = {
 
 // Move Docs html to build folder
 
-gulp.task('docs:html', ['jekyll'], function() {
+gulp.task('docs:html', function() {
 
   gulp.src(dirs.docs.dist.path + '/**/*.html')
     .pipe(htmlmin({
+      removeComments: true,
       collapseWhitespace: true
     }))
     .pipe(gulp.dest(dirs.docs.dist.path))
@@ -96,17 +98,6 @@ gulp.task('docs:html', ['jekyll'], function() {
       stream: true,
       once: true
     }));
-  /*gulp.src([
-      path.join(dirs.docs.dist.path, '/*.html')
-    ])
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
-    .pipe(gulp.dest(dirs.docs.dist.path))
-    .pipe(browserSync.reload({
-      stream: true,
-      once: true
-    }));*/
 
 });
 
@@ -136,7 +127,11 @@ gulp.task("docs:move", function () {
     ], {
       base: dirs.docs.path
     })
-    .pipe(gulp.dest(dirs.docs.dist.path));
+    .pipe(gulp.dest(dirs.docs.dist.path))
+    .pipe(browserSync.reload({
+      stream: true,
+      once: true
+    }));
 
 });
 
@@ -145,6 +140,7 @@ gulp.task("docs:move", function () {
 gulp.task("canvas:styles", function () {
 
   return gulp.src(dirs.canvas.styles + "/" + files.canvas.styles + ".less")
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less({
       paths: [dirs.canvas.styles],
@@ -189,6 +185,7 @@ gulp.task("canvas:styles", function () {
 gulp.task("docs:styles", function () {
 
   return gulp.src(dirs.docs.styles + "/" + files.docs.styles + ".less")
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less({
       paths: [dirs.docs.styles],
@@ -304,15 +301,40 @@ gulp.task('jekyll', function (gulpCallBack) {
 
 });
 
+// Start Jekyll Server
+
+gulp.task('jekyll-rebuild', ['jekyll'], function() {
+
+  browserSync.reload();
+
+});
+
 // Watch for file changes
 
 gulp.task("watch", function () {
 
   gulp.watch(dirs.docs.styles + "/**/*.less", ["docs:styles"]);
   gulp.watch(dirs.canvas.styles + "/**/*.less", ["canvas:styles"]);
+  gulp.watch([
+      dirs.docs.path + '/index.html',
+      dirs.docs.path + '/_includes/**/*.html',
+      dirs.docs.path + '/_layouts/**/*.html',
+      dirs.docs.path + '/_posts/**/*'
+    ], ['jekyll-rebuild']);
 
-  //gulp.watch(files.docs.html).on('change', reload);
-  //gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']).on('change', reload);
+});
+
+// Clean
+
+gulp.task('clean', function() {
+
+  return gulp.src([
+      dirs.canvas.dist.path,
+      dirs.docs.dist.path
+    ], {
+      read: false
+    })
+    .pipe(clean());
 
 });
 
@@ -322,8 +344,20 @@ gulp.task("canvas:dist", ["canvas:styles", "canvas:javascripts", "canvas:move"])
 
 // Docs Distribution Gulp Task
 
-gulp.task("docs:dist", ["docs:styles", "docs:javascripts", "docs:html", "docs:move"]);
+gulp.task("docs:dist", ["docs:styles", "docs:javascripts", "docs:move"]);
+
+// Docs Distribution Gulp Task
+
+gulp.task("docs:serve", ["browser-sync"], function() {
+
+  gulp.start('watch');
+
+});
 
 // Default Gulp Task
 
-gulp.task('default', ['docs:dist', 'canvas:dist', 'browser-sync', 'watch']);
+gulp.task('default', ['clean'], function() {
+
+  gulp.start('docs:dist', 'canvas:dist', 'docs:serve');
+
+});
