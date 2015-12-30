@@ -1,6 +1,7 @@
 // Load plugins
 
-var autoprefixer  = require("gulp-autoprefixer"),
+var argv          = require('yargs').argv,
+    autoprefixer  = require("gulp-autoprefixer"),
     browserSync   = require('browser-sync'),
     clean         = require('gulp-clean'),
     colorLighten  = require("less-color-lighten"),
@@ -8,6 +9,7 @@ var autoprefixer  = require("gulp-autoprefixer"),
     cp            = require('child_process')
     gulp          = require("gulp"),
     htmlmin       = require('gulp-htmlmin'),
+    ifElse        = require('gulp-if-else'),
     jekyll        = require('gulp-jekyll');
     less          = require("gulp-less"),
     minifyCSS     = require("gulp-minify-css"),
@@ -18,7 +20,22 @@ var autoprefixer  = require("gulp-autoprefixer"),
     uglify        = require("gulp-uglify"),
     util          = require("gulp-util");
 
+// Define Variables
+
 var reload        = browserSync.reload;
+var config        = {};
+var config_vars   = {
+  dev: {
+
+    jekyllConfig: "_config.dev.yml"
+
+  },
+  prod: {
+
+    jekyllConfig: "_config.prod.yml"
+
+  }
+};
 
 // Path Definitions
 
@@ -242,7 +259,7 @@ gulp.task('browser-sync', ['jekyll'], function() {
 gulp.task('jekyll', function (gulpCallBack) {
 
   var spawn = require('child_process').spawn;
-  var jekyll = spawn('jekyll', ['build', '--config=_config.dev.yml', '--source=' + dirs.docs.path, '--destination=' + dirs.docs.dist.path], {
+  var jekyll = spawn('jekyll', ['build', '--config=' + dirs.docs.path + '/' + config.jekyllConfig, '--source=' + dirs.docs.path, '--destination=' + dirs.docs.dist.path], {
       stdio: 'inherit'
     });
 
@@ -307,8 +324,17 @@ gulp.task("docs:serve", ["browser-sync"], function() {
 
 // Default Gulp Task
 
-gulp.task('default', ['clean'], function() {
+gulp.task('default', function() {
 
+  ifElse(argv.production, function() {
+
+    config = config_vars.prod;
+
+  }, function() {
+
+    config = config_vars.dev;
+
+  });
   gulp.start('docs:dist', 'canvas:dist', 'docs:serve');
 
 });
