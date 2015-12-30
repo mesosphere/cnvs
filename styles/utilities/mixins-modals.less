@@ -1,0 +1,161 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+utilities/mixins-modals.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Modal Variant Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.modal-element-variant(@element-class: 'modal') {
+
+  @element-variant-background-color: "@{element-class}-background-color";
+  @element-variant-background-gradient-color-top: "@{element-class}-background-gradient-color-top";
+  @element-variant-background-gradient-color-bottom: "@{element-class}-background-gradient-color-bottom";
+  @element-variant-border-radius: "@{element-class}-border-radius";
+  @element-variant-border-width: "@{element-class}-border-width";
+  @element-variant-border-color: "@{element-class}-border-color";
+  @element-variant-border-style: "@{element-class}-border-style";
+  @element-variant-border-top-width: "@{element-class}-border-top-width";
+  @element-variant-border-top-color: "@{element-class}-border-top-color";
+  @element-variant-border-top-style: "@{element-class}-border-top-style";
+  @element-variant-border-right-width: "@{element-class}-border-right-width";
+  @element-variant-border-right-color: "@{element-class}-border-right-color";
+  @element-variant-border-right-style: "@{element-class}-border-right-style";
+  @element-variant-border-bottom-width: "@{element-class}-border-bottom-width";
+  @element-variant-border-bottom-color: "@{element-class}-border-bottom-color";
+  @element-variant-border-bottom-style: "@{element-class}-border-bottom-style";
+  @element-variant-border-left-width: "@{element-class}-border-left-width";
+  @element-variant-border-left-color: "@{element-class}-border-left-color";
+  @element-variant-border-left-style: "@{element-class}-border-left-style";
+  @element-variant-shadow: "@{element-class}-shadow";
+
+  & when not (@@element-variant-background-color = null) {
+
+    background: @@element-variant-background-color;
+
+  }
+
+  & when not (@@element-variant-background-gradient-color-top = null) and not (@@element-variant-background-gradient-color-bottom = null) {
+
+    #gradient > .vertical(@@element-variant-background-gradient-color-top, @@element-variant-background-gradient-color-bottom);
+
+  }
+
+  & when not (@@element-variant-border-radius = null) {
+
+    border-width: @@element-variant-border-radius;
+
+  }
+
+  & when not (@@element-variant-border-width = null) {
+
+    border-width: @@element-variant-border-width;
+
+  }
+
+  & when not (@@element-variant-border-color = null) {
+
+    border-color: @@element-variant-border-color;
+
+  }
+
+  & when not (@@element-variant-border-style = null) {
+
+    border-style: @@element-variant-border-style;
+
+  }
+
+  & when not (@@element-variant-border-top-width = null) {
+
+    border-top-width: @@element-variant-border-top-width;
+
+  }
+
+  & when not (@@element-variant-border-top-color = null) {
+
+    border-top-color: @@element-variant-border-top-color;
+
+  }
+
+  & when not (@@element-variant-border-top-style = null) {
+
+    border-top-style: @@element-variant-border-top-style;
+
+  }
+
+  & when not (@@element-variant-border-right-width = null) {
+
+    border-right-width: @@element-variant-border-right-width;
+
+  }
+
+  & when not (@@element-variant-border-right-color = null) {
+
+    border-right-color: @@element-variant-border-right-color;
+
+  }
+
+  & when not (@@element-variant-border-right-style = null) {
+
+    border-right-style: @@element-variant-border-right-style;
+
+  }
+
+  & when not (@@element-variant-border-bottom-width = null) {
+
+    border-bottom-width: @@element-variant-border-bottom-width;
+
+  }
+
+  & when not (@@element-variant-border-bottom-color = null) {
+
+    border-bottom-color: @@element-variant-border-bottom-color;
+
+  }
+
+  & when not (@@element-variant-border-bottom-style = null) {
+
+    border-bottom-style: @@element-variant-border-bottom-style;
+
+  }
+
+  & when not (@@element-variant-border-left-width = null) {
+
+    border-left-width: @@element-variant-border-left-width;
+
+  }
+
+  & when not (@@element-variant-border-left-color = null) {
+
+    border-left-color: @@element-variant-border-left-color;
+
+  }
+
+  & when not (@@element-variant-border-left-style = null) {
+
+    border-left-style: @@element-variant-border-left-style;
+
+  }
+
+  & when not (@@element-variant-shadow = null) {
+
+    .box-shadow(@@element-variant-shadow);
+
+  }
+
+}
