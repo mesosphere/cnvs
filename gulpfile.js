@@ -24,6 +24,7 @@ var argv          = require('yargs').argv,
 
 var reload        = browserSync.reload;
 var config        = {};
+
 var config_vars   = {
   dev: {
 
@@ -36,8 +37,6 @@ var config_vars   = {
 
   }
 };
-
-// Path Definitions
 
 var dirs = {
   canvas: {
@@ -62,8 +61,6 @@ var dirs = {
     }
   }
 };
-
-// File Definitions
 
 var files = {
   canvas: {
@@ -92,7 +89,78 @@ var files = {
   }
 };
 
-// Move Docs html to build folder
+// Default Gulp Task
+
+gulp.task('default', ['serve']);
+
+// Build Canvas and Documentation
+
+gulp.task('build', ['canvas:build', 'docs:build']);
+
+// Build and Serve Documentation
+
+gulp.task('serve', ['build'], function() {
+
+  ifElse(argv.production, function() {
+
+    config = config_vars.prod;
+
+  }, function() {
+
+    config = config_vars.dev;
+
+  });
+
+  gulp.start('docs:serve');
+
+});
+
+// Watch for file changes
+
+gulp.task("watch", function () {
+
+  gulp.watch(dirs.docs.styles + "/**/*.less", ["docs:styles"]);
+  gulp.watch(dirs.canvas.styles + "/**/*.less", ["canvas:styles"]);
+  gulp.watch([
+      dirs.docs.path + '/index.html',
+      dirs.docs.path + '/_includes/**/*.html',
+      dirs.docs.path + '/_layouts/**/*.html',
+      dirs.docs.path + '/_posts/**/*'
+    ], ['jekyll-rebuild']);
+
+});
+
+// Build Canvas Styles
+
+gulp.task("canvas:build", ["canvas:styles"]);
+
+// Build Documentation Styles, Javascript, and Move Assets
+
+gulp.task("docs:build", ["docs:styles", "docs:javascripts", "docs:move"]);
+
+// Serve Documentation Site
+
+gulp.task("docs:serve", ["browser-sync"], function() {
+
+  gulp.start('watch');
+
+});
+
+// Clean Canvas and Documentation Distribution  Directories
+
+gulp.task('clean', function() {
+
+  return gulp.src([
+      dirs.canvas.dist.path,
+      dirs.docs.dist.path
+    ], {
+      read: false
+    })
+    .pipe(clean());
+
+});
+
+// Minify Documentation HTML
 
 gulp.task('docs:html', function() {
 
@@ -109,7 +177,7 @@ gulp.task('docs:html', function() {
 
 });
 
-// Move Docs files to a new location
+// Move Documentation Assets to Documentation Distribution Directory
 
 gulp.task("docs:move", function () {
 
@@ -128,7 +196,7 @@ gulp.task("docs:move", function () {
 
 });
 
-// Process Canvas LESS files
+// Compile and Process Canvas Styles
 
 gulp.task("canvas:styles", function () {
 
@@ -173,7 +241,7 @@ gulp.task("canvas:styles", function () {
 
 });
 
-// Process Docs LESS files
+// Compile and Process Documentation Styles
 
 gulp.task("docs:styles", function () {
 
@@ -218,7 +286,7 @@ gulp.task("docs:styles", function () {
 
 });
 
-// Process Docs Javascript files
+// Process Documentation Javascript files
 
 gulp.task("docs:javascripts", function () {
 
@@ -242,7 +310,7 @@ gulp.task("docs:javascripts", function () {
 
 });
 
-// Wait for Docs Distribution then Launch Server
+// Start Jekyll Server then start Documentation Site
 
 gulp.task('browser-sync', ['jekyll'], function() {
   browserSync({
@@ -269,73 +337,10 @@ gulp.task('jekyll', function (gulpCallBack) {
 
 });
 
-// Start Jekyll Server
+// Rebuild Jekyll Server
 
 gulp.task('jekyll-rebuild', ['jekyll'], function() {
 
   browserSync.reload();
-
-});
-
-// Watch for file changes
-
-gulp.task("watch", function () {
-
-  gulp.watch(dirs.docs.styles + "/**/*.less", ["docs:styles"]);
-  gulp.watch(dirs.canvas.styles + "/**/*.less", ["canvas:styles"]);
-  gulp.watch([
-      dirs.docs.path + '/index.html',
-      dirs.docs.path + '/_includes/**/*.html',
-      dirs.docs.path + '/_layouts/**/*.html',
-      dirs.docs.path + '/_posts/**/*'
-    ], ['jekyll-rebuild']);
-
-});
-
-// Clean
-
-gulp.task('clean', function() {
-
-  return gulp.src([
-      dirs.canvas.dist.path,
-      dirs.docs.dist.path
-    ], {
-      read: false
-    })
-    .pipe(clean());
-
-});
-
-// Canvas Distribution Gulp Task
-
-gulp.task("canvas:dist", ["canvas:styles"]);
-
-// Docs Distribution Gulp Task
-
-gulp.task("docs:dist", ["docs:styles", "docs:javascripts", "docs:move"]);
-
-// Docs Distribution Gulp Task
-
-gulp.task("docs:serve", ["browser-sync"], function() {
-
-  gulp.start('watch');
-
-});
-
-// Default Gulp Task
-
-gulp.task('default', function() {
-
-  ifElse(argv.production, function() {
-
-    config = config_vars.prod;
-    gulp.start('docs:dist', 'canvas:dist');
-
-  }, function() {
-
-    config = config_vars.dev;
-    gulp.start('docs:dist', 'canvas:dist', 'docs:serve');
-
-  });
 
 });
