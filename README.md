@@ -99,7 +99,7 @@ You can see that the code required in Scenerio #2 (Variable-Driven Styles) is mu
 
 ## Dependencies
 
-With one exception, Canvas is self-contained.  It will compile stand-alone.  Throughout Canvas we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package call [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).
+With one exception, Canvas is self-contained.  It will compile stand-alone.  Throughout Canvas we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package called [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).
 
 It's recommended that you setup a simple build script, like the GULP script below, to pull in the `less-color-lighten` dependency, and include them during your LESS Compilation.
 
