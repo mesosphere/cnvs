@@ -233,8 +233,7 @@ gulp.task('browser-sync', ['jekyll'], function() {
       baseDir: 'docs/dist',
       open: true,
       notify: false
-    },
-    host: "localhost"
+    }
   });
 });
 
