@@ -243,7 +243,7 @@ gulp.task('browser-sync', ['jekyll'], function() {
 gulp.task('jekyll', function (gulpCallBack) {
 
   var spawn = require('child_process').spawn;
-  var jekyll = spawn('jekyll', ['build', '--source=' + dirs.docs.path, '--destination=' + dirs.docs.dist.path], {
+  var jekyll = spawn('jekyll', ['build', '--config=_config.dev.yml', '--source=' + dirs.docs.path, '--destination=' + dirs.docs.dist.path], {
       stdio: 'inherit'
     });
 
