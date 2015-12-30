@@ -24,16 +24,11 @@ var reload        = browserSync.reload;
 
 var dirs = {
   canvas: {
-    path: ".",
+    path: "./",
     styles: "./styles",
-    javascripts: "./javascripts",
-    vendor: "./javascripts/vendor/**/*.*",
-    images: "./images/**/*.*",
-    fonts: "./fonts/**/*.*",
     dist: {
       path: "./dist",
-      styles: "./dist/styles",
-      javascripts: "./dist/javascripts"
+      styles: "./dist"
     }
   },
   docs: {
@@ -58,10 +53,6 @@ var files = {
     styles: "canvas",
     dist: {
       styles: {
-        filename: "canvas",
-        suffix: ".min"
-      },
-      javascripts: {
         filename: "canvas",
         suffix: ".min"
       }
@@ -98,21 +89,6 @@ gulp.task('docs:html', function() {
       stream: true,
       once: true
     }));
-
-});
-
-// Move Canvas files to a new location
-
-gulp.task("canvas:move", function () {
-
-  return gulp.src([
-      dirs.canvas.vendor,
-      dirs.canvas.images,
-      dirs.canvas.fonts
-    ], {
-      base: dirs.canvas.path
-    })
-    .pipe(gulp.dest(dirs.canvas.dist.path));
 
 });
 
@@ -225,30 +201,6 @@ gulp.task("docs:styles", function () {
 
 });
 
-// Process Canvas Javascript files
-
-gulp.task("canvas:javascripts", function () {
-
-  return gulp.src(dirs.canvas.javascripts + "/*.js")
-    .pipe(concat(files.canvas.dist.javascripts.filename + ".js"))
-    .pipe(gulp.dest(dirs.canvas.dist.javascripts))
-    .pipe(rename({
-      basename: files.canvas.dist.javascripts.filename,
-      suffix: files.canvas.dist.javascripts.suffix,
-      extname: ".js"
-    }))
-    .pipe(uglify({
-      mangle: true,
-      compress: true
-    }))
-    .pipe(gulp.dest(dirs.canvas.dist.javascripts))
-    .pipe(browserSync.reload({
-      stream: true,
-      once: true
-    }));
-
-});
-
 // Process Docs Javascript files
 
 gulp.task("docs:javascripts", function () {
@@ -340,7 +292,7 @@ gulp.task('clean', function() {
 
 // Canvas Distribution Gulp Task
 
-gulp.task("canvas:dist", ["canvas:styles", "canvas:javascripts", "canvas:move"]);
+gulp.task("canvas:dist", ["canvas:styles"]);
 
 // Docs Distribution Gulp Task
 
