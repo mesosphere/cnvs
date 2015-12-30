@@ -329,12 +329,13 @@ gulp.task('default', function() {
   ifElse(argv.production, function() {
 
     config = config_vars.prod;
+    gulp.start('docs:dist', 'canvas:dist');
 
   }, function() {
 
     config = config_vars.dev;
+    gulp.start('docs:dist', 'canvas:dist', 'docs:serve');
 
   });
-  gulp.start('docs:dist', 'canvas:dist', 'docs:serve');
 
 });
