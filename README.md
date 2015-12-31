@@ -1,17 +1,38 @@
 # Canvas
 
 Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/canvas](http://mesosphere.github.io/canvas/).
-
 ## Getting Started
 
 Canvas is available both as a standalone directory and as a [Node Module](https://www.npmjs.com/package/canvas-ui).  There are a couple ways to get started:
 
+* Download the latest release: [Canvas (0.2.1)](https://github.com/mesosphere/canvas/archive/0.2.1.zip)
 * Clone the repository: `git clone https://github.com/mesosphere/canvas.git`
 * Install with [npm](https://www.npmjs.com/): `npm install canvas-ui`
 
 ## Project Structure
 
-The Canvas project structure is fairly simple, but it requires a basic understanding of how things are work together to provide value to your project.  Within the download or project directory you'll find a handful of top-level directories.  The basic structure looks like this:
+Within the download or check-out you'll find the following directories and files:
+
+```
+dist/
+docs/
+styles/
+```
+
+The `dist/` directory contains both compiled and minified variations of the canvas stylesheet.  CSS source maps (canvas.*.map) are available for both both the compiled and minified stylesheets and can with certain browsers' developer tools.
+
+```
+dist/
+├──  canvas.css
+├──  canvas.css.map
+├──  canvas.min.css
+├──  canvas.min.css.map
+```
+
+### Canvas Styles Structure
+
+The Canvas project structure is fairly simple, but it requires a basic understanding of how things are work together to provide value to your project.  Within the `/styles` directory you'll find a handful of top-level directories.  The basic structure looks like this:
+
 ```
 components/
 ├── buttons.less
@@ -99,56 +120,25 @@ You can see that the code required in Scenerio #2 (Variable-Driven Styles) is mu
 
 ## Dependencies
 
-With one exception, Canvas is self-contained.  It will compile stand-alone.  Throughout Canvas we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package called [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).
+With one exception, Canvas is self-contained.  It will compile stand-alone.  Throughout Canvas we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package called [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).  The include Gulp file requires `less-color-lighten`.
 
-It's recommended that you setup a simple build script, like the GULP script below, to pull in the `less-color-lighten` dependency, and include them during your LESS Compilation.
+## Documentation
 
-```js
-// Dependencies
+Documentation for Canvas can be found in the `docs/` directory.  The Documentation is built with Jekyll and hosted on GitHub Pages at http://mesosphere.github.com/canvas. The docs may also be run locally.
 
-var autoprefixer = require("gulp-autoprefixer");
-var colorLighten = require("less-color-lighten");
-var gulp = require("gulp");
-var less = require("gulp-less");
-var minifyCSS = require("gulp-minify-css");
+### Running Documentation Locally
 
-// Directory and File Definitions
+A Gulp file containing a number of useful functions is available at the root of the project.  There are a number of helpful commands that make building Canvas and Canvas Documentation simple.  The easiest way to build Canvas and serve the supporting Documentation locally is to follow these steps:
 
-var dirs = {
-  styles: "",
-  stylesDist: ""
-};
+1. Open your terminal and navigate to the root directory of your checkout or download.
+2. Install the required npm modules: `npm install` (**NOTE:** If you do not already have npm installed, follow [these installation instructions](https://docs.npmjs.com/getting-started/installing-node))
+3. Run `gulp`
 
-var files = {
-  lessSrc: "styles",
-  cssDist: "styles"
-};
+### Publishing Documentation
 
-// Gulp Tasks
+Canvas Documentation is hosted on GitHub Pages at http://mesosphere.github.com/canvas.  The branch `gh-pages` houses the compiled Documentation site files and assets.  Once you have made needed changes/contributions to the Documentation and are ready to publish, follow these simple steps.
 
-gulp.task("less", function () {
-  return gulp.src(dirs.styles + "/" + files.lessSrc + ".less")
-    .pipe(less({
-      paths: [dirs.styles], // @import paths
-      plugins: [colorLighten]
-    }))
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions']
-    }))
-    .pipe(gulp.dest(dirs.stylesDist));
-});
-
-gulp.task("minify-css", ["less"], function () {
-  return gulp.src(dirs.stylesDist + "/" + files.cssDist + ".css")
-    .pipe(minifyCSS())
-    .pipe(gulp.dest(dirs.stylesDist));
-});
-
-gulp.task("watch", function () {
-  gulp.watch(dirs.styles + "/**/*.less", ["less"]);
-});
-
-gulp.task("default", ["dist", "watch"]);
-
-gulp.task("dist", ["less", "minify-css"]);
-```
+1. Make sure you have the necessary permissions to push to `gh-pages`.  If you do not, please submit a pull request or contact an administrator.
+2. Run `gulp build --production`.  This will compile/process everything and place production ready files in `docs/dist`.
+3. Commit all outstanding changes to your local branch.
+4. From within the root of your local branch run `git subtree push --prefix docs/dist origin gh-pages`.
