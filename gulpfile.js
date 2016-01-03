@@ -119,7 +119,7 @@ gulp.task('serve', ['build'], function() {
 
 gulp.task("watch", function () {
 
-  gulp.watch(dirs.docs.styles + "/**/*.less", ["docs:styles"]);
+  gulp.watch([dirs.docs.styles + "/**/*.less", dirs.canvas.styles + "/**/*.less"], ["docs:styles"]);
   gulp.watch(dirs.canvas.styles + "/**/*.less", ["canvas:styles"]);
   gulp.watch([
       dirs.docs.path + '/index.html',
@@ -233,11 +233,7 @@ gulp.task("canvas:styles", function () {
       includeContent: false,
       sourceRoot: dirs.canvas.styles
     }))
-    .pipe(gulp.dest(dirs.canvas.dist.styles))
-    .pipe(browserSync.reload({
-      stream: true,
-      once: true
-    }));
+    .pipe(gulp.dest(dirs.canvas.dist.styles));
 
 });
 

@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
-utilities/_template.less
+components/typography/body.less
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -10,21 +10,26 @@ utilities/_template.less
 
 
 
-& when (@element-enabled) {
+
+
+
+& when (@bdoy-text-enabled) {
 
   /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
-  Element
+  Body
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
 
-  element {
+  body,
+  p {
 
-    // Element Styles
+    .text-style-variant('bdoy-text');
+    .text-size-variant('bdoy-text', null);
 
 
 
-    & when (@screen-mini-enabled) and (@element-scale-screen-mini) {
+    & when (@screen-mini-enabled) and (@bdoy-text-scale-screen-mini) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -34,13 +39,15 @@ utilities/_template.less
 
       @media (min-width: @screen-mini) {
 
+        .text-size-variant('bdoy-text', 'scale-screen-mini');
+
       }
 
     }
 
 
 
-    & when (@screen-small-enabled) and (@element-scale-screen-small) {
+    & when (@screen-small-enabled) and (@bdoy-text-scale-screen-small) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -50,13 +57,15 @@ utilities/_template.less
 
       @media (min-width: @screen-small) {
 
+        .text-size-variant('bdoy-text', 'scale-screen-small');
+
       }
 
     }
 
 
 
-    & when (@screen-medium-enabled) and (@element-scale-screen-medium) {
+    & when (@screen-medium-enabled) and (@bdoy-text-scale-screen-medium) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -66,13 +75,15 @@ utilities/_template.less
 
       @media (min-width: @screen-medium) {
 
+        .text-size-variant('bdoy-text', 'scale-screen-medium');
+
       }
 
     }
 
 
 
-    & when (@screen-large-enabled) and (@element-scale-screen-large) {
+    & when (@screen-large-enabled) and (@bdoy-text-scale-screen-large) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -81,6 +92,8 @@ utilities/_template.less
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @screen-large) {
+
+        .text-size-variant('bdoy-text', 'scale-screen-large');
 
       }
 

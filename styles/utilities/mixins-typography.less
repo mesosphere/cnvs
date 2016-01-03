@@ -39,6 +39,246 @@ Placeholder Text
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
+Text Style Variant
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.text-style-variant (@element: '') {
+
+  @element-color: "@{element}-color";
+  @element-font-family: "@{element}-font-family";
+  @element-font-style: "@{element}-font-style";
+  @element-font-weight: "@{element}-font-weight";
+  @element-transform: "@{element}-transform";
+  @element-shadow: "@{element}-shadow";
+  @element-decoration: "@{element}-decoration";
+  @element-rendering: "@{element}-rendering";
+
+  & when not (@@element-color = null) {
+
+    color: @@element-color;
+
+  }
+
+  & when not (@@element-font-family = null) {
+
+    font-family: @@element-font-family;
+
+  }
+
+  & when not (@@element-font-style = null) {
+
+    font-style: @@element-font-style;
+
+  }
+
+  & when not (@@element-font-weight = null) {
+
+    font-weight: @@element-font-weight;
+
+  }
+
+  & when not (@@element-transform = null) {
+
+    text-transform: @@element-transform;
+
+  }
+
+  & when not (@@element-shadow = null) {
+
+    text-shadow: @@element-shadow;
+
+  }
+
+  & when not (@@element-decoration = null) {
+
+    text-decoration: @@element-decoration;
+
+  }
+
+  & when not (@@element-rendering = null) {
+
+    text-rendering: @@element-rendering;
+
+  }
+
+};
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Text Size Variant
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.text-size-variant (@element: '', @size) when (@size = null) {
+
+  @element-font-size: "@{element}-font-size";
+  @element-font-size-scale: 1.0;
+
+  @element-line-height: "@{element}-line-height";
+  @element-line-height-scale: 1.0;
+
+  @element-margin-top: "@{element}-margin-top";
+  @element-margin-top-scale: 1.0;
+
+  @element-margin-bottom: "@{element}-margin-bottom";
+  @element-margin-bottom-scale: 1.0;
+
+  @element-margin-variants: "@{element}-margin-variants";
+
+  .text-size-variant-helper (
+
+    @@element-font-size,
+    @element-font-size-scale,
+    @@element-line-height,
+    @element-line-height-scale,
+    @@element-margin-top,
+    @element-margin-top-scale,
+    @@element-margin-bottom,
+    @element-margin-bottom-scale,
+    @@element-margin-variants
+
+  );
+
+}
+
+.text-size-variant (@element: '', @size) when not (@size = null) {
+
+  @element-font-size: "@{element}-font-size";
+  @element-font-size-scale: "@{element}-font-size-@{size}";
+
+  @element-line-height: "@{element}-line-height";
+  @element-line-height-scale: "@{element}-line-height-@{size}";
+
+  @element-margin-top: "@{element}-margin-top";
+  @element-margin-top-scale: "@{element}-margin-top-@{size}";
+
+  @element-margin-bottom: "@{element}-margin-bottom";
+  @element-margin-bottom-scale: "@{element}-margin-bottom-@{size}";
+
+  @element-margin-variants: "@{element}-margin-variants";
+
+  .text-size-variant-helper (
+
+    @@element-font-size,
+    @@element-font-size-scale,
+    @@element-line-height,
+    @@element-line-height-scale,
+    @@element-margin-top,
+    @@element-margin-top-scale,
+    @@element-margin-bottom,
+    @@element-margin-bottom-scale,
+    @@element-margin-variants
+
+  );
+
+}
+
+.text-size-variant-helper (
+
+    @element-font-size,
+    @element-font-size-scale,
+    @element-line-height,
+    @element-line-height-scale,
+    @element-margin-top,
+    @element-margin-top-scale,
+    @element-margin-bottom,
+    @element-margin-bottom-scale,
+    @element-margin-variants
+
+  ) {
+
+  // Font Size
+
+  & when not (@element-font-size = null) and not (@element-font-size-scale = null) {
+
+    font-size: @element-font-size * @element-font-size-scale;
+
+  }
+
+  // Line Height
+
+  & when not (@element-line-height = null) and not (@element-line-height-scale = null) {
+
+    line-height: @element-line-height * @element-line-height-scale;
+
+  }
+
+  // Margin (Top)
+
+  & when not (@element-margin-top = null) and not (@element-margin-top-scale = null) {
+
+    margin-top: @element-margin-top * @element-margin-top-scale;
+
+    // Margin (Top) Variants
+
+    & when not (@element-margin-variants = null) {
+
+      .for(@element-margin-variants); .-each(@name) {
+
+          &.@{name} {
+
+            @element-margin-scale: "@{element}-@{name}-margin-top";
+
+            & when not (@@element-margin-scale = null) {
+
+              margin-bottom: @element-margin-top * @element-margin-top-scale * @@element-margin-scale;
+
+            }
+
+          }
+
+      }
+
+    }
+
+  }
+
+  // Margin (Bottom)
+
+  & when not (@element-margin-bottom = null) and not (@element-margin-bottom-scale = null) {
+
+    margin-bottom: @element-margin-bottom * @element-margin-bottom-scale;
+
+    // Margin (Bottom) Variants
+
+    & when not (@element-margin-variants = null) {
+
+      .for(@element-margin-variants); .-each(@name) {
+
+          &.@{name} {
+
+            @element-margin-scale: "@{element}-@{name}-margin-bottom";
+
+            & when not (@@element-margin-scale = null) {
+
+              margin-bottom: @element-margin-bottom * @element-margin-bottom-scale * @@element-margin-scale;
+
+            }
+
+          }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
 Font Smoothing
 
 --------------------------------------------------------------------------------
@@ -102,7 +342,7 @@ Hide Text
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-.hide-text () {
+.hide () {
 
     font: ~"0/0" a;
     color: transparent;
