@@ -46,35 +46,35 @@ Gradients
 
   .horizontal(@color-1: #555, @color-2: #333) {
 
-    .horizontal(@color-1, 0%, @color-2, 100%);
+    .horizontal-with-stops(@color-1, 0%, @color-2, 100%);
 
   }
 
-  .horizontal(@color-1: #555, @color-1-stop: 0%, @color-2: #333, @color-2-stop: 100%) {
+  .horizontal-with-stops(@color-1: #555, @color-1-stop: 0%, @color-2: #333, @color-2-stop: 100%) {
 
-    background-image: -webkit-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
-    background-image: -o-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
-    background-image: linear-gradient(to right, @color-1 @color-1-stop, @color-2 @color-2-stop);
+    //background-image: -webkit-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
+    //background-image: -o-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
+    background-image: linear-gradient(90deg, @color-1 @color-1-stop, @color-2 @color-2-stop);
     background-repeat: repeat-x;
-    filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=1)");
+    //filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=1)");
   }
 
   .vertical(@color-1: #555, @color-2: #333) {
 
-    .vertical(@color-1, 0%, @color-2, 100%);
+    .vertical-with-stops(@color-1, 0%, @color-2, 100%);
 
   }
 
-  .vertical(@color-1: #555, @color-1-stop: 0%, @color-2: #333, @color-2-stop: 100%) {
+  .vertical-with-stops(@color-1: #555, @color-1-stop: 0%, @color-2: #333, @color-2-stop: 100%) {
 
-    background-image: -webkit-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
-    background-image: -o-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
+    //background-image: -webkit-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
+    //background-image: -o-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
     background-image: linear-gradient(to bottom, @color-1 @color-1-stop, @color-2 @color-2-stop);
     background-repeat: repeat-x;
-    filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=0)");
+    //filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=0)");
 
   }
-
+  
   .directional(@color-1: #555, @color-2: #333, @deg: 45deg) {
 
     background-repeat: repeat-x;
