@@ -1,0 +1,468 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+variables/variables-panel.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Styles
+----------------------------------------------------------------------------- */
+
+@panel-border-radius:                                                           4px;
+@panel-box-sizing:                                                              border-box;
+@panel-background-clip:                                                         padding-box;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Sizing
+----------------------------------------------------------------------------- */
+
+@panel-margin-top:                                                              0px;
+@panel-margin-bottom:                                                           @base-spacing-unit * 1.0;
+
+@panel-short-margin-top:                                                        0px;
+@panel-short-margin-bottom:                                                     @base-spacing-unit * 0.5;
+
+@panel-tall-margin-top:                                                         0px;
+@panel-tall-margin-bottom:                                                      @base-spacing-unit * 1.5;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@panel-scale-screen-mini-enabled:                                               @screen-mini-enabled;
+@panel-scale-screen-small-enabled:                                              @screen-small-enabled;
+@panel-scale-screen-medium-enabled:                                             @screen-medium-enabled;
+@panel-scale-screen-large-enabled:                                              @screen-large-enabled;
+
+@panel-border-radius-scale-screen-mini:                                         1.0;
+@panel-border-radius-scale-screen-small:                                        1.0;
+@panel-border-radius-scale-screen-medium:                                       1.1;
+@panel-border-radius-scale-screen-large:                                        1.1;
+
+@panel-margin-top-scale-screen-mini:                                            @base-spacing-unit-screen-mini / @base-spacing-unit;
+@panel-margin-top-scale-screen-small:                                           @base-spacing-unit-screen-small / @base-spacing-unit;
+@panel-margin-top-scale-screen-medium:                                          @base-spacing-unit-screen-medium / @base-spacing-unit;
+@panel-margin-top-scale-screen-large:                                           @base-spacing-unit-screen-large / @base-spacing-unit;
+
+@panel-margin-bottom-scale-screen-mini:                                         @base-spacing-unit-screen-mini / @base-spacing-unit;
+@panel-margin-bottom-scale-screen-small:                                        @base-spacing-unit-screen-small / @base-spacing-unit;
+@panel-margin-bottom-scale-screen-medium:                                       @base-spacing-unit-screen-medium / @base-spacing-unit;
+@panel-margin-bottom-scale-screen-large:                                        @base-spacing-unit-screen-large / @base-spacing-unit;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel (Default) Styling
+----------------------------------------------------------------------------- */
+
+@panel-default-background-color:                                                @canvas-pod-light-background-color;
+@panel-default-background-gradient-color-top:                                   null;
+@panel-default-background-gradient-color-bottom:                                null;
+@panel-default-border-width:                                                    null;
+@panel-default-border-color:                                                    null;
+@panel-default-border-style:                                                    null;
+@panel-default-border-top-width:                                                null;
+@panel-default-border-top-color:                                                null;
+@panel-default-border-top-style:                                                null;
+@panel-default-border-right-width:                                              null;
+@panel-default-border-right-color:                                              null;
+@panel-default-border-right-style:                                              null;
+@panel-default-border-bottom-width:                                             null;
+@panel-default-border-bottom-color:                                             null;
+@panel-default-border-bottom-style:                                             null;
+@panel-default-border-left-width:                                               null;
+@panel-default-border-left-color:                                               null;
+@panel-default-border-left-style:                                               null;
+@panel-default-shadow:                                                          null;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel (Inverse) Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@panel-inverse-background-color:                                                @canvas-pod-dark-background-color;
+@panel-inverse-background-gradient-color-top:                                   null;
+@panel-inverse-background-gradient-color-bottom:                                null;
+@panel-inverse-border-width:                                                    null;
+@panel-inverse-border-color:                                                    null;
+@panel-inverse-border-style:                                                    null;
+@panel-inverse-border-top-width:                                                null;
+@panel-inverse-border-top-color:                                                null;
+@panel-inverse-border-top-style:                                                null;
+@panel-inverse-border-right-width:                                              null;
+@panel-inverse-border-right-color:                                              null;
+@panel-inverse-border-right-style:                                              null;
+@panel-inverse-border-bottom-width:                                             null;
+@panel-inverse-border-bottom-color:                                             null;
+@panel-inverse-border-bottom-style:                                             null;
+@panel-inverse-border-left-width:                                               null;
+@panel-inverse-border-left-color:                                               null;
+@panel-inverse-border-left-style:                                               null;
+@panel-inverse-shadow:                                                          null;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Header
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Styles
+----------------------------------------------------------------------------- */
+
+@panel-header-border-radius:                                                    0px;
+@panel-header-box-sizing:                                                       border-box;
+@panel-header-background-clip:                                                  padding-box;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Header Margins
+----------------------------------------------------------------------------- */
+
+@panel-header-padding-vertical:                                                 @base-spacing-unit * 0.25;
+@panel-header-padding-horizontal:                                               @grid-gutter-width * 0.5;
+
+@panel-header-short-padding-vertical:                                           @panel-header-padding-vertical * 0.5;
+
+@panel-header-tall-padding-vertical:                                            @panel-header-padding-vertical * 2.0;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Header Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@panel-header-padding-vertical-scale-screen-mini:                               @base-spacing-unit-screen-mini / @base-spacing-unit;
+@panel-header-padding-vertical-scale-screen-small:                              @base-spacing-unit-screen-small / @base-spacing-unit;
+@panel-header-padding-vertical-scale-screen-medium:                             @base-spacing-unit-screen-medium / @base-spacing-unit;
+@panel-header-padding-vertical-scale-screen-large:                              @base-spacing-unit-screen-large / @base-spacing-unit;
+
+@panel-header-padding-horizontal-scale-screen-mini:                             @grid-gutter-width-screen-mini / @grid-gutter-width;
+@panel-header-padding-horizontal-scale-screen-small:                            @grid-gutter-width-screen-small / @grid-gutter-width;
+@panel-header-padding-horizontal-scale-screen-medium:                           @grid-gutter-width-screen-medium / @grid-gutter-width;
+@panel-header-padding-horizontal-scale-screen-large:                            @grid-gutter-width-screen-large / @grid-gutter-width;
+
+@panel-header-border-radius-scale-screen-mini:                                  @panel-border-radius-scale-screen-mini;
+@panel-header-border-radius-scale-screen-small:                                 @panel-border-radius-scale-screen-small;
+@panel-header-border-radius-scale-screen-medium:                                @panel-border-radius-scale-screen-medium;
+@panel-header-border-radius-scale-screen-large:                                 @panel-border-radius-scale-screen-large;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Header (Default) Styling
+----------------------------------------------------------------------------- */
+
+@panel-header-default-background-color:                                         null;
+@panel-header-default-background-gradient-color-top:                            null;
+@panel-header-default-background-gradient-color-bottom:                         null;
+@panel-header-default-border-width:                                             null;
+@panel-header-default-border-color:                                             null;
+@panel-header-default-border-style:                                             null;
+@panel-header-default-border-top-width:                                         null;
+@panel-header-default-border-top-color:                                         null;
+@panel-header-default-border-top-style:                                         null;
+@panel-header-default-border-right-width:                                       null;
+@panel-header-default-border-right-color:                                       null;
+@panel-header-default-border-right-style:                                       null;
+@panel-header-default-border-bottom-width:                                      null;
+@panel-header-default-border-bottom-color:                                      null;
+@panel-header-default-border-bottom-style:                                      null;
+@panel-header-default-border-left-width:                                        null;
+@panel-header-default-border-left-color:                                        null;
+@panel-header-default-border-left-style:                                        null;
+@panel-header-default-shadow:                                                   null;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Header (Inverse) Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@panel-header-inverse-background-color:                                         null;
+@panel-header-inverse-background-gradient-color-top:                            null;
+@panel-header-inverse-background-gradient-color-bottom:                         null;
+@panel-header-inverse-border-width:                                             null;
+@panel-header-inverse-border-color:                                             null;
+@panel-header-inverse-border-style:                                             null;
+@panel-header-inverse-border-top-width:                                         null;
+@panel-header-inverse-border-top-color:                                         null;
+@panel-header-inverse-border-top-style:                                         null;
+@panel-header-inverse-border-right-width:                                       null;
+@panel-header-inverse-border-right-color:                                       null;
+@panel-header-inverse-border-right-style:                                       null;
+@panel-header-inverse-border-bottom-width:                                      null;
+@panel-header-inverse-border-bottom-color:                                      null;
+@panel-header-inverse-border-bottom-style:                                      null;
+@panel-header-inverse-border-left-width:                                        null;
+@panel-header-inverse-border-left-color:                                        null;
+@panel-header-inverse-border-left-style:                                        null;
+@panel-header-inverse-shadow:                                                   null;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Content
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Styles
+----------------------------------------------------------------------------- */
+
+@panel-content-border-radius:                                                   0px;
+@panel-content-box-sizing:                                                      border-box;
+@panel-content-background-clip:                                                 padding-box;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Content Margins
+----------------------------------------------------------------------------- */
+
+@panel-content-padding-vertical:                                                @base-spacing-unit * 0.5;
+@panel-content-padding-horizontal:                                              @grid-gutter-width * 0.5;
+
+@panel-content-short-padding-vertical:                                          @panel-content-padding-vertical * 0.5;
+
+@panel-content-tall-padding-vertical:                                           @panel-content-padding-vertical * 2.0;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Content Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@panel-content-padding-vertical-scale-screen-mini:                              @base-spacing-unit-screen-mini / @base-spacing-unit;
+@panel-content-padding-vertical-scale-screen-small:                             @base-spacing-unit-screen-small / @base-spacing-unit;
+@panel-content-padding-vertical-scale-screen-medium:                            @base-spacing-unit-screen-medium / @base-spacing-unit;
+@panel-content-padding-vertical-scale-screen-large:                             @base-spacing-unit-screen-large / @base-spacing-unit;
+
+@panel-content-padding-horizontal-scale-screen-mini:                            @grid-gutter-width-screen-mini / @grid-gutter-width;
+@panel-content-padding-horizontal-scale-screen-small:                           @grid-gutter-width-screen-small / @grid-gutter-width;
+@panel-content-padding-horizontal-scale-screen-medium:                          @grid-gutter-width-screen-medium / @grid-gutter-width;
+@panel-content-padding-horizontal-scale-screen-large:                           @grid-gutter-width-screen-large / @grid-gutter-width;
+
+@panel-content-border-radius-scale-screen-mini:                                 @panel-border-radius-scale-screen-mini;
+@panel-content-border-radius-scale-screen-small:                                @panel-border-radius-scale-screen-small;
+@panel-content-border-radius-scale-screen-medium:                               @panel-border-radius-scale-screen-medium;
+@panel-content-border-radius-scale-screen-large:                                @panel-border-radius-scale-screen-large;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Content (Default) Styling
+----------------------------------------------------------------------------- */
+
+@panel-content-default-background-color:                                        null;
+@panel-content-default-background-gradient-color-top:                           null;
+@panel-content-default-background-gradient-color-bottom:                        null;
+@panel-content-default-border-width:                                            null;
+@panel-content-default-border-color:                                            null;
+@panel-content-default-border-style:                                            null;
+@panel-content-default-border-top-width:                                        null;
+@panel-content-default-border-top-color:                                        null;
+@panel-content-default-border-top-style:                                        null;
+@panel-content-default-border-right-width:                                      null;
+@panel-content-default-border-right-color:                                      null;
+@panel-content-default-border-right-style:                                      null;
+@panel-content-default-border-bottom-width:                                     null;
+@panel-content-default-border-bottom-color:                                     null;
+@panel-content-default-border-bottom-style:                                     null;
+@panel-content-default-border-left-width:                                       null;
+@panel-content-default-border-left-color:                                       null;
+@panel-content-default-border-left-style:                                       null;
+@panel-content-default-shadow:                                                  null;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Content (Inverse) Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@panel-content-inverse-background-color:                                        null;
+@panel-content-inverse-background-gradient-color-top:                           null;
+@panel-content-inverse-background-gradient-color-bottom:                        null;
+@panel-content-inverse-border-width:                                            null;
+@panel-content-inverse-border-color:                                            null;
+@panel-content-inverse-border-style:                                            null;
+@panel-content-inverse-border-top-width:                                        null;
+@panel-content-inverse-border-top-color:                                        null;
+@panel-content-inverse-border-top-style:                                        null;
+@panel-content-inverse-border-right-width:                                      null;
+@panel-content-inverse-border-right-color:                                      null;
+@panel-content-inverse-border-right-style:                                      null;
+@panel-content-inverse-border-bottom-width:                                     null;
+@panel-content-inverse-border-bottom-color:                                     null;
+@panel-content-inverse-border-bottom-style:                                     null;
+@panel-content-inverse-border-left-width:                                       null;
+@panel-content-inverse-border-left-color:                                       null;
+@panel-content-inverse-border-left-style:                                       null;
+@panel-content-inverse-shadow:                                                  null;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Footer
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Styles
+----------------------------------------------------------------------------- */
+
+@panel-footer-border-radius:                                                    0px;
+@panel-footer-box-sizing:                                                       border-box;
+@panel-footer-background-clip:                                                  padding-box;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Footer Margins
+----------------------------------------------------------------------------- */
+
+@panel-footer-padding-vertical:                                                 @base-spacing-unit * 0.5;
+@panel-footer-padding-horizontal:                                               @grid-gutter-width * 0.5;
+
+@panel-footer-short-padding-vertical:                                           @panel-footer-padding-vertical * 0.5;
+
+@panel-footer-tall-padding-vertical:                                            @panel-footer-padding-vertical * 2.0;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Footer Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@panel-footer-padding-vertical-scale-screen-mini:                               @base-spacing-unit-screen-mini / @base-spacing-unit;
+@panel-footer-padding-vertical-scale-screen-small:                              @base-spacing-unit-screen-small / @base-spacing-unit;
+@panel-footer-padding-vertical-scale-screen-medium:                             @base-spacing-unit-screen-medium / @base-spacing-unit;
+@panel-footer-padding-vertical-scale-screen-large:                              @base-spacing-unit-screen-large / @base-spacing-unit;
+
+@panel-footer-padding-horizontal-scale-screen-mini:                             @grid-gutter-width-screen-mini / @grid-gutter-width;
+@panel-footer-padding-horizontal-scale-screen-small:                            @grid-gutter-width-screen-small / @grid-gutter-width;
+@panel-footer-padding-horizontal-scale-screen-medium:                           @grid-gutter-width-screen-medium / @grid-gutter-width;
+@panel-footer-padding-horizontal-scale-screen-large:                            @grid-gutter-width-screen-large / @grid-gutter-width;
+
+@panel-footer-border-radius-scale-screen-mini:                                  @panel-border-radius-scale-screen-mini;
+@panel-footer-border-radius-scale-screen-small:                                 @panel-border-radius-scale-screen-small;
+@panel-footer-border-radius-scale-screen-medium:                                @panel-border-radius-scale-screen-medium;
+@panel-footer-border-radius-scale-screen-large:                                 @panel-border-radius-scale-screen-large;
+
+
+
+/* -----------------------------------------------------------------------------
+Panel Footer (Default) Styling
+----------------------------------------------------------------------------- */
+
+@panel-footer-default-background-color:                                         null;
+@panel-footer-default-background-gradient-color-top:                            null;
+@panel-footer-default-background-gradient-color-bottom:                         null;
+@panel-footer-default-border-width:                                             null;
+@panel-footer-default-border-color:                                             null;
+@panel-footer-default-border-style:                                             null;
+@panel-footer-default-border-top-width:                                         1px;
+@panel-footer-default-border-top-color:                                         rgba(0, 0, 0, 0.05);
+@panel-footer-default-border-top-style:                                         solid;
+@panel-footer-default-border-right-width:                                       null;
+@panel-footer-default-border-right-color:                                       null;
+@panel-footer-default-border-right-style:                                       null;
+@panel-footer-default-border-bottom-width:                                      null;
+@panel-footer-default-border-bottom-color:                                      null;
+@panel-footer-default-border-bottom-style:                                      null;
+@panel-footer-default-border-left-width:                                        null;
+@panel-footer-default-border-left-color:                                        null;
+@panel-footer-default-border-left-style:                                        null;
+@panel-footer-default-shadow:                                                   null;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Panel Footer (Inverse) Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@panel-footer-inverse-background-color:                                         null;
+@panel-footer-inverse-background-gradient-color-top:                            null;
+@panel-footer-inverse-background-gradient-color-bottom:                         null;
+@panel-footer-inverse-border-width:                                             null;
+@panel-footer-inverse-border-color:                                             null;
+@panel-footer-inverse-border-style:                                             null;
+@panel-footer-inverse-border-top-width:                                         null;
+@panel-footer-inverse-border-top-color:                                         null;
+@panel-footer-inverse-border-top-style:                                         null;
+@panel-footer-inverse-border-right-width:                                       null;
+@panel-footer-inverse-border-right-color:                                       null;
+@panel-footer-inverse-border-right-style:                                       null;
+@panel-footer-inverse-border-bottom-width:                                      null;
+@panel-footer-inverse-border-bottom-color:                                      null;
+@panel-footer-inverse-border-bottom-style:                                      null;
+@panel-footer-inverse-border-left-width:                                        null;
+@panel-footer-inverse-border-left-color:                                        null;
+@panel-footer-inverse-border-left-style:                                        null;
+@panel-footer-inverse-shadow:                                                   null;
