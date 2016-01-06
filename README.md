@@ -1,6 +1,6 @@
 # Canvas
 
-Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/canvas/](mesosphere.github.io/canvas/).
+Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/canvas](http://mesosphere.github.io/canvas/).
 
 ## Getting Started
 
@@ -99,7 +99,7 @@ You can see that the code required in Scenerio #2 (Variable-Driven Styles) is mu
 
 ## Dependencies
 
-With one exception, Canvas is self-contained.  It will compile stand-alone.  Throughout Canvas we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package call [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).
+With one exception, Canvas is self-contained.  It will compile stand-alone.  Throughout Canvas we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package called [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).
 
 It's recommended that you setup a simple build script, like the GULP script below, to pull in the `less-color-lighten` dependency, and include them during your LESS Compilation.
 
