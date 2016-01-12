@@ -99,6 +99,49 @@ components/buttons.less
 
     }
 
+
+
+    /* -----------------------------------------------------------------------------
+    Button Label
+    ----------------------------------------------------------------------------- */
+
+    .button-label {
+
+      display: inline-block;
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Icon
+    ----------------------------------------------------------------------------- */
+
+    .icon {
+
+      vertical-align: top;
+
+      &:first-child {
+
+        margin-right: @button-padding-horizontal * 0.25;
+
+      }
+
+      &:last-child {
+
+        margin-left: @button-padding-horizontal * 0.25;
+
+      }
+
+      &:first-child:last-child {
+
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+
+      }
+
+    }
+
   }
 
 
@@ -147,6 +190,28 @@ components/buttons.less
             }
 
           }
+
+        }
+
+      }
+
+
+
+      /* -----------------------------------------------------------------------------
+      Icon
+      ----------------------------------------------------------------------------- */
+
+      .icon {
+
+        &:first-child {
+
+          margin-right: @button-mini-padding-horizontal * 0.25;
+
+        }
+
+        &:last-child {
+
+          margin-left: @button-mini-padding-horizontal * 0.25;
 
         }
 
@@ -207,6 +272,28 @@ components/buttons.less
 
       }
 
+
+
+      /* -----------------------------------------------------------------------------
+      Icon
+      ----------------------------------------------------------------------------- */
+
+      .icon {
+
+        &:first-child {
+
+          margin-right: @button-small-padding-horizontal * 0.25;
+
+        }
+
+        &:last-child {
+
+          margin-left: @button-small-padding-horizontal * 0.25;
+
+        }
+
+      }
+
     }
 
   }
@@ -262,6 +349,28 @@ components/buttons.less
 
       }
 
+
+
+      /* -----------------------------------------------------------------------------
+      Icon
+      ----------------------------------------------------------------------------- */
+
+      .icon {
+
+        &:first-child {
+
+          margin-right: @button-large-padding-horizontal * 0.25;
+
+        }
+
+        &:last-child {
+
+          margin-left: @button-large-padding-horizontal * 0.25;
+
+        }
+
+      }
+
     }
 
   }
@@ -312,6 +421,28 @@ components/buttons.less
             }
 
           }
+
+        }
+
+      }
+
+
+
+      /* -----------------------------------------------------------------------------
+      Icon
+      ----------------------------------------------------------------------------- */
+
+      .icon {
+
+        &:first-child {
+
+          margin-right: @button-jumbo-padding-horizontal * 0.25;
+
+        }
+
+        &:last-child {
+
+          margin-left: @button-jumbo-padding-horizontal * 0.25;
 
         }
 
@@ -2961,17 +3092,39 @@ components/buttons.less
 
 
         /* -----------------------------------------------------------------------------
-        Block Button
+        Icon
         ----------------------------------------------------------------------------- */
 
-        &.button-wide {
+        .icon {
 
-          &.button-wide-below-screen-mini {
+          &:first-child {
 
-            width: auto;
-            display: inline-block;
+            margin-right: @button-padding-horizontal * @button-padding-horizontal-scale-screen-mini * 0.25;
 
           }
+
+          &:last-child {
+
+            margin-left: @button-padding-horizontal * @button-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+        }
+
+      }
+
+
+
+      /* -----------------------------------------------------------------------------
+      Block Button
+      ----------------------------------------------------------------------------- */
+
+      .button-wide {
+
+        &.button-wide-below-screen-mini {
+
+          width: auto;
+          display: inline-block;
 
         }
 
@@ -3002,6 +3155,28 @@ components/buttons.less
 
         .button-size-variant('mini', 'screen-mini');
 
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-mini-padding-horizontal * @button-mini-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-mini-padding-horizontal * @button-mini-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+        }
+
       }
 
     }
@@ -3028,6 +3203,28 @@ components/buttons.less
         ----------------------------------------------------------------------------- */
 
         .button-size-variant('small', 'screen-mini');
+
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-small-padding-horizontal * @button-small-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-small-padding-horizontal * @button-small-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+        }
 
       }
 
@@ -3057,6 +3254,28 @@ components/buttons.less
 
         .button-size-variant('large', 'screen-mini');
 
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-large-padding-horizontal * @button-small-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-large-padding-horizontal * @button-small-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+        }
+
       }
 
     }
@@ -3083,6 +3302,28 @@ components/buttons.less
         ----------------------------------------------------------------------------- */
 
         .button-size-variant('jumbo', 'screen-mini');
+
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-jumbo-padding-horizontal * @button-jumbo-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-jumbo-padding-horizontal * @button-jumbo-padding-horizontal-scale-screen-mini * 0.25;
+
+          }
+
+        }
 
       }
 
@@ -3126,7 +3367,8 @@ components/buttons.less
         Button Styles
         ----------------------------------------------------------------------------- */
 
-        > .button {
+        > .button,
+        > .button-group {
 
           margin-right: @button-collection-spacing-screen-mini;
           margin-bottom: @button-collection-spacing-screen-mini;
@@ -3179,17 +3421,39 @@ components/buttons.less
 
 
         /* -----------------------------------------------------------------------------
-        Block Button
+        Icon
         ----------------------------------------------------------------------------- */
 
-        &.button-wide {
+        .icon {
 
-          &.button-wide-below-screen-small {
+          &:first-child {
 
-            width: auto;
-            display: inline-block;
+            margin-right: @button-padding-horizontal * @button-padding-horizontal-scale-screen-small * 0.25;
 
           }
+
+          &:last-child {
+
+            margin-left: @button-padding-horizontal * @button-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+        }
+
+      }
+
+
+
+      /* -----------------------------------------------------------------------------
+      Block Button
+      ----------------------------------------------------------------------------- */
+
+      .button-wide {
+
+        &.button-wide-below-screen-small {
+
+          width: auto;
+          display: inline-block;
 
         }
 
@@ -3220,6 +3484,28 @@ components/buttons.less
 
         .button-size-variant('mini', 'screen-small');
 
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-mini-padding-horizontal * @button-mini-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-mini-padding-horizontal * @button-mini-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+        }
+
       }
 
     }
@@ -3246,6 +3532,28 @@ components/buttons.less
         ----------------------------------------------------------------------------- */
 
         .button-size-variant('small', 'screen-small');
+
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-small-padding-horizontal * @button-small-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-small-padding-horizontal * @button-small-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+        }
 
       }
 
@@ -3275,6 +3583,28 @@ components/buttons.less
 
         .button-size-variant('large', 'screen-small');
 
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-large-padding-horizontal * @button-small-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-large-padding-horizontal * @button-small-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+        }
+
       }
 
     }
@@ -3301,6 +3631,28 @@ components/buttons.less
         ----------------------------------------------------------------------------- */
 
         .button-size-variant('jumbo', 'screen-small');
+
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-jumbo-padding-horizontal * @button-jumbo-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-jumbo-padding-horizontal * @button-jumbo-padding-horizontal-scale-screen-small * 0.25;
+
+          }
+
+        }
 
       }
 
@@ -3344,7 +3696,8 @@ components/buttons.less
         Button Styles
         ----------------------------------------------------------------------------- */
 
-        > .button {
+        > .button,
+        > .button-group {
 
           margin-right: @button-collection-spacing-screen-small;
           margin-bottom: @button-collection-spacing-screen-small;
@@ -3397,17 +3750,39 @@ components/buttons.less
 
 
         /* -----------------------------------------------------------------------------
-        Block Button
+        Icon
         ----------------------------------------------------------------------------- */
 
-        &.button-wide {
+        .icon {
 
-          &.button-wide-below-screen-medium {
+          &:first-child {
 
-            width: auto;
-            display: inline-block;
+            margin-right: @button-padding-horizontal * @button-padding-horizontal-scale-screen-medium * 0.25;
 
           }
+
+          &:last-child {
+
+            margin-left: @button-padding-horizontal * @button-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+        }
+
+      }
+
+
+
+      /* -----------------------------------------------------------------------------
+      Block Button
+      ----------------------------------------------------------------------------- */
+
+      .button-wide {
+
+        &.button-wide-below-screen-medium {
+
+          width: auto;
+          display: inline-block;
 
         }
 
@@ -3438,6 +3813,28 @@ components/buttons.less
 
         .button-size-variant('mini', 'screen-medium');
 
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-mini-padding-horizontal * @button-mini-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-mini-padding-horizontal * @button-mini-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+        }
+
       }
 
     }
@@ -3464,6 +3861,28 @@ components/buttons.less
         ----------------------------------------------------------------------------- */
 
         .button-size-variant('small', 'screen-medium');
+
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-small-padding-horizontal * @button-small-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-small-padding-horizontal * @button-small-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+        }
 
       }
 
@@ -3493,6 +3912,28 @@ components/buttons.less
 
         .button-size-variant('large', 'screen-medium');
 
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-large-padding-horizontal * @button-small-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-large-padding-horizontal * @button-small-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+        }
+
       }
 
     }
@@ -3519,6 +3960,28 @@ components/buttons.less
         ----------------------------------------------------------------------------- */
 
         .button-size-variant('jumbo', 'screen-medium');
+
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-jumbo-padding-horizontal * @button-jumbo-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-jumbo-padding-horizontal * @button-jumbo-padding-horizontal-scale-screen-medium * 0.25;
+
+          }
+
+        }
 
       }
 
@@ -3562,7 +4025,8 @@ components/buttons.less
         Button Styles
         ----------------------------------------------------------------------------- */
 
-        > .button {
+        > .button,
+        > .button-group {
 
           margin-right: @button-collection-spacing-screen-medium;
           margin-bottom: @button-collection-spacing-screen-medium;
@@ -3615,17 +4079,39 @@ components/buttons.less
 
 
         /* -----------------------------------------------------------------------------
-        Block Button
+        Icon
         ----------------------------------------------------------------------------- */
 
-        &.button-wide {
+        .icon {
 
-          &.button-wide-below-screen-large {
+          &:first-child {
 
-            width: auto;
-            display: inline-block;
+            margin-right: @button-padding-horizontal * @button-padding-horizontal-scale-screen-large * 0.25;
 
           }
+
+          &:last-child {
+
+            margin-left: @button-padding-horizontal * @button-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+        }
+
+      }
+
+
+
+      /* -----------------------------------------------------------------------------
+      Block Button
+      ----------------------------------------------------------------------------- */
+
+      .button-wide {
+
+        &.button-wide-below-screen-large {
+
+          width: auto;
+          display: inline-block;
 
         }
 
@@ -3656,6 +4142,28 @@ components/buttons.less
 
         .button-size-variant('mini', 'screen-large');
 
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-mini-padding-horizontal * @button-mini-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-mini-padding-horizontal * @button-mini-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+        }
+
       }
 
     }
@@ -3682,6 +4190,28 @@ components/buttons.less
         ----------------------------------------------------------------------------- */
 
         .button-size-variant('small', 'screen-large');
+
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-small-padding-horizontal * @button-small-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-small-padding-horizontal * @button-small-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+        }
 
       }
 
@@ -3711,6 +4241,28 @@ components/buttons.less
 
         .button-size-variant('large', 'screen-large');
 
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-large-padding-horizontal * @button-small-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-large-padding-horizontal * @button-small-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+        }
+
       }
 
     }
@@ -3737,6 +4289,28 @@ components/buttons.less
         ----------------------------------------------------------------------------- */
 
         .button-size-variant('jumbo', 'screen-large');
+
+
+
+        /* -----------------------------------------------------------------------------
+        Icon
+        ----------------------------------------------------------------------------- */
+
+        .icon {
+
+          &:first-child {
+
+            margin-right: @button-jumbo-padding-horizontal * @button-jumbo-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+          &:last-child {
+
+            margin-left: @button-jumbo-padding-horizontal * @button-jumbo-padding-horizontal-scale-screen-large * 0.25;
+
+          }
+
+        }
 
       }
 
@@ -3780,7 +4354,8 @@ components/buttons.less
         Button Styles
         ----------------------------------------------------------------------------- */
 
-        > .button {
+        > .button,
+        > .button-group {
 
           margin-right: @button-collection-spacing-screen-large;
           margin-bottom: @button-collection-spacing-screen-large;
