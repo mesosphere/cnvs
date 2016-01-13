@@ -1,21 +1,24 @@
 {
   "name": "canvas-ui",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predist": "rm -rf build",
-    "prewatch": "rm -rf docs/build",
-    "dist": "gulp dist",
-    "predocs-dist": "rm -rf docs/build",
-    "docs-dist": "gulp docs:dist",
-    "watch": "gulp"
+    "predist": "rm -rf dist",
+    "prewatch": "rm -rf docs/dist",
+    "dist": "gulp canvas:build",
+    "predocs-dist": "rm -rf docs/dist",
+    "docs-dist": "gulp docs:build --production",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
     "url": "https://mesosphere@github.com/mesosphere/canvas.git"
   },
+  "files": [
+    "styles"
+  ],
   "keywords": [
     "canvas",
     "ui",
@@ -33,7 +36,7 @@
     "url": "https://github.com/mesosphere/canvas/issues"
   },
   "homepage": "https://github.com/mesosphere/canvas",
-  "peerDependencies": {
+  "dependencies": {
     "less-color-lighten": "0.0.1"
   },
   "devDependencies": {
