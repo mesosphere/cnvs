@@ -41,6 +41,17 @@ Utilities
 @import "utilities/mixins-utilities.less";
 
 
+@path1: 'components/typography/body';
+.import(@path1);
+
+.import(@path) {
+
+  @import "@{path}/variables.less";
+  @import "@{path}/styles.less";
+
+}
+
+
 
 
 
@@ -66,7 +77,7 @@ Variables
 @import "variables/variables-panels.less";
 @import "variables/variables-tables.less";
 @import "variables/variables-typography.less";
-@import "variables/components/typography/body.less";
+//@import "variables/components/typography/body.less";
 @import "variables/components/typography/heading-h1.less";
 @import "variables/components/typography/heading-h2.less";
 
@@ -111,6 +122,6 @@ Components
 @import "components/panels.less";
 @import "components/tables.less";
 //@import "components/typography.less";
-@import "components/typography/body.less";
+//@import "components/typography/body.less";
 @import "components/typography/heading-h1.less";
 @import "components/typography/heading-h2.less";
