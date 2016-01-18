@@ -21,11 +21,68 @@ body/styles.less
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
 
+  html,
   body,
   p {
 
     .text-style-variant('body-text');
     .text-size-variant('body-text', null);
+
+    & when (@body-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+
+        .text-style-variant('body-emphasis-text');
+
+      }
+
+    }
+
+    & when (@body-muted-enabled) {
+
+      &.muted,
+      .muted {
+
+        .text-style-variant('body-muted-text');
+
+      }
+
+    }
+
+
+
+    & when (@body-inverse-enabled) {
+
+      &.inverse {
+
+        .text-style-variant('body-inverse-text');
+
+        & when (@body-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+
+            .text-style-variant('body-inverse-emphasis-text');
+
+          }
+
+        }
+
+        & when (@body-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+
+            .text-style-variant('body-inverse-muted-text');
+
+          }
+
+        }
+
+      }
+
+    }
 
 
 

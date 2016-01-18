@@ -27,6 +27,62 @@ heading-h4/styles.less
     .text-style-variant('heading-h4-text');
     .text-size-variant('heading-h4-text', null);
 
+    & when (@heading-h4-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+
+        .text-style-variant('heading-h4-emphasis-text');
+
+      }
+
+    }
+
+    & when (@heading-h4-muted-enabled) {
+
+      &.muted,
+      .muted {
+
+        .text-style-variant('heading-h4-muted-text');
+
+      }
+
+    }
+
+
+
+    & when (@heading-h4-inverse-enabled) {
+
+      &.inverse {
+
+        .text-style-variant('heading-h4-inverse-text');
+
+        & when (@heading-h4-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+
+            .text-style-variant('heading-h4-inverse-emphasis-text');
+
+          }
+
+        }
+
+        & when (@heading-h4-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+
+            .text-style-variant('heading-h4-inverse-muted-text');
+
+          }
+
+        }
+
+      }
+
+    }
+
 
 
     & when (@screen-mini-enabled) and (@heading-h4-text-scale-screen-mini) {

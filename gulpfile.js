@@ -119,7 +119,7 @@ gulp.task('serve', ['build'], function() {
 
 gulp.task("watch", function () {
 
-  gulp.watch([dirs.docs.styles + "/**/*.less", dirs.canvas.styles + "/**/*.less"], ["docs:styles"]);
+  gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
   gulp.watch(dirs.canvas.styles + "/**/*.less", ["canvas:styles", "docs:styles"]);
   gulp.watch([
       dirs.docs.path + '/index.html',
@@ -136,15 +136,11 @@ gulp.task("canvas:build", ["canvas:styles"]);
 
 // Build Documentation Styles, Javascript, and Move Assets
 
-gulp.task("docs:build", ["docs:styles", "docs:javascripts", "docs:move"]);
+gulp.task("docs:build", ["docs:styles", "docs:javascripts"]);
 
 // Serve Documentation Site
 
-gulp.task("docs:serve", ["browser-sync"], function() {
-
-  gulp.start('watch');
-
-});
+gulp.task("docs:serve", ["browser-sync", "watch"]);
 
 // Clean Canvas and Documentation Distribution  Directories
 
@@ -169,11 +165,7 @@ gulp.task('docs:html', function() {
       removeComments: true,
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest(dirs.docs.dist.path))
-    .pipe(browserSync.reload({
-      stream: true,
-      once: true
-    }));
+    .pipe(gulp.dest(dirs.docs.dist.path));
 
 });
 
@@ -188,11 +180,7 @@ gulp.task("docs:move", function () {
     ], {
       base: dirs.docs.path
     })
-    .pipe(gulp.dest(dirs.docs.dist.path))
-    .pipe(browserSync.reload({
-      stream: true,
-      once: true
-    }));
+    .pipe(gulp.dest(dirs.docs.dist.path));
 
 });
 
@@ -274,11 +262,7 @@ gulp.task("docs:styles", function () {
       includeContent: false,
       sourceRoot: dirs.docs.styles
     }))
-    .pipe(gulp.dest(dirs.docs.dist.styles))
-    .pipe(browserSync.reload({
-      stream: true,
-      once: true
-    }));
+    .pipe(gulp.dest(dirs.docs.dist.styles));
 
 });
 
@@ -298,20 +282,23 @@ gulp.task("docs:javascripts", function () {
       mangle: true,
       compress: true
     }))
-    .pipe(gulp.dest(dirs.docs.dist.javascripts))
-    .pipe(browserSync.reload({
-      stream: true,
-      once: true
-    }));
+    .pipe(gulp.dest(dirs.docs.dist.javascripts));
 
 });
 
 // Start Jekyll Server then start Documentation Site
 
 gulp.task('browser-sync', ['jekyll'], function() {
+  var files = [
+      dirs.docs.dist.styles + '/**/*.css',
+      dirs.docs.dist.javascripts + '**/*.js'
+   ];
+
   browserSync({
+    files,
+    injectChanges: true,
     server: {
-      baseDir: 'docs/dist',
+      baseDir: dirs.docs.dist.path,
       open: true,
       notify: false
     }

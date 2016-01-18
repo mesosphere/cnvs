@@ -27,6 +27,62 @@ heading-h6/styles.less
     .text-style-variant('heading-h6-text');
     .text-size-variant('heading-h6-text', null);
 
+    & when (@heading-h6-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+
+        .text-style-variant('heading-h6-emphasis-text');
+
+      }
+
+    }
+
+    & when (@heading-h6-muted-enabled) {
+
+      &.muted,
+      .muted {
+
+        .text-style-variant('heading-h6-muted-text');
+
+      }
+
+    }
+
+
+
+    & when (@heading-h6-inverse-enabled) {
+
+      &.inverse {
+
+        .text-style-variant('heading-h6-inverse-text');
+
+        & when (@heading-h6-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+
+            .text-style-variant('heading-h6-inverse-emphasis-text');
+
+          }
+
+        }
+
+        & when (@heading-h6-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+
+            .text-style-variant('heading-h6-inverse-muted-text');
+
+          }
+
+        }
+
+      }
+
+    }
+
 
 
     & when (@screen-mini-enabled) and (@heading-h6-text-scale-screen-mini) {

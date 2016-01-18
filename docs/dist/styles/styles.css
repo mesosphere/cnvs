@@ -20458,16 +20458,18 @@ body/styles.less
   body
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
+html,
 body,
 p {
-  color: #848995;
+  color: #5b6171;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
+  text-rendering: geometricPrecision;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 1.2rem;
   margin-top: 0px;
-  margin-bottom: 12px;
+  margin-bottom: 0.8rem;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Mini (@screen-mini) and wider
@@ -20489,46 +20491,92 @@ p {
       --------------------------------------------------------------------------------
       ----------------------------------------------------------------------------- */
 }
+html.short,
 body.short,
 p.short {
-  margin-bottom: 6px;
+  margin-bottom: 0.4rem;
 }
+html.tall,
 body.tall,
 p.tall {
-  margin-bottom: 24px;
+  margin-bottom: 1.6rem;
+}
+html.emphasis,
+body.emphasis,
+p.emphasis,
+html .emphasis,
+body .emphasis,
+p .emphasis {
+  color: #282e3e;
+  font-weight: 600;
+}
+html.muted,
+body.muted,
+p.muted,
+html .muted,
+body .muted,
+p .muted {
+  color: #adb0b8;
+}
+html.inverse,
+body.inverse,
+p.inverse {
+  color: #c2c4ca;
+}
+html.inverse.emphasis,
+body.inverse.emphasis,
+p.inverse.emphasis,
+html.inverse .emphasis,
+body.inverse .emphasis,
+p.inverse .emphasis {
+  color: #ffffff;
+}
+html.inverse.muted,
+body.inverse.muted,
+p.inverse.muted,
+html.inverse .muted,
+body.inverse .muted,
+p.inverse .muted {
+  color: #999da7;
 }
 @media (min-width: 768px) {
+  html,
   body,
   p {
     font-size: 16.8px;
-    line-height: 23.1px;
+    line-height: 1.26rem;
     margin-top: 0px;
-    margin-bottom: 13.2px;
+    margin-bottom: 0.88rem;
   }
+  html.short,
   body.short,
   p.short {
-    margin-bottom: 6.6px;
+    margin-bottom: 0.44rem;
   }
+  html.tall,
   body.tall,
   p.tall {
-    margin-bottom: 26.4px;
+    margin-bottom: 1.76rem;
   }
 }
 @media (min-width: 992px) {
+  html,
   body,
   p {
     font-size: 17.6px;
-    line-height: 24.2px;
+    line-height: 1.32rem;
     margin-top: 0px;
-    margin-bottom: 14.4px;
+    margin-bottom: 0.96rem;
   }
+  html.short,
   body.short,
   p.short {
-    margin-bottom: 7.2px;
+    margin-bottom: 0.48rem;
   }
+  html.tall,
   body.tall,
   p.tall {
-    margin-bottom: 28.8px;
+    margin-bottom: 1.92rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20576,14 +20624,15 @@ heading-h1/styles.less
   ----------------------------------------------------------------------------- */
 h1,
 .h1 {
-  color: #848995;
+  color: #282e3e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
+  text-rendering: geometricPrecision;
   font-size: 3rem;
   line-height: 3rem;
-  margin-top: 82.8px;
-  margin-bottom: 69px;
+  margin-top: 3rem;
+  margin-bottom: 2.2rem;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Mini (@screen-mini) and wider
@@ -20607,40 +20656,69 @@ h1,
 }
 h1.short,
 .h1.short {
-  margin-bottom: 34.5px;
+  margin-bottom: 1.1rem;
 }
 h1.tall,
 .h1.tall {
-  margin-bottom: 138px;
+  margin-bottom: 4.4rem;
+}
+h1.emphasis,
+.h1.emphasis,
+h1 .emphasis,
+.h1 .emphasis {
+  color: #282e3e;
+  font-weight: 800;
+}
+h1.muted,
+.h1.muted,
+h1 .muted,
+.h1 .muted {
+  color: #adb0b8;
+}
+h1.inverse,
+.h1.inverse {
+  color: #ffffff;
+}
+h1.inverse.emphasis,
+.h1.inverse.emphasis,
+h1.inverse .emphasis,
+.h1.inverse .emphasis {
+  color: #ffffff;
+}
+h1.inverse.muted,
+.h1.inverse.muted,
+h1.inverse .muted,
+.h1.inverse .muted {
+  color: #848995;
 }
 @media (min-width: 768px) {
   h1,
   .h1 {
-    margin-top: 91.08px;
-    margin-bottom: 75.9px;
+    margin-top: 3.3rem;
+    margin-bottom: 2.42rem;
   }
   h1.short,
   .h1.short {
-    margin-bottom: 37.95px;
+    margin-bottom: 1.21rem;
   }
   h1.tall,
   .h1.tall {
-    margin-bottom: 151.8px;
+    margin-bottom: 4.84rem;
   }
 }
 @media (min-width: 992px) {
   h1,
   .h1 {
-    margin-top: 99.36px;
-    margin-bottom: 82.8px;
+    margin-top: 3.6rem;
+    margin-bottom: 2.64rem;
   }
   h1.short,
   .h1.short {
-    margin-bottom: 41.4px;
+    margin-bottom: 1.32rem;
   }
   h1.tall,
   .h1.tall {
-    margin-bottom: 165.6px;
+    margin-bottom: 5.28rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20688,14 +20766,15 @@ heading-h2/styles.less
   ----------------------------------------------------------------------------- */
 h2,
 .h2 {
-  color: #848995;
+  color: #282e3e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
+  text-rendering: geometricPrecision;
   font-size: 2.4rem;
   line-height: 2.4rem;
-  margin-top: 69px;
-  margin-bottom: 55.2px;
+  margin-top: 2.2rem;
+  margin-bottom: 1.7rem;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Mini (@screen-mini) and wider
@@ -20719,40 +20798,69 @@ h2,
 }
 h2.short,
 .h2.short {
-  margin-bottom: 27.6px;
+  margin-bottom: 0.85rem;
 }
 h2.tall,
 .h2.tall {
-  margin-bottom: 110.4px;
+  margin-bottom: 3.4rem;
+}
+h2.emphasis,
+.h2.emphasis,
+h2 .emphasis,
+.h2 .emphasis {
+  color: #282e3e;
+  font-weight: 800;
+}
+h2.muted,
+.h2.muted,
+h2 .muted,
+.h2 .muted {
+  color: #adb0b8;
+}
+h2.inverse,
+.h2.inverse {
+  color: #ffffff;
+}
+h2.inverse.emphasis,
+.h2.inverse.emphasis,
+h2.inverse .emphasis,
+.h2.inverse .emphasis {
+  color: #ffffff;
+}
+h2.inverse.muted,
+.h2.inverse.muted,
+h2.inverse .muted,
+.h2.inverse .muted {
+  color: #848995;
 }
 @media (min-width: 768px) {
   h2,
   .h2 {
-    margin-top: 75.9px;
-    margin-bottom: 60.72px;
+    margin-top: 2.42rem;
+    margin-bottom: 1.87rem;
   }
   h2.short,
   .h2.short {
-    margin-bottom: 30.36px;
+    margin-bottom: 0.935rem;
   }
   h2.tall,
   .h2.tall {
-    margin-bottom: 121.44px;
+    margin-bottom: 3.74rem;
   }
 }
 @media (min-width: 992px) {
   h2,
   .h2 {
-    margin-top: 82.8px;
-    margin-bottom: 66.24px;
+    margin-top: 2.64rem;
+    margin-bottom: 2.04rem;
   }
   h2.short,
   .h2.short {
-    margin-bottom: 33.12px;
+    margin-bottom: 1.02rem;
   }
   h2.tall,
   .h2.tall {
-    margin-bottom: 132.48px;
+    margin-bottom: 4.08rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20800,14 +20908,15 @@ heading-h3/styles.less
   ----------------------------------------------------------------------------- */
 h3,
 .h3 {
-  color: #848995;
+  color: #282e3e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
+  text-rendering: geometricPrecision;
   font-size: 2rem;
   line-height: 2rem;
-  margin-top: 55.2px;
-  margin-bottom: 41.4px;
+  margin-top: 1.7rem;
+  margin-bottom: 1.3rem;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Mini (@screen-mini) and wider
@@ -20831,40 +20940,69 @@ h3,
 }
 h3.short,
 .h3.short {
-  margin-bottom: 20.7px;
+  margin-bottom: 0.65rem;
 }
 h3.tall,
 .h3.tall {
-  margin-bottom: 82.8px;
+  margin-bottom: 2.6rem;
+}
+h3.emphasis,
+.h3.emphasis,
+h3 .emphasis,
+.h3 .emphasis {
+  color: #282e3e;
+  font-weight: 800;
+}
+h3.muted,
+.h3.muted,
+h3 .muted,
+.h3 .muted {
+  color: #adb0b8;
+}
+h3.inverse,
+.h3.inverse {
+  color: #ffffff;
+}
+h3.inverse.emphasis,
+.h3.inverse.emphasis,
+h3.inverse .emphasis,
+.h3.inverse .emphasis {
+  color: #ffffff;
+}
+h3.inverse.muted,
+.h3.inverse.muted,
+h3.inverse .muted,
+.h3.inverse .muted {
+  color: #848995;
 }
 @media (min-width: 768px) {
   h3,
   .h3 {
-    margin-top: 60.72px;
-    margin-bottom: 45.54px;
+    margin-top: 1.87rem;
+    margin-bottom: 1.43rem;
   }
   h3.short,
   .h3.short {
-    margin-bottom: 22.77px;
+    margin-bottom: 0.715rem;
   }
   h3.tall,
   .h3.tall {
-    margin-bottom: 91.08px;
+    margin-bottom: 2.86rem;
   }
 }
 @media (min-width: 992px) {
   h3,
   .h3 {
-    margin-top: 66.24px;
-    margin-bottom: 49.68px;
+    margin-top: 2.04rem;
+    margin-bottom: 1.56rem;
   }
   h3.short,
   .h3.short {
-    margin-bottom: 24.84px;
+    margin-bottom: 0.78rem;
   }
   h3.tall,
   .h3.tall {
-    margin-bottom: 99.36px;
+    margin-bottom: 3.12rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20912,14 +21050,15 @@ heading-h4/styles.less
   ----------------------------------------------------------------------------- */
 h4,
 .h4 {
-  color: #848995;
+  color: #323a4e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
+  text-rendering: geometricPrecision;
   font-size: 1.7rem;
   line-height: 1.7rem;
-  margin-top: 41.4px;
-  margin-bottom: 27.6px;
+  margin-top: 1.3rem;
+  margin-bottom: 1.1rem;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Mini (@screen-mini) and wider
@@ -20943,40 +21082,69 @@ h4,
 }
 h4.short,
 .h4.short {
-  margin-bottom: 13.8px;
+  margin-bottom: 0.55rem;
 }
 h4.tall,
 .h4.tall {
-  margin-bottom: 55.2px;
+  margin-bottom: 2.2rem;
+}
+h4.emphasis,
+.h4.emphasis,
+h4 .emphasis,
+.h4 .emphasis {
+  color: #282e3e;
+  font-weight: 800;
+}
+h4.muted,
+.h4.muted,
+h4 .muted,
+.h4 .muted {
+  color: #adb0b8;
+}
+h4.inverse,
+.h4.inverse {
+  color: #ffffff;
+}
+h4.inverse.emphasis,
+.h4.inverse.emphasis,
+h4.inverse .emphasis,
+.h4.inverse .emphasis {
+  color: #ffffff;
+}
+h4.inverse.muted,
+.h4.inverse.muted,
+h4.inverse .muted,
+.h4.inverse .muted {
+  color: #848995;
 }
 @media (min-width: 768px) {
   h4,
   .h4 {
-    margin-top: 45.54px;
-    margin-bottom: 30.36px;
+    margin-top: 1.43rem;
+    margin-bottom: 1.21rem;
   }
   h4.short,
   .h4.short {
-    margin-bottom: 15.18px;
+    margin-bottom: 0.605rem;
   }
   h4.tall,
   .h4.tall {
-    margin-bottom: 60.72px;
+    margin-bottom: 2.42rem;
   }
 }
 @media (min-width: 992px) {
   h4,
   .h4 {
-    margin-top: 49.68px;
-    margin-bottom: 33.12px;
+    margin-top: 1.56rem;
+    margin-bottom: 1.32rem;
   }
   h4.short,
   .h4.short {
-    margin-bottom: 16.56px;
+    margin-bottom: 0.66rem;
   }
   h4.tall,
   .h4.tall {
-    margin-bottom: 66.24px;
+    margin-bottom: 2.64rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -21024,14 +21192,15 @@ heading-h5/styles.less
   ----------------------------------------------------------------------------- */
 h5,
 .h5 {
-  color: #848995;
+  color: #323a4e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
+  text-rendering: geometricPrecision;
   font-size: 1.2rem;
   line-height: 1.2rem;
-  margin-top: 27.6px;
-  margin-bottom: 13.8px;
+  margin-top: 1.1rem;
+  margin-bottom: 1rem;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Mini (@screen-mini) and wider
@@ -21055,40 +21224,69 @@ h5,
 }
 h5.short,
 .h5.short {
-  margin-bottom: 6.9px;
+  margin-bottom: 0.5rem;
 }
 h5.tall,
 .h5.tall {
-  margin-bottom: 27.6px;
+  margin-bottom: 2rem;
+}
+h5.emphasis,
+.h5.emphasis,
+h5 .emphasis,
+.h5 .emphasis {
+  color: #282e3e;
+  font-weight: 800;
+}
+h5.muted,
+.h5.muted,
+h5 .muted,
+.h5 .muted {
+  color: #adb0b8;
+}
+h5.inverse,
+.h5.inverse {
+  color: #ffffff;
+}
+h5.inverse.emphasis,
+.h5.inverse.emphasis,
+h5.inverse .emphasis,
+.h5.inverse .emphasis {
+  color: #ffffff;
+}
+h5.inverse.muted,
+.h5.inverse.muted,
+h5.inverse .muted,
+.h5.inverse .muted {
+  color: #848995;
 }
 @media (min-width: 768px) {
   h5,
   .h5 {
-    margin-top: 30.36px;
-    margin-bottom: 15.18px;
+    margin-top: 1.21rem;
+    margin-bottom: 1.1rem;
   }
   h5.short,
   .h5.short {
-    margin-bottom: 7.59px;
+    margin-bottom: 0.55rem;
   }
   h5.tall,
   .h5.tall {
-    margin-bottom: 30.36px;
+    margin-bottom: 2.2rem;
   }
 }
 @media (min-width: 992px) {
   h5,
   .h5 {
-    margin-top: 33.12px;
-    margin-bottom: 16.56px;
+    margin-top: 1.32rem;
+    margin-bottom: 1.2rem;
   }
   h5.short,
   .h5.short {
-    margin-bottom: 8.28px;
+    margin-bottom: 0.6rem;
   }
   h5.tall,
   .h5.tall {
-    margin-bottom: 33.12px;
+    margin-bottom: 2.4rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -21136,14 +21334,15 @@ heading-h6/styles.less
   ----------------------------------------------------------------------------- */
 h6,
 .h6 {
-  color: #848995;
+  color: #323a4e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
+  text-rendering: geometricPrecision;
   font-size: 1rem;
   line-height: 1rem;
-  margin-top: 13.8px;
-  margin-bottom: 12px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Mini (@screen-mini) and wider
@@ -21167,40 +21366,69 @@ h6,
 }
 h6.short,
 .h6.short {
-  margin-bottom: 6px;
+  margin-bottom: 0.5rem;
 }
 h6.tall,
 .h6.tall {
-  margin-bottom: 24px;
+  margin-bottom: 2rem;
+}
+h6.emphasis,
+.h6.emphasis,
+h6 .emphasis,
+.h6 .emphasis {
+  color: #1e232f;
+  font-weight: 800;
+}
+h6.muted,
+.h6.muted,
+h6 .muted,
+.h6 .muted {
+  color: #adb0b8;
+}
+h6.inverse,
+.h6.inverse {
+  color: #d6d8dc;
+}
+h6.inverse.emphasis,
+.h6.inverse.emphasis,
+h6.inverse .emphasis,
+.h6.inverse .emphasis {
+  color: #ffffff;
+}
+h6.inverse.muted,
+.h6.inverse.muted,
+h6.inverse .muted,
+.h6.inverse .muted {
+  color: #848995;
 }
 @media (min-width: 768px) {
   h6,
   .h6 {
-    margin-top: 15.18px;
-    margin-bottom: 13.2px;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
   }
   h6.short,
   .h6.short {
-    margin-bottom: 6.6px;
+    margin-bottom: 0.55rem;
   }
   h6.tall,
   .h6.tall {
-    margin-bottom: 26.4px;
+    margin-bottom: 2.2rem;
   }
 }
 @media (min-width: 992px) {
   h6,
   .h6 {
-    margin-top: 16.56px;
-    margin-bottom: 14.4px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
   }
   h6.short,
   .h6.short {
-    margin-bottom: 7.2px;
+    margin-bottom: 0.6rem;
   }
   h6.tall,
   .h6.tall {
-    margin-bottom: 28.8px;
+    margin-bottom: 2.4rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -21309,7 +21537,7 @@ Header
   display: block;
   width: 40px;
   height: 28.8px;
-  background-image: url("../images/layout/header/header-logo.png?cache=610805997");
+  background-image: url("../images/layout/header/header-logo.png?cache=54977214");
   background-size: 100% 100%;
   margin: 0 auto;
 }
@@ -21631,7 +21859,7 @@ Header
 			---------------------------------------------------------------------------------------------------- */
   }
   #header #header-logo {
-    background-image: url("../images/layout/header/header-logo@2x.png?cache=861892138");
+    background-image: url("../images/layout/header/header-logo@2x.png?cache=110760727");
   }
 }
 /* ----------------------------------------------------------------------------------------------------
