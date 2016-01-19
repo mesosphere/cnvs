@@ -10,37 +10,9 @@ utilities/mixins-typography.less
 
 
 
-
-
-
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
-Placeholder Text
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.placeholder (@color) {
-
-    &::placeholder {
-
-      color: @color;
-
-    }
-
-}
-
-
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
 Text Style Variant
-
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
@@ -54,6 +26,7 @@ Text Style Variant
   @element-shadow: "@{element}-shadow";
   @element-decoration: "@{element}-decoration";
   @element-rendering: "@{element}-rendering";
+  @element-opacity: "@{element}-opacity";
 
   & when not (@@element-color = null) {
 
@@ -103,18 +76,19 @@ Text Style Variant
 
   }
 
+  & when not (@@element-opacity = null) {
+
+    opacity: @@element-opacity;
+
+  }
+
 };
-
-
-
 
 
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
 Text Size Variant
-
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
@@ -126,25 +100,12 @@ Text Size Variant
   @element-line-height: "@{element}-line-height";
   @element-line-height-scale: 1.0;
 
-  @element-margin-top: "@{element}-margin-top";
-  @element-margin-top-scale: 1.0;
-
-  @element-margin-bottom: "@{element}-margin-bottom";
-  @element-margin-bottom-scale: 1.0;
-
-  @element-margin-variants: "@{element}-margin-variants";
-
   .text-size-variant-helper (
 
     @@element-font-size,
     @element-font-size-scale,
     @@element-line-height,
-    @element-line-height-scale,
-    @@element-margin-top,
-    @element-margin-top-scale,
-    @@element-margin-bottom,
-    @element-margin-bottom-scale,
-    @@element-margin-variants
+    @element-line-height-scale
 
   );
 
@@ -158,25 +119,12 @@ Text Size Variant
   @element-line-height: "@{element}-line-height";
   @element-line-height-scale: "@{element}-line-height-@{size}";
 
-  @element-margin-top: "@{element}-margin-top";
-  @element-margin-top-scale: "@{element}-margin-top-@{size}";
-
-  @element-margin-bottom: "@{element}-margin-bottom";
-  @element-margin-bottom-scale: "@{element}-margin-bottom-@{size}";
-
-  @element-margin-variants: "@{element}-margin-variants";
-
   .text-size-variant-helper (
 
     @@element-font-size,
     @@element-font-size-scale,
     @@element-line-height,
-    @@element-line-height-scale,
-    @@element-margin-top,
-    @@element-margin-top-scale,
-    @@element-margin-bottom,
-    @@element-margin-bottom-scale,
-    @@element-margin-variants
+    @@element-line-height-scale
 
   );
 
@@ -187,12 +135,7 @@ Text Size Variant
     @element-font-size,
     @element-font-size-scale,
     @element-line-height,
-    @element-line-height-scale,
-    @element-margin-top,
-    @element-margin-top-scale,
-    @element-margin-bottom,
-    @element-margin-bottom-scale,
-    @element-margin-variants
+    @element-line-height-scale
 
   ) {
 
@@ -212,63 +155,71 @@ Text Size Variant
 
   }
 
-  // Margin (Top)
+}
 
-  & when not (@element-margin-top = null) and not (@element-margin-top-scale = null) {
 
-    margin-top: @element-margin-top * @element-margin-top-scale;
 
-    // Margin (Top) Variants
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text layout Variant
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
 
-    & when not (@element-margin-variants = null) {
+.text-layout-variant (@element, @size) {
 
-      .for(@element-margin-variants); .-each(@name) {
+  .layout-variant (@element, margin-top, @size);
+  .layout-variant (@element, margin-bottom, @size);
+  .layout-variant (@element, margin-left, @size);
+  .layout-variant (@element, margin-right, @size);
+  .layout-variant (@element, padding-top, @size);
+  .layout-variant (@element, padding-bottom, @size);
+  .layout-variant (@element, padding-left, @size);
+  .layout-variant (@element, padding-right, @size);
 
-          &.@{name} {
+}
 
-            @element-margin-scale: "@{element}-@{name}-margin-top";
 
-            & when not (@@element-margin-scale = null) {
 
-              margin-bottom: @element-margin-top * @element-margin-top-scale * @@element-margin-scale;
+.text-layout-variant(@element, @class, @size) {
 
-            }
+  &.@{class} {
 
-          }
-
-      }
-
-    }
+    .layout-variant (@element, @class, margin-top, @size);
+    .layout-variant (@element, @class, margin-bottom, @size);
+    .layout-variant (@element, @class, margin-left, @size);
+    .layout-variant (@element, @class, margin-right, @size);
+    .layout-variant (@element, @class, padding-top, @size);
+    .layout-variant (@element, @class, padding-bottom, @size);
+    .layout-variant (@element, @class, padding-left, @size);
+    .layout-variant (@element, @class, padding-right, @size);
 
   }
 
-  // Margin (Bottom)
+  &.@{class}-top {
 
-  & when not (@element-margin-bottom = null) and not (@element-margin-bottom-scale = null) {
+    .layout-variant (@element, @class, margin-top, @size);
+    .layout-variant (@element, @class, padding-top, @size);
 
-    margin-bottom: @element-margin-bottom * @element-margin-bottom-scale;
+  }
 
-    // Margin (Bottom) Variants
+  &.@{class}-bottom {
 
-    & when not (@element-margin-variants = null) {
+    .layout-variant (@element, @class, margin-bottom, @size);
+    .layout-variant (@element, @class, padding-bottom, @size);
 
-      .for(@element-margin-variants); .-each(@name) {
+  }
 
-          &.@{name} {
+  &.@{class}-left {
 
-            @element-margin-scale: "@{element}-@{name}-margin-bottom";
+    .layout-variant (@element, @class, margin-left, @size);
+    .layout-variant (@element, @class, padding-left, @size);
 
-            & when not (@@element-margin-scale = null) {
+  }
 
-              margin-bottom: @element-margin-bottom * @element-margin-bottom-scale * @@element-margin-scale;
+  &.@{class}-right {
 
-            }
-
-          }
-
-      }
-
-    }
+    .layout-variant (@element, @class, margin-right, @size);
+    .layout-variant (@element, @class, padding-right, @size);
 
   }
 
@@ -278,9 +229,67 @@ Text Size Variant
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Layout Variant
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
 
-Font Smoothing
+.layout-variant (@element, @property, @size) when (@size = null) {
 
+  @element-property: "@{element}-@{property}";
+
+  & when not (@@element-property = null) {
+
+    @{property}: @@element-property;
+
+  }
+
+}
+
+.layout-variant (@element, @property, @size) when not (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-scale: "@{element}-@{property}-@{size}";
+
+  & when not (@@element-property = null) and not (@@element-scale = null) {
+
+    @{property}: @@element-property * @@element-scale;
+
+  }
+
+}
+
+.layout-variant (@element, @class, @property, @size) when (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
+
+  & when not (@@element-property = null) and not (@@element-subclass-scale = null) {
+
+    @{property}: @@element-property * @@element-subclass-scale;
+
+  }
+
+}
+
+.layout-variant (@element, @class, @property, @size) when not (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-scale: "@{element}-@{property}-@{size}";
+  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
+
+  & when not (@@element-property = null) and not (@@element-scale = null) and not (@@element-subclass-scale = null) {
+
+    @{property}: @@element-property * @@element-scale * @@element-subclass-scale;
+
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Test Styling (REMOVE)
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
@@ -310,14 +319,9 @@ Font Smoothing
 
 
 
-
-
-
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
 Text Overflow
-
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
@@ -331,18 +335,13 @@ Text Overflow
 
 
 
-
-
-
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
 Hide Text
-
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-.hide () {
+.text-hide () {
 
     font: ~"0/0" a;
     color: transparent;
@@ -354,57 +353,18 @@ Hide Text
 
 
 
-
-
-
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
-Text Fill Color
-
+Placeholder Text
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-.text-fill-color (@text-fill-color) {
+.placeholder (@color) {
 
-  text-fill-color: @text-fill-color;
+    &::placeholder {
 
-}
+      color: @color;
 
-
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Font Smoothing
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.font-smoothing (@font-smoothing) {
-
-    font-smoothing: @font-smoothing;
-
-}
-
-
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Text Fill Color
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.text-fill-color (@text-fill-color) {
-
-    text-fill-color: @text-fill-color;
+    }
 
 }

@@ -25,15 +25,18 @@ body/styles.less
   body,
   p {
 
-    .text-style-variant('body-text');
-    .text-size-variant('body-text', null);
+    .text-style-variant(body-text);
+    .text-size-variant(body-text, null);
+    .text-layout-variant(body-text, null);
+    .text-layout-variant(body-text, short, null);
+    .text-layout-variant(body-text, tall, null);
 
     & when (@body-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
 
-        .text-style-variant('body-emphasis-text');
+        .text-style-variant(body-emphasis-text);
 
       }
 
@@ -44,7 +47,7 @@ body/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant('body-muted-text');
+        .text-style-variant(body-muted-text);
 
       }
 
@@ -56,14 +59,14 @@ body/styles.less
 
       &.inverse {
 
-        .text-style-variant('body-inverse-text');
+        .text-style-variant(body-inverse-text);
 
         & when (@body-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant('body-inverse-emphasis-text');
+            .text-style-variant(body-inverse-emphasis-text);
 
           }
 
@@ -74,7 +77,7 @@ body/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant('body-inverse-muted-text');
+            .text-style-variant(body-inverse-muted-text);
 
           }
 
@@ -86,7 +89,7 @@ body/styles.less
 
 
 
-    & when (@screen-mini-enabled) and (@body-text-scale-screen-mini) {
+    & when (@screen-mini-enabled) and (@body-text-scale-screen-mini-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -96,7 +99,10 @@ body/styles.less
 
       @media (min-width: @screen-mini) {
 
-        .text-size-variant('body-text', 'scale-screen-mini');
+        .text-size-variant(body-text, scale-screen-mini);
+        .text-layout-variant(body-text, scale-screen-mini);
+        .text-layout-variant(body-text, short, scale-screen-mini);
+        .text-layout-variant(body-text, tall, scale-screen-mini);
 
       }
 
@@ -104,7 +110,7 @@ body/styles.less
 
 
 
-    & when (@screen-small-enabled) and (@body-text-scale-screen-small) {
+    & when (@screen-small-enabled) and (@body-text-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -114,7 +120,10 @@ body/styles.less
 
       @media (min-width: @screen-small) {
 
-        .text-size-variant('body-text', 'scale-screen-small');
+        .text-size-variant(body-text, scale-screen-small);
+        .text-layout-variant(body-text, scale-screen-small);
+        .text-layout-variant(body-text, short, scale-screen-small);
+        .text-layout-variant(body-text, tall, scale-screen-small);
 
       }
 
@@ -122,7 +131,7 @@ body/styles.less
 
 
 
-    & when (@screen-medium-enabled) and (@body-text-scale-screen-medium) {
+    & when (@screen-medium-enabled) and (@body-text-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -132,7 +141,10 @@ body/styles.less
 
       @media (min-width: @screen-medium) {
 
-        .text-size-variant('body-text', 'scale-screen-medium');
+        .text-size-variant(body-text, scale-screen-medium);
+        .text-layout-variant(body-text, scale-screen-medium);
+        .text-layout-variant(body-text, short, scale-screen-medium);
+        .text-layout-variant(body-text, tall, scale-screen-medium);
 
       }
 
@@ -140,7 +152,7 @@ body/styles.less
 
 
 
-    & when (@screen-large-enabled) and (@body-text-scale-screen-large) {
+    & when (@screen-large-enabled) and (@body-text-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -150,7 +162,10 @@ body/styles.less
 
       @media (min-width: @screen-large) {
 
-        .text-size-variant('body-text', 'scale-screen-large');
+        .text-size-variant(body-text, scale-screen-large);
+        .text-layout-variant(body-text, scale-screen-large);
+        .text-layout-variant(body-text, short, scale-screen-large);
+        .text-layout-variant(body-text, tall, scale-screen-large);
 
       }
 

@@ -16,6 +16,19 @@ body/variables.less
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@body-text-scale-screen-mini-enabled:                                           @screen-mini-enabled;
+@body-text-scale-screen-small-enabled:                                          @screen-small-enabled;
+@body-text-scale-screen-medium-enabled:                                         @screen-medium-enabled;
+@body-text-scale-screen-large-enabled:                                          @screen-large-enabled;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 Text Styling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
@@ -30,8 +43,9 @@ Text Styling
 @body-text-shadow:                                                              null;
 @body-text-decoration:                                                          null;
 @body-text-rendering:                                                           geometricPrecision;
+@body-text-opacity:                                                             null;
 
-// Emphasis
+// Emphasis (.emphasis)
 
 @body-emphasis-enabled:                                                         true;
 @body-emphasis-text-color:                                                      color-lighten(@neutral, -20);
@@ -42,8 +56,9 @@ Text Styling
 @body-emphasis-text-shadow:                                                     null;
 @body-emphasis-text-decoration:                                                 null;
 @body-emphasis-text-rendering:                                                  null;
+@body-emphasis-text-opacity:                                                    null;
 
-// Muted
+// Muted (.muted)
 
 @body-muted-enabled:                                                            true;
 @body-muted-text-color:                                                         color-lighten(@neutral, 60);
@@ -54,8 +69,9 @@ Text Styling
 @body-muted-text-shadow:                                                        null;
 @body-muted-text-decoration:                                                    null;
 @body-muted-text-rendering:                                                     null;
+@body-muted-text-opacity:                                                       null;
 
-// Inverse
+// Inverse (.inverse)
 
 @body-inverse-enabled:                                                          true;
 @body-inverse-text-color:                                                       color-lighten(@neutral, 70);
@@ -66,8 +82,9 @@ Text Styling
 @body-inverse-text-shadow:                                                      null;
 @body-inverse-text-decoration:                                                  null;
 @body-inverse-text-rendering:                                                   null;
+@body-inverse-text-opacity:                                                     null;
 
-// Inverse Emphasis
+// Inverse Emphasis (.inverse.emphasis)
 
 @body-inverse-emphasis-enabled:                                                 true;
 @body-inverse-emphasis-text-color:                                              color-lighten(@neutral, 100);
@@ -78,8 +95,9 @@ Text Styling
 @body-inverse-emphasis-text-shadow:                                             null;
 @body-inverse-emphasis-text-decoration:                                         null;
 @body-inverse-emphasis-text-rendering:                                          null;
+@body-inverse-emphasis-text-opacity:                                            null;
 
-// Inverse Muted
+// Inverse Muted (.inverse.muted)
 
 @body-inverse-muted-enabled:                                                    true;
 @body-inverse-muted-text-color:                                                 color-lighten(@neutral, 50);
@@ -90,6 +108,7 @@ Text Styling
 @body-inverse-muted-text-shadow:                                                null;
 @body-inverse-muted-text-decoration:                                            null;
 @body-inverse-muted-text-rendering:                                             null;
+@body-inverse-muted-text-opacity:                                               null;
 
 
 
@@ -99,60 +118,126 @@ Text Size
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
+// Font Size
+
 @body-text-font-size:                                                           16px;
-@body-text-line-height:                                                         1.2rem;
-@body-text-margin-top:                                                          0px;
-@body-text-margin-bottom:                                                       0.8rem;
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text Margin Variants
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-@body-text-margin-variants:                                                     short, tall;
-
-// Short
-
-@body-text-short-margin-top:                                                    null;
-@body-text-short-margin-bottom:                                                 0.5;
-
-// Tall
-
-@body-text-tall-margin-top:                                                     null;
-@body-text-tall-margin-bottom:                                                  2.0;
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text Responsive Scaling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-@body-text-scale-screen-mini:                                                   @screen-mini-enabled;
-@body-text-scale-screen-small:                                                  @screen-small-enabled;
-@body-text-scale-screen-medium:                                                 @screen-medium-enabled;
-@body-text-scale-screen-large:                                                  @screen-large-enabled;
-
 @body-text-font-size-scale-screen-mini:                                         null;
 @body-text-font-size-scale-screen-small:                                        1.05;
 @body-text-font-size-scale-screen-medium:                                       1.1;
 @body-text-font-size-scale-screen-large:                                        null;
 
+// Line Height
+
+@body-text-line-height:                                                         1.2rem;
 @body-text-line-height-scale-screen-mini:                                       @body-text-font-size-scale-screen-mini;
 @body-text-line-height-scale-screen-small:                                      @body-text-font-size-scale-screen-small;
 @body-text-line-height-scale-screen-medium:                                     @body-text-font-size-scale-screen-medium;
 @body-text-line-height-scale-screen-large:                                      @body-text-font-size-scale-screen-large;
 
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@body-text-margin-top:                                                          0px;
 @body-text-margin-top-scale-screen-mini:                                        null;
-@body-text-margin-top-scale-screen-small:                                       1.1;
-@body-text-margin-top-scale-screen-medium:                                      1.2;
+@body-text-margin-top-scale-screen-small:                                       null;
+@body-text-margin-top-scale-screen-medium:                                      null;
 @body-text-margin-top-scale-screen-large:                                       null;
 
+// Margin Bottom
+
+@body-text-margin-bottom:                                                       0.8rem;
 @body-text-margin-bottom-scale-screen-mini:                                     null;
 @body-text-margin-bottom-scale-screen-small:                                    1.1;
 @body-text-margin-bottom-scale-screen-medium:                                   1.2;
 @body-text-margin-bottom-scale-screen-large:                                    null;
+
+// Margin Left
+
+@body-text-margin-left:                                                         null;
+@body-text-margin-left-scale-screen-mini:                                       null;
+@body-text-margin-left-scale-screen-small:                                      null;
+@body-text-margin-left-scale-screen-medium:                                     null;
+@body-text-margin-left-scale-screen-large:                                      null;
+
+// Margin Right
+
+@body-text-margin-right:                                                        null;
+@body-text-margin-right-scale-screen-mini:                                      null;
+@body-text-margin-right-scale-screen-small:                                     null;
+@body-text-margin-right-scale-screen-medium:                                    null;
+@body-text-margin-right-scale-screen-large:                                     null;
+
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+
+// Padding Top
+
+@body-text-padding-top:                                                         null;
+@body-text-padding-top-scale-screen-mini:                                       null;
+@body-text-padding-top-scale-screen-small:                                      null;
+@body-text-padding-top-scale-screen-medium:                                     null;
+@body-text-padding-top-scale-screen-large:                                      null;
+
+// Padding Bottom
+
+@body-text-padding-bottom:                                                      null;
+@body-text-padding-bottom-scale-screen-mini:                                    null;
+@body-text-padding-bottom-scale-screen-small:                                   null;
+@body-text-padding-bottom-scale-screen-medium:                                  null;
+@body-text-padding-bottom-scale-screen-large:                                   null;
+
+// Padding Left
+
+@body-text-padding-left:                                                        null;
+@body-text-padding-left-scale-screen-mini:                                      null;
+@body-text-padding-left-scale-screen-small:                                     null;
+@body-text-padding-left-scale-screen-medium:                                    null;
+@body-text-padding-left-scale-screen-large:                                     null;
+
+// Padding Right
+
+@body-text-padding-right:                                                       null;
+@body-text-padding-right-scale-screen-mini:                                     null;
+@body-text-padding-right-scale-screen-small:                                    null;
+@body-text-padding-right-scale-screen-medium:                                   null;
+@body-text-padding-right-scale-screen-large:                                    null;
+
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
+
+// Short
+
+@body-text-short-margin-top-scale:                                              0.5;
+@body-text-short-margin-bottom-scale:                                           0.5;
+@body-text-short-margin-left-scale:                                             null;
+@body-text-short-margin-right-scale:                                            null;
+
+@body-text-short-padding-top-scale:                                             0.5;
+@body-text-short-padding-bottom-scale:                                          0.5;
+@body-text-short-padding-left-scale:                                            null;
+@body-text-short-padding-right-scale:                                           null;
+
+// Tall
+
+@body-text-tall-margin-top-scale:                                               2.0;
+@body-text-tall-margin-bottom-scale:                                            2.0;
+@body-text-tall-margin-left-scale:                                              null;
+@body-text-tall-margin-right-scale:                                             null;
+
+@body-text-tall-padding-top-scale:                                              2.0;
+@body-text-tall-padding-bottom-scale:                                           2.0;
+@body-text-tall-padding-left-scale:                                             null;
+@body-text-tall-padding-right-scale:                                            null;

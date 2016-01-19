@@ -17,22 +17,25 @@ heading-h4/styles.less
 
   /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
-  h4
+  heading-h4
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
 
   h4,
   .h4 {
 
-    .text-style-variant('heading-h4-text');
-    .text-size-variant('heading-h4-text', null);
+    .text-style-variant(heading-h4-text);
+    .text-size-variant(heading-h4-text, null);
+    .text-layout-variant(heading-h4-text, null);
+    .text-layout-variant(heading-h4-text, short, null);
+    .text-layout-variant(heading-h4-text, tall, null);
 
     & when (@heading-h4-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
 
-        .text-style-variant('heading-h4-emphasis-text');
+        .text-style-variant(heading-h4-emphasis-text);
 
       }
 
@@ -43,7 +46,7 @@ heading-h4/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant('heading-h4-muted-text');
+        .text-style-variant(heading-h4-muted-text);
 
       }
 
@@ -55,14 +58,14 @@ heading-h4/styles.less
 
       &.inverse {
 
-        .text-style-variant('heading-h4-inverse-text');
+        .text-style-variant(heading-h4-inverse-text);
 
         & when (@heading-h4-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant('heading-h4-inverse-emphasis-text');
+            .text-style-variant(heading-h4-inverse-emphasis-text);
 
           }
 
@@ -73,7 +76,7 @@ heading-h4/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant('heading-h4-inverse-muted-text');
+            .text-style-variant(heading-h4-inverse-muted-text);
 
           }
 
@@ -85,7 +88,7 @@ heading-h4/styles.less
 
 
 
-    & when (@screen-mini-enabled) and (@heading-h4-text-scale-screen-mini) {
+    & when (@screen-mini-enabled) and (@heading-h4-text-scale-screen-mini-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -95,7 +98,10 @@ heading-h4/styles.less
 
       @media (min-width: @screen-mini) {
 
-        .text-size-variant('heading-h4-text', 'scale-screen-mini');
+        .text-size-variant(heading-h4-text, scale-screen-mini);
+        .text-layout-variant(heading-h4-text, scale-screen-mini);
+        .text-layout-variant(heading-h4-text, short, scale-screen-mini);
+        .text-layout-variant(heading-h4-text, tall, scale-screen-mini);
 
       }
 
@@ -103,7 +109,7 @@ heading-h4/styles.less
 
 
 
-    & when (@screen-small-enabled) and (@heading-h4-text-scale-screen-small) {
+    & when (@screen-small-enabled) and (@heading-h4-text-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -113,7 +119,10 @@ heading-h4/styles.less
 
       @media (min-width: @screen-small) {
 
-        .text-size-variant('heading-h4-text', 'scale-screen-small');
+        .text-size-variant(heading-h4-text, scale-screen-small);
+        .text-layout-variant(heading-h4-text, scale-screen-small);
+        .text-layout-variant(heading-h4-text, short, scale-screen-small);
+        .text-layout-variant(heading-h4-text, tall, scale-screen-small);
 
       }
 
@@ -121,7 +130,7 @@ heading-h4/styles.less
 
 
 
-    & when (@screen-medium-enabled) and (@heading-h4-text-scale-screen-medium) {
+    & when (@screen-medium-enabled) and (@heading-h4-text-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -131,7 +140,10 @@ heading-h4/styles.less
 
       @media (min-width: @screen-medium) {
 
-        .text-size-variant('heading-h4-text', 'scale-screen-medium');
+        .text-size-variant(heading-h4-text, scale-screen-medium);
+        .text-layout-variant(heading-h4-text, scale-screen-medium);
+        .text-layout-variant(heading-h4-text, short, scale-screen-medium);
+        .text-layout-variant(heading-h4-text, tall, scale-screen-medium);
 
       }
 
@@ -139,7 +151,7 @@ heading-h4/styles.less
 
 
 
-    & when (@screen-large-enabled) and (@heading-h4-text-scale-screen-large) {
+    & when (@screen-large-enabled) and (@heading-h4-text-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -149,7 +161,10 @@ heading-h4/styles.less
 
       @media (min-width: @screen-large) {
 
-        .text-size-variant('heading-h4-text', 'scale-screen-large');
+        .text-size-variant(heading-h4-text, scale-screen-large);
+        .text-layout-variant(heading-h4-text, scale-screen-large);
+        .text-layout-variant(heading-h4-text, short, scale-screen-large);
+        .text-layout-variant(heading-h4-text, tall, scale-screen-large);
 
       }
 
