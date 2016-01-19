@@ -21,11 +21,13 @@ lists/styles.less
     position: relative;
     padding: 0px;
     list-style: none;
-    .text-size-variant('list', null);
+    .text-layout-variant(list, null);
+    .text-layout-variant(list, short, null);
+    .text-layout-variant(list, tall, null);
 
 
 
-    & when (@screen-mini-enabled) and (@list-scale-screen-mini) {
+    & when (@screen-mini-enabled) and (@list-scale-screen-mini-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -35,7 +37,9 @@ lists/styles.less
 
       @media (min-width: @screen-mini) {
 
-        .text-size-variant('list', 'scale-screen-mini');
+        .text-layout-variant(list, scale-screen-mini);
+        .text-layout-variant(list, short, scale-screen-mini);
+        .text-layout-variant(list, tall, scale-screen-mini);
 
       }
 
@@ -43,7 +47,7 @@ lists/styles.less
 
 
 
-    & when (@screen-small-enabled) and (@list-scale-screen-small) {
+    & when (@screen-small-enabled) and (@list-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -53,7 +57,9 @@ lists/styles.less
 
       @media (min-width: @screen-small) {
 
-        .text-size-variant('list', 'scale-screen-small');
+        .text-layout-variant(list, scale-screen-small);
+        .text-layout-variant(list, short, scale-screen-small);
+        .text-layout-variant(list, tall, scale-screen-small);
 
       }
 
@@ -61,7 +67,7 @@ lists/styles.less
 
 
 
-    & when (@screen-medium-enabled) and (@list-scale-screen-medium) {
+    & when (@screen-medium-enabled) and (@list-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -71,7 +77,9 @@ lists/styles.less
 
       @media (min-width: @screen-medium) {
 
-        .text-size-variant('list', 'scale-screen-medium');
+        .text-layout-variant(list, scale-screen-medium);
+        .text-layout-variant(list, short, scale-screen-medium);
+        .text-layout-variant(list, tall, scale-screen-medium);
 
       }
 
@@ -79,7 +87,7 @@ lists/styles.less
 
 
 
-    & when (@screen-large-enabled) and (@list-scale-screen-large) {
+    & when (@screen-large-enabled) and (@list-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -89,7 +97,304 @@ lists/styles.less
 
       @media (min-width: @screen-large) {
 
-        .text-size-variant('list', 'scale-screen-large');
+        .text-layout-variant(list, scale-screen-large);
+        .text-layout-variant(list, short, scale-screen-large);
+        .text-layout-variant(list, tall, scale-screen-large);
+
+      }
+
+    }
+
+
+
+
+
+
+    /* -----------------------------------------------------------------------------
+    List Item
+    ----------------------------------------------------------------------------- */
+
+    li {
+
+      position: relative;
+      .text-layout-variant(list-item, null);
+      .text-layout-variant(list-item, short, null);
+      .text-layout-variant(list-item, tall, null);
+
+      &:before {
+
+        content: '';
+        position: absolute;
+        display: block;
+        .set-if-exists(width, @list-item-bullet-width);
+        .set-if-exists(height, @list-item-bullet-height);
+        .set-if-exists(border-radius, @list-item-bullet-border-radius);
+        .set-if-exists(background-color, @list-item-bullet-color);
+        .set-if-exists(shadow, @list-item-bullet-shadow);
+        .set-if-exists(opacity, @list-item-bullet-opacity);
+        left: 0px;
+
+        & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-height = null) {
+
+          top: floor((@list-item-bullet-line-height - @list-item-bullet-height) / 2);
+
+        }
+
+      }
+
+      &:last-child {
+
+        margin-bottom: 0px;
+
+      }
+
+
+
+      /* -----------------------------------------------------------------------------
+      Nested List
+      ----------------------------------------------------------------------------- */
+
+      > ul,
+      > ol {
+
+        .set-if-exists(margin-bottom, @list-item-margin-bottom);
+        margin-bottom: 0px;
+
+      }
+
+
+
+      & when (@screen-mini-enabled) and (@list-scale-screen-mini-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+        Screen Size: Mini (@screen-mini) and wider
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @screen-mini) {
+
+          .text-layout-variant(list-item, scale-screen-mini);
+          .text-layout-variant(list-item, short, scale-screen-mini);
+          .text-layout-variant(list-item, tall, scale-screen-mini);
+
+          &:before {
+
+            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-mini = null) {
+
+              width: ceil(@list-item-bullet-width * @list-item-bullet-width-scale-screen-mini);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-mini = null) {
+
+              height: ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-mini);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-mini = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-mini = null) {
+
+              top: floor(0.5 * (ceil(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-mini) - ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-mini)));
+
+            }
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-scale-screen-mini = null) and not (@list-item-margin-bottom = null) {
+
+              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-mini;
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+      & when (@screen-small-enabled) and (@list-scale-screen-small-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+        Screen Size: Small (@screen-small) and wider
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @screen-small) {
+
+          .text-layout-variant(list-item, scale-screen-small);
+          .text-layout-variant(list-item, short, scale-screen-small);
+          .text-layout-variant(list-item, tall, scale-screen-small);
+
+          &:before {
+
+            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-small = null) {
+
+              width: ceil(@list-item-bullet-width * @list-item-bullet-width-scale-screen-small);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-small = null) {
+
+              height: ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-small);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-small = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-small = null) {
+
+              top: floor(0.5 * (ceil(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-small) - ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-small)));
+
+            }
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-scale-screen-small = null) and not (@list-item-margin-bottom = null) {
+
+              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-small;
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+      & when (@screen-medium-enabled) and (@list-scale-screen-medium-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+        Screen Size: Medium (@screen-medium) and wider
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @screen-medium) {
+
+          .text-layout-variant(list-item, scale-screen-medium);
+          .text-layout-variant(list-item, short, scale-screen-medium);
+          .text-layout-variant(list-item, tall, scale-screen-medium);
+
+          &:before {
+
+            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-medium = null) {
+
+              width: ceil(@list-item-bullet-width * @list-item-bullet-width-scale-screen-medium);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) {
+
+              height: ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+
+              top: floor(0.5 * (ceil(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium) - ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium)));
+
+            }
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-scale-screen-medium = null) and not (@list-item-margin-bottom = null) {
+
+              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-medium;
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+      & when (@screen-large-enabled) and (@list-scale-screen-large-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+        Screen Size: Large (@screen-large) and wider
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @screen-large) {
+
+          .text-layout-variant(list-item, scale-screen-large);
+          .text-layout-variant(list-item, short, scale-screen-large);
+          .text-layout-variant(list-item, tall, scale-screen-large);
+
+          &:before {
+
+            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-large = null) {
+
+              width: ceil(@list-item-bullet-width * @list-item-bullet-width-scale-screen-large);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-large = null) {
+
+              height: ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-large);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-large = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-large = null) {
+
+              top: floor(0.5 * (ceil(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large) - ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-large)));
+
+            }
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-scale-screen-large = null) and not (@list-item-margin-bottom = null) {
+
+              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-large;
+
+            }
+
+          }
+
+        }
 
       }
 

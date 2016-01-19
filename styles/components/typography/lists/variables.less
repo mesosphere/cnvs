@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
-lists/variables.less
+body/variables.less
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -16,64 +16,277 @@ lists/variables.less
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Text Size
+Responsive Scaling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-@list-font-size:                                                                null;
-@list-line-height:                                                              null;
-@list-margin-top:                                                               @body-text-margin-top;
-@list-margin-bottom:                                                            @body-text-margin-bottom;
+@list-scale-screen-mini-enabled:                                                @screen-mini-enabled;
+@list-scale-screen-small-enabled:                                               @screen-small-enabled;
+@list-scale-screen-medium-enabled:                                              @screen-medium-enabled;
+@list-scale-screen-large-enabled:                                               @screen-large-enabled;
 
 
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Text Margin Variants
+List Layout
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-@list-margin-variants:                                                          short, tall;
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@list-margin-top:                                                               0px;
+@list-margin-top-scale-screen-mini:                                             null;
+@list-margin-top-scale-screen-small:                                            null;
+@list-margin-top-scale-screen-medium:                                           null;
+@list-margin-top-scale-screen-large:                                            null;
+
+// Margin Bottom
+
+@list-margin-bottom:                                                            0.8rem;
+@list-margin-bottom-scale-screen-mini:                                          null;
+@list-margin-bottom-scale-screen-small:                                         1.1;
+@list-margin-bottom-scale-screen-medium:                                        1.2;
+@list-margin-bottom-scale-screen-large:                                         null;
+
+// Margin Left
+
+@list-margin-left:                                                              null;
+@list-margin-left-scale-screen-mini:                                            null;
+@list-margin-left-scale-screen-small:                                           null;
+@list-margin-left-scale-screen-medium:                                          null;
+@list-margin-left-scale-screen-large:                                           null;
+
+// Margin Right
+
+@list-margin-right:                                                             null;
+@list-margin-right-scale-screen-mini:                                           null;
+@list-margin-right-scale-screen-small:                                          null;
+@list-margin-right-scale-screen-medium:                                         null;
+@list-margin-right-scale-screen-large:                                          null;
+
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+
+// Padding Top
+
+@list-padding-top:                                                              null;
+@list-padding-top-scale-screen-mini:                                            null;
+@list-padding-top-scale-screen-small:                                           null;
+@list-padding-top-scale-screen-medium:                                          null;
+@list-padding-top-scale-screen-large:                                           null;
+
+// Padding Bottom
+
+@list-padding-bottom:                                                           null;
+@list-padding-bottom-scale-screen-mini:                                         null;
+@list-padding-bottom-scale-screen-small:                                        null;
+@list-padding-bottom-scale-screen-medium:                                       null;
+@list-padding-bottom-scale-screen-large:                                        null;
+
+// Padding Left
+
+@list-padding-left:                                                             null;
+@list-padding-left-scale-screen-mini:                                           null;
+@list-padding-left-scale-screen-small:                                          null;
+@list-padding-left-scale-screen-medium:                                         null;
+@list-padding-left-scale-screen-large:                                          null;
+
+// Padding Right
+
+@list-padding-right:                                                            null;
+@list-padding-right-scale-screen-mini:                                          null;
+@list-padding-right-scale-screen-small:                                         null;
+@list-padding-right-scale-screen-medium:                                        null;
+@list-padding-right-scale-screen-large:                                         null;
+
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
 
 // Short
 
-@list-short-margin-top:                                                         @body-text-short-margin-top;
-@list-short-margin-bottom:                                                      @body-text-short-margin-bottom;
+@list-short-margin-top-scale:                                                   0.5;
+@list-short-margin-bottom-scale:                                                0.5;
+@list-short-margin-left-scale:                                                  null;
+@list-short-margin-right-scale:                                                 null;
+
+@list-short-padding-top-scale:                                                  0.5;
+@list-short-padding-bottom-scale:                                               0.5;
+@list-short-padding-left-scale:                                                 null;
+@list-short-padding-right-scale:                                                null;
 
 // Tall
 
-@list-tall-margin-top:                                                          @body-text-tall-margin-top;
-@list-tall-margin-bottom:                                                       @body-text-tall-margin-bottom;
+@list-tall-margin-top-scale:                                                    2.0;
+@list-tall-margin-bottom-scale:                                                 2.0;
+@list-tall-margin-left-scale:                                                   null;
+@list-tall-margin-right-scale:                                                  null;
+
+@list-tall-padding-top-scale:                                                   2.0;
+@list-tall-padding-bottom-scale:                                                2.0;
+@list-tall-padding-left-scale:                                                  null;
+@list-tall-padding-right-scale:                                                 null;
 
 
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Text Responsive Scaling
+List Item
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-@list-scale-screen-mini:                                                        @screen-mini-enabled;
-@list-scale-screen-small:                                                       @screen-small-enabled;
-@list-scale-screen-medium:                                                      @screen-medium-enabled;
-@list-scale-screen-large:                                                       @screen-large-enabled;
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
 
-@list-font-size-scale-screen-mini:                                              null;
-@list-font-size-scale-screen-small:                                             null;
-@list-font-size-scale-screen-medium:                                            null;
-@list-font-size-scale-screen-large:                                             null;
 
-@list-line-height-scale-screen-mini:                                            null;
-@list-line-height-scale-screen-small:                                           null;
-@list-line-height-scale-screen-medium:                                          null;
-@list-line-height-scale-screen-large:                                           null;
+// Normal
 
-@list-margin-top-scale-screen-mini:                                             @body-text-margin-top-scale-screen-mini;
-@list-margin-top-scale-screen-small:                                            @body-text-margin-top-scale-screen-small;
-@list-margin-top-scale-screen-medium:                                           @body-text-margin-top-scale-screen-medium;
-@list-margin-top-scale-screen-large:                                            @body-text-margin-top-scale-screen-large;
+@list-item-bullet-color:                                                        color-lighten(@neutral, 20);
+@list-item-bullet-shadow:                                                       null;
+@list-item-bullet-opacity:                                                      null;
 
-@list-margin-bottom-scale-screen-mini:                                          @body-text-margin-bottom-scale-screen-mini;
-@list-margin-bottom-scale-screen-small:                                         @body-text-margin-bottom-scale-screen-small;
-@list-margin-bottom-scale-screen-medium:                                        @body-text-margin-bottom-scale-screen-medium;
-@list-margin-bottom-scale-screen-large:                                         @body-text-margin-bottom-scale-screen-large;
+// Inverse (.inverse)
+
+@list-item-inverse-bullet-enabled:                                              true;
+@list-item-inverse-bullet-color:                                                color-lighten(@neutral, 70);
+@list-item-inverse-bullet-shadow:                                               null;
+@list-item-inverse-bullet-opacity:                                              null;
+
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+
+// Border Radius
+
+@list-item-bullet-border-radius:                                                50%;
+
+// Width
+
+@list-item-bullet-width:                                                        16px * 0.3;
+@list-item-bullet-width-scale-screen-mini:                                      null;
+@list-item-bullet-width-scale-screen-small:                                     1.05;
+@list-item-bullet-width-scale-screen-medium:                                    1.1;
+@list-item-bullet-width-scale-screen-large:                                     null;
+
+// Height
+
+@list-item-bullet-height:                                                       16px * 0.3;
+@list-item-bullet-height-scale-screen-mini:                                     null;
+@list-item-bullet-height-scale-screen-small:                                    1.05;
+@list-item-bullet-height-scale-screen-medium:                                   1.1;
+@list-item-bullet-height-scale-screen-large:                                    null;
+
+// Line Height
+
+@list-item-bullet-line-height:                                                  16px * 1.4;
+@list-item-bullet-line-height-scale-screen-mini:                                null;
+@list-item-bullet-line-height-scale-screen-small:                               1.05;
+@list-item-bullet-line-height-scale-screen-medium:                              1.1;
+@list-item-bullet-line-height-scale-screen-large:                               null;
+
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@list-item-margin-top:                                                          0px;
+@list-item-margin-top-scale-screen-mini:                                        null;
+@list-item-margin-top-scale-screen-small:                                       null;
+@list-item-margin-top-scale-screen-medium:                                      null;
+@list-item-margin-top-scale-screen-large:                                       null;
+
+// Margin Bottom
+
+@list-item-margin-bottom:                                                       0.8rem * 0.5;
+@list-item-margin-bottom-scale-screen-mini:                                     null;
+@list-item-margin-bottom-scale-screen-small:                                    1.1;
+@list-item-margin-bottom-scale-screen-medium:                                   1.2;
+@list-item-margin-bottom-scale-screen-large:                                    null;
+
+// Margin Left
+
+@list-item-margin-left:                                                         null;
+@list-item-margin-left-scale-screen-mini:                                       null;
+@list-item-margin-left-scale-screen-small:                                      null;
+@list-item-margin-left-scale-screen-medium:                                     null;
+@list-item-margin-left-scale-screen-large:                                      null;
+
+// Margin Right
+
+@list-item-margin-right:                                                        null;
+@list-item-margin-right-scale-screen-mini:                                      null;
+@list-item-margin-right-scale-screen-small:                                     null;
+@list-item-margin-right-scale-screen-medium:                                    null;
+@list-item-margin-right-scale-screen-large:                                     null;
+
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+
+// Padding Top
+
+@list-item-padding-top:                                                         null;
+@list-item-padding-top-scale-screen-mini:                                       null;
+@list-item-padding-top-scale-screen-small:                                      null;
+@list-item-padding-top-scale-screen-medium:                                     null;
+@list-item-padding-top-scale-screen-large:                                      null;
+
+// Padding Bottom
+
+@list-item-padding-bottom:                                                      null;
+@list-item-padding-bottom-scale-screen-mini:                                    null;
+@list-item-padding-bottom-scale-screen-small:                                   null;
+@list-item-padding-bottom-scale-screen-medium:                                  null;
+@list-item-padding-bottom-scale-screen-large:                                   null;
+
+// Padding Left
+
+@list-item-padding-left:                                                        0.8rem * 1.5;
+@list-item-padding-left-scale-screen-mini:                                      null;
+@list-item-padding-left-scale-screen-small:                                     1.1;
+@list-item-padding-left-scale-screen-medium:                                    1.2;
+@list-item-padding-left-scale-screen-large:                                     null;
+
+// Padding Right
+
+@list-item-padding-right:                                                       null;
+@list-item-padding-right-scale-screen-mini:                                     null;
+@list-item-padding-right-scale-screen-small:                                    null;
+@list-item-padding-right-scale-screen-medium:                                   null;
+@list-item-padding-right-scale-screen-large:                                    null;
+
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
+
+// Short
+
+@list-item-short-margin-top-scale:                                              0.5;
+@list-item-short-margin-bottom-scale:                                           0.5;
+@list-item-short-margin-left-scale:                                             null;
+@list-item-short-margin-right-scale:                                            null;
+
+@list-item-short-padding-top-scale:                                             0.5;
+@list-item-short-padding-bottom-scale:                                          0.5;
+@list-item-short-padding-left-scale:                                            null;
+@list-item-short-padding-right-scale:                                           null;
+
+// Tall
+
+@list-item-tall-margin-top-scale:                                               2.0;
+@list-item-tall-margin-bottom-scale:                                            2.0;
+@list-item-tall-margin-left-scale:                                              null;
+@list-item-tall-margin-right-scale:                                             null;
+
+@list-item-tall-padding-top-scale:                                              2.0;
+@list-item-tall-padding-bottom-scale:                                           2.0;
+@list-item-tall-padding-left-scale:                                             null;
+@list-item-tall-padding-right-scale:                                            null;
