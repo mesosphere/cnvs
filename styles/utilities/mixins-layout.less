@@ -15,6 +15,134 @@ utilities/mixins-layout.less
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Shape layout Variant
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.shape-layout-variant (@element, @size) {
+
+  .layout-variant (@element, margin-top, @size);
+  .layout-variant (@element, margin-bottom, @size);
+  .layout-variant (@element, margin-left, @size);
+  .layout-variant (@element, margin-right, @size);
+  .layout-variant (@element, padding-top, @size);
+  .layout-variant (@element, padding-bottom, @size);
+  .layout-variant (@element, padding-left, @size);
+  .layout-variant (@element, padding-right, @size);
+
+}
+
+
+
+.shape-layout-variant(@element, @class, @size) {
+
+  &.@{class} {
+
+    .layout-variant (@element, @class, margin-top, @size);
+    .layout-variant (@element, @class, margin-bottom, @size);
+    .layout-variant (@element, @class, margin-left, @size);
+    .layout-variant (@element, @class, margin-right, @size);
+    .layout-variant (@element, @class, padding-top, @size);
+    .layout-variant (@element, @class, padding-bottom, @size);
+    .layout-variant (@element, @class, padding-left, @size);
+    .layout-variant (@element, @class, padding-right, @size);
+
+  }
+
+  &.@{class}-top {
+
+    .layout-variant (@element, @class, margin-top, @size);
+    .layout-variant (@element, @class, padding-top, @size);
+
+  }
+
+  &.@{class}-bottom {
+
+    .layout-variant (@element, @class, margin-bottom, @size);
+    .layout-variant (@element, @class, padding-bottom, @size);
+
+  }
+
+  &.@{class}-left {
+
+    .layout-variant (@element, @class, margin-left, @size);
+    .layout-variant (@element, @class, padding-left, @size);
+
+  }
+
+  &.@{class}-right {
+
+    .layout-variant (@element, @class, margin-right, @size);
+    .layout-variant (@element, @class, padding-right, @size);
+
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout Variant
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.layout-variant (@element, @property, @size) when (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+
+  & when not (@@element-property = null) {
+
+    @{property}: @@element-property;
+
+  }
+
+}
+
+.layout-variant (@element, @property, @size) when not (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-scale: "@{element}-@{property}-@{size}";
+
+  & when not (@@element-property = null) and not (@@element-scale = null) {
+
+    @{property}: @@element-property * @@element-scale;
+
+  }
+
+}
+
+.layout-variant (@element, @class, @property, @size) when (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
+
+  & when not (@@element-property = null) and not (@@element-subclass-scale = null) {
+
+    @{property}: @@element-property * @@element-subclass-scale;
+
+  }
+
+}
+
+.layout-variant (@element, @class, @property, @size) when not (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-scale: "@{element}-@{property}-@{size}";
+  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
+
+  & when not (@@element-property = null) and not (@@element-scale = null) and not (@@element-subclass-scale = null) {
+
+    @{property}: @@element-property * @@element-scale * @@element-subclass-scale;
+
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 Clearfix
 
