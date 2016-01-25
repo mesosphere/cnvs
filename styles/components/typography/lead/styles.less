@@ -13,7 +13,7 @@ lead/styles.less
 
 
 
-& when (@lead-text-enabled) {
+& when (@lead-enabled) {
 
   /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
@@ -23,18 +23,19 @@ lead/styles.less
 
   .lead {
 
-    .text-style-variant(lead-text);
-    .text-size-variant(lead-text, null);
-    .text-layout-variant(lead-text, null);
-    .text-layout-variant(lead-text, short, null);
-    .text-layout-variant(lead-text, tall, null);
+    display: block;
+    .text-style-variant(lead);
+    .text-size-variant(lead, null);
+    .shape-layout-variant(lead, null);
+    .shape-layout-variant(lead, short, null);
+    .shape-layout-variant(lead, tall, null);
 
     & when (@lead-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(lead-emphasis-text);
+        .text-style-variant(lead-emphasis);
 
       }
 
@@ -45,7 +46,7 @@ lead/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(lead-muted-text);
+        .text-style-variant(lead-muted);
 
       }
 
@@ -57,14 +58,14 @@ lead/styles.less
 
       &.inverse {
 
-        .text-style-variant(lead-inverse-text);
+        .text-style-variant(lead-inverse);
 
         & when (@lead-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(lead-inverse-emphasis-text);
+            .text-style-variant(lead-inverse-emphasis);
 
           }
 
@@ -75,7 +76,7 @@ lead/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(lead-inverse-muted-text);
+            .text-style-variant(lead-inverse-muted);
 
           }
 
@@ -87,7 +88,7 @@ lead/styles.less
 
 
 
-    & when (@screen-mini-enabled) and (@lead-text-scale-screen-mini-enabled) {
+    & when (@screen-mini-enabled) and (@lead-scale-screen-mini-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -97,10 +98,10 @@ lead/styles.less
 
       @media (min-width: @screen-mini) {
 
-        .text-size-variant(lead-text, scale-screen-mini);
-        .text-layout-variant(lead-text, scale-screen-mini);
-        .text-layout-variant(lead-text, short, scale-screen-mini);
-        .text-layout-variant(lead-text, tall, scale-screen-mini);
+        .text-size-variant(lead, scale-screen-mini);
+        .shape-layout-variant(lead, scale-screen-mini);
+        .shape-layout-variant(lead, short, scale-screen-mini);
+        .shape-layout-variant(lead, tall, scale-screen-mini);
 
       }
 
@@ -108,7 +109,7 @@ lead/styles.less
 
 
 
-    & when (@screen-small-enabled) and (@lead-text-scale-screen-small-enabled) {
+    & when (@screen-small-enabled) and (@lead-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -118,10 +119,10 @@ lead/styles.less
 
       @media (min-width: @screen-small) {
 
-        .text-size-variant(lead-text, scale-screen-small);
-        .text-layout-variant(lead-text, scale-screen-small);
-        .text-layout-variant(lead-text, short, scale-screen-small);
-        .text-layout-variant(lead-text, tall, scale-screen-small);
+        .text-size-variant(lead, scale-screen-small);
+        .shape-layout-variant(lead, scale-screen-small);
+        .shape-layout-variant(lead, short, scale-screen-small);
+        .shape-layout-variant(lead, tall, scale-screen-small);
 
       }
 
@@ -129,7 +130,7 @@ lead/styles.less
 
 
 
-    & when (@screen-medium-enabled) and (@lead-text-scale-screen-medium-enabled) {
+    & when (@screen-medium-enabled) and (@lead-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -139,10 +140,10 @@ lead/styles.less
 
       @media (min-width: @screen-medium) {
 
-        .text-size-variant(lead-text, scale-screen-medium);
-        .text-layout-variant(lead-text, scale-screen-medium);
-        .text-layout-variant(lead-text, short, scale-screen-medium);
-        .text-layout-variant(lead-text, tall, scale-screen-medium);
+        .text-size-variant(lead, scale-screen-medium);
+        .shape-layout-variant(lead, scale-screen-medium);
+        .shape-layout-variant(lead, short, scale-screen-medium);
+        .shape-layout-variant(lead, tall, scale-screen-medium);
 
       }
 
@@ -150,7 +151,7 @@ lead/styles.less
 
 
 
-    & when (@screen-large-enabled) and (@lead-text-scale-screen-large-enabled) {
+    & when (@screen-large-enabled) and (@lead-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -160,10 +161,10 @@ lead/styles.less
 
       @media (min-width: @screen-large) {
 
-        .text-size-variant(lead-text, scale-screen-large);
-        .text-layout-variant(lead-text, scale-screen-large);
-        .text-layout-variant(lead-text, short, scale-screen-large);
-        .text-layout-variant(lead-text, tall, scale-screen-large);
+        .text-size-variant(lead, scale-screen-large);
+        .shape-layout-variant(lead, scale-screen-large);
+        .shape-layout-variant(lead, short, scale-screen-large);
+        .shape-layout-variant(lead, tall, scale-screen-large);
 
       }
 
