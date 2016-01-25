@@ -1,0 +1,178 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-mini/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  button-mini
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-mini {
+
+    .text-size-variant(button-mini, null);
+    .shape-layout-variant(button-mini, null);
+    .shape-layout-variant(button-mini, narrow, null);
+    .shape-layout-variant(button-mini, wide, null);
+
+    & when not (@button-mini-height = null) {
+
+      height: @button-mini-height;
+
+    }
+
+    & when not (@button-mini-border-radius = null) {
+
+      border-radius: @button-mini-border-radius;
+
+    }
+
+
+
+
+    & when (@screen-mini-enabled) and (@button-mini-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Mini (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-mini) {
+
+        .text-size-variant(button-mini, scale-screen-mini);
+        .shape-layout-variant(button-mini, scale-screen-mini);
+        .shape-layout-variant(button-mini, narrow, scale-screen-mini);
+        .shape-layout-variant(button-mini, wide, scale-screen-mini);
+
+        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-mini = null) {
+
+          height: @button-mini-height * @button-mini-height-scale-screen-mini;
+
+        }
+
+        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-mini = null) {
+
+          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-small-enabled) and (@button-mini-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Small (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-small) {
+
+        .text-size-variant(button-mini, scale-screen-small);
+        .shape-layout-variant(button-mini, scale-screen-small);
+        .shape-layout-variant(button-mini, narrow, scale-screen-small);
+        .shape-layout-variant(button-mini, wide, scale-screen-small);
+
+        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-small = null) {
+
+          height: @button-mini-height * @button-mini-height-scale-screen-small;
+
+        }
+
+        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-small = null) {
+
+          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-small;
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-medium-enabled) and (@button-mini-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Medium (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-medium) {
+
+        .text-size-variant(button-mini, scale-screen-medium);
+        .shape-layout-variant(button-mini, scale-screen-medium);
+        .shape-layout-variant(button-mini, narrow, scale-screen-medium);
+        .shape-layout-variant(button-mini, wide, scale-screen-medium);
+
+        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-medium = null) {
+
+          height: @button-mini-height * @button-mini-height-scale-screen-medium;
+
+        }
+
+        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-medium = null) {
+
+          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-medium;
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-large-enabled) and (@button-mini-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-large) {
+
+        .text-size-variant(button-mini, scale-screen-large);
+        .shape-layout-variant(button-mini, scale-screen-large);
+        .shape-layout-variant(button-mini, narrow, scale-screen-large);
+        .shape-layout-variant(button-mini, wide, scale-screen-large);
+
+        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-large = null) {
+
+          height: @button-mini-height * @button-mini-height-scale-screen-large;
+
+        }
+
+        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-large = null) {
+
+          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

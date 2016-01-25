@@ -26,7 +26,6 @@ Text Style Variant
   @element-text-shadow: "@{element}-text-shadow";
   @element-text-decoration: "@{element}-text-decoration";
   @element-text-rendering: "@{element}-text-rendering";
-  @element-text-opacity: "@{element}-text-opacity";
 
   & when not (@@element-text-color = null) {
 
@@ -73,12 +72,6 @@ Text Style Variant
   & when not (@@element-text-rendering = null) {
 
     text-rendering: @@element-text-rendering;
-
-  }
-
-  & when not (@@element-text-opacity = null) {
-
-    opacity: @@element-text-opacity;
 
   }
 

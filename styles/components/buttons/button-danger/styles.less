@@ -1,0 +1,60 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-danger/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-danger-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Button (.button-danger)
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-danger {
+
+    .text-style-variant(button-danger);
+    .shape-style-variant(button-danger);
+
+    &:hover {
+
+      .text-style-variant(button-danger-hover);
+      .shape-style-variant(button-danger-hover);
+
+    }
+
+    &:active {
+
+      .text-style-variant(button-danger-active);
+      .shape-style-variant(button-danger-active);
+
+    }
+
+    &.selected {
+
+      .text-style-variant(button-danger-selected);
+      .shape-style-variant(button-danger-selected);
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(button-danger-disabled);
+      .shape-style-variant(button-danger-disabled);
+
+    }
+
+  }
+
+}

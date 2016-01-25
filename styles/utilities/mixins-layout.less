@@ -36,7 +36,7 @@ Shape layout Variant
 
 .shape-layout-variant(@element, @class, @size) {
 
-  &.@{class} {
+  &.@{element}-@{class} {
 
     .layout-variant (@element, @class, margin-top, @size);
     .layout-variant (@element, @class, margin-bottom, @size);
@@ -49,28 +49,28 @@ Shape layout Variant
 
   }
 
-  &.@{class}-top {
+  &.@{element}-@{class}-top {
 
     .layout-variant (@element, @class, margin-top, @size);
     .layout-variant (@element, @class, padding-top, @size);
 
   }
 
-  &.@{class}-bottom {
+  &.@{element}-@{class}-bottom {
 
     .layout-variant (@element, @class, margin-bottom, @size);
     .layout-variant (@element, @class, padding-bottom, @size);
 
   }
 
-  &.@{class}-left {
+  &.@{element}-@{class}-left {
 
     .layout-variant (@element, @class, margin-left, @size);
     .layout-variant (@element, @class, padding-left, @size);
 
   }
 
-  &.@{class}-right {
+  &.@{element}-@{class}-right {
 
     .layout-variant (@element, @class, margin-right, @size);
     .layout-variant (@element, @class, padding-right, @size);

@@ -1,0 +1,60 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-primary/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-primary-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Button (.button-primary)
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-primary {
+
+    .text-style-variant(button-primary);
+    .shape-style-variant(button-primary);
+
+    &:hover {
+
+      .text-style-variant(button-primary-hover);
+      .shape-style-variant(button-primary-hover);
+
+    }
+
+    &:active {
+
+      .text-style-variant(button-primary-active);
+      .shape-style-variant(button-primary-active);
+
+    }
+
+    &.selected {
+
+      .text-style-variant(button-primary-selected);
+      .shape-style-variant(button-primary-selected);
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(button-primary-disabled);
+      .shape-style-variant(button-primary-disabled);
+
+    }
+
+  }
+
+}
