@@ -15,6 +15,12 @@ lists/styles.less
 
 & when (@list-enabled) {
 
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Lists
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
   ul,
   ol {
 
@@ -126,8 +132,8 @@ lists/styles.less
         content: '';
         position: absolute;
         display: block;
-        .set-if-exists(width, @list-item-bullet-width);
-        .set-if-exists(height, @list-item-bullet-height);
+        .set-if-exists(width, floor(@list-item-bullet-width));
+        .set-if-exists(height, floor(@list-item-bullet-height));
         .set-if-exists(border-radius, @list-item-bullet-border-radius);
         .set-if-exists(background-color, @list-item-bullet-color);
         .set-if-exists(shadow, @list-item-bullet-shadow);
@@ -182,19 +188,19 @@ lists/styles.less
 
             & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-mini = null) {
 
-              width: ceil(@list-item-bullet-width * @list-item-bullet-width-scale-screen-mini);
+              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-mini);
 
             }
 
             & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-mini = null) {
 
-              height: ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-mini);
+              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-mini);
 
             }
 
             & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-mini = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-mini = null) {
 
-              top: floor(0.5 * (ceil(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-mini) - ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-mini)));
+              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-mini) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-mini)));
 
             }
 
@@ -241,19 +247,19 @@ lists/styles.less
 
             & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-small = null) {
 
-              width: ceil(@list-item-bullet-width * @list-item-bullet-width-scale-screen-small);
+              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-small);
 
             }
 
             & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-small = null) {
 
-              height: ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-small);
+              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-small);
 
             }
 
             & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-small = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-small = null) {
 
-              top: floor(0.5 * (ceil(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-small) - ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-small)));
+              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-small) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-small)));
 
             }
 
@@ -300,19 +306,19 @@ lists/styles.less
 
             & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-medium = null) {
 
-              width: ceil(@list-item-bullet-width * @list-item-bullet-width-scale-screen-medium);
+              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-medium);
 
             }
 
             & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) {
 
-              height: ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium);
+              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium);
 
             }
 
             & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
 
-              top: floor(0.5 * (ceil(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium) - ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium)));
+              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium)));
 
             }
 
@@ -359,19 +365,19 @@ lists/styles.less
 
             & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-large = null) {
 
-              width: ceil(@list-item-bullet-width * @list-item-bullet-width-scale-screen-large);
+              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-large);
 
             }
 
             & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-large = null) {
 
-              height: ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-large);
+              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-large);
 
             }
 
             & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-large = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-large = null) {
 
-              top: floor(0.5 * (ceil(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large) - ceil(@list-item-bullet-height * @list-item-bullet-height-scale-screen-large)));
+              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-large)));
 
             }
 
@@ -389,6 +395,557 @@ lists/styles.less
             & when not (@list-item-margin-bottom-scale-screen-large = null) and not (@list-item-margin-bottom = null) {
 
               margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-large;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Unstyled List
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    &.list-unstyled {
+
+      > li {
+
+        padding-left: 0px;
+
+        &:before {
+
+          display: none;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Inline List
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    &.list-inline {
+
+      .clearfix();
+      & when not (@list-inline-margin-vertical = null) {
+
+        margin-top: -@list-inline-margin-vertical;
+
+      }
+
+      & when not (@list-inline-margin-horizontal = null) {
+
+        margin-left: -@list-inline-margin-horizontal;
+
+      }
+
+      > li {
+
+        padding-left: 0px;
+        float: left;
+        display: block;
+        margin-bottom: 0px;
+
+        & when not (@list-inline-margin-vertical = null) {
+
+          margin-top: @list-inline-margin-vertical;
+
+        }
+
+        & when not (@list-inline-margin-horizontal = null) {
+
+          margin-left: @list-inline-margin-horizontal;
+
+        }
+
+        &:before {
+
+          display: none;
+
+        }
+
+      }
+
+      & when (@screen-mini-enabled) and (@list-scale-screen-mini-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+        Screen Size: Mini (@screen-mini) and wider
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @screen-mini) {
+
+          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-mini = null) {
+
+            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-mini);
+
+          }
+
+          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-mini = null) {
+
+            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-mini);
+
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-mini = null) {
+
+              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-mini);
+
+            }
+
+            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-mini = null) {
+
+              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-mini);
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+      & when (@screen-small-enabled) and (@list-scale-screen-small-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+        Screen Size: Small (@screen-small) and wider
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @screen-small) {
+
+          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-small = null) {
+
+            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-small);
+
+          }
+
+          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-small = null) {
+
+            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-small);
+
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-small = null) {
+
+              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-small);
+
+            }
+
+            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-small = null) {
+
+              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-small);
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+      & when (@screen-medium-enabled) and (@list-scale-screen-medium-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+        Screen Size: Medium (@screen-medium) and wider
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @screen-medium) {
+
+          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-medium = null) {
+
+            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-medium);
+
+          }
+
+          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-medium = null) {
+
+            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-medium);
+
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-medium = null) {
+
+              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-medium);
+
+            }
+
+            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-medium = null) {
+
+              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-medium);
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+      & when (@screen-large-enabled) and (@list-scale-screen-large-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+        Screen Size: Large (@screen-large) and wider
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @screen-large) {
+
+          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-large = null) {
+
+            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-large);
+
+          }
+
+          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-large = null) {
+
+            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-large);
+
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-large = null) {
+
+              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-large);
+
+            }
+
+            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-large = null) {
+
+              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-large);
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Ordered Lists
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  ol {
+
+    counter-reset:li;
+
+    > li {
+
+      &:before {
+
+        content: counter(li) + ".";
+        counter-increment:li;
+        text-align: left;
+        background: none;
+        top: 0px;
+        border-radius: 0px;
+        .set-if-exists(color, @list-item-bullet-color);
+        & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+
+          height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium;
+
+        }
+
+      }
+
+      > ol {
+
+        &.a {
+
+          li {
+
+            &:before {
+
+              content: counter(li, lower-alpha) + ".";
+
+            }
+
+          }
+
+        }
+
+        &.A {
+
+          li {
+
+            &:before {
+
+              content: counter(li, upper-alpha) + ".";
+
+            }
+
+          }
+
+        }
+
+        &.i {
+
+          li {
+
+            &:before {
+
+              content: counter(li, lower-roman) + ".";
+
+            }
+
+          }
+
+        }
+
+        &.I {
+
+          li {
+
+            &:before {
+
+              content: counter(li, upper-roman) + ".";
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &.a {
+
+      li {
+
+        &:before {
+
+          content: counter(li, lower-alpha) + ".";
+
+        }
+
+      }
+
+    }
+
+    &.A {
+
+      li {
+
+        &:before {
+
+          content: counter(li, upper-alpha) + ".";
+
+        }
+
+      }
+
+    }
+
+    &.i {
+
+      li {
+
+        &:before {
+
+          content: counter(li, lower-roman) + ".";
+
+        }
+
+      }
+
+    }
+
+    &.I {
+
+      li {
+
+        &:before {
+
+          content: counter(li, upper-roman) + ".";
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@bdoy-text-inverse-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Inverse
+      ----------------------------------------------------------------------------- */
+
+      &.inverse {
+
+        /* -----------------------------------------------------------------------------
+        List Item
+        ----------------------------------------------------------------------------- */
+
+        li {
+
+          &:before {
+
+            .set-if-exists(color, @list-item-inverse-bullet-color);
+            background: none;
+            width: auto;
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-mini-enabled) and (@list-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Mini (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-mini) {
+
+        > li {
+
+          &:before {
+
+            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-mini = null) {
+
+              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-mini;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-small-enabled) and (@list-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Small (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-small) {
+
+        > li {
+
+          &:before {
+
+            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-small = null) {
+
+              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-small;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-medium-enabled) and (@list-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Medium (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-medium) {
+
+        > li {
+
+          &:before {
+
+            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+
+              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-large-enabled) and (@list-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-large) {
+
+        > li {
+
+          &:before {
+
+            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-large = null) {
+
+              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large;
 
             }
 

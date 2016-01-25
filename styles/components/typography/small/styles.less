@@ -1,0 +1,174 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+small/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@small-text-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  small
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .small {
+
+    .text-style-variant(small-text);
+    .text-size-variant(small-text, null);
+    .text-layout-variant(small-text, null);
+    .text-layout-variant(small-text, short, null);
+    .text-layout-variant(small-text, tall, null);
+
+    & when (@small-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+
+        .text-style-variant(small-emphasis-text);
+
+      }
+
+    }
+
+    & when (@small-muted-enabled) {
+
+      &.muted,
+      .muted {
+
+        .text-style-variant(small-muted-text);
+
+      }
+
+    }
+
+
+
+    & when (@small-inverse-enabled) {
+
+      &.inverse {
+
+        .text-style-variant(small-inverse-text);
+
+        & when (@small-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+
+            .text-style-variant(small-inverse-emphasis-text);
+
+          }
+
+        }
+
+        & when (@small-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+
+            .text-style-variant(small-inverse-muted-text);
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-mini-enabled) and (@small-text-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Mini (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-mini) {
+
+        .text-size-variant(small-text, scale-screen-mini);
+        .text-layout-variant(small-text, scale-screen-mini);
+        .text-layout-variant(small-text, short, scale-screen-mini);
+        .text-layout-variant(small-text, tall, scale-screen-mini);
+
+      }
+
+    }
+
+
+
+    & when (@screen-small-enabled) and (@small-text-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Small (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-small) {
+
+        .text-size-variant(small-text, scale-screen-small);
+        .text-layout-variant(small-text, scale-screen-small);
+        .text-layout-variant(small-text, short, scale-screen-small);
+        .text-layout-variant(small-text, tall, scale-screen-small);
+
+      }
+
+    }
+
+
+
+    & when (@screen-medium-enabled) and (@small-text-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Medium (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-medium) {
+
+        .text-size-variant(small-text, scale-screen-medium);
+        .text-layout-variant(small-text, scale-screen-medium);
+        .text-layout-variant(small-text, short, scale-screen-medium);
+        .text-layout-variant(small-text, tall, scale-screen-medium);
+
+      }
+
+    }
+
+
+
+    & when (@screen-large-enabled) and (@small-text-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-large) {
+
+        .text-size-variant(small-text, scale-screen-large);
+        .text-layout-variant(small-text, scale-screen-large);
+        .text-layout-variant(small-text, short, scale-screen-large);
+        .text-layout-variant(small-text, tall, scale-screen-large);
+
+      }
+
+    }
+
+  }
+
+}
