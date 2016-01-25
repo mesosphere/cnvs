@@ -1,0 +1,61 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-outline/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-outline-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Button (.button-outline)
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-outline,
+  .button-stroke {
+
+    .text-style-variant(button-outline);
+    .shape-style-variant(button-outline);
+
+    &:hover {
+
+      .text-style-variant(button-outline-hover);
+      .shape-style-variant(button-outline-hover);
+
+    }
+
+    &:active {
+
+      .text-style-variant(button-outline-active);
+      .shape-style-variant(button-outline-active);
+
+    }
+
+    &.selected {
+
+      .text-style-variant(button-outline-selected);
+      .shape-style-variant(button-outline-selected);
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(button-outline-disabled);
+      .shape-style-variant(button-outline-disabled);
+
+    }
+
+  }
+
+}

@@ -13,7 +13,7 @@ body/styles.less
 
 
 
-& when (@body-text-enabled) {
+& when (@body-enabled) {
 
   /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
@@ -25,18 +25,19 @@ body/styles.less
   body,
   p {
 
-    .text-style-variant(body-text);
-    .text-size-variant(body-text, null);
-    .text-layout-variant(body-text, null);
-    .text-layout-variant(body-text, short, null);
-    .text-layout-variant(body-text, tall, null);
+    display: block;
+    .text-style-variant(body);
+    .text-size-variant(body, null);
+    .shape-layout-variant(body, null);
+    .shape-layout-variant(body, short, null);
+    .shape-layout-variant(body, tall, null);
 
     & when (@body-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(body-emphasis-text);
+        .text-style-variant(body-emphasis);
 
       }
 
@@ -47,7 +48,7 @@ body/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(body-muted-text);
+        .text-style-variant(body-muted);
 
       }
 
@@ -59,14 +60,14 @@ body/styles.less
 
       &.inverse {
 
-        .text-style-variant(body-inverse-text);
+        .text-style-variant(body-inverse);
 
         & when (@body-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(body-inverse-emphasis-text);
+            .text-style-variant(body-inverse-emphasis);
 
           }
 
@@ -77,7 +78,7 @@ body/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(body-inverse-muted-text);
+            .text-style-variant(body-inverse-muted);
 
           }
 
@@ -89,7 +90,7 @@ body/styles.less
 
 
 
-    & when (@screen-mini-enabled) and (@body-text-scale-screen-mini-enabled) {
+    & when (@screen-mini-enabled) and (@body-scale-screen-mini-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -99,10 +100,10 @@ body/styles.less
 
       @media (min-width: @screen-mini) {
 
-        .text-size-variant(body-text, scale-screen-mini);
-        .text-layout-variant(body-text, scale-screen-mini);
-        .text-layout-variant(body-text, short, scale-screen-mini);
-        .text-layout-variant(body-text, tall, scale-screen-mini);
+        .text-size-variant(body, scale-screen-mini);
+        .shape-layout-variant(body, scale-screen-mini);
+        .shape-layout-variant(body, short, scale-screen-mini);
+        .shape-layout-variant(body, tall, scale-screen-mini);
 
       }
 
@@ -110,7 +111,7 @@ body/styles.less
 
 
 
-    & when (@screen-small-enabled) and (@body-text-scale-screen-small-enabled) {
+    & when (@screen-small-enabled) and (@body-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -120,10 +121,10 @@ body/styles.less
 
       @media (min-width: @screen-small) {
 
-        .text-size-variant(body-text, scale-screen-small);
-        .text-layout-variant(body-text, scale-screen-small);
-        .text-layout-variant(body-text, short, scale-screen-small);
-        .text-layout-variant(body-text, tall, scale-screen-small);
+        .text-size-variant(body, scale-screen-small);
+        .shape-layout-variant(body, scale-screen-small);
+        .shape-layout-variant(body, short, scale-screen-small);
+        .shape-layout-variant(body, tall, scale-screen-small);
 
       }
 
@@ -131,7 +132,7 @@ body/styles.less
 
 
 
-    & when (@screen-medium-enabled) and (@body-text-scale-screen-medium-enabled) {
+    & when (@screen-medium-enabled) and (@body-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -141,10 +142,10 @@ body/styles.less
 
       @media (min-width: @screen-medium) {
 
-        .text-size-variant(body-text, scale-screen-medium);
-        .text-layout-variant(body-text, scale-screen-medium);
-        .text-layout-variant(body-text, short, scale-screen-medium);
-        .text-layout-variant(body-text, tall, scale-screen-medium);
+        .text-size-variant(body, scale-screen-medium);
+        .shape-layout-variant(body, scale-screen-medium);
+        .shape-layout-variant(body, short, scale-screen-medium);
+        .shape-layout-variant(body, tall, scale-screen-medium);
 
       }
 
@@ -152,7 +153,7 @@ body/styles.less
 
 
 
-    & when (@screen-large-enabled) and (@body-text-scale-screen-large-enabled) {
+    & when (@screen-large-enabled) and (@body-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -162,10 +163,10 @@ body/styles.less
 
       @media (min-width: @screen-large) {
 
-        .text-size-variant(body-text, scale-screen-large);
-        .text-layout-variant(body-text, scale-screen-large);
-        .text-layout-variant(body-text, short, scale-screen-large);
-        .text-layout-variant(body-text, tall, scale-screen-large);
+        .text-size-variant(body, scale-screen-large);
+        .shape-layout-variant(body, scale-screen-large);
+        .shape-layout-variant(body, short, scale-screen-large);
+        .shape-layout-variant(body, tall, scale-screen-large);
 
       }
 

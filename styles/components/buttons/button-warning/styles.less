@@ -1,0 +1,60 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-warning/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-warning-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Button (.button-warning)
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-warning {
+
+    .text-style-variant(button-warning);
+    .shape-style-variant(button-warning);
+
+    &:hover {
+
+      .text-style-variant(button-warning-hover);
+      .shape-style-variant(button-warning-hover);
+
+    }
+
+    &:active {
+
+      .text-style-variant(button-warning-active);
+      .shape-style-variant(button-warning-active);
+
+    }
+
+    &.selected {
+
+      .text-style-variant(button-warning-selected);
+      .shape-style-variant(button-warning-selected);
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(button-warning-disabled);
+      .shape-style-variant(button-warning-disabled);
+
+    }
+
+  }
+
+}

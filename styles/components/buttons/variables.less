@@ -1,0 +1,339 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button/variables.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+@button-enabled:                                                                true;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@button-scale-screen-mini-enabled:                                              true;
+@button-scale-screen-small-enabled:                                             true;
+@button-scale-screen-medium-enabled:                                            true;
+@button-scale-screen-large-enabled:                                             true;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@button-text-color:                                                             color-lighten(@neutral, 0);
+@button-text-font-family:                                                       @font-family-sans-serif;
+@button-text-font-style:                                                        null;
+@button-text-font-weight:                                                       400;
+@button-text-transform:                                                         null;
+@button-text-shadow:                                                            null;
+@button-text-decoration:                                                        none;
+@button-text-rendering:                                                         optimizelegibility;
+@button-background-color:                                                       color-lighten(@neutral, 85);
+@button-background-gradient-color-top:                                          null;
+@button-background-gradient-color-bottom:                                       null;
+@button-border-width:                                                           1px;
+@button-border-color:                                                           color-lighten(@neutral, 85);
+@button-border-style:                                                           solid;
+@button-border-top-width:                                                       null;
+@button-border-top-color:                                                       null;
+@button-border-top-style:                                                       null;
+@button-border-right-width:                                                     null;
+@button-border-right-color:                                                     null;
+@button-border-right-style:                                                     null;
+@button-border-bottom-width:                                                    null;
+@button-border-bottom-color:                                                    null;
+@button-border-bottom-style:                                                    null;
+@button-border-left-width:                                                      null;
+@button-border-left-color:                                                      null;
+@button-border-left-style:                                                      null;
+@button-shadow:                                                                 null;
+
+// Hover
+
+@button-hover-text-color:                                                       color-lighten(@neutral, -20);
+@button-hover-text-font-family:                                                 null;
+@button-hover-text-font-style:                                                  null;
+@button-hover-text-font-weight:                                                 null;
+@button-hover-text-transform:                                                   null;
+@button-hover-text-shadow:                                                      null;
+@button-hover-text-decoration:                                                  none;
+@button-hover-text-rendering:                                                   null;
+@button-hover-background-color:                                                 color-lighten(@neutral, 80);
+@button-hover-background-gradient-color-top:                                    null;
+@button-hover-background-gradient-color-bottom:                                 null;
+@button-hover-border-width:                                                     null;
+@button-hover-border-color:                                                     color-lighten(@neutral, 80);
+@button-hover-border-style:                                                     null;
+@button-hover-border-top-width:                                                 null;
+@button-hover-border-top-color:                                                 null;
+@button-hover-border-top-style:                                                 null;
+@button-hover-border-right-width:                                               null;
+@button-hover-border-right-color:                                               null;
+@button-hover-border-right-style:                                               null;
+@button-hover-border-bottom-width:                                              null;
+@button-hover-border-bottom-color:                                              null;
+@button-hover-border-bottom-style:                                              null;
+@button-hover-border-left-width:                                                null;
+@button-hover-border-left-color:                                                null;
+@button-hover-border-left-style:                                                null;
+@button-hover-shadow:                                                           null;
+
+// Active
+
+@button-active-text-color:                                                      color-lighten(@neutral, 20);
+@button-active-text-font-family:                                                null;
+@button-active-text-font-style:                                                 null;
+@button-active-text-font-weight:                                                null;
+@button-active-text-transform:                                                  null;
+@button-active-text-shadow:                                                     null;
+@button-active-text-decoration:                                                 null;
+@button-active-text-rendering:                                                  null;
+@button-active-background-color:                                                color-lighten(@neutral, 65);
+@button-active-background-gradient-color-top:                                   null;
+@button-active-background-gradient-color-bottom:                                null;
+@button-active-border-width:                                                    null;
+@button-active-border-color:                                                    color-lighten(@neutral, 65);
+@button-active-border-style:                                                    null;
+@button-active-border-top-width:                                                null;
+@button-active-border-top-color:                                                null;
+@button-active-border-top-style:                                                null;
+@button-active-border-right-width:                                              null;
+@button-active-border-right-color:                                              null;
+@button-active-border-right-style:                                              null;
+@button-active-border-bottom-width:                                             null;
+@button-active-border-bottom-color:                                             null;
+@button-active-border-bottom-style:                                             null;
+@button-active-border-left-width:                                               null;
+@button-active-border-left-color:                                               null;
+@button-active-border-left-style:                                               null;
+@button-active-shadow:                                                          null;
+
+// Selected
+
+@button-selected-text-color:                                                    @button-active-text-color;
+@button-selected-text-font-family:                                              @button-active-text-font-family;
+@button-selected-text-font-style:                                               @button-active-text-font-style;
+@button-selected-text-font-weight:                                              @button-active-text-font-weight;
+@button-selected-text-transform:                                                @button-active-text-transform;
+@button-selected-text-shadow:                                                   @button-active-text-shadow;
+@button-selected-text-decoration:                                               @button-active-text-decoration;
+@button-selected-text-rendering:                                                @button-active-text-rendering;
+@button-selected-background-color:                                              @button-active-background-color;
+@button-selected-background-gradient-color-top:                                 @button-active-background-gradient-color-top;
+@button-selected-background-gradient-color-bottom:                              @button-active-background-gradient-color-bottom;
+@button-selected-border-width:                                                  @button-active-border-width;
+@button-selected-border-color:                                                  @button-active-border-color;
+@button-selected-border-style:                                                  @button-active-border-style;
+@button-selected-border-top-width:                                              @button-active-border-top-width;
+@button-selected-border-top-color:                                              @button-active-border-top-color;
+@button-selected-border-top-style:                                              @button-active-border-top-style;
+@button-selected-border-right-width:                                            @button-active-border-right-width;
+@button-selected-border-right-color:                                            @button-active-border-right-color;
+@button-selected-border-right-style:                                            @button-active-border-right-style;
+@button-selected-border-bottom-width:                                           @button-active-border-bottom-width;
+@button-selected-border-bottom-color:                                           @button-active-border-bottom-color;
+@button-selected-border-bottom-style:                                           @button-active-border-bottom-style;
+@button-selected-border-left-width:                                             @button-active-border-left-width;
+@button-selected-border-left-color:                                             @button-active-border-left-color;
+@button-selected-border-left-style:                                             @button-active-border-left-style;
+@button-selected-shadow:                                                        @button-active-shadow;
+
+// Disabled
+
+@button-disabled-opacity:                                                       0.5;
+@button-disabled-text-color:                                                    null;
+@button-disabled-text-font-family:                                              null;
+@button-disabled-text-font-style:                                               null;
+@button-disabled-text-font-weight:                                              null;
+@button-disabled-text-transform:                                                null;
+@button-disabled-text-shadow:                                                   null;
+@button-disabled-text-decoration:                                               null;
+@button-disabled-text-rendering:                                                null;
+@button-disabled-background-color:                                              null;
+@button-disabled-background-gradient-color-top:                                 null;
+@button-disabled-background-gradient-color-bottom:                              null;
+@button-disabled-border-width:                                                  null;
+@button-disabled-border-color:                                                  null;
+@button-disabled-border-style:                                                  null;
+@button-disabled-border-top-width:                                              null;
+@button-disabled-border-top-color:                                              null;
+@button-disabled-border-top-style:                                              null;
+@button-disabled-border-right-width:                                            null;
+@button-disabled-border-right-color:                                            null;
+@button-disabled-border-right-style:                                            null;
+@button-disabled-border-bottom-width:                                           null;
+@button-disabled-border-bottom-color:                                           null;
+@button-disabled-border-bottom-style:                                           null;
+@button-disabled-border-left-width:                                             null;
+@button-disabled-border-left-color:                                             null;
+@button-disabled-border-left-style:                                             null;
+@button-disabled-shadow:                                                        null;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+// Font Size
+
+@button-text-font-size:                                                         1.0rem;
+@button-text-font-size-scale-screen-mini:                                       null;
+@button-text-font-size-scale-screen-small:                                      null;
+@button-text-font-size-scale-screen-medium:                                     null;
+@button-text-font-size-scale-screen-large:                                      null;
+
+// Line Height
+
+@button-text-line-height:                                                       1.0rem;
+@button-text-line-height-scale-screen-mini:                                     @button-text-font-size-scale-screen-mini;
+@button-text-line-height-scale-screen-small:                                    @button-text-font-size-scale-screen-small;
+@button-text-line-height-scale-screen-medium:                                   @button-text-font-size-scale-screen-medium;
+@button-text-line-height-scale-screen-large:                                    @button-text-font-size-scale-screen-large;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+// Height
+
+@button-height:                                                                 38px;
+@button-height-scale-screen-mini:                                               null;
+@button-height-scale-screen-small:                                              1.1;
+@button-height-scale-screen-medium:                                             1.2;
+@button-height-scale-screen-large:                                              null;
+
+// Border Radius
+
+@button-border-radius:                                                          5px;
+@button-border-radius-scale-screen-mini:                                        null;
+@button-border-radius-scale-screen-small:                                       null;
+@button-border-radius-scale-screen-medium:                                      null;
+@button-border-radius-scale-screen-large:                                       null;
+
+
+
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@button-margin-top:                                                             null;
+@button-margin-top-scale-screen-mini:                                           null;
+@button-margin-top-scale-screen-small:                                          null;
+@button-margin-top-scale-screen-medium:                                         null;
+@button-margin-top-scale-screen-large:                                          null;
+
+// Margin Bottom
+
+@button-margin-bottom:                                                          null;
+@button-margin-bottom-scale-screen-mini:                                        null;
+@button-margin-bottom-scale-screen-small:                                       null;
+@button-margin-bottom-scale-screen-medium:                                      null;
+@button-margin-bottom-scale-screen-large:                                       null;
+
+// Margin Left
+
+@button-margin-left:                                                            null;
+@button-margin-left-scale-screen-mini:                                          null;
+@button-margin-left-scale-screen-small:                                         null;
+@button-margin-left-scale-screen-medium:                                        null;
+@button-margin-left-scale-screen-large:                                         null;
+
+// Margin Right
+
+@button-margin-right:                                                           null;
+@button-margin-right-scale-screen-mini:                                         null;
+@button-margin-right-scale-screen-small:                                        null;
+@button-margin-right-scale-screen-medium:                                       null;
+@button-margin-right-scale-screen-large:                                        null;
+
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+
+// Padding Top
+
+@button-padding-top:                                                            null;
+@button-padding-top-scale-screen-mini:                                          null;
+@button-padding-top-scale-screen-small:                                         null;
+@button-padding-top-scale-screen-medium:                                        null;
+@button-padding-top-scale-screen-large:                                         null;
+
+// Padding Bottom
+
+@button-padding-bottom:                                                         null;
+@button-padding-bottom-scale-screen-mini:                                       null;
+@button-padding-bottom-scale-screen-small:                                      null;
+@button-padding-bottom-scale-screen-medium:                                     null;
+@button-padding-bottom-scale-screen-large:                                      null;
+
+// Padding Left
+
+@button-padding-left:                                                           1.5rem;
+@button-padding-left-scale-screen-mini:                                         null;
+@button-padding-left-scale-screen-small:                                        null;
+@button-padding-left-scale-screen-medium:                                       null;
+@button-padding-left-scale-screen-large:                                        null;
+
+// Padding Right
+
+@button-padding-right:                                                          1.5rem;
+@button-padding-right-scale-screen-mini:                                        null;
+@button-padding-right-scale-screen-small:                                       null;
+@button-padding-right-scale-screen-medium:                                      null;
+@button-padding-right-scale-screen-large:                                       null;
+
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
+
+// Narrow
+
+@button-narrow-margin-top-scale:                                                null;
+@button-narrow-margin-bottom-scale:                                             null;
+@button-narrow-margin-left-scale:                                               null;
+@button-narrow-margin-right-scale:                                              null;
+
+@button-narrow-padding-top-scale:                                               null;
+@button-narrow-padding-bottom-scale:                                            null;
+@button-narrow-padding-left-scale:                                              0.5;
+@button-narrow-padding-right-scale:                                             0.5;
+
+// Wide
+
+@button-wide-margin-top-scale:                                                  null;
+@button-wide-margin-bottom-scale:                                               null;
+@button-wide-margin-left-scale:                                                 null;
+@button-wide-margin-right-scale:                                                null;
+
+@button-wide-padding-top-scale:                                                 null;
+@button-wide-padding-bottom-scale:                                              null;
+@button-wide-padding-left-scale:                                                2.0;
+@button-wide-padding-right-scale:                                               2.0;

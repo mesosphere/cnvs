@@ -1,0 +1,60 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-success/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-success-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Button (.button-success)
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-success {
+
+    .text-style-variant(button-success);
+    .shape-style-variant(button-success);
+
+    &:hover {
+
+      .text-style-variant(button-success-hover);
+      .shape-style-variant(button-success-hover);
+
+    }
+
+    &:active {
+
+      .text-style-variant(button-success-active);
+      .shape-style-variant(button-success-active);
+
+    }
+
+    &.selected {
+
+      .text-style-variant(button-success-selected);
+      .shape-style-variant(button-success-selected);
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(button-success-disabled);
+      .shape-style-variant(button-success-disabled);
+
+    }
+
+  }
+
+}

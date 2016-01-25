@@ -18,67 +18,60 @@ Text Style Variant
 
 .text-style-variant (@element: '') {
 
-  @element-color: "@{element}-color";
-  @element-font-family: "@{element}-font-family";
-  @element-font-style: "@{element}-font-style";
-  @element-font-weight: "@{element}-font-weight";
-  @element-transform: "@{element}-transform";
-  @element-shadow: "@{element}-shadow";
-  @element-decoration: "@{element}-decoration";
-  @element-rendering: "@{element}-rendering";
-  @element-opacity: "@{element}-opacity";
+  @element-text-color: "@{element}-text-color";
+  @element-text-font-family: "@{element}-text-font-family";
+  @element-text-font-style: "@{element}-text-font-style";
+  @element-text-font-weight: "@{element}-text-font-weight";
+  @element-text-transform: "@{element}-text-transform";
+  @element-text-shadow: "@{element}-text-shadow";
+  @element-text-decoration: "@{element}-text-decoration";
+  @element-text-rendering: "@{element}-text-rendering";
 
-  & when not (@@element-color = null) {
+  & when not (@@element-text-color = null) {
 
-    color: @@element-color;
-
-  }
-
-  & when not (@@element-font-family = null) {
-
-    font-family: @@element-font-family;
+    color: @@element-text-color;
 
   }
 
-  & when not (@@element-font-style = null) {
+  & when not (@@element-text-font-family = null) {
 
-    font-style: @@element-font-style;
-
-  }
-
-  & when not (@@element-font-weight = null) {
-
-    font-weight: @@element-font-weight;
+    font-family: @@element-text-font-family;
 
   }
 
-  & when not (@@element-transform = null) {
+  & when not (@@element-text-font-style = null) {
 
-    text-transform: @@element-transform;
-
-  }
-
-  & when not (@@element-shadow = null) {
-
-    text-shadow: @@element-shadow;
+    font-style: @@element-text-font-style;
 
   }
 
-  & when not (@@element-decoration = null) {
+  & when not (@@element-text-font-weight = null) {
 
-    text-decoration: @@element-decoration;
-
-  }
-
-  & when not (@@element-rendering = null) {
-
-    text-rendering: @@element-rendering;
+    font-weight: @@element-text-font-weight;
 
   }
 
-  & when not (@@element-opacity = null) {
+  & when not (@@element-text-transform = null) {
 
-    opacity: @@element-opacity;
+    text-transform: @@element-text-transform;
+
+  }
+
+  & when not (@@element-text-shadow = null) {
+
+    text-shadow: @@element-text-shadow;
+
+  }
+
+  & when not (@@element-text-decoration = null) {
+
+    text-decoration: @@element-text-decoration;
+
+  }
+
+  & when not (@@element-text-rendering = null) {
+
+    text-rendering: @@element-text-rendering;
 
   }
 
@@ -94,18 +87,18 @@ Text Size Variant
 
 .text-size-variant (@element: '', @size) when (@size = null) {
 
-  @element-font-size: "@{element}-font-size";
-  @element-font-size-scale: 1.0;
+  @element-text-font-size: "@{element}-text-font-size";
+  @element-text-font-size-scale: 1.0;
 
-  @element-line-height: "@{element}-line-height";
-  @element-line-height-scale: 1.0;
+  @element-text-line-height: "@{element}-text-line-height";
+  @element-text-line-height-scale: 1.0;
 
   .text-size-variant-helper (
 
-    @@element-font-size,
-    @element-font-size-scale,
-    @@element-line-height,
-    @element-line-height-scale
+    @@element-text-font-size,
+    @element-text-font-size-scale,
+    @@element-text-line-height,
+    @element-text-line-height-scale
 
   );
 
@@ -113,18 +106,18 @@ Text Size Variant
 
 .text-size-variant (@element: '', @size) when not (@size = null) {
 
-  @element-font-size: "@{element}-font-size";
-  @element-font-size-scale: "@{element}-font-size-@{size}";
+  @element-text-font-size: "@{element}-text-font-size";
+  @element-text-font-size-scale: "@{element}-text-font-size-@{size}";
 
-  @element-line-height: "@{element}-line-height";
-  @element-line-height-scale: "@{element}-line-height-@{size}";
+  @element-text-line-height: "@{element}-text-line-height";
+  @element-text-line-height-scale: "@{element}-text-line-height-@{size}";
 
   .text-size-variant-helper (
 
-    @@element-font-size,
-    @@element-font-size-scale,
-    @@element-line-height,
-    @@element-line-height-scale
+    @@element-text-font-size,
+    @@element-text-font-size-scale,
+    @@element-text-line-height,
+    @@element-text-line-height-scale
 
   );
 
@@ -132,94 +125,26 @@ Text Size Variant
 
 .text-size-variant-helper (
 
-    @element-font-size,
-    @element-font-size-scale,
-    @element-line-height,
-    @element-line-height-scale
+    @element-text-font-size,
+    @element-text-font-size-scale,
+    @element-text-line-height,
+    @element-text-line-height-scale
 
   ) {
 
   // Font Size
 
-  & when not (@element-font-size = null) and not (@element-font-size-scale = null) {
+  & when not (@element-text-font-size = null) and not (@element-text-font-size-scale = null) {
 
-    font-size: @element-font-size * @element-font-size-scale;
+    font-size: @element-text-font-size * @element-text-font-size-scale;
 
   }
 
   // Line Height
 
-  & when not (@element-line-height = null) and not (@element-line-height-scale = null) {
+  & when not (@element-text-line-height = null) and not (@element-text-line-height-scale = null) {
 
-    line-height: @element-line-height * @element-line-height-scale;
-
-  }
-
-}
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text layout Variant
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.text-layout-variant (@element, @size) {
-
-  .layout-variant (@element, margin-top, @size);
-  .layout-variant (@element, margin-bottom, @size);
-  .layout-variant (@element, margin-left, @size);
-  .layout-variant (@element, margin-right, @size);
-  .layout-variant (@element, padding-top, @size);
-  .layout-variant (@element, padding-bottom, @size);
-  .layout-variant (@element, padding-left, @size);
-  .layout-variant (@element, padding-right, @size);
-
-}
-
-
-
-.text-layout-variant(@element, @class, @size) {
-
-  &.@{class} {
-
-    .layout-variant (@element, @class, margin-top, @size);
-    .layout-variant (@element, @class, margin-bottom, @size);
-    .layout-variant (@element, @class, margin-left, @size);
-    .layout-variant (@element, @class, margin-right, @size);
-    .layout-variant (@element, @class, padding-top, @size);
-    .layout-variant (@element, @class, padding-bottom, @size);
-    .layout-variant (@element, @class, padding-left, @size);
-    .layout-variant (@element, @class, padding-right, @size);
-
-  }
-
-  &.@{class}-top {
-
-    .layout-variant (@element, @class, margin-top, @size);
-    .layout-variant (@element, @class, padding-top, @size);
-
-  }
-
-  &.@{class}-bottom {
-
-    .layout-variant (@element, @class, margin-bottom, @size);
-    .layout-variant (@element, @class, padding-bottom, @size);
-
-  }
-
-  &.@{class}-left {
-
-    .layout-variant (@element, @class, margin-left, @size);
-    .layout-variant (@element, @class, padding-left, @size);
-
-  }
-
-  &.@{class}-right {
-
-    .layout-variant (@element, @class, margin-right, @size);
-    .layout-variant (@element, @class, padding-right, @size);
+    line-height: @element-text-line-height * @element-text-line-height-scale;
 
   }
 
@@ -227,63 +152,7 @@ Text layout Variant
 
 
 
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Layout Variant
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
 
-.layout-variant (@element, @property, @size) when (@size = null) {
-
-  @element-property: "@{element}-@{property}";
-
-  & when not (@@element-property = null) {
-
-    @{property}: @@element-property;
-
-  }
-
-}
-
-.layout-variant (@element, @property, @size) when not (@size = null) {
-
-  @element-property: "@{element}-@{property}";
-  @element-scale: "@{element}-@{property}-@{size}";
-
-  & when not (@@element-property = null) and not (@@element-scale = null) {
-
-    @{property}: @@element-property * @@element-scale;
-
-  }
-
-}
-
-.layout-variant (@element, @class, @property, @size) when (@size = null) {
-
-  @element-property: "@{element}-@{property}";
-  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
-
-  & when not (@@element-property = null) and not (@@element-subclass-scale = null) {
-
-    @{property}: @@element-property * @@element-subclass-scale;
-
-  }
-
-}
-
-.layout-variant (@element, @class, @property, @size) when not (@size = null) {
-
-  @element-property: "@{element}-@{property}";
-  @element-scale: "@{element}-@{property}-@{size}";
-  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
-
-  & when not (@@element-property = null) and not (@@element-scale = null) and not (@@element-subclass-scale = null) {
-
-    @{property}: @@element-property * @@element-scale * @@element-subclass-scale;
-
-  }
-
-}
 
 
 

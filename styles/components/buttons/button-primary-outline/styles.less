@@ -1,0 +1,61 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-primary-outline/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-primary-outline-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Button (.button-primary-outline)
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-primary-outline,
+  .button-primary.button-stroke {
+
+    .text-style-variant(button-primary-outline);
+    .shape-style-variant(button-primary-outline);
+
+    &:hover {
+
+      .text-style-variant(button-primary-outline-hover);
+      .shape-style-variant(button-primary-outline-hover);
+
+    }
+
+    &:active {
+
+      .text-style-variant(button-primary-outline-active);
+      .shape-style-variant(button-primary-outline-active);
+
+    }
+
+    &.selected {
+
+      .text-style-variant(button-primary-outline-selected);
+      .shape-style-variant(button-primary-outline-selected);
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(button-primary-outline-disabled);
+      .shape-style-variant(button-primary-outline-disabled);
+
+    }
+
+  }
+
+}

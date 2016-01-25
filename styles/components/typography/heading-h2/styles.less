@@ -13,7 +13,7 @@ heading-h2/styles.less
 
 
 
-& when (@heading-h2-text-enabled) {
+& when (@heading-h2-enabled) {
 
   /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
@@ -25,18 +25,18 @@ heading-h2/styles.less
   .h2 {
 
     display: block;
-    .text-style-variant(heading-h2-text);
-    .text-size-variant(heading-h2-text, null);
-    .text-layout-variant(heading-h2-text, null);
-    .text-layout-variant(heading-h2-text, short, null);
-    .text-layout-variant(heading-h2-text, tall, null);
+    .text-style-variant(heading-h2);
+    .text-size-variant(heading-h2, null);
+    .shape-layout-variant(heading-h2, null);
+    .shape-layout-variant(heading-h2, short, null);
+    .shape-layout-variant(heading-h2, tall, null);
 
     & when (@heading-h2-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(heading-h2-emphasis-text);
+        .text-style-variant(heading-h2-emphasis);
 
       }
 
@@ -47,7 +47,7 @@ heading-h2/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(heading-h2-muted-text);
+        .text-style-variant(heading-h2-muted);
 
       }
 
@@ -59,14 +59,14 @@ heading-h2/styles.less
 
       &.inverse {
 
-        .text-style-variant(heading-h2-inverse-text);
+        .text-style-variant(heading-h2-inverse);
 
         & when (@heading-h2-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(heading-h2-inverse-emphasis-text);
+            .text-style-variant(heading-h2-inverse-emphasis);
 
           }
 
@@ -77,7 +77,7 @@ heading-h2/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(heading-h2-inverse-muted-text);
+            .text-style-variant(heading-h2-inverse-muted);
 
           }
 
@@ -89,7 +89,7 @@ heading-h2/styles.less
 
 
 
-    & when (@screen-mini-enabled) and (@heading-h2-text-scale-screen-mini-enabled) {
+    & when (@screen-mini-enabled) and (@heading-h2-scale-screen-mini-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -99,10 +99,10 @@ heading-h2/styles.less
 
       @media (min-width: @screen-mini) {
 
-        .text-size-variant(heading-h2-text, scale-screen-mini);
-        .text-layout-variant(heading-h2-text, scale-screen-mini);
-        .text-layout-variant(heading-h2-text, short, scale-screen-mini);
-        .text-layout-variant(heading-h2-text, tall, scale-screen-mini);
+        .text-size-variant(heading-h2, scale-screen-mini);
+        .shape-layout-variant(heading-h2, scale-screen-mini);
+        .shape-layout-variant(heading-h2, short, scale-screen-mini);
+        .shape-layout-variant(heading-h2, tall, scale-screen-mini);
 
       }
 
@@ -110,7 +110,7 @@ heading-h2/styles.less
 
 
 
-    & when (@screen-small-enabled) and (@heading-h2-text-scale-screen-small-enabled) {
+    & when (@screen-small-enabled) and (@heading-h2-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -120,10 +120,10 @@ heading-h2/styles.less
 
       @media (min-width: @screen-small) {
 
-        .text-size-variant(heading-h2-text, scale-screen-small);
-        .text-layout-variant(heading-h2-text, scale-screen-small);
-        .text-layout-variant(heading-h2-text, short, scale-screen-small);
-        .text-layout-variant(heading-h2-text, tall, scale-screen-small);
+        .text-size-variant(heading-h2, scale-screen-small);
+        .shape-layout-variant(heading-h2, scale-screen-small);
+        .shape-layout-variant(heading-h2, short, scale-screen-small);
+        .shape-layout-variant(heading-h2, tall, scale-screen-small);
 
       }
 
@@ -131,7 +131,7 @@ heading-h2/styles.less
 
 
 
-    & when (@screen-medium-enabled) and (@heading-h2-text-scale-screen-medium-enabled) {
+    & when (@screen-medium-enabled) and (@heading-h2-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -141,10 +141,10 @@ heading-h2/styles.less
 
       @media (min-width: @screen-medium) {
 
-        .text-size-variant(heading-h2-text, scale-screen-medium);
-        .text-layout-variant(heading-h2-text, scale-screen-medium);
-        .text-layout-variant(heading-h2-text, short, scale-screen-medium);
-        .text-layout-variant(heading-h2-text, tall, scale-screen-medium);
+        .text-size-variant(heading-h2, scale-screen-medium);
+        .shape-layout-variant(heading-h2, scale-screen-medium);
+        .shape-layout-variant(heading-h2, short, scale-screen-medium);
+        .shape-layout-variant(heading-h2, tall, scale-screen-medium);
 
       }
 
@@ -152,7 +152,7 @@ heading-h2/styles.less
 
 
 
-    & when (@screen-large-enabled) and (@heading-h2-text-scale-screen-large-enabled) {
+    & when (@screen-large-enabled) and (@heading-h2-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -162,10 +162,10 @@ heading-h2/styles.less
 
       @media (min-width: @screen-large) {
 
-        .text-size-variant(heading-h2-text, scale-screen-large);
-        .text-layout-variant(heading-h2-text, scale-screen-large);
-        .text-layout-variant(heading-h2-text, short, scale-screen-large);
-        .text-layout-variant(heading-h2-text, tall, scale-screen-large);
+        .text-size-variant(heading-h2, scale-screen-large);
+        .shape-layout-variant(heading-h2, scale-screen-large);
+        .shape-layout-variant(heading-h2, short, scale-screen-large);
+        .shape-layout-variant(heading-h2, tall, scale-screen-large);
 
       }
 

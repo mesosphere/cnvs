@@ -15,6 +15,163 @@ utilities/mixins-styling.less
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Shape Style Variant
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.shape-style-variant (@element: '') {
+
+  // Shape Style Variables
+
+  @element-background-color: "@{element}-background-color";
+  @element-background-gradient-color-top: "@{element}-background-gradient-color-top";
+  @element-background-gradient-color-bottom: "@{element}-background-gradient-color-bottom";
+  @element-border-width: "@{element}-border-width";
+  @element-border-color: "@{element}-border-color";
+  @element-border-style: "@{element}-border-style";
+  @element-border-top-width: "@{element}-border-top-width";
+  @element-border-top-color: "@{element}-border-top-color";
+  @element-border-top-style: "@{element}-border-top-style";
+  @element-border-right-width: "@{element}-border-right-width";
+  @element-border-right-color: "@{element}-border-right-color";
+  @element-border-right-style: "@{element}-border-right-style";
+  @element-border-bottom-width: "@{element}-border-bottom-width";
+  @element-border-bottom-color: "@{element}-border-bottom-color";
+  @element-border-bottom-style: "@{element}-border-bottom-style";
+  @element-border-left-width: "@{element}-border-left-width";
+  @element-border-left-color: "@{element}-border-left-color";
+  @element-border-left-style: "@{element}-border-left-style";
+  @element-shadow: "@{element}-shadow";
+
+  // Check if variables are defined and assign
+
+  & when not (@@element-background-color = null) {
+
+    background: @@element-background-color;
+
+  }
+
+  & when not (@@element-background-gradient-color-top = null) and not (@@element-background-gradient-color-bottom = null) {
+
+    #gradient > .vertical(@@element-background-gradient-color-top, @@element-background-gradient-color-bottom);
+
+  }
+
+  & when not (@@element-border-width = null) {
+
+    border-width: @@element-border-width;
+
+  }
+
+  & when not (@@element-border-color = null) {
+
+    border-color: @@element-border-color;
+
+  }
+
+  & when not (@@element-border-style = null) {
+
+    border-style: @@element-border-style;
+
+  }
+
+  & when not (@@element-border-top-width = null) {
+
+    border-top-width: @@element-border-top-width;
+
+  }
+
+  & when not (@@element-border-top-color = null) {
+
+    border-top-color: @@element-border-top-color;
+
+  }
+
+  & when not (@@element-border-top-style = null) {
+
+    border-top-style: @@element-border-top-style;
+
+  }
+
+  & when not (@@element-border-right-width = null) {
+
+    border-right-width: @@element-border-right-width;
+
+  }
+
+  & when not (@@element-border-right-color = null) {
+
+    border-right-color: @@element-border-right-color;
+
+  }
+
+  & when not (@@element-border-right-style = null) {
+
+    border-right-style: @@element-border-right-style;
+
+  }
+
+  & when not (@@element-border-bottom-width = null) {
+
+    border-bottom-width: @@element-border-bottom-width;
+
+  }
+
+  & when not (@@element-border-bottom-color = null) {
+
+    border-bottom-color: @@element-border-bottom-color;
+
+  }
+
+  & when not (@@element-border-bottom-style = null) {
+
+    border-bottom-style: @@element-border-bottom-style;
+
+  }
+
+  & when not (@@element-border-left-width = null) {
+
+    border-left-width: @@element-border-left-width;
+
+  }
+
+  & when not (@@element-border-left-color = null) {
+
+    border-left-color: @@element-border-left-color;
+
+  }
+
+  & when not (@@element-border-left-style = null) {
+
+    border-left-style: @@element-border-left-style;
+
+  }
+
+  & when not (@@element-shadow = null) {
+
+    shadow: @@element-shadow;
+
+  }
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 Shadow
 
@@ -24,7 +181,7 @@ Shadow
 .box-shadow(@shadow) {
 
   box-shadow: @shadow;
-  
+
 }
 
 
@@ -41,7 +198,7 @@ Appearance
 ----------------------------------------------------------------------------- */
 
 .appearance(@appearance) {
-  
+
   appearance: @appearance;
-  
+
 }
