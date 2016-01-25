@@ -18823,10 +18823,12 @@ small/styles.less
   ----------------------------------------------------------------------------- */
 .small {
   display: block;
-  color: #5b6171;
-  font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  color: #848995;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-rendering: geometricPrecision;
+  font-size: 0.8rem;
+  line-height: 1rem;
   margin-top: 0px;
   margin-bottom: 0.8rem;
   /* -----------------------------------------------------------------------------
@@ -18872,22 +18874,23 @@ small/styles.less
 }
 .small.emphasis,
 .small .emphasis {
-  color: #282e3e;
+  color: #323a4e;
+  font-weight: 600;
 }
 .small.muted,
 .small .muted {
-  color: #adb0b8;
+  color: #d6d8dc;
 }
 .small.inverse {
-  color: #c2c4ca;
+  color: #999da7;
 }
 .small.inverse.emphasis,
 .small.inverse .emphasis {
-  color: #ffffff;
+  color: #d6d8dc;
 }
 .small.inverse.muted,
 .small.inverse .muted {
-  color: #999da7;
+  color: #707583;
 }
 @media (min-width: 768px) {
   .small {
@@ -20762,7 +20765,7 @@ Header
   display: block;
   width: 40px;
   height: 28.8px;
-  background-image: url("../images/layout/header/header-logo.png?cache=335479944");
+  background-image: url("../images/layout/header/header-logo.png?cache=689249321");
   background-size: 100% 100%;
   margin: 0 auto;
 }
@@ -21084,7 +21087,7 @@ Header
 			---------------------------------------------------------------------------------------------------- */
   }
   #header #header-logo {
-    background-image: url("../images/layout/header/header-logo@2x.png?cache=805411192");
+    background-image: url("../images/layout/header/header-logo@2x.png?cache=156536061");
   }
 }
 /* ----------------------------------------------------------------------------------------------------
@@ -22375,13 +22378,14 @@ Example Block
 .example-block .example-block-content {
   background: #ffffff;
   padding: 12px;
-  padding-top: 19.4px;
+  padding-top: 19px;
   position: relative;
   /* ----------------------------------------------------------------------------------------------------
 		Dropdown Open/Expanded
 		---------------------------------------------------------------------------------------------------- */
 }
 .example-block .example-block-content:before {
+  display: none;
   content: 'Example';
   background: #f5f5f6;
   border-right: 1px solid rgba(0, 0, 0, 0.1);

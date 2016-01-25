@@ -20,10 +20,10 @@ Responsive Scaling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-@small-scale-screen-mini-enabled:                                               @screen-mini-enabled;
-@small-scale-screen-small-enabled:                                              @screen-small-enabled;
-@small-scale-screen-medium-enabled:                                             @screen-medium-enabled;
-@small-scale-screen-large-enabled:                                              @screen-large-enabled;
+@small-scale-screen-mini-enabled:                                               true;
+@small-scale-screen-small-enabled:                                              true;
+@small-scale-screen-medium-enabled:                                             true;
+@small-scale-screen-large-enabled:                                              true;
 
 
 
@@ -35,23 +35,23 @@ Text Styling
 
 // Normal
 
-@small-text-color:                                                              color-lighten(@neutral, 20);
-@small-text-font-family:                                                        null;
+@small-text-color:                                                              color-lighten(@neutral, 40);
+@small-text-font-family:                                                        @font-family-sans-serif;
 @small-text-font-style:                                                         null;
-@small-text-font-weight:                                                        300;
+@small-text-font-weight:                                                        400;
 @small-text-transform:                                                          null;
 @small-text-shadow:                                                             null;
 @small-text-decoration:                                                         null;
-@small-text-rendering:                                                          null;
+@small-text-rendering:                                                          geometricPrecision;
 @small-text-opacity:                                                            null;
 
 // Emphasis (.emphasis)
 
 @small-emphasis-enabled:                                                        true;
-@small-emphasis-text-color:                                                     color-lighten(@neutral, -20);
+@small-emphasis-text-color:                                                     color-lighten(@neutral, 0);
 @small-emphasis-text-font-family:                                               null;
 @small-emphasis-text-font-style:                                                null;
-@small-emphasis-text-font-weight:                                               null;
+@small-emphasis-text-font-weight:                                               600;
 @small-emphasis-text-transform:                                                 null;
 @small-emphasis-text-shadow:                                                    null;
 @small-emphasis-text-decoration:                                                null;
@@ -61,7 +61,7 @@ Text Styling
 // Muted (.muted)
 
 @small-muted-enabled:                                                           true;
-@small-muted-text-color:                                                        color-lighten(@neutral, 60);
+@small-muted-text-color:                                                        color-lighten(@neutral, 80);
 @small-muted-text-font-family:                                                  null;
 @small-muted-text-font-style:                                                   null;
 @small-muted-text-font-weight:                                                  null;
@@ -74,7 +74,7 @@ Text Styling
 // Inverse (.inverse)
 
 @small-inverse-enabled:                                                         true;
-@small-inverse-text-color:                                                      color-lighten(@neutral, 70);
+@small-inverse-text-color:                                                      color-lighten(@neutral, 50);
 @small-inverse-text-font-family:                                                null;
 @small-inverse-text-font-style:                                                 null;
 @small-inverse-text-font-weight:                                                null;
@@ -87,7 +87,7 @@ Text Styling
 // Inverse Emphasis (.inverse.emphasis)
 
 @small-inverse-emphasis-enabled:                                                true;
-@small-inverse-emphasis-text-color:                                             color-lighten(@neutral, 100);
+@small-inverse-emphasis-text-color:                                             color-lighten(@neutral, 80);
 @small-inverse-emphasis-text-font-family:                                       null;
 @small-inverse-emphasis-text-font-style:                                        null;
 @small-inverse-emphasis-text-font-weight:                                       null;
@@ -100,7 +100,7 @@ Text Styling
 // Inverse Muted (.inverse.muted)
 
 @small-inverse-muted-enabled:                                                   true;
-@small-inverse-muted-text-color:                                                color-lighten(@neutral, 50);
+@small-inverse-muted-text-color:                                                color-lighten(@neutral, 30);
 @small-inverse-muted-text-font-family:                                          null;
 @small-inverse-muted-text-font-style:                                           null;
 @small-inverse-muted-text-font-weight:                                          null;
@@ -120,7 +120,7 @@ Text Size
 
 // Font Size
 
-@small-text-font-size:                                                          1.2rem;
+@small-text-font-size:                                                          0.8rem;
 @small-text-font-size-scale-screen-mini:                                        null;
 @small-text-font-size-scale-screen-small:                                       null;
 @small-text-font-size-scale-screen-medium:                                      null;
@@ -128,7 +128,7 @@ Text Size
 
 // Line Height
 
-@small-text-line-height:                                                        1.4rem;
+@small-text-line-height:                                                        1.0rem;
 @small-text-line-height-scale-screen-mini:                                      @small-text-font-size-scale-screen-mini;
 @small-text-line-height-scale-screen-small:                                     @small-text-font-size-scale-screen-small;
 @small-text-line-height-scale-screen-medium:                                    @small-text-font-size-scale-screen-medium;
