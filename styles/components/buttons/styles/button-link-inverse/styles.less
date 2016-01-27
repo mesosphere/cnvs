@@ -1,0 +1,61 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-link-inverse/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-link-inverse-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Button (.button-link-inverse)
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-link.button-inverse,
+  .button-link-inverse {
+
+    .text-style-variant(button-link-inverse);
+    .shape-style-variant(button-link-inverse);
+
+    &:hover {
+
+      .text-style-variant(button-link-inverse-hover);
+      .shape-style-variant(button-link-inverse-hover);
+
+    }
+
+    &:active {
+
+      .text-style-variant(button-link-inverse-active);
+      .shape-style-variant(button-link-inverse-active);
+
+    }
+
+    &.selected {
+
+      .text-style-variant(button-link-inverse-selected);
+      .shape-style-variant(button-link-inverse-selected);
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(button-link-inverse-disabled);
+      .shape-style-variant(button-link-inverse-disabled);
+
+    }
+
+  }
+
+}

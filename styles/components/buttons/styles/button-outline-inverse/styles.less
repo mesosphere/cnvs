@@ -1,0 +1,61 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+button-outline-inverse/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@button-outline-inverse-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Button (.button-outline-inverse)
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-outline-inverse,
+  .button-stroke.button-inverse {
+
+    .text-style-variant(button-outline-inverse);
+    .shape-style-variant(button-outline-inverse);
+
+    &:hover {
+
+      .text-style-variant(button-outline-inverse-hover);
+      .shape-style-variant(button-outline-inverse-hover);
+
+    }
+
+    &:active {
+
+      .text-style-variant(button-outline-inverse-active);
+      .shape-style-variant(button-outline-inverse-active);
+
+    }
+
+    &.selected {
+
+      .text-style-variant(button-outline-inverse-selected);
+      .shape-style-variant(button-outline-inverse-selected);
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(button-outline-inverse-disabled);
+      .shape-style-variant(button-outline-inverse-disabled);
+
+    }
+
+  }
+
+}
