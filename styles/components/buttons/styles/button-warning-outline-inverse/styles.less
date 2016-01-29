@@ -58,4 +58,22 @@ button-warning-outline-inverse/styles.less
 
   }
 
+
+
+  & when (@button-group-enabled) {
+
+    .button-group.open {
+
+      > .button-warning-outline-inverse,
+      > .button-warning.button-inverse.button-stroke {
+
+        .text-style-variant(button-warning-outline-inverse-selected);
+        .shape-style-variant(button-warning-outline-inverse-selected);
+
+      }
+
+    }
+
+  }
+
 }

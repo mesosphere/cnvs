@@ -58,4 +58,22 @@ button-link-inverse/styles.less
 
   }
 
+
+
+  & when (@button-group-enabled) {
+
+    .button-group.open {
+
+      > .button-link.button-inverse,
+      > .button-link-inverse {
+
+        .text-style-variant(button-link-inverse-selected);
+        .shape-style-variant(button-link-inverse-selected);
+
+      }
+
+    }
+
+  }
+
 }

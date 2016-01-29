@@ -58,4 +58,22 @@ button-outline-inverse/styles.less
 
   }
 
+
+
+  & when (@button-group-enabled) {
+
+    .button-group.open {
+
+      > .button-outline-inverse,
+      > .button-stroke.button-inverse {
+
+        .text-style-variant(button-outline-inverse-selected);
+        .shape-style-variant(button-outline-inverse-selected);
+
+      }
+
+    }
+
+  }
+
 }

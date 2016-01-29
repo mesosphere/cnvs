@@ -46,6 +46,7 @@ button/styles.less
 
       .text-style-variant(button-hover);
       .shape-style-variant(button-hover);
+      cursor: pointer;
 
     }
 
@@ -199,6 +200,24 @@ button/styles.less
           border-radius: @button-border-radius * @button-border-radius-scale-screen-large;
 
         }
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@button-group-enabled) {
+
+    .button-group.open {
+
+      > button,
+      > .button {
+
+        .text-style-variant(button-selected);
+        .shape-style-variant(button-selected);
 
       }
 
