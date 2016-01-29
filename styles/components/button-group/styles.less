@@ -15,66 +15,95 @@ button-group/styles.less
 
 & when (@button-group-enabled) {
 
-  & when (@screen-mini-enabled) and (@button-group-scale-screen-mini-enabled) {
+  .button-group {
+
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    .clearfix();
+
+
 
     /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    --------------------------------------------------------------------------------
+    Button
     ----------------------------------------------------------------------------- */
 
-    @media (min-width: @screen-mini) {
+    > .button {
+
+      position: relative;
+      float: left;
+      z-index: 0;
+
+      &:hover,
+      &:active,
+      &.selected {
+
+        z-index: 1;
+
+      }
+
+      &:not(:first-child) {
+
+        &:not(:last-child) {
+
+          &:not(.dropdown-toggle) {
+
+            border-radius: 0px !important;
+
+          }
+
+        }
+
+      }
+
+      &:first-child {
+
+        margin-left: 0px;
+
+        &:not(:last-child) {
+
+          &:not(.dropdown-toggle) {
+
+            .border-right-radius(0px) !important;
+
+          }
+
+        }
+
+      }
+
+      &:last-child {
+
+          &:not(:first-child) {
+
+              .border-left-radius(0px) !important;
+
+          }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Button
+    ----------------------------------------------------------------------------- */
+
+    .button,
+    .button-group {
+
+      + .button,
+      + .button-group {
+
+        margin-left: @butttn-group-button-offset-horizontal;
+
+      }
 
     }
 
   }
 
 
-
-  & when (@screen-small-enabled) and (@button-group-scale-screen-small-enabled) {
-
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
-
-    @media (min-width: @screen-small) {
-
-    }
-
-  }
-
-
-
-  & when (@screen-medium-enabled) and (@button-group-scale-screen-medium-enabled) {
-
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
-
-    @media (min-width: @screen-medium) {
-
-    }
-
-  }
-
-
-
-  & when (@screen-large-enabled) and (@button-group-scale-screen-large-enabled) {
-
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Large (@screen-large) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
-
-    @media (min-width: @screen-large) {
-
-    }
-
-  }
 
 }

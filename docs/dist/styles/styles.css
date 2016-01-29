@@ -150,6 +150,23 @@ textarea {
   font: inherit;
   margin: 0;
 }
+button:active,
+input:active,
+optgroup:active,
+select:active,
+textarea:active,
+button:focus,
+input:focus,
+optgroup:focus,
+select:focus,
+textarea:focus,
+button:hover,
+input:hover,
+optgroup:hover,
+select:hover,
+textarea:hover {
+  outline: 0;
+}
 button {
   overflow: visible;
 }
@@ -21891,6 +21908,11 @@ Responsive Scaling
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
 button-group/styles.less
@@ -21898,26 +21920,61 @@ button-group/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
-/* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    --------------------------------------------------------------------------------
+.button-group {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  *zoom: 1;
+  /* -----------------------------------------------------------------------------
+    Button
     ----------------------------------------------------------------------------- */
-/* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    --------------------------------------------------------------------------------
+  /* -----------------------------------------------------------------------------
+    Button
     ----------------------------------------------------------------------------- */
-/* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
-/* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Large (@screen-large) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
+}
+.button-group:before,
+.button-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.button-group:after {
+  clear: both;
+}
+.button-group > .button {
+  position: relative;
+  float: left;
+  z-index: 0;
+}
+.button-group > .button:hover,
+.button-group > .button:active,
+.button-group > .button.selected {
+  z-index: 1;
+}
+.button-group > .button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0px !important;
+}
+.button-group > .button:first-child {
+  margin-left: 0px;
+}
+.button-group > .button:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.button-group > .button:last-child:not(:first-child) {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+.button-group .button + .button,
+.button-group .button-group + .button,
+.button-group .button + .button-group,
+.button-group .button-group + .button-group {
+  margin-left: -1px;
+}
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
@@ -22024,7 +22081,7 @@ Header
   display: block;
   width: 40px;
   height: 28.8px;
-  background-image: url("../images/layout/header/header-logo.png?cache=994545863");
+  background-image: url("../images/layout/header/header-logo.png?cache=995170671");
   background-size: 100% 100%;
   margin: 0 auto;
 }
@@ -22346,7 +22403,7 @@ Header
 			---------------------------------------------------------------------------------------------------- */
   }
   #header #header-logo {
-    background-image: url("../images/layout/header/header-logo@2x.png?cache=659063631");
+    background-image: url("../images/layout/header/header-logo@2x.png?cache=47734965");
   }
 }
 /* ----------------------------------------------------------------------------------------------------
