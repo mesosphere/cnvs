@@ -15,6 +15,123 @@ button-collection/styles.less
 
 & when (@button-collection-enabled) {
 
+  .button-collection {
+
+    display: block;
+    font-size: 0px;
+    .clearfix();
+    .shape-layout-variant(button-collection, null);
+
+    & when not (@button-collection-margin-vertical = null) {
+
+      margin-top: -@button-collection-margin-vertical;
+
+    }
+
+    & when not (@button-collection-margin-horizontal = null) {
+
+      margin-left: -@button-collection-margin-horizontal;
+
+    }
+
+    > .button,
+    > .button-group {
+
+      margin-bottom: 0px;
+
+      & when not (@button-collection-margin-vertical = null) {
+
+        margin-top: @button-collection-margin-vertical;
+
+      }
+
+      & when not (@button-collection-margin-horizontal = null) {
+
+        margin-left: @button-collection-margin-horizontal;
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Button Collection Align (Center)
+    ----------------------------------------------------------------------------- */
+
+    &.button-collection-align-horizontal-center {
+
+      text-align: center;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Button Collection Align (Left)
+    ----------------------------------------------------------------------------- */
+
+    &.button-collection-align-horizontal-left {
+
+      text-align: left;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Button Collection Align (Right)
+    ----------------------------------------------------------------------------- */
+
+    &.button-collection-align-horizontal-right {
+
+      text-align: right;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Button Collection Align (Top)
+    ----------------------------------------------------------------------------- */
+
+    &.button-collection-align-vertical-top {
+
+      > .button,
+      > .button-group {
+
+        vertical-align: top;
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Button Collection Align (Center)
+    ----------------------------------------------------------------------------- */
+
+    &.button-collection-align-vertical-center {
+
+      > .button,
+      > .button-group {
+
+        vertical-align: middle
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Button Collection Align (Bottom)
+    ----------------------------------------------------------------------------- */
+
+    &.button-collection-align-vertical-bottom {
+
+      > .button,
+      > .button-group {
+
+        vertical-align: bottom;
+
+      }
+
+    }
+
+  }
+
+
+
   & when (@screen-mini-enabled) and (@button-collection-scale-screen-mini-enabled) {
 
     /* -----------------------------------------------------------------------------
@@ -24,6 +141,41 @@ button-collection/styles.less
     ----------------------------------------------------------------------------- */
 
     @media (min-width: @screen-mini) {
+
+      .button-collection {
+
+        .shape-layout-variant(button-collection, scale-screen-mini);
+
+        & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-mini = null) {
+
+          margin-top: -(@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-mini);
+
+        }
+
+        & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-mini = null) {
+
+          margin-left: -(@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-mini);
+
+        }
+
+        > .button,
+        > .button-group {
+
+          & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-mini = null) {
+
+            margin-top: (@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-mini);
+
+          }
+
+          & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-mini = null) {
+
+            margin-left: (@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-mini);
+
+          }
+
+        }
+
+      }
 
     }
 
@@ -41,6 +193,41 @@ button-collection/styles.less
 
     @media (min-width: @screen-small) {
 
+      .button-collection {
+
+        .shape-layout-variant(button-collection, scale-screen-small);
+
+        & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-small = null) {
+
+          margin-top: -(@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-small);
+
+        }
+
+        & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-small = null) {
+
+          margin-left: -(@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-small);
+
+        }
+
+        > .button,
+        > .button-group {
+
+          & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-small = null) {
+
+            margin-top: (@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-small);
+
+          }
+
+          & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-small = null) {
+
+            margin-left: (@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-small);
+
+          }
+
+        }
+
+      }
+
     }
 
   }
@@ -57,6 +244,41 @@ button-collection/styles.less
 
     @media (min-width: @screen-medium) {
 
+      .button-collection {
+
+        .shape-layout-variant(button-collection, scale-screen-medium);
+
+        & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-medium = null) {
+
+          margin-top: -(@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-medium);
+
+        }
+
+        & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-medium = null) {
+
+          margin-left: -(@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-medium);
+
+        }
+
+        > .button,
+        > .button-group {
+
+          & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-medium = null) {
+
+            margin-top: (@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-medium);
+
+          }
+
+          & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-medium = null) {
+
+            margin-left: (@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-medium);
+
+          }
+
+        }
+
+      }
+
     }
 
   }
@@ -67,11 +289,46 @@ button-collection/styles.less
 
     /* -----------------------------------------------------------------------------
     --------------------------------------------------------------------------------
-    Screen Size: Large (@screen-large) and wider
+    Screen Size: large (@screen-large) and wider
     --------------------------------------------------------------------------------
     ----------------------------------------------------------------------------- */
 
     @media (min-width: @screen-large) {
+
+      .button-collection {
+
+        .shape-layout-variant(button-collection, scale-screen-large);
+
+        & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-large = null) {
+
+          margin-top: -(@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-large);
+
+        }
+
+        & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-large = null) {
+
+          margin-left: -(@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-large);
+
+        }
+
+        > .button,
+        > .button-group {
+
+          & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-large = null) {
+
+            margin-top: (@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-large);
+
+          }
+
+          & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-large = null) {
+
+            margin-left: (@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-large);
+
+          }
+
+        }
+
+      }
 
     }
 
