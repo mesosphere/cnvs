@@ -72,10 +72,23 @@ button/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    Block Button
+    ----------------------------------------------------------------------------- */
+
+    &.button-block {
+
+      display: flex;
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+
+    }
 
 
 
-    & when (@screen-mini-enabled) and (@button-scale-screen-mini-enabled) {
+
+    & when (@screen-mini-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -85,20 +98,39 @@ button/styles.less
 
       @media (min-width: @screen-mini) {
 
-        .text-size-variant(button, scale-screen-mini);
-        .shape-layout-variant(button, scale-screen-mini);
-        .shape-layout-variant(button, narrow, scale-screen-mini);
-        .shape-layout-variant(button, wide, scale-screen-mini);
+        & when (@button-scale-screen-mini-enabled) {
 
-        & when not (@button-height-scale-screen-mini = null) {
+          .text-size-variant(button, scale-screen-mini);
+          .shape-layout-variant(button, scale-screen-mini);
+          .shape-layout-variant(button, narrow, scale-screen-mini);
+          .shape-layout-variant(button, wide, scale-screen-mini);
 
-          height: @button-height * @button-height-scale-screen-mini;
+          & when not (@button-height-scale-screen-mini = null) {
+
+            height: @button-height * @button-height-scale-screen-mini;
+
+          }
+
+          & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-mini = null) {
+
+            border-radius: @button-border-radius * @button-border-radius-scale-screen-mini;
+
+          }
 
         }
 
-        & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-mini = null) {
+        /* -----------------------------------------------------------------------------
+        Block Button
+        ----------------------------------------------------------------------------- */
 
-          border-radius: @button-border-radius * @button-border-radius-scale-screen-mini;
+        &.button-block {
+
+          &.button-block-below-screen-mini {
+
+            width: auto;
+            display: inline-flex;
+
+          }
 
         }
 
@@ -108,7 +140,7 @@ button/styles.less
 
 
 
-    & when (@screen-small-enabled) and (@button-scale-screen-small-enabled) {
+    & when (@screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -118,20 +150,39 @@ button/styles.less
 
       @media (min-width: @screen-small) {
 
-        .text-size-variant(button, scale-screen-small);
-        .shape-layout-variant(button, scale-screen-small);
-        .shape-layout-variant(button, narrow, scale-screen-small);
-        .shape-layout-variant(button, wide, scale-screen-small);
+        & when (@button-scale-screen-small-enabled) {
 
-        & when not (@button-height-scale-screen-small = null) {
+          .text-size-variant(button, scale-screen-small);
+          .shape-layout-variant(button, scale-screen-small);
+          .shape-layout-variant(button, narrow, scale-screen-small);
+          .shape-layout-variant(button, wide, scale-screen-small);
 
-          height: @button-height * @button-height-scale-screen-small;
+          & when not (@button-height-scale-screen-small = null) {
+
+            height: @button-height * @button-height-scale-screen-small;
+
+          }
+
+          & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-small = null) {
+
+            border-radius: @button-border-radius * @button-border-radius-scale-screen-small;
+
+          }
 
         }
 
-        & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-small = null) {
+        /* -----------------------------------------------------------------------------
+        Block Button
+        ----------------------------------------------------------------------------- */
 
-          border-radius: @button-border-radius * @button-border-radius-scale-screen-small;
+        &.button-block {
+
+          &.button-block-below-screen-small {
+
+            width: auto;
+            display: inline-flex;
+
+          }
 
         }
 
@@ -141,7 +192,7 @@ button/styles.less
 
 
 
-    & when (@screen-medium-enabled) and (@button-scale-screen-medium-enabled) {
+    & when (@screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -151,20 +202,39 @@ button/styles.less
 
       @media (min-width: @screen-medium) {
 
-        .text-size-variant(button, scale-screen-medium);
-        .shape-layout-variant(button, scale-screen-medium);
-        .shape-layout-variant(button, narrow, scale-screen-medium);
-        .shape-layout-variant(button, wide, scale-screen-medium);
+        & when (@button-scale-screen-medium-enabled) {
 
-        & when not (@button-height-scale-screen-medium = null) {
+          .text-size-variant(button, scale-screen-medium);
+          .shape-layout-variant(button, scale-screen-medium);
+          .shape-layout-variant(button, narrow, scale-screen-medium);
+          .shape-layout-variant(button, wide, scale-screen-medium);
 
-          height: @button-height * @button-height-scale-screen-medium;
+          & when not (@button-height-scale-screen-medium = null) {
+
+            height: @button-height * @button-height-scale-screen-medium;
+
+          }
+
+          & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-medium = null) {
+
+            border-radius: @button-border-radius * @button-border-radius-scale-screen-medium;
+
+          }
 
         }
 
-        & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-medium = null) {
+        /* -----------------------------------------------------------------------------
+        Block Button
+        ----------------------------------------------------------------------------- */
 
-          border-radius: @button-border-radius * @button-border-radius-scale-screen-medium;
+        &.button-block {
+
+          &.button-block-below-screen-medium {
+
+            width: auto;
+            display: inline-flex;
+
+          }
 
         }
 
@@ -174,7 +244,7 @@ button/styles.less
 
 
 
-    & when (@screen-large-enabled) and (@button-scale-screen-large-enabled) {
+    & when (@screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
@@ -184,20 +254,39 @@ button/styles.less
 
       @media (min-width: @screen-large) {
 
-        .text-size-variant(button, scale-screen-large);
-        .shape-layout-variant(button, scale-screen-large);
-        .shape-layout-variant(button, narrow, scale-screen-large);
-        .shape-layout-variant(button, wide, scale-screen-large);
+        & when (@button-scale-screen-large-enabled) {
 
-        & when not (@button-height-scale-screen-large = null) {
+          .text-size-variant(button, scale-screen-large);
+          .shape-layout-variant(button, scale-screen-large);
+          .shape-layout-variant(button, narrow, scale-screen-large);
+          .shape-layout-variant(button, wide, scale-screen-large);
 
-          height: @button-height * @button-height-scale-screen-large;
+          & when not (@button-height-scale-screen-large = null) {
+
+            height: @button-height * @button-height-scale-screen-large;
+
+          }
+
+          & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-large = null) {
+
+            border-radius: @button-border-radius * @button-border-radius-scale-screen-large;
+
+          }
 
         }
 
-        & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-large = null) {
+        /* -----------------------------------------------------------------------------
+        Block Button
+        ----------------------------------------------------------------------------- */
 
-          border-radius: @button-border-radius * @button-border-radius-scale-screen-large;
+        &.button-block {
+
+          &.button-block-below-screen-large {
+
+            width: auto;
+            display: inline-flex;
+
+          }
 
         }
 
