@@ -22,7 +22,7 @@ button-outline/styles.less
   ----------------------------------------------------------------------------- */
 
   .button-outline,
-  .button-stroke {
+  .button.button-stroke {
 
     .text-style-variant(button-outline);
     .shape-style-variant(button-outline);
@@ -56,6 +56,46 @@ button-outline/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    .button-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.button-inverse {
+
+      .text-style-variant(button-outline-inverse);
+      .shape-style-variant(button-outline-inverse);
+
+      &:hover {
+
+        .text-style-variant(button-outline-inverse-hover);
+        .shape-style-variant(button-outline-inverse-hover);
+
+      }
+
+      &:active {
+
+        .text-style-variant(button-outline-inverse-active);
+        .shape-style-variant(button-outline-inverse-active);
+
+      }
+
+      &.selected {
+
+        .text-style-variant(button-outline-inverse-selected);
+        .shape-style-variant(button-outline-inverse-selected);
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(button-outline-inverse-disabled);
+        .shape-style-variant(button-outline-inverse-disabled);
+
+      }
+
+    }
+
   }
 
 
@@ -64,11 +104,17 @@ button-outline/styles.less
 
     .button-group.open {
 
-      > .button-outline,
-      > .button-stroke {
+      > .button-outline {
 
         .text-style-variant(button-outline-selected);
         .shape-style-variant(button-outline-selected);
+
+        &.button-inverse {
+
+          .text-style-variant(button-outline-inverse-selected);
+          .shape-style-variant(button-outline-inverse-selected);
+
+        }
 
       }
 

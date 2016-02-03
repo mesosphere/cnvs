@@ -56,6 +56,46 @@ button-success-outline/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    .button-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.button-inverse {
+
+      .text-style-variant(button-success-outline-inverse);
+      .shape-style-variant(button-success-outline-inverse);
+
+      &:hover {
+
+        .text-style-variant(button-success-outline-inverse-hover);
+        .shape-style-variant(button-success-outline-inverse-hover);
+
+      }
+
+      &:active {
+
+        .text-style-variant(button-success-outline-inverse-active);
+        .shape-style-variant(button-success-outline-inverse-active);
+
+      }
+
+      &.selected {
+
+        .text-style-variant(button-success-outline-inverse-selected);
+        .shape-style-variant(button-success-outline-inverse-selected);
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(button-success-outline-inverse-disabled);
+        .shape-style-variant(button-success-outline-inverse-disabled);
+
+      }
+
+    }
+
   }
 
 
@@ -64,11 +104,17 @@ button-success-outline/styles.less
 
     .button-group.open {
 
-      > .button-success-outline,
-      > .button-success.button-stroke {
+      > .button-success-outline {
 
         .text-style-variant(button-success-outline-selected);
         .shape-style-variant(button-success-outline-selected);
+
+        &.button-inverse {
+
+          .text-style-variant(button-success-outline-inverse-selected);
+          .shape-style-variant(button-success-outline-inverse-selected);
+
+        }
 
       }
 

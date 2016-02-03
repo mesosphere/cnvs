@@ -56,6 +56,46 @@ button-danger-link/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    .button-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.button-inverse {
+
+      .text-style-variant(button-danger-link-inverse);
+      .shape-style-variant(button-danger-link-inverse);
+
+      &:hover {
+
+        .text-style-variant(button-danger-link-inverse-hover);
+        .shape-style-variant(button-danger-link-inverse-hover);
+
+      }
+
+      &:active {
+
+        .text-style-variant(button-danger-link-inverse-active);
+        .shape-style-variant(button-danger-link-inverse-active);
+
+      }
+
+      &.selected {
+
+        .text-style-variant(button-danger-link-inverse-selected);
+        .shape-style-variant(button-danger-link-inverse-selected);
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(button-danger-link-inverse-disabled);
+        .shape-style-variant(button-danger-link-inverse-disabled);
+
+      }
+
+    }
+
   }
 
 
@@ -64,11 +104,17 @@ button-danger-link/styles.less
 
     .button-group.open {
 
-      > .button-danger-link,
-      > .button-danger.button-link {
+      > .button-danger-link {
 
         .text-style-variant(button-danger-link-selected);
         .shape-style-variant(button-danger-link-selected);
+
+        &.button-inverse {
+
+          .text-style-variant(button-danger-link-inverse-selected);
+          .shape-style-variant(button-danger-link-inverse-selected);
+
+        }
 
       }
 

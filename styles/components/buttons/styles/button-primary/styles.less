@@ -55,6 +55,46 @@ button-primary/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    .button-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.button-inverse {
+
+      .text-style-variant(button-primary-inverse);
+      .shape-style-variant(button-primary-inverse);
+
+      &:hover {
+
+        .text-style-variant(button-primary-inverse-hover);
+        .shape-style-variant(button-primary-inverse-hover);
+
+      }
+
+      &:active {
+
+        .text-style-variant(button-primary-inverse-active);
+        .shape-style-variant(button-primary-inverse-active);
+
+      }
+
+      &.selected {
+
+        .text-style-variant(button-primary-inverse-selected);
+        .shape-style-variant(button-primary-inverse-selected);
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(button-primary-inverse-disabled);
+        .shape-style-variant(button-primary-inverse-disabled);
+
+      }
+
+    }
+
   }
 
 
@@ -67,6 +107,13 @@ button-primary/styles.less
 
         .text-style-variant(button-primary-selected);
         .shape-style-variant(button-primary-selected);
+
+        &.button-inverse {
+
+          .text-style-variant(button-primary-inverse-selected);
+          .shape-style-variant(button-primary-inverse-selected);
+
+        }
 
       }
 

@@ -56,6 +56,46 @@ button-warning-link/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    .button-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.button-inverse {
+
+      .text-style-variant(button-warning-link-inverse);
+      .shape-style-variant(button-warning-link-inverse);
+
+      &:hover {
+
+        .text-style-variant(button-warning-link-inverse-hover);
+        .shape-style-variant(button-warning-link-inverse-hover);
+
+      }
+
+      &:active {
+
+        .text-style-variant(button-warning-link-inverse-active);
+        .shape-style-variant(button-warning-link-inverse-active);
+
+      }
+
+      &.selected {
+
+        .text-style-variant(button-warning-link-inverse-selected);
+        .shape-style-variant(button-warning-link-inverse-selected);
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(button-warning-link-inverse-disabled);
+        .shape-style-variant(button-warning-link-inverse-disabled);
+
+      }
+
+    }
+
   }
 
 
@@ -64,11 +104,17 @@ button-warning-link/styles.less
 
     .button-group.open {
 
-      > .button-warning-link,
-      > .button-warning.button-link {
+      > .button-warning-link {
 
         .text-style-variant(button-warning-link-selected);
         .shape-style-variant(button-warning-link-selected);
+
+        &.button-inverse {
+
+          .text-style-variant(button-warning-link-inverse-selected);
+          .shape-style-variant(button-warning-link-inverse-selected);
+
+        }
 
       }
 

@@ -56,6 +56,46 @@ button-success-link/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    .button-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.button-inverse {
+
+      .text-style-variant(button-success-link-inverse);
+      .shape-style-variant(button-success-link-inverse);
+
+      &:hover {
+
+        .text-style-variant(button-success-link-inverse-hover);
+        .shape-style-variant(button-success-link-inverse-hover);
+
+      }
+
+      &:active {
+
+        .text-style-variant(button-success-link-inverse-active);
+        .shape-style-variant(button-success-link-inverse-active);
+
+      }
+
+      &.selected {
+
+        .text-style-variant(button-success-link-inverse-selected);
+        .shape-style-variant(button-success-link-inverse-selected);
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(button-success-link-inverse-disabled);
+        .shape-style-variant(button-success-link-inverse-disabled);
+
+      }
+
+    }
+
   }
 
 
@@ -64,11 +104,17 @@ button-success-link/styles.less
 
     .button-group.open {
 
-      > .button-success-link,
-      > .button-success.button-link {
+      > .button-success-link {
 
         .text-style-variant(button-success-link-selected);
         .shape-style-variant(button-success-link-selected);
+
+        &.button-inverse {
+
+          .text-style-variant(button-success-link-inverse-selected);
+          .shape-style-variant(button-success-link-inverse-selected);
+
+        }
 
       }
 

@@ -56,6 +56,46 @@ button-warning-outline/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    .button-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.button-inverse {
+
+      .text-style-variant(button-warning-outline-inverse);
+      .shape-style-variant(button-warning-outline-inverse);
+
+      &:hover {
+
+        .text-style-variant(button-warning-outline-inverse-hover);
+        .shape-style-variant(button-warning-outline-inverse-hover);
+
+      }
+
+      &:active {
+
+        .text-style-variant(button-warning-outline-inverse-active);
+        .shape-style-variant(button-warning-outline-inverse-active);
+
+      }
+
+      &.selected {
+
+        .text-style-variant(button-warning-outline-inverse-selected);
+        .shape-style-variant(button-warning-outline-inverse-selected);
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(button-warning-outline-inverse-disabled);
+        .shape-style-variant(button-warning-outline-inverse-disabled);
+
+      }
+
+    }
+
   }
 
 
@@ -64,11 +104,17 @@ button-warning-outline/styles.less
 
     .button-group.open {
 
-      > .button-warning-outline,
-      > .button-warning.button-stroke {
+      > .button-warning-outline {
 
         .text-style-variant(button-warning-outline-selected);
         .shape-style-variant(button-warning-outline-selected);
+
+        &.button-inverse {
+
+          .text-style-variant(button-warning-outline-inverse-selected);
+          .shape-style-variant(button-warning-outline-inverse-selected);
+
+        }
 
       }
 

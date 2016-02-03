@@ -73,6 +73,46 @@ button/styles.less
     }
 
     /* -----------------------------------------------------------------------------
+    .button-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.button-inverse {
+
+      .text-style-variant(button-inverse);
+      .shape-style-variant(button-inverse);
+
+      &:hover {
+
+        .text-style-variant(button-inverse-hover);
+        .shape-style-variant(button-inverse-hover);
+
+      }
+
+      &:active {
+
+        .text-style-variant(button-inverse-active);
+        .shape-style-variant(button-inverse-active);
+
+      }
+
+      &.selected {
+
+        .text-style-variant(button-inverse-selected);
+        .shape-style-variant(button-inverse-selected);
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(button-inverse-disabled);
+        .shape-style-variant(button-inverse-disabled);
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
     Block Button
     ----------------------------------------------------------------------------- */
 
@@ -631,6 +671,13 @@ button/styles.less
 
           .text-style-variant(button-selected);
           .shape-style-variant(button-selected);
+
+          &.button-inverse {
+
+            .text-style-variant(button-inverse-selected);
+            .shape-style-variant(button-inverse-selected);
+
+          }
 
         }
 
