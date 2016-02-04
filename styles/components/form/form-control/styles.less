@@ -557,4 +557,120 @@ form-control/styles.less
 
   }
 
+
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  textarea.form-control
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  textarea.form-control {
+
+    padding-top: (@form-control-height - @form-control-text-line-height) / 2;
+    padding-bottom: (@form-control-height - @form-control-text-line-height) / 2;
+    height: auto;
+
+    & when (@screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-mini) {
+
+        & when (@form-control-scale-screen-mini-enabled) {
+
+          & when not (@form-control-height-scale-screen-mini = null) and not (@form-control-text-line-height-scale-screen-mini = null) {
+
+            padding-top: ((@form-control-height * @form-control-height-scale-screen-mini) - (@form-control-text-line-height * @form-control-text-line-height-scale-screen-mini)) / 2;
+            padding-bottom: ((@form-control-height * @form-control-height-scale-screen-mini) - (@form-control-text-line-height * @form-control-text-line-height-scale-screen-mini)) / 2;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    & when (@screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-small) {
+
+        & when (@form-control-scale-screen-small-enabled) {
+
+          & when not (@form-control-height-scale-screen-small = null) and not (@form-control-text-line-height-scale-screen-small = null) {
+
+            padding-top: ((@form-control-height * @form-control-height-scale-screen-small) - (@form-control-text-line-height * @form-control-text-line-height-scale-screen-small)) / 2;
+            padding-bottom: ((@form-control-height * @form-control-height-scale-screen-small) - (@form-control-text-line-height * @form-control-text-line-height-scale-screen-small)) / 2;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    & when (@screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-medium) {
+
+        & when (@form-control-scale-screen-medium-enabled) {
+
+          & when not (@form-control-height-scale-screen-medium = null) and not (@form-control-text-line-height-scale-screen-medium = null) {
+
+            padding-top: ((@form-control-height * @form-control-height-scale-screen-medium) - (@form-control-text-line-height * @form-control-text-line-height-scale-screen-medium)) / 2;
+            padding-bottom: ((@form-control-height * @form-control-height-scale-screen-medium) - (@form-control-text-line-height * @form-control-text-line-height-scale-screen-medium)) / 2;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    & when (@screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-large) {
+
+        & when (@form-control-scale-screen-large-enabled) {
+
+          & when not (@form-control-height-scale-screen-large = null) and not (@form-control-text-line-height-scale-screen-large = null) {
+
+            padding-top: ((@form-control-height * @form-control-height-scale-screen-large) - (@form-control-text-line-height * @form-control-text-line-height-scale-screen-large)) / 2;
+            padding-bottom: ((@form-control-height * @form-control-height-scale-screen-large) - (@form-control-text-line-height * @form-control-text-line-height-scale-screen-large)) / 2;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
 }
