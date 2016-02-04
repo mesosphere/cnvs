@@ -1,0 +1,510 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-control/variables.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+@form-control-enabled:                                                          true;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@form-control-scale-screen-mini-enabled:                                        true;
+@form-control-scale-screen-small-enabled:                                       true;
+@form-control-scale-screen-medium-enabled:                                      true;
+@form-control-scale-screen-large-enabled:                                       true;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@form-control-text-color:                                                       color-lighten(@neutral, 0);
+@form-control-text-font-family:                                                 @font-family-sans-serif;
+@form-control-text-font-style:                                                  null;
+@form-control-text-font-weight:                                                 400;
+@form-control-text-transform:                                                   null;
+@form-control-text-shadow:                                                      null;
+@form-control-text-decoration:                                                  null;
+@form-control-text-rendering:                                                   optimizelegibility;
+@form-control-background-color:                                                 none;
+@form-control-background-gradient-color-top:                                    null;
+@form-control-background-gradient-color-bottom:                                 null;
+@form-control-border-width:                                                     1px;
+@form-control-border-color:                                                     color-lighten(@neutral, 85);
+@form-control-border-style:                                                     solid;
+@form-control-border-top-width:                                                 null;
+@form-control-border-top-color:                                                 null;
+@form-control-border-top-style:                                                 null;
+@form-control-border-right-width:                                               null;
+@form-control-border-right-color:                                               null;
+@form-control-border-right-style:                                               null;
+@form-control-border-bottom-width:                                              null;
+@form-control-border-bottom-color:                                              null;
+@form-control-border-bottom-style:                                              null;
+@form-control-border-left-width:                                                null;
+@form-control-border-left-color:                                                null;
+@form-control-border-left-style:                                                null;
+@form-control-shadow:                                                           null;
+@form-control-placeholder-text-color:                                           hsla(hue(color-lighten(@neutral, 0)), saturation(color-lighten(@neutral, 0)), lightness(color-lighten(@neutral, 0)), 0.5);
+
+// Hover
+
+@form-control-hover-text-color:                                                 color-lighten(@neutral, -20);
+@form-control-hover-text-font-family:                                           null;
+@form-control-hover-text-font-style:                                            null;
+@form-control-hover-text-font-weight:                                           null;
+@form-control-hover-text-transform:                                             null;
+@form-control-hover-text-shadow:                                                null;
+@form-control-hover-text-decoration:                                            null;
+@form-control-hover-text-rendering:                                             null;
+@form-control-hover-background-color:                                           null;
+@form-control-hover-background-gradient-color-top:                              null;
+@form-control-hover-background-gradient-color-bottom:                           null;
+@form-control-hover-border-width:                                               null;
+@form-control-hover-border-color:                                               color-lighten(@neutral, 70);
+@form-control-hover-border-style:                                               null;
+@form-control-hover-border-top-width:                                           null;
+@form-control-hover-border-top-color:                                           null;
+@form-control-hover-border-top-style:                                           null;
+@form-control-hover-border-right-width:                                         null;
+@form-control-hover-border-right-color:                                         null;
+@form-control-hover-border-right-style:                                         null;
+@form-control-hover-border-bottom-width:                                        null;
+@form-control-hover-border-bottom-color:                                        null;
+@form-control-hover-border-bottom-style:                                        null;
+@form-control-hover-border-left-width:                                          null;
+@form-control-hover-border-left-color:                                          null;
+@form-control-hover-border-left-style:                                          null;
+@form-control-hover-shadow:                                                     null;
+@form-control-hover-placeholder-text-color:                                     hsla(hue(color-lighten(@neutral, -20)), saturation(color-lighten(@neutral, -20)), lightness(color-lighten(@neutral, -20)), 0.65);
+
+// Active
+
+@form-control-active-text-color:                                                color-lighten(@purple, 0);
+@form-control-active-text-font-family:                                          null;
+@form-control-active-text-font-style:                                           null;
+@form-control-active-text-font-weight:                                          null;
+@form-control-active-text-transform:                                            null;
+@form-control-active-text-shadow:                                               null;
+@form-control-active-text-decoration:                                           null;
+@form-control-active-text-rendering:                                            null;
+@form-control-active-background-color:                                          null;
+@form-control-active-background-gradient-color-top:                             null;
+@form-control-active-background-gradient-color-bottom:                          null;
+@form-control-active-border-width:                                              null;
+@form-control-active-border-color:                                              color-lighten(@purple, 40);
+@form-control-active-border-style:                                              null;
+@form-control-active-border-top-width:                                          null;
+@form-control-active-border-top-color:                                          null;
+@form-control-active-border-top-style:                                          null;
+@form-control-active-border-right-width:                                        null;
+@form-control-active-border-right-color:                                        null;
+@form-control-active-border-right-style:                                        null;
+@form-control-active-border-bottom-width:                                       null;
+@form-control-active-border-bottom-color:                                       null;
+@form-control-active-border-bottom-style:                                       null;
+@form-control-active-border-left-width:                                         null;
+@form-control-active-border-left-color:                                         null;
+@form-control-active-border-left-style:                                         null;
+@form-control-active-shadow:                                                    null;
+@form-control-active-placeholder-text-color:                                    hsla(hue(color-lighten(@purple, 0)), saturation(color-lighten(@purple, 0)), lightness(color-lighten(@purple, 0)), 0.5);
+
+// Focus
+
+@form-control-focus-text-color:                                                 @form-control-active-text-color;
+@form-control-focus-text-font-family:                                           @form-control-active-text-font-family;
+@form-control-focus-text-font-style:                                            @form-control-active-text-font-style;
+@form-control-focus-text-font-weight:                                           @form-control-active-text-font-weight;
+@form-control-focus-text-transform:                                             @form-control-active-text-transform;
+@form-control-focus-text-shadow:                                                @form-control-active-text-shadow;
+@form-control-focus-text-decoration:                                            @form-control-active-text-decoration;
+@form-control-focus-text-rendering:                                             @form-control-active-text-rendering;
+@form-control-focus-background-color:                                           @form-control-active-background-color;
+@form-control-focus-background-gradient-color-top:                              @form-control-active-background-gradient-color-top;
+@form-control-focus-background-gradient-color-bottom:                           @form-control-active-background-gradient-color-bottom;
+@form-control-focus-border-width:                                               @form-control-active-border-width;
+@form-control-focus-border-color:                                               @form-control-active-border-color;
+@form-control-focus-border-style:                                               @form-control-active-border-style;
+@form-control-focus-border-top-width:                                           @form-control-active-border-top-width;
+@form-control-focus-border-top-color:                                           @form-control-active-border-top-color;
+@form-control-focus-border-top-style:                                           @form-control-active-border-top-style;
+@form-control-focus-border-right-width:                                         @form-control-active-border-right-width;
+@form-control-focus-border-right-color:                                         @form-control-active-border-right-color;
+@form-control-focus-border-right-style:                                         @form-control-active-border-right-style;
+@form-control-focus-border-bottom-width:                                        @form-control-active-border-bottom-width;
+@form-control-focus-border-bottom-color:                                        @form-control-active-border-bottom-color;
+@form-control-focus-border-bottom-style:                                        @form-control-active-border-bottom-style;
+@form-control-focus-border-left-width:                                          @form-control-active-border-left-width;
+@form-control-focus-border-left-color:                                          @form-control-active-border-left-color;
+@form-control-focus-border-left-style:                                          @form-control-active-border-left-style;
+@form-control-focus-shadow:                                                     @form-control-active-shadow;
+@form-control-focus-placeholder-text-color:                                     @form-control-active-placeholder-text-color;
+
+// Disabled
+
+@form-control-disabled-opacity:                                                 0.5;
+@form-control-disabled-text-color:                                              null;
+@form-control-disabled-text-font-family:                                        null;
+@form-control-disabled-text-font-style:                                         null;
+@form-control-disabled-text-font-weight:                                        null;
+@form-control-disabled-text-transform:                                          null;
+@form-control-disabled-text-shadow:                                             null;
+@form-control-disabled-text-decoration:                                         null;
+@form-control-disabled-text-rendering:                                          null;
+@form-control-disabled-background-color:                                        null;
+@form-control-disabled-background-gradient-color-top:                           null;
+@form-control-disabled-background-gradient-color-bottom:                        null;
+@form-control-disabled-border-width:                                            null;
+@form-control-disabled-border-color:                                            null;
+@form-control-disabled-border-style:                                            null;
+@form-control-disabled-border-top-width:                                        null;
+@form-control-disabled-border-top-color:                                        null;
+@form-control-disabled-border-top-style:                                        null;
+@form-control-disabled-border-right-width:                                      null;
+@form-control-disabled-border-right-color:                                      null;
+@form-control-disabled-border-right-style:                                      null;
+@form-control-disabled-border-bottom-width:                                     null;
+@form-control-disabled-border-bottom-color:                                     null;
+@form-control-disabled-border-bottom-style:                                     null;
+@form-control-disabled-border-left-width:                                       null;
+@form-control-disabled-border-left-color:                                       null;
+@form-control-disabled-border-left-style:                                       null;
+@form-control-disabled-shadow:                                                  null;
+@form-control-disabled-placeholder-text-color:                                  null;
+
+/* -----------------------------------------------------------------------------
+Inverse
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@form-control-inverse-text-color:                                               @white;
+@form-control-inverse-text-font-family:                                         null;
+@form-control-inverse-text-font-style:                                          null;
+@form-control-inverse-text-font-weight:                                         null;
+@form-control-inverse-text-transform:                                           null;
+@form-control-inverse-text-shadow:                                              null;
+@form-control-inverse-text-decoration:                                          null;
+@form-control-inverse-text-rendering:                                           null;
+@form-control-inverse-background-color:                                         null;
+@form-control-inverse-background-gradient-color-top:                            null;
+@form-control-inverse-background-gradient-color-bottom:                         null;
+@form-control-inverse-border-width:                                             null;
+@form-control-inverse-border-color:                                             color-lighten(@neutral, 10);
+@form-control-inverse-border-style:                                             null;
+@form-control-inverse-border-top-width:                                         null;
+@form-control-inverse-border-top-color:                                         null;
+@form-control-inverse-border-top-style:                                         null;
+@form-control-inverse-border-right-width:                                       null;
+@form-control-inverse-border-right-color:                                       null;
+@form-control-inverse-border-right-style:                                       null;
+@form-control-inverse-border-bottom-width:                                      null;
+@form-control-inverse-border-bottom-color:                                      null;
+@form-control-inverse-border-bottom-style:                                      null;
+@form-control-inverse-border-left-width:                                        null;
+@form-control-inverse-border-left-color:                                        null;
+@form-control-inverse-border-left-style:                                        null;
+@form-control-inverse-shadow:                                                   null;
+@form-control-inverse-placeholder-text-color:                                   hsla(hue(@white), saturation(@white), lightness(@white), 0.25);
+
+// Hover
+
+@form-control-inverse-hover-text-color:                                         @white;
+@form-control-inverse-hover-text-font-family:                                   null;
+@form-control-inverse-hover-text-font-style:                                    null;
+@form-control-inverse-hover-text-font-weight:                                   null;
+@form-control-inverse-hover-text-transform:                                     null;
+@form-control-inverse-hover-text-shadow:                                        null;
+@form-control-inverse-hover-text-decoration:                                    none;
+@form-control-inverse-hover-text-rendering:                                     null;
+@form-control-inverse-hover-background-color:                                   null;
+@form-control-inverse-hover-background-gradient-color-top:                      null;
+@form-control-inverse-hover-background-gradient-color-bottom:                   null;
+@form-control-inverse-hover-border-width:                                       null;
+@form-control-inverse-hover-border-color:                                       color-lighten(@neutral, 20);
+@form-control-inverse-hover-border-style:                                       null;
+@form-control-inverse-hover-border-top-width:                                   null;
+@form-control-inverse-hover-border-top-color:                                   null;
+@form-control-inverse-hover-border-top-style:                                   null;
+@form-control-inverse-hover-border-right-width:                                 null;
+@form-control-inverse-hover-border-right-color:                                 null;
+@form-control-inverse-hover-border-right-style:                                 null;
+@form-control-inverse-hover-border-bottom-width:                                null;
+@form-control-inverse-hover-border-bottom-color:                                null;
+@form-control-inverse-hover-border-bottom-style:                                null;
+@form-control-inverse-hover-border-left-width:                                  null;
+@form-control-inverse-hover-border-left-color:                                  null;
+@form-control-inverse-hover-border-left-style:                                  null;
+@form-control-inverse-hover-shadow:                                             null;
+@form-control-inverse-hover-placeholder-text-color:                             hsla(hue(@white), saturation(@white), lightness(@white), 0.35);
+
+// Active
+
+@form-control-inverse-active-text-color:                                        @white;
+@form-control-inverse-active-text-font-family:                                  null;
+@form-control-inverse-active-text-font-style:                                   null;
+@form-control-inverse-active-text-font-weight:                                  null;
+@form-control-inverse-active-text-transform:                                    null;
+@form-control-inverse-active-text-shadow:                                       null;
+@form-control-inverse-active-text-decoration:                                   null;
+@form-control-inverse-active-text-rendering:                                    null;
+@form-control-inverse-active-background-color:                                  null;
+@form-control-inverse-active-background-gradient-color-top:                     null;
+@form-control-inverse-active-background-gradient-color-bottom:                  null;
+@form-control-inverse-active-border-width:                                      null;
+@form-control-inverse-active-border-color:                                      color-lighten(@purple, 0);
+@form-control-inverse-active-border-style:                                      null;
+@form-control-inverse-active-border-top-width:                                  null;
+@form-control-inverse-active-border-top-color:                                  null;
+@form-control-inverse-active-border-top-style:                                  null;
+@form-control-inverse-active-border-right-width:                                null;
+@form-control-inverse-active-border-right-color:                                null;
+@form-control-inverse-active-border-right-style:                                null;
+@form-control-inverse-active-border-bottom-width:                               null;
+@form-control-inverse-active-border-bottom-color:                               null;
+@form-control-inverse-active-border-bottom-style:                               null;
+@form-control-inverse-active-border-left-width:                                 null;
+@form-control-inverse-active-border-left-color:                                 null;
+@form-control-inverse-active-border-left-style:                                 null;
+@form-control-inverse-active-shadow:                                            null;
+@form-control-inverse-active-placeholder-text-color:                            hsla(hue(@white), saturation(@white), lightness(@white), 0.25);
+
+// Focus
+
+@form-control-inverse-focus-text-color:                                         @form-control-inverse-active-text-color;
+@form-control-inverse-focus-text-font-family:                                   @form-control-inverse-active-text-font-family;
+@form-control-inverse-focus-text-font-style:                                    @form-control-inverse-active-text-font-style;
+@form-control-inverse-focus-text-font-weight:                                   @form-control-inverse-active-text-font-weight;
+@form-control-inverse-focus-text-transform:                                     @form-control-inverse-active-text-transform;
+@form-control-inverse-focus-text-shadow:                                        @form-control-inverse-active-text-shadow;
+@form-control-inverse-focus-text-decoration:                                    @form-control-inverse-active-text-decoration;
+@form-control-inverse-focus-text-rendering:                                     @form-control-inverse-active-text-rendering;
+@form-control-inverse-focus-background-color:                                   @form-control-inverse-active-background-color;
+@form-control-inverse-focus-background-gradient-color-top:                      @form-control-inverse-active-background-gradient-color-top;
+@form-control-inverse-focus-background-gradient-color-bottom:                   @form-control-inverse-active-background-gradient-color-bottom;
+@form-control-inverse-focus-border-width:                                       @form-control-inverse-active-border-width;
+@form-control-inverse-focus-border-color:                                       @form-control-inverse-active-border-color;
+@form-control-inverse-focus-border-style:                                       @form-control-inverse-active-border-style;
+@form-control-inverse-focus-border-top-width:                                   @form-control-inverse-active-border-top-width;
+@form-control-inverse-focus-border-top-color:                                   @form-control-inverse-active-border-top-color;
+@form-control-inverse-focus-border-top-style:                                   @form-control-inverse-active-border-top-style;
+@form-control-inverse-focus-border-right-width:                                 @form-control-inverse-active-border-right-width;
+@form-control-inverse-focus-border-right-color:                                 @form-control-inverse-active-border-right-color;
+@form-control-inverse-focus-border-right-style:                                 @form-control-inverse-active-border-right-style;
+@form-control-inverse-focus-border-bottom-width:                                @form-control-inverse-active-border-bottom-width;
+@form-control-inverse-focus-border-bottom-color:                                @form-control-inverse-active-border-bottom-color;
+@form-control-inverse-focus-border-bottom-style:                                @form-control-inverse-active-border-bottom-style;
+@form-control-inverse-focus-border-left-width:                                  @form-control-inverse-active-border-left-width;
+@form-control-inverse-focus-border-left-color:                                  @form-control-inverse-active-border-left-color;
+@form-control-inverse-focus-border-left-style:                                  @form-control-inverse-active-border-left-style;
+@form-control-inverse-focus-shadow:                                             @form-control-inverse-active-shadow;
+@form-control-inverse-focus-placeholder-text-color:                             @form-control-inverse-active-placeholder-text-color;
+
+// Disabled
+
+@form-control-inverse-disabled-opacity:                                         0.5;
+@form-control-inverse-disabled-text-color:                                      null;
+@form-control-inverse-disabled-text-font-family:                                null;
+@form-control-inverse-disabled-text-font-style:                                 null;
+@form-control-inverse-disabled-text-font-weight:                                null;
+@form-control-inverse-disabled-text-transform:                                  null;
+@form-control-inverse-disabled-text-shadow:                                     null;
+@form-control-inverse-disabled-text-decoration:                                 null;
+@form-control-inverse-disabled-text-rendering:                                  null;
+@form-control-inverse-disabled-background-color:                                null;
+@form-control-inverse-disabled-background-gradient-color-top:                   null;
+@form-control-inverse-disabled-background-gradient-color-bottom:                null;
+@form-control-inverse-disabled-border-width:                                    null;
+@form-control-inverse-disabled-border-color:                                    null;
+@form-control-inverse-disabled-border-style:                                    null;
+@form-control-inverse-disabled-border-top-width:                                null;
+@form-control-inverse-disabled-border-top-color:                                null;
+@form-control-inverse-disabled-border-top-style:                                null;
+@form-control-inverse-disabled-border-right-width:                              null;
+@form-control-inverse-disabled-border-right-color:                              null;
+@form-control-inverse-disabled-border-right-style:                              null;
+@form-control-inverse-disabled-border-bottom-width:                             null;
+@form-control-inverse-disabled-border-bottom-color:                             null;
+@form-control-inverse-disabled-border-bottom-style:                             null;
+@form-control-inverse-disabled-border-left-width:                               null;
+@form-control-inverse-disabled-border-left-color:                               null;
+@form-control-inverse-disabled-border-left-style:                               null;
+@form-control-inverse-disabled-shadow:                                          null;
+@form-control-inverse-disabled-placeholder-text-color:                          null;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+// Font Size
+
+@form-control-text-font-size:                                                   1.0rem;
+@form-control-text-font-size-scale-screen-mini:                                 null;
+@form-control-text-font-size-scale-screen-small:                                null;
+@form-control-text-font-size-scale-screen-medium:                               null;
+@form-control-text-font-size-scale-screen-large:                                null;
+
+// Line Height
+
+@form-control-text-line-height:                                                 1.0rem;
+@form-control-text-line-height-scale-screen-mini:                               @form-control-text-font-size-scale-screen-mini;
+@form-control-text-line-height-scale-screen-small:                              @form-control-text-font-size-scale-screen-small;
+@form-control-text-line-height-scale-screen-medium:                             @form-control-text-font-size-scale-screen-medium;
+@form-control-text-line-height-scale-screen-large:                              @form-control-text-font-size-scale-screen-large;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+// Height
+
+@form-control-height:                                                           38px;
+@form-control-height-scale-screen-mini:                                         null;
+@form-control-height-scale-screen-small:                                        1.1;
+@form-control-height-scale-screen-medium:                                       1.2;
+@form-control-height-scale-screen-large:                                        null;
+
+// Border Radius
+
+@form-control-border-radius:                                                    5px;
+@form-control-border-radius-scale-screen-mini:                                  null;
+@form-control-border-radius-scale-screen-small:                                 null;
+@form-control-border-radius-scale-screen-medium:                                null;
+@form-control-border-radius-scale-screen-large:                                 null;
+
+
+
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@form-control-margin-top:                                                       null;
+@form-control-margin-top-scale-screen-mini:                                     null;
+@form-control-margin-top-scale-screen-small:                                    null;
+@form-control-margin-top-scale-screen-medium:                                   null;
+@form-control-margin-top-scale-screen-large:                                    null;
+
+// Margin Bottom
+
+@form-control-margin-bottom:                                                    null;
+@form-control-margin-bottom-scale-screen-mini:                                  null;
+@form-control-margin-bottom-scale-screen-small:                                 null;
+@form-control-margin-bottom-scale-screen-medium:                                null;
+@form-control-margin-bottom-scale-screen-large:                                 null;
+
+// Margin Left
+
+@form-control-margin-left:                                                      null;
+@form-control-margin-left-scale-screen-mini:                                    null;
+@form-control-margin-left-scale-screen-small:                                   null;
+@form-control-margin-left-scale-screen-medium:                                  null;
+@form-control-margin-left-scale-screen-large:                                   null;
+
+// Margin Right
+
+@form-control-margin-right:                                                     null;
+@form-control-margin-right-scale-screen-mini:                                   null;
+@form-control-margin-right-scale-screen-small:                                  null;
+@form-control-margin-right-scale-screen-medium:                                 null;
+@form-control-margin-right-scale-screen-large:                                  null;
+
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+
+// Padding Top
+
+@form-control-padding-top:                                                      null;
+@form-control-padding-top-scale-screen-mini:                                    null;
+@form-control-padding-top-scale-screen-small:                                   null;
+@form-control-padding-top-scale-screen-medium:                                  null;
+@form-control-padding-top-scale-screen-large:                                   null;
+
+// Padding Bottom
+
+@form-control-padding-bottom:                                                   null;
+@form-control-padding-bottom-scale-screen-mini:                                 null;
+@form-control-padding-bottom-scale-screen-small:                                null;
+@form-control-padding-bottom-scale-screen-medium:                               null;
+@form-control-padding-bottom-scale-screen-large:                                null;
+
+// Padding Left
+
+@form-control-padding-left:                                                     1.0rem;
+@form-control-padding-left-scale-screen-mini:                                   @form-control-height-scale-screen-mini;
+@form-control-padding-left-scale-screen-small:                                  @form-control-height-scale-screen-small;
+@form-control-padding-left-scale-screen-medium:                                 @form-control-height-scale-screen-medium;
+@form-control-padding-left-scale-screen-large:                                  @form-control-height-scale-screen-large;
+
+// Padding Right
+
+@form-control-padding-right:                                                    1.0rem;
+@form-control-padding-right-scale-screen-mini:                                  @form-control-height-scale-screen-mini;
+@form-control-padding-right-scale-screen-small:                                 @form-control-height-scale-screen-small;
+@form-control-padding-right-scale-screen-medium:                                @form-control-height-scale-screen-medium;
+@form-control-padding-right-scale-screen-large:                                 @form-control-height-scale-screen-large;
+
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
+
+// Narrow
+
+@form-control-narrow-margin-top-scale:                                          null;
+@form-control-narrow-margin-bottom-scale:                                       null;
+@form-control-narrow-margin-left-scale:                                         null;
+@form-control-narrow-margin-right-scale:                                        null;
+
+@form-control-narrow-padding-top-scale:                                         null;
+@form-control-narrow-padding-bottom-scale:                                      null;
+@form-control-narrow-padding-left-scale:                                        0.5;
+@form-control-narrow-padding-right-scale:                                       0.5;
+
+// Wide
+
+@form-control-wide-margin-top-scale:                                            null;
+@form-control-wide-margin-bottom-scale:                                         null;
+@form-control-wide-margin-left-scale:                                           null;
+@form-control-wide-margin-right-scale:                                          null;
+
+@form-control-wide-padding-top-scale:                                           null;
+@form-control-wide-padding-bottom-scale:                                        null;
+@form-control-wide-padding-left-scale:                                          2.0;
+@form-control-wide-padding-right-scale:                                         2.0;
+
+/* -----------------------------------------------------------------------------
+Rounded form-control
+----------------------------------------------------------------------------- */
+
+@form-control-rounded-padding-horizontal-scale:                                 1.2;

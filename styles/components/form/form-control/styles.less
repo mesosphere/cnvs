@@ -1,0 +1,770 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-control/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@form-control-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  .form-control
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .form-control {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: @form-control-height;
+    transition: all 0.05s ease;
+    .text-size-variant(form-control, null);
+    .shape-layout-variant(form-control, null);
+    .shape-layout-variant(form-control, narrow, null);
+    .shape-layout-variant(form-control, wide, null);
+    .text-style-variant(form-control);
+    .shape-style-variant(form-control);
+
+    &::placeholder[style] {
+
+      opacity: 1;
+      display: inline-flex !important;
+      align-items: center !important;
+
+    }
+
+    & when not (@form-control-border-radius = null) {
+
+      border-radius: @form-control-border-radius;
+
+    }
+
+    & when not (@form-control-placeholder-text-color = null) {
+
+      &::placeholder {
+
+        color: @form-control-placeholder-text-color;
+
+      }
+
+    }
+
+    &:hover {
+
+      .text-style-variant(form-control-hover);
+      .shape-style-variant(form-control-hover);
+
+      & when not (@form-control-hover-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-hover-placeholder-text-color;
+
+        }
+
+      }
+
+    }
+
+    &:active {
+
+      .text-style-variant(form-control-active);
+      .shape-style-variant(form-control-active);
+
+      & when not (@form-control-active-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-active-placeholder-text-color;
+
+        }
+
+      }
+
+    }
+
+    &:focus,
+    &.focus {
+
+      .text-style-variant(form-control-focus);
+      .shape-style-variant(form-control-focus);
+
+      & when not (@form-control-focus-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-focus-placeholder-text-color;
+
+        }
+
+      }
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(form-control-disabled);
+      .shape-style-variant(form-control-disabled);
+
+      & when not (@form-control-disabled-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-disabled-placeholder-text-color;
+
+        }
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    .form-control-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.form-control-inverse {
+
+      .text-style-variant(form-control-inverse);
+      .shape-style-variant(form-control-inverse);
+
+      & when not (@form-control-inverse-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-inverse-placeholder-text-color;
+
+        }
+
+      }
+
+      &:hover {
+
+        .text-style-variant(form-control-inverse-hover);
+        .shape-style-variant(form-control-inverse-hover);
+
+        & when not (@form-control-inverse-hover-placeholder-text-color = null) {
+
+          &::placeholder {
+
+            color: @form-control-inverse-hover-placeholder-text-color;
+
+          }
+
+        }
+
+      }
+
+      &:active {
+
+        .text-style-variant(form-control-inverse-active);
+        .shape-style-variant(form-control-inverse-active);
+
+        & when not (@form-control-inverse-active-placeholder-text-color = null) {
+
+          &::placeholder {
+
+            color: @form-control-inverse-active-placeholder-text-color;
+
+          }
+
+        }
+
+      }
+
+      &:focus,
+      &.focus {
+
+        .text-style-variant(form-control-inverse-focus);
+        .shape-style-variant(form-control-inverse-focus);
+
+        & when not (@form-control-inverse-focus-placeholder-text-color = null) {
+
+          &::placeholder {
+
+            color: @form-control-inverse-focus-placeholder-text-color;
+
+          }
+
+        }
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(form-control-inverse-disabled);
+        .shape-style-variant(form-control-inverse-disabled);
+
+        & when not (@form-control-inverse-disabled-placeholder-text-color = null) {
+
+          &::placeholder {
+
+            color: @form-control-inverse-disabled-placeholder-text-color;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Block form-control
+    ----------------------------------------------------------------------------- */
+
+    &.form-control-block {
+
+      display: flex;
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Rounded form-control
+    ----------------------------------------------------------------------------- */
+
+    &.form-control-rounded {
+
+      border-radius: 1000px;
+
+      & when not (@form-control-rounded-padding-horizontal-scale = null) {
+
+        & when not (@form-control-padding-left = null) {
+
+          padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale;
+
+          & when not (@form-control-narrow-padding-left-scale = null) {
+
+            &.form-control-narrow {
+
+              padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale;
+
+            }
+
+          }
+
+          & when not (@form-control-wide-padding-left-scale = null) {
+
+            &.form-control-wide {
+
+              padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale;
+
+            }
+
+          }
+
+        }
+
+        & when not (@form-control-padding-right = null) {
+
+          padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale;
+
+          & when not (@form-control-narrow-padding-right-scale = null) {
+
+            &.form-control-narrow {
+
+              padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale;
+
+            }
+
+          }
+
+          & when not (@form-control-wide-padding-right-scale = null) {
+
+            &.form-control-wide {
+
+              padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+
+    & when (@screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Mini (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-mini) {
+
+        & when (@form-control-scale-screen-mini-enabled) {
+
+          .text-size-variant(form-control, scale-screen-mini);
+          .shape-layout-variant(form-control, scale-screen-mini);
+          .shape-layout-variant(form-control, narrow, scale-screen-mini);
+          .shape-layout-variant(form-control, wide, scale-screen-mini);
+
+          & when not (@form-control-height-scale-screen-mini = null) {
+
+            height: @form-control-height * @form-control-height-scale-screen-mini;
+
+          }
+
+          & when not (@form-control-border-radius = null) and not (@form-control-border-radius-scale-screen-mini = null) {
+
+            border-radius: @form-control-border-radius * @form-control-border-radius-scale-screen-mini;
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Block form-control
+        ----------------------------------------------------------------------------- */
+
+        &.form-control-block {
+
+          &.form-control-block-below-screen-mini {
+
+            width: auto;
+            display: inline-flex;
+
+          }
+
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          form-control Rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-padding-left = null) and not (@form-control-padding-left-scale-screen-mini = null) {
+
+              padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-mini;
+
+              & when not (@form-control-narrow-padding-left-scale = null) {
+
+                &.form-control-narrow {
+
+                  padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-mini;
+
+                }
+
+              }
+
+              & when not (@form-control-wide-padding-left-scale = null) {
+
+                &.form-control-wide {
+
+                  padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-mini;
+
+                }
+
+              }
+
+            }
+
+            & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-mini = null) {
+
+              padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-mini;
+
+              & when not (@form-control-narrow-padding-right-scale = null) {
+
+                &.form-control-narrow {
+
+                  padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-mini;
+
+                }
+
+              }
+
+              & when not (@form-control-wide-padding-right-scale = null) {
+
+                &.form-control-wide {
+
+                  padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-mini;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Small (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-small) {
+
+        & when (@form-control-scale-screen-small-enabled) {
+
+          .text-size-variant(form-control, scale-screen-small);
+          .shape-layout-variant(form-control, scale-screen-small);
+          .shape-layout-variant(form-control, narrow, scale-screen-small);
+          .shape-layout-variant(form-control, wide, scale-screen-small);
+
+          & when not (@form-control-height-scale-screen-small = null) {
+
+            height: @form-control-height * @form-control-height-scale-screen-small;
+
+          }
+
+          & when not (@form-control-border-radius = null) and not (@form-control-border-radius-scale-screen-small = null) {
+
+            border-radius: @form-control-border-radius * @form-control-border-radius-scale-screen-small;
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Block form-control
+        ----------------------------------------------------------------------------- */
+
+        &.form-control-block {
+
+          &.form-control-block-below-screen-small {
+
+            width: auto;
+            display: inline-flex;
+
+          }
+
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          form-control Rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-padding-left = null) and not (@form-control-padding-left-scale-screen-small = null) {
+
+              padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-small;
+
+              & when not (@form-control-narrow-padding-left-scale = null) {
+
+                &.form-control-narrow {
+
+                  padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-small;
+
+                }
+
+              }
+
+              & when not (@form-control-wide-padding-left-scale = null) {
+
+                &.form-control-wide {
+
+                  padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-small;
+
+                }
+
+              }
+
+            }
+
+            & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-small = null) {
+
+              padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-small;
+
+              & when not (@form-control-narrow-padding-right-scale = null) {
+
+                &.form-control-narrow {
+
+                  padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-small;
+
+                }
+
+              }
+
+              & when not (@form-control-wide-padding-right-scale = null) {
+
+                &.form-control-wide {
+
+                  padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-small;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Medium (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-medium) {
+
+        & when (@form-control-scale-screen-medium-enabled) {
+
+          .text-size-variant(form-control, scale-screen-medium);
+          .shape-layout-variant(form-control, scale-screen-medium);
+          .shape-layout-variant(form-control, narrow, scale-screen-medium);
+          .shape-layout-variant(form-control, wide, scale-screen-medium);
+
+          & when not (@form-control-height-scale-screen-medium = null) {
+
+            height: @form-control-height * @form-control-height-scale-screen-medium;
+
+          }
+
+          & when not (@form-control-border-radius = null) and not (@form-control-border-radius-scale-screen-medium = null) {
+
+            border-radius: @form-control-border-radius * @form-control-border-radius-scale-screen-medium;
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Block form-control
+        ----------------------------------------------------------------------------- */
+
+        &.form-control-block {
+
+          &.form-control-block-below-screen-medium {
+
+            width: auto;
+            display: inline-flex;
+
+          }
+
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          form-control Rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-padding-left = null) and not (@form-control-padding-left-scale-screen-medium = null) {
+
+              padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-medium;
+
+              & when not (@form-control-narrow-padding-left-scale = null) {
+
+                &.form-control-narrow {
+
+                  padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-medium;
+
+                }
+
+              }
+
+              & when not (@form-control-wide-padding-left-scale = null) {
+
+                &.form-control-wide {
+
+                  padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-medium;
+
+                }
+
+              }
+
+            }
+
+            & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-medium = null) {
+
+              padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-medium;
+
+              & when not (@form-control-narrow-padding-right-scale = null) {
+
+                &.form-control-narrow {
+
+                  padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-medium;
+
+                }
+
+              }
+
+              & when not (@form-control-wide-padding-right-scale = null) {
+
+                &.form-control-wide {
+
+                  padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-medium;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-large) {
+
+        & when (@form-control-scale-screen-large-enabled) {
+
+          .text-size-variant(form-control, scale-screen-large);
+          .shape-layout-variant(form-control, scale-screen-large);
+          .shape-layout-variant(form-control, narrow, scale-screen-large);
+          .shape-layout-variant(form-control, wide, scale-screen-large);
+
+          & when not (@form-control-height-scale-screen-large = null) {
+
+            height: @form-control-height * @form-control-height-scale-screen-large;
+
+          }
+
+          & when not (@form-control-border-radius = null) and not (@form-control-border-radius-scale-screen-large = null) {
+
+            border-radius: @form-control-border-radius * @form-control-border-radius-scale-screen-large;
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Block form-control
+        ----------------------------------------------------------------------------- */
+
+        &.form-control-block {
+
+          &.form-control-block-below-screen-large {
+
+            width: auto;
+            display: inline-flex;
+
+          }
+
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-padding-left = null) and not (@form-control-padding-left-scale-screen-large = null) {
+
+              padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-large;
+
+              & when not (@form-control-narrow-padding-left-scale = null) {
+
+                &.form-control-narrow {
+
+                  padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-large;
+
+                }
+
+              }
+
+              & when not (@form-control-wide-padding-left-scale = null) {
+
+                &.form-control-wide {
+
+                  padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-large;
+
+                }
+
+              }
+
+            }
+
+            & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-large = null) {
+
+              padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-large;
+
+              & when not (@form-control-narrow-padding-right-scale = null) {
+
+                &.form-control-narrow {
+
+                  padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-large;
+
+                }
+
+              }
+
+              & when not (@form-control-wide-padding-right-scale = null) {
+
+                &.form-control-wide {
+
+                  padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-large;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
