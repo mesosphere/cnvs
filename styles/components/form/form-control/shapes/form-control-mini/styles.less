@@ -1,0 +1,290 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-control-mini/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@form-control-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  .form-control-mini
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .form-control-mini {
+
+    .text-size-variant(form-control-mini, null);
+    .shape-layout-variant(form-control-mini, null);
+
+    & when not (@form-control-mini-height = null) {
+
+      height: @form-control-mini-height;
+
+    }
+
+    & when not (@form-control-mini-border-radius = null) {
+
+      border-radius: @form-control-mini-border-radius;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    .form-control-rounded
+    ----------------------------------------------------------------------------- */
+
+    &.form-control-rounded {
+
+      border-radius: 1000px;
+
+      & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+
+        & when not (@form-control-mini-padding-left = null) {
+
+          padding-left: @form-control-mini-padding-left * @form-control-mini-rounded-padding-horizontal-scale;
+
+        }
+
+        & when not (@form-control-mini-padding-right = null) {
+
+          padding-right: @form-control-mini-padding-right * @form-control-mini-rounded-padding-horizontal-scale;
+
+        }
+
+      }
+
+    }
+
+
+
+
+    & when (@screen-mini-enabled) and (@form-control-mini-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Mini (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-mini) {
+
+        .text-size-variant(form-control-mini, scale-screen-mini);
+        .shape-layout-variant(form-control-mini, scale-screen-mini);
+
+        & when not (@form-control-mini-height = null) and not (@form-control-mini-height-scale-screen-mini = null) {
+
+          height: @form-control-mini-height * @form-control-mini-height-scale-screen-mini;
+
+        }
+
+        & when not (@form-control-mini-border-radius = null) and not (@form-control-mini-border-radius-scale-screen-mini = null) {
+
+          border-radius: @form-control-mini-border-radius * @form-control-mini-border-radius-scale-screen-mini;
+
+        }
+
+        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-mini-padding-left = null) and not (@form-control-mini-padding-left-scale-screen-mini = null) {
+
+              padding-left: @form-control-mini-padding-left * @form-control-mini-rounded-padding-horizontal-scale * @form-control-mini-padding-left-scale-screen-mini;
+
+            }
+
+            & when not (@form-control-mini-padding-right = null) and not (@form-control-mini-padding-right-scale-screen-mini = null) {
+
+              padding-right: @form-control-mini-padding-right * @form-control-mini-rounded-padding-horizontal-scale * @form-control-mini-padding-right-scale-screen-mini;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-small-enabled) and (@form-control-mini-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Small (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-small) {
+
+        .text-size-variant(form-control-mini, scale-screen-small);
+        .shape-layout-variant(form-control-mini, scale-screen-small);
+
+        & when not (@form-control-mini-height = null) and not (@form-control-mini-height-scale-screen-small = null) {
+
+          height: @form-control-mini-height * @form-control-mini-height-scale-screen-small;
+
+        }
+
+        & when not (@form-control-mini-border-radius = null) and not (@form-control-mini-border-radius-scale-screen-small = null) {
+
+          border-radius: @form-control-mini-border-radius * @form-control-mini-border-radius-scale-screen-small;
+
+        }
+
+        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-mini-padding-left = null) and not (@form-control-mini-padding-left-scale-screen-small = null) {
+
+              padding-left: @form-control-mini-padding-left * @form-control-mini-rounded-padding-horizontal-scale * @form-control-mini-padding-left-scale-screen-small;
+
+            }
+
+            & when not (@form-control-mini-padding-right = null) and not (@form-control-mini-padding-right-scale-screen-small = null) {
+
+              padding-right: @form-control-mini-padding-right * @form-control-mini-rounded-padding-horizontal-scale * @form-control-mini-padding-right-scale-screen-small;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-medium-enabled) and (@form-control-mini-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Medium (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-medium) {
+
+        .text-size-variant(form-control-mini, scale-screen-medium);
+        .shape-layout-variant(form-control-mini, scale-screen-medium);
+
+        & when not (@form-control-mini-height = null) and not (@form-control-mini-height-scale-screen-medium = null) {
+
+          height: @form-control-mini-height * @form-control-mini-height-scale-screen-medium;
+
+        }
+
+        & when not (@form-control-mini-border-radius = null) and not (@form-control-mini-border-radius-scale-screen-medium = null) {
+
+          border-radius: @form-control-mini-border-radius * @form-control-mini-border-radius-scale-screen-medium;
+
+        }
+
+        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-mini-padding-left = null) and not (@form-control-mini-padding-left-scale-screen-medium = null) {
+
+              padding-left: @form-control-mini-padding-left * @form-control-mini-rounded-padding-horizontal-scale * @form-control-mini-padding-left-scale-screen-medium;
+
+            }
+
+            & when not (@form-control-mini-padding-right = null) and not (@form-control-mini-padding-right-scale-screen-medium = null) {
+
+              padding-right: @form-control-mini-padding-right * @form-control-mini-rounded-padding-horizontal-scale * @form-control-mini-padding-right-scale-screen-medium;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-large-enabled) and (@form-control-mini-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-large) {
+
+        .text-size-variant(form-control-mini, scale-screen-large);
+        .shape-layout-variant(form-control-mini, scale-screen-large);
+
+        & when not (@form-control-mini-height = null) and not (@form-control-mini-height-scale-screen-large = null) {
+
+          height: @form-control-mini-height * @form-control-mini-height-scale-screen-large;
+
+        }
+
+        & when not (@form-control-mini-border-radius = null) and not (@form-control-mini-border-radius-scale-screen-large = null) {
+
+          border-radius: @form-control-mini-border-radius * @form-control-mini-border-radius-scale-screen-large;
+
+        }
+
+        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-mini-padding-left = null) and not (@form-control-mini-padding-left-scale-screen-large = null) {
+
+              padding-left: @form-control-mini-padding-left * @form-control-mini-rounded-padding-horizontal-scale * @form-control-mini-padding-left-scale-screen-large;
+
+            }
+
+            & when not (@form-control-mini-padding-right = null) and not (@form-control-mini-padding-right-scale-screen-large = null) {
+
+              padding-right: @form-control-mini-padding-right * @form-control-mini-rounded-padding-horizontal-scale * @form-control-mini-padding-right-scale-screen-large;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -31,8 +31,6 @@ form-control/styles.less
     transition: all 0.05s ease;
     .text-size-variant(form-control, null);
     .shape-layout-variant(form-control, null);
-    .shape-layout-variant(form-control, narrow, null);
-    .shape-layout-variant(form-control, wide, null);
     .text-style-variant(form-control);
     .shape-style-variant(form-control);
 
@@ -248,51 +246,11 @@ form-control/styles.less
 
           padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale;
 
-          & when not (@form-control-narrow-padding-left-scale = null) {
-
-            &.form-control-narrow {
-
-              padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale;
-
-            }
-
-          }
-
-          & when not (@form-control-wide-padding-left-scale = null) {
-
-            &.form-control-wide {
-
-              padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale;
-
-            }
-
-          }
-
         }
 
         & when not (@form-control-padding-right = null) {
 
           padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale;
-
-          & when not (@form-control-narrow-padding-right-scale = null) {
-
-            &.form-control-narrow {
-
-              padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale;
-
-            }
-
-          }
-
-          & when not (@form-control-wide-padding-right-scale = null) {
-
-            &.form-control-wide {
-
-              padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale;
-
-            }
-
-          }
 
         }
 
@@ -317,8 +275,6 @@ form-control/styles.less
 
           .text-size-variant(form-control, scale-screen-mini);
           .shape-layout-variant(form-control, scale-screen-mini);
-          .shape-layout-variant(form-control, narrow, scale-screen-mini);
-          .shape-layout-variant(form-control, wide, scale-screen-mini);
 
           & when not (@form-control-height-scale-screen-mini = null) {
 
@@ -361,51 +317,11 @@ form-control/styles.less
 
               padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-mini;
 
-              & when not (@form-control-narrow-padding-left-scale = null) {
-
-                &.form-control-narrow {
-
-                  padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-mini;
-
-                }
-
-              }
-
-              & when not (@form-control-wide-padding-left-scale = null) {
-
-                &.form-control-wide {
-
-                  padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-mini;
-
-                }
-
-              }
-
             }
 
             & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-mini = null) {
 
               padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-mini;
-
-              & when not (@form-control-narrow-padding-right-scale = null) {
-
-                &.form-control-narrow {
-
-                  padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-mini;
-
-                }
-
-              }
-
-              & when not (@form-control-wide-padding-right-scale = null) {
-
-                &.form-control-wide {
-
-                  padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-mini;
-
-                }
-
-              }
 
             }
 
@@ -433,8 +349,6 @@ form-control/styles.less
 
           .text-size-variant(form-control, scale-screen-small);
           .shape-layout-variant(form-control, scale-screen-small);
-          .shape-layout-variant(form-control, narrow, scale-screen-small);
-          .shape-layout-variant(form-control, wide, scale-screen-small);
 
           & when not (@form-control-height-scale-screen-small = null) {
 
@@ -477,51 +391,11 @@ form-control/styles.less
 
               padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-small;
 
-              & when not (@form-control-narrow-padding-left-scale = null) {
-
-                &.form-control-narrow {
-
-                  padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-small;
-
-                }
-
-              }
-
-              & when not (@form-control-wide-padding-left-scale = null) {
-
-                &.form-control-wide {
-
-                  padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-small;
-
-                }
-
-              }
-
             }
 
             & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-small = null) {
 
               padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-small;
-
-              & when not (@form-control-narrow-padding-right-scale = null) {
-
-                &.form-control-narrow {
-
-                  padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-small;
-
-                }
-
-              }
-
-              & when not (@form-control-wide-padding-right-scale = null) {
-
-                &.form-control-wide {
-
-                  padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-small;
-
-                }
-
-              }
 
             }
 
@@ -549,8 +423,6 @@ form-control/styles.less
 
           .text-size-variant(form-control, scale-screen-medium);
           .shape-layout-variant(form-control, scale-screen-medium);
-          .shape-layout-variant(form-control, narrow, scale-screen-medium);
-          .shape-layout-variant(form-control, wide, scale-screen-medium);
 
           & when not (@form-control-height-scale-screen-medium = null) {
 
@@ -593,51 +465,11 @@ form-control/styles.less
 
               padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-medium;
 
-              & when not (@form-control-narrow-padding-left-scale = null) {
-
-                &.form-control-narrow {
-
-                  padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-medium;
-
-                }
-
-              }
-
-              & when not (@form-control-wide-padding-left-scale = null) {
-
-                &.form-control-wide {
-
-                  padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-medium;
-
-                }
-
-              }
-
             }
 
             & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-medium = null) {
 
               padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-medium;
-
-              & when not (@form-control-narrow-padding-right-scale = null) {
-
-                &.form-control-narrow {
-
-                  padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-medium;
-
-                }
-
-              }
-
-              & when not (@form-control-wide-padding-right-scale = null) {
-
-                &.form-control-wide {
-
-                  padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-medium;
-
-                }
-
-              }
 
             }
 
@@ -665,8 +497,6 @@ form-control/styles.less
 
           .text-size-variant(form-control, scale-screen-large);
           .shape-layout-variant(form-control, scale-screen-large);
-          .shape-layout-variant(form-control, narrow, scale-screen-large);
-          .shape-layout-variant(form-control, wide, scale-screen-large);
 
           & when not (@form-control-height-scale-screen-large = null) {
 
@@ -709,51 +539,11 @@ form-control/styles.less
 
               padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-large;
 
-              & when not (@form-control-narrow-padding-left-scale = null) {
-
-                &.form-control-narrow {
-
-                  padding-left: @form-control-padding-left * @form-control-narrow-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-large;
-
-                }
-
-              }
-
-              & when not (@form-control-wide-padding-left-scale = null) {
-
-                &.form-control-wide {
-
-                  padding-left: @form-control-padding-left * @form-control-wide-padding-left-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-left-scale-screen-large;
-
-                }
-
-              }
-
             }
 
             & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-large = null) {
 
               padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-large;
-
-              & when not (@form-control-narrow-padding-right-scale = null) {
-
-                &.form-control-narrow {
-
-                  padding-right: @form-control-padding-right * @form-control-narrow-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-large;
-
-                }
-
-              }
-
-              & when not (@form-control-wide-padding-right-scale = null) {
-
-                &.form-control-wide {
-
-                  padding-right: @form-control-padding-right * @form-control-wide-padding-right-scale * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-large;
-
-                }
-
-              }
 
             }
 
