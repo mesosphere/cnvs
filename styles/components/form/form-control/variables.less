@@ -164,20 +164,20 @@ Default
 // Disabled
 
 @form-control-disabled-opacity:                                                 0.5;
-@form-control-disabled-text-color:                                              null;
-@form-control-disabled-text-font-family:                                        null;
+@form-control-disabled-text-color:                                              color-lighten(@neutral, 0);
+@form-control-disabled-text-font-family:                                        @font-family-sans-serif;
 @form-control-disabled-text-font-style:                                         null;
-@form-control-disabled-text-font-weight:                                        null;
+@form-control-disabled-text-font-weight:                                        400;
 @form-control-disabled-text-transform:                                          null;
 @form-control-disabled-text-shadow:                                             null;
 @form-control-disabled-text-decoration:                                         null;
-@form-control-disabled-text-rendering:                                          null;
-@form-control-disabled-background-color:                                        null;
+@form-control-disabled-text-rendering:                                          optimizelegibility;
+@form-control-disabled-background-color:                                        none;
 @form-control-disabled-background-gradient-color-top:                           null;
 @form-control-disabled-background-gradient-color-bottom:                        null;
-@form-control-disabled-border-width:                                            null;
-@form-control-disabled-border-color:                                            null;
-@form-control-disabled-border-style:                                            null;
+@form-control-disabled-border-width:                                            1px;
+@form-control-disabled-border-color:                                            color-lighten(@neutral, 85);
+@form-control-disabled-border-style:                                            solid;
 @form-control-disabled-border-top-width:                                        null;
 @form-control-disabled-border-top-color:                                        null;
 @form-control-disabled-border-top-style:                                        null;
@@ -191,7 +191,7 @@ Default
 @form-control-disabled-border-left-color:                                       null;
 @form-control-disabled-border-left-style:                                       null;
 @form-control-disabled-shadow:                                                  null;
-@form-control-disabled-placeholder-text-color:                                  null;
+@form-control-disabled-placeholder-text-color:                                  hsla(hue(color-lighten(@neutral, 0)), saturation(color-lighten(@neutral, 0)), lightness(color-lighten(@neutral, 0)), 0.5);
 
 /* -----------------------------------------------------------------------------
 Inverse
@@ -324,7 +324,7 @@ Inverse
 // Disabled
 
 @form-control-inverse-disabled-opacity:                                         0.5;
-@form-control-inverse-disabled-text-color:                                      null;
+@form-control-inverse-disabled-text-color:                                      @white;
 @form-control-inverse-disabled-text-font-family:                                null;
 @form-control-inverse-disabled-text-font-style:                                 null;
 @form-control-inverse-disabled-text-font-weight:                                null;
@@ -336,7 +336,7 @@ Inverse
 @form-control-inverse-disabled-background-gradient-color-top:                   null;
 @form-control-inverse-disabled-background-gradient-color-bottom:                null;
 @form-control-inverse-disabled-border-width:                                    null;
-@form-control-inverse-disabled-border-color:                                    null;
+@form-control-inverse-disabled-border-color:                                    color-lighten(@neutral, 10);
 @form-control-inverse-disabled-border-style:                                    null;
 @form-control-inverse-disabled-border-top-width:                                null;
 @form-control-inverse-disabled-border-top-color:                                null;
@@ -351,7 +351,7 @@ Inverse
 @form-control-inverse-disabled-border-left-color:                               null;
 @form-control-inverse-disabled-border-left-style:                               null;
 @form-control-inverse-disabled-shadow:                                          null;
-@form-control-inverse-disabled-placeholder-text-color:                          null;
+@form-control-inverse-disabled-placeholder-text-color:                          hsla(hue(@white), saturation(@white), lightness(@white), 0.25);
 
 
 

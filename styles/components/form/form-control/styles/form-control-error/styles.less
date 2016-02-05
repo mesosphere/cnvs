@@ -1,0 +1,203 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-control-error/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@form-control-error-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  .form-control-error
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .form-control-error,
+  .form-group.form-group-error .form-control {
+
+    .text-style-variant(form-control-error);
+    .shape-style-variant(form-control-error);
+
+    & when not (@form-control-error-placeholder-text-color = null) {
+
+      &::placeholder {
+
+        color: @form-control-error-placeholder-text-color;
+
+      }
+
+    }
+
+    &:hover {
+
+      .text-style-variant(form-control-error-hover);
+      .shape-style-variant(form-control-error-hover);
+
+      & when not (@form-control-error-hover-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-error-hover-placeholder-text-color;
+
+        }
+
+      }
+
+    }
+
+    &:active {
+
+      .text-style-variant(form-control-error-active);
+      .shape-style-variant(form-control-error-active);
+
+      & when not (@form-control-error-active-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-error-active-placeholder-text-color;
+
+        }
+
+      }
+
+    }
+
+    &:focus,
+    &.focus {
+
+      .text-style-variant(form-control-error-focus);
+      .shape-style-variant(form-control-error-focus);
+
+      & when not (@form-control-error-focus-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-error-focus-placeholder-text-color;
+
+        }
+
+      }
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      .text-style-variant(form-control-error-disabled);
+      .shape-style-variant(form-control-error-disabled);
+
+      & when not (@form-control-error-disabled-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-error-disabled-placeholder-text-color;
+
+        }
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    .form-control-error-inverse
+    ----------------------------------------------------------------------------- */
+
+    &.form-control-inverse {
+
+      .text-style-variant(form-control-error-inverse);
+      .shape-style-variant(form-control-error-inverse);
+
+      & when not (@form-control-error-inverse-placeholder-text-color = null) {
+
+        &::placeholder {
+
+          color: @form-control-error-inverse-placeholder-text-color;
+
+        }
+
+      }
+
+      &:hover {
+
+        .text-style-variant(form-control-error-inverse-hover);
+        .shape-style-variant(form-control-error-inverse-hover);
+
+        & when not (@form-control-error-inverse-hover-placeholder-text-color = null) {
+
+          &::placeholder {
+
+            color: @form-control-error-inverse-hover-placeholder-text-color;
+
+          }
+
+        }
+
+      }
+
+      &:active {
+
+        .text-style-variant(form-control-error-inverse-active);
+        .shape-style-variant(form-control-error-inverse-active);
+
+        & when not (@form-control-error-inverse-active-placeholder-text-color = null) {
+
+          &::placeholder {
+
+            color: @form-control-error-inverse-active-placeholder-text-color;
+
+          }
+
+        }
+
+      }
+
+      &:focus,
+      &.focus {
+
+        .text-style-variant(form-control-error-inverse-focus);
+        .shape-style-variant(form-control-error-inverse-focus);
+
+        & when not (@form-control-error-inverse-focus-placeholder-text-color = null) {
+
+          &::placeholder {
+
+            color: @form-control-error-inverse-focus-placeholder-text-color;
+
+          }
+
+        }
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        .text-style-variant(form-control-error-inverse-disabled);
+        .shape-style-variant(form-control-error-inverse-disabled);
+
+        & when not (@form-control-error-inverse-disabled-placeholder-text-color = null) {
+
+          &::placeholder {
+
+            color: @form-control-error-inverse-disabled-placeholder-text-color;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

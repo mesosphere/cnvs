@@ -18468,7 +18468,7 @@ button-group/styles.less
   left: -9999px !important;
 }
 /* -----------------------------------------------------------------------------
-Forms
+Form Control
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -18677,6 +18677,34 @@ form-control/styles.less
 .form-control.focus::placeholder {
   color: rgba(147, 81, 229, 0.5);
 }
+.form-control:disabled,
+.form-control.disabled {
+  color: #323a4e;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-rendering: optimizelegibility;
+  background: none;
+  border-width: 1px;
+  border-color: #e0e1e4;
+  border-style: solid;
+  opacity: 0.5;
+}
+.form-control:disabled::-webkit-input-placeholder,
+.form-control.disabled::-webkit-input-placeholder {
+  color: rgba(50, 58, 78, 0.5);
+}
+.form-control:disabled::-moz-placeholder,
+.form-control.disabled::-moz-placeholder {
+  color: rgba(50, 58, 78, 0.5);
+}
+.form-control:disabled:-ms-input-placeholder,
+.form-control.disabled:-ms-input-placeholder {
+  color: rgba(50, 58, 78, 0.5);
+}
+.form-control:disabled::placeholder,
+.form-control.disabled::placeholder {
+  color: rgba(50, 58, 78, 0.5);
+}
 .form-control.form-control-inverse {
   color: #ffffff;
   border-color: #474e60;
@@ -18745,6 +18773,28 @@ form-control/styles.less
 }
 .form-control.form-control-inverse:focus::placeholder,
 .form-control.form-control-inverse.focus::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+.form-control.form-control-inverse:disabled,
+.form-control.form-control-inverse.disabled {
+  color: #ffffff;
+  border-color: #474e60;
+  opacity: 0.5;
+}
+.form-control.form-control-inverse:disabled::-webkit-input-placeholder,
+.form-control.form-control-inverse.disabled::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+.form-control.form-control-inverse:disabled::-moz-placeholder,
+.form-control.form-control-inverse.disabled::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+.form-control.form-control-inverse:disabled:-ms-input-placeholder,
+.form-control.form-control-inverse.disabled:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+.form-control.form-control-inverse:disabled::placeholder,
+.form-control.form-control-inverse.disabled::placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
 .form-control.form-control-block {
@@ -19418,95 +19468,794 @@ form-control-success/styles.less
   .form-control-success
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
-.form-control-success {
+.form-control-success,
+.form-group.form-group-success .form-control {
   color: #27c97b;
-  border-color: #b3ecd1;
+  border-color: #27c97b;
   /* -----------------------------------------------------------------------------
     .form-control-success-inverse
     ----------------------------------------------------------------------------- */
 }
-.form-control-success::-webkit-input-placeholder {
+.form-control-success::-webkit-input-placeholder,
+.form-group.form-group-success .form-control::-webkit-input-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
-.form-control-success::-moz-placeholder {
+.form-control-success::-moz-placeholder,
+.form-group.form-group-success .form-control::-moz-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
-.form-control-success:-ms-input-placeholder {
+.form-control-success:-ms-input-placeholder,
+.form-group.form-group-success .form-control:-ms-input-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
-.form-control-success::placeholder {
+.form-control-success::placeholder,
+.form-group.form-group-success .form-control::placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
-.form-control-success:hover {
-  color: #27c97b;
-  border-color: #93e4bd;
-}
-.form-control-success:hover::-webkit-input-placeholder {
-  color: rgba(39, 201, 123, 0.65);
-}
-.form-control-success:hover::-moz-placeholder {
-  color: rgba(39, 201, 123, 0.65);
-}
-.form-control-success:hover:-ms-input-placeholder {
-  color: rgba(39, 201, 123, 0.65);
-}
-.form-control-success:hover::placeholder {
-  color: rgba(39, 201, 123, 0.65);
-}
-.form-control-success:active {
+.form-control-success:hover,
+.form-group.form-group-success .form-control:hover {
   color: #27c97b;
   border-color: #27c97b;
 }
-.form-control-success:active::-webkit-input-placeholder {
+.form-control-success:hover::-webkit-input-placeholder,
+.form-group.form-group-success .form-control:hover::-webkit-input-placeholder {
+  color: rgba(39, 201, 123, 0.65);
+}
+.form-control-success:hover::-moz-placeholder,
+.form-group.form-group-success .form-control:hover::-moz-placeholder {
+  color: rgba(39, 201, 123, 0.65);
+}
+.form-control-success:hover:-ms-input-placeholder,
+.form-group.form-group-success .form-control:hover:-ms-input-placeholder {
+  color: rgba(39, 201, 123, 0.65);
+}
+.form-control-success:hover::placeholder,
+.form-group.form-group-success .form-control:hover::placeholder {
+  color: rgba(39, 201, 123, 0.65);
+}
+.form-control-success:active,
+.form-group.form-group-success .form-control:active {
+  color: #27c97b;
+  border-color: #27c97b;
+}
+.form-control-success:active::-webkit-input-placeholder,
+.form-group.form-group-success .form-control:active::-webkit-input-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
-.form-control-success:active::-moz-placeholder {
+.form-control-success:active::-moz-placeholder,
+.form-group.form-group-success .form-control:active::-moz-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
-.form-control-success:active:-ms-input-placeholder {
+.form-control-success:active:-ms-input-placeholder,
+.form-group.form-group-success .form-control:active:-ms-input-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
-.form-control-success:active::placeholder {
+.form-control-success:active::placeholder,
+.form-group.form-group-success .form-control:active::placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
 .form-control-success:focus,
-.form-control-success.focus {
+.form-group.form-group-success .form-control:focus,
+.form-control-success.focus,
+.form-group.form-group-success .form-control.focus {
   color: #27c97b;
   border-color: #27c97b;
 }
 .form-control-success:focus::-webkit-input-placeholder,
-.form-control-success.focus::-webkit-input-placeholder {
+.form-group.form-group-success .form-control:focus::-webkit-input-placeholder,
+.form-control-success.focus::-webkit-input-placeholder,
+.form-group.form-group-success .form-control.focus::-webkit-input-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
 .form-control-success:focus::-moz-placeholder,
-.form-control-success.focus::-moz-placeholder {
+.form-group.form-group-success .form-control:focus::-moz-placeholder,
+.form-control-success.focus::-moz-placeholder,
+.form-group.form-group-success .form-control.focus::-moz-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
 .form-control-success:focus:-ms-input-placeholder,
-.form-control-success.focus:-ms-input-placeholder {
+.form-group.form-group-success .form-control:focus:-ms-input-placeholder,
+.form-control-success.focus:-ms-input-placeholder,
+.form-group.form-group-success .form-control.focus:-ms-input-placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
 .form-control-success:focus::placeholder,
-.form-control-success.focus::placeholder {
+.form-group.form-group-success .form-control:focus::placeholder,
+.form-control-success.focus::placeholder,
+.form-group.form-group-success .form-control.focus::placeholder {
   color: rgba(39, 201, 123, 0.5);
 }
-.form-control-success.form-control-inverse {
+.form-control-success.form-control-inverse,
+.form-group.form-group-success .form-control.form-control-inverse {
   color: #ffffff;
-  border-color: rgba(39, 201, 123, 0.5);
+  border-color: #27c97b;
 }
-.form-control-success.form-control-inverse:hover {
+.form-control-success.form-control-inverse:hover,
+.form-group.form-group-success .form-control.form-control-inverse:hover {
   color: #ffffff;
   text-decoration: none;
-  border-color: rgba(39, 201, 123, 0.75);
+  border-color: #27c97b;
 }
-.form-control-success.form-control-inverse:active {
+.form-control-success.form-control-inverse:active,
+.form-group.form-group-success .form-control.form-control-inverse:active {
   color: #ffffff;
   border-color: #27c97b;
 }
 .form-control-success.form-control-inverse:focus,
-.form-control-success.form-control-inverse.focus {
+.form-group.form-group-success .form-control.form-control-inverse:focus,
+.form-control-success.form-control-inverse.focus,
+.form-group.form-group-success .form-control.form-control-inverse.focus {
   color: #ffffff;
   border-color: #27c97b;
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-control-error/variables.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Inverse
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-control-error/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  .form-control-error
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+.form-control-error,
+.form-group.form-group-error .form-control {
+  color: #f33745;
+  border-color: #f33745;
+  /* -----------------------------------------------------------------------------
+    .form-control-error-inverse
+    ----------------------------------------------------------------------------- */
+}
+.form-control-error::-webkit-input-placeholder,
+.form-group.form-group-error .form-control::-webkit-input-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error::-moz-placeholder,
+.form-group.form-group-error .form-control::-moz-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:-ms-input-placeholder,
+.form-group.form-group-error .form-control:-ms-input-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error::placeholder,
+.form-group.form-group-error .form-control::placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:hover,
+.form-group.form-group-error .form-control:hover {
+  color: #f33745;
+  border-color: #f33745;
+}
+.form-control-error:hover::-webkit-input-placeholder,
+.form-group.form-group-error .form-control:hover::-webkit-input-placeholder {
+  color: rgba(243, 55, 69, 0.65);
+}
+.form-control-error:hover::-moz-placeholder,
+.form-group.form-group-error .form-control:hover::-moz-placeholder {
+  color: rgba(243, 55, 69, 0.65);
+}
+.form-control-error:hover:-ms-input-placeholder,
+.form-group.form-group-error .form-control:hover:-ms-input-placeholder {
+  color: rgba(243, 55, 69, 0.65);
+}
+.form-control-error:hover::placeholder,
+.form-group.form-group-error .form-control:hover::placeholder {
+  color: rgba(243, 55, 69, 0.65);
+}
+.form-control-error:active,
+.form-group.form-group-error .form-control:active {
+  color: #f33745;
+  border-color: #f33745;
+}
+.form-control-error:active::-webkit-input-placeholder,
+.form-group.form-group-error .form-control:active::-webkit-input-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:active::-moz-placeholder,
+.form-group.form-group-error .form-control:active::-moz-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:active:-ms-input-placeholder,
+.form-group.form-group-error .form-control:active:-ms-input-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:active::placeholder,
+.form-group.form-group-error .form-control:active::placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:focus,
+.form-group.form-group-error .form-control:focus,
+.form-control-error.focus,
+.form-group.form-group-error .form-control.focus {
+  color: #f33745;
+  border-color: #f33745;
+}
+.form-control-error:focus::-webkit-input-placeholder,
+.form-group.form-group-error .form-control:focus::-webkit-input-placeholder,
+.form-control-error.focus::-webkit-input-placeholder,
+.form-group.form-group-error .form-control.focus::-webkit-input-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:focus::-moz-placeholder,
+.form-group.form-group-error .form-control:focus::-moz-placeholder,
+.form-control-error.focus::-moz-placeholder,
+.form-group.form-group-error .form-control.focus::-moz-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:focus:-ms-input-placeholder,
+.form-group.form-group-error .form-control:focus:-ms-input-placeholder,
+.form-control-error.focus:-ms-input-placeholder,
+.form-group.form-group-error .form-control.focus:-ms-input-placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error:focus::placeholder,
+.form-group.form-group-error .form-control:focus::placeholder,
+.form-control-error.focus::placeholder,
+.form-group.form-group-error .form-control.focus::placeholder {
+  color: rgba(243, 55, 69, 0.5);
+}
+.form-control-error.form-control-inverse,
+.form-group.form-group-error .form-control.form-control-inverse {
+  color: #ffffff;
+  border-color: #f33745;
+}
+.form-control-error.form-control-inverse:hover,
+.form-group.form-group-error .form-control.form-control-inverse:hover {
+  color: #ffffff;
+  text-decoration: none;
+  border-color: #f33745;
+}
+.form-control-error.form-control-inverse:active,
+.form-group.form-group-error .form-control.form-control-inverse:active {
+  color: #ffffff;
+  border-color: #f33745;
+}
+.form-control-error.form-control-inverse:focus,
+.form-group.form-group-error .form-control.form-control-inverse:focus,
+.form-control-error.form-control-inverse.focus,
+.form-group.form-group-error .form-control.form-control-inverse.focus {
+  color: #ffffff;
+  border-color: #f33745;
+}
+/* -----------------------------------------------------------------------------
+Form Group
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-group/variables.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-group/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+.form-group {
+  *zoom: 1;
+  display: block;
+  margin-bottom: 12px;
+}
+.form-group:before,
+.form-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.form-group:after {
+  clear: both;
+}
+.form-group.form-group-short {
+  margin-bottom: 6px;
+}
+.form-group.form-group-short-bottom {
+  margin-bottom: 6px;
+}
+.form-group.form-group-tall {
+  margin-bottom: 24px;
+}
+.form-group.form-group-tall-bottom {
+  margin-bottom: 24px;
+}
+/* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Mini (@screen-mini) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  .form-group {
+    margin-bottom: 12px;
+  }
+  .form-group.form-group-short {
+    margin-bottom: 6px;
+  }
+  .form-group.form-group-short-bottom {
+    margin-bottom: 6px;
+  }
+  .form-group.form-group-tall {
+    margin-bottom: 24px;
+  }
+  .form-group.form-group-tall-bottom {
+    margin-bottom: 24px;
+  }
+}
+/* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Small (@screen-small) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-group.form-group-short {
+    margin-bottom: 8px;
+  }
+  .form-group.form-group-short-bottom {
+    margin-bottom: 8px;
+  }
+  .form-group.form-group-tall {
+    margin-bottom: 32px;
+  }
+  .form-group.form-group-tall-bottom {
+    margin-bottom: 32px;
+  }
+}
+/* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Medium (@screen-medium) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .form-group {
+    margin-bottom: 24px;
+  }
+  .form-group.form-group-short {
+    margin-bottom: 12px;
+  }
+  .form-group.form-group-short-bottom {
+    margin-bottom: 12px;
+  }
+  .form-group.form-group-tall {
+    margin-bottom: 48px;
+  }
+  .form-group.form-group-tall-bottom {
+    margin-bottom: 48px;
+  }
+}
+/* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: large (@screen-large) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  .form-group {
+    margin-bottom: 32px;
+  }
+  .form-group.form-group-short {
+    margin-bottom: 16px;
+  }
+  .form-group.form-group-short-bottom {
+    margin-bottom: 16px;
+  }
+  .form-group.form-group-tall {
+    margin-bottom: 64px;
+  }
+  .form-group.form-group-tall-bottom {
+    margin-bottom: 64px;
+  }
+}
+/* -----------------------------------------------------------------------------
+Form Label
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label/variables.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  label
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+label,
+.label {
+  display: block;
+  color: #5b6171;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-rendering: geometricPrecision;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  margin-top: 0px;
+  margin-bottom: 0.4rem;
+  /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Mini (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Small (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Medium (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+}
+label.label-short,
+.label.label-short {
+  margin-top: 0px;
+  margin-bottom: 0.2rem;
+}
+label.label-short-top,
+.label.label-short-top {
+  margin-top: 0px;
+}
+label.label-short-bottom,
+.label.label-short-bottom {
+  margin-bottom: 0.2rem;
+}
+label.label-tall,
+.label.label-tall {
+  margin-top: 0px;
+  margin-bottom: 0.8rem;
+}
+label.label-tall-top,
+.label.label-tall-top {
+  margin-top: 0px;
+}
+label.label-tall-bottom,
+.label.label-tall-bottom {
+  margin-bottom: 0.8rem;
+}
+label.emphasis,
+.label.emphasis,
+label .emphasis,
+.label .emphasis {
+  color: #282e3e;
+  font-weight: 800;
+}
+label.muted,
+.label.muted,
+label .muted,
+.label .muted {
+  color: #adb0b8;
+}
+label.inverse,
+.label.inverse {
+  color: #c2c4ca;
+}
+label.inverse.emphasis,
+.label.inverse.emphasis,
+label.inverse .emphasis,
+.label.inverse .emphasis {
+  color: #ffffff;
+}
+label.inverse.muted,
+.label.inverse.muted,
+label.inverse .muted,
+.label.inverse .muted {
+  color: #999da7;
+}
+@media (min-width: 768px) {
+  label,
+  .label {
+    font-size: 0.84rem;
+    line-height: 0.84rem;
+    margin-bottom: 0.44rem;
+  }
+  label.label-short,
+  .label.label-short {
+    margin-bottom: 0.22rem;
+  }
+  label.label-short-bottom,
+  .label.label-short-bottom {
+    margin-bottom: 0.22rem;
+  }
+  label.label-tall,
+  .label.label-tall {
+    margin-bottom: 0.88rem;
+  }
+  label.label-tall-bottom,
+  .label.label-tall-bottom {
+    margin-bottom: 0.88rem;
+  }
+}
+@media (min-width: 992px) {
+  label,
+  .label {
+    font-size: 0.88rem;
+    line-height: 0.88rem;
+    margin-bottom: 0.48rem;
+  }
+  label.label-short,
+  .label.label-short {
+    margin-bottom: 0.24rem;
+  }
+  label.label-short-bottom,
+  .label.label-short-bottom {
+    margin-bottom: 0.24rem;
+  }
+  label.label-tall,
+  .label.label-tall {
+    margin-bottom: 0.96rem;
+  }
+  label.label-tall-bottom,
+  .label.label-tall-bottom {
+    margin-bottom: 0.96rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label-success/variables.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label-success/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  label-success
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+label.label-success,
+.label.label-success,
+.form-group.form-group-success label,
+.form-group.form-group-success .label {
+  color: #27c97b;
+}
+label.label-success.emphasis,
+.label.label-success.emphasis,
+.form-group.form-group-success label.emphasis,
+.form-group.form-group-success .label.emphasis,
+label.label-success .emphasis,
+.label.label-success .emphasis,
+.form-group.form-group-success label .emphasis,
+.form-group.form-group-success .label .emphasis {
+  color: #27c97b;
+}
+label.label-success.muted,
+.label.label-success.muted,
+.form-group.form-group-success label.muted,
+.form-group.form-group-success .label.muted,
+label.label-success .muted,
+.label.label-success .muted,
+.form-group.form-group-success label .muted,
+.form-group.form-group-success .label .muted {
+  color: #52d495;
+}
+label.label-success.inverse,
+.label.label-success.inverse,
+.form-group.form-group-success label.inverse,
+.form-group.form-group-success .label.inverse {
+  color: #27c97b;
+}
+label.label-success.inverse.emphasis,
+.label.label-success.inverse.emphasis,
+.form-group.form-group-success label.inverse.emphasis,
+.form-group.form-group-success .label.inverse.emphasis,
+label.label-success.inverse .emphasis,
+.label.label-success.inverse .emphasis,
+.form-group.form-group-success label.inverse .emphasis,
+.form-group.form-group-success .label.inverse .emphasis {
+  color: #27c97b;
+}
+label.label-success.inverse.muted,
+.label.label-success.inverse.muted,
+.form-group.form-group-success label.inverse.muted,
+.form-group.form-group-success .label.inverse.muted,
+label.label-success.inverse .muted,
+.label.label-success.inverse .muted,
+.form-group.form-group-success label.inverse .muted,
+.form-group.form-group-success .label.inverse .muted {
+  color: #52d495;
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label-error/variables.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label-error/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  label-error
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+label.label-error,
+.label.label-error,
+.form-group.form-group-error label,
+.form-group.form-group-error .label {
+  color: #f33745;
+}
+label.label-error.emphasis,
+.label.label-error.emphasis,
+.form-group.form-group-error label.emphasis,
+.form-group.form-group-error .label.emphasis,
+label.label-error .emphasis,
+.label.label-error .emphasis,
+.form-group.form-group-error label .emphasis,
+.form-group.form-group-error .label .emphasis {
+  color: #f33745;
+}
+label.label-error.muted,
+.label.label-error.muted,
+.form-group.form-group-error label.muted,
+.form-group.form-group-error .label.muted,
+label.label-error .muted,
+.label.label-error .muted,
+.form-group.form-group-error label .muted,
+.form-group.form-group-error .label .muted {
+  color: #f55f6a;
+}
+label.label-error.inverse,
+.label.label-error.inverse,
+.form-group.form-group-error label.inverse,
+.form-group.form-group-error .label.inverse {
+  color: #f33745;
+}
+label.label-error.inverse.emphasis,
+.label.label-error.inverse.emphasis,
+.form-group.form-group-error label.inverse.emphasis,
+.form-group.form-group-error .label.inverse.emphasis,
+label.label-error.inverse .emphasis,
+.label.label-error.inverse .emphasis,
+.form-group.form-group-error label.inverse .emphasis,
+.form-group.form-group-error .label.inverse .emphasis {
+  color: #f33745;
+}
+label.label-error.inverse.muted,
+.label.label-error.inverse.muted,
+.form-group.form-group-error label.inverse.muted,
+.form-group.form-group-error .label.inverse.muted,
+label.label-error.inverse .muted,
+.label.label-error.inverse .muted,
+.form-group.form-group-error label.inverse .muted,
+.form-group.form-group-error .label.inverse .muted {
+  color: #f55f6a;
 }
 
 /*# sourceMappingURL=canvas.css.map */

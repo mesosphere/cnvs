@@ -1,0 +1,124 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+form-group/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@form-group-enabled) {
+
+  .form-group {
+
+    .clearfix();
+    display: block;
+    .shape-layout-variant(form-group, null);
+    .shape-layout-variant(form-group, short, null);
+    .shape-layout-variant(form-group, tall, null);
+
+  }
+
+
+
+  & when (@screen-mini-enabled) and (@form-group-scale-screen-mini-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Mini (@screen-mini) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @screen-mini) {
+
+      .form-group {
+
+        .shape-layout-variant(form-group, scale-screen-mini);
+        .shape-layout-variant(form-group, short, scale-screen-mini);
+        .shape-layout-variant(form-group, tall, scale-screen-mini);
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@screen-small-enabled) and (@form-group-scale-screen-small-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Small (@screen-small) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @screen-small) {
+
+      .form-group {
+
+        .shape-layout-variant(form-group, scale-screen-small);
+        .shape-layout-variant(form-group, short, scale-screen-small);
+        .shape-layout-variant(form-group, tall, scale-screen-small);
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@screen-medium-enabled) and (@form-group-scale-screen-medium-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Medium (@screen-medium) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @screen-medium) {
+
+      .form-group {
+
+        .shape-layout-variant(form-group, scale-screen-medium);
+        .shape-layout-variant(form-group, short, scale-screen-medium);
+        .shape-layout-variant(form-group, tall, scale-screen-medium);
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@screen-large-enabled) and (@form-group-scale-screen-large-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: large (@screen-large) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @screen-large) {
+
+      .form-group {
+
+        .shape-layout-variant(form-group, scale-screen-large);
+        .shape-layout-variant(form-group, short, scale-screen-large);
+        .shape-layout-variant(form-group, tall, scale-screen-large);
+
+      }
+
+    }
+
+  }
+
+}

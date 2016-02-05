@@ -116,6 +116,12 @@ form-control/styles.less
       .text-style-variant(form-control-disabled);
       .shape-style-variant(form-control-disabled);
 
+      & when not (@form-control-disabled-opacity = null) {
+
+        opacity: @form-control-disabled-opacity;
+
+      }
+
       & when not (@form-control-disabled-placeholder-text-color = null) {
 
         &::placeholder {
@@ -204,6 +210,12 @@ form-control/styles.less
 
         .text-style-variant(form-control-inverse-disabled);
         .shape-style-variant(form-control-inverse-disabled);
+
+        & when not (@form-control-inverse-disabled-opacity = null) {
+
+          opacity: @form-control-inverse-disabled-opacity;
+
+        }
 
         & when not (@form-control-inverse-disabled-placeholder-text-color = null) {
 

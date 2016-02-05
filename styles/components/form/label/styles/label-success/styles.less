@@ -1,0 +1,89 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label-success/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@label-success-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  label-success
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  label.label-success,
+  .label.label-success,
+  .form-group.form-group-success label,
+  .form-group.form-group-success .label {
+
+    .text-style-variant(label-success);
+
+    & when (@label-success-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+
+        .text-style-variant(label-success-emphasis);
+
+      }
+
+    }
+
+    & when (@label-success-muted-enabled) {
+
+      &.muted,
+      .muted {
+
+        .text-style-variant(label-success-muted);
+
+      }
+
+    }
+
+
+
+    & when (@label-success-inverse-enabled) {
+
+      &.inverse {
+
+        .text-style-variant(label-success-inverse);
+
+        & when (@label-success-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+
+            .text-style-variant(label-success-inverse-emphasis);
+
+          }
+
+        }
+
+        & when (@label-success-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+
+            .text-style-variant(label-success-inverse-muted);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

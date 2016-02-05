@@ -1,0 +1,89 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label-error/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@label-error-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  label-error
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  label.label-error,
+  .label.label-error,
+  .form-group.form-group-error label,
+  .form-group.form-group-error .label {
+
+    .text-style-variant(label-error);
+
+    & when (@label-error-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+
+        .text-style-variant(label-error-emphasis);
+
+      }
+
+    }
+
+    & when (@label-error-muted-enabled) {
+
+      &.muted,
+      .muted {
+
+        .text-style-variant(label-error-muted);
+
+      }
+
+    }
+
+
+
+    & when (@label-error-inverse-enabled) {
+
+      &.inverse {
+
+        .text-style-variant(label-error-inverse);
+
+        & when (@label-error-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+
+            .text-style-variant(label-error-inverse-emphasis);
+
+          }
+
+        }
+
+        & when (@label-error-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+
+            .text-style-variant(label-error-inverse-muted);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,176 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+label/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@label-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  label
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  label,
+  .label {
+
+    display: block;
+    .text-style-variant(label);
+    .text-size-variant(label, null);
+    .shape-layout-variant(label, null);
+    .shape-layout-variant(label, short, null);
+    .shape-layout-variant(label, tall, null);
+
+    & when (@label-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+
+        .text-style-variant(label-emphasis);
+
+      }
+
+    }
+
+    & when (@label-muted-enabled) {
+
+      &.muted,
+      .muted {
+
+        .text-style-variant(label-muted);
+
+      }
+
+    }
+
+
+
+    & when (@label-inverse-enabled) {
+
+      &.inverse {
+
+        .text-style-variant(label-inverse);
+
+        & when (@label-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+
+            .text-style-variant(label-inverse-emphasis);
+
+          }
+
+        }
+
+        & when (@label-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+
+            .text-style-variant(label-inverse-muted);
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-mini-enabled) and (@label-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Mini (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-mini) {
+
+        .text-size-variant(label, scale-screen-mini);
+        .shape-layout-variant(label, scale-screen-mini);
+        .shape-layout-variant(label, short, scale-screen-mini);
+        .shape-layout-variant(label, tall, scale-screen-mini);
+
+      }
+
+    }
+
+
+
+    & when (@screen-small-enabled) and (@label-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Small (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-small) {
+
+        .text-size-variant(label, scale-screen-small);
+        .shape-layout-variant(label, scale-screen-small);
+        .shape-layout-variant(label, short, scale-screen-small);
+        .shape-layout-variant(label, tall, scale-screen-small);
+
+      }
+
+    }
+
+
+
+    & when (@screen-medium-enabled) and (@label-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Medium (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-medium) {
+
+        .text-size-variant(label, scale-screen-medium);
+        .shape-layout-variant(label, scale-screen-medium);
+        .shape-layout-variant(label, short, scale-screen-medium);
+        .shape-layout-variant(label, tall, scale-screen-medium);
+
+      }
+
+    }
+
+
+
+    & when (@screen-large-enabled) and (@label-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-large) {
+
+        .text-size-variant(label, scale-screen-large);
+        .shape-layout-variant(label, scale-screen-large);
+        .shape-layout-variant(label, short, scale-screen-large);
+        .shape-layout-variant(label, tall, scale-screen-large);
+
+      }
+
+    }
+
+  }
+
+}
