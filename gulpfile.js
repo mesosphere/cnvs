@@ -120,7 +120,7 @@ gulp.task('serve', ['build'], function() {
 gulp.task("watch", function () {
 
   gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
-  gulp.watch(dirs.canvas.styles + "/**/*.less", ["canvas:styles", "docs:styles"]);
+  gulp.watch([dirs.canvas.styles + "/**/*.less"], ["canvas:styles", "docs:styles"]);
   gulp.watch([
       dirs.docs.path + '/index.html',
       dirs.docs.path + '/_includes/**/*.html',
