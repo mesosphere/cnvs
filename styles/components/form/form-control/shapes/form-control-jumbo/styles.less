@@ -287,4 +287,286 @@ form-control-jumbo/styles.less
 
   }
 
+
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  .form-control-select
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .form-control-select.form-control-jumbo {
+
+    select {
+
+      .text-size-variant(form-control-jumbo, null);
+      .shape-layout-variant(form-control-jumbo, null);
+
+      & when not (@form-control-jumbo-height = null) {
+
+        height: @form-control-jumbo-height;
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    .form-control-rounded
+    ----------------------------------------------------------------------------- */
+
+    &.form-control-rounded {
+
+      select {
+
+        & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
+
+          & when not (@form-control-jumbo-padding-left = null) {
+
+            padding-left: @form-control-jumbo-padding-left * @form-control-jumbo-rounded-padding-horizontal-scale;
+
+          }
+
+          & when not (@form-control-jumbo-padding-right = null) {
+
+            padding-right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale;
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+
+    & when (@screen-mini-enabled) and (@form-control-jumbo-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Mini (@screen-mini) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-mini) {
+
+        select {
+
+          .text-size-variant(form-control-jumbo, scale-screen-mini);
+          .shape-layout-variant(form-control-jumbo, scale-screen-mini);
+
+          & when not (@form-control-jumbo-height = null) and not (@form-control-jumbo-height-scale-screen-mini = null) {
+
+            height: @form-control-jumbo-height * @form-control-jumbo-height-scale-screen-mini;
+
+          }
+
+        }
+
+        & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-jumbo-padding-left = null) and not (@form-control-jumbo-padding-left-scale-screen-mini = null) {
+
+                padding-left: @form-control-jumbo-padding-left * @form-control-jumbo-rounded-padding-horizontal-scale * @form-control-jumbo-padding-left-scale-screen-mini;
+
+              }
+
+              & when not (@form-control-jumbo-padding-right = null) and not (@form-control-jumbo-padding-right-scale-screen-mini = null) {
+
+                padding-right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale * @form-control-jumbo-padding-right-scale-screen-mini;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-small-enabled) and (@form-control-jumbo-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Small (@screen-small) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-small) {
+
+        select {
+
+          .text-size-variant(form-control-jumbo, scale-screen-small);
+          .shape-layout-variant(form-control-jumbo, scale-screen-small);
+
+          & when not (@form-control-jumbo-height = null) and not (@form-control-jumbo-height-scale-screen-small = null) {
+
+            height: @form-control-jumbo-height * @form-control-jumbo-height-scale-screen-small;
+
+          }
+
+        }
+
+        & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-jumbo-padding-left = null) and not (@form-control-jumbo-padding-left-scale-screen-small = null) {
+
+                padding-left: @form-control-jumbo-padding-left * @form-control-jumbo-rounded-padding-horizontal-scale * @form-control-jumbo-padding-left-scale-screen-small;
+
+              }
+
+              & when not (@form-control-jumbo-padding-right = null) and not (@form-control-jumbo-padding-right-scale-screen-small = null) {
+
+                padding-right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale * @form-control-jumbo-padding-right-scale-screen-small;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-medium-enabled) and (@form-control-jumbo-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Medium (@screen-medium) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-medium) {
+
+        select {
+
+          .text-size-variant(form-control-jumbo, scale-screen-medium);
+          .shape-layout-variant(form-control-jumbo, scale-screen-medium);
+
+          & when not (@form-control-jumbo-height = null) and not (@form-control-jumbo-height-scale-screen-medium = null) {
+
+            height: @form-control-jumbo-height * @form-control-jumbo-height-scale-screen-medium;
+
+          }
+
+        }
+
+        & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-jumbo-padding-left = null) and not (@form-control-jumbo-padding-left-scale-screen-medium = null) {
+
+                padding-left: @form-control-jumbo-padding-left * @form-control-jumbo-rounded-padding-horizontal-scale * @form-control-jumbo-padding-left-scale-screen-medium;
+
+              }
+
+              & when not (@form-control-jumbo-padding-right = null) and not (@form-control-jumbo-padding-right-scale-screen-medium = null) {
+
+                padding-right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale * @form-control-jumbo-padding-right-scale-screen-medium;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@screen-large-enabled) and (@form-control-jumbo-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+      Screen Size: Large (@screen-large) and wider
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @screen-large) {
+
+        select {
+
+          .text-size-variant(form-control-jumbo, scale-screen-large);
+          .shape-layout-variant(form-control-jumbo, scale-screen-large);
+
+          & when not (@form-control-jumbo-height = null) and not (@form-control-jumbo-height-scale-screen-large = null) {
+
+            height: @form-control-jumbo-height * @form-control-jumbo-height-scale-screen-large;
+
+          }
+
+        }
+
+        & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          .form-control-rounded
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-jumbo-padding-left = null) and not (@form-control-jumbo-padding-left-scale-screen-large = null) {
+
+                padding-left: @form-control-jumbo-padding-left * @form-control-jumbo-rounded-padding-horizontal-scale * @form-control-jumbo-padding-left-scale-screen-large;
+
+              }
+
+              & when not (@form-control-jumbo-padding-right = null) and not (@form-control-jumbo-padding-right-scale-screen-large = null) {
+
+                padding-right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale * @form-control-jumbo-padding-right-scale-screen-large;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
 }
