@@ -1,33 +1,21 @@
-{% assign navurl = page.url | remove: 'index.html' %}
+<!-- =================================================
+BEGIN: Navigation
+================================================== -->
 
-<ul>
+<nav class="navigation canvas-pod">
 
-{% for item in include.nav %}
+  <div class="navigation-inner">
 
-  <li>
+    <div class="container container-fluid container-fluid-narrow container-pod container-pod-short">
 
-    <a href="{{ item.url }}">
+      {% include layout/navigation-menu.html nav=site.data.menu %}
 
-      {% if item.url == navurl %}
+    </div>
 
-        {{ item.text }}
+  </div>
 
-      {% else %}
+</nav>
 
-        {{ item.text }}
-
-      {% endif %}
-
-    </a>
-
-    {% if item.subitems and navurl contains item.url %}
-
-      {% include layout/navigation.html nav=item.subitems %}
-
-    {% endif %}
-
-  </li>
-
-{% endfor %}
-
-</ul>
+<!-- =================================================
+END: Navigation
+================================================== -->

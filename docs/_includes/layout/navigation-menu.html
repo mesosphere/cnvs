@@ -1,0 +1,25 @@
+{% assign navurl = page.url | remove: 'index.html' %}
+
+<ul class="list-unstyled">
+
+  {% for item in include.nav %}
+
+    <li {% if item.url == navurl %}class="selected"{% endif %}>
+
+      <a href="{{ item.url }}">
+
+        {{ item.text }}
+
+      </a>
+
+      {% if item.subitems and navurl contains item.url %}
+
+        {% include layout/navigation-menu.html nav=item.subitems %}
+
+      {% endif %}
+
+    </li>
+
+  {% endfor %}
+
+</ul>
