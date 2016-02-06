@@ -123,10 +123,9 @@ gulp.task("watch", function () {
   gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
   gulp.watch([dirs.canvas.styles + "/**/*.less"], ["canvas:styles", "docs:styles"]);
   gulp.watch([
-      dirs.docs.path + '/index.html',
-      dirs.docs.path + '/_includes/**/*.html',
-      dirs.docs.path + '/_layouts/**/*.html',
-      dirs.docs.path + '/_posts/**/*'
+      dirs.docs.path + '/**/*.html',
+      dirs.docs.path + '/**/*.md',
+      dirs.docs.path + '/_data/**/*'
     ], ['jekyll-rebuild']);
 
 });
