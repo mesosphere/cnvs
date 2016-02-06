@@ -576,11 +576,12 @@ form-control/styles.less
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
 
-  textarea.form-control {
+  textarea.form-control,
+  .form-control select[multiple] {
 
     padding-top: (@form-control-height - @form-control-text-line-height) / 2;
     padding-bottom: (@form-control-height - @form-control-text-line-height) / 2;
-    height: auto;
+    height: auto !important;
 
 
 
@@ -689,6 +690,12 @@ form-control/styles.less
       }
 
     }
+
+  }
+
+  .form-control.form-control-select-multiple {
+
+    height: auto;
 
   }
 

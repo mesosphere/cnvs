@@ -238,7 +238,7 @@
 
   function window_scroll() {
 
-    var scroll_top = $(window).scrollTop() - $('#canvas').offset().top;
+    var scroll_top = $(window).scrollTop() - $('.canvas').offset().top;
 
     page_content_navigation_update();
 
@@ -259,7 +259,7 @@
 
   function page_content_navigation_update() {
 
-    var scroll_top = $(window).scrollTop() - $('#canvas').offset().top;
+    var scroll_top = $(window).scrollTop() - $('.canvas').offset().top;
     var page_content_navigation = $('#page-content-navigation');
 
     page_content_navigation.find('li').each(function() {

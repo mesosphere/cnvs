@@ -36,8 +36,8 @@ toggle/styles.less
 
       margin: 0px;
       position: relative;
-      .text-style-variant(label);
-      .text-size-variant(label, null);
+      .text-style-variant(toggle-label);
+      .text-size-variant(toggle-label, null);
       .shape-layout-variant(toggle-label, null);
 
       input[type="checkbox"],
@@ -53,7 +53,7 @@ toggle/styles.less
         &.emphasis,
         .emphasis {
 
-          .text-style-variant(label-emphasis);
+          .text-style-variant(toggle-label-emphasis);
 
         }
 
@@ -64,7 +64,7 @@ toggle/styles.less
         &.muted,
         .muted {
 
-          .text-style-variant(label-muted);
+          .text-style-variant(toggle-label-muted);
 
         }
 
@@ -76,14 +76,14 @@ toggle/styles.less
 
         &.inverse {
 
-          .text-style-variant(label-inverse);
+          .text-style-variant(toggle-label-inverse);
 
           & when (@label-inverse-emphasis-enabled) {
 
             &.emphasis,
             .emphasis {
 
-              .text-style-variant(label-inverse-emphasis);
+              .text-style-variant(toggle-label-inverse-emphasis);
 
             }
 
@@ -94,7 +94,7 @@ toggle/styles.less
             &.muted,
             .muted {
 
-              .text-style-variant(label-inverse-muted);
+              .text-style-variant(toggle-label-inverse-muted);
 
             }
 
@@ -103,6 +103,12 @@ toggle/styles.less
         }
 
       }
+
+    }
+
+    &:last-child {
+
+      margin-bottom: 0px;
 
     }
 
@@ -154,6 +160,15 @@ toggle/styles.less
 
 
 
+        label {
+
+          .text-size-variant(toggle-label, scale-screen-mini);
+          .shape-layout-variant(toggle-label, scale-screen-mini);
+
+        }
+
+
+
         /* -----------------------------------------------------------------------------
         Inline
         ----------------------------------------------------------------------------- */
@@ -193,6 +208,15 @@ toggle/styles.less
         .shape-layout-variant(toggle, scale-screen-small);
         .shape-layout-variant(toggle, short, scale-screen-small);
         .shape-layout-variant(toggle, tall, scale-screen-small);
+
+
+
+        label {
+
+          .text-size-variant(toggle-label, scale-screen-small);
+          .shape-layout-variant(toggle-label, scale-screen-small);
+
+        }
 
 
 
@@ -238,6 +262,15 @@ toggle/styles.less
 
 
 
+        label {
+
+          .text-size-variant(toggle-label, scale-screen-medium);
+          .shape-layout-variant(toggle-label, scale-screen-medium);
+
+        }
+
+
+
         /* -----------------------------------------------------------------------------
         Inline
         ----------------------------------------------------------------------------- */
@@ -278,6 +311,14 @@ toggle/styles.less
         .shape-layout-variant(toggle, short, scale-screen-large);
         .shape-layout-variant(toggle, tall, scale-screen-large);
 
+
+
+        label {
+
+          .text-size-variant(toggle-label, scale-screen-large);
+          .shape-layout-variant(toggle-label, scale-screen-large);
+
+        }
 
 
         /* -----------------------------------------------------------------------------

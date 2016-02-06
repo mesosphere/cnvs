@@ -12,13 +12,13 @@
 BEGIN: Header
 ================================================== -->
 
-<header id="header" data-template="canvas-header" class="canvas-pod {{ page-header-class }}">
+<header data-template="canvas-header" class="header canvas-pod {{ page-header-class }}">
 
-  <div id="header-inner">
+  <div class="header-inner">
 
-    <div class="container container-pod container-pod-short">
+    <div class="container container-fluid container-fluid-narrow container-pod container-pod-short">
 
-      <h1 id="header-logo">
+      <h1 class="header-logo">
 
         <a href="{{ site.baseurl }}/" rel="nofollow">
 
@@ -31,30 +31,6 @@ BEGIN: Header
         </a>
 
       </h1>
-
-      <nav id="header-navigation" role="navigation">
-
-        <ul id="menu-header-menu">
-
-          {% assign url = page.url|remove:'index.html' %}
-
-          {% for link in site.navigation %}
-
-            {% if link.title %}
-
-              <li class="menu-item {% if url == link.url %}current_page_item{% endif %}">
-
-                <a class="page-link" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
-
-              </li>
-
-            {% endif %}
-
-          {% endfor %}
-
-        </ul>
-
-      </nav>
 
     </div>
 

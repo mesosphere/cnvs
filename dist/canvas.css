@@ -3664,7 +3664,7 @@ Canvas
 
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
-#canvas {
+.canvas {
   position: relative;
   background-color: #ffffff;
   overflow: hidden;
@@ -19051,10 +19051,11 @@ form-control/styles.less
   textarea.form-control
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
-textarea.form-control {
+textarea.form-control,
+.form-control select[multiple] {
   padding-top: 7.8px;
   padding-bottom: 7.8px;
-  height: auto;
+  height: auto !important;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Large (@screen-mini) and wider
@@ -19077,16 +19078,21 @@ textarea.form-control {
       ----------------------------------------------------------------------------- */
 }
 @media (min-width: 768px) {
-  textarea.form-control {
+  textarea.form-control,
+  .form-control select[multiple] {
     padding-top: 9.14px;
     padding-bottom: 9.14px;
   }
 }
 @media (min-width: 992px) {
-  textarea.form-control {
+  textarea.form-control,
+  .form-control select[multiple] {
     padding-top: 10.48px;
     padding-bottom: 10.48px;
   }
+}
+.form-control.form-control-select-multiple {
+  height: auto;
 }
 /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
@@ -20703,7 +20709,7 @@ label,
   font-size: 0.8rem;
   line-height: 0.8rem;
   margin-top: 0px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   /* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------
       Screen Size: Mini (@screen-mini) and wider
@@ -20728,7 +20734,7 @@ label,
 label.label-short,
 .label.label-short {
   margin-top: 0px;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 label.label-short-top,
 .label.label-short-top {
@@ -20736,12 +20742,12 @@ label.label-short-top,
 }
 label.label-short-bottom,
 .label.label-short-bottom {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 label.label-tall,
 .label.label-tall {
   margin-top: 0px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 label.label-tall-top,
 .label.label-tall-top {
@@ -20749,7 +20755,7 @@ label.label-tall-top,
 }
 label.label-tall-bottom,
 .label.label-tall-bottom {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 label.emphasis,
 .label.emphasis,
@@ -20785,23 +20791,23 @@ label.inverse .muted,
   .label {
     font-size: 0.84rem;
     line-height: 0.84rem;
-    margin-bottom: 0.44rem;
+    margin-bottom: 0.55rem;
   }
   label.label-short,
   .label.label-short {
-    margin-bottom: 0.22rem;
+    margin-bottom: 0.275rem;
   }
   label.label-short-bottom,
   .label.label-short-bottom {
-    margin-bottom: 0.22rem;
+    margin-bottom: 0.275rem;
   }
   label.label-tall,
   .label.label-tall {
-    margin-bottom: 0.88rem;
+    margin-bottom: 1.1rem;
   }
   label.label-tall-bottom,
   .label.label-tall-bottom {
-    margin-bottom: 0.88rem;
+    margin-bottom: 1.1rem;
   }
 }
 @media (min-width: 992px) {
@@ -20809,23 +20815,23 @@ label.inverse .muted,
   .label {
     font-size: 0.88rem;
     line-height: 0.88rem;
-    margin-bottom: 0.48rem;
+    margin-bottom: 0.6rem;
   }
   label.label-short,
   .label.label-short {
-    margin-bottom: 0.24rem;
+    margin-bottom: 0.3rem;
   }
   label.label-short-bottom,
   .label.label-short-bottom {
-    margin-bottom: 0.24rem;
+    margin-bottom: 0.3rem;
   }
   label.label-tall,
   .label.label-tall {
-    margin-bottom: 0.96rem;
+    margin-bottom: 1.2rem;
   }
   label.label-tall-bottom,
   .label.label-tall-bottom {
-    margin-bottom: 0.96rem;
+    margin-bottom: 1.2rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -21066,7 +21072,7 @@ toggle/styles.less
 .radio {
   *zoom: 1;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   /* -----------------------------------------------------------------------------
     Inline
     ----------------------------------------------------------------------------- */
@@ -21085,19 +21091,19 @@ toggle/styles.less
 }
 .checkbox.toggle-short,
 .radio.toggle-short {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 .checkbox.toggle-short-bottom,
 .radio.toggle-short-bottom {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 .checkbox.toggle-tall,
 .radio.toggle-tall {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 .checkbox.toggle-tall-bottom,
 .radio.toggle-tall-bottom {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 .checkbox input[type="checkbox"],
 .radio input[type="checkbox"],
@@ -21155,6 +21161,10 @@ toggle/styles.less
 .radio label.inverse .muted {
   color: #999da7;
 }
+.checkbox:last-child,
+.radio:last-child {
+  margin-bottom: 0px;
+}
 .checkbox.checkbox-inline,
 .radio.checkbox-inline,
 .checkbox.radio-inline,
@@ -21189,26 +21199,32 @@ toggle/styles.less
 @media (min-width: 768px) {
   .checkbox,
   .radio {
-    margin-bottom: 0.88rem;
+    margin-bottom: 0.55rem;
     /* -----------------------------------------------------------------------------
         Inline
         ----------------------------------------------------------------------------- */
   }
   .checkbox.toggle-short,
   .radio.toggle-short {
-    margin-bottom: 0.44rem;
+    margin-bottom: 0.275rem;
   }
   .checkbox.toggle-short-bottom,
   .radio.toggle-short-bottom {
-    margin-bottom: 0.44rem;
+    margin-bottom: 0.275rem;
   }
   .checkbox.toggle-tall,
   .radio.toggle-tall {
-    margin-bottom: 1.76rem;
+    margin-bottom: 1.1rem;
   }
   .checkbox.toggle-tall-bottom,
   .radio.toggle-tall-bottom {
-    margin-bottom: 1.76rem;
+    margin-bottom: 1.1rem;
+  }
+  .checkbox label,
+  .radio label {
+    font-size: 0.84rem;
+    line-height: 0.84rem;
+    padding-left: 1.32rem;
   }
   .checkbox.checkbox-inline,
   .radio.checkbox-inline,
@@ -21225,26 +21241,32 @@ toggle/styles.less
 @media (min-width: 992px) {
   .checkbox,
   .radio {
-    margin-bottom: 0.96rem;
+    margin-bottom: 0.6rem;
     /* -----------------------------------------------------------------------------
         Inline
         ----------------------------------------------------------------------------- */
   }
   .checkbox.toggle-short,
   .radio.toggle-short {
-    margin-bottom: 0.48rem;
+    margin-bottom: 0.3rem;
   }
   .checkbox.toggle-short-bottom,
   .radio.toggle-short-bottom {
-    margin-bottom: 0.48rem;
+    margin-bottom: 0.3rem;
   }
   .checkbox.toggle-tall,
   .radio.toggle-tall {
-    margin-bottom: 1.92rem;
+    margin-bottom: 1.2rem;
   }
   .checkbox.toggle-tall-bottom,
   .radio.toggle-tall-bottom {
-    margin-bottom: 1.92rem;
+    margin-bottom: 1.2rem;
+  }
+  .checkbox label,
+  .radio label {
+    font-size: 0.88rem;
+    line-height: 0.88rem;
+    padding-left: 1.44rem;
   }
   .checkbox.checkbox-inline,
   .radio.checkbox-inline,

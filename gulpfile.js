@@ -19,6 +19,7 @@ var argv          = require('yargs').argv,
     sourcemaps    = require("gulp-sourcemaps"),
     uglify        = require("gulp-uglify"),
     util          = require("gulp-util");
+    watchLess     = require('gulp-watch-less');
 
 // Define Variables
 
@@ -191,6 +192,7 @@ gulp.task("canvas:styles", function () {
   return gulp.src(dirs.canvas.styles + "/" + files.canvas.styles + ".less")
     .pipe(plumber())
     .pipe(sourcemaps.init())
+    .pipe(watchLess(dirs.canvas.styles + '/**/*.less'))
     .pipe(less({
       paths: [dirs.canvas.styles],
       plugins: [colorLighten]
@@ -232,6 +234,7 @@ gulp.task("docs:styles", function () {
   return gulp.src(dirs.docs.styles + "/" + files.docs.styles + ".less")
     .pipe(plumber())
     .pipe(sourcemaps.init())
+    .pipe(watchLess(dirs.docs.styles + '/**/*.less'))
     .pipe(less({
       paths: [dirs.docs.styles],
       plugins: [colorLighten]

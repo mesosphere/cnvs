@@ -37,7 +37,7 @@
 
 {% if (page.page-header.alignment == 'left') %}
 
-  {% assign page-header-alignment-class = 'column-mini-8 column-small-6 column-medium-8' %}
+  {% assign page-header-alignment-class = 'column-mini-8 column-small-8 column-medium-10' %}
   {% assign page-header-headline-alignment-class = 'column-mini-12 column-large-10' %}
   {% assign page-header-text-alignment-class = 'text-align-left' %}
   {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-left' %}
@@ -51,7 +51,7 @@
 
 {% else %}
 
-  {% assign page-header-alignment-class = 'column-small-10 column-small-offset-1 column-medium-8 column-medium-offset-2' %}
+  {% assign page-header-alignment-class = 'column-small-10 column-small-offset-1 column-medium-10 column-medium-offset-1' %}
   {% assign page-header-headline-alignment-class = 'column-mini-8 column-mini-offset-2 column-small-10 column-small-offset-1' %}
   {% assign page-header-text-alignment-class = 'text-align-center' %}
   {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-center' %}
@@ -72,7 +72,7 @@ BEGIN: Page Header
 
   <div id="page-header-inner">
 
-    <div class="container container-pod container-pod-short-top {{ page-header-container-class }}">
+    <div class="container container-fluid container-pod {{ page-header-container-class }}">
 
       <div class="row">
 
@@ -99,6 +99,28 @@ BEGIN: Page Header
             <div class="row">
 
               <div class="{{ page-header-headline-alignment-class }}">
+
+                {% if (page.page-header.parent.label != null) and (page.page-header.parent.label != empty) %}
+
+                  <h6 class="page-header-subheadline flush text-uppercase {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %}">
+
+                    {% if (page.page-header.parent.url != null) and (page.page-header.parent.url != empty) %}
+
+                      <a href="{{ page.page-header.parent.url }}">
+
+                    {% endif %}
+
+                    {{ page.page-header.parent.label }}
+
+                    {% if (page.page-header.parent.url != null) and (page.page-header.parent.url != empty) %}
+
+                      </a>
+
+                    {% endif %}
+
+                  </h6>
+
+                {% endif %}
 
                 <h1 class="page-header-headline flush-top {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
 
