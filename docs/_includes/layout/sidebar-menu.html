@@ -1,6 +1,6 @@
 {% assign navurl = page.url | remove: 'index.html' %}
 
-<ul class="list-unstyled">
+<ul class="sidebar-menu list-unstyled flush-bottom">
 
   {% for item in include.nav %}
 
@@ -14,7 +14,7 @@
 
       {% if item.subitems and navurl contains item.url %}
 
-        {% include layout/navigation-menu.html nav=item.subitems %}
+        {% include layout/sidebar-menu.html nav=item.subitems %}
 
       {% endif %}
 

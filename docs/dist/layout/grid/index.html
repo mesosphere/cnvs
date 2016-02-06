@@ -38,7 +38,7 @@ BEGIN: Head
 
     
 
-      Icons &bull; Canvas
+      Grid &bull; Canvas
 
     
 
@@ -47,11 +47,11 @@ BEGIN: Head
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
-  <meta name="title" content ="Icons &bull; Canvas">
+  <meta name="title" content ="Grid &bull; Canvas">
   <meta name="description" content="Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
   <meta name="keywords" content="">
   <meta name="googlebot" content="all">
-  <link rel="canonical" href="http://yourdomain.com/components/icons/">
+  <link rel="canonical" href="http://yourdomain.com/layout/grid/">
   <link rel="alternate" type="application/rss+xml" title="Canvas" href="http://yourdomain.com/feed.xml" />
 
   <!--[if lt IE 9]>
@@ -102,10 +102,10 @@ BEGIN: Head
 
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Icons &bull; Canvas">
+  <meta property="og:title" content="Grid &bull; Canvas">
   <meta property="og:description" content="Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
   <meta property="og:url" content="ashenden.github.com/canvas">
-  <meta property="og:site_name" content="Icons &bull; Canvas">
+  <meta property="og:site_name" content="Grid &bull; Canvas">
   <meta property="og:image" content="">
 
   <meta name="twitter:card" content="site">
@@ -255,6 +255,59 @@ BEGIN: Navigation
 
       
 
+        
+
+<ul class="sidebar-menu list-unstyled flush-bottom">
+
+  
+
+    <li >
+
+      <a href="/layout/overview/">
+
+        Overview
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+    <li class="selected">
+
+      <a href="/layout/grid/">
+
+        Grid
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+    <li >
+
+      <a href="/layout/responsive-utilities/">
+
+        Responsive Utilities
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+</ul>
+
+
+      
+
     </li>
 
   
@@ -280,101 +333,6 @@ BEGIN: Navigation
         Components
 
       </a>
-
-      
-
-        
-
-<ul class="sidebar-menu list-unstyled flush-bottom">
-
-  
-
-    <li >
-
-      <a href="/components/buttons/">
-
-        Buttons
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li >
-
-      <a href="/components/button-collection/">
-
-        Button Collection
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li >
-
-      <a href="/components/button-groups/">
-
-        Button Groups
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li >
-
-      <a href="/components/forms/">
-
-        Forms
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li >
-
-      <a href="/components/dropdowns/">
-
-        Dropdowns
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="selected">
-
-      <a href="/components/icons/">
-
-        Icons
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
 
       
 
@@ -481,11 +439,11 @@ BEGIN: Page Header
 
                     
 
-                      <a href="/components/">
+                      <a href="/layout">
 
                     
 
-                    Components
+                    Layout
 
                     
 
@@ -499,7 +457,7 @@ BEGIN: Page Header
 
                 <p class="h1 page-header-headline flush-top inverse text-align-left inverse flush-bottom">
 
-                  Icons
+                  Grid
 
                 </p>
 
@@ -537,608 +495,19 @@ END: Page Header
         <div class="page-content">
 
           <!-- =================================================
-BEGIN: Icons
+BEGIN: Grid
 ================================================== -->
 
-<section class="canvas-pod" id="icons">
+<section class="canvas-pod" id="grid">
 
-  <div class="canvas-pod">
-
-    <div class="container container-fluid container-pod">
-
-      <p>
-
-        A simple and easy to use icon class is available in Canvas.  The icon class <code>.icon</code> assumes very little about the actual icon itself, but instead serves as an easily modifiable container in which you can define or place your icon -- whether that icon is an SVG, font, or bitmap.  Canvas does not include icon glyphs or fonts by default, relying on the user to specify how these should be configured.
-
-      </p>
-
-      <!-- =================================================
-      BEGIN: Icon SVG Definitions
-      ================================================== -->
-
-      <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-        <symbol id="icons-square" viewBox="0 0 16 16">
-          <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
-        </symbol>
-
-      </svg>
-
-      <!-- =================================================
-      BEGIN: Example
-      ================================================== -->
-
-      <div class="example-block flush-bottom">
-
-        <div class="example-block-content">
-
-          <i class="icon icon-medium icon-black">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </div>
-
-        <div class="example-block-footer example-block-footer-codeblock">
-
-<pre class="prettyprint linenums flush-bottom">
-&lt;i class='icon icon-medium'&gt&lt;i&gt;
-</pre>
-
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      END: Example
-      ================================================== -->
-
-      <!-- =================================================
-BEGIN: Icon Sizes
-================================================== -->
-
-<section id="icons-sizes">
-
-  <h2>
-
-    Icon Sizes
-
-  </h2>
-
-  <p>
-
-    Thinks of the <code>icon</code> elements as a bounding box in which you can place &mdash; either inside or directly as a background &mdash; any image, SVG, or font.  The bounding box is rectangular, but by default, they are defined as square (1:1).  Canvas provides 5 unique icon sizes (defined below).  The sizes can be easily changed.  Furthermore, these sizes are consider responsive, with the dimensions changing as defined by the user, with changes in screen size.
-
-  </p>
-
-  <table class="table short">
-
-    <thead>
-
-      <tr>
-
-        <th>
-
-          Class
-
-        </th>
-
-        <th>
-
-          Base Size
-
-        </th>
-
-        <th>
-
-          Example
-
-        </th>
-
-      </tr>
-
-    </thead>
-
-    <tbody>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-mini
-
-          </code>
-
-        </td>
-
-        <td>
-
-          16x16
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-small
-
-          </code>
-
-        </td>
-
-        <td>
-
-          24x24
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-small icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-medium
-
-          </code>
-
-        </td>
-
-        <td>
-
-          32x32
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-medium icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-large
-
-          </code>
-
-        </td>
-
-        <td>
-
-          48x48
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-large icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-jumbo
-
-          </code>
-
-        </td>
-
-        <td>
-
-          64x64
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-jumbo icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-</section>
-
-<!-- =================================================
-END: Icon Sizes
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Icon Styles
-================================================== -->
-
-<section id="icons-styles">
-
-  <h2>
-
-    Icon Styles
-
-  </h2>
-
-  <p>
-
-    Like with sizes, Canvas also provides a number of built in styles to apply to your icons.  These styles modify only the <code>color</code> and <code>fill</code> properties, which means they work with SVG and Font defined icons, not bitmap icons.  For bitmap images, you will need to introdue an alternate means (e.g. sprite sheet) for dynamically switching between image styles.
-
-  </p>
-
-  <table class="table short">
-
-    <thead>
-
-      <tr>
-
-        <th>
-
-          Class
-
-        </th>
-
-        <th>
-
-          Example
-
-        </th>
-
-        <th>
-
-          Class
-
-        </th>
-
-        <th>
-
-          Example
-
-        </th>
-
-      </tr>
-
-    </thead>
-
-    <tbody>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-black
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-black">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-white
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-white">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-blue
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-blue">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-red
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-red">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-orange
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-orange">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-yellow
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-yellow">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-green
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-green">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-purple
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-purple">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-pink
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-pink">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-gold
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-gold">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-cyan
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-cyan">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-orchid
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-orchid">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-</section>
-
-<!-- =================================================
-END: Icon Styles
-================================================== -->
-
-
-    </div>
+  <div class="container container-fluid container-pod">
 
   </div>
 
 </section>
 
 <!-- =================================================
-END: Icons
+END: Grid
 ================================================== -->
 
 

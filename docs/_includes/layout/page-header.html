@@ -62,7 +62,7 @@
 BEGIN: Page Header
 ================================================== -->
 
-<div id="page-header" class="canvas-pod {{ page-header-class }} {{ page.page-header.alignment }}">
+<div class="page-header canvas-pod {{ page-header-class }} {{ page.page-header.alignment }}">
 
   {% if (page.page-header.background.image != null) and (page.page-header.background.image != empty) %}
 
@@ -70,7 +70,7 @@ BEGIN: Page Header
 
   {% endif %}
 
-  <div id="page-header-inner">
+  <div class="page-header-inner">
 
     <div class="container container-fluid container-pod {{ page-header-container-class }}">
 
@@ -102,7 +102,7 @@ BEGIN: Page Header
 
                 {% if (page.page-header.parent.label != null) and (page.page-header.parent.label != empty) %}
 
-                  <h6 class="page-header-subheadline flush text-uppercase {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %}">
+                  <p class="h6 page-header-subheadline flush text-uppercase {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %}">
 
                     {% if (page.page-header.parent.url != null) and (page.page-header.parent.url != empty) %}
 
@@ -118,15 +118,15 @@ BEGIN: Page Header
 
                     {% endif %}
 
-                  </h6>
+                  </p>
 
                 {% endif %}
 
-                <h1 class="page-header-headline flush-top {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
+                <p class="h1 page-header-headline flush-top {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
 
                   {{ page.page-header.headline }}
 
-                </h1>
+                </p>
 
               </div>
 
