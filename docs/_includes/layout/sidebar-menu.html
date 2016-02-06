@@ -4,7 +4,7 @@
 
   {% for item in include.nav %}
 
-    <li {% if item.url == navurl %}class="selected"{% endif %}>
+    <li class="{% if item.url == navurl %}selected{% endif %} {% if item.subitems and navurl contains item.url %}selected{% endif %}">
 
       <a href="{{ item.url }}">
 
