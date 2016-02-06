@@ -1,0 +1,304 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+toggle/styles.less
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+& when (@toggle-enabled) {
+
+  .checkbox,
+  .radio {
+
+    .clearfix();
+    display: block;
+    .shape-layout-variant(toggle, null);
+    .shape-layout-variant(toggle, short, null);
+    .shape-layout-variant(toggle, tall, null);
+
+    input[type="checkbox"],
+    input[type="radio"] {
+
+      width: @toggle-system-width;
+      height: @toggle-system-height;
+
+    }
+
+    label {
+
+      margin: 0px;
+      position: relative;
+      .text-style-variant(label);
+      .text-size-variant(label, null);
+      .shape-layout-variant(toggle-label, null);
+
+      input[type="checkbox"],
+      input[type="radio"] {
+
+        position: absolute;
+        left: 0px;
+
+      }
+
+      & when (@label-emphasis-enabled) {
+
+        &.emphasis,
+        .emphasis {
+
+          .text-style-variant(label-emphasis);
+
+        }
+
+      }
+
+      & when (@label-muted-enabled) {
+
+        &.muted,
+        .muted {
+
+          .text-style-variant(label-muted);
+
+        }
+
+      }
+
+
+
+      & when (@label-inverse-enabled) {
+
+        &.inverse {
+
+          .text-style-variant(label-inverse);
+
+          & when (@label-inverse-emphasis-enabled) {
+
+            &.emphasis,
+            .emphasis {
+
+              .text-style-variant(label-inverse-emphasis);
+
+            }
+
+          }
+
+          & when (@label-inverse-muted-enabled) {
+
+            &.muted,
+            .muted {
+
+              .text-style-variant(label-inverse-muted);
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Inline
+    ----------------------------------------------------------------------------- */
+
+    &.checkbox-inline,
+    &.radio-inline {
+
+      float: left;
+
+      & when not (@toggle-inline-margin-horizontal = null) {
+
+        margin-left: @toggle-inline-margin-horizontal;
+
+      }
+
+      &:first-child {
+
+        margin-left: 0px;
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@screen-mini-enabled) and (@toggle-scale-screen-mini-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Mini (@screen-mini) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @screen-mini) {
+
+      .checkbox,
+      .radio {
+
+        .shape-layout-variant(toggle, scale-screen-mini);
+        .shape-layout-variant(toggle, short, scale-screen-mini);
+        .shape-layout-variant(toggle, tall, scale-screen-mini);
+
+
+
+        /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+
+        &.checkbox-inline,
+        &.radio-inline {
+
+          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-scale-screen-mini = null) {
+
+            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-scale-screen-mini);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@screen-small-enabled) and (@toggle-scale-screen-small-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Small (@screen-small) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @screen-small) {
+
+      .checkbox,
+      .radio {
+
+        .shape-layout-variant(toggle, scale-screen-small);
+        .shape-layout-variant(toggle, short, scale-screen-small);
+        .shape-layout-variant(toggle, tall, scale-screen-small);
+
+
+
+        /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+
+        &.checkbox-inline,
+        &.radio-inline {
+
+          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-scale-screen-small = null) {
+
+            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-scale-screen-small);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@screen-medium-enabled) and (@toggle-scale-screen-medium-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: Medium (@screen-medium) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @screen-medium) {
+
+      .checkbox,
+      .radio {
+
+        .shape-layout-variant(toggle, scale-screen-medium);
+        .shape-layout-variant(toggle, short, scale-screen-medium);
+        .shape-layout-variant(toggle, tall, scale-screen-medium);
+
+
+
+        /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+
+        &.checkbox-inline,
+        &.radio-inline {
+
+          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-scale-screen-medium = null) {
+
+            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-scale-screen-medium);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@screen-large-enabled) and (@toggle-scale-screen-large-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    Screen Size: large (@screen-large) and wider
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @screen-large) {
+
+      .checkbox,
+      .radio {
+
+        .shape-layout-variant(toggle, scale-screen-large);
+        .shape-layout-variant(toggle, short, scale-screen-large);
+        .shape-layout-variant(toggle, tall, scale-screen-large);
+
+
+
+        /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+
+        &.checkbox-inline,
+        &.radio-inline {
+
+          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-scale-screen-large = null) {
+
+            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-scale-screen-large);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
