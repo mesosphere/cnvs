@@ -21386,8 +21386,8 @@ sidebar.less
   margin-bottom: 0px;
   margin-left: -12px;
   margin-right: -12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 12px;
   padding-right: 12px;
   color: #323a4e;
@@ -21396,12 +21396,12 @@ sidebar.less
 .sidebar ul.sidebar-menu li a {
   display: block;
   text-decoration: none !important;
-  margin-top: -6px;
-  margin-bottom: -6px;
+  margin-top: -9px;
+  margin-bottom: -9px;
   margin-left: -12px;
   margin-right: -12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 12px;
   padding-right: 12px;
   color: #323a4e;
@@ -21415,19 +21415,9 @@ sidebar.less
   color: #848995;
   background: #ebebed;
 }
-.sidebar ul.sidebar-menu > li.selected {
-  color: #282e3e;
-  font-weight: 800;
-  background: #ebebed;
-}
-.sidebar ul.sidebar-menu > li.selected > a {
-  margin-bottom: 0px;
-  color: #282e3e;
-  font-weight: 800;
-  background: #ebebed;
-}
 .sidebar ul.sidebar-menu > li.selected > ul {
-  margin-top: 0px;
+  margin-top: 9px;
+  margin-bottom: 0px;
 }
 .sidebar ul.sidebar-menu > li.selected > ul li {
   display: block;
@@ -21437,8 +21427,8 @@ sidebar.less
   margin-bottom: 0px;
   margin-left: -12px;
   margin-right: -12px;
-  padding-top: 4.2px;
-  padding-bottom: 4.2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-left: 12px;
   padding-right: 12px;
   color: #323a4e;
@@ -21447,12 +21437,12 @@ sidebar.less
 .sidebar ul.sidebar-menu > li.selected > ul li a {
   display: block;
   text-decoration: none !important;
-  margin-top: -4.2px;
-  margin-bottom: -4.2px;
+  margin-top: -6px;
+  margin-bottom: -6px;
   margin-left: -12px;
   margin-right: -12px;
-  padding-top: 4.2px;
-  padding-bottom: 4.2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-left: 12px;
   padding-right: 12px;
   color: #323a4e;
@@ -21460,7 +21450,7 @@ sidebar.less
 }
 .sidebar ul.sidebar-menu > li.selected > ul li a:hover {
   color: #282e3e;
-  background: #f9f9fa;
+  background: rgba(0, 0, 0, 0.05);
 }
 .sidebar ul.sidebar-menu > li.selected > ul li a:active {
   color: #848995;
@@ -21468,10 +21458,37 @@ sidebar.less
 }
 .sidebar ul.sidebar-menu > li.selected > ul li.selected {
   color: #282e3e;
-  background: #ebebed;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.1);
+}
+.sidebar ul.sidebar-menu > li.selected > ul li.selected > a {
+  color: #282e3e;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 480px) {
   .sidebar ul.sidebar-menu li {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .sidebar ul.sidebar-menu li a {
+    margin-top: -9px;
+    margin-bottom: -9px;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .sidebar ul.sidebar-menu > li.selected > ul {
+    margin-top: 9px;
+  }
+  .sidebar ul.sidebar-menu > li.selected > ul li {
     margin-left: -12px;
     margin-right: -12px;
     padding-top: 6px;
@@ -21479,31 +21496,13 @@ sidebar.less
     padding-left: 12px;
     padding-right: 12px;
   }
-  .sidebar ul.sidebar-menu li a {
+  .sidebar ul.sidebar-menu > li.selected > ul li a {
     margin-top: -6px;
     margin-bottom: -6px;
     margin-left: -12px;
     margin-right: -12px;
     padding-top: 6px;
     padding-bottom: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .sidebar ul.sidebar-menu > li.selected > ul li {
-    margin-left: -12px;
-    margin-right: -12px;
-    padding-top: 4.2px;
-    padding-bottom: 4.2px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .sidebar ul.sidebar-menu > li.selected > ul li a {
-    margin-top: -4.2px;
-    margin-bottom: -4.2px;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding-top: 4.2px;
-    padding-bottom: 4.2px;
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -21517,38 +21516,41 @@ sidebar.less
     line-height: 0.735rem;
     margin-left: -16px;
     margin-right: -16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 16px;
     padding-right: 16px;
   }
   .sidebar ul.sidebar-menu li a {
-    margin-top: -8px;
-    margin-bottom: -8px;
+    margin-top: -12px;
+    margin-bottom: -12px;
     margin-left: -16px;
     margin-right: -16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+  .sidebar ul.sidebar-menu > li.selected > ul {
+    margin-top: 12px;
   }
   .sidebar ul.sidebar-menu > li.selected > ul li {
     font-size: 0.735rem;
     line-height: 0.735rem;
     margin-left: -16px;
     margin-right: -16px;
-    padding-top: 5.6px;
-    padding-bottom: 5.6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     padding-left: 16px;
     padding-right: 16px;
   }
   .sidebar ul.sidebar-menu > li.selected > ul li a {
-    margin-top: -5.6px;
-    margin-bottom: -5.6px;
+    margin-top: -8px;
+    margin-bottom: -8px;
     margin-left: -16px;
     margin-right: -16px;
-    padding-top: 5.6px;
-    padding-bottom: 5.6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -21562,38 +21564,41 @@ sidebar.less
     line-height: 0.88rem;
     margin-left: -24px;
     margin-right: -24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     padding-left: 24px;
     padding-right: 24px;
   }
   .sidebar ul.sidebar-menu li a {
-    margin-top: -12px;
-    margin-bottom: -12px;
+    margin-top: -18px;
+    margin-bottom: -18px;
     margin-left: -24px;
     margin-right: -24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     padding-left: 24px;
     padding-right: 24px;
+  }
+  .sidebar ul.sidebar-menu > li.selected > ul {
+    margin-top: 18px;
   }
   .sidebar ul.sidebar-menu > li.selected > ul li {
     font-size: 0.77rem;
     line-height: 0.77rem;
     margin-left: -24px;
     margin-right: -24px;
-    padding-top: 8.4px;
-    padding-bottom: 8.4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 24px;
     padding-right: 24px;
   }
   .sidebar ul.sidebar-menu > li.selected > ul li a {
-    margin-top: -8.4px;
-    margin-bottom: -8.4px;
+    margin-top: -12px;
+    margin-bottom: -12px;
     margin-left: -24px;
     margin-right: -24px;
-    padding-top: 8.4px;
-    padding-bottom: 8.4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -21605,12 +21610,33 @@ sidebar.less
   .sidebar ul.sidebar-menu li {
     margin-left: -32px;
     margin-right: -32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .sidebar ul.sidebar-menu li a {
+    margin-top: -24px;
+    margin-bottom: -24px;
+    margin-left: -32px;
+    margin-right: -32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .sidebar ul.sidebar-menu > li.selected > ul {
+    margin-top: 24px;
+  }
+  .sidebar ul.sidebar-menu > li.selected > ul li {
+    margin-left: -32px;
+    margin-right: -32px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 32px;
     padding-right: 32px;
   }
-  .sidebar ul.sidebar-menu li a {
+  .sidebar ul.sidebar-menu > li.selected > ul li a {
     margin-top: -16px;
     margin-bottom: -16px;
     margin-left: -32px;
@@ -21620,25 +21646,12 @@ sidebar.less
     padding-left: 32px;
     padding-right: 32px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li {
-    margin-left: -32px;
-    margin-right: -32px;
-    padding-top: 11.2px;
-    padding-bottom: 11.2px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  .sidebar ul.sidebar-menu > li.selected > ul li a {
-    margin-top: -11.2px;
-    margin-bottom: -11.2px;
-    margin-left: -32px;
-    margin-right: -32px;
-    padding-top: 11.2px;
-    padding-bottom: 11.2px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
 }
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Sidebar Menu Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Sidebar Menu Item Responsive Scaling
@@ -21689,7 +21702,23 @@ Padding
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Sidebar Menu subitem Styling
+Sidebar Menu Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Sidebar Menu Submenu Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Sidebar Menu Subitem Styling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
@@ -21702,7 +21731,7 @@ Sidebar Menu subitem Text Size
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Sidebar Menu subitem Layout
+Sidebar Menu Sub-Item Layout
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
@@ -21778,7 +21807,7 @@ Header
   display: block;
   width: 40px;
   height: 28.8px;
-  background-image: url("../images/layout/header/header-logo.png?cache=91910102");
+  background-image: url("../images/layout/header/header-logo.png?cache=917892185");
   background-size: 100% 100%;
   margin: 0 auto;
 }
@@ -21841,7 +21870,7 @@ Header
       ---------------------------------------------------------------------------------------------------- */
   }
   .header .header-logo {
-    background-image: url("../images/layout/header/header-logo@2x.png?cache=159396669");
+    background-image: url("../images/layout/header/header-logo@2x.png?cache=486713681");
   }
 }
 /* -----------------------------------------------------------------------------
