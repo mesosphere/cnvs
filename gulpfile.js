@@ -136,7 +136,7 @@ gulp.task("canvas:build", ["canvas:styles"]);
 
 // Build Documentation Styles, Javascript, and Move Assets
 
-gulp.task("docs:build", ["docs:styles", "docs:javascripts"]);
+gulp.task("docs:build", ["docs:move", "docs:styles", "docs:javascripts"]);
 
 // Serve Documentation Site
 

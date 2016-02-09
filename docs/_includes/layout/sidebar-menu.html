@@ -1,12 +1,12 @@
 {% assign navurl = page.url | remove: 'index.html' %}
 
-<ul class="sidebar-menu list-unstyled flush-bottom">
+<ul class="sidebar-menu list-unstyled">
 
   {% for item in include.nav %}
 
-    <li class="{% if item.url == navurl %}selected{% endif %} {% if item.subitems and navurl contains item.url %}selected{% endif %}">
+    <li class="{% if item.subitems and navurl contains item.url %}open{% endif %} {% if item.url == navurl %}selected{% endif %}">
 
-      <a href="{{ item.url }}">
+      <a href="{{ item.url }}" class="">
 
         {{ item.text }}
 

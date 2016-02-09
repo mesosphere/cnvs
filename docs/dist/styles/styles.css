@@ -21360,7 +21360,7 @@ sidebar.less
   display: block;
   width: 200px;
   height: 100%;
-  background: #ffffff;
+  background: #191d27;
   float: left;
   overflow-x: hidden;
   overflow-y: auto;
@@ -21378,131 +21378,170 @@ sidebar.less
     Screen Size: large (@screen-large) and wider
     ----------------------------------------------------------------------------- */
 }
+.sidebar ul.sidebar-menu {
+  *zoom: 1;
+}
+.sidebar ul.sidebar-menu:before,
+.sidebar ul.sidebar-menu:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.sidebar ul.sidebar-menu:after {
+  clear: both;
+}
 .sidebar ul.sidebar-menu li {
   display: block;
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  margin-top: 0px;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 1px;
   margin-bottom: 0px;
   margin-left: -12px;
   margin-right: -12px;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   padding-left: 12px;
   padding-right: 12px;
-  color: #323a4e;
+  color: #d6d8dc;
   font-weight: 600;
+  background: #191d27;
+}
+.sidebar ul.sidebar-menu li:first-child {
+  margin-top: 0px;
 }
 .sidebar ul.sidebar-menu li a {
   display: block;
   text-decoration: none !important;
-  margin-top: -9px;
-  margin-bottom: -9px;
+  margin-top: -16px;
+  margin-bottom: -16px;
   margin-left: -12px;
   margin-right: -12px;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   padding-left: 12px;
   padding-right: 12px;
-  color: #323a4e;
-  font-weight: 600;
+  color: #d6d8dc;
+  background: #191d27;
 }
 .sidebar ul.sidebar-menu li a:hover {
-  color: #282e3e;
-  background: #f9f9fa;
+  color: #ffffff;
+  background: #1e232f;
 }
 .sidebar ul.sidebar-menu li a:active {
-  color: #848995;
-  background: #ebebed;
+  color: #c2c4ca;
+  background: #1c202b;
 }
-.sidebar ul.sidebar-menu > li.selected > ul {
-  margin-top: 9px;
-  margin-bottom: 0px;
+.sidebar ul.sidebar-menu li.selected:not(.open) {
+  background: #323a4e;
 }
-.sidebar ul.sidebar-menu > li.selected > ul li {
+.sidebar ul.sidebar-menu li.selected,
+.sidebar ul.sidebar-menu li.selected.open {
+  color: #ffffff;
+}
+.sidebar ul.sidebar-menu li.selected > a,
+.sidebar ul.sidebar-menu li.selected.open > a,
+.sidebar ul.sidebar-menu li.selected > a:hover,
+.sidebar ul.sidebar-menu li.selected.open > a:hover,
+.sidebar ul.sidebar-menu li.selected > a:active,
+.sidebar ul.sidebar-menu li.selected.open > a:active {
+  color: #ffffff;
+  background: #9351e5;
+}
+.sidebar ul.sidebar-menu li.open {
+  background: #232937;
+  color: #ffffff;
+}
+.sidebar ul.sidebar-menu li.open > a {
+  color: #ffffff;
+  background: #282e3e;
+}
+.sidebar ul.sidebar-menu li.open > ul {
+  margin-top: 24px;
+  margin-bottom: -8px;
+}
+.sidebar ul.sidebar-menu li.open > ul li {
   display: block;
   font-size: 0.7rem;
   line-height: 0.7rem;
-  margin-top: 0px;
+  margin-top: 1px;
   margin-bottom: 0px;
   margin-left: -12px;
   margin-right: -12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 12.8px;
+  padding-bottom: 12.8px;
   padding-left: 12px;
   padding-right: 12px;
-  color: #323a4e;
+  color: #adb0b8;
   font-weight: 600;
+  text-transform: none;
+  background: #232937;
 }
-.sidebar ul.sidebar-menu > li.selected > ul li a {
+.sidebar ul.sidebar-menu li.open > ul li.selected > a,
+.sidebar ul.sidebar-menu li.open > ul li.selected > a:hover,
+.sidebar ul.sidebar-menu li.open > ul li.selected > a:active {
+  color: #ffffff;
+  background: #9351e5;
+}
+.sidebar ul.sidebar-menu li.open > ul li > a {
   display: block;
   text-decoration: none !important;
-  margin-top: -6px;
-  margin-bottom: -6px;
+  margin-top: -12.8px;
+  margin-bottom: -12.8px;
   margin-left: -12px;
   margin-right: -12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 12.8px;
+  padding-bottom: 12.8px;
   padding-left: 12px;
   padding-right: 12px;
-  color: #323a4e;
-  font-weight: 600;
+  color: #adb0b8;
+  background: #232937;
 }
-.sidebar ul.sidebar-menu > li.selected > ul li a:hover {
-  color: #282e3e;
-  background: rgba(0, 0, 0, 0.05);
+.sidebar ul.sidebar-menu li.open > ul li > a:hover {
+  color: #d6d8dc;
+  background: #2d3446;
 }
-.sidebar ul.sidebar-menu > li.selected > ul li a:active {
-  color: #848995;
-  background: #ebebed;
-}
-.sidebar ul.sidebar-menu > li.selected > ul li.selected {
-  color: #282e3e;
-  font-weight: 800;
-  background: rgba(0, 0, 0, 0.1);
-}
-.sidebar ul.sidebar-menu > li.selected > ul li.selected > a {
-  color: #282e3e;
-  font-weight: 800;
-  background: rgba(0, 0, 0, 0.1);
+.sidebar ul.sidebar-menu li.open > ul li > a:active {
+  color: #adb0b8;
+  background: #282e3e;
 }
 @media (min-width: 480px) {
   .sidebar ul.sidebar-menu li {
     margin-left: -12px;
     margin-right: -12px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     padding-left: 12px;
     padding-right: 12px;
   }
   .sidebar ul.sidebar-menu li a {
-    margin-top: -9px;
-    margin-bottom: -9px;
+    margin-top: -16px;
+    margin-bottom: -16px;
     margin-left: -12px;
     margin-right: -12px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     padding-left: 12px;
     padding-right: 12px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul {
-    margin-top: 9px;
+  .sidebar ul.sidebar-menu > li.open > ul {
+    margin-top: 24px;
+    margin-bottom: -8px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li {
+  .sidebar ul.sidebar-menu > li.open > ul li {
     margin-left: -12px;
     margin-right: -12px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 12.8px;
+    padding-bottom: 12.8px;
     padding-left: 12px;
     padding-right: 12px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li a {
-    margin-top: -6px;
-    margin-bottom: -6px;
+  .sidebar ul.sidebar-menu > li.open > ul li a {
+    margin-top: -12.8px;
+    margin-bottom: -12.8px;
     margin-left: -12px;
     margin-right: -12px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 12.8px;
+    padding-bottom: 12.8px;
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -21512,45 +21551,42 @@ sidebar.less
     width: 200px;
   }
   .sidebar ul.sidebar-menu li {
-    font-size: 0.735rem;
-    line-height: 0.735rem;
     margin-left: -16px;
     margin-right: -16px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 17.6px;
+    padding-bottom: 17.6px;
     padding-left: 16px;
     padding-right: 16px;
   }
   .sidebar ul.sidebar-menu li a {
-    margin-top: -12px;
-    margin-bottom: -12px;
+    margin-top: -17.6px;
+    margin-bottom: -17.6px;
     margin-left: -16px;
     margin-right: -16px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 17.6px;
+    padding-bottom: 17.6px;
     padding-left: 16px;
     padding-right: 16px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul {
-    margin-top: 12px;
+  .sidebar ul.sidebar-menu > li.open > ul {
+    margin-top: 26.4px;
+    margin-bottom: -8.8px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li {
-    font-size: 0.735rem;
-    line-height: 0.735rem;
+  .sidebar ul.sidebar-menu > li.open > ul li {
     margin-left: -16px;
     margin-right: -16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 14.08px;
+    padding-bottom: 14.08px;
     padding-left: 16px;
     padding-right: 16px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li a {
-    margin-top: -8px;
-    margin-bottom: -8px;
+  .sidebar ul.sidebar-menu > li.open > ul li a {
+    margin-top: -14.08px;
+    margin-bottom: -14.08px;
     margin-left: -16px;
     margin-right: -16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 14.08px;
+    padding-bottom: 14.08px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -21560,45 +21596,42 @@ sidebar.less
     width: 250px;
   }
   .sidebar ul.sidebar-menu li {
-    font-size: 0.88rem;
-    line-height: 0.88rem;
     margin-left: -24px;
     margin-right: -24px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 19.2px;
+    padding-bottom: 19.2px;
     padding-left: 24px;
     padding-right: 24px;
   }
   .sidebar ul.sidebar-menu li a {
-    margin-top: -18px;
-    margin-bottom: -18px;
+    margin-top: -19.2px;
+    margin-bottom: -19.2px;
     margin-left: -24px;
     margin-right: -24px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 19.2px;
+    padding-bottom: 19.2px;
     padding-left: 24px;
     padding-right: 24px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul {
-    margin-top: 18px;
+  .sidebar ul.sidebar-menu > li.open > ul {
+    margin-top: 28.8px;
+    margin-bottom: -9.6px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li {
-    font-size: 0.77rem;
-    line-height: 0.77rem;
+  .sidebar ul.sidebar-menu > li.open > ul li {
     margin-left: -24px;
     margin-right: -24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 15.36px;
+    padding-bottom: 15.36px;
     padding-left: 24px;
     padding-right: 24px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li a {
-    margin-top: -12px;
-    margin-bottom: -12px;
+  .sidebar ul.sidebar-menu > li.open > ul li a {
+    margin-top: -15.36px;
+    margin-bottom: -15.36px;
     margin-left: -24px;
     margin-right: -24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 15.36px;
+    padding-bottom: 15.36px;
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -21610,154 +21643,115 @@ sidebar.less
   .sidebar ul.sidebar-menu li {
     margin-left: -32px;
     margin-right: -32px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 20.8px;
+    padding-bottom: 20.8px;
     padding-left: 32px;
     padding-right: 32px;
   }
   .sidebar ul.sidebar-menu li a {
-    margin-top: -24px;
-    margin-bottom: -24px;
+    margin-top: -20.8px;
+    margin-bottom: -20.8px;
     margin-left: -32px;
     margin-right: -32px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 20.8px;
+    padding-bottom: 20.8px;
     padding-left: 32px;
     padding-right: 32px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul {
-    margin-top: 24px;
+  .sidebar ul.sidebar-menu > li.open > ul {
+    margin-top: 31.2px;
+    margin-bottom: -10.4px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li {
+  .sidebar ul.sidebar-menu > li.open > ul li {
     margin-left: -32px;
     margin-right: -32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 16.64px;
+    padding-bottom: 16.64px;
     padding-left: 32px;
     padding-right: 32px;
   }
-  .sidebar ul.sidebar-menu > li.selected > ul li a {
-    margin-top: -16px;
-    margin-bottom: -16px;
+  .sidebar ul.sidebar-menu > li.open > ul li a {
+    margin-top: -16.64px;
+    margin-bottom: -16.64px;
     margin-left: -32px;
     margin-right: -32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 16.64px;
+    padding-bottom: 16.64px;
     padding-left: 32px;
     padding-right: 32px;
   }
 }
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Sidebar Menu Styling
+Sidebar Menu
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Sidebar Menu Item Responsive Scaling
---------------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Responsive Scaling
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Sidebar Menu Item Styling
+Sidebar Menu Item
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Default
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Text Size
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Sidebar Menu Item Text Size
+Sidebar Menu Item Link
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Sidebar Menu Item Layout
---------------------------------------------------------------------------------
+Styling
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Margin
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Padding
+Layout
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Sidebar Menu Item Link Styling
+Sidebar Submenu
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Default
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Sidebar Menu Item Link Layout
+Sidebar Submenu Item
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Margin
+Styling
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Padding
+Text Size
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Sidebar Menu Styling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Sidebar Menu Submenu Layout
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Margin
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Padding
+Layout
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Sidebar Menu Subitem Styling
+Sidebar Submenu Link
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Default
+Styling
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Sidebar Menu subitem Text Size
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Sidebar Menu Sub-Item Layout
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Margin
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Padding
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Sidebar Menu subitem Link Styling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Default
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Sidebar Menu subitem Link Layout
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Margin
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Padding
+Layout
 ----------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
@@ -21807,7 +21801,7 @@ Header
   display: block;
   width: 40px;
   height: 28.8px;
-  background-image: url("../images/layout/header/header-logo.png?cache=917892185");
+  background-image: url("../images/layout/header/header-logo.png?cache=110330432");
   background-size: 100% 100%;
   margin: 0 auto;
 }
@@ -21870,7 +21864,7 @@ Header
       ---------------------------------------------------------------------------------------------------- */
   }
   .header .header-logo {
-    background-image: url("../images/layout/header/header-logo@2x.png?cache=486713681");
+    background-image: url("../images/layout/header/header-logo@2x.png?cache=339284872");
   }
 }
 /* -----------------------------------------------------------------------------
