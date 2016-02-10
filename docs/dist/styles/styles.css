@@ -21938,17 +21938,6 @@ page.less
     Screen Size: large (@screen-large) and wider
     ----------------------------------------------------------------------------- */
 }
-.page .page-content-wrapper {
-  position: relative;
-}
-.page .page-content-wrapper .page-navigation {
-  position: relative;
-  width: 250px;
-  box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
-}
-.page .page-content-wrapper .page-content {
-  margin-left: 250px;
-}
 @media (min-width: 768px) {
   .page {
     margin-left: 200px;
@@ -22010,16 +21999,7 @@ page-navigation.less
 }
 .page-navigation ul.page-navigation-menu li {
   display: block;
-  font-size: 1rem;
-  line-height: 1rem;
-  margin-top: 1px;
-  margin-bottom: 0px;
-  margin-left: -24px;
-  margin-right: -24px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 24px;
-  padding-right: 24px;
+  color: #5b6171;
 }
 .page-navigation ul.page-navigation-menu li:first-child {
   margin-top: 0px;
@@ -22030,221 +22010,66 @@ page-navigation.less
 .page-navigation ul.page-navigation-menu li a {
   display: block;
   text-decoration: none !important;
-  margin-top: -16px;
-  margin-bottom: -16px;
-  margin-left: -24px;
-  margin-right: -24px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 24px;
-  padding-right: 24px;
+  color: #5b6171;
 }
-.page-navigation ul.page-navigation-menu li.open > ul {
+.page-navigation ul.page-navigation-menu li a:hover {
+  color: #9351e5;
+}
+.page-navigation ul.page-navigation-menu li a:active {
+  color: #848995;
+}
+.page-navigation ul.page-navigation-menu li.selected,
+.page-navigation ul.page-navigation-menu li.selected.open {
+  color: #9351e5;
+}
+.page-navigation ul.page-navigation-menu li.selected > a,
+.page-navigation ul.page-navigation-menu li.selected.open > a,
+.page-navigation ul.page-navigation-menu li.selected > a:hover,
+.page-navigation ul.page-navigation-menu li.selected.open > a:hover,
+.page-navigation ul.page-navigation-menu li.selected > a:active,
+.page-navigation ul.page-navigation-menu li.selected.open > a:active {
+  color: #9351e5;
+}
+.page-navigation ul.page-navigation-menu li.open {
+  color: #9351e5;
+}
+.page-navigation ul.page-navigation-menu li.open > a {
+  color: #9351e5;
+}
+.page-navigation ul.page-navigation-menu li > ul {
   display: block;
-  margin-top: 24px;
-  margin-bottom: -8px;
+  margin-left: 16px;
 }
-.page-navigation ul.page-navigation-menu li.open > ul li {
+.page-navigation ul.page-navigation-menu li > ul li {
   display: block;
   font-size: 0.9rem;
   line-height: 1rem;
-  margin-top: 1px;
-  margin-bottom: 0px;
-  margin-left: -24px;
-  margin-right: -24px;
-  padding-top: 11.2px;
-  padding-bottom: 11.2px;
-  padding-left: 24px;
-  padding-right: 24px;
   text-transform: none;
 }
-.page-navigation ul.page-navigation-menu li.open > ul li > a {
+.page-navigation ul.page-navigation-menu li > ul li > a {
   display: block;
   text-decoration: none !important;
-  margin-top: -11.2px;
-  margin-bottom: -11.2px;
-  margin-left: -24px;
-  margin-right: -24px;
-  padding-top: 11.2px;
-  padding-bottom: 11.2px;
-  padding-left: 24px;
-  padding-right: 24px;
+  color: #848995;
 }
-@media (min-width: 480px) {
-  .page-navigation ul.page-navigation-menu li {
-    margin-left: -24px;
-    margin-right: -24px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  .page-navigation ul.page-navigation-menu li a {
-    margin-top: -16px;
-    margin-bottom: -16px;
-    margin-left: -24px;
-    margin-right: -24px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul {
-    margin-top: 24px;
-    margin-bottom: -8px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul li {
-    margin-left: -24px;
-    margin-right: -24px;
-    padding-top: 11.2px;
-    padding-bottom: 11.2px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul li a {
-    margin-top: -11.2px;
-    margin-bottom: -11.2px;
-    margin-left: -24px;
-    margin-right: -24px;
-    padding-top: 11.2px;
-    padding-bottom: 11.2px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+.page-navigation ul.page-navigation-menu li > ul li > a:hover {
+  color: #9351e5;
+}
+.page-navigation ul.page-navigation-menu li > ul li > a:active {
+  color: #adb0b8;
 }
 @media (min-width: 768px) {
   .page-navigation {
     width: 200px;
-  }
-  .page-navigation ul.page-navigation-menu li {
-    margin-left: -32px;
-    margin-right: -32px;
-    padding-top: 17.6px;
-    padding-bottom: 17.6px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  .page-navigation ul.page-navigation-menu li a {
-    margin-top: -17.6px;
-    margin-bottom: -17.6px;
-    margin-left: -32px;
-    margin-right: -32px;
-    padding-top: 17.6px;
-    padding-bottom: 17.6px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul {
-    margin-top: 26.4px;
-    margin-bottom: -8.8px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul li {
-    margin-left: -32px;
-    margin-right: -32px;
-    padding-top: 12.32px;
-    padding-bottom: 12.32px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul li a {
-    margin-top: -12.32px;
-    margin-bottom: -12.32px;
-    margin-left: -32px;
-    margin-right: -32px;
-    padding-top: 12.32px;
-    padding-bottom: 12.32px;
-    padding-left: 32px;
-    padding-right: 32px;
   }
 }
 @media (min-width: 992px) {
   .page-navigation {
     width: 250px;
   }
-  .page-navigation ul.page-navigation-menu li {
-    margin-left: -48px;
-    margin-right: -48px;
-    padding-top: 19.2px;
-    padding-bottom: 19.2px;
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-  .page-navigation ul.page-navigation-menu li a {
-    margin-top: -19.2px;
-    margin-bottom: -19.2px;
-    margin-left: -48px;
-    margin-right: -48px;
-    padding-top: 19.2px;
-    padding-bottom: 19.2px;
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul {
-    margin-top: 28.8px;
-    margin-bottom: -9.6px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul li {
-    margin-left: -48px;
-    margin-right: -48px;
-    padding-top: 13.44px;
-    padding-bottom: 13.44px;
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul li a {
-    margin-top: -13.44px;
-    margin-bottom: -13.44px;
-    margin-left: -48px;
-    margin-right: -48px;
-    padding-top: 13.44px;
-    padding-bottom: 13.44px;
-    padding-left: 48px;
-    padding-right: 48px;
-  }
 }
 @media (min-width: 1400px) {
   .page-navigation {
     width: 300px;
-  }
-  .page-navigation ul.page-navigation-menu li {
-    margin-left: -64px;
-    margin-right: -64px;
-    padding-top: 20.8px;
-    padding-bottom: 20.8px;
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-  .page-navigation ul.page-navigation-menu li a {
-    margin-top: -20.8px;
-    margin-bottom: -20.8px;
-    margin-left: -64px;
-    margin-right: -64px;
-    padding-top: 20.8px;
-    padding-bottom: 20.8px;
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul {
-    margin-top: 31.2px;
-    margin-bottom: -10.4px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul li {
-    margin-left: -64px;
-    margin-right: -64px;
-    padding-top: 14.56px;
-    padding-bottom: 14.56px;
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-  .page-navigation ul.page-navigation-menu > li.open > ul li a {
-    margin-top: -14.56px;
-    margin-bottom: -14.56px;
-    margin-left: -64px;
-    margin-right: -64px;
-    padding-top: 14.56px;
-    padding-bottom: 14.56px;
-    padding-left: 64px;
-    padding-right: 64px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -22319,6 +22144,45 @@ Styling
 /* -----------------------------------------------------------------------------
 Layout
 ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+page.less
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+.page-content-wrapper {
+  position: relative;
+}
+.page-content {
+  margin-left: 200px;
+  position: relative;
+  /* -----------------------------------------------------------------------------
+    Screen Size: Mini (@screen-mini) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: Small (@screen-small) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: Medium (@screen-medium) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: large (@screen-large) and wider
+    ----------------------------------------------------------------------------- */
+}
+@media (min-width: 768px) {
+  .page-content {
+    margin-left: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .page-content {
+    margin-left: 250px;
+  }
+}
+@media (min-width: 1400px) {
+  .page-content {
+    margin-left: 300px;
+  }
+}
 /* -----------------------------------------------------------------------------
 Components
 ----------------------------------------------------------------------------- */
