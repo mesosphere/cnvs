@@ -21968,10 +21968,10 @@ page-navigation.less
   position: relative;
   display: block;
   width: 200px;
-  float: left;
+  float: right;
   overflow-x: hidden;
   overflow-y: auto;
-  box-shadow: 1px 0px 0px 0px rgba(50, 58, 78, 0.1);
+  box-shadow: -1px 0px 0px 0px rgba(50, 58, 78, 0.1);
   /* -----------------------------------------------------------------------------
     Screen Size: Mini (@screen-mini) and wider
     ----------------------------------------------------------------------------- */
@@ -22057,19 +22057,31 @@ page-navigation.less
 .page-navigation ul.page-navigation-menu li > ul li > a:active {
   color: #adb0b8;
 }
+.page-navigation + .page-content {
+  margin-right: 200px;
+}
 @media (min-width: 768px) {
   .page-navigation {
     width: 200px;
+  }
+  .page-navigation + .page-content {
+    margin-right: 200px;
   }
 }
 @media (min-width: 992px) {
   .page-navigation {
     width: 250px;
   }
+  .page-navigation + .page-content {
+    margin-right: 250px;
+  }
 }
 @media (min-width: 1400px) {
   .page-navigation {
     width: 300px;
+  }
+  .page-navigation + .page-content {
+    margin-right: 300px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -22153,7 +22165,6 @@ page.less
   position: relative;
 }
 .page-content {
-  margin-left: 200px;
   position: relative;
   /* -----------------------------------------------------------------------------
     Screen Size: Mini (@screen-mini) and wider
@@ -22167,21 +22178,6 @@ page.less
   /* -----------------------------------------------------------------------------
     Screen Size: large (@screen-large) and wider
     ----------------------------------------------------------------------------- */
-}
-@media (min-width: 768px) {
-  .page-content {
-    margin-left: 200px;
-  }
-}
-@media (min-width: 992px) {
-  .page-content {
-    margin-left: 250px;
-  }
-}
-@media (min-width: 1400px) {
-  .page-content {
-    margin-left: 300px;
-  }
 }
 /* -----------------------------------------------------------------------------
 Components

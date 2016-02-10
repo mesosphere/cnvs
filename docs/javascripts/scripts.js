@@ -60,8 +60,7 @@
     Simulate placeholder text
     --------------------------------------------------------------------------- */
 
-    simulate_placeholders();
-    window.simulate_placeholders = simulate_placeholders;
+    //simulate_placeholders();
 
     /* ---------------------------------------------------------------------------
     Google Code Pretty Print
@@ -84,16 +83,16 @@
     });
 
     /* ---------------------------------------------------------------------------
-    Initialize Views
-    --------------------------------------------------------------------------- */
-
-    views_init();
-
-    /* ---------------------------------------------------------------------------
     Sticky Sidebar Page Navigation
     --------------------------------------------------------------------------- */
 
     $('.page-navigation').stick_in_parent();
+
+    /* ---------------------------------------------------------------------------
+    Initialize Views
+    --------------------------------------------------------------------------- */
+
+    views_init();
 
   }
 
@@ -134,6 +133,8 @@
     var scroll_top = $(window).scrollTop() - $('.canvas').offset().top;
 
   }
+
+  window.window_scroll = window_scroll;
 
 
 
@@ -242,6 +243,8 @@
 
   }
 
+  window.simulate_placeholders = simulate_placeholders;
+
 
 
   /* ---------------------------------------------------------------------------
@@ -268,6 +271,8 @@
 
   }
 
+  window.get_browser_dimensions = get_browser_dimensions;
+
 
 
   /* ---------------------------------------------------------------------------
@@ -285,5 +290,7 @@
       return (w1 - w2);
 
   }
+
+  window.get_scrollbar_width = get_scrollbar_width;
 
 } (window.jQuery)

@@ -11,12 +11,10 @@ page-navigation.less
   position: relative;
   display: block;
   width: 200px;
-  float: left;
+  float: right;
   overflow-x: hidden;
   overflow-y: auto;
-  box-shadow: 1px 0px 0px 0px hsla(hue(@neutral), saturation(@neutral), lightness(@neutral), 0.1);
-
-
+  box-shadow: -1px 0px 0px 0px hsla(hue(@neutral), saturation(@neutral), lightness(@neutral), 0.1);
 
   ul.page-navigation-menu {
 
@@ -161,6 +159,12 @@ page-navigation.less
 
   }
 
+  + .page-content {
+
+    margin-right: 200px;
+
+  }
+
 
 
   & when (@screen-mini-enabled) {
@@ -227,6 +231,12 @@ page-navigation.less
 
       width: 200px;
 
+      + .page-content {
+
+        margin-right: 200px;
+
+      }
+
       & when (@page-navigation-menu-scale-screen-small-enabled) {
 
         ul.page-navigation-menu {
@@ -283,6 +293,12 @@ page-navigation.less
 
       width: 250px;
 
+      + .page-content {
+
+        margin-right: 250px;
+
+      }
+
       & when (@page-navigation-menu-scale-screen-medium-enabled) {
 
         ul.page-navigation-menu {
@@ -338,6 +354,12 @@ page-navigation.less
     @media (min-width: @screen-large) {
 
       width: 300px;
+
+      + .page-content {
+
+        margin-right: 300px;
+
+      }
 
       & when (@page-navigation-menu-scale-screen-large-enabled) {
 
