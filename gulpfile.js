@@ -121,6 +121,7 @@ gulp.task('serve', ['build'], function() {
 gulp.task("watch", function () {
 
   gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
+  gulp.watch([dirs.docs.javascripts + "/**/*.js"], ["docs:javascripts"]);
   gulp.watch([dirs.canvas.styles + "/**/*.less"], ["canvas:styles", "docs:styles"]);
   gulp.watch([
       dirs.docs.path + '/**/*.html',
@@ -275,13 +276,17 @@ gulp.task("docs:javascripts", function () {
   return gulp.src(dirs.docs.javascripts + "/*.js")
     .pipe(concat(files.docs.dist.javascripts.filename + ".js"))
     .pipe(gulp.dest(dirs.docs.dist.javascripts))
+    .on("error", function (err) {
+      util.log(err.message);
+      this.emit("end");
+    })
     .pipe(rename({
       basename: files.docs.dist.javascripts.filename,
       suffix: files.docs.dist.javascripts.suffix,
       extname: ".js"
     }))
     .pipe(uglify({
-      mangle: true,
+      mangle: false,
       compress: true
     }))
     .pipe(gulp.dest(dirs.docs.dist.javascripts));
@@ -293,7 +298,10 @@ gulp.task("docs:javascripts", function () {
 gulp.task('browser-sync', ['jekyll'], function() {
   var files = [
       dirs.docs.dist.styles + '/**/*.css',
-      dirs.docs.dist.javascripts + '**/*.js'
+      dirs.docs.dist.javascripts + '**/*.js',
+      dirs.docs.dist.path + '/**/*.html',
+      dirs.docs.dist.path + '/**/*.md',
+      dirs.docs.dist.path + '/_data/**/*'
    ];
 
   browserSync({

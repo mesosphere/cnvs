@@ -50,34 +50,36 @@
 
         {% include layout/page-header.html %}
 
-        {% if (page.page-navigation == 'true') %}
-
-          <!-- =================================================
-          BEGIN: Page Navigation
-          ================================================== -->
-
-          <div class="page-navigation">
-
-          <div>
-
-          <!-- =================================================
-          BEGIN: Page Navigation
-          ================================================== -->
-
-        {% endif %}
-
         <!-- =================================================
-        BEGIN: Page Content
+        BEGIN: Page Content Wrapper
         ================================================== -->
 
-        <div class="page-content">
+        <div class="page-content-wrapper">
 
-          {{ content }}
+          {% if page.page-navigation %}
+
+            {% include layout/page-navigation.html %}
+
+          {% endif %}
+
+          <!-- =================================================
+          BEGIN: Page Content
+          ================================================== -->
+
+          <div class="page-content">
+
+            {{ content }}
+
+          </div>
+
+          <!-- =================================================
+          END: Page Content
+          ================================================== -->
 
         </div>
 
         <!-- =================================================
-        END: Page Content
+        END: Page Content Wrapper
         ================================================== -->
 
       </div>
