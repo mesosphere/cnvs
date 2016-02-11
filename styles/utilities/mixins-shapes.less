@@ -84,27 +84,48 @@ Triangle
 Triangle Size
 ----------------------------------------------------------------------------- */
 
-.triangle-size(@direction, @width, @height) when (@direction = 'up') {
+.triangle-size (@direction, @width, @height) when (@direction = 'up') {
 
   border-width: 0 (@width / 2) @height (@width / 2);
 
 }
 
-.triangle-size(@direction, @width, @height) when (@direction = 'down') {
+.triangle-size (@direction, @width, @height) when (@direction = 'down') {
 
   border-width: @height (@width / 2) 0 (@width / 2);
 
 }
 
-.triangle-size(@direction, @width, @height) when (@direction = 'left') {
+.triangle-size (@direction, @width, @height) when (@direction = 'left') {
 
   border-width: (@height / 2) @width (@height / 2) 0;
 
 }
 
-.triangle-size(@direction, @width, @height) when (@direction = 'right') {
+.triangle-size (@direction, @width, @height) when (@direction = 'right') {
 
   border-width: (@height / 2) 0 (@height / 2) @width;
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+Triangle Size
+----------------------------------------------------------------------------- */
+
+.triangle-size-width (@direction, @width) when (@direction = 'down') {
+
+  border-right-width: @width / 2;
+  border-left-width: @width / 2;
+  border-bottom-width: 0px;
+
+}
+
+.triangle-size-height (@direction, @height) when (@direction = 'down') {
+
+  border-top-width: @height;
+  border-bottom-width: 0px;
 
 }
 
@@ -116,28 +137,44 @@ Triangle Color
 
 .triangle-color(@direction, @color) when (@direction = 'up') {
 
-  border-color: transparent transparent @color transparent;
-  _border-color: #000000 #000000 @color #000000;
+  & when not (@color = null) {
+
+    border-color: transparent transparent @color transparent;
+    _border-color: #000000 #000000 @color #000000;
+
+  }
 
 }
 
 .triangle-color(@direction, @color) when (@direction = 'down') {
 
-  border-color: @color transparent transparent transparent;
-  _border-color: @color #000000 #000000 #000000;
+  & when not (@color = null) {
+
+    border-color: @color transparent transparent transparent;
+    _border-color: @color #000000 #000000 #000000;
+
+  }
 
 }
 
 .triangle-color(@direction, @color) when (@direction = 'left') {
 
-  border-color: transparent @color transparent transparent;
-  _border-color: #000000 @color #000000 #000000;
+  & when not (@color = null) {
+
+    border-color: transparent @color transparent transparent;
+    _border-color: #000000 @color #000000 #000000;
+
+  }
 
 }
 
 .triangle-color(@direction, @color) when (@direction = 'right') {
 
-  border-color: transparent transparent transparent @color;
-  _border-color: #000000 #000000 #000000 @color;
+  & when not (@color = null) {
+
+    border-color: transparent transparent transparent @color;
+    _border-color: #000000 #000000 #000000 @color;
+
+  }
 
 }

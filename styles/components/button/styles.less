@@ -35,6 +35,33 @@ button/styles.less
 
     }
 
+    &.button-dropdown,
+    &.dropdown-toggle {
+
+      &:after {
+
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        .triangle-base();
+        .triangle-color("down", @button-text-color);
+
+        & when not (@button-dropdown-caret-width = null) and not (@button-dropdown-caret-width-scale-screen-mini = null) {
+
+          .triangle-size-width("down", (@button-dropdown-caret-width * @button-dropdown-caret-width-scale-screen-mini));
+
+        }
+
+        & when not (@button-dropdown-caret-height = null) and not (@button-dropdown-caret-height-scale-screen-mini = null) {
+
+          .triangle-size-height("down", (@button-dropdown-caret-height * @button-dropdown-caret-height-scale-screen-mini));
+
+        }
+
+      }
+
+    }
+
     &:hover {
 
       .text-style-variant(button-hover);
