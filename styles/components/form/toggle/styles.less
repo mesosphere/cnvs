@@ -1,19 +1,18 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
 toggle/styles.less
-
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
 
 
-
-
-
 & when (@toggle-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Toggle
+  ----------------------------------------------------------------------------- */
 
   .checkbox,
   .radio {
@@ -70,8 +69,6 @@ toggle/styles.less
 
       }
 
-
-
       & when (@label-inverse-enabled) {
 
         &.inverse {
@@ -112,10 +109,8 @@ toggle/styles.less
 
     }
 
-
-
     /* -----------------------------------------------------------------------------
-    Inline
+    Inline Toggle
     ----------------------------------------------------------------------------- */
 
     &.checkbox-inline,
@@ -139,17 +134,19 @@ toggle/styles.less
 
   }
 
+}
 
 
-  & when (@screen-mini-enabled) and (@toggle-scale-screen-mini-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
+& when (@screen-mini-enabled) {
 
-    @media (min-width: @screen-mini) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@toggle-enabled) and (@toggle-scale-screen-mini-enabled) {
 
       .checkbox,
       .radio {
@@ -158,16 +155,12 @@ toggle/styles.less
         .shape-layout-variant(toggle, short, scale-screen-mini);
         .shape-layout-variant(toggle, tall, scale-screen-mini);
 
-
-
         label {
 
           .text-size-variant(toggle-label, scale-screen-mini);
           .shape-layout-variant(toggle-label, scale-screen-mini);
 
         }
-
-
 
         /* -----------------------------------------------------------------------------
         Inline
@@ -190,17 +183,19 @@ toggle/styles.less
 
   }
 
+}
 
 
-  & when (@screen-small-enabled) and (@toggle-scale-screen-small-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
+& when (@screen-small-enabled) {
 
-    @media (min-width: @screen-small) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@toggle-enabled) and (@toggle-scale-screen-small-enabled) {
 
       .checkbox,
       .radio {
@@ -209,16 +204,12 @@ toggle/styles.less
         .shape-layout-variant(toggle, short, scale-screen-small);
         .shape-layout-variant(toggle, tall, scale-screen-small);
 
-
-
         label {
 
           .text-size-variant(toggle-label, scale-screen-small);
           .shape-layout-variant(toggle-label, scale-screen-small);
 
         }
-
-
 
         /* -----------------------------------------------------------------------------
         Inline
@@ -241,17 +232,19 @@ toggle/styles.less
 
   }
 
+}
 
 
-  & when (@screen-medium-enabled) and (@toggle-scale-screen-medium-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
+& when (@screen-medium-enabled) {
 
-    @media (min-width: @screen-medium) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@toggle-enabled) and (@toggle-scale-screen-medium-enabled) {
 
       .checkbox,
       .radio {
@@ -260,16 +253,12 @@ toggle/styles.less
         .shape-layout-variant(toggle, short, scale-screen-medium);
         .shape-layout-variant(toggle, tall, scale-screen-medium);
 
-
-
         label {
 
           .text-size-variant(toggle-label, scale-screen-medium);
           .shape-layout-variant(toggle-label, scale-screen-medium);
 
         }
-
-
 
         /* -----------------------------------------------------------------------------
         Inline
@@ -292,17 +281,19 @@ toggle/styles.less
 
   }
 
+}
 
 
-  & when (@screen-large-enabled) and (@toggle-scale-screen-large-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
+& when (@screen-large-enabled) {
 
-    @media (min-width: @screen-large) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@toggle-enabled) and (@toggle-scale-screen-large-enabled) {
 
       .checkbox,
       .radio {
@@ -311,15 +302,12 @@ toggle/styles.less
         .shape-layout-variant(toggle, short, scale-screen-large);
         .shape-layout-variant(toggle, tall, scale-screen-large);
 
-
-
         label {
 
           .text-size-variant(toggle-label, scale-screen-large);
           .shape-layout-variant(toggle-label, scale-screen-large);
 
         }
-
 
         /* -----------------------------------------------------------------------------
         Inline
