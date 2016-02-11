@@ -8,19 +8,18 @@ sidebar.less
 
 .sidebar {
 
-  display: block;
-  width: 200px;
-  height: 100%;
+  display: flex;
+  flex-basis: 200px;
+  flex-shrink: 0;
+  flex-direction: column;
   background: color-lighten(@neutral, -50);
-  float: left;
-  overflow-x: hidden;
-  overflow-y: auto;
   box-shadow: 1px 0px 0px 0px hsla(hue(@neutral), saturation(@neutral), lightness(@neutral), 0.1);
 
   ul.sidebar-menu {
 
     .clearfix();
     .shape-style-variant(sidebar-menu);
+    margin-bottom: 0px;
 
     li {
 
@@ -221,7 +220,7 @@ sidebar.less
 
     @media (min-width: @screen-small) {
 
-      width: 200px;
+      //width: 200px;
 
       & when (@sidebar-menu-scale-screen-small-enabled) {
 
@@ -280,8 +279,6 @@ sidebar.less
     ----------------------------------------------------------------------------- */
 
     @media (min-width: @screen-medium) {
-
-      width: 250px;
 
       & when (@sidebar-menu-scale-screen-medium-enabled) {
 
@@ -342,6 +339,8 @@ sidebar.less
     @media (min-width: @screen-large) {
 
       & when (@sidebar-menu-scale-screen-large-enabled) {
+
+        flex-basis: 250px;
 
         ul.sidebar-menu {
 

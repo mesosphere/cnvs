@@ -1,4 +1,4 @@
-!function ($) {
+$(function() {
 
   /* ---------------------------------------------------------------------------
   DOM Event Listeners
@@ -86,7 +86,15 @@
     Sticky Sidebar Page Navigation
     --------------------------------------------------------------------------- */
 
-    $('.page-navigation').stick_in_parent();
+    // $('.page-header').stick_in_parent({
+    //   parent: $('.page')
+    // });
+    //$('.page-navigation-sticky').stick_in_parent();
+    $(".custom-scrollbar").mCustomScrollbar({
+      theme: 'dark',
+      scrollInertia: 0,
+      autoHideScrollbar: true
+    });
 
     /* ---------------------------------------------------------------------------
     Initialize Views
@@ -131,6 +139,7 @@
   function window_scroll() {
 
     var scroll_top = $(window).scrollTop() - $('.canvas').offset().top;
+    console.log("window_scroll()");
 
   }
 
@@ -293,4 +302,4 @@
 
   window.get_scrollbar_width = get_scrollbar_width;
 
-} (window.jQuery)
+});

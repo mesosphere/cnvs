@@ -3676,7 +3676,6 @@ Canvas
 .canvas {
   position: relative;
   background-color: #ffffff;
-  overflow: hidden;
 }
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -21387,9 +21386,19 @@ foundation.less
 html,
 body {
   width: 100%;
-  height: 100%;
+  margin: 0px;
+  overflow: visible;
+}
+body {
+  overflow-x: visible;
 }
 .canvas {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 100%;
   overflow: hidden;
   /* -----------------------------------------------------------------------------
@@ -21411,13 +21420,19 @@ sidebar.less
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 .sidebar {
-  display: block;
-  width: 200px;
-  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 200px;
+      -ms-flex-preferred-size: 200px;
+          flex-basis: 200px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #191d27;
-  float: left;
-  overflow-x: hidden;
-  overflow-y: auto;
   box-shadow: 1px 0px 0px 0px rgba(50, 58, 78, 0.1);
   /* -----------------------------------------------------------------------------
     Screen Size: Mini (@screen-mini) and wider
@@ -21434,6 +21449,7 @@ sidebar.less
 }
 .sidebar ul.sidebar-menu {
   *zoom: 1;
+  margin-bottom: 0px;
 }
 .sidebar ul.sidebar-menu:before,
 .sidebar ul.sidebar-menu:after {
@@ -21601,9 +21617,6 @@ sidebar.less
   }
 }
 @media (min-width: 768px) {
-  .sidebar {
-    width: 200px;
-  }
   .sidebar ul.sidebar-menu li {
     margin-left: -16px;
     margin-right: -16px;
@@ -21646,9 +21659,6 @@ sidebar.less
   }
 }
 @media (min-width: 992px) {
-  .sidebar {
-    width: 250px;
-  }
   .sidebar ul.sidebar-menu li {
     margin-left: -24px;
     margin-right: -24px;
@@ -21691,6 +21701,11 @@ sidebar.less
   }
 }
 @media (min-width: 1400px) {
+  .sidebar {
+    -webkit-flex-basis: 250px;
+        -ms-flex-preferred-size: 250px;
+            flex-basis: 250px;
+  }
   .sidebar ul.sidebar-menu li {
     margin-left: -32px;
     margin-right: -32px;
@@ -21917,14 +21932,11 @@ Header
 }
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-page.less
+footer.less
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
-.page {
-  margin-left: 200px;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+.footer {
+  display: none;
   /* -----------------------------------------------------------------------------
     Screen Size: Mini (@screen-mini) and wider
     ----------------------------------------------------------------------------- */
@@ -21938,15 +21950,27 @@ page.less
     Screen Size: large (@screen-large) and wider
     ----------------------------------------------------------------------------- */
 }
-@media (min-width: 768px) {
-  .page {
-    margin-left: 200px;
-  }
-}
-@media (min-width: 992px) {
-  .page {
-    margin-left: 250px;
-  }
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+page.less
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+.page {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  /* -----------------------------------------------------------------------------
+    Screen Size: Mini (@screen-mini) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: Small (@screen-small) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: Medium (@screen-medium) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: large (@screen-large) and wider
+    ----------------------------------------------------------------------------- */
 }
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
@@ -21966,12 +21990,19 @@ page-navigation.less
 ----------------------------------------------------------------------------- */
 .page-navigation {
   position: relative;
-  display: block;
-  width: 200px;
-  float: right;
-  overflow-x: hidden;
-  overflow-y: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 200px;
+      -ms-flex-preferred-size: 200px;
+          flex-basis: 200px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   box-shadow: -1px 0px 0px 0px rgba(50, 58, 78, 0.1);
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
   /* -----------------------------------------------------------------------------
     Screen Size: Mini (@screen-mini) and wider
     ----------------------------------------------------------------------------- */
@@ -21984,6 +22015,10 @@ page-navigation.less
   /* -----------------------------------------------------------------------------
     Screen Size: large (@screen-large) and wider
     ----------------------------------------------------------------------------- */
+}
+.page-navigation .page-navigation-sticky {
+  height: 100%;
+  display: block;
 }
 .page-navigation ul.page-navigation-menu {
   *zoom: 1;
@@ -22057,31 +22092,11 @@ page-navigation.less
 .page-navigation ul.page-navigation-menu li > ul li > a:active {
   color: #adb0b8;
 }
-.page-navigation + .page-content {
-  margin-right: 200px;
-}
-@media (min-width: 768px) {
-  .page-navigation {
-    width: 200px;
-  }
-  .page-navigation + .page-content {
-    margin-right: 200px;
-  }
-}
-@media (min-width: 992px) {
-  .page-navigation {
-    width: 250px;
-  }
-  .page-navigation + .page-content {
-    margin-right: 250px;
-  }
-}
 @media (min-width: 1400px) {
   .page-navigation {
-    width: 300px;
-  }
-  .page-navigation + .page-content {
-    margin-right: 300px;
+    -webkit-flex-basis: 250px;
+        -ms-flex-preferred-size: 250px;
+            flex-basis: 250px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -22163,9 +22178,21 @@ page.less
 ----------------------------------------------------------------------------- */
 .page-content-wrapper {
   position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .page-content {
   position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   /* -----------------------------------------------------------------------------
     Screen Size: Mini (@screen-mini) and wider
     ----------------------------------------------------------------------------- */
@@ -22904,6 +22931,7 @@ Example Block
   clear: left;
 }
 .example-block .example-block-footer {
+  display: none;
   border-radius: 5px;
   padding: 12px;
   background: #f5f5f6;
@@ -23180,6 +23208,34 @@ Open Sans
   font-style: italic;
   font-weight: 800;
   src: local('Open Sans Extra Bold Italic'), local('Source-Sans–Pro-Bold-Italic'), url("../fonts/Open Sans/OpenSans-ExtraBoldItalic.ttf") format('truetype');
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+page.less
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+.mCSB_scrollTools {
+  width: 6px !important;
+  top: 3px !important;
+  bottom: 3px !important;
+  right: 3px !important;
+}
+.mCSB_scrollTools .mCSB_draggerContainer {
+  width: 100%;
+}
+.mCSB_scrollTools .mCSB_dragger {
+  width: 100%;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 100% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 100% !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+.mCSB_container {
+  margin-right: 0px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

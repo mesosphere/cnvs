@@ -276,10 +276,6 @@ gulp.task("docs:javascripts", function () {
   return gulp.src(dirs.docs.javascripts + "/*.js")
     .pipe(concat(files.docs.dist.javascripts.filename + ".js"))
     .pipe(gulp.dest(dirs.docs.dist.javascripts))
-    .on("error", function (err) {
-      util.log(err.message);
-      this.emit("end");
-    })
     .pipe(rename({
       basename: files.docs.dist.javascripts.filename,
       suffix: files.docs.dist.javascripts.suffix,
@@ -288,6 +284,9 @@ gulp.task("docs:javascripts", function () {
     .pipe(uglify({
       mangle: false,
       compress: true
+    }).on("error", function (err) {
+      util.log(err.message);
+      this.emit("end");
     }))
     .pipe(gulp.dest(dirs.docs.dist.javascripts));
 
