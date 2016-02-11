@@ -9,11 +9,7 @@ page-navigation.less
 .page-navigation {
 
   position: relative;
-  display: flex;
-  flex-basis: 200px;
-  flex-shrink: 0;
-  box-shadow: -1px 0px 0px 0px hsla(hue(@neutral), saturation(@neutral), lightness(@neutral), 0.1);
-  order: 1;
+
 
   .page-navigation-sticky {
 
@@ -26,6 +22,7 @@ page-navigation.less
 
     .clearfix();
     .shape-style-variant(page-navigation-menu);
+    margin-bottom: 0px;
 
     li {
 
@@ -165,15 +162,19 @@ page-navigation.less
 
   }
 
+}
 
 
-  & when (@screen-mini-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
+& when (@screen-mini-enabled) {
 
-    @media (min-width: @screen-mini) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    .page-navigation {
 
       & when (@page-navigation-menu-scale-screen-mini-enabled) {
 
@@ -219,15 +220,19 @@ page-navigation.less
 
   }
 
+}
 
 
-  & when (@screen-small-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
+& when (@screen-small-enabled) {
 
-    @media (min-width: @screen-small) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    .page-navigation {
 
       & when (@page-navigation-menu-scale-screen-small-enabled) {
 
@@ -273,15 +278,25 @@ page-navigation.less
 
   }
 
+}
 
 
-  & when (@screen-medium-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
+& when (@screen-medium-enabled) {
 
-    @media (min-width: @screen-medium) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    .page-navigation {
+
+      display: flex;
+      flex-basis: 200px;
+      flex-shrink: 0;
+      box-shadow: -1px 0px 0px 0px hsla(hue(@neutral), saturation(@neutral), lightness(@neutral), 0.1);
+      order: 1;
 
       & when (@page-navigation-menu-scale-screen-medium-enabled) {
 
@@ -327,20 +342,24 @@ page-navigation.less
 
   }
 
+}
 
 
-  & when (@screen-large-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
+& when (@screen-large-enabled) {
 
-    @media (min-width: @screen-large) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    .page-navigation {
 
       & when (@page-navigation-menu-scale-screen-large-enabled) {
 
-        flex-basis: 250px;
-        
+        flex-basis: 300px;
+
         ul.page-navigation-menu {
 
           li {

@@ -24,64 +24,69 @@ body {
 .canvas {
 
   display: flex;
-  flex-direction: row;
-  //min-height: 100vh;
+  flex-direction: column;
   height: 100%;
   overflow: hidden;
 
-
-
-  & when (@screen-mini-enabled) {
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
-
-    @media (min-width: @screen-mini) {
-
-    }
-
-  }
+}
 
 
 
-  & when (@screen-small-enabled) {
+& when (@screen-mini-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
 
-    @media (min-width: @screen-small) {
-
-    }
+  @media (min-width: @screen-mini) {
 
   }
 
+}
 
 
-  & when (@screen-medium-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
+& when (@screen-small-enabled) {
 
-    @media (min-width: @screen-medium) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    .canvas {
+
+      flex-direction: row;
 
     }
+    
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
 
   }
 
+}
 
 
-  & when (@screen-large-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
+& when (@screen-large-enabled) {
 
-    @media (min-width: @screen-large) {
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
 
-    }
+  @media (min-width: @screen-large) {
 
   }
 

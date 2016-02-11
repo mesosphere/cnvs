@@ -21396,11 +21396,193 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   overflow: hidden;
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .canvas {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+sidebar.less
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+.sidebar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #191d27;
+  box-shadow: 1px 0px 0px 0px rgba(50, 58, 78, 0.1);
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .sidebar {
+    -webkit-flex-basis: 200px;
+        -ms-flex-preferred-size: 200px;
+            flex-basis: 200px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  .sidebar {
+    -webkit-flex-basis: 250px;
+        -ms-flex-preferred-size: 250px;
+            flex-basis: 250px;
+  }
+}
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+header.less
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Header Logo
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Text Size
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Header Logo Image
+----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Header
+---------------------------------------------------------------------------------------------------- */
+.header {
+  *zoom: 1;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  /* ----------------------------------------------------------------------------------------------------
+  Header Logo
+  ---------------------------------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: Mini (@screen-mini) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: Small (@screen-small) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: Medium (@screen-medium) and wider
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Screen Size: large (@screen-large) and wider
+    ----------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+    Screen Resolution: 2x
+    ---------------------------------------------------------------------------------------------------- */
+}
+.header:before,
+.header:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.header:after {
+  clear: both;
+}
+.header .header-logo {
+  display: block;
+  width: auto;
+  background-size: 100% 100%;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.header .header-logo a {
+  display: block;
+  width: auto;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@media (min-width: 480px) {
+  .header {
+    /* ----------------------------------------------------------------------------------------------------
+      Header Logo
+      ---------------------------------------------------------------------------------------------------- */
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    /* ----------------------------------------------------------------------------------------------------
+      Header Logo
+      ---------------------------------------------------------------------------------------------------- */
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    /* ----------------------------------------------------------------------------------------------------
+      Header Logo
+      ---------------------------------------------------------------------------------------------------- */
+  }
+}
+@media (min-width: 1400px) {
+  .header {
+    /* ----------------------------------------------------------------------------------------------------
+      Header Logo
+      ---------------------------------------------------------------------------------------------------- */
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .header {
+    /* ----------------------------------------------------------------------------------------------------
+      Header Logo
+      ---------------------------------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+footer.less
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+.footer {
+  display: none;
   /* -----------------------------------------------------------------------------
     Screen Size: Mini (@screen-mini) and wider
     ----------------------------------------------------------------------------- */
@@ -21419,48 +21601,25 @@ body {
 sidebar.less
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
-.sidebar {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-basis: 200px;
-      -ms-flex-preferred-size: 200px;
-          flex-basis: 200px;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #191d27;
-  box-shadow: 1px 0px 0px 0px rgba(50, 58, 78, 0.1);
-  /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
+.navigation {
+  position: fixed;
+  left: -100%;
+  width: 100%;
 }
-.sidebar ul.sidebar-menu {
+.navigation ul.sidebar-menu {
   *zoom: 1;
   margin-bottom: 0px;
 }
-.sidebar ul.sidebar-menu:before,
-.sidebar ul.sidebar-menu:after {
+.navigation ul.sidebar-menu:before,
+.navigation ul.sidebar-menu:after {
   display: table;
   content: "";
   line-height: 0;
 }
-.sidebar ul.sidebar-menu:after {
+.navigation ul.sidebar-menu:after {
   clear: both;
 }
-.sidebar ul.sidebar-menu li {
+.navigation ul.sidebar-menu li {
   display: block;
   font-size: 1rem;
   line-height: 1rem;
@@ -21476,10 +21635,10 @@ sidebar.less
   font-weight: 500;
   background: #191d27;
 }
-.sidebar ul.sidebar-menu li:first-child {
+.navigation ul.sidebar-menu li:first-child {
   margin-top: 0px;
 }
-.sidebar ul.sidebar-menu li a {
+.navigation ul.sidebar-menu li a {
   display: block;
   text-decoration: none !important;
   margin-top: -16px;
@@ -21493,43 +21652,43 @@ sidebar.less
   color: #d6d8dc;
   background: #191d27;
 }
-.sidebar ul.sidebar-menu li a:hover {
+.navigation ul.sidebar-menu li a:hover {
   color: #ffffff;
   background: #1e232f;
 }
-.sidebar ul.sidebar-menu li a:active {
+.navigation ul.sidebar-menu li a:active {
   color: #c2c4ca;
   background: #1c202b;
 }
-.sidebar ul.sidebar-menu li.selected:not(.open) {
+.navigation ul.sidebar-menu li.selected:not(.open) {
   background: #323a4e;
 }
-.sidebar ul.sidebar-menu li.selected,
-.sidebar ul.sidebar-menu li.selected.open {
+.navigation ul.sidebar-menu li.selected,
+.navigation ul.sidebar-menu li.selected.open {
   color: #ffffff;
 }
-.sidebar ul.sidebar-menu li.selected > a,
-.sidebar ul.sidebar-menu li.selected.open > a,
-.sidebar ul.sidebar-menu li.selected > a:hover,
-.sidebar ul.sidebar-menu li.selected.open > a:hover,
-.sidebar ul.sidebar-menu li.selected > a:active,
-.sidebar ul.sidebar-menu li.selected.open > a:active {
+.navigation ul.sidebar-menu li.selected > a,
+.navigation ul.sidebar-menu li.selected.open > a,
+.navigation ul.sidebar-menu li.selected > a:hover,
+.navigation ul.sidebar-menu li.selected.open > a:hover,
+.navigation ul.sidebar-menu li.selected > a:active,
+.navigation ul.sidebar-menu li.selected.open > a:active {
   color: #ffffff;
   background: #9351e5;
 }
-.sidebar ul.sidebar-menu li.open {
+.navigation ul.sidebar-menu li.open {
   background: #232937;
   color: #ffffff;
 }
-.sidebar ul.sidebar-menu li.open > a {
+.navigation ul.sidebar-menu li.open > a {
   color: #ffffff;
   background: #282e3e;
 }
-.sidebar ul.sidebar-menu li.open > ul {
+.navigation ul.sidebar-menu li.open > ul {
   margin-top: 24px;
   margin-bottom: -8px;
 }
-.sidebar ul.sidebar-menu li.open > ul li {
+.navigation ul.sidebar-menu li.open > ul li {
   display: block;
   font-size: 0.9rem;
   line-height: 1rem;
@@ -21546,13 +21705,13 @@ sidebar.less
   text-transform: none;
   background: #232937;
 }
-.sidebar ul.sidebar-menu li.open > ul li.selected > a,
-.sidebar ul.sidebar-menu li.open > ul li.selected > a:hover,
-.sidebar ul.sidebar-menu li.open > ul li.selected > a:active {
+.navigation ul.sidebar-menu li.open > ul li.selected > a,
+.navigation ul.sidebar-menu li.open > ul li.selected > a:hover,
+.navigation ul.sidebar-menu li.open > ul li.selected > a:active {
   color: #ffffff;
   background: #9351e5;
 }
-.sidebar ul.sidebar-menu li.open > ul li > a {
+.navigation ul.sidebar-menu li.open > ul li > a {
   display: block;
   text-decoration: none !important;
   margin-top: -11.2px;
@@ -21566,16 +21725,19 @@ sidebar.less
   color: #adb0b8;
   background: #232937;
 }
-.sidebar ul.sidebar-menu li.open > ul li > a:hover {
+.navigation ul.sidebar-menu li.open > ul li > a:hover {
   color: #d6d8dc;
   background: #2d3446;
 }
-.sidebar ul.sidebar-menu li.open > ul li > a:active {
+.navigation ul.sidebar-menu li.open > ul li > a:active {
   color: #adb0b8;
   background: #282e3e;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 480px) {
-  .sidebar ul.sidebar-menu li {
+  .navigation ul.sidebar-menu li {
     margin-left: -18px;
     margin-right: -18px;
     padding-top: 16px;
@@ -21583,7 +21745,7 @@ sidebar.less
     padding-left: 18px;
     padding-right: 18px;
   }
-  .sidebar ul.sidebar-menu li a {
+  .navigation ul.sidebar-menu li a {
     margin-top: -16px;
     margin-bottom: -16px;
     margin-left: -18px;
@@ -21593,11 +21755,11 @@ sidebar.less
     padding-left: 18px;
     padding-right: 18px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul {
+  .navigation ul.sidebar-menu > li.open > ul {
     margin-top: 24px;
     margin-bottom: -8px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul li {
+  .navigation ul.sidebar-menu > li.open > ul li {
     margin-left: -18px;
     margin-right: -18px;
     padding-top: 11.2px;
@@ -21605,7 +21767,7 @@ sidebar.less
     padding-left: 18px;
     padding-right: 18px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul li a {
+  .navigation ul.sidebar-menu > li.open > ul li a {
     margin-top: -11.2px;
     margin-bottom: -11.2px;
     margin-left: -18px;
@@ -21616,8 +21778,16 @@ sidebar.less
     padding-right: 18px;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
-  .sidebar ul.sidebar-menu li {
+  .navigation {
+    position: relative;
+    width: auto;
+    left: auto;
+  }
+  .navigation ul.sidebar-menu li {
     margin-left: -16px;
     margin-right: -16px;
     padding-top: 17.6px;
@@ -21625,7 +21795,7 @@ sidebar.less
     padding-left: 16px;
     padding-right: 16px;
   }
-  .sidebar ul.sidebar-menu li a {
+  .navigation ul.sidebar-menu li a {
     margin-top: -17.6px;
     margin-bottom: -17.6px;
     margin-left: -16px;
@@ -21635,11 +21805,11 @@ sidebar.less
     padding-left: 16px;
     padding-right: 16px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul {
+  .navigation ul.sidebar-menu > li.open > ul {
     margin-top: 26.4px;
     margin-bottom: -8.8px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul li {
+  .navigation ul.sidebar-menu > li.open > ul li {
     margin-left: -16px;
     margin-right: -16px;
     padding-top: 12.32px;
@@ -21647,7 +21817,7 @@ sidebar.less
     padding-left: 16px;
     padding-right: 16px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul li a {
+  .navigation ul.sidebar-menu > li.open > ul li a {
     margin-top: -12.32px;
     margin-bottom: -12.32px;
     margin-left: -16px;
@@ -21658,8 +21828,11 @@ sidebar.less
     padding-right: 16px;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
-  .sidebar ul.sidebar-menu li {
+  .navigation ul.sidebar-menu li {
     margin-left: -24px;
     margin-right: -24px;
     padding-top: 19.2px;
@@ -21667,7 +21840,7 @@ sidebar.less
     padding-left: 24px;
     padding-right: 24px;
   }
-  .sidebar ul.sidebar-menu li a {
+  .navigation ul.sidebar-menu li a {
     margin-top: -19.2px;
     margin-bottom: -19.2px;
     margin-left: -24px;
@@ -21677,11 +21850,11 @@ sidebar.less
     padding-left: 24px;
     padding-right: 24px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul {
+  .navigation ul.sidebar-menu > li.open > ul {
     margin-top: 28.8px;
     margin-bottom: -9.6px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul li {
+  .navigation ul.sidebar-menu > li.open > ul li {
     margin-left: -24px;
     margin-right: -24px;
     padding-top: 13.44px;
@@ -21689,7 +21862,7 @@ sidebar.less
     padding-left: 24px;
     padding-right: 24px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul li a {
+  .navigation ul.sidebar-menu > li.open > ul li a {
     margin-top: -13.44px;
     margin-bottom: -13.44px;
     margin-left: -24px;
@@ -21700,13 +21873,11 @@ sidebar.less
     padding-right: 24px;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
-  .sidebar {
-    -webkit-flex-basis: 250px;
-        -ms-flex-preferred-size: 250px;
-            flex-basis: 250px;
-  }
-  .sidebar ul.sidebar-menu li {
+  .navigation ul.sidebar-menu li {
     margin-left: -32px;
     margin-right: -32px;
     padding-top: 20.8px;
@@ -21714,7 +21885,7 @@ sidebar.less
     padding-left: 32px;
     padding-right: 32px;
   }
-  .sidebar ul.sidebar-menu li a {
+  .navigation ul.sidebar-menu li a {
     margin-top: -20.8px;
     margin-bottom: -20.8px;
     margin-left: -32px;
@@ -21724,11 +21895,11 @@ sidebar.less
     padding-left: 32px;
     padding-right: 32px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul {
+  .navigation ul.sidebar-menu > li.open > ul {
     margin-top: 31.2px;
     margin-bottom: -10.4px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul li {
+  .navigation ul.sidebar-menu > li.open > ul li {
     margin-left: -32px;
     margin-right: -32px;
     padding-top: 14.56px;
@@ -21736,7 +21907,7 @@ sidebar.less
     padding-left: 32px;
     padding-right: 32px;
   }
-  .sidebar ul.sidebar-menu > li.open > ul li a {
+  .navigation ul.sidebar-menu > li.open > ul li a {
     margin-top: -14.56px;
     margin-bottom: -14.56px;
     margin-left: -32px;
@@ -21819,137 +21990,6 @@ Styling
 /* -----------------------------------------------------------------------------
 Layout
 ----------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-header.less
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Header Logo
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Styling
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Text Size
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Header Logo Image
------------------------------------------------------------------------------ */
-/* ----------------------------------------------------------------------------------------------------
-Header
----------------------------------------------------------------------------------------------------- */
-.header {
-  *zoom: 1;
-  position: relative;
-  width: 100%;
-  z-index: 1000;
-  /* ----------------------------------------------------------------------------------------------------
-  Header Logo
-  ---------------------------------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
-  /* ----------------------------------------------------------------------------------------------------
-    Screen Resolution: 2x
-    ---------------------------------------------------------------------------------------------------- */
-}
-.header:before,
-.header:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.header:after {
-  clear: both;
-}
-.header .header-logo {
-  display: block;
-  width: auto;
-  background-size: 100% 100%;
-  color: #d6d8dc;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  margin: 0 auto;
-}
-.header .header-logo a {
-  display: block;
-  width: auto;
-  color: #d6d8dc;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-@media (min-width: 480px) {
-  .header {
-    /* ----------------------------------------------------------------------------------------------------
-      Header Logo
-      ---------------------------------------------------------------------------------------------------- */
-  }
-}
-@media (min-width: 768px) {
-  .header {
-    /* ----------------------------------------------------------------------------------------------------
-      Header Logo
-      ---------------------------------------------------------------------------------------------------- */
-  }
-}
-@media (min-width: 992px) {
-  .header {
-    /* ----------------------------------------------------------------------------------------------------
-      Header Logo
-      ---------------------------------------------------------------------------------------------------- */
-  }
-}
-@media (min-width: 1400px) {
-  .header {
-    /* ----------------------------------------------------------------------------------------------------
-      Header Logo
-      ---------------------------------------------------------------------------------------------------- */
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  .header {
-    /* ----------------------------------------------------------------------------------------------------
-      Header Logo
-      ---------------------------------------------------------------------------------------------------- */
-  }
-}
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-footer.less
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-.footer {
-  display: none;
-  /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
-}
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 page.less
@@ -21959,19 +21999,20 @@ page.less
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
+  overflow: hidden;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 page-header.less
@@ -21990,31 +22031,6 @@ page-navigation.less
 ----------------------------------------------------------------------------- */
 .page-navigation {
   position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-basis: 200px;
-      -ms-flex-preferred-size: 200px;
-          flex-basis: 200px;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  box-shadow: -1px 0px 0px 0px rgba(50, 58, 78, 0.1);
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
-  /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
 }
 .page-navigation .page-navigation-sticky {
   height: 100%;
@@ -22022,6 +22038,7 @@ page-navigation.less
 }
 .page-navigation ul.page-navigation-menu {
   *zoom: 1;
+  margin-bottom: 0px;
 }
 .page-navigation ul.page-navigation-menu:before,
 .page-navigation ul.page-navigation-menu:after {
@@ -22092,11 +22109,40 @@ page-navigation.less
 .page-navigation ul.page-navigation-menu li > ul li > a:active {
   color: #adb0b8;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .page-navigation {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-basis: 200px;
+        -ms-flex-preferred-size: 200px;
+            flex-basis: 200px;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    box-shadow: -1px 0px 0px 0px rgba(50, 58, 78, 0.1);
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   .page-navigation {
-    -webkit-flex-basis: 250px;
-        -ms-flex-preferred-size: 250px;
-            flex-basis: 250px;
+    -webkit-flex-basis: 300px;
+        -ms-flex-preferred-size: 300px;
+            flex-basis: 300px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -22181,9 +22227,9 @@ page.less
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .page-content {
   position: relative;
@@ -22193,19 +22239,26 @@ page.less
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .page-content-wrapper {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 Components
 ----------------------------------------------------------------------------- */

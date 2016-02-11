@@ -10,7 +10,7 @@ page.less
 
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
 }
 
@@ -19,61 +19,66 @@ page.less
   position: relative;
   display: flex;
   flex-grow: 1;
-  //flex-shrink: 1;
+
+}
 
 
 
-  & when (@screen-mini-enabled) {
+& when (@screen-mini-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@screen-mini) and wider
-    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
 
-    @media (min-width: @screen-mini) {
+  @media (min-width: @screen-mini) {
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    .page-content-wrapper {
+
+      flex-direction: row;
 
     }
 
   }
 
-
-
-  & when (@screen-small-enabled) {
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: Small (@screen-small) and wider
-    ----------------------------------------------------------------------------- */
-
-    @media (min-width: @screen-small) {
-
-    }
-
-  }
+}
 
 
 
-  & when (@screen-medium-enabled) {
+& when (@screen-large-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@screen-medium) and wider
-    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
 
-    @media (min-width: @screen-medium) {
-
-    }
-
-  }
-
-
-
-  & when (@screen-large-enabled) {
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: large (@screen-large) and wider
-    ----------------------------------------------------------------------------- */
-
-    @media (min-width: @screen-large) {
-
-    }
+  @media (min-width: @screen-large) {
 
   }
 
