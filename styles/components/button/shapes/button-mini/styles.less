@@ -1,24 +1,17 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
 button-mini/styles.less
-
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
 
 
-
-
-
 & when (@button-mini-enabled) {
 
   /* -----------------------------------------------------------------------------
-  --------------------------------------------------------------------------------
-  button-mini
-  --------------------------------------------------------------------------------
+  Button Jumbo (.button-mini)
   ----------------------------------------------------------------------------- */
 
   .button-mini {
@@ -41,7 +34,7 @@ button-mini/styles.less
     }
 
     /* -----------------------------------------------------------------------------
-    .button-rounded
+    Button Rounded (.button-rounded)
     ----------------------------------------------------------------------------- */
 
     &.button-rounded {
@@ -106,415 +99,26 @@ button-mini/styles.less
 
     }
 
-
-
-
-    & when (@screen-mini-enabled) and (@button-mini-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-      Screen Size: Mini (@screen-mini) and wider
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      @media (min-width: @screen-mini) {
-
-        .text-size-variant(button-mini, scale-screen-mini);
-        .shape-layout-variant(button-mini, scale-screen-mini);
-        .shape-layout-variant(button-mini, narrow, scale-screen-mini);
-        .shape-layout-variant(button-mini, wide, scale-screen-mini);
-
-        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-mini = null) {
-
-          height: @button-mini-height * @button-mini-height-scale-screen-mini;
-
-        }
-
-        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-mini = null) {
-
-          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-mini;
-
-        }
-
-        & when not (@button-mini-rounded-padding-horizontal-scale = null) {
-
-          /* -----------------------------------------------------------------------------
-          .button-rounded
-          ----------------------------------------------------------------------------- */
-
-          &.button-rounded {
-
-            & when not (@button-mini-padding-left = null) and not (@button-mini-padding-left-scale-screen-mini = null) {
-
-              padding-left: @button-mini-padding-left * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-mini;
-
-              & when not (@button-mini-narrow-padding-left-scale = null) {
-
-                &.button-mini-narrow {
-
-                  padding-left: @button-mini-padding-left * @button-mini-narrow-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-mini;
-
-                }
-
-              }
-
-              & when not (@button-mini-wide-padding-left-scale = null) {
-
-                &.button-mini-wide {
-
-                  padding-left: @button-mini-padding-left * @button-mini-wide-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-mini;
-
-                }
-
-              }
-
-            }
-
-            & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-mini = null) {
-
-              padding-right: @button-mini-padding-right * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-mini;
-
-              & when not (@button-mini-narrow-padding-right-scale = null) {
-
-                &.button-mini-narrow {
-
-                  padding-right: @button-mini-padding-right * @button-mini-narrow-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-mini;
-
-                }
-
-              }
-
-              & when not (@button-mini-wide-padding-right-scale = null) {
-
-                &.button-mini-wide {
-
-                  padding-right: @button-mini-padding-right * @button-mini-wide-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-mini;
-
-                }
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
-
-
-    & when (@screen-small-enabled) and (@button-mini-scale-screen-small-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-      Screen Size: Small (@screen-small) and wider
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      @media (min-width: @screen-small) {
-
-        .text-size-variant(button-mini, scale-screen-small);
-        .shape-layout-variant(button-mini, scale-screen-small);
-        .shape-layout-variant(button-mini, narrow, scale-screen-small);
-        .shape-layout-variant(button-mini, wide, scale-screen-small);
-
-        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-small = null) {
-
-          height: @button-mini-height * @button-mini-height-scale-screen-small;
-
-        }
-
-        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-small = null) {
-
-          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-small;
-
-        }
-
-        & when not (@button-mini-rounded-padding-horizontal-scale = null) {
-
-          /* -----------------------------------------------------------------------------
-          .button-rounded
-          ----------------------------------------------------------------------------- */
-
-          &.button-rounded {
-
-            & when not (@button-mini-padding-left = null) and not (@button-mini-padding-left-scale-screen-small = null) {
-
-              padding-left: @button-mini-padding-left * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-small;
-
-              & when not (@button-mini-narrow-padding-left-scale = null) {
-
-                &.button-mini-narrow {
-
-                  padding-left: @button-mini-padding-left * @button-mini-narrow-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-small;
-
-                }
-
-              }
-
-              & when not (@button-mini-wide-padding-left-scale = null) {
-
-                &.button-mini-wide {
-
-                  padding-left: @button-mini-padding-left * @button-mini-wide-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-small;
-
-                }
-
-              }
-
-            }
-
-            & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-small = null) {
-
-              padding-right: @button-mini-padding-right * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-small;
-
-              & when not (@button-mini-narrow-padding-right-scale = null) {
-
-                &.button-mini-narrow {
-
-                  padding-right: @button-mini-padding-right * @button-mini-narrow-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-small;
-
-                }
-
-              }
-
-              & when not (@button-mini-wide-padding-right-scale = null) {
-
-                &.button-mini-wide {
-
-                  padding-right: @button-mini-padding-right * @button-mini-wide-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-small;
-
-                }
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
-
-
-    & when (@screen-medium-enabled) and (@button-mini-scale-screen-medium-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-      Screen Size: Medium (@screen-medium) and wider
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      @media (min-width: @screen-medium) {
-
-        .text-size-variant(button-mini, scale-screen-medium);
-        .shape-layout-variant(button-mini, scale-screen-medium);
-        .shape-layout-variant(button-mini, narrow, scale-screen-medium);
-        .shape-layout-variant(button-mini, wide, scale-screen-medium);
-
-        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-medium = null) {
-
-          height: @button-mini-height * @button-mini-height-scale-screen-medium;
-
-        }
-
-        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-medium = null) {
-
-          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-medium;
-
-        }
-
-        & when not (@button-mini-rounded-padding-horizontal-scale = null) {
-
-          /* -----------------------------------------------------------------------------
-          .button-rounded
-          ----------------------------------------------------------------------------- */
-
-          &.button-rounded {
-
-            & when not (@button-mini-padding-left = null) and not (@button-mini-padding-left-scale-screen-medium = null) {
-
-              padding-left: @button-mini-padding-left * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-medium;
-
-              & when not (@button-mini-narrow-padding-left-scale = null) {
-
-                &.button-mini-narrow {
-
-                  padding-left: @button-mini-padding-left * @button-mini-narrow-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-medium;
-
-                }
-
-              }
-
-              & when not (@button-mini-wide-padding-left-scale = null) {
-
-                &.button-mini-wide {
-
-                  padding-left: @button-mini-padding-left * @button-mini-wide-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-medium;
-
-                }
-
-              }
-
-            }
-
-            & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-medium = null) {
-
-              padding-right: @button-mini-padding-right * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-medium;
-
-              & when not (@button-mini-narrow-padding-right-scale = null) {
-
-                &.button-mini-narrow {
-
-                  padding-right: @button-mini-padding-right * @button-mini-narrow-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-medium;
-
-                }
-
-              }
-
-              & when not (@button-mini-wide-padding-right-scale = null) {
-
-                &.button-mini-wide {
-
-                  padding-right: @button-mini-padding-right * @button-mini-wide-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-medium;
-
-                }
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
-
-
-    & when (@screen-large-enabled) and (@button-mini-scale-screen-large-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-      Screen Size: Large (@screen-large) and wider
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      @media (min-width: @screen-large) {
-
-        .text-size-variant(button-mini, scale-screen-large);
-        .shape-layout-variant(button-mini, scale-screen-large);
-        .shape-layout-variant(button-mini, narrow, scale-screen-large);
-        .shape-layout-variant(button-mini, wide, scale-screen-large);
-
-        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-large = null) {
-
-          height: @button-mini-height * @button-mini-height-scale-screen-large;
-
-        }
-
-        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-large = null) {
-
-          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-large;
-
-        }
-
-        & when not (@button-mini-rounded-padding-horizontal-scale = null) {
-
-          /* -----------------------------------------------------------------------------
-          .button-rounded
-          ----------------------------------------------------------------------------- */
-
-          &.button-rounded {
-
-            & when not (@button-mini-padding-left = null) and not (@button-mini-padding-left-scale-screen-large = null) {
-
-              padding-left: @button-mini-padding-left * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-large;
-
-              & when not (@button-mini-narrow-padding-left-scale = null) {
-
-                &.button-mini-narrow {
-
-                  padding-left: @button-mini-padding-left * @button-mini-narrow-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-large;
-
-                }
-
-              }
-
-              & when not (@button-mini-wide-padding-left-scale = null) {
-
-                &.button-mini-wide {
-
-                  padding-left: @button-mini-padding-left * @button-mini-wide-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-large;
-
-                }
-
-              }
-
-            }
-
-            & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-large = null) {
-
-              padding-right: @button-mini-padding-right * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-large;
-
-              & when not (@button-mini-narrow-padding-right-scale = null) {
-
-                &.button-mini-narrow {
-
-                  padding-right: @button-mini-padding-right * @button-mini-narrow-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-large;
-
-                }
-
-              }
-
-              & when not (@button-mini-wide-padding-right-scale = null) {
-
-                &.button-mini-wide {
-
-                  padding-right: @button-mini-padding-right * @button-mini-wide-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-large;
-
-                }
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
   }
 
-
-
   & when (@button-group-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    Button group
+    ----------------------------------------------------------------------------- */
 
     .button-group {
 
       & when not (@button-mini-rounded-padding-horizontal-scale = null) {
 
         /* -----------------------------------------------------------------------------
-        --------------------------------------------------------------------------------
-        button
-        --------------------------------------------------------------------------------
+        Button Jumbo (.button-mini)
         ----------------------------------------------------------------------------- */
 
         .button-mini {
 
           /* -----------------------------------------------------------------------------
-          Button Rounded
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
 
           &.button-rounded {
@@ -591,11 +195,140 @@ button-mini/styles.less
 
             }
 
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
 
 
-            & when (@screen-mini-enabled) {
 
-              @media (min-width: @screen-mini) {
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@button-mini-enabled) and (@button-mini-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Button Jumbo (.button-mini)
+      ----------------------------------------------------------------------------- */
+
+      .button-mini {
+
+        .text-size-variant(button-mini, scale-screen-mini);
+        .shape-layout-variant(button-mini, scale-screen-mini);
+        .shape-layout-variant(button-mini, narrow, scale-screen-mini);
+        .shape-layout-variant(button-mini, wide, scale-screen-mini);
+
+        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-mini = null) {
+
+          height: @button-mini-height * @button-mini-height-scale-screen-mini;
+
+        }
+
+        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-mini = null) {
+
+          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-mini;
+
+        }
+
+        & when not (@button-mini-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button (.button-rounded)
+          ----------------------------------------------------------------------------- */
+
+          &.button-rounded {
+
+            & when not (@button-mini-padding-left = null) and not (@button-mini-padding-left-scale-screen-mini = null) {
+
+              padding-left: @button-mini-padding-left * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-mini;
+
+              & when not (@button-mini-narrow-padding-left-scale = null) {
+
+                &.button-mini-narrow {
+
+                  padding-left: @button-mini-padding-left * @button-mini-narrow-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-mini;
+
+                }
+
+              }
+
+              & when not (@button-mini-wide-padding-left-scale = null) {
+
+                &.button-mini-wide {
+
+                  padding-left: @button-mini-padding-left * @button-mini-wide-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-mini;
+
+                }
+
+              }
+
+            }
+
+            & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-mini = null) {
+
+              padding-right: @button-mini-padding-right * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-mini;
+
+              & when not (@button-mini-narrow-padding-right-scale = null) {
+
+                &.button-mini-narrow {
+
+                  padding-right: @button-mini-padding-right * @button-mini-narrow-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-mini;
+
+                }
+
+              }
+
+              & when not (@button-mini-wide-padding-right-scale = null) {
+
+                &.button-mini-wide {
+
+                  padding-right: @button-mini-padding-right * @button-mini-wide-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-mini;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      & when (@button-group-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Button group
+        ----------------------------------------------------------------------------- */
+
+        .button-group {
+
+          & when not (@button-mini-rounded-padding-horizontal-scale = null) {
+
+            /* -----------------------------------------------------------------------------
+            Button Jumbo (.button-mini)
+            ----------------------------------------------------------------------------- */
+
+            .button-mini {
+
+              /* -----------------------------------------------------------------------------
+              Button Rounded (.button-rounded)
+              ----------------------------------------------------------------------------- */
+
+              &.button-rounded {
 
                 & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-mini = null) {
 
@@ -673,11 +406,140 @@ button-mini/styles.less
 
             }
 
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
 
 
-            & when (@screen-small-enabled) {
 
-              @media (min-width: @screen-small) {
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@button-mini-enabled) and (@button-mini-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Button Jumbo (.button-mini)
+      ----------------------------------------------------------------------------- */
+
+      .button-mini {
+
+        .text-size-variant(button-mini, scale-screen-small);
+        .shape-layout-variant(button-mini, scale-screen-small);
+        .shape-layout-variant(button-mini, narrow, scale-screen-small);
+        .shape-layout-variant(button-mini, wide, scale-screen-small);
+
+        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-small = null) {
+
+          height: @button-mini-height * @button-mini-height-scale-screen-small;
+
+        }
+
+        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-small = null) {
+
+          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-small;
+
+        }
+
+        & when not (@button-mini-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button (.button-rounded)
+          ----------------------------------------------------------------------------- */
+
+          &.button-rounded {
+
+            & when not (@button-mini-padding-left = null) and not (@button-mini-padding-left-scale-screen-small = null) {
+
+              padding-left: @button-mini-padding-left * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-small;
+
+              & when not (@button-mini-narrow-padding-left-scale = null) {
+
+                &.button-mini-narrow {
+
+                  padding-left: @button-mini-padding-left * @button-mini-narrow-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-small;
+
+                }
+
+              }
+
+              & when not (@button-mini-wide-padding-left-scale = null) {
+
+                &.button-mini-wide {
+
+                  padding-left: @button-mini-padding-left * @button-mini-wide-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-small;
+
+                }
+
+              }
+
+            }
+
+            & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-small = null) {
+
+              padding-right: @button-mini-padding-right * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-small;
+
+              & when not (@button-mini-narrow-padding-right-scale = null) {
+
+                &.button-mini-narrow {
+
+                  padding-right: @button-mini-padding-right * @button-mini-narrow-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-small;
+
+                }
+
+              }
+
+              & when not (@button-mini-wide-padding-right-scale = null) {
+
+                &.button-mini-wide {
+
+                  padding-right: @button-mini-padding-right * @button-mini-wide-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-small;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      & when (@button-group-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Button group
+        ----------------------------------------------------------------------------- */
+
+        .button-group {
+
+          & when not (@button-mini-rounded-padding-horizontal-scale = null) {
+
+            /* -----------------------------------------------------------------------------
+            Button Jumbo (.button-mini)
+            ----------------------------------------------------------------------------- */
+
+            .button-mini {
+
+              /* -----------------------------------------------------------------------------
+              Button Rounded (.button-rounded)
+              ----------------------------------------------------------------------------- */
+
+              &.button-rounded {
 
                 & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-small = null) {
 
@@ -755,11 +617,140 @@ button-mini/styles.less
 
             }
 
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
 
 
-            & when (@screen-medium-enabled) {
 
-              @media (min-width: @screen-medium) {
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@button-mini-enabled) and (@button-mini-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Button Jumbo (.button-mini)
+      ----------------------------------------------------------------------------- */
+
+      .button-mini {
+
+        .text-size-variant(button-mini, scale-screen-medium);
+        .shape-layout-variant(button-mini, scale-screen-medium);
+        .shape-layout-variant(button-mini, narrow, scale-screen-medium);
+        .shape-layout-variant(button-mini, wide, scale-screen-medium);
+
+        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-medium = null) {
+
+          height: @button-mini-height * @button-mini-height-scale-screen-medium;
+
+        }
+
+        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-medium = null) {
+
+          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-medium;
+
+        }
+
+        & when not (@button-mini-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button (.button-rounded)
+          ----------------------------------------------------------------------------- */
+
+          &.button-rounded {
+
+            & when not (@button-mini-padding-left = null) and not (@button-mini-padding-left-scale-screen-medium = null) {
+
+              padding-left: @button-mini-padding-left * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-medium;
+
+              & when not (@button-mini-narrow-padding-left-scale = null) {
+
+                &.button-mini-narrow {
+
+                  padding-left: @button-mini-padding-left * @button-mini-narrow-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-medium;
+
+                }
+
+              }
+
+              & when not (@button-mini-wide-padding-left-scale = null) {
+
+                &.button-mini-wide {
+
+                  padding-left: @button-mini-padding-left * @button-mini-wide-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-medium;
+
+                }
+
+              }
+
+            }
+
+            & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-medium = null) {
+
+              padding-right: @button-mini-padding-right * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-medium;
+
+              & when not (@button-mini-narrow-padding-right-scale = null) {
+
+                &.button-mini-narrow {
+
+                  padding-right: @button-mini-padding-right * @button-mini-narrow-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-medium;
+
+                }
+
+              }
+
+              & when not (@button-mini-wide-padding-right-scale = null) {
+
+                &.button-mini-wide {
+
+                  padding-right: @button-mini-padding-right * @button-mini-wide-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-medium;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      & when (@button-group-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Button group
+        ----------------------------------------------------------------------------- */
+
+        .button-group {
+
+          & when not (@button-mini-rounded-padding-horizontal-scale = null) {
+
+            /* -----------------------------------------------------------------------------
+            Button Jumbo (.button-mini)
+            ----------------------------------------------------------------------------- */
+
+            .button-mini {
+
+              /* -----------------------------------------------------------------------------
+              Button Rounded (.button-rounded)
+              ----------------------------------------------------------------------------- */
+
+              &.button-rounded {
 
                 & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-medium = null) {
 
@@ -837,11 +828,140 @@ button-mini/styles.less
 
             }
 
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
 
 
-            & when (@screen-large-enabled) {
 
-              @media (min-width: @screen-large) {
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@button-mini-enabled) and (@button-mini-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Button Jumbo (.button-mini)
+      ----------------------------------------------------------------------------- */
+
+      .button-mini {
+
+        .text-size-variant(button-mini, scale-screen-large);
+        .shape-layout-variant(button-mini, scale-screen-large);
+        .shape-layout-variant(button-mini, narrow, scale-screen-large);
+        .shape-layout-variant(button-mini, wide, scale-screen-large);
+
+        & when not (@button-mini-height = null) and not (@button-mini-height-scale-screen-large = null) {
+
+          height: @button-mini-height * @button-mini-height-scale-screen-large;
+
+        }
+
+        & when not (@button-mini-border-radius = null) and not (@button-mini-border-radius-scale-screen-large = null) {
+
+          border-radius: @button-mini-border-radius * @button-mini-border-radius-scale-screen-large;
+
+        }
+
+        & when not (@button-mini-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button (.button-rounded)
+          ----------------------------------------------------------------------------- */
+
+          &.button-rounded {
+
+            & when not (@button-mini-padding-left = null) and not (@button-mini-padding-left-scale-screen-large = null) {
+
+              padding-left: @button-mini-padding-left * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-large;
+
+              & when not (@button-mini-narrow-padding-left-scale = null) {
+
+                &.button-mini-narrow {
+
+                  padding-left: @button-mini-padding-left * @button-mini-narrow-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-large;
+
+                }
+
+              }
+
+              & when not (@button-mini-wide-padding-left-scale = null) {
+
+                &.button-mini-wide {
+
+                  padding-left: @button-mini-padding-left * @button-mini-wide-padding-left-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-left-scale-screen-large;
+
+                }
+
+              }
+
+            }
+
+            & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-large = null) {
+
+              padding-right: @button-mini-padding-right * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-large;
+
+              & when not (@button-mini-narrow-padding-right-scale = null) {
+
+                &.button-mini-narrow {
+
+                  padding-right: @button-mini-padding-right * @button-mini-narrow-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-large;
+
+                }
+
+              }
+
+              & when not (@button-mini-wide-padding-right-scale = null) {
+
+                &.button-mini-wide {
+
+                  padding-right: @button-mini-padding-right * @button-mini-wide-padding-right-scale * @button-mini-rounded-padding-horizontal-scale * @button-mini-padding-right-scale-screen-large;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      & when (@button-group-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Button group
+        ----------------------------------------------------------------------------- */
+
+        .button-group {
+
+          & when not (@button-mini-rounded-padding-horizontal-scale = null) {
+
+            /* -----------------------------------------------------------------------------
+            Button Jumbo (.button-mini)
+            ----------------------------------------------------------------------------- */
+
+            .button-mini {
+
+              /* -----------------------------------------------------------------------------
+              Button Rounded (.button-rounded)
+              ----------------------------------------------------------------------------- */
+
+              &.button-rounded {
 
                 & when not (@button-mini-padding-right = null) and not (@button-mini-padding-right-scale-screen-large = null) {
 
