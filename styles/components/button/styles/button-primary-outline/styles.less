@@ -20,10 +20,36 @@ button-primary-outline/styles.less
     .text-style-variant(button-primary-outline);
     .shape-style-variant(button-primary-outline);
 
+    // Button Dropdown (.button-dropdown)
+
+    &.button-dropdown,
+    &.dropdown-toggle {
+
+      &:after {
+
+        .triangle-color("down", @button-primary-outline-text-color);
+
+      }
+
+    }
+
     &:hover {
 
       .text-style-variant(button-primary-outline-hover);
       .shape-style-variant(button-primary-outline-hover);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-outline-hover-text-color);
+
+        }
+
+      }
 
     }
 
@@ -31,6 +57,19 @@ button-primary-outline/styles.less
 
       .text-style-variant(button-primary-outline-active);
       .shape-style-variant(button-primary-outline-active);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-outline-active-text-color);
+
+        }
+
+      }
 
     }
 
@@ -40,6 +79,19 @@ button-primary-outline/styles.less
       .text-style-variant(button-primary-outline-selected);
       .shape-style-variant(button-primary-outline-selected);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-outline-selected-text-color);
+
+        }
+
+      }
+
     }
 
     &:disabled,
@@ -47,6 +99,19 @@ button-primary-outline/styles.less
 
       .text-style-variant(button-primary-outline-disabled);
       .shape-style-variant(button-primary-outline-disabled);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-outline-disabled-text-color);
+
+        }
+
+      }
 
     }
 
@@ -59,10 +124,36 @@ button-primary-outline/styles.less
       .text-style-variant(button-primary-outline-inverse);
       .shape-style-variant(button-primary-outline-inverse);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-outline-inverse-text-color);
+
+        }
+
+      }
+
       &:hover {
 
         .text-style-variant(button-primary-outline-inverse-hover);
         .shape-style-variant(button-primary-outline-inverse-hover);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-primary-outline-inverse-hover-text-color);
+
+          }
+
+        }
 
       }
 
@@ -70,6 +161,19 @@ button-primary-outline/styles.less
 
         .text-style-variant(button-primary-outline-inverse-active);
         .shape-style-variant(button-primary-outline-inverse-active);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-primary-outline-inverse-active-text-color);
+
+          }
+
+        }
 
       }
 
@@ -79,6 +183,19 @@ button-primary-outline/styles.less
         .text-style-variant(button-primary-outline-inverse-selected);
         .shape-style-variant(button-primary-outline-inverse-selected);
 
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-primary-outline-inverse-selected-text-color);
+
+          }
+
+        }
+
       }
 
       &:disabled,
@@ -86,6 +203,19 @@ button-primary-outline/styles.less
 
         .text-style-variant(button-primary-outline-inverse-disabled);
         .shape-style-variant(button-primary-outline-inverse-disabled);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-primary-outline-inverse-disabled-text-color);
+
+          }
+
+        }
 
       }
 
@@ -101,7 +231,8 @@ button-primary-outline/styles.less
 
     .button-group.open {
 
-      > .button-primary-outline {
+      > .button-primary-outline,
+      > .button-primary.button-stroke {
 
         .text-style-variant(button-primary-outline-selected);
         .shape-style-variant(button-primary-outline-selected);
@@ -110,6 +241,32 @@ button-primary-outline/styles.less
 
           .text-style-variant(button-primary-outline-inverse-selected);
           .shape-style-variant(button-primary-outline-inverse-selected);
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-primary-outline-selected-text-color);
+
+            }
+
+          }
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-primary-outline-inverse-selected-text-color);
+
+            }
+
+          }
 
         }
 

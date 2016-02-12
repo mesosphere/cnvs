@@ -20,10 +20,36 @@ button-danger-outline/styles.less
     .text-style-variant(button-danger-outline);
     .shape-style-variant(button-danger-outline);
 
+    // Button Dropdown (.button-dropdown)
+
+    &.button-dropdown,
+    &.dropdown-toggle {
+
+      &:after {
+
+        .triangle-color("down", @button-danger-outline-text-color);
+
+      }
+
+    }
+
     &:hover {
 
       .text-style-variant(button-danger-outline-hover);
       .shape-style-variant(button-danger-outline-hover);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-outline-hover-text-color);
+
+        }
+
+      }
 
     }
 
@@ -31,6 +57,19 @@ button-danger-outline/styles.less
 
       .text-style-variant(button-danger-outline-active);
       .shape-style-variant(button-danger-outline-active);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-outline-active-text-color);
+
+        }
+
+      }
 
     }
 
@@ -40,6 +79,19 @@ button-danger-outline/styles.less
       .text-style-variant(button-danger-outline-selected);
       .shape-style-variant(button-danger-outline-selected);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-outline-selected-text-color);
+
+        }
+
+      }
+
     }
 
     &:disabled,
@@ -48,10 +100,23 @@ button-danger-outline/styles.less
       .text-style-variant(button-danger-outline-disabled);
       .shape-style-variant(button-danger-outline-disabled);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-outline-disabled-text-color);
+
+        }
+
+      }
+
     }
 
     /* -----------------------------------------------------------------------------
-    Butto Danger Outline Inverse (.button-inverse)
+    Button Danger Outline Inverse (.button-inverse)
     ----------------------------------------------------------------------------- */
 
     &.button-inverse {
@@ -59,10 +124,36 @@ button-danger-outline/styles.less
       .text-style-variant(button-danger-outline-inverse);
       .shape-style-variant(button-danger-outline-inverse);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-outline-inverse-text-color);
+
+        }
+
+      }
+
       &:hover {
 
         .text-style-variant(button-danger-outline-inverse-hover);
         .shape-style-variant(button-danger-outline-inverse-hover);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-outline-inverse-hover-text-color);
+
+          }
+
+        }
 
       }
 
@@ -70,6 +161,19 @@ button-danger-outline/styles.less
 
         .text-style-variant(button-danger-outline-inverse-active);
         .shape-style-variant(button-danger-outline-inverse-active);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-outline-inverse-active-text-color);
+
+          }
+
+        }
 
       }
 
@@ -79,6 +183,19 @@ button-danger-outline/styles.less
         .text-style-variant(button-danger-outline-inverse-selected);
         .shape-style-variant(button-danger-outline-inverse-selected);
 
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-outline-inverse-selected-text-color);
+
+          }
+
+        }
+
       }
 
       &:disabled,
@@ -86,6 +203,19 @@ button-danger-outline/styles.less
 
         .text-style-variant(button-danger-outline-inverse-disabled);
         .shape-style-variant(button-danger-outline-inverse-disabled);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-outline-inverse-disabled-text-color);
+
+          }
+
+        }
 
       }
 
@@ -101,7 +231,8 @@ button-danger-outline/styles.less
 
     .button-group.open {
 
-      > .button-danger-outline {
+      > .button-danger-outline,
+      > .button-danger.button-stroke {
 
         .text-style-variant(button-danger-outline-selected);
         .shape-style-variant(button-danger-outline-selected);
@@ -110,6 +241,32 @@ button-danger-outline/styles.less
 
           .text-style-variant(button-danger-outline-inverse-selected);
           .shape-style-variant(button-danger-outline-inverse-selected);
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-danger-outline-selected-text-color);
+
+            }
+
+          }
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-danger-outline-inverse-selected-text-color);
+
+            }
+
+          }
 
         }
 

@@ -1,90 +1,221 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-button-danger/styles.less
+button-danger-link/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
 
 
-& when (@button-danger-enabled) {
+& when (@button-danger-link-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Button Danger (.button-danger)
+  Button Danger Link (.button-danger-link)
   ----------------------------------------------------------------------------- */
 
-  .button-danger {
+  .button-danger-link,
+  .button-danger.button-link {
 
-    .text-style-variant(button-danger);
-    .shape-style-variant(button-danger);
+    .text-style-variant(button-danger-link);
+    .shape-style-variant(button-danger-link);
+
+    // Button Dropdown (.button-dropdown)
+
+    &.button-dropdown,
+    &.dropdown-toggle {
+
+      &:after {
+
+        .triangle-color("down", @button-danger-link-text-color);
+
+      }
+
+    }
 
     &:hover {
 
-      .text-style-variant(button-danger-hover);
-      .shape-style-variant(button-danger-hover);
+      .text-style-variant(button-danger-link-hover);
+      .shape-style-variant(button-danger-link-hover);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-hover-text-color);
+
+        }
+
+      }
 
     }
 
     &:active {
 
-      .text-style-variant(button-danger-active);
-      .shape-style-variant(button-danger-active);
+      .text-style-variant(button-danger-link-active);
+      .shape-style-variant(button-danger-link-active);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-active-text-color);
+
+        }
+
+      }
 
     }
 
     &.selected,
     &.active {
 
-      .text-style-variant(button-danger-selected);
-      .shape-style-variant(button-danger-selected);
+      .text-style-variant(button-danger-link-selected);
+      .shape-style-variant(button-danger-link-selected);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-selected-text-color);
+
+        }
+
+      }
 
     }
 
     &:disabled,
     &.disabled {
 
-      .text-style-variant(button-danger-disabled);
-      .shape-style-variant(button-danger-disabled);
+      .text-style-variant(button-danger-link-disabled);
+      .shape-style-variant(button-danger-link-disabled);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-disabled-text-color);
+
+        }
+
+      }
 
     }
 
     /* -----------------------------------------------------------------------------
-    Button Danger Inverse (.button-inverse)
+    Button Danger Link Inverse (.button-inverse)
     ----------------------------------------------------------------------------- */
 
     &.button-inverse {
 
-      .text-style-variant(button-danger-inverse);
-      .shape-style-variant(button-danger-inverse);
+      .text-style-variant(button-danger-link-inverse);
+      .shape-style-variant(button-danger-link-inverse);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-inverse-text-color);
+
+        }
+
+      }
 
       &:hover {
 
-        .text-style-variant(button-danger-inverse-hover);
-        .shape-style-variant(button-danger-inverse-hover);
+        .text-style-variant(button-danger-link-inverse-hover);
+        .shape-style-variant(button-danger-link-inverse-hover);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-link-inverse-hover-text-color);
+
+          }
+
+        }
 
       }
 
       &:active {
 
-        .text-style-variant(button-danger-inverse-active);
-        .shape-style-variant(button-danger-inverse-active);
+        .text-style-variant(button-danger-link-inverse-active);
+        .shape-style-variant(button-danger-link-inverse-active);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-link-inverse-active-text-color);
+
+          }
+
+        }
 
       }
 
       &.selected,
       &.active {
 
-        .text-style-variant(button-danger-inverse-selected);
-        .shape-style-variant(button-danger-inverse-selected);
+        .text-style-variant(button-danger-link-inverse-selected);
+        .shape-style-variant(button-danger-link-inverse-selected);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-link-inverse-selected-text-color);
+
+          }
+
+        }
 
       }
 
       &:disabled,
       &.disabled {
 
-        .text-style-variant(button-danger-inverse-disabled);
-        .shape-style-variant(button-danger-inverse-disabled);
+        .text-style-variant(button-danger-link-inverse-disabled);
+        .shape-style-variant(button-danger-link-inverse-disabled);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-link-inverse-disabled-text-color);
+
+          }
+
+        }
 
       }
 
@@ -95,24 +226,47 @@ button-danger/styles.less
   & when (@button-group-enabled) {
 
     /* -----------------------------------------------------------------------------
-<<<<<<< HEAD
     Button Group (.open)
-=======
-    Button Group (Open)
->>>>>>> 3f91a22716053671f18c555ae207dce48237aa4a
     ----------------------------------------------------------------------------- */
 
     .button-group.open {
 
-      > .button-danger {
+      > .button-danger-link,
+      > .button-danger.button-link {
 
-        .text-style-variant(button-danger-selected);
-        .shape-style-variant(button-danger-selected);
+        .text-style-variant(button-danger-link-selected);
+        .shape-style-variant(button-danger-link-selected);
 
         &.button-inverse {
 
-          .text-style-variant(button-danger-inverse-selected);
-          .shape-style-variant(button-danger-inverse-selected);
+          .text-style-variant(button-danger-link-inverse-selected);
+          .shape-style-variant(button-danger-link-inverse-selected);
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-danger-link-selected-text-color);
+
+            }
+
+          }
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-danger-link-inverse-selected-text-color);
+
+            }
+
+          }
 
         }
 

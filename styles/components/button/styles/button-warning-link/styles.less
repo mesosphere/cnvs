@@ -8,9 +8,6 @@ button-warning-link/styles.less
 
 
 
-
-
-
 & when (@button-warning-link-enabled) {
 
   /* -----------------------------------------------------------------------------
@@ -23,10 +20,36 @@ button-warning-link/styles.less
     .text-style-variant(button-warning-link);
     .shape-style-variant(button-warning-link);
 
+    // Button Dropdown (.button-dropdown)
+
+    &.button-dropdown,
+    &.dropdown-toggle {
+
+      &:after {
+
+        .triangle-color("down", @button-warning-link-text-color);
+
+      }
+
+    }
+
     &:hover {
 
       .text-style-variant(button-warning-link-hover);
       .shape-style-variant(button-warning-link-hover);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-warning-link-hover-text-color);
+
+        }
+
+      }
 
     }
 
@@ -34,6 +57,19 @@ button-warning-link/styles.less
 
       .text-style-variant(button-warning-link-active);
       .shape-style-variant(button-warning-link-active);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-warning-link-active-text-color);
+
+        }
+
+      }
 
     }
 
@@ -43,6 +79,19 @@ button-warning-link/styles.less
       .text-style-variant(button-warning-link-selected);
       .shape-style-variant(button-warning-link-selected);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-warning-link-selected-text-color);
+
+        }
+
+      }
+
     }
 
     &:disabled,
@@ -50,6 +99,19 @@ button-warning-link/styles.less
 
       .text-style-variant(button-warning-link-disabled);
       .shape-style-variant(button-warning-link-disabled);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-warning-link-disabled-text-color);
+
+        }
+
+      }
 
     }
 
@@ -62,10 +124,36 @@ button-warning-link/styles.less
       .text-style-variant(button-warning-link-inverse);
       .shape-style-variant(button-warning-link-inverse);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-warning-link-inverse-text-color);
+
+        }
+
+      }
+
       &:hover {
 
         .text-style-variant(button-warning-link-inverse-hover);
         .shape-style-variant(button-warning-link-inverse-hover);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-warning-link-inverse-hover-text-color);
+
+          }
+
+        }
 
       }
 
@@ -73,6 +161,19 @@ button-warning-link/styles.less
 
         .text-style-variant(button-warning-link-inverse-active);
         .shape-style-variant(button-warning-link-inverse-active);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-warning-link-inverse-active-text-color);
+
+          }
+
+        }
 
       }
 
@@ -82,6 +183,19 @@ button-warning-link/styles.less
         .text-style-variant(button-warning-link-inverse-selected);
         .shape-style-variant(button-warning-link-inverse-selected);
 
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-warning-link-inverse-selected-text-color);
+
+          }
+
+        }
+
       }
 
       &:disabled,
@@ -89,6 +203,19 @@ button-warning-link/styles.less
 
         .text-style-variant(button-warning-link-inverse-disabled);
         .shape-style-variant(button-warning-link-inverse-disabled);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-warning-link-inverse-disabled-text-color);
+
+          }
+
+        }
 
       }
 
@@ -104,7 +231,8 @@ button-warning-link/styles.less
 
     .button-group.open {
 
-      > .button-warning-link {
+      > .button-warning-link,
+      > .button-warning.button-link {
 
         .text-style-variant(button-warning-link-selected);
         .shape-style-variant(button-warning-link-selected);
@@ -113,6 +241,32 @@ button-warning-link/styles.less
 
           .text-style-variant(button-warning-link-inverse-selected);
           .shape-style-variant(button-warning-link-inverse-selected);
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-warning-link-selected-text-color);
+
+            }
+
+          }
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-warning-link-inverse-selected-text-color);
+
+            }
+
+          }
 
         }
 

@@ -20,10 +20,36 @@ button-danger-link/styles.less
     .text-style-variant(button-danger-link);
     .shape-style-variant(button-danger-link);
 
+    // Button Dropdown (.button-dropdown)
+
+    &.button-dropdown,
+    &.dropdown-toggle {
+
+      &:after {
+
+        .triangle-color("down", @button-danger-link-text-color);
+
+      }
+
+    }
+
     &:hover {
 
       .text-style-variant(button-danger-link-hover);
       .shape-style-variant(button-danger-link-hover);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-hover-text-color);
+
+        }
+
+      }
 
     }
 
@@ -31,6 +57,19 @@ button-danger-link/styles.less
 
       .text-style-variant(button-danger-link-active);
       .shape-style-variant(button-danger-link-active);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-active-text-color);
+
+        }
+
+      }
 
     }
 
@@ -40,6 +79,19 @@ button-danger-link/styles.less
       .text-style-variant(button-danger-link-selected);
       .shape-style-variant(button-danger-link-selected);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-selected-text-color);
+
+        }
+
+      }
+
     }
 
     &:disabled,
@@ -47,6 +99,19 @@ button-danger-link/styles.less
 
       .text-style-variant(button-danger-link-disabled);
       .shape-style-variant(button-danger-link-disabled);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-disabled-text-color);
+
+        }
+
+      }
 
     }
 
@@ -59,10 +124,36 @@ button-danger-link/styles.less
       .text-style-variant(button-danger-link-inverse);
       .shape-style-variant(button-danger-link-inverse);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-danger-link-inverse-text-color);
+
+        }
+
+      }
+
       &:hover {
 
         .text-style-variant(button-danger-link-inverse-hover);
         .shape-style-variant(button-danger-link-inverse-hover);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-link-inverse-hover-text-color);
+
+          }
+
+        }
 
       }
 
@@ -70,6 +161,19 @@ button-danger-link/styles.less
 
         .text-style-variant(button-danger-link-inverse-active);
         .shape-style-variant(button-danger-link-inverse-active);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-link-inverse-active-text-color);
+
+          }
+
+        }
 
       }
 
@@ -79,6 +183,19 @@ button-danger-link/styles.less
         .text-style-variant(button-danger-link-inverse-selected);
         .shape-style-variant(button-danger-link-inverse-selected);
 
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-link-inverse-selected-text-color);
+
+          }
+
+        }
+
       }
 
       &:disabled,
@@ -86,6 +203,19 @@ button-danger-link/styles.less
 
         .text-style-variant(button-danger-link-inverse-disabled);
         .shape-style-variant(button-danger-link-inverse-disabled);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-danger-link-inverse-disabled-text-color);
+
+          }
+
+        }
 
       }
 
@@ -101,7 +231,8 @@ button-danger-link/styles.less
 
     .button-group.open {
 
-      > .button-danger-link {
+      > .button-danger-link,
+      > .button-danger.button-link {
 
         .text-style-variant(button-danger-link-selected);
         .shape-style-variant(button-danger-link-selected);
@@ -110,6 +241,32 @@ button-danger-link/styles.less
 
           .text-style-variant(button-danger-link-inverse-selected);
           .shape-style-variant(button-danger-link-inverse-selected);
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-danger-link-selected-text-color);
+
+            }
+
+          }
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-danger-link-inverse-selected-text-color);
+
+            }
+
+          }
 
         }
 

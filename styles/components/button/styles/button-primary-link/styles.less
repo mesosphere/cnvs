@@ -10,7 +10,6 @@ button-primary-link/styles.less
 
 & when (@button-primary-link-enabled) {
 
-
   /* -----------------------------------------------------------------------------
   Button Primary Link (.button-primary-link)
   ----------------------------------------------------------------------------- */
@@ -21,10 +20,36 @@ button-primary-link/styles.less
     .text-style-variant(button-primary-link);
     .shape-style-variant(button-primary-link);
 
+    // Button Dropdown (.button-dropdown)
+
+    &.button-dropdown,
+    &.dropdown-toggle {
+
+      &:after {
+
+        .triangle-color("down", @button-primary-link-text-color);
+
+      }
+
+    }
+
     &:hover {
 
       .text-style-variant(button-primary-link-hover);
       .shape-style-variant(button-primary-link-hover);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-link-hover-text-color);
+
+        }
+
+      }
 
     }
 
@@ -32,6 +57,19 @@ button-primary-link/styles.less
 
       .text-style-variant(button-primary-link-active);
       .shape-style-variant(button-primary-link-active);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-link-active-text-color);
+
+        }
+
+      }
 
     }
 
@@ -41,6 +79,19 @@ button-primary-link/styles.less
       .text-style-variant(button-primary-link-selected);
       .shape-style-variant(button-primary-link-selected);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-link-selected-text-color);
+
+        }
+
+      }
+
     }
 
     &:disabled,
@@ -48,6 +99,19 @@ button-primary-link/styles.less
 
       .text-style-variant(button-primary-link-disabled);
       .shape-style-variant(button-primary-link-disabled);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-link-disabled-text-color);
+
+        }
+
+      }
 
     }
 
@@ -60,10 +124,36 @@ button-primary-link/styles.less
       .text-style-variant(button-primary-link-inverse);
       .shape-style-variant(button-primary-link-inverse);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-primary-link-inverse-text-color);
+
+        }
+
+      }
+
       &:hover {
 
         .text-style-variant(button-primary-link-inverse-hover);
         .shape-style-variant(button-primary-link-inverse-hover);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-primary-link-inverse-hover-text-color);
+
+          }
+
+        }
 
       }
 
@@ -71,6 +161,19 @@ button-primary-link/styles.less
 
         .text-style-variant(button-primary-link-inverse-active);
         .shape-style-variant(button-primary-link-inverse-active);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-primary-link-inverse-active-text-color);
+
+          }
+
+        }
 
       }
 
@@ -80,6 +183,19 @@ button-primary-link/styles.less
         .text-style-variant(button-primary-link-inverse-selected);
         .shape-style-variant(button-primary-link-inverse-selected);
 
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-primary-link-inverse-selected-text-color);
+
+          }
+
+        }
+
       }
 
       &:disabled,
@@ -87,6 +203,19 @@ button-primary-link/styles.less
 
         .text-style-variant(button-primary-link-inverse-disabled);
         .shape-style-variant(button-primary-link-inverse-disabled);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-primary-link-inverse-disabled-text-color);
+
+          }
+
+        }
 
       }
 
@@ -102,7 +231,8 @@ button-primary-link/styles.less
 
     .button-group.open {
 
-      > .button-primary-link {
+      > .button-primary-link,
+      > .button-primary.button-link {
 
         .text-style-variant(button-primary-link-selected);
         .shape-style-variant(button-primary-link-selected);
@@ -111,6 +241,32 @@ button-primary-link/styles.less
 
           .text-style-variant(button-primary-link-inverse-selected);
           .shape-style-variant(button-primary-link-inverse-selected);
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-primary-link-selected-text-color);
+
+            }
+
+          }
+
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-primary-link-inverse-selected-text-color);
+
+            }
+
+          }
 
         }
 

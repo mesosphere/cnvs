@@ -34,6 +34,43 @@ button-jumbo/styles.less
     }
 
     /* -----------------------------------------------------------------------------
+    Button Dropdown (.button-dropdown)
+    ----------------------------------------------------------------------------- */
+
+    &.button-dropdown,
+    &.dropdown-toggle {
+
+      &:after {
+
+        & when not (@button-jumbo-dropdown-caret-width = null) {
+
+          .triangle-size-width("down", @button-jumbo-dropdown-caret-width);
+
+        }
+
+        & when not (@button-jumbo-dropdown-caret-height = null) {
+
+          .triangle-size-height("down", @button-jumbo-dropdown-caret-height);
+
+        }
+
+        & when not (@button-jumbo-dropdown-caret-margin-left = null) {
+
+          margin-left: @button-jumbo-dropdown-caret-margin-left;
+
+        }
+
+        & when not (@button-jumbo-dropdown-caret-margin-top = null) {
+
+          margin-top: @button-jumbo-dropdown-caret-margin-top;
+
+        }
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
     Button Rounded (.button-rounded)
     ----------------------------------------------------------------------------- */
 
@@ -239,6 +276,43 @@ button-jumbo/styles.less
         & when not (@button-jumbo-border-radius = null) and not (@button-jumbo-border-radius-scale-screen-mini = null) {
 
           border-radius: @button-jumbo-border-radius * @button-jumbo-border-radius-scale-screen-mini;
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            & when not (@button-jumbo-dropdown-caret-width = null) and not (@button-jumbo-dropdown-caret-width-scale-screen-mini = null) {
+
+              .triangle-size-width("down", (@button-jumbo-dropdown-caret-width * @button-jumbo-dropdown-caret-width-scale-screen-mini));
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-height = null) and not (@button-jumbo-dropdown-caret-height-scale-screen-mini = null) {
+
+              .triangle-size-height("down", (@button-jumbo-dropdown-caret-height * @button-jumbo-dropdown-caret-height-scale-screen-mini));
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-margin-left = null) and not (@button-jumbo-dropdown-caret-margin-left-scale-screen-mini = null) {
+
+              margin-left: @button-jumbo-dropdown-caret-margin-left * @button-jumbo-dropdown-caret-margin-left-scale-screen-mini;
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-margin-top = null) and not (@button-jumbo-dropdown-caret-margin-top-scale-screen-mini = null) {
+
+              margin-top: @button-jumbo-dropdown-caret-margin-top * @button-jumbo-dropdown-caret-margin-top-scale-screen-mini;
+
+            }
+
+          }
 
         }
 
@@ -453,6 +527,43 @@ button-jumbo/styles.less
 
         }
 
+        /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            & when not (@button-jumbo-dropdown-caret-width = null) and not (@button-jumbo-dropdown-caret-width-scale-screen-small = null) {
+
+              .triangle-size-width("down", (@button-jumbo-dropdown-caret-width * @button-jumbo-dropdown-caret-width-scale-screen-small));
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-height = null) and not (@button-jumbo-dropdown-caret-height-scale-screen-small = null) {
+
+              .triangle-size-height("down", (@button-jumbo-dropdown-caret-height * @button-jumbo-dropdown-caret-height-scale-screen-small));
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-margin-left = null) and not (@button-jumbo-dropdown-caret-margin-left-scale-screen-small = null) {
+
+              margin-left: @button-jumbo-dropdown-caret-margin-left * @button-jumbo-dropdown-caret-margin-left-scale-screen-small;
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-margin-top = null) and not (@button-jumbo-dropdown-caret-margin-top-scale-screen-small = null) {
+
+              margin-top: @button-jumbo-dropdown-caret-margin-top * @button-jumbo-dropdown-caret-margin-top-scale-screen-small;
+
+            }
+
+          }
+
+        }
+
         & when not (@button-jumbo-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
@@ -664,6 +775,43 @@ button-jumbo/styles.less
 
         }
 
+        /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            & when not (@button-jumbo-dropdown-caret-width = null) and not (@button-jumbo-dropdown-caret-width-scale-screen-medium = null) {
+
+              .triangle-size-width("down", (@button-jumbo-dropdown-caret-width * @button-jumbo-dropdown-caret-width-scale-screen-medium));
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-height = null) and not (@button-jumbo-dropdown-caret-height-scale-screen-medium = null) {
+
+              .triangle-size-height("down", (@button-jumbo-dropdown-caret-height * @button-jumbo-dropdown-caret-height-scale-screen-medium));
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-margin-left = null) and not (@button-jumbo-dropdown-caret-margin-left-scale-screen-medium = null) {
+
+              margin-left: @button-jumbo-dropdown-caret-margin-left * @button-jumbo-dropdown-caret-margin-left-scale-screen-medium;
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-margin-top = null) and not (@button-jumbo-dropdown-caret-margin-top-scale-screen-medium = null) {
+
+              margin-top: @button-jumbo-dropdown-caret-margin-top * @button-jumbo-dropdown-caret-margin-top-scale-screen-medium;
+
+            }
+
+          }
+
+        }
+
         & when not (@button-jumbo-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
@@ -872,6 +1020,43 @@ button-jumbo/styles.less
         & when not (@button-jumbo-border-radius = null) and not (@button-jumbo-border-radius-scale-screen-large = null) {
 
           border-radius: @button-jumbo-border-radius * @button-jumbo-border-radius-scale-screen-large;
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            & when not (@button-jumbo-dropdown-caret-width = null) and not (@button-jumbo-dropdown-caret-width-scale-screen-large = null) {
+
+              .triangle-size-width("down", (@button-jumbo-dropdown-caret-width * @button-jumbo-dropdown-caret-width-scale-screen-large));
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-height = null) and not (@button-jumbo-dropdown-caret-height-scale-screen-large = null) {
+
+              .triangle-size-height("down", (@button-jumbo-dropdown-caret-height * @button-jumbo-dropdown-caret-height-scale-screen-large));
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-margin-left = null) and not (@button-jumbo-dropdown-caret-margin-left-scale-screen-large = null) {
+
+              margin-left: @button-jumbo-dropdown-caret-margin-left * @button-jumbo-dropdown-caret-margin-left-scale-screen-large;
+
+            }
+
+            & when not (@button-jumbo-dropdown-caret-margin-top = null) and not (@button-jumbo-dropdown-caret-margin-top-scale-screen-large = null) {
+
+              margin-top: @button-jumbo-dropdown-caret-margin-top * @button-jumbo-dropdown-caret-margin-top-scale-screen-large;
+
+            }
+
+          }
 
         }
 
