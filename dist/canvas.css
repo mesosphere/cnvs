@@ -19344,8 +19344,29 @@ textarea.form-control,
   position: relative;
   padding: 0px !important;
   /* -----------------------------------------------------------------------------
+    Form Control Inverse (.form-control-inverse)
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
     Rounded Form Control (.form-control-rounded)
     ----------------------------------------------------------------------------- */
+}
+.form-control.form-control-select:after {
+  vertical-align: middle;
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  line-height: 0px;
+  border-color: #323a4e transparent transparent transparent;
+  _border-color: #323a4e #000000 #000000 #000000;
+  border-right-width: 4.5px;
+  border-left-width: 4.5px;
+  border-top-width: 5px;
+  border-bottom-width: 0px;
+  margin-left: 0.375rem;
+  margin-top: 2px;
+  margin-right: 1rem;
 }
 .form-control.form-control-select select {
   display: block;
@@ -19366,53 +19387,94 @@ textarea.form-control,
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-rendering: optimizelegibility;
+  padding-right: 0px !important;
   height: 38px;
-  /* -----------------------------------------------------------------------------
-      Form Control Inverse (.form-control-inverse)
-      ----------------------------------------------------------------------------- */
 }
-.form-control.form-control-select select.form-control-select-multiple:after {
+.form-control.form-control-select.form-control-select-multiple:after {
   display: none;
 }
-.form-control.form-control-select select:hover {
+.form-control.form-control-select:hover select {
   color: #282e3e;
 }
-.form-control.form-control-select select:active {
+.form-control.form-control-select:hover:after {
+  border-color: #282e3e transparent transparent transparent;
+  _border-color: #282e3e #000000 #000000 #000000;
+}
+.form-control.form-control-select:active select {
   color: #9351e5;
 }
-.form-control.form-control-select select:focus,
-.form-control.form-control-select select.focus {
+.form-control.form-control-select:active:after {
+  border-color: #9351e5 transparent transparent transparent;
+  _border-color: #9351e5 #000000 #000000 #000000;
+}
+.form-control.form-control-select:focus select,
+.form-control.form-control-select.focus select {
   outline: 0;
   color: #9351e5;
 }
-.form-control.form-control-select select:disabled,
-.form-control.form-control-select select.disabled {
+.form-control.form-control-select:focus:after,
+.form-control.form-control-select.focus:after {
+  border-color: #9351e5 transparent transparent transparent;
+  _border-color: #9351e5 #000000 #000000 #000000;
+}
+.form-control.form-control-select:disabled select,
+.form-control.form-control-select.disabled select {
   color: #323a4e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-rendering: optimizelegibility;
 }
-.form-control.form-control-select select.form-control-inverse {
+.form-control.form-control-select:disabled:after,
+.form-control.form-control-select.disabled:after {
+  border-color: #323a4e transparent transparent transparent;
+  _border-color: #323a4e #000000 #000000 #000000;
+}
+.form-control.form-control-select.form-control-inverse select {
   color: #ffffff;
 }
-.form-control.form-control-select select.form-control-inverse:hover {
+.form-control.form-control-select.form-control-inverse:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control.form-control-select.form-control-inverse:hover select {
   color: #ffffff;
   text-decoration: none;
 }
-.form-control.form-control-select select.form-control-inverse:active {
+.form-control.form-control-select.form-control-inverse:hover:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control.form-control-select.form-control-inverse:active select {
   color: #ffffff;
 }
-.form-control.form-control-select select.form-control-inverse:focus,
-.form-control.form-control-select select.form-control-inverse.focus {
+.form-control.form-control-select.form-control-inverse:active:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control.form-control-select.form-control-inverse:focus select,
+.form-control.form-control-select.form-control-inverse.focus select {
   color: #ffffff;
 }
-.form-control.form-control-select select.form-control-inverse:disabled,
-.form-control.form-control-select select.form-control-inverse.disabled {
+.form-control.form-control-select.form-control-inverse:focus:after,
+.form-control.form-control-select.form-control-inverse.focus:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control.form-control-select.form-control-inverse:disabled select,
+.form-control.form-control-select.form-control-inverse.disabled select {
   color: #ffffff;
+}
+.form-control.form-control-select.form-control-inverse:disabled:after,
+.form-control.form-control-select.form-control-inverse.disabled:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
 }
 .form-control.form-control-select.form-control-rounded select {
   padding-left: 1.2rem;
   padding-right: 1.2rem;
+}
+.form-control.form-control-select.form-control-rounded:after {
+  margin-right: 1.2rem;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
@@ -19494,9 +19556,20 @@ textarea.form-control,
     padding-right: 1.1rem;
     height: 41.8px;
   }
+  .form-control.form-control-select:after {
+    border-right-width: 4.95px;
+    border-left-width: 4.95px;
+    border-top-width: 5.5px;
+    border-bottom-width: 0px;
+    margin-left: 0.4125rem;
+    margin-right: 1.1rem;
+  }
   .form-control.form-control-select.form-control-rounded select {
     padding-left: 1.32rem;
     padding-right: 1.32rem;
+  }
+  .form-control.form-control-select.form-control-rounded:after {
+    margin-right: 1.32rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -19549,9 +19622,20 @@ textarea.form-control,
     padding-right: 1.2rem;
     height: 45.6px;
   }
+  .form-control.form-control-select:after {
+    border-right-width: 5.4px;
+    border-left-width: 5.4px;
+    border-top-width: 6px;
+    border-bottom-width: 0px;
+    margin-left: 0.45rem;
+    margin-right: 1.2rem;
+  }
   .form-control.form-control-select.form-control-rounded select {
     padding-left: 1.44rem;
     padding-right: 1.44rem;
+  }
+  .form-control.form-control-select.form-control-rounded:after {
+    margin-right: 1.44rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -19656,9 +19740,21 @@ form-control-mini/styles.less
   padding-right: 0.5rem;
   height: 24px;
 }
+.form-control-select.form-control-mini:after {
+  border-right-width: 2.84210526px;
+  border-left-width: 2.84210526px;
+  border-top-width: 3.15789474px;
+  border-bottom-width: 0px;
+  margin-left: 0.125rem;
+  margin-top: 2px;
+  margin-right: 0.5rem;
+}
 .form-control-select.form-control-mini.form-control-rounded select {
   padding-left: 0.6rem;
   padding-right: 0.6rem;
+}
+.form-control-select.form-control-mini.form-control-rounded:after {
+  margin-right: 0.6rem;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
@@ -19713,9 +19809,20 @@ form-control-mini/styles.less
     padding-right: 0.55rem;
     height: 26.4px;
   }
+  .form-control-select.form-control-mini:after {
+    border-right-width: 3.12631579px;
+    border-left-width: 3.12631579px;
+    border-top-width: 3.47368421px;
+    border-bottom-width: 0px;
+    margin-left: 0.1375rem;
+    margin-right: 0.55rem;
+  }
   .form-control-select.form-control-mini.form-control-rounded select {
     padding-left: 0.66rem;
     padding-right: 0.66rem;
+  }
+  .form-control-select.form-control-mini.form-control-rounded:after {
+    margin-right: 0.66rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -19750,9 +19857,20 @@ form-control-mini/styles.less
     padding-right: 0.6rem;
     height: 28.8px;
   }
+  .form-control-select.form-control-mini:after {
+    border-right-width: 3.41052632px;
+    border-left-width: 3.41052632px;
+    border-top-width: 3.78947368px;
+    border-bottom-width: 0px;
+    margin-left: 0.15rem;
+    margin-right: 0.6rem;
+  }
   .form-control-select.form-control-mini.form-control-rounded select {
     padding-left: 0.72rem;
     padding-right: 0.72rem;
+  }
+  .form-control-select.form-control-mini.form-control-rounded:after {
+    margin-right: 0.72rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -19848,9 +19966,21 @@ form-control-small/styles.less
   padding-right: 0.75rem;
   height: 32px;
 }
+.form-control-select.form-control-small:after {
+  border-right-width: 3.78947368px;
+  border-left-width: 3.78947368px;
+  border-top-width: 4.21052632px;
+  border-bottom-width: 0px;
+  margin-left: 0.25rem;
+  margin-top: 2px;
+  margin-right: 0.75rem;
+}
 .form-control-select.form-control-small.form-control-rounded select {
   padding-left: 0.9rem;
   padding-right: 0.9rem;
+}
+.form-control-select.form-control-small.form-control-rounded:after {
+  margin-right: 0.9rem;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
@@ -19905,9 +20035,20 @@ form-control-small/styles.less
     padding-right: 0.825rem;
     height: 35.2px;
   }
+  .form-control-select.form-control-small:after {
+    border-right-width: 4.16842105px;
+    border-left-width: 4.16842105px;
+    border-top-width: 4.63157895px;
+    border-bottom-width: 0px;
+    margin-left: 0.275rem;
+    margin-right: 0.825rem;
+  }
   .form-control-select.form-control-small.form-control-rounded select {
     padding-left: 0.99rem;
     padding-right: 0.99rem;
+  }
+  .form-control-select.form-control-small.form-control-rounded:after {
+    margin-right: 0.99rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -19942,9 +20083,20 @@ form-control-small/styles.less
     padding-right: 0.9rem;
     height: 38.4px;
   }
+  .form-control-select.form-control-small:after {
+    border-right-width: 4.54736842px;
+    border-left-width: 4.54736842px;
+    border-top-width: 5.05263158px;
+    border-bottom-width: 0px;
+    margin-left: 0.3rem;
+    margin-right: 0.9rem;
+  }
   .form-control-select.form-control-small.form-control-rounded select {
     padding-left: 1.08rem;
     padding-right: 1.08rem;
+  }
+  .form-control-select.form-control-small.form-control-rounded:after {
+    margin-right: 1.08rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20040,9 +20192,21 @@ form-control-large/styles.less
   padding-right: 1.25rem;
   height: 46px;
 }
+.form-control-select.form-control-large:after {
+  border-right-width: 5.44736842px;
+  border-left-width: 5.44736842px;
+  border-top-width: 6.05263158px;
+  border-bottom-width: 0px;
+  margin-left: 0.5rem;
+  margin-top: 2px;
+  margin-right: 1.25rem;
+}
 .form-control-select.form-control-large.form-control-rounded select {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.form-control-select.form-control-large.form-control-rounded:after {
+  margin-right: 1.5rem;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
@@ -20097,9 +20261,20 @@ form-control-large/styles.less
     padding-right: 1.375rem;
     height: 50.6px;
   }
+  .form-control-select.form-control-large:after {
+    border-right-width: 5.99210526px;
+    border-left-width: 5.99210526px;
+    border-top-width: 6.65789474px;
+    border-bottom-width: 0px;
+    margin-left: 0.55rem;
+    margin-right: 1.375rem;
+  }
   .form-control-select.form-control-large.form-control-rounded select {
     padding-left: 1.65rem;
     padding-right: 1.65rem;
+  }
+  .form-control-select.form-control-large.form-control-rounded:after {
+    margin-right: 1.65rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20134,9 +20309,20 @@ form-control-large/styles.less
     padding-right: 1.5rem;
     height: 55.2px;
   }
+  .form-control-select.form-control-large:after {
+    border-right-width: 6.53684211px;
+    border-left-width: 6.53684211px;
+    border-top-width: 7.26315789px;
+    border-bottom-width: 0px;
+    margin-left: 0.6rem;
+    margin-right: 1.5rem;
+  }
   .form-control-select.form-control-large.form-control-rounded select {
     padding-left: 1.8rem;
     padding-right: 1.8rem;
+  }
+  .form-control-select.form-control-large.form-control-rounded:after {
+    margin-right: 1.8rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20232,9 +20418,21 @@ form-control-jumbo/styles.less
   padding-right: 1.5rem;
   height: 56px;
 }
+.form-control-select.form-control-jumbo:after {
+  border-right-width: 6.63157895px;
+  border-left-width: 6.63157895px;
+  border-top-width: 7.36842105px;
+  border-bottom-width: 0px;
+  margin-left: 0.625rem;
+  margin-top: 2px;
+  margin-right: 1.5rem;
+}
 .form-control-select.form-control-jumbo.form-control-rounded select {
   padding-left: 1.8rem;
   padding-right: 1.8rem;
+}
+.form-control-select.form-control-jumbo.form-control-rounded:after {
+  margin-right: 1.8rem;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
@@ -20289,9 +20487,20 @@ form-control-jumbo/styles.less
     padding-right: 1.65rem;
     height: 61.6px;
   }
+  .form-control-select.form-control-jumbo:after {
+    border-right-width: 7.29473684px;
+    border-left-width: 7.29473684px;
+    border-top-width: 8.10526316px;
+    border-bottom-width: 0px;
+    margin-left: 0.6875rem;
+    margin-right: 1.65rem;
+  }
   .form-control-select.form-control-jumbo.form-control-rounded select {
     padding-left: 1.98rem;
     padding-right: 1.98rem;
+  }
+  .form-control-select.form-control-jumbo.form-control-rounded:after {
+    margin-right: 1.98rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20326,9 +20535,20 @@ form-control-jumbo/styles.less
     padding-right: 1.8rem;
     height: 67.2px;
   }
+  .form-control-select.form-control-jumbo:after {
+    border-right-width: 7.95789474px;
+    border-left-width: 7.95789474px;
+    border-top-width: 8.84210526px;
+    border-bottom-width: 0px;
+    margin-left: 0.75rem;
+    margin-right: 1.8rem;
+  }
   .form-control-select.form-control-jumbo.form-control-rounded select {
     padding-left: 2.16rem;
     padding-right: 2.16rem;
+  }
+  .form-control-select.form-control-jumbo.form-control-rounded:after {
+    margin-right: 2.16rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20505,45 +20725,92 @@ form-control-success/styles.less
 /* -----------------------------------------------------------------------------
   Form Control Select (.form-control-select)
   ----------------------------------------------------------------------------- */
-.form-control-success select,
-.form-group.form-group-success .form-control.form-control-select select {
-  color: #27c97b;
+.form-control-success,
+.form-group.form-group-success .form-control.form-control-select {
   /* -----------------------------------------------------------------------------
     Form Control Select Inverse (.form-control-inverse)
     ----------------------------------------------------------------------------- */
 }
-.form-control-success select:hover,
-.form-group.form-group-success .form-control.form-control-select select:hover {
+.form-control-success select,
+.form-group.form-group-success .form-control.form-control-select select {
   color: #27c97b;
 }
-.form-control-success select:active,
-.form-group.form-group-success .form-control.form-control-select select:active {
+.form-control-success:after,
+.form-group.form-group-success .form-control.form-control-select:after {
+  border-color: #27c97b transparent transparent transparent;
+  _border-color: #27c97b #000000 #000000 #000000;
+}
+.form-control-success:hover select,
+.form-group.form-group-success .form-control.form-control-select:hover select {
   color: #27c97b;
 }
-.form-control-success select:focus,
-.form-group.form-group-success .form-control.form-control-select select:focus,
-.form-control-success select.focus,
-.form-group.form-group-success .form-control.form-control-select select.focus {
+.form-control-success:hover:after,
+.form-group.form-group-success .form-control.form-control-select:hover:after {
+  border-color: #27c97b transparent transparent transparent;
+  _border-color: #27c97b #000000 #000000 #000000;
+}
+.form-control-success:active select,
+.form-group.form-group-success .form-control.form-control-select:active select {
   color: #27c97b;
 }
-.form-control-success select.form-control-inverse,
-.form-group.form-group-success .form-control.form-control-select select.form-control-inverse {
+.form-control-success:active:after,
+.form-group.form-group-success .form-control.form-control-select:active:after {
+  border-color: #27c97b transparent transparent transparent;
+  _border-color: #27c97b #000000 #000000 #000000;
+}
+.form-control-success:focus select,
+.form-group.form-group-success .form-control.form-control-select:focus select,
+.form-control-success.focus select,
+.form-group.form-group-success .form-control.form-control-select.focus select {
+  color: #27c97b;
+}
+.form-control-success:focus:after,
+.form-group.form-group-success .form-control.form-control-select:focus:after,
+.form-control-success.focus:after,
+.form-group.form-group-success .form-control.form-control-select.focus:after {
+  border-color: #27c97b transparent transparent transparent;
+  _border-color: #27c97b #000000 #000000 #000000;
+}
+.form-control-success.form-control-inverse select,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse select {
   color: #ffffff;
 }
-.form-control-success select.form-control-inverse:hover,
-.form-group.form-group-success .form-control.form-control-select select.form-control-inverse:hover {
+.form-control-success.form-control-inverse:after,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control-success.form-control-inverse:hover select,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse:hover select {
   color: #ffffff;
   text-decoration: none;
 }
-.form-control-success select.form-control-inverse:active,
-.form-group.form-group-success .form-control.form-control-select select.form-control-inverse:active {
+.form-control-success.form-control-inverse:hover:after,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse:hover:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control-success.form-control-inverse:active select,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse:active select {
   color: #ffffff;
 }
-.form-control-success select.form-control-inverse:focus,
-.form-group.form-group-success .form-control.form-control-select select.form-control-inverse:focus,
-.form-control-success select.form-control-inverse.focus,
-.form-group.form-group-success .form-control.form-control-select select.form-control-inverse.focus {
+.form-control-success.form-control-inverse:active:after,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse:active:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control-success.form-control-inverse:focus select,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse:focus select,
+.form-control-success.form-control-inverse.focus select,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse.focus select {
   color: #ffffff;
+}
+.form-control-success.form-control-inverse:focus:after,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse:focus:after,
+.form-control-success.form-control-inverse.focus:after,
+.form-group.form-group-success .form-control.form-control-select.form-control-inverse.focus:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
 }
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -20573,14 +20840,14 @@ form-control-error/styles.less
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-  Form Control error (.form-control-error)
+  Form Control Error (.form-control-error)
   ----------------------------------------------------------------------------- */
 .form-control-error,
 .form-group.form-group-error .form-control {
   color: #f33745;
   border-color: #f33745;
   /* -----------------------------------------------------------------------------
-    Form Control error Inverse (.form-control-error-inverse)
+    Form Control Error Inverse (.form-control-error-inverse)
     ----------------------------------------------------------------------------- */
 }
 .form-control-error::-webkit-input-placeholder,
@@ -20698,45 +20965,92 @@ form-control-error/styles.less
 /* -----------------------------------------------------------------------------
   Form Control Select (.form-control-select)
   ----------------------------------------------------------------------------- */
-.form-control-error select,
-.form-group.form-group-error .form-control.form-control-select select {
-  color: #f33745;
+.form-control-error,
+.form-group.form-group-error .form-control.form-control-select {
   /* -----------------------------------------------------------------------------
     Form Control Select Inverse (.form-control-inverse)
     ----------------------------------------------------------------------------- */
 }
-.form-control-error select:hover,
-.form-group.form-group-error .form-control.form-control-select select:hover {
+.form-control-error select,
+.form-group.form-group-error .form-control.form-control-select select {
   color: #f33745;
 }
-.form-control-error select:active,
-.form-group.form-group-error .form-control.form-control-select select:active {
+.form-control-error:after,
+.form-group.form-group-error .form-control.form-control-select:after {
+  border-color: #f33745 transparent transparent transparent;
+  _border-color: #f33745 #000000 #000000 #000000;
+}
+.form-control-error:hover select,
+.form-group.form-group-error .form-control.form-control-select:hover select {
   color: #f33745;
 }
-.form-control-error select:focus,
-.form-group.form-group-error .form-control.form-control-select select:focus,
-.form-control-error select.focus,
-.form-group.form-group-error .form-control.form-control-select select.focus {
+.form-control-error:hover:after,
+.form-group.form-group-error .form-control.form-control-select:hover:after {
+  border-color: #f33745 transparent transparent transparent;
+  _border-color: #f33745 #000000 #000000 #000000;
+}
+.form-control-error:active select,
+.form-group.form-group-error .form-control.form-control-select:active select {
   color: #f33745;
 }
-.form-control-error select.form-control-inverse,
-.form-group.form-group-error .form-control.form-control-select select.form-control-inverse {
+.form-control-error:active:after,
+.form-group.form-group-error .form-control.form-control-select:active:after {
+  border-color: #f33745 transparent transparent transparent;
+  _border-color: #f33745 #000000 #000000 #000000;
+}
+.form-control-error:focus select,
+.form-group.form-group-error .form-control.form-control-select:focus select,
+.form-control-error.focus select,
+.form-group.form-group-error .form-control.form-control-select.focus select {
+  color: #f33745;
+}
+.form-control-error:focus:after,
+.form-group.form-group-error .form-control.form-control-select:focus:after,
+.form-control-error.focus:after,
+.form-group.form-group-error .form-control.form-control-select.focus:after {
+  border-color: #f33745 transparent transparent transparent;
+  _border-color: #f33745 #000000 #000000 #000000;
+}
+.form-control-error.form-control-inverse select,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse select {
   color: #ffffff;
 }
-.form-control-error select.form-control-inverse:hover,
-.form-group.form-group-error .form-control.form-control-select select.form-control-inverse:hover {
+.form-control-error.form-control-inverse:after,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control-error.form-control-inverse:hover select,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse:hover select {
   color: #ffffff;
   text-decoration: none;
 }
-.form-control-error select.form-control-inverse:active,
-.form-group.form-group-error .form-control.form-control-select select.form-control-inverse:active {
+.form-control-error.form-control-inverse:hover:after,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse:hover:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control-error.form-control-inverse:active select,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse:active select {
   color: #ffffff;
 }
-.form-control-error select.form-control-inverse:focus,
-.form-group.form-group-error .form-control.form-control-select select.form-control-inverse:focus,
-.form-control-error select.form-control-inverse.focus,
-.form-group.form-group-error .form-control.form-control-select select.form-control-inverse.focus {
+.form-control-error.form-control-inverse:active:after,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse:active:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
+.form-control-error.form-control-inverse:focus select,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse:focus select,
+.form-control-error.form-control-inverse.focus select,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse.focus select {
   color: #ffffff;
+}
+.form-control-error.form-control-inverse:focus:after,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse:focus:after,
+.form-control-error.form-control-inverse.focus:after,
+.form-group.form-group-error .form-control.form-control-select.form-control-inverse.focus:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
 }
 /* -----------------------------------------------------------------------------
 Form Group

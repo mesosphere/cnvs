@@ -289,6 +289,48 @@ form-control/styles.less
     position: relative;
     padding: 0px !important;
 
+    // Caret
+
+    &:after {
+
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      .triangle-base();
+      .triangle-color("down", @form-control-text-color);
+
+      & when not (@form-control-caret-width = null) {
+
+        .triangle-size-width("down", @form-control-caret-width);
+
+      }
+
+      & when not (@form-control-caret-height = null) {
+
+        .triangle-size-height("down", @form-control-caret-height);
+
+      }
+
+      & when not (@form-control-caret-margin-left = null) {
+
+        margin-left: @form-control-caret-margin-left;
+
+      }
+
+      & when not (@form-control-caret-margin-top = null) {
+
+        margin-top: @form-control-caret-margin-top;
+
+      }
+
+      & when not (@form-control-padding-right = null) {
+
+        margin-right: @form-control-padding-right;
+
+      }
+
+    }
+
     select {
 
       display: block;
@@ -302,6 +344,7 @@ form-control/styles.less
       .text-size-variant(form-control, null);
       .shape-layout-variant(form-control, null);
       .text-style-variant(form-control);
+      padding-right: 0px !important;
 
       & when not (@form-control-height = null) {
 
@@ -309,81 +352,171 @@ form-control/styles.less
 
       }
 
-      &.form-control-select-multiple {
+    }
 
-        &:after {
+    &.form-control-select-multiple {
 
-          display: none;
+      &:after {
 
-        }
+        display: none;
 
       }
 
-      &:hover {
+    }
+
+    &:hover {
+
+      select {
 
         .text-style-variant(form-control-hover);
 
       }
 
-      &:active {
+      &:after {
+
+        .triangle-color("down", @form-control-hover-text-color);
+
+      }
+
+    }
+
+    &:active {
+
+      select {
 
         .text-style-variant(form-control-active);
 
       }
 
-      &:focus,
-      &.focus {
+      &:after {
+
+        .triangle-color("down", @form-control-active-text-color);
+
+      }
+
+    }
+
+    &:focus,
+    &.focus {
+
+      select {
 
         outline: 0;
         .text-style-variant(form-control-focus);
 
       }
 
-      &:disabled,
-      &.disabled {
+      &:after {
+
+        .triangle-color("down", @form-control-focus-text-color);
+
+      }
+
+    }
+
+    &:disabled,
+    &.disabled {
+
+      select {
 
         .text-style-variant(form-control-disabled);
 
       }
 
-      /* -----------------------------------------------------------------------------
-      Form Control Inverse (.form-control-inverse)
-      ----------------------------------------------------------------------------- */
+      &:after {
 
-      &.form-control-inverse {
+        .triangle-color("down", @form-control-disabled-text-color);
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Form Control Inverse (.form-control-inverse)
+    ----------------------------------------------------------------------------- */
+
+    &.form-control-inverse {
+
+      select {
 
         .text-style-variant(form-control-inverse);
 
-        &:hover {
+      }
+
+      &:after {
+
+        .triangle-color("down", @form-control-inverse-text-color);
+
+      }
+
+      &:hover {
+
+        select {
 
           .text-style-variant(form-control-inverse-hover);
 
         }
 
-        &:active {
+        &:after {
+
+          .triangle-color("down", @form-control-inverse-hover-text-color);
+
+        }
+
+      }
+
+      &:active {
+
+        select {
 
           .text-style-variant(form-control-inverse-active);
 
         }
 
-        &:focus,
-        &.focus {
+        &:after {
+
+          .triangle-color("down", @form-control-inverse-active-text-color);
+
+        }
+
+      }
+
+      &:focus,
+      &.focus {
+
+        select {
 
           .text-style-variant(form-control-inverse-focus);
 
         }
 
-        &:disabled,
-        &.disabled {
+        &:after {
+
+          .triangle-color("down", @form-control-inverse-focus-text-color);
+
+        }
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        select {
 
           .text-style-variant(form-control-inverse-disabled);
+
+        }
+
+        &:after {
+
+          .triangle-color("down", @form-control-inverse-disabled-text-color);
 
         }
 
       }
 
     }
-    
+
     /* -----------------------------------------------------------------------------
     Rounded Form Control (.form-control-rounded)
     ----------------------------------------------------------------------------- */
@@ -405,6 +538,18 @@ form-control/styles.less
             padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale;
 
           }
+
+        }
+
+      }
+
+      // Caret
+
+      &:after {
+
+        & when not (@form-control-padding-right = null) {
+
+          margin-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale;
 
         }
 
@@ -521,6 +666,42 @@ form-control/styles.less
 
         }
 
+        // Caret
+
+        &:after {
+
+          & when not (@form-control-caret-width = null) and not (@form-control-caret-width-scale-screen-mini = null) {
+
+            .triangle-size-width("down", (@form-control-caret-width * @form-control-caret-width-scale-screen-mini));
+
+          }
+
+          & when not (@form-control-caret-height = null) and not (@form-control-caret-height-scale-screen-mini = null) {
+
+            .triangle-size-height("down", (@form-control-caret-height * @form-control-caret-height-scale-screen-mini));
+
+          }
+
+          & when not (@form-control-caret-margin-left = null) and not (@form-control-caret-margin-left-scale-screen-mini = null) {
+
+            margin-left: @form-control-caret-margin-left * @form-control-caret-margin-left-scale-screen-mini;
+
+          }
+
+          & when not (@form-control-caret-margin-top = null) and not (@form-control-caret-margin-top-scale-screen-mini = null) {
+
+            margin-top: @form-control-caret-margin-top * @form-control-caret-margin-top-scale-screen-mini;
+
+          }
+
+          & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-mini = null) {
+
+            margin-right: @form-control-padding-right * @form-control-padding-right-scale-screen-mini;
+
+          }
+
+        }
+
         & when not (@form-control-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
@@ -540,6 +721,18 @@ form-control/styles.less
               & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-mini = null) {
 
                 padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-mini;
+
+              }
+
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-mini = null) {
+
+                margin-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-mini;
 
               }
 
@@ -666,6 +859,42 @@ form-control/styles.less
 
         }
 
+        // Caret
+
+        &:after {
+
+          & when not (@form-control-caret-width = null) and not (@form-control-caret-width-scale-screen-small = null) {
+
+            .triangle-size-width("down", (@form-control-caret-width * @form-control-caret-width-scale-screen-small));
+
+          }
+
+          & when not (@form-control-caret-height = null) and not (@form-control-caret-height-scale-screen-small = null) {
+
+            .triangle-size-height("down", (@form-control-caret-height * @form-control-caret-height-scale-screen-small));
+
+          }
+
+          & when not (@form-control-caret-margin-left = null) and not (@form-control-caret-margin-left-scale-screen-small = null) {
+
+            margin-left: @form-control-caret-margin-left * @form-control-caret-margin-left-scale-screen-small;
+
+          }
+
+          & when not (@form-control-caret-margin-top = null) and not (@form-control-caret-margin-top-scale-screen-small = null) {
+
+            margin-top: @form-control-caret-margin-top * @form-control-caret-margin-top-scale-screen-small;
+
+          }
+
+          & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-small = null) {
+
+            margin-right: @form-control-padding-right * @form-control-padding-right-scale-screen-small;
+
+          }
+
+        }
+
         & when not (@form-control-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
@@ -685,6 +914,18 @@ form-control/styles.less
               & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-small = null) {
 
                 padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-small;
+
+              }
+
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-small = null) {
+
+                margin-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-small;
 
               }
 
@@ -807,6 +1048,42 @@ form-control/styles.less
 
         }
 
+        // Caret
+
+        &:after {
+
+          & when not (@form-control-caret-width = null) and not (@form-control-caret-width-scale-screen-medium = null) {
+
+            .triangle-size-width("down", (@form-control-caret-width * @form-control-caret-width-scale-screen-medium));
+
+          }
+
+          & when not (@form-control-caret-height = null) and not (@form-control-caret-height-scale-screen-medium = null) {
+
+            .triangle-size-height("down", (@form-control-caret-height * @form-control-caret-height-scale-screen-medium));
+
+          }
+
+          & when not (@form-control-caret-margin-left = null) and not (@form-control-caret-margin-left-scale-screen-medium = null) {
+
+            margin-left: @form-control-caret-margin-left * @form-control-caret-margin-left-scale-screen-medium;
+
+          }
+
+          & when not (@form-control-caret-margin-top = null) and not (@form-control-caret-margin-top-scale-screen-medium = null) {
+
+            margin-top: @form-control-caret-margin-top * @form-control-caret-margin-top-scale-screen-medium;
+
+          }
+
+          & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-medium = null) {
+
+            margin-right: @form-control-padding-right * @form-control-padding-right-scale-screen-medium;
+
+          }
+
+        }
+
         & when not (@form-control-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
@@ -826,6 +1103,18 @@ form-control/styles.less
               & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-medium = null) {
 
                 padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-medium;
+
+              }
+
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-medium = null) {
+
+                margin-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-medium;
 
               }
 
@@ -948,6 +1237,42 @@ form-control/styles.less
 
         }
 
+        // Caret
+
+        &:after {
+
+          & when not (@form-control-caret-width = null) and not (@form-control-caret-width-scale-screen-large = null) {
+
+            .triangle-size-width("down", (@form-control-caret-width * @form-control-caret-width-scale-screen-large));
+
+          }
+
+          & when not (@form-control-caret-height = null) and not (@form-control-caret-height-scale-screen-large = null) {
+
+            .triangle-size-height("down", (@form-control-caret-height * @form-control-caret-height-scale-screen-large));
+
+          }
+
+          & when not (@form-control-caret-margin-left = null) and not (@form-control-caret-margin-left-scale-screen-large = null) {
+
+            margin-left: @form-control-caret-margin-left * @form-control-caret-margin-left-scale-screen-large;
+
+          }
+
+          & when not (@form-control-caret-margin-top = null) and not (@form-control-caret-margin-top-scale-screen-large = null) {
+
+            margin-top: @form-control-caret-margin-top * @form-control-caret-margin-top-scale-screen-large;
+
+          }
+
+          & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-large = null) {
+
+            margin-right: @form-control-padding-right * @form-control-padding-right-scale-screen-large;
+
+          }
+
+        }
+
         & when not (@form-control-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
@@ -967,6 +1292,18 @@ form-control/styles.less
               & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-large = null) {
 
                 padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-large;
+
+              }
+
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-padding-right = null) and not (@form-control-padding-right-scale-screen-large = null) {
+
+                margin-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale * @form-control-padding-right-scale-screen-large;
 
               }
 
