@@ -364,10 +364,36 @@ button/styles.less
           .text-style-variant(button-selected);
           .shape-style-variant(button-selected);
 
+          // Button Dropdown (.button-dropdown)
+
+          &.button-dropdown,
+          &.dropdown-toggle {
+
+            &:after {
+
+              .triangle-color("down", @button-selected-text-color);
+
+            }
+
+          }
+
           &.button-inverse {
 
             .text-style-variant(button-inverse-selected);
             .shape-style-variant(button-inverse-selected);
+
+            // Button Dropdown (.button-dropdown)
+
+            &.button-dropdown,
+            &.dropdown-toggle {
+
+              &:after {
+
+                .triangle-color("down", @button-inverse-selected-text-color);
+
+              }
+
+            }
 
           }
 
