@@ -14139,6 +14139,9 @@ button,
   border-style: solid;
   border-radius: 5px;
   /* -----------------------------------------------------------------------------
+    Button Dropdown (.button-dropdown)
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
     Button Inverse (.button-inverse)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
@@ -14187,10 +14190,12 @@ button.dropdown-toggle:after,
   line-height: 0px;
   border-color: #323a4e transparent transparent transparent;
   _border-color: #323a4e #000000 #000000 #000000;
-  border-right-width: 5px;
-  border-left-width: 5px;
-  border-top-width: 6px;
+  border-right-width: 4.5px;
+  border-left-width: 4.5px;
+  border-top-width: 5px;
   border-bottom-width: 0px;
+  margin-left: 0.5rem;
+  margin-top: 2px;
 }
 button:hover,
 .button:hover {
@@ -14200,11 +14205,25 @@ button:hover,
   border-color: #d6d8dc;
   cursor: pointer;
 }
+button:hover.button-dropdown:after,
+.button:hover.button-dropdown:after,
+button:hover.dropdown-toggle:after,
+.button:hover.dropdown-toggle:after {
+  border-color: #282e3e transparent transparent transparent;
+  _border-color: #282e3e #000000 #000000 #000000;
+}
 button:active,
 .button:active {
   color: #5b6171;
   background: #b7bac1;
   border-color: #b7bac1;
+}
+button:active.button-dropdown:after,
+.button:active.button-dropdown:after,
+button:active.dropdown-toggle:after,
+.button:active.dropdown-toggle:after {
+  border-color: #5b6171 transparent transparent transparent;
+  _border-color: #5b6171 #000000 #000000 #000000;
 }
 button.selected,
 .button.selected,
@@ -14214,11 +14233,29 @@ button.active,
   background: #c2c4ca;
   border-color: #c2c4ca;
 }
+button.selected.button-dropdown:after,
+.button.selected.button-dropdown:after,
+button.active.button-dropdown:after,
+.button.active.button-dropdown:after,
+button.selected.dropdown-toggle:after,
+.button.selected.dropdown-toggle:after,
+button.active.dropdown-toggle:after,
+.button.active.dropdown-toggle:after {
+  border-color: #5b6171 transparent transparent transparent;
+  _border-color: #5b6171 #000000 #000000 #000000;
+}
 button.button-inverse,
 .button.button-inverse {
   color: #ffffff;
   background: #474e60;
   border-color: #474e60;
+}
+button.button-inverse.button-dropdown:after,
+.button.button-inverse.button-dropdown:after,
+button.button-inverse.dropdown-toggle:after,
+.button.button-inverse.dropdown-toggle:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
 }
 button.button-inverse:hover,
 .button.button-inverse:hover {
@@ -14227,11 +14264,25 @@ button.button-inverse:hover,
   background: #515869;
   border-color: #515869;
 }
+button.button-inverse:hover.button-dropdown:after,
+.button.button-inverse:hover.button-dropdown:after,
+button.button-inverse:hover.dropdown-toggle:after,
+.button.button-inverse:hover.dropdown-toggle:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
 button.button-inverse:active,
 .button.button-inverse:active {
   color: #adb0b8;
   background: #323a4e;
   border-color: #323a4e;
+}
+button.button-inverse:active.button-dropdown:after,
+.button.button-inverse:active.button-dropdown:after,
+button.button-inverse:active.dropdown-toggle:after,
+.button.button-inverse:active.dropdown-toggle:after {
+  border-color: #adb0b8 transparent transparent transparent;
+  _border-color: #adb0b8 #000000 #000000 #000000;
 }
 button.button-inverse.selected,
 .button.button-inverse.selected,
@@ -14240,6 +14291,17 @@ button.button-inverse.active,
   color: #c2c4ca;
   background: #3c4457;
   border-color: #3c4457;
+}
+button.button-inverse.selected.button-dropdown:after,
+.button.button-inverse.selected.button-dropdown:after,
+button.button-inverse.active.button-dropdown:after,
+.button.button-inverse.active.button-dropdown:after,
+button.button-inverse.selected.dropdown-toggle:after,
+.button.button-inverse.selected.dropdown-toggle:after,
+button.button-inverse.active.dropdown-toggle:after,
+.button.button-inverse.active.dropdown-toggle:after {
+  border-color: #c2c4ca transparent transparent transparent;
+  _border-color: #c2c4ca #000000 #000000 #000000;
 }
 button.button-block,
 .button.button-block {
@@ -14340,6 +14402,9 @@ button.button-rounded.button-wide,
   button,
   .button {
     /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Block Button (.button-block)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
@@ -14381,6 +14446,9 @@ button.button-rounded.button-wide,
     padding-right: 1.65rem;
     height: 41.8px;
     /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Block Button (.button-block)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
@@ -14412,6 +14480,16 @@ button.button-rounded.button-wide,
   button.button-wide-right,
   .button.button-wide-right {
     padding-right: 3.3rem;
+  }
+  button.button-dropdown:after,
+  .button.button-dropdown:after,
+  button.dropdown-toggle:after,
+  .button.dropdown-toggle:after {
+    border-right-width: 4.95px;
+    border-left-width: 4.95px;
+    border-top-width: 5.5px;
+    border-bottom-width: 0px;
+    margin-left: 0.55rem;
   }
   button.button-block.button-block-below-screen-small,
   .button.button-block.button-block-below-screen-small {
@@ -14501,6 +14579,9 @@ button.button-rounded.button-wide,
     padding-right: 1.8rem;
     height: 45.6px;
     /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Block Button (.button-block)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
@@ -14532,6 +14613,16 @@ button.button-rounded.button-wide,
   button.button-wide-right,
   .button.button-wide-right {
     padding-right: 3.6rem;
+  }
+  button.button-dropdown:after,
+  .button.button-dropdown:after,
+  button.dropdown-toggle:after,
+  .button.dropdown-toggle:after {
+    border-right-width: 5.4px;
+    border-left-width: 5.4px;
+    border-top-width: 6px;
+    border-bottom-width: 0px;
+    margin-left: 0.6rem;
   }
   button.button-block.button-block-below-screen-medium,
   .button.button-block.button-block-below-screen-medium {
@@ -14617,6 +14708,9 @@ button.button-rounded.button-wide,
       ----------------------------------------------------------------------------- */
   button,
   .button {
+    /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
         Block Button (.button-block)
         ----------------------------------------------------------------------------- */
