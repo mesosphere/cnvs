@@ -35,6 +35,10 @@ button/styles.less
 
     }
 
+    /* -----------------------------------------------------------------------------
+    Button Dropdown (.button-dropdown)
+    ----------------------------------------------------------------------------- */
+
     &.button-dropdown,
     &.dropdown-toggle {
 
@@ -46,15 +50,27 @@ button/styles.less
         .triangle-base();
         .triangle-color("down", @button-text-color);
 
-        & when not (@button-dropdown-caret-width = null) and not (@button-dropdown-caret-width-scale-screen-mini = null) {
+        & when not (@button-dropdown-caret-width = null) {
 
-          .triangle-size-width("down", (@button-dropdown-caret-width * @button-dropdown-caret-width-scale-screen-mini));
+          .triangle-size-width("down", @button-dropdown-caret-width);
 
         }
 
-        & when not (@button-dropdown-caret-height = null) and not (@button-dropdown-caret-height-scale-screen-mini = null) {
+        & when not (@button-dropdown-caret-height = null) {
 
-          .triangle-size-height("down", (@button-dropdown-caret-height * @button-dropdown-caret-height-scale-screen-mini));
+          .triangle-size-height("down", @button-dropdown-caret-height);
+
+        }
+
+        & when not (@button-dropdown-caret-margin-left = null) {
+
+          margin-left: @button-dropdown-caret-margin-left;
+
+        }
+
+        & when not (@button-dropdown-caret-margin-top = null) {
+
+          margin-top: @button-dropdown-caret-margin-top;
 
         }
 
@@ -68,12 +84,38 @@ button/styles.less
       .shape-style-variant(button-hover);
       cursor: pointer;
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-hover-text-color);
+
+        }
+
+      }
+
     }
 
     &:active {
 
       .text-style-variant(button-active);
       .shape-style-variant(button-active);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-active-text-color);
+
+        }
+
+      }
 
     }
 
@@ -83,6 +125,19 @@ button/styles.less
       .text-style-variant(button-selected);
       .shape-style-variant(button-selected);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-selected-text-color);
+
+        }
+
+      }
+
     }
 
     &:disabled,
@@ -90,6 +145,19 @@ button/styles.less
 
       .text-style-variant(button-disabled);
       .shape-style-variant(button-disabled);
+
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-disabled-text-color);
+
+        }
+
+      }
 
     }
 
@@ -102,10 +170,36 @@ button/styles.less
       .text-style-variant(button-inverse);
       .shape-style-variant(button-inverse);
 
+      // Button Dropdown (.button-dropdown)
+
+      &.button-dropdown,
+      &.dropdown-toggle {
+
+        &:after {
+
+          .triangle-color("down", @button-inverse-text-color);
+
+        }
+
+      }
+
       &:hover {
 
         .text-style-variant(button-inverse-hover);
         .shape-style-variant(button-inverse-hover);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-inverse-hover-text-color);
+
+          }
+
+        }
 
       }
 
@@ -113,6 +207,19 @@ button/styles.less
 
         .text-style-variant(button-inverse-active);
         .shape-style-variant(button-inverse-active);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-inverse-active-text-color);
+
+          }
+
+        }
 
       }
 
@@ -122,6 +229,19 @@ button/styles.less
         .text-style-variant(button-inverse-selected);
         .shape-style-variant(button-inverse-selected);
 
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-inverse-selected-text-color);
+
+          }
+
+        }
+
       }
 
       &:disabled,
@@ -129,6 +249,19 @@ button/styles.less
 
         .text-style-variant(button-inverse-disabled);
         .shape-style-variant(button-inverse-disabled);
+
+        // Button Dropdown (.button-dropdown)
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            .triangle-color("down", @button-inverse-disabled-text-color);
+
+          }
+
+        }
 
       }
 
@@ -380,6 +513,43 @@ button/styles.less
         }
 
         /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            & when not (@button-dropdown-caret-width = null) and not (@button-dropdown-caret-width-scale-screen-mini = null) {
+
+              .triangle-size-width("down", (@button-dropdown-caret-width * @button-dropdown-caret-width-scale-screen-mini));
+
+            }
+
+            & when not (@button-dropdown-caret-height = null) and not (@button-dropdown-caret-height-scale-screen-mini = null) {
+
+              .triangle-size-height("down", (@button-dropdown-caret-height * @button-dropdown-caret-height-scale-screen-mini));
+
+            }
+
+            & when not (@button-dropdown-caret-margin-left = null) and not (@button-dropdown-caret-margin-left-scale-screen-mini = null) {
+
+              margin-left: @button-dropdown-caret-margin-left * @button-dropdown-caret-margin-left-scale-screen-mini;
+
+            }
+
+            & when not (@button-dropdown-caret-margin-top = null) and not (@button-dropdown-caret-margin-top-scale-screen-mini = null) {
+
+              margin-top: @button-dropdown-caret-margin-top * @button-dropdown-caret-margin-top-scale-screen-mini;
+
+            }
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
         Block Button (.button-block)
         ----------------------------------------------------------------------------- */
 
@@ -604,6 +774,43 @@ button/styles.less
         & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-small = null) {
 
           border-radius: @button-border-radius * @button-border-radius-scale-screen-small;
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            & when not (@button-dropdown-caret-width = null) and not (@button-dropdown-caret-width-scale-screen-small = null) {
+
+              .triangle-size-width("down", (@button-dropdown-caret-width * @button-dropdown-caret-width-scale-screen-small));
+
+            }
+
+            & when not (@button-dropdown-caret-height = null) and not (@button-dropdown-caret-height-scale-screen-small = null) {
+
+              .triangle-size-height("down", (@button-dropdown-caret-height * @button-dropdown-caret-height-scale-screen-small));
+
+            }
+
+            & when not (@button-dropdown-caret-margin-left = null) and not (@button-dropdown-caret-margin-left-scale-screen-small = null) {
+
+              margin-left: @button-dropdown-caret-margin-left * @button-dropdown-caret-margin-left-scale-screen-small;
+
+            }
+
+            & when not (@button-dropdown-caret-margin-top = null) and not (@button-dropdown-caret-margin-top-scale-screen-small = null) {
+
+              margin-top: @button-dropdown-caret-margin-top * @button-dropdown-caret-margin-top-scale-screen-small;
+
+            }
+
+          }
 
         }
 
@@ -836,6 +1043,43 @@ button/styles.less
         }
 
         /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            & when not (@button-dropdown-caret-width = null) and not (@button-dropdown-caret-width-scale-screen-medium = null) {
+
+              .triangle-size-width("down", (@button-dropdown-caret-width * @button-dropdown-caret-width-scale-screen-medium));
+
+            }
+
+            & when not (@button-dropdown-caret-height = null) and not (@button-dropdown-caret-height-scale-screen-medium = null) {
+
+              .triangle-size-height("down", (@button-dropdown-caret-height * @button-dropdown-caret-height-scale-screen-medium));
+
+            }
+
+            & when not (@button-dropdown-caret-margin-left = null) and not (@button-dropdown-caret-margin-left-scale-screen-medium = null) {
+
+              margin-left: @button-dropdown-caret-margin-left * @button-dropdown-caret-margin-left-scale-screen-medium;
+
+            }
+
+            & when not (@button-dropdown-caret-margin-top = null) and not (@button-dropdown-caret-margin-top-scale-screen-medium = null) {
+
+              margin-top: @button-dropdown-caret-margin-top * @button-dropdown-caret-margin-top-scale-screen-medium;
+
+            }
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
         Block Button (.button-block)
         ----------------------------------------------------------------------------- */
 
@@ -1060,6 +1304,43 @@ button/styles.less
         & when not (@button-border-radius = null) and not (@button-border-radius-scale-screen-large = null) {
 
           border-radius: @button-border-radius * @button-border-radius-scale-screen-large;
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Button Dropdown (.button-dropdown)
+        ----------------------------------------------------------------------------- */
+
+        &.button-dropdown,
+        &.dropdown-toggle {
+
+          &:after {
+
+            & when not (@button-dropdown-caret-width = null) and not (@button-dropdown-caret-width-scale-screen-large = null) {
+
+              .triangle-size-width("down", (@button-dropdown-caret-width * @button-dropdown-caret-width-scale-screen-large));
+
+            }
+
+            & when not (@button-dropdown-caret-height = null) and not (@button-dropdown-caret-height-scale-screen-large = null) {
+
+              .triangle-size-height("down", (@button-dropdown-caret-height * @button-dropdown-caret-height-scale-screen-large));
+
+            }
+
+            & when not (@button-dropdown-caret-margin-left = null) and not (@button-dropdown-caret-margin-left-scale-screen-large = null) {
+
+              margin-left: @button-dropdown-caret-margin-left * @button-dropdown-caret-margin-left-scale-screen-large;
+
+            }
+
+            & when not (@button-dropdown-caret-margin-top = null) and not (@button-dropdown-caret-margin-top-scale-screen-large = null) {
+
+              margin-top: @button-dropdown-caret-margin-top * @button-dropdown-caret-margin-top-scale-screen-large;
+
+            }
+
+          }
 
         }
 
