@@ -1,0 +1,378 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dropdown-menu-list/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@dropdown-menu-list-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Dropdown Menu List (.dropdown-menu-list)
+  ----------------------------------------------------------------------------- */
+
+  .dropdown-menu-list {
+
+    .text-size-variant(dropdown-menu-list, null);
+    .shape-layout-variant(dropdown-menu-list, null);
+    .text-style-variant(dropdown-menu-list);
+    .shape-style-variant(dropdown-menu-list);
+
+    &:last-child {
+
+      margin-bottom: 0px;
+
+    }
+
+    li {
+
+      .text-size-variant(dropdown-menu-list-item, null);
+      .shape-layout-variant(dropdown-menu-list-item, null);
+      .text-style-variant(dropdown-menu-list-item);
+      .shape-style-variant(dropdown-menu-list-item);
+
+      &:before {
+
+        display: none;
+
+      }
+
+      & when not (@dropdown-menu-list-item-border-radius = null) {
+
+        border-radius: @dropdown-menu-list-item-border-radius;
+
+      }
+
+      a {
+
+        display: block;
+        .text-size-variant(dropdown-menu-list-item-link, null);
+        .shape-layout-variant(dropdown-menu-list-item-link, null);
+        .text-style-variant(dropdown-menu-list-item-link);
+        .shape-style-variant(dropdown-menu-list-item-link);
+
+      }
+
+      &:hover {
+
+        a {
+
+          .text-style-variant(dropdown-menu-list-item-link-hover);
+          .shape-style-variant(dropdown-menu-list-item-link-hover);
+
+        }
+
+      }
+
+      &:active,
+      &.active {
+
+        a {
+
+          .text-style-variant(dropdown-menu-list-item-link-active);
+          .shape-style-variant(dropdown-menu-list-item-link-active);
+
+        }
+
+      }
+
+      &.selected {
+
+        a {
+
+          .text-style-variant(dropdown-menu-list-item-link-selected);
+          .shape-style-variant(dropdown-menu-list-item-link-selected);
+
+        }
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        a {
+
+          cursor: default;
+          .text-style-variant(dropdown-menu-list-item-link-disabled);
+          .shape-style-variant(dropdown-menu-list-item-link-disabled);
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Dropdown Menu List Inverse (.dropdown-menu-list-inverse)
+  ----------------------------------------------------------------------------- */
+
+  .dropdown-menu-list-inverse,
+  .dropdown-menu-inverse .dropdown-menu-list {
+
+    .text-style-variant(dropdown-menu-list-inverse);
+    .shape-style-variant(dropdown-menu-list-inverse);
+
+    li {
+
+      .text-style-variant(dropdown-menu-list-item-inverse);
+      .shape-style-variant(dropdown-menu-list-item-inverse);
+
+      a {
+
+        .text-style-variant(dropdown-menu-list-item-link-inverse);
+        .shape-style-variant(dropdown-menu-list-item-link-inverse);
+
+      }
+
+      &:hover {
+
+        a {
+
+          .text-style-variant(dropdown-menu-list-item-link-inverse-hover);
+          .shape-style-variant(dropdown-menu-list-item-link-inverse-hover);
+
+        }
+
+      }
+
+      &:active,
+      &.active {
+
+        a {
+
+          .text-style-variant(dropdown-menu-list-item-link-inverse-active);
+          .shape-style-variant(dropdown-menu-list-item-link-inverse-active);
+
+        }
+
+      }
+
+      &.selected {
+
+        a {
+
+          .text-style-variant(dropdown-menu-list-item-link-inverse-selected);
+          .shape-style-variant(dropdown-menu-list-item-link-inverse-selected);
+
+        }
+
+      }
+
+      &:disabled,
+      &.disabled {
+
+        a {
+
+          .text-style-variant(dropdown-menu-list-item-link-inverse-disabled);
+          .shape-style-variant(dropdown-menu-list-item-link-inverse-disabled);
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-mini-enabled){
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu List (.dropdown-menu-list)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-list {
+
+        .text-size-variant(dropdown-menu-list, scale-screen-mini);
+        .shape-layout-variant(dropdown-menu-list, scale-screen-mini);
+
+        li {
+
+          .text-size-variant(dropdown-menu-list-item, scale-screen-mini);
+          .shape-layout-variant(dropdown-menu-list-item, scale-screen-mini);
+
+          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-mini = null){
+
+            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-mini;
+
+          }
+
+          a {
+
+            .text-size-variant(dropdown-menu-list-item-link, scale-screen-mini);
+            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-mini);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-small-enabled){
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu List (.dropdown-menu-list)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-list {
+
+        .text-size-variant(dropdown-menu-list, scale-screen-small);
+        .shape-layout-variant(dropdown-menu-list, scale-screen-small);
+
+        li {
+
+          .text-size-variant(dropdown-menu-list-item, scale-screen-small);
+          .shape-layout-variant(dropdown-menu-list-item, scale-screen-small);
+
+          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-small = null){
+
+            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-small;
+
+          }
+
+          a {
+
+            .text-size-variant(dropdown-menu-list-item-link, scale-screen-small);
+            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-small);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-medium-enabled){
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu List (.dropdown-menu-list)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-list {
+
+        .text-size-variant(dropdown-menu-list, scale-screen-medium);
+        .shape-layout-variant(dropdown-menu-list, scale-screen-medium);
+
+        li {
+
+          .text-size-variant(dropdown-menu-list-item, scale-screen-medium);
+          .shape-layout-variant(dropdown-menu-list-item, scale-screen-medium);
+
+          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-medium = null){
+
+            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-medium;
+
+          }
+
+          a {
+
+            .text-size-variant(dropdown-menu-list-item-link, scale-screen-medium);
+            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-medium);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-large-enabled){
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu List (.dropdown-menu-list)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-list {
+
+        .text-size-variant(dropdown-menu-list, scale-screen-large);
+        .shape-layout-variant(dropdown-menu-list, scale-screen-large);
+
+        li {
+
+          .text-size-variant(dropdown-menu-list-item, scale-screen-large);
+          .shape-layout-variant(dropdown-menu-list-item, scale-screen-large);
+
+          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-large = null){
+
+            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-large;
+
+          }
+
+          a {
+
+            .text-size-variant(dropdown-menu-list-item-link, scale-screen-large);
+            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-large);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

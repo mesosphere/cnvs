@@ -1,0 +1,184 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dropdown-menu-header/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@dropdown-menu-header-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Dropdown Menu (.dropdown-menu-header)
+  ----------------------------------------------------------------------------- */
+
+  .dropdown-menu-header {
+
+    display: block;
+    .text-size-variant(dropdown-menu-header, null);
+    .shape-layout-variant(dropdown-menu-header, null);
+    .text-style-variant(dropdown-menu-header);
+    .shape-style-variant(dropdown-menu-header);
+
+    & when not (@dropdown-menu-header-border-radius = null) {
+
+      border-radius: @dropdown-menu-header-border-radius;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Dropdown Menu Inverse (.dropdown-menu-header-inverse)
+    ----------------------------------------------------------------------------- */
+
+    &.dropdown-menu-header-inverse {
+
+      .text-style-variant(dropdown-menu-header-inverse);
+      .shape-style-variant(dropdown-menu-header-inverse);
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@dropdown-menu-header-enabled) and (@dropdown-menu-header-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu (.dropdown-menu-header)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-header {
+
+        .text-size-variant(dropdown-menu-header, scale-screen-mini);
+        .shape-layout-variant(dropdown-menu-header, scale-screen-mini);
+
+        & when not (@dropdown-menu-header-border-radius = null) and not (@dropdown-menu-header-border-radius-scale-screen-mini = null) {
+
+          border-radius: @dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@dropdown-menu-header-enabled) and (@dropdown-menu-header-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu (.dropdown-menu-header)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-header {
+
+        .text-size-variant(dropdown-menu-header, scale-screen-small);
+        .shape-layout-variant(dropdown-menu-header, scale-screen-small);
+
+        & when not (@dropdown-menu-header-border-radius = null) and not (@dropdown-menu-header-border-radius-scale-screen-small = null) {
+
+          border-radius: @dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-small;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@dropdown-menu-header-enabled) and (@dropdown-menu-header-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu (.dropdown-menu-header)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-header {
+
+        .text-size-variant(dropdown-menu-header, scale-screen-medium);
+        .shape-layout-variant(dropdown-menu-header, scale-screen-medium);
+
+        & when not (@dropdown-menu-header-border-radius = null) and not (@dropdown-menu-header-border-radius-scale-screen-medium = null) {
+
+          border-radius: @dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-medium;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@dropdown-menu-header-enabled) and (@dropdown-menu-header-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu (.dropdown-menu-header)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-header {
+
+        .text-size-variant(dropdown-menu-header, scale-screen-large);
+        .shape-layout-variant(dropdown-menu-header, scale-screen-large);
+
+        & when not (@dropdown-menu-header-border-radius = null) and not (@dropdown-menu-header-border-radius-scale-screen-large = null) {
+
+          border-radius: @dropdown-menu-header-border-radius * @dropdown-menu-header-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,197 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dropdown-menu-divider/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@dropdown-menu-divider-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Dropdown Menu Divider (.dropdown-menu-divider)
+  ----------------------------------------------------------------------------- */
+
+  .dropdown-menu-divider {
+
+    display: block;
+    .shape-layout-variant(dropdown-menu-divider, null);
+    .shape-style-variant(dropdown-menu-divider);
+
+    & when not (@dropdown-menu-divider-border-radius = null) {
+
+      border-radius: @dropdown-menu-divider-border-radius;
+
+    }
+
+    & when not (@dropdown-menu-divider-height = null) {
+
+      height: @dropdown-menu-divider-height;
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu Divider (.dropdown-menu-divider)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-divider {
+
+        .shape-layout-variant(dropdown-menu-divider, scale-screen-mini);
+
+        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-mini = null) {
+
+          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-mini;
+
+        }
+
+        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-mini = null) {
+
+          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu Divider (.dropdown-menu-divider)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-divider {
+
+        .shape-layout-variant(dropdown-menu-divider, scale-screen-small);
+
+        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-small = null) {
+
+          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-small;
+
+        }
+
+        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-small = null) {
+
+          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-small;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu Divider (.dropdown-menu-divider)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-divider {
+
+        .shape-layout-variant(dropdown-menu-divider, scale-screen-medium);
+
+        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-medium = null) {
+
+          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-medium;
+
+        }
+
+        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-medium = null) {
+
+          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-medium;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu Divider (.dropdown-menu-divider)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-divider {
+
+        .shape-layout-variant(dropdown-menu-divider, scale-screen-large);
+
+        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-large = null) {
+
+          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-large;
+
+        }
+
+        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-large = null) {
+
+          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
