@@ -1,0 +1,225 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+icon/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@icon-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Icon Mini (.icon-mini)
+  ----------------------------------------------------------------------------- */
+
+  .icon-mini {
+
+    .shape-layout-variant(icon-mini, null);
+
+    & when not (@icon-mini-width = null) {
+
+      width: @icon-mini-width;
+
+    }
+
+    & when not (@icon-mini-height = null) {
+
+      height: @icon-mini-height;
+
+    }
+
+    & when not (@icon-mini-border-radius = null) {
+
+      border-radius: @icon-mini-border-radius;
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@icon-mini-enabled) and (@icon-mini-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Mini (.icon-mini)
+      ----------------------------------------------------------------------------- */
+
+      .icon-mini {
+
+        .shape-layout-variant(icon-mini, scale-screen-mini);
+
+        & when not (@icon-mini-width = null) and not (@icon-mini-width-scale-screen-mini = null) {
+
+          width: @icon-mini-width * @icon-mini-width-scale-screen-mini;
+
+        }
+
+        & when not (@icon-mini-height = null) and not (@icon-mini-height-scale-screen-mini = null) {
+
+          height: @icon-mini-height * @icon-mini-height-scale-screen-mini;
+
+        }
+
+        & when not (@icon-mini-border-radius = null) and not (@icon-mini-border-radius-scale-screen-mini = null) {
+
+          border-radius: @icon-mini-border-radius * @icon-mini-border-radius-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@icon-mini-enabled) and (@icon-mini-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Mini (.icon-mini)
+      ----------------------------------------------------------------------------- */
+
+      .icon-mini {
+
+        .shape-layout-variant(icon-mini, scale-screen-small);
+
+        & when not (@icon-mini-width = null) and not (@icon-mini-width-scale-screen-small = null) {
+
+          width: @icon-mini-width * @icon-mini-width-scale-screen-small;
+
+        }
+
+        & when not (@icon-mini-height = null) and not (@icon-mini-height-scale-screen-small = null) {
+
+          height: @icon-mini-height * @icon-mini-height-scale-screen-small;
+
+        }
+
+        & when not (@icon-mini-border-radius = null) and not (@icon-mini-border-radius-scale-screen-small = null) {
+
+          border-radius: @icon-mini-border-radius * @icon-mini-border-radius-scale-screen-small;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@icon-mini-enabled) and (@icon-mini-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Mini (.icon-mini)
+      ----------------------------------------------------------------------------- */
+
+      .icon-mini {
+
+        .shape-layout-variant(icon-mini, scale-screen-medium);
+
+        & when not (@icon-mini-width = null) and not (@icon-mini-width-scale-screen-medium = null) {
+
+          width: @icon-mini-width * @icon-mini-width-scale-screen-medium;
+
+        }
+
+        & when not (@icon-mini-height = null) and not (@icon-mini-height-scale-screen-medium = null) {
+
+          height: @icon-mini-height * @icon-mini-height-scale-screen-medium;
+
+        }
+
+        & when not (@icon-mini-border-radius = null) and not (@icon-mini-border-radius-scale-screen-medium = null) {
+
+          border-radius: @icon-mini-border-radius * @icon-mini-border-radius-scale-screen-medium;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@icon-mini-enabled) and (@icon-mini-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Mini (.icon-mini)
+      ----------------------------------------------------------------------------- */
+
+      .icon-mini {
+
+        .shape-layout-variant(icon-mini, scale-screen-large);
+
+        & when not (@icon-mini-width = null) and not (@icon-mini-width-scale-screen-large = null) {
+
+          width: @icon-mini-width * @icon-mini-width-scale-screen-large;
+
+        }
+
+        & when not (@icon-mini-height = null) and not (@icon-mini-height-scale-screen-large = null) {
+
+          height: @icon-mini-height * @icon-mini-height-scale-screen-large;
+
+        }
+
+        & when not (@icon-mini-border-radius = null) and not (@icon-mini-border-radius-scale-screen-large = null) {
+
+          border-radius: @icon-mini-border-radius * @icon-mini-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

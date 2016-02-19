@@ -1,0 +1,225 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+icon/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@icon-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Icon Large (.icon-large)
+  ----------------------------------------------------------------------------- */
+
+  .icon-large {
+
+    .shape-layout-variant(icon-large, null);
+
+    & when not (@icon-large-width = null) {
+
+      width: @icon-large-width;
+
+    }
+
+    & when not (@icon-large-height = null) {
+
+      height: @icon-large-height;
+
+    }
+
+    & when not (@icon-large-border-radius = null) {
+
+      border-radius: @icon-large-border-radius;
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@icon-large-enabled) and (@icon-large-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Large (.icon-large)
+      ----------------------------------------------------------------------------- */
+
+      .icon-large {
+
+        .shape-layout-variant(icon-large, scale-screen-mini);
+
+        & when not (@icon-large-width = null) and not (@icon-large-width-scale-screen-mini = null) {
+
+          width: @icon-large-width * @icon-large-width-scale-screen-mini;
+
+        }
+
+        & when not (@icon-large-height = null) and not (@icon-large-height-scale-screen-mini = null) {
+
+          height: @icon-large-height * @icon-large-height-scale-screen-mini;
+
+        }
+
+        & when not (@icon-large-border-radius = null) and not (@icon-large-border-radius-scale-screen-mini = null) {
+
+          border-radius: @icon-large-border-radius * @icon-large-border-radius-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@icon-large-enabled) and (@icon-large-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Large (.icon-large)
+      ----------------------------------------------------------------------------- */
+
+      .icon-large {
+
+        .shape-layout-variant(icon-large, scale-screen-small);
+
+        & when not (@icon-large-width = null) and not (@icon-large-width-scale-screen-small = null) {
+
+          width: @icon-large-width * @icon-large-width-scale-screen-small;
+
+        }
+
+        & when not (@icon-large-height = null) and not (@icon-large-height-scale-screen-small = null) {
+
+          height: @icon-large-height * @icon-large-height-scale-screen-small;
+
+        }
+
+        & when not (@icon-large-border-radius = null) and not (@icon-large-border-radius-scale-screen-small = null) {
+
+          border-radius: @icon-large-border-radius * @icon-large-border-radius-scale-screen-small;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@icon-large-enabled) and (@icon-large-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Large (.icon-large)
+      ----------------------------------------------------------------------------- */
+
+      .icon-large {
+
+        .shape-layout-variant(icon-large, scale-screen-medium);
+
+        & when not (@icon-large-width = null) and not (@icon-large-width-scale-screen-medium = null) {
+
+          width: @icon-large-width * @icon-large-width-scale-screen-medium;
+
+        }
+
+        & when not (@icon-large-height = null) and not (@icon-large-height-scale-screen-medium = null) {
+
+          height: @icon-large-height * @icon-large-height-scale-screen-medium;
+
+        }
+
+        & when not (@icon-large-border-radius = null) and not (@icon-large-border-radius-scale-screen-medium = null) {
+
+          border-radius: @icon-large-border-radius * @icon-large-border-radius-scale-screen-medium;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@icon-large-enabled) and (@icon-large-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Large (.icon-large)
+      ----------------------------------------------------------------------------- */
+
+      .icon-large {
+
+        .shape-layout-variant(icon-large, scale-screen-large);
+
+        & when not (@icon-large-width = null) and not (@icon-large-width-scale-screen-large = null) {
+
+          width: @icon-large-width * @icon-large-width-scale-screen-large;
+
+        }
+
+        & when not (@icon-large-height = null) and not (@icon-large-height-scale-screen-large = null) {
+
+          height: @icon-large-height * @icon-large-height-scale-screen-large;
+
+        }
+
+        & when not (@icon-large-border-radius = null) and not (@icon-large-border-radius-scale-screen-large = null) {
+
+          border-radius: @icon-large-border-radius * @icon-large-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

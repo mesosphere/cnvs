@@ -1,0 +1,225 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+icon/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@icon-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Icon Jumbo (.icon-jumbo)
+  ----------------------------------------------------------------------------- */
+
+  .icon-jumbo {
+
+    .shape-layout-variant(icon-jumbo, null);
+
+    & when not (@icon-jumbo-width = null) {
+
+      width: @icon-jumbo-width;
+
+    }
+
+    & when not (@icon-jumbo-height = null) {
+
+      height: @icon-jumbo-height;
+
+    }
+
+    & when not (@icon-jumbo-border-radius = null) {
+
+      border-radius: @icon-jumbo-border-radius;
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@icon-jumbo-enabled) and (@icon-jumbo-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Jumbo (.icon-jumbo)
+      ----------------------------------------------------------------------------- */
+
+      .icon-jumbo {
+
+        .shape-layout-variant(icon-jumbo, scale-screen-mini);
+
+        & when not (@icon-jumbo-width = null) and not (@icon-jumbo-width-scale-screen-mini = null) {
+
+          width: @icon-jumbo-width * @icon-jumbo-width-scale-screen-mini;
+
+        }
+
+        & when not (@icon-jumbo-height = null) and not (@icon-jumbo-height-scale-screen-mini = null) {
+
+          height: @icon-jumbo-height * @icon-jumbo-height-scale-screen-mini;
+
+        }
+
+        & when not (@icon-jumbo-border-radius = null) and not (@icon-jumbo-border-radius-scale-screen-mini = null) {
+
+          border-radius: @icon-jumbo-border-radius * @icon-jumbo-border-radius-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@icon-jumbo-enabled) and (@icon-jumbo-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Jumbo (.icon-jumbo)
+      ----------------------------------------------------------------------------- */
+
+      .icon-jumbo {
+
+        .shape-layout-variant(icon-jumbo, scale-screen-small);
+
+        & when not (@icon-jumbo-width = null) and not (@icon-jumbo-width-scale-screen-small = null) {
+
+          width: @icon-jumbo-width * @icon-jumbo-width-scale-screen-small;
+
+        }
+
+        & when not (@icon-jumbo-height = null) and not (@icon-jumbo-height-scale-screen-small = null) {
+
+          height: @icon-jumbo-height * @icon-jumbo-height-scale-screen-small;
+
+        }
+
+        & when not (@icon-jumbo-border-radius = null) and not (@icon-jumbo-border-radius-scale-screen-small = null) {
+
+          border-radius: @icon-jumbo-border-radius * @icon-jumbo-border-radius-scale-screen-small;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@icon-jumbo-enabled) and (@icon-jumbo-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Jumbo (.icon-jumbo)
+      ----------------------------------------------------------------------------- */
+
+      .icon-jumbo {
+
+        .shape-layout-variant(icon-jumbo, scale-screen-medium);
+
+        & when not (@icon-jumbo-width = null) and not (@icon-jumbo-width-scale-screen-medium = null) {
+
+          width: @icon-jumbo-width * @icon-jumbo-width-scale-screen-medium;
+
+        }
+
+        & when not (@icon-jumbo-height = null) and not (@icon-jumbo-height-scale-screen-medium = null) {
+
+          height: @icon-jumbo-height * @icon-jumbo-height-scale-screen-medium;
+
+        }
+
+        & when not (@icon-jumbo-border-radius = null) and not (@icon-jumbo-border-radius-scale-screen-medium = null) {
+
+          border-radius: @icon-jumbo-border-radius * @icon-jumbo-border-radius-scale-screen-medium;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@icon-jumbo-enabled) and (@icon-jumbo-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Icon Jumbo (.icon-jumbo)
+      ----------------------------------------------------------------------------- */
+
+      .icon-jumbo {
+
+        .shape-layout-variant(icon-jumbo, scale-screen-large);
+
+        & when not (@icon-jumbo-width = null) and not (@icon-jumbo-width-scale-screen-large = null) {
+
+          width: @icon-jumbo-width * @icon-jumbo-width-scale-screen-large;
+
+        }
+
+        & when not (@icon-jumbo-height = null) and not (@icon-jumbo-height-scale-screen-large = null) {
+
+          height: @icon-jumbo-height * @icon-jumbo-height-scale-screen-large;
+
+        }
+
+        & when not (@icon-jumbo-border-radius = null) and not (@icon-jumbo-border-radius-scale-screen-large = null) {
+
+          border-radius: @icon-jumbo-border-radius * @icon-jumbo-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
