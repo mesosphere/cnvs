@@ -31,16 +31,50 @@ table/styles.less
 
     }
 
-  }
+    th,
+    td {
 
-  th,
-  td {
+      text-align: left;
 
-    text-align: left;
+      & when not (@table-border-collapse = null) {
 
-    & when not (@table-border-collapse = null) {
+        border-collapse: @table-border-collapse;
 
-      border-collapse: @table-border-collapse;
+      }
+
+    }
+
+    > thead,
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        > th,
+        > td {
+
+          .text-style-variant(table-cell);
+          .text-size-variant(table-cell, null);
+          .shape-style-variant(table-cell);
+          .shape-layout-variant(table-cell, null);
+
+          &:before {
+
+            content: '';
+            display: block;
+            float: left;
+
+            & when not (@table-cell-text-line-height = null) {
+
+              height: @table-cell-text-line-height;
+
+            }
+
+          }
+
+        }
+
+      }
 
     }
 
@@ -58,6 +92,52 @@ table/styles.less
 
   @media (min-width: @screen-mini) {
 
+    & when (@table-enabled) and (@table-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      table,
+      .table {
+
+        .text-size-variant(table, scale-screen-mini);
+        .shape-layout-variant(table, scale-screen-mini);
+        .shape-layout-variant(table, short, scale-screen-mini);
+        .shape-layout-variant(table, tall, scale-screen-mini);
+
+        > thead,
+        > tbody,
+        > tfoot {
+
+          tr {
+
+            > th,
+            > td {
+
+              .text-size-variant(table-cell, scale-screen-mini);
+              .shape-layout-variant(table-cell, scale-screen-mini);
+
+              &:before {
+
+                & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-mini = null){
+
+                  height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-mini;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -71,6 +151,52 @@ table/styles.less
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @screen-small) {
+
+    & when (@table-enabled) and (@table-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      table,
+      .table {
+
+        .text-size-variant(table, scale-screen-small);
+        .shape-layout-variant(table, scale-screen-small);
+        .shape-layout-variant(table, short, scale-screen-small);
+        .shape-layout-variant(table, tall, scale-screen-small);
+
+        > thead,
+        > tbody,
+        > tfoot {
+
+          tr {
+
+            > th,
+            > td {
+
+              .text-size-variant(table-cell, scale-screen-small);
+              .shape-layout-variant(table-cell, scale-screen-small);
+
+              &:before {
+
+                & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-small = null){
+
+                  height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-small;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
 
   }
 
@@ -86,6 +212,52 @@ table/styles.less
 
   @media (min-width: @screen-medium) {
 
+    & when (@table-enabled) and (@table-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      table,
+      .table {
+
+        .text-size-variant(table, scale-screen-medium);
+        .shape-layout-variant(table, scale-screen-medium);
+        .shape-layout-variant(table, short, scale-screen-medium);
+        .shape-layout-variant(table, tall, scale-screen-medium);
+
+        > thead,
+        > tbody,
+        > tfoot {
+
+          tr {
+
+            > th,
+            > td {
+
+              .text-size-variant(table-cell, scale-screen-medium);
+              .shape-layout-variant(table-cell, scale-screen-medium);
+
+              &:before {
+
+                & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-medium = null){
+
+                  height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-medium;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -99,6 +271,52 @@ table/styles.less
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @screen-large) {
+
+    & when (@table-enabled) and (@table-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      table,
+      .table {
+
+        .text-size-variant(table, scale-screen-large);
+        .shape-layout-variant(table, scale-screen-large);
+        .shape-layout-variant(table, short, scale-screen-large);
+        .shape-layout-variant(table, tall, scale-screen-large);
+
+        > thead,
+        > tbody,
+        > tfoot {
+
+          tr {
+
+            > th,
+            > td {
+
+              .text-size-variant(table-cell, scale-screen-large);
+              .shape-layout-variant(table-cell, scale-screen-large);
+
+              &:before {
+
+                & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-large = null){
+
+                  height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-large;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
 
   }
 

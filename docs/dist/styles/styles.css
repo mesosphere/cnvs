@@ -5546,6 +5546,25 @@ Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 table/styles.less
 --------------------------------------------------------------------------------
@@ -5579,23 +5598,199 @@ table.table-tall-bottom,
 .table.table-tall-bottom {
   margin-bottom: 24px;
 }
-th,
-td {
+table th,
+.table th,
+table td,
+.table td {
   text-align: left;
   border-collapse: collapse;
+}
+table > thead tr > th,
+.table > thead tr > th,
+table > tbody tr > th,
+.table > tbody tr > th,
+table > tfoot tr > th,
+.table > tfoot tr > th,
+table > thead tr > td,
+.table > thead tr > td,
+table > tbody tr > td,
+.table > tbody tr > td,
+table > tfoot tr > td,
+.table > tfoot tr > td {
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  border-width: 1px;
+  border-color: #e0e1e4;
+  border-style: solid;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+table > thead tr > th:before,
+.table > thead tr > th:before,
+table > tbody tr > th:before,
+.table > tbody tr > th:before,
+table > tfoot tr > th:before,
+.table > tfoot tr > th:before,
+table > thead tr > td:before,
+.table > thead tr > td:before,
+table > tbody tr > td:before,
+.table > tbody tr > td:before,
+table > tfoot tr > td:before,
+.table > tfoot tr > td:before {
+  content: '';
+  display: block;
+  float: left;
+  height: 1.1rem;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+  table,
+  .table {
+    margin-bottom: 12px;
+  }
+  table.table-short,
+  .table.table-short {
+    margin-bottom: 6px;
+  }
+  table.table-short-bottom,
+  .table.table-short-bottom {
+    margin-bottom: 6px;
+  }
+  table.table-tall,
+  .table.table-tall {
+    margin-bottom: 24px;
+  }
+  table.table-tall-bottom,
+  .table.table-tall-bottom {
+    margin-bottom: 24px;
+  }
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Small (@screen-small) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+  table,
+  .table {
+    margin-bottom: 16px;
+  }
+  table.table-short,
+  .table.table-short {
+    margin-bottom: 8px;
+  }
+  table.table-short-bottom,
+  .table.table-short-bottom {
+    margin-bottom: 8px;
+  }
+  table.table-tall,
+  .table.table-tall {
+    margin-bottom: 32px;
+  }
+  table.table-tall-bottom,
+  .table.table-tall-bottom {
+    margin-bottom: 32px;
+  }
+  table > thead tr > th,
+  .table > thead tr > th,
+  table > tbody tr > th,
+  .table > tbody tr > th,
+  table > tfoot tr > th,
+  .table > tfoot tr > th,
+  table > thead tr > td,
+  .table > thead tr > td,
+  table > tbody tr > td,
+  .table > tbody tr > td,
+  table > tfoot tr > td,
+  .table > tfoot tr > td {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Medium (@screen-medium) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+  table,
+  .table {
+    margin-bottom: 24px;
+  }
+  table.table-short,
+  .table.table-short {
+    margin-bottom: 12px;
+  }
+  table.table-short-bottom,
+  .table.table-short-bottom {
+    margin-bottom: 12px;
+  }
+  table.table-tall,
+  .table.table-tall {
+    margin-bottom: 48px;
+  }
+  table.table-tall-bottom,
+  .table.table-tall-bottom {
+    margin-bottom: 48px;
+  }
+  table > thead tr > th,
+  .table > thead tr > th,
+  table > tbody tr > th,
+  .table > tbody tr > th,
+  table > tfoot tr > th,
+  .table > tfoot tr > th,
+  table > thead tr > td,
+  .table > thead tr > td,
+  table > tbody tr > td,
+  .table > tbody tr > td,
+  table > tfoot tr > td,
+  .table > tfoot tr > td {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+}
 /* -----------------------------------------------------------------------------
   Screen Size: large (@screen-large) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+  table,
+  .table {
+    margin-bottom: 32px;
+  }
+  table.table-short,
+  .table.table-short {
+    margin-bottom: 16px;
+  }
+  table.table-short-bottom,
+  .table.table-short-bottom {
+    margin-bottom: 16px;
+  }
+  table.table-tall,
+  .table.table-tall {
+    margin-bottom: 64px;
+  }
+  table.table-tall-bottom,
+  .table.table-tall-bottom {
+    margin-bottom: 64px;
+  }
+}
 /* -----------------------------------------------------------------------------
 Button
 ----------------------------------------------------------------------------- */
