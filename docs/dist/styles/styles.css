@@ -5546,15 +5546,40 @@ Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Styling
+Tabel Cell Styling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 Default
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
+Selected
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Text Size
+Tabel Cell Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Header Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Selected
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Header Text Size
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
@@ -5573,7 +5598,6 @@ table/styles.less
 /* -----------------------------------------------------------------------------
   Table
   ----------------------------------------------------------------------------- */
-table,
 .table {
   width: 100%;
   max-width: 100%;
@@ -5582,41 +5606,21 @@ table,
   margin-bottom: 12px;
   border-collapse: collapse;
 }
-table.table-short,
 .table.table-short {
   margin-bottom: 6px;
 }
-table.table-short-bottom,
 .table.table-short-bottom {
   margin-bottom: 6px;
 }
-table.table-tall,
 .table.table-tall {
   margin-bottom: 24px;
 }
-table.table-tall-bottom,
 .table.table-tall-bottom {
   margin-bottom: 24px;
 }
-table th,
 .table th,
-table td,
 .table td {
   text-align: left;
-  border-collapse: collapse;
-}
-table > thead tr > th,
-.table > thead tr > th,
-table > tbody tr > th,
-.table > tbody tr > th,
-table > tfoot tr > th,
-.table > tfoot tr > th,
-table > thead tr > td,
-.table > thead tr > td,
-table > tbody tr > td,
-.table > tbody tr > td,
-table > tfoot tr > td,
-.table > tfoot tr > td {
   text-decoration: none;
   font-size: 1rem;
   line-height: 1.1rem;
@@ -5627,23 +5631,108 @@ table > tfoot tr > td,
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  border-collapse: collapse;
 }
-table > thead tr > th:before,
-.table > thead tr > th:before,
-table > tbody tr > th:before,
-.table > tbody tr > th:before,
-table > tfoot tr > th:before,
-.table > tfoot tr > th:before,
-table > thead tr > td:before,
-.table > thead tr > td:before,
-table > tbody tr > td:before,
-.table > tbody tr > td:before,
-table > tfoot tr > td:before,
-.table > tfoot tr > td:before {
+.table th:before,
+.table td:before {
   content: '';
   display: block;
   float: left;
   height: 1.1rem;
+}
+.table th.selectable:hover,
+.table td.selectable:hover {
+  cursor: pointer;
+  background: #fbfbfb;
+}
+.table th.active,
+.table td.active,
+.table th.highlight,
+.table td.highlight {
+  background: #fbfbfb;
+}
+.table th.selected,
+.table td.selected {
+  background: #f5f5f6;
+}
+.table th.selected.selectable:hover,
+.table td.selected.selectable:hover {
+  background: #efeff1;
+}
+.table th.selected.active,
+.table td.selected.active,
+.table th.selected.highlight,
+.table td.selected.highlight {
+  background: #f5f5f6;
+}
+.table tr.selected th,
+.table tr.selected td {
+  background: #f5f5f6;
+}
+.table tr.selected th.selectable:hover,
+.table tr.selected td.selectable:hover {
+  background: #efeff1;
+}
+.table tr.selected th.active,
+.table tr.selected td.active,
+.table tr.selected th.highlight,
+.table tr.selected td.highlight {
+  background: #f5f5f6;
+}
+.table thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  line-height: 1.17em;
+  background: #f5f5f6;
+}
+.table thead th:before {
+  height: 1.17em;
+}
+.table thead th.selectable:hover {
+  background: #efeff1;
+}
+.table thead th.active,
+.table thead th.highlight {
+  background: #efeff1;
+}
+.table thead th.selected {
+  background: #efeff1;
+}
+.table thead th.selected.selectable:hover {
+  background: #ebebed;
+}
+.table thead th.selected.active,
+.table thead th.selected.highlight {
+  background: #ebebed;
+}
+.table thead tr.selected th {
+  background: #efeff1;
+}
+.table thead tr.selected th.selectable:hover {
+  background: #ebebed;
+}
+.table thead tr.selected th.active,
+.table thead tr.selected th.highlight {
+  background: #ebebed;
+}
+.table.table-hover tr:hover td {
+  background: #fbfbfb;
+}
+.table.table-hover tr:hover td.selected {
+  background: #efeff1;
+}
+.table.table-hover tr:hover.selected td {
+  background: #efeff1;
+}
+/* -----------------------------------------------------------------------------
+  Responsive Table
+  ----------------------------------------------------------------------------- */
+.table-responsive {
+  display: block;
+  width: 100%;
+  min-height: .01%;
+  overflow-x: auto;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
@@ -5652,23 +5741,18 @@ table > tfoot tr > td:before,
   /* -----------------------------------------------------------------------------
       Table
       ----------------------------------------------------------------------------- */
-  table,
   .table {
     margin-bottom: 12px;
   }
-  table.table-short,
   .table.table-short {
     margin-bottom: 6px;
   }
-  table.table-short-bottom,
   .table.table-short-bottom {
     margin-bottom: 6px;
   }
-  table.table-tall,
   .table.table-tall {
     margin-bottom: 24px;
   }
-  table.table-tall-bottom,
   .table.table-tall-bottom {
     margin-bottom: 24px;
   }
@@ -5680,38 +5764,23 @@ table > tfoot tr > td:before,
   /* -----------------------------------------------------------------------------
       Table
       ----------------------------------------------------------------------------- */
-  table,
   .table {
     margin-bottom: 16px;
   }
-  table.table-short,
   .table.table-short {
     margin-bottom: 8px;
   }
-  table.table-short-bottom,
   .table.table-short-bottom {
     margin-bottom: 8px;
   }
-  table.table-tall,
   .table.table-tall {
     margin-bottom: 32px;
   }
-  table.table-tall-bottom,
   .table.table-tall-bottom {
     margin-bottom: 32px;
   }
-  table > thead tr > th,
-  .table > thead tr > th,
-  table > tbody tr > th,
-  .table > tbody tr > th,
-  table > tfoot tr > th,
-  .table > tfoot tr > th,
-  table > thead tr > td,
-  .table > thead tr > td,
-  table > tbody tr > td,
-  .table > tbody tr > td,
-  table > tfoot tr > td,
-  .table > tfoot tr > td {
+  .table th,
+  .table td {
     padding-top: 0.55rem;
     padding-bottom: 0.55rem;
     padding-left: 0.55rem;
@@ -5725,38 +5794,23 @@ table > tfoot tr > td:before,
   /* -----------------------------------------------------------------------------
       Table
       ----------------------------------------------------------------------------- */
-  table,
   .table {
     margin-bottom: 24px;
   }
-  table.table-short,
   .table.table-short {
     margin-bottom: 12px;
   }
-  table.table-short-bottom,
   .table.table-short-bottom {
     margin-bottom: 12px;
   }
-  table.table-tall,
   .table.table-tall {
     margin-bottom: 48px;
   }
-  table.table-tall-bottom,
   .table.table-tall-bottom {
     margin-bottom: 48px;
   }
-  table > thead tr > th,
-  .table > thead tr > th,
-  table > tbody tr > th,
-  .table > tbody tr > th,
-  table > tfoot tr > th,
-  .table > tfoot tr > th,
-  table > thead tr > td,
-  .table > thead tr > td,
-  table > tbody tr > td,
-  .table > tbody tr > td,
-  table > tfoot tr > td,
-  .table > tfoot tr > td {
+  .table th,
+  .table td {
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     padding-left: 0.6rem;
@@ -5770,23 +5824,18 @@ table > tfoot tr > td:before,
   /* -----------------------------------------------------------------------------
       Table
       ----------------------------------------------------------------------------- */
-  table,
   .table {
     margin-bottom: 32px;
   }
-  table.table-short,
   .table.table-short {
     margin-bottom: 16px;
   }
-  table.table-short-bottom,
   .table.table-short-bottom {
     margin-bottom: 16px;
   }
-  table.table-tall,
   .table.table-tall {
     margin-bottom: 64px;
   }
-  table.table-tall-bottom,
   .table.table-tall-bottom {
     margin-bottom: 64px;
   }

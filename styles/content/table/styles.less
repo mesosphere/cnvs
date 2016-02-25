@@ -14,7 +14,6 @@ table/styles.less
   Table
   ----------------------------------------------------------------------------- */
 
-  table,
   .table {
 
     width: 100%;
@@ -31,10 +30,20 @@ table/styles.less
 
     }
 
+    // & when not (@table-border-radius = null) {
+    //
+    //   border-radius: @table-border-radius;
+    //
+    // }
+
     th,
     td {
 
       text-align: left;
+      .text-style-variant(table-cell);
+      .text-size-variant(table-cell, null);
+      .shape-style-variant(table-cell);
+      .shape-layout-variant(table-cell, null);
 
       & when not (@table-border-collapse = null) {
 
@@ -42,31 +51,280 @@ table/styles.less
 
       }
 
+      &:before {
+
+        content: '';
+        display: block;
+        float: left;
+
+        & when not (@table-cell-text-line-height = null) {
+
+          height: @table-cell-text-line-height;
+
+        }
+
+      }
+
+      &.selectable {
+
+        &:hover {
+
+          cursor: pointer;
+          .text-style-variant(table-cell-hover);
+          .shape-style-variant(table-cell-hover);
+
+        }
+
+      }
+
+      &.active,
+      &.highlight {
+
+        .text-style-variant(table-cell-active);
+        .shape-style-variant(table-cell-active);
+
+      }
+
+      &.disabled {
+
+        .text-style-variant(table-cell-disabled);
+        .shape-style-variant(table-cell-disabled);
+
+      }
+
+      // Cell Selected
+
+      &.selected {
+
+        .text-style-variant(table-cell-selected);
+        .shape-style-variant(table-cell-selected);
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-cell-selected-hover);
+            .shape-style-variant(table-cell-selected-hover);
+
+          }
+
+        }
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-cell-selected-active);
+          .shape-style-variant(table-cell-selected-active);
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-cell-selected-disabled);
+          .shape-style-variant(table-cell-selected-disabled);
+
+        }
+
+      }
+
     }
 
-    > thead,
-    > tbody,
-    > tfoot {
+    // Row Selected
+
+    tr.selected {
+
+      th,
+      td {
+
+        .text-style-variant(table-cell-selected);
+        .shape-style-variant(table-cell-selected);
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-cell-selected-hover);
+            .shape-style-variant(table-cell-selected-hover);
+
+          }
+
+        }
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-cell-selected-active);
+          .shape-style-variant(table-cell-selected-active);
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-cell-selected-disabled);
+          .shape-style-variant(table-cell-selected-disabled);
+
+        }
+
+      }
+
+    }
+
+    // Table Head
+
+    thead {
+
+      th {
+
+        .text-style-variant(table-header);
+        .text-size-variant(table-header, null);
+        .shape-style-variant(table-header);
+        .shape-layout-variant(table-header, null);
+
+        &:before {
+
+          & when not (@table-header-text-line-height = null) {
+
+            height: @table-header-text-line-height;
+
+          }
+
+        }
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-header-hover);
+            .shape-style-variant(table-header-hover);
+
+          }
+
+        }
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-header-active);
+          .shape-style-variant(table-header-active);
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-header-disabled);
+          .shape-style-variant(table-header-disabled);
+
+        }
+
+        // Cell Selected
+
+        &.selected {
+
+          .text-style-variant(table-header-selected);
+          .shape-style-variant(table-header-selected);
+
+          &.selectable {
+
+            &:hover {
+
+              .text-style-variant(table-header-selected-hover);
+              .shape-style-variant(table-header-selected-hover);
+
+            }
+
+          }
+
+          &.active,
+          &.highlight {
+
+            .text-style-variant(table-header-selected-active);
+            .shape-style-variant(table-header-selected-active);
+
+          }
+
+          &.disabled {
+
+            .text-style-variant(table-header-selected-disabled);
+            .shape-style-variant(table-header-selected-disabled);
+
+          }
+
+        }
+
+      }
+
+      // Row Selected
+
+      tr.selected {
+
+        th {
+
+          .text-style-variant(table-header-selected);
+          .shape-style-variant(table-header-selected);
+
+          &.selectable {
+
+            &:hover {
+
+              .text-style-variant(table-header-selected-hover);
+              .shape-style-variant(table-header-selected-hover);
+
+            }
+
+          }
+          &.active,
+          &.highlight {
+
+            .text-style-variant(table-header-selected-active);
+            .shape-style-variant(table-header-selected-active);
+
+          }
+
+          &.disabled {
+
+            .text-style-variant(table-header-selected-disabled);
+            .shape-style-variant(table-header-selected-disabled);
+
+          }
+
+        }
+
+      }
+
+    }
+
+    // Table Hover
+
+    &.table-hover {
 
       tr {
 
-        > th,
-        > td {
+        &:hover {
 
-          .text-style-variant(table-cell);
-          .text-size-variant(table-cell, null);
-          .shape-style-variant(table-cell);
-          .shape-layout-variant(table-cell, null);
+          td {
 
-          &:before {
+            .text-style-variant(table-cell-hover);
+            .shape-style-variant(table-cell-hover);
 
-            content: '';
-            display: block;
-            float: left;
+            // Cell Selected
 
-            & when not (@table-cell-text-line-height = null) {
+            &.selected {
 
-              height: @table-cell-text-line-height;
+              .text-style-variant(table-cell-selected-hover);
+              .shape-style-variant(table-cell-selected-hover);
+
+            }
+
+          }
+
+          // Row Selected
+
+          &.selected {
+
+            td {
+
+              .text-style-variant(table-cell-selected-hover);
+              .shape-style-variant(table-cell-selected-hover);
 
             }
 
@@ -77,6 +335,19 @@ table/styles.less
       }
 
     }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Responsive Table
+  ----------------------------------------------------------------------------- */
+
+  .table-responsive {
+
+    display: block;
+    width: 100%;
+    min-height: .01%;
+    overflow-x: auto;
 
   }
 
@@ -98,7 +369,6 @@ table/styles.less
       Table
       ----------------------------------------------------------------------------- */
 
-      table,
       .table {
 
         .text-size-variant(table, scale-screen-mini);
@@ -106,27 +376,17 @@ table/styles.less
         .shape-layout-variant(table, short, scale-screen-mini);
         .shape-layout-variant(table, tall, scale-screen-mini);
 
-        > thead,
-        > tbody,
-        > tfoot {
+        th,
+        td {
 
-          tr {
+          .text-size-variant(table-cell, scale-screen-mini);
+          .shape-layout-variant(table-cell, scale-screen-mini);
 
-            > th,
-            > td {
+          &:before {
 
-              .text-size-variant(table-cell, scale-screen-mini);
-              .shape-layout-variant(table-cell, scale-screen-mini);
+            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-mini = null) {
 
-              &:before {
-
-                & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-mini = null){
-
-                  height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-mini;
-
-                }
-
-              }
+              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-mini;
 
             }
 
@@ -158,7 +418,6 @@ table/styles.less
       Table
       ----------------------------------------------------------------------------- */
 
-      table,
       .table {
 
         .text-size-variant(table, scale-screen-small);
@@ -166,27 +425,17 @@ table/styles.less
         .shape-layout-variant(table, short, scale-screen-small);
         .shape-layout-variant(table, tall, scale-screen-small);
 
-        > thead,
-        > tbody,
-        > tfoot {
+        th,
+        td {
 
-          tr {
+          .text-size-variant(table-cell, scale-screen-small);
+          .shape-layout-variant(table-cell, scale-screen-small);
 
-            > th,
-            > td {
+          &:before {
 
-              .text-size-variant(table-cell, scale-screen-small);
-              .shape-layout-variant(table-cell, scale-screen-small);
+            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-small = null) {
 
-              &:before {
-
-                & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-small = null){
-
-                  height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-small;
-
-                }
-
-              }
+              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-small;
 
             }
 
@@ -218,7 +467,6 @@ table/styles.less
       Table
       ----------------------------------------------------------------------------- */
 
-      table,
       .table {
 
         .text-size-variant(table, scale-screen-medium);
@@ -226,27 +474,17 @@ table/styles.less
         .shape-layout-variant(table, short, scale-screen-medium);
         .shape-layout-variant(table, tall, scale-screen-medium);
 
-        > thead,
-        > tbody,
-        > tfoot {
+        th,
+        td {
 
-          tr {
+          .text-size-variant(table-cell, scale-screen-medium);
+          .shape-layout-variant(table-cell, scale-screen-medium);
 
-            > th,
-            > td {
+          &:before {
 
-              .text-size-variant(table-cell, scale-screen-medium);
-              .shape-layout-variant(table-cell, scale-screen-medium);
+            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-medium = null) {
 
-              &:before {
-
-                & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-medium = null){
-
-                  height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-medium;
-
-                }
-
-              }
+              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-medium;
 
             }
 
@@ -278,7 +516,6 @@ table/styles.less
       Table
       ----------------------------------------------------------------------------- */
 
-      table,
       .table {
 
         .text-size-variant(table, scale-screen-large);
@@ -286,27 +523,17 @@ table/styles.less
         .shape-layout-variant(table, short, scale-screen-large);
         .shape-layout-variant(table, tall, scale-screen-large);
 
-        > thead,
-        > tbody,
-        > tfoot {
+        th,
+        td {
 
-          tr {
+          .text-size-variant(table-cell, scale-screen-large);
+          .shape-layout-variant(table-cell, scale-screen-large);
 
-            > th,
-            > td {
+          &:before {
 
-              .text-size-variant(table-cell, scale-screen-large);
-              .shape-layout-variant(table-cell, scale-screen-large);
+            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-large = null) {
 
-              &:before {
-
-                & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-large = null){
-
-                  height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-large;
-
-                }
-
-              }
+              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-large;
 
             }
 
