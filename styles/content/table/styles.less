@@ -14,7 +14,6 @@ table/styles.less
   Table
   ----------------------------------------------------------------------------- */
 
-  table,
   .table {
 
     width: 100%;
@@ -31,18 +30,324 @@ table/styles.less
 
     }
 
-  }
+    // & when not (@table-border-radius = null) {
+    //
+    //   border-radius: @table-border-radius;
+    //
+    // }
 
-  th,
-  td {
+    th,
+    td {
 
-    text-align: left;
+      text-align: left;
+      .text-style-variant(table-cell);
+      .text-size-variant(table-cell, null);
+      .shape-style-variant(table-cell);
+      .shape-layout-variant(table-cell, null);
 
-    & when not (@table-border-collapse = null) {
+      & when not (@table-border-collapse = null) {
 
-      border-collapse: @table-border-collapse;
+        border-collapse: @table-border-collapse;
+
+      }
+
+      &:before {
+
+        content: '';
+        display: block;
+        float: left;
+
+        & when not (@table-cell-text-line-height = null) {
+
+          height: @table-cell-text-line-height;
+
+        }
+
+      }
+
+      &.selectable {
+
+        &:hover {
+
+          cursor: pointer;
+          .text-style-variant(table-cell-hover);
+          .shape-style-variant(table-cell-hover);
+
+        }
+
+      }
+
+      &.active,
+      &.highlight {
+
+        .text-style-variant(table-cell-active);
+        .shape-style-variant(table-cell-active);
+
+      }
+
+      &.disabled {
+
+        .text-style-variant(table-cell-disabled);
+        .shape-style-variant(table-cell-disabled);
+
+      }
+
+      // Cell Selected
+
+      &.selected {
+
+        .text-style-variant(table-cell-selected);
+        .shape-style-variant(table-cell-selected);
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-cell-selected-hover);
+            .shape-style-variant(table-cell-selected-hover);
+
+          }
+
+        }
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-cell-selected-active);
+          .shape-style-variant(table-cell-selected-active);
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-cell-selected-disabled);
+          .shape-style-variant(table-cell-selected-disabled);
+
+        }
+
+      }
 
     }
+
+    // Row Selected
+
+    tr.selected {
+
+      th,
+      td {
+
+        .text-style-variant(table-cell-selected);
+        .shape-style-variant(table-cell-selected);
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-cell-selected-hover);
+            .shape-style-variant(table-cell-selected-hover);
+
+          }
+
+        }
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-cell-selected-active);
+          .shape-style-variant(table-cell-selected-active);
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-cell-selected-disabled);
+          .shape-style-variant(table-cell-selected-disabled);
+
+        }
+
+      }
+
+    }
+
+    // Table Head
+
+    thead {
+
+      th {
+
+        .text-style-variant(table-header);
+        .text-size-variant(table-header, null);
+        .shape-style-variant(table-header);
+        .shape-layout-variant(table-header, null);
+
+        &:before {
+
+          & when not (@table-header-text-line-height = null) {
+
+            height: @table-header-text-line-height;
+
+          }
+
+        }
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-header-hover);
+            .shape-style-variant(table-header-hover);
+
+          }
+
+        }
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-header-active);
+          .shape-style-variant(table-header-active);
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-header-disabled);
+          .shape-style-variant(table-header-disabled);
+
+        }
+
+        // Cell Selected
+
+        &.selected {
+
+          .text-style-variant(table-header-selected);
+          .shape-style-variant(table-header-selected);
+
+          &.selectable {
+
+            &:hover {
+
+              .text-style-variant(table-header-selected-hover);
+              .shape-style-variant(table-header-selected-hover);
+
+            }
+
+          }
+
+          &.active,
+          &.highlight {
+
+            .text-style-variant(table-header-selected-active);
+            .shape-style-variant(table-header-selected-active);
+
+          }
+
+          &.disabled {
+
+            .text-style-variant(table-header-selected-disabled);
+            .shape-style-variant(table-header-selected-disabled);
+
+          }
+
+        }
+
+      }
+
+      // Row Selected
+
+      tr.selected {
+
+        th {
+
+          .text-style-variant(table-header-selected);
+          .shape-style-variant(table-header-selected);
+
+          &.selectable {
+
+            &:hover {
+
+              .text-style-variant(table-header-selected-hover);
+              .shape-style-variant(table-header-selected-hover);
+
+            }
+
+          }
+          &.active,
+          &.highlight {
+
+            .text-style-variant(table-header-selected-active);
+            .shape-style-variant(table-header-selected-active);
+
+          }
+
+          &.disabled {
+
+            .text-style-variant(table-header-selected-disabled);
+            .shape-style-variant(table-header-selected-disabled);
+
+          }
+
+        }
+
+      }
+
+    }
+
+    // Table Hover
+
+    &.table-hover {
+
+      tr {
+
+        &:hover {
+
+          td {
+
+            .text-style-variant(table-cell-hover);
+            .shape-style-variant(table-cell-hover);
+
+            // Cell Selected
+
+            &.selected {
+
+              .text-style-variant(table-cell-selected-hover);
+              .shape-style-variant(table-cell-selected-hover);
+
+            }
+
+          }
+
+          // Row Selected
+
+          &.selected {
+
+            td {
+
+              .text-style-variant(table-cell-selected-hover);
+              .shape-style-variant(table-cell-selected-hover);
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Responsive Table
+  ----------------------------------------------------------------------------- */
+
+  .table-responsive {
+
+    display: block;
+    width: 100%;
+    min-height: .01%;
+    overflow-x: auto;
 
   }
 
@@ -58,6 +363,41 @@ table/styles.less
 
   @media (min-width: @screen-mini) {
 
+    & when (@table-enabled) and (@table-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table {
+
+        .text-size-variant(table, scale-screen-mini);
+        .shape-layout-variant(table, scale-screen-mini);
+        .shape-layout-variant(table, short, scale-screen-mini);
+        .shape-layout-variant(table, tall, scale-screen-mini);
+
+        th,
+        td {
+
+          .text-size-variant(table-cell, scale-screen-mini);
+          .shape-layout-variant(table-cell, scale-screen-mini);
+
+          &:before {
+
+            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-mini = null) {
+
+              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-mini;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -71,6 +411,41 @@ table/styles.less
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @screen-small) {
+
+    & when (@table-enabled) and (@table-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table {
+
+        .text-size-variant(table, scale-screen-small);
+        .shape-layout-variant(table, scale-screen-small);
+        .shape-layout-variant(table, short, scale-screen-small);
+        .shape-layout-variant(table, tall, scale-screen-small);
+
+        th,
+        td {
+
+          .text-size-variant(table-cell, scale-screen-small);
+          .shape-layout-variant(table-cell, scale-screen-small);
+
+          &:before {
+
+            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-small = null) {
+
+              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-small;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
 
   }
 
@@ -86,6 +461,41 @@ table/styles.less
 
   @media (min-width: @screen-medium) {
 
+    & when (@table-enabled) and (@table-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table {
+
+        .text-size-variant(table, scale-screen-medium);
+        .shape-layout-variant(table, scale-screen-medium);
+        .shape-layout-variant(table, short, scale-screen-medium);
+        .shape-layout-variant(table, tall, scale-screen-medium);
+
+        th,
+        td {
+
+          .text-size-variant(table-cell, scale-screen-medium);
+          .shape-layout-variant(table-cell, scale-screen-medium);
+
+          &:before {
+
+            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-medium = null) {
+
+              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-medium;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -99,6 +509,41 @@ table/styles.less
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @screen-large) {
+
+    & when (@table-enabled) and (@table-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table {
+
+        .text-size-variant(table, scale-screen-large);
+        .shape-layout-variant(table, scale-screen-large);
+        .shape-layout-variant(table, short, scale-screen-large);
+        .shape-layout-variant(table, tall, scale-screen-large);
+
+        th,
+        td {
+
+          .text-size-variant(table-cell, scale-screen-large);
+          .shape-layout-variant(table-cell, scale-screen-large);
+
+          &:before {
+
+            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-large = null) {
+
+              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-large;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
 
   }
 

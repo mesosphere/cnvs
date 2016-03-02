@@ -5535,6 +5535,50 @@ Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Tabel Cell Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Selected
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Cell Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Header Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Selected
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Header Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 table/styles.less
 --------------------------------------------------------------------------------
@@ -5543,7 +5587,6 @@ table/styles.less
 /* -----------------------------------------------------------------------------
   Table
   ----------------------------------------------------------------------------- */
-table,
 .table {
   width: 100%;
   max-width: 100%;
@@ -5552,39 +5595,240 @@ table,
   margin-bottom: 12px;
   border-collapse: collapse;
 }
-table.table-short,
 .table.table-short {
   margin-bottom: 6px;
 }
-table.table-short-bottom,
 .table.table-short-bottom {
   margin-bottom: 6px;
 }
-table.table-tall,
 .table.table-tall {
   margin-bottom: 24px;
 }
-table.table-tall-bottom,
 .table.table-tall-bottom {
   margin-bottom: 24px;
 }
-th,
-td {
+.table th,
+.table td {
   text-align: left;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  border-width: 1px;
+  border-color: #e0e1e4;
+  border-style: solid;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   border-collapse: collapse;
+}
+.table th:before,
+.table td:before {
+  content: '';
+  display: block;
+  float: left;
+  height: 1.1rem;
+}
+.table th.selectable:hover,
+.table td.selectable:hover {
+  cursor: pointer;
+  background: #fbfbfb;
+}
+.table th.active,
+.table td.active,
+.table th.highlight,
+.table td.highlight {
+  background: #fbfbfb;
+}
+.table th.selected,
+.table td.selected {
+  background: #f5f5f6;
+}
+.table th.selected.selectable:hover,
+.table td.selected.selectable:hover {
+  background: #efeff1;
+}
+.table th.selected.active,
+.table td.selected.active,
+.table th.selected.highlight,
+.table td.selected.highlight {
+  background: #f5f5f6;
+}
+.table tr.selected th,
+.table tr.selected td {
+  background: #f5f5f6;
+}
+.table tr.selected th.selectable:hover,
+.table tr.selected td.selectable:hover {
+  background: #efeff1;
+}
+.table tr.selected th.active,
+.table tr.selected td.active,
+.table tr.selected th.highlight,
+.table tr.selected td.highlight {
+  background: #f5f5f6;
+}
+.table thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  line-height: 1.17em;
+  background: #f5f5f6;
+}
+.table thead th:before {
+  height: 1.17em;
+}
+.table thead th.selectable:hover {
+  background: #efeff1;
+}
+.table thead th.active,
+.table thead th.highlight {
+  background: #efeff1;
+}
+.table thead th.selected {
+  background: #efeff1;
+}
+.table thead th.selected.selectable:hover {
+  background: #ebebed;
+}
+.table thead th.selected.active,
+.table thead th.selected.highlight {
+  background: #ebebed;
+}
+.table thead tr.selected th {
+  background: #efeff1;
+}
+.table thead tr.selected th.selectable:hover {
+  background: #ebebed;
+}
+.table thead tr.selected th.active,
+.table thead tr.selected th.highlight {
+  background: #ebebed;
+}
+.table.table-hover tr:hover td {
+  background: #fbfbfb;
+}
+.table.table-hover tr:hover td.selected {
+  background: #efeff1;
+}
+.table.table-hover tr:hover.selected td {
+  background: #efeff1;
+}
+/* -----------------------------------------------------------------------------
+  Responsive Table
+  ----------------------------------------------------------------------------- */
+.table-responsive {
+  display: block;
+  width: 100%;
+  min-height: .01%;
+  overflow-x: auto;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+  .table {
+    margin-bottom: 12px;
+  }
+  .table.table-short {
+    margin-bottom: 6px;
+  }
+  .table.table-short-bottom {
+    margin-bottom: 6px;
+  }
+  .table.table-tall {
+    margin-bottom: 24px;
+  }
+  .table.table-tall-bottom {
+    margin-bottom: 24px;
+  }
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Small (@screen-small) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+  .table {
+    margin-bottom: 16px;
+  }
+  .table.table-short {
+    margin-bottom: 8px;
+  }
+  .table.table-short-bottom {
+    margin-bottom: 8px;
+  }
+  .table.table-tall {
+    margin-bottom: 32px;
+  }
+  .table.table-tall-bottom {
+    margin-bottom: 32px;
+  }
+  .table th,
+  .table td {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Medium (@screen-medium) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+  .table {
+    margin-bottom: 24px;
+  }
+  .table.table-short {
+    margin-bottom: 12px;
+  }
+  .table.table-short-bottom {
+    margin-bottom: 12px;
+  }
+  .table.table-tall {
+    margin-bottom: 48px;
+  }
+  .table.table-tall-bottom {
+    margin-bottom: 48px;
+  }
+  .table th,
+  .table td {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+}
 /* -----------------------------------------------------------------------------
   Screen Size: large (@screen-large) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+  .table {
+    margin-bottom: 32px;
+  }
+  .table.table-short {
+    margin-bottom: 16px;
+  }
+  .table.table-short-bottom {
+    margin-bottom: 16px;
+  }
+  .table.table-tall {
+    margin-bottom: 64px;
+  }
+  .table.table-tall-bottom {
+    margin-bottom: 64px;
+  }
+}
 /* -----------------------------------------------------------------------------
 Button
 ----------------------------------------------------------------------------- */

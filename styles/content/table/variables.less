@@ -90,6 +90,14 @@ Layout
 
 @table-border-collapse:                                                         collapse;
 
+// Border Radius
+
+@table-border-radius:                                                           5px;
+@table-border-radius-scale-screen-mini:                                         null;
+@table-border-radius-scale-screen-small:                                        null;
+@table-border-radius-scale-screen-medium:                                       null;
+@table-border-radius-scale-screen-large:                                        null;
+
 /* -----------------------------------------------------------------------------
 Margin
 ----------------------------------------------------------------------------- */
@@ -189,3 +197,783 @@ Layout Variants
 @table-tall-padding-bottom-scale:                                               2.0;
 @table-tall-padding-left-scale:                                                 null;
 @table-tall-padding-right-scale:                                                null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Cell Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@table-cell-text-color:                                                         null;
+@table-cell-text-font-family:                                                   null;
+@table-cell-text-font-style:                                                    null;
+@table-cell-text-font-weight:                                                   null;
+@table-cell-text-transform:                                                     null;
+@table-cell-text-shadow:                                                        null;
+@table-cell-text-decoration:                                                    none;
+@table-cell-text-rendering:                                                     null;
+@table-cell-background-color:                                                   null;
+@table-cell-background-gradient-color-top:                                      null;
+@table-cell-background-gradient-color-bottom:                                   null;
+@table-cell-border-width:                                                       1px;
+@table-cell-border-color:                                                       color-lighten(@neutral, 85);
+@table-cell-border-style:                                                       solid;
+@table-cell-border-top-width:                                                   null;
+@table-cell-border-top-color:                                                   null;
+@table-cell-border-top-style:                                                   null;
+@table-cell-border-right-width:                                                 null;
+@table-cell-border-right-color:                                                 null;
+@table-cell-border-right-style:                                                 null;
+@table-cell-border-bottom-width:                                                null;
+@table-cell-border-bottom-color:                                                null;
+@table-cell-border-bottom-style:                                                null;
+@table-cell-border-left-width:                                                  null;
+@table-cell-border-left-color:                                                  null;
+@table-cell-border-left-style:                                                  null;
+@table-cell-shadow:                                                             null;
+
+// Hover
+
+@table-cell-hover-text-color:                                                   null;
+@table-cell-hover-text-font-family:                                             null;
+@table-cell-hover-text-font-style:                                              null;
+@table-cell-hover-text-font-weight:                                             null;
+@table-cell-hover-text-transform:                                               null;
+@table-cell-hover-text-shadow:                                                  null;
+@table-cell-hover-text-decoration:                                              null;
+@table-cell-hover-text-rendering:                                               null;
+@table-cell-hover-background-color:                                             color-lighten(@neutral, 98);
+@table-cell-hover-background-gradient-color-top:                                null;
+@table-cell-hover-background-gradient-color-bottom:                             null;
+@table-cell-hover-border-width:                                                 null;
+@table-cell-hover-border-color:                                                 null;
+@table-cell-hover-border-style:                                                 null;
+@table-cell-hover-border-top-width:                                             null;
+@table-cell-hover-border-top-color:                                             null;
+@table-cell-hover-border-top-style:                                             null;
+@table-cell-hover-border-right-width:                                           null;
+@table-cell-hover-border-right-color:                                           null;
+@table-cell-hover-border-right-style:                                           null;
+@table-cell-hover-border-bottom-width:                                          null;
+@table-cell-hover-border-bottom-color:                                          null;
+@table-cell-hover-border-bottom-style:                                          null;
+@table-cell-hover-border-left-width:                                            null;
+@table-cell-hover-border-left-color:                                            null;
+@table-cell-hover-border-left-style:                                            null;
+@table-cell-hover-shadow:                                                       null;
+
+// Active
+
+@table-cell-active-text-color:                                                  null;
+@table-cell-active-text-font-family:                                            null;
+@table-cell-active-text-font-style:                                             null;
+@table-cell-active-text-font-weight:                                            null;
+@table-cell-active-text-transform:                                              null;
+@table-cell-active-text-shadow:                                                 null;
+@table-cell-active-text-decoration:                                             null;
+@table-cell-active-text-rendering:                                              null;
+@table-cell-active-background-color:                                            color-lighten(@neutral, 98);
+@table-cell-active-background-gradient-color-top:                               null;
+@table-cell-active-background-gradient-color-bottom:                            null;
+@table-cell-active-border-width:                                                null;
+@table-cell-active-border-color:                                                null;
+@table-cell-active-border-style:                                                null;
+@table-cell-active-border-top-width:                                            null;
+@table-cell-active-border-top-color:                                            null;
+@table-cell-active-border-top-style:                                            null;
+@table-cell-active-border-right-width:                                          null;
+@table-cell-active-border-right-color:                                          null;
+@table-cell-active-border-right-style:                                          null;
+@table-cell-active-border-bottom-width:                                         null;
+@table-cell-active-border-bottom-color:                                         null;
+@table-cell-active-border-bottom-style:                                         null;
+@table-cell-active-border-left-width:                                           null;
+@table-cell-active-border-left-color:                                           null;
+@table-cell-active-border-left-style:                                           null;
+@table-cell-active-shadow:                                                      null;
+
+// Disabled
+
+@table-cell-disabled-text-color:                                                null;
+@table-cell-disabled-text-font-family:                                          null;
+@table-cell-disabled-text-font-style:                                           null;
+@table-cell-disabled-text-font-weight:                                          null;
+@table-cell-disabled-text-transform:                                            null;
+@table-cell-disabled-text-shadow:                                               null;
+@table-cell-disabled-text-decoration:                                           null;
+@table-cell-disabled-text-rendering:                                            null;
+@table-cell-disabled-background-color:                                          null;
+@table-cell-disabled-background-gradient-color-top:                             null;
+@table-cell-disabled-background-gradient-color-bottom:                          null;
+@table-cell-disabled-border-width:                                              null;
+@table-cell-disabled-border-color:                                              null;
+@table-cell-disabled-border-style:                                              null;
+@table-cell-disabled-border-top-width:                                          null;
+@table-cell-disabled-border-top-color:                                          null;
+@table-cell-disabled-border-top-style:                                          null;
+@table-cell-disabled-border-right-width:                                        null;
+@table-cell-disabled-border-right-color:                                        null;
+@table-cell-disabled-border-right-style:                                        null;
+@table-cell-disabled-border-bottom-width:                                       null;
+@table-cell-disabled-border-bottom-color:                                       null;
+@table-cell-disabled-border-bottom-style:                                       null;
+@table-cell-disabled-border-left-width:                                         null;
+@table-cell-disabled-border-left-color:                                         null;
+@table-cell-disabled-border-left-style:                                         null;
+@table-cell-disabled-shadow:                                                    null;
+
+/* -----------------------------------------------------------------------------
+Selected
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@table-cell-selected-text-color:                                                null;
+@table-cell-selected-text-font-family:                                          null;
+@table-cell-selected-text-font-style:                                           null;
+@table-cell-selected-text-font-weight:                                          null;
+@table-cell-selected-text-transform:                                            null;
+@table-cell-selected-text-shadow:                                               null;
+@table-cell-selected-text-decoration:                                           null;
+@table-cell-selected-text-rendering:                                            null;
+@table-cell-selected-background-color:                                          color-lighten(@neutral, 95);
+@table-cell-selected-background-gradient-color-top:                             null;
+@table-cell-selected-background-gradient-color-bottom:                          null;
+@table-cell-selected-border-width:                                              null;
+@table-cell-selected-border-color:                                              null;
+@table-cell-selected-border-style:                                              null;
+@table-cell-selected-border-top-width:                                          null;
+@table-cell-selected-border-top-color:                                          null;
+@table-cell-selected-border-top-style:                                          null;
+@table-cell-selected-border-right-width:                                        null;
+@table-cell-selected-border-right-color:                                        null;
+@table-cell-selected-border-right-style:                                        null;
+@table-cell-selected-border-bottom-width:                                       null;
+@table-cell-selected-border-bottom-color:                                       null;
+@table-cell-selected-border-bottom-style:                                       null;
+@table-cell-selected-border-left-width:                                         null;
+@table-cell-selected-border-left-color:                                         null;
+@table-cell-selected-border-left-style:                                         null;
+@table-cell-selected-shadow:                                                    null;
+
+// Hover
+
+@table-cell-selected-hover-text-color:                                          null;
+@table-cell-selected-hover-text-font-family:                                    null;
+@table-cell-selected-hover-text-font-style:                                     null;
+@table-cell-selected-hover-text-font-weight:                                    null;
+@table-cell-selected-hover-text-transform:                                      null;
+@table-cell-selected-hover-text-shadow:                                         null;
+@table-cell-selected-hover-text-decoration:                                     null;
+@table-cell-selected-hover-text-rendering:                                      null;
+@table-cell-selected-hover-background-color:                                    color-lighten(@neutral, 92);
+@table-cell-selected-hover-background-gradient-color-top:                       null;
+@table-cell-selected-hover-background-gradient-color-bottom:                    null;
+@table-cell-selected-hover-border-width:                                        null;
+@table-cell-selected-hover-border-color:                                        null;
+@table-cell-selected-hover-border-style:                                        null;
+@table-cell-selected-hover-border-top-width:                                    null;
+@table-cell-selected-hover-border-top-color:                                    null;
+@table-cell-selected-hover-border-top-style:                                    null;
+@table-cell-selected-hover-border-right-width:                                  null;
+@table-cell-selected-hover-border-right-color:                                  null;
+@table-cell-selected-hover-border-right-style:                                  null;
+@table-cell-selected-hover-border-bottom-width:                                 null;
+@table-cell-selected-hover-border-bottom-color:                                 null;
+@table-cell-selected-hover-border-bottom-style:                                 null;
+@table-cell-selected-hover-border-left-width:                                   null;
+@table-cell-selected-hover-border-left-color:                                   null;
+@table-cell-selected-hover-border-left-style:                                   null;
+@table-cell-selected-hover-shadow:                                              null;
+
+// active
+
+@table-cell-selected-active-text-color:                                         null;
+@table-cell-selected-active-text-font-family:                                   null;
+@table-cell-selected-active-text-font-style:                                    null;
+@table-cell-selected-active-text-font-weight:                                   null;
+@table-cell-selected-active-text-transform:                                     null;
+@table-cell-selected-active-text-shadow:                                        null;
+@table-cell-selected-active-text-decoration:                                    null;
+@table-cell-selected-active-text-rendering:                                     null;
+@table-cell-selected-active-background-color:                                   color-lighten(@neutral, 95);
+@table-cell-selected-active-background-gradient-color-top:                      null;
+@table-cell-selected-active-background-gradient-color-bottom:                   null;
+@table-cell-selected-active-border-width:                                       null;
+@table-cell-selected-active-border-color:                                       null;
+@table-cell-selected-active-border-style:                                       null;
+@table-cell-selected-active-border-top-width:                                   null;
+@table-cell-selected-active-border-top-color:                                   null;
+@table-cell-selected-active-border-top-style:                                   null;
+@table-cell-selected-active-border-right-width:                                 null;
+@table-cell-selected-active-border-right-color:                                 null;
+@table-cell-selected-active-border-right-style:                                 null;
+@table-cell-selected-active-border-bottom-width:                                null;
+@table-cell-selected-active-border-bottom-color:                                null;
+@table-cell-selected-active-border-bottom-style:                                null;
+@table-cell-selected-active-border-left-width:                                  null;
+@table-cell-selected-active-border-left-color:                                  null;
+@table-cell-selected-active-border-left-style:                                  null;
+@table-cell-selected-active-shadow:                                             null;
+
+// Disabled
+
+@table-cell-selected-disabled-text-color:                                       null;
+@table-cell-selected-disabled-text-font-family:                                 null;
+@table-cell-selected-disabled-text-font-style:                                  null;
+@table-cell-selected-disabled-text-font-weight:                                 null;
+@table-cell-selected-disabled-text-transform:                                   null;
+@table-cell-selected-disabled-text-shadow:                                      null;
+@table-cell-selected-disabled-text-decoration:                                  null;
+@table-cell-selected-disabled-text-rendering:                                   null;
+@table-cell-selected-disabled-background-color:                                 null;
+@table-cell-selected-disabled-background-gradient-color-top:                    null;
+@table-cell-selected-disabled-background-gradient-color-bottom:                 null;
+@table-cell-selected-disabled-border-width:                                     null;
+@table-cell-selected-disabled-border-color:                                     null;
+@table-cell-selected-disabled-border-style:                                     null;
+@table-cell-selected-disabled-border-top-width:                                 null;
+@table-cell-selected-disabled-border-top-color:                                 null;
+@table-cell-selected-disabled-border-top-style:                                 null;
+@table-cell-selected-disabled-border-right-width:                               null;
+@table-cell-selected-disabled-border-right-color:                               null;
+@table-cell-selected-disabled-border-right-style:                               null;
+@table-cell-selected-disabled-border-bottom-width:                              null;
+@table-cell-selected-disabled-border-bottom-color:                              null;
+@table-cell-selected-disabled-border-bottom-style:                              null;
+@table-cell-selected-disabled-border-left-width:                                null;
+@table-cell-selected-disabled-border-left-color:                                null;
+@table-cell-selected-disabled-border-left-style:                                null;
+@table-cell-selected-disabled-shadow:                                           null;
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Cell Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+// Font Size
+
+@table-cell-text-font-size:                                                     1.0rem;
+@table-cell-text-font-size-scale-screen-mini:                                   null;
+@table-cell-text-font-size-scale-screen-small:                                  null;
+@table-cell-text-font-size-scale-screen-medium:                                 null;
+@table-cell-text-font-size-scale-screen-large:                                  null;
+
+// Line Height
+
+@table-cell-text-line-height:                                                   @table-cell-text-font-size * 1.1;
+@table-cell-text-line-height-scale-screen-mini:                                 @table-cell-text-font-size-scale-screen-mini;
+@table-cell-text-line-height-scale-screen-small:                                @table-cell-text-font-size-scale-screen-small;
+@table-cell-text-line-height-scale-screen-medium:                               @table-cell-text-font-size-scale-screen-medium;
+@table-cell-text-line-height-scale-screen-large:                                @table-cell-text-font-size-scale-screen-large;
+
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@table-cell-margin-top:                                                         null;
+@table-cell-margin-top-scale-screen-mini:                                       null;
+@table-cell-margin-top-scale-screen-small:                                      null;
+@table-cell-margin-top-scale-screen-medium:                                     null;
+@table-cell-margin-top-scale-screen-large:                                      null;
+
+// Margin Bottom
+
+@table-cell-margin-bottom:                                                      null;
+@table-cell-margin-bottom-scale-screen-mini:                                    null;
+@table-cell-margin-bottom-scale-screen-small:                                   null;
+@table-cell-margin-bottom-scale-screen-medium:                                  null;
+@table-cell-margin-bottom-scale-screen-large:                                   null;
+
+// Margin Left
+
+@table-cell-margin-left:                                                        null;
+@table-cell-margin-left-scale-screen-mini:                                      null;
+@table-cell-margin-left-scale-screen-small:                                     null;
+@table-cell-margin-left-scale-screen-medium:                                    null;
+@table-cell-margin-left-scale-screen-large:                                     null;
+
+// Margin Right
+
+@table-cell-margin-right:                                                       null;
+@table-cell-margin-right-scale-screen-mini:                                     null;
+@table-cell-margin-right-scale-screen-small:                                    null;
+@table-cell-margin-right-scale-screen-medium:                                   null;
+@table-cell-margin-right-scale-screen-large:                                    null;
+
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+
+// Padding Top
+
+@table-cell-padding-top:                                                        0.5rem;
+@table-cell-padding-top-scale-screen-mini:                                      null;
+@table-cell-padding-top-scale-screen-small:                                     1.1;
+@table-cell-padding-top-scale-screen-medium:                                    1.2;
+@table-cell-padding-top-scale-screen-large:                                     null;
+
+// Padding Bottom
+
+@table-cell-padding-bottom:                                                     0.5rem;
+@table-cell-padding-bottom-scale-screen-mini:                                   null;
+@table-cell-padding-bottom-scale-screen-small:                                  1.1;
+@table-cell-padding-bottom-scale-screen-medium:                                 1.2;
+@table-cell-padding-bottom-scale-screen-large:                                  null;
+
+// Padding Left
+
+@table-cell-padding-left:                                                       0.5rem;
+@table-cell-padding-left-scale-screen-mini:                                     null;
+@table-cell-padding-left-scale-screen-small:                                    1.1;
+@table-cell-padding-left-scale-screen-medium:                                   1.2;
+@table-cell-padding-left-scale-screen-large:                                    null;
+
+// Padding Right
+
+@table-cell-padding-right:                                                      0.5rem;
+@table-cell-padding-right-scale-screen-mini:                                    null;
+@table-cell-padding-right-scale-screen-small:                                   1.1;
+@table-cell-padding-right-scale-screen-medium:                                  1.2;
+@table-cell-padding-right-scale-screen-large:                                   null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Header Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@table-header-text-color:                                                       null;
+@table-header-text-font-family:                                                 null;
+@table-header-text-font-style:                                                  null;
+@table-header-text-font-weight:                                                 600;
+@table-header-text-transform:                                                   uppercase;
+@table-header-text-shadow:                                                      null;
+@table-header-text-decoration:                                                  null;
+@table-header-text-rendering:                                                   null;
+@table-header-background-color:                                                 color-lighten(@neutral, 95);
+@table-header-background-gradient-color-top:                                    null;
+@table-header-background-gradient-color-bottom:                                 null;
+@table-header-border-width:                                                     null;
+@table-header-border-color:                                                     null;
+@table-header-border-style:                                                     null;
+@table-header-border-top-width:                                                 null;
+@table-header-border-top-color:                                                 null;
+@table-header-border-top-style:                                                 null;
+@table-header-border-right-width:                                               null;
+@table-header-border-right-color:                                               null;
+@table-header-border-right-style:                                               null;
+@table-header-border-bottom-width:                                              null;
+@table-header-border-bottom-color:                                              null;
+@table-header-border-bottom-style:                                              null;
+@table-header-border-left-width:                                                null;
+@table-header-border-left-color:                                                null;
+@table-header-border-left-style:                                                null;
+@table-header-shadow:                                                           null;
+
+// Hover
+
+@table-header-hover-text-color:                                                 null;
+@table-header-hover-text-font-family:                                           null;
+@table-header-hover-text-font-style:                                            null;
+@table-header-hover-text-font-weight:                                           null;
+@table-header-hover-text-transform:                                             null;
+@table-header-hover-text-shadow:                                                null;
+@table-header-hover-text-decoration:                                            null;
+@table-header-hover-text-rendering:                                             null;
+@table-header-hover-background-color:                                           color-lighten(@neutral, 92);
+@table-header-hover-background-gradient-color-top:                              null;
+@table-header-hover-background-gradient-color-bottom:                           null;
+@table-header-hover-border-width:                                               null;
+@table-header-hover-border-color:                                               null;
+@table-header-hover-border-style:                                               null;
+@table-header-hover-border-top-width:                                           null;
+@table-header-hover-border-top-color:                                           null;
+@table-header-hover-border-top-style:                                           null;
+@table-header-hover-border-right-width:                                         null;
+@table-header-hover-border-right-color:                                         null;
+@table-header-hover-border-right-style:                                         null;
+@table-header-hover-border-bottom-width:                                        null;
+@table-header-hover-border-bottom-color:                                        null;
+@table-header-hover-border-bottom-style:                                        null;
+@table-header-hover-border-left-width:                                          null;
+@table-header-hover-border-left-color:                                          null;
+@table-header-hover-border-left-style:                                          null;
+@table-header-hover-shadow:                                                     null;
+
+// Active
+
+@table-header-active-text-color:                                                null;
+@table-header-active-text-font-family:                                          null;
+@table-header-active-text-font-style:                                           null;
+@table-header-active-text-font-weight:                                          null;
+@table-header-active-text-transform:                                            null;
+@table-header-active-text-shadow:                                               null;
+@table-header-active-text-decoration:                                           null;
+@table-header-active-text-rendering:                                            null;
+@table-header-active-background-color:                                          color-lighten(@neutral, 92);
+@table-header-active-background-gradient-color-top:                             null;
+@table-header-active-background-gradient-color-bottom:                          null;
+@table-header-active-border-width:                                              null;
+@table-header-active-border-color:                                              null;
+@table-header-active-border-style:                                              null;
+@table-header-active-border-top-width:                                          null;
+@table-header-active-border-top-color:                                          null;
+@table-header-active-border-top-style:                                          null;
+@table-header-active-border-right-width:                                        null;
+@table-header-active-border-right-color:                                        null;
+@table-header-active-border-right-style:                                        null;
+@table-header-active-border-bottom-width:                                       null;
+@table-header-active-border-bottom-color:                                       null;
+@table-header-active-border-bottom-style:                                       null;
+@table-header-active-border-left-width:                                         null;
+@table-header-active-border-left-color:                                         null;
+@table-header-active-border-left-style:                                         null;
+@table-header-active-shadow:                                                    null;
+
+// Disabled
+
+@table-header-disabled-text-color:                                              null;
+@table-header-disabled-text-font-family:                                        null;
+@table-header-disabled-text-font-style:                                         null;
+@table-header-disabled-text-font-weight:                                        null;
+@table-header-disabled-text-transform:                                          null;
+@table-header-disabled-text-shadow:                                             null;
+@table-header-disabled-text-decoration:                                         null;
+@table-header-disabled-text-rendering:                                          null;
+@table-header-disabled-background-color:                                        null;
+@table-header-disabled-background-gradient-color-top:                           null;
+@table-header-disabled-background-gradient-color-bottom:                        null;
+@table-header-disabled-border-width:                                            null;
+@table-header-disabled-border-color:                                            null;
+@table-header-disabled-border-style:                                            null;
+@table-header-disabled-border-top-width:                                        null;
+@table-header-disabled-border-top-color:                                        null;
+@table-header-disabled-border-top-style:                                        null;
+@table-header-disabled-border-right-width:                                      null;
+@table-header-disabled-border-right-color:                                      null;
+@table-header-disabled-border-right-style:                                      null;
+@table-header-disabled-border-bottom-width:                                     null;
+@table-header-disabled-border-bottom-color:                                     null;
+@table-header-disabled-border-bottom-style:                                     null;
+@table-header-disabled-border-left-width:                                       null;
+@table-header-disabled-border-left-color:                                       null;
+@table-header-disabled-border-left-style:                                       null;
+@table-header-disabled-shadow:                                                  null;
+
+/* -----------------------------------------------------------------------------
+Selected
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@table-header-selected-text-color:                                              null;
+@table-header-selected-text-font-family:                                        null;
+@table-header-selected-text-font-style:                                         null;
+@table-header-selected-text-font-weight:                                        null;
+@table-header-selected-text-transform:                                          null;
+@table-header-selected-text-shadow:                                             null;
+@table-header-selected-text-decoration:                                         null;
+@table-header-selected-text-rendering:                                          null;
+@table-header-selected-background-color:                                        color-lighten(@neutral, 92);
+@table-header-selected-background-gradient-color-top:                           null;
+@table-header-selected-background-gradient-color-bottom:                        null;
+@table-header-selected-border-width:                                            null;
+@table-header-selected-border-color:                                            null;
+@table-header-selected-border-style:                                            null;
+@table-header-selected-border-top-width:                                        null;
+@table-header-selected-border-top-color:                                        null;
+@table-header-selected-border-top-style:                                        null;
+@table-header-selected-border-right-width:                                      null;
+@table-header-selected-border-right-color:                                      null;
+@table-header-selected-border-right-style:                                      null;
+@table-header-selected-border-bottom-width:                                     null;
+@table-header-selected-border-bottom-color:                                     null;
+@table-header-selected-border-bottom-style:                                     null;
+@table-header-selected-border-left-width:                                       null;
+@table-header-selected-border-left-color:                                       null;
+@table-header-selected-border-left-style:                                       null;
+@table-header-selected-shadow:                                                  null;
+
+// Hover
+
+@table-header-selected-hover-text-color:                                        null;
+@table-header-selected-hover-text-font-family:                                  null;
+@table-header-selected-hover-text-font-style:                                   null;
+@table-header-selected-hover-text-font-weight:                                  null;
+@table-header-selected-hover-text-transform:                                    null;
+@table-header-selected-hover-text-shadow:                                       null;
+@table-header-selected-hover-text-decoration:                                   null;
+@table-header-selected-hover-text-rendering:                                    null;
+@table-header-selected-hover-background-color:                                  color-lighten(@neutral, 90);
+@table-header-selected-hover-background-gradient-color-top:                     null;
+@table-header-selected-hover-background-gradient-color-bottom:                  null;
+@table-header-selected-hover-border-width:                                      null;
+@table-header-selected-hover-border-color:                                      null;
+@table-header-selected-hover-border-style:                                      null;
+@table-header-selected-hover-border-top-width:                                  null;
+@table-header-selected-hover-border-top-color:                                  null;
+@table-header-selected-hover-border-top-style:                                  null;
+@table-header-selected-hover-border-right-width:                                null;
+@table-header-selected-hover-border-right-color:                                null;
+@table-header-selected-hover-border-right-style:                                null;
+@table-header-selected-hover-border-bottom-width:                               null;
+@table-header-selected-hover-border-bottom-color:                               null;
+@table-header-selected-hover-border-bottom-style:                               null;
+@table-header-selected-hover-border-left-width:                                 null;
+@table-header-selected-hover-border-left-color:                                 null;
+@table-header-selected-hover-border-left-style:                                 null;
+@table-header-selected-hover-shadow:                                            null;
+
+// active
+
+@table-header-selected-active-text-color:                                       null;
+@table-header-selected-active-text-font-family:                                 null;
+@table-header-selected-active-text-font-style:                                  null;
+@table-header-selected-active-text-font-weight:                                 null;
+@table-header-selected-active-text-transform:                                   null;
+@table-header-selected-active-text-shadow:                                      null;
+@table-header-selected-active-text-decoration:                                  null;
+@table-header-selected-active-text-rendering:                                   null;
+@table-header-selected-active-background-color:                                 color-lighten(@neutral, 90);
+@table-header-selected-active-background-gradient-color-top:                    null;
+@table-header-selected-active-background-gradient-color-bottom:                 null;
+@table-header-selected-active-border-width:                                     null;
+@table-header-selected-active-border-color:                                     null;
+@table-header-selected-active-border-style:                                     null;
+@table-header-selected-active-border-top-width:                                 null;
+@table-header-selected-active-border-top-color:                                 null;
+@table-header-selected-active-border-top-style:                                 null;
+@table-header-selected-active-border-right-width:                               null;
+@table-header-selected-active-border-right-color:                               null;
+@table-header-selected-active-border-right-style:                               null;
+@table-header-selected-active-border-bottom-width:                              null;
+@table-header-selected-active-border-bottom-color:                              null;
+@table-header-selected-active-border-bottom-style:                              null;
+@table-header-selected-active-border-left-width:                                null;
+@table-header-selected-active-border-left-color:                                null;
+@table-header-selected-active-border-left-style:                                null;
+@table-header-selected-active-shadow:                                           null;
+
+// Disabled
+
+@table-header-selected-disabled-text-color:                                     null;
+@table-header-selected-disabled-text-font-family:                               null;
+@table-header-selected-disabled-text-font-style:                                null;
+@table-header-selected-disabled-text-font-weight:                               null;
+@table-header-selected-disabled-text-transform:                                 null;
+@table-header-selected-disabled-text-shadow:                                    null;
+@table-header-selected-disabled-text-decoration:                                null;
+@table-header-selected-disabled-text-rendering:                                 null;
+@table-header-selected-disabled-background-color:                               null;
+@table-header-selected-disabled-background-gradient-color-top:                  null;
+@table-header-selected-disabled-background-gradient-color-bottom:               null;
+@table-header-selected-disabled-border-width:                                   null;
+@table-header-selected-disabled-border-color:                                   null;
+@table-header-selected-disabled-border-style:                                   null;
+@table-header-selected-disabled-border-top-width:                               null;
+@table-header-selected-disabled-border-top-color:                               null;
+@table-header-selected-disabled-border-top-style:                               null;
+@table-header-selected-disabled-border-right-width:                             null;
+@table-header-selected-disabled-border-right-color:                             null;
+@table-header-selected-disabled-border-right-style:                             null;
+@table-header-selected-disabled-border-bottom-width:                            null;
+@table-header-selected-disabled-border-bottom-color:                            null;
+@table-header-selected-disabled-border-bottom-style:                            null;
+@table-header-selected-disabled-border-left-width:                              null;
+@table-header-selected-disabled-border-left-color:                              null;
+@table-header-selected-disabled-border-left-style:                              null;
+@table-header-selected-disabled-shadow:                                         null;
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Header Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+// Font Size
+
+@table-header-text-font-size:                                                   0.9em;
+@table-header-text-font-size-scale-screen-mini:                                 null;
+@table-header-text-font-size-scale-screen-small:                                null;
+@table-header-text-font-size-scale-screen-medium:                               null;
+@table-header-text-font-size-scale-screen-large:                                null;
+
+// Line Height
+
+@table-header-text-line-height:                                                 @table-header-text-font-size * 1.3;
+@table-header-text-line-height-scale-screen-mini:                               @table-header-text-font-size-scale-screen-mini;
+@table-header-text-line-height-scale-screen-small:                              @table-header-text-font-size-scale-screen-small;
+@table-header-text-line-height-scale-screen-medium:                             @table-header-text-font-size-scale-screen-medium;
+@table-header-text-line-height-scale-screen-large:                              @table-header-text-font-size-scale-screen-large;
+
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@table-header-margin-top:                                                       null;
+@table-header-margin-top-scale-screen-mini:                                     null;
+@table-header-margin-top-scale-screen-small:                                    null;
+@table-header-margin-top-scale-screen-medium:                                   null;
+@table-header-margin-top-scale-screen-large:                                    null;
+
+// Margin Bottom
+
+@table-header-margin-bottom:                                                    null;
+@table-header-margin-bottom-scale-screen-mini:                                  null;
+@table-header-margin-bottom-scale-screen-small:                                 null;
+@table-header-margin-bottom-scale-screen-medium:                                null;
+@table-header-margin-bottom-scale-screen-large:                                 null;
+
+// Margin Left
+
+@table-header-margin-left:                                                      null;
+@table-header-margin-left-scale-screen-mini:                                    null;
+@table-header-margin-left-scale-screen-small:                                   null;
+@table-header-margin-left-scale-screen-medium:                                  null;
+@table-header-margin-left-scale-screen-large:                                   null;
+
+// Margin Right
+
+@table-header-margin-right:                                                     null;
+@table-header-margin-right-scale-screen-mini:                                   null;
+@table-header-margin-right-scale-screen-small:                                  null;
+@table-header-margin-right-scale-screen-medium:                                 null;
+@table-header-margin-right-scale-screen-large:                                  null;
+
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+
+// Padding Top
+
+@table-header-padding-top:                                                      null;
+@table-header-padding-top-scale-screen-mini:                                    null;
+@table-header-padding-top-scale-screen-small:                                   null;
+@table-header-padding-top-scale-screen-medium:                                  null;
+@table-header-padding-top-scale-screen-large:                                   null;
+
+// Padding Bottom
+
+@table-header-padding-bottom:                                                   null;
+@table-header-padding-bottom-scale-screen-mini:                                 null;
+@table-header-padding-bottom-scale-screen-small:                                null;
+@table-header-padding-bottom-scale-screen-medium:                               null;
+@table-header-padding-bottom-scale-screen-large:                                null;
+
+// Padding Left
+
+@table-header-padding-left:                                                     null;
+@table-header-padding-left-scale-screen-mini:                                   null;
+@table-header-padding-left-scale-screen-small:                                  null;
+@table-header-padding-left-scale-screen-medium:                                 null;
+@table-header-padding-left-scale-screen-large:                                  null;
+
+// Padding Right
+
+@table-header-padding-right:                                                    null;
+@table-header-padding-right-scale-screen-mini:                                  null;
+@table-header-padding-right-scale-screen-small:                                 null;
+@table-header-padding-right-scale-screen-medium:                                null;
+@table-header-padding-right-scale-screen-large:                                 null;
