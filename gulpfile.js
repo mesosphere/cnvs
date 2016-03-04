@@ -224,6 +224,10 @@ gulp.task("canvas:styles", function () {
       sourceRoot: dirs.canvas.styles
     }))
     .pipe(gulp.dest(dirs.canvas.dist.styles));
+    // .pipe(browserSync.reload({
+    //   stream: true,
+    //   once: true
+    // }));
 
 });
 
@@ -266,6 +270,10 @@ gulp.task("docs:styles", function () {
       sourceRoot: dirs.docs.styles
     }))
     .pipe(gulp.dest(dirs.docs.dist.styles));
+    // .pipe(browserSync.reload({
+    //   stream: true,
+    //   once: true
+    // }));
 
 });
 
@@ -289,6 +297,10 @@ gulp.task("docs:javascripts", function () {
       this.emit("end");
     }))
     .pipe(gulp.dest(dirs.docs.dist.javascripts));
+    // .pipe(browserSync.reload({
+    //   stream: true,
+    //   once: true
+    // }));
 
 });
 
@@ -297,15 +309,14 @@ gulp.task("docs:javascripts", function () {
 gulp.task('browser-sync', ['jekyll'], function() {
   var files = [
       dirs.docs.dist.styles + '/**/*.css',
-      dirs.docs.dist.javascripts + '**/*.js',
-      dirs.docs.dist.path + '/**/*.html',
-      dirs.docs.dist.path + '/**/*.md',
-      dirs.docs.dist.path + '/_data/**/*'
+      dirs.docs.dist.javascripts + '**/*.js'
+      // dirs.docs.dist.path + '/**/*.html'
    ];
 
   browserSync({
-    files,
+    files: files,
     injectChanges: true,
+    reloadDebounce: 2000,
     server: {
       baseDir: dirs.docs.dist.path,
       open: true,

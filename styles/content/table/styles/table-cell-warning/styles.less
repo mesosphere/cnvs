@@ -1,0 +1,189 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-warning/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@table-cell-warning-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Table
+  ----------------------------------------------------------------------------- */
+
+  .table {
+
+    tr.warning td,
+    td.warning {
+
+      .text-style-variant(table-cell-warning);
+      .shape-style-variant(table-cell-warning);
+
+      &.selectable {
+
+        &:hover {
+
+          .text-style-variant(table-cell-warning-hover);
+          .shape-style-variant(table-cell-warning-hover);
+
+        }
+
+      }
+
+      &.disabled {
+
+        .text-style-variant(table-cell-warning-disabled);
+        .shape-style-variant(table-cell-warning-disabled);
+
+      }
+
+      // Cell active
+
+      &.active,
+      &.highlight {
+
+        .text-style-variant(table-cell-warning-active);
+        .shape-style-variant(table-cell-warning-active);
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-cell-warning-active-hover);
+            .shape-style-variant(table-cell-warning-active-hover);
+
+          }
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-cell-warning-active-disabled);
+          .shape-style-variant(table-cell-warning-active-disabled);
+
+        }
+
+      }
+
+    }
+
+    // Table Hover
+
+    &.table-hover {
+
+      tr.warning:hover td,
+      tr:hover td.warning {
+
+        .text-style-variant(table-cell-warning-hover);
+        .shape-style-variant(table-cell-warning-hover);
+
+        // Cell Active
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-cell-warning-active-hover);
+          .shape-style-variant(table-cell-warning-active-hover);
+
+        }
+
+      }
+
+    }
+
+  }
+
+  & when (@table-inverse-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    Inverse Table (.table-inverse)
+    ----------------------------------------------------------------------------- */
+
+    .table.table-inverse {
+
+      tr.warning td,
+      td.warning {
+
+        .text-style-variant(table-cell-warning-inverse);
+        .shape-style-variant(table-cell-warning-inverse);
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-cell-warning-inverse-hover);
+            .shape-style-variant(table-cell-warning-inverse-hover);
+
+          }
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-cell-warning-inverse-disabled);
+          .shape-style-variant(table-cell-warning-inverse-disabled);
+
+        }
+
+        // Cell Active
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-cell-warning-inverse-active);
+          .shape-style-variant(table-cell-warning-inverse-active);
+
+          &.selectable {
+
+            &:hover {
+
+              .text-style-variant(table-cell-warning-inverse-active-hover);
+              .shape-style-variant(table-cell-warning-inverse-active-hover);
+
+            }
+
+          }
+
+          &.disabled {
+
+            .text-style-variant(table-cell-warning-inverse-active-disabled);
+            .shape-style-variant(table-cell-warning-inverse-active-disabled);
+
+          }
+
+        }
+
+      }
+
+      // Table Hover
+
+      &.table-hover {
+
+        tr.warning:hover td,
+        tr:hover td.warning {
+
+          .text-style-variant(table-cell-warning-inverse-hover);
+          .shape-style-variant(table-cell-warning-inverse-hover);
+
+          // Cell Active
+
+          &.active,
+          &.highlight {
+
+            .text-style-variant(table-cell-warning-inverse-active-hover);
+            .shape-style-variant(table-cell-warning-inverse-active-hover);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

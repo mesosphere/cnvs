@@ -30,11 +30,113 @@ table/styles.less
 
     }
 
-    // & when not (@table-border-radius = null) {
-    //
-    //   border-radius: @table-border-radius;
-    //
-    // }
+    & when not (@table-border-radius = null) {
+
+      /* -----------------------------------------------------------------------------
+      Table Border Radius
+      ----------------------------------------------------------------------------- */
+
+      border-radius: @table-border-radius;
+
+      tbody {
+
+        tr {
+
+          &:first-child {
+
+            td,
+            th {
+
+              &:first-child {
+
+                .border-top-left-radius(@table-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-top-right-radius(@table-border-radius);
+
+              }
+
+            }
+
+          }
+
+          &:last-child {
+
+            td,
+            th {
+
+              &:first-child {
+
+                .border-bottom-left-radius(@table-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-bottom-right-radius(@table-border-radius);
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      > thead {
+
+        tr {
+
+          &:first-child {
+
+            th {
+
+              &:first-child {
+
+                .border-top-left-radius(@table-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-top-right-radius(@table-border-radius);
+
+              }
+
+            }
+
+          }
+
+        }
+
+        + tbody {
+
+          tr {
+
+            &:first-child {
+
+              th,
+              td {
+
+                border-radius: 0px !important;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
 
     th,
     td {
@@ -77,14 +179,6 @@ table/styles.less
 
       }
 
-      &.active,
-      &.highlight {
-
-        .text-style-variant(table-cell-active);
-        .shape-style-variant(table-cell-active);
-
-      }
-
       &.disabled {
 
         .text-style-variant(table-cell-disabled);
@@ -92,76 +186,29 @@ table/styles.less
 
       }
 
-      // Cell Selected
+      // Cell active
 
-      &.selected {
+      &.active,
+      &.highlight {
 
-        .text-style-variant(table-cell-selected);
-        .shape-style-variant(table-cell-selected);
-
-        &.selectable {
-
-          &:hover {
-
-            .text-style-variant(table-cell-selected-hover);
-            .shape-style-variant(table-cell-selected-hover);
-
-          }
-
-        }
-
-        &.active,
-        &.highlight {
-
-          .text-style-variant(table-cell-selected-active);
-          .shape-style-variant(table-cell-selected-active);
-
-        }
-
-        &.disabled {
-
-          .text-style-variant(table-cell-selected-disabled);
-          .shape-style-variant(table-cell-selected-disabled);
-
-        }
-
-      }
-
-    }
-
-    // Row Selected
-
-    tr.selected {
-
-      th,
-      td {
-
-        .text-style-variant(table-cell-selected);
-        .shape-style-variant(table-cell-selected);
+        .text-style-variant(table-cell-active);
+        .shape-style-variant(table-cell-active);
 
         &.selectable {
 
           &:hover {
 
-            .text-style-variant(table-cell-selected-hover);
-            .shape-style-variant(table-cell-selected-hover);
+            .text-style-variant(table-cell-active-hover);
+            .shape-style-variant(table-cell-active-hover);
 
           }
 
         }
 
-        &.active,
-        &.highlight {
-
-          .text-style-variant(table-cell-selected-active);
-          .shape-style-variant(table-cell-selected-active);
-
-        }
-
         &.disabled {
 
-          .text-style-variant(table-cell-selected-disabled);
-          .shape-style-variant(table-cell-selected-disabled);
+          .text-style-variant(table-cell-active-disabled);
+          .shape-style-variant(table-cell-active-disabled);
 
         }
 
@@ -201,14 +248,6 @@ table/styles.less
 
         }
 
-        &.active,
-        &.highlight {
-
-          .text-style-variant(table-header-active);
-          .shape-style-variant(table-header-active);
-
-        }
-
         &.disabled {
 
           .text-style-variant(table-header-disabled);
@@ -216,74 +255,29 @@ table/styles.less
 
         }
 
-        // Cell Selected
+        // Cell Active
 
-        &.selected {
+        &.active,
+        &.highlight {
 
-          .text-style-variant(table-header-selected);
-          .shape-style-variant(table-header-selected);
-
-          &.selectable {
-
-            &:hover {
-
-              .text-style-variant(table-header-selected-hover);
-              .shape-style-variant(table-header-selected-hover);
-
-            }
-
-          }
-
-          &.active,
-          &.highlight {
-
-            .text-style-variant(table-header-selected-active);
-            .shape-style-variant(table-header-selected-active);
-
-          }
-
-          &.disabled {
-
-            .text-style-variant(table-header-selected-disabled);
-            .shape-style-variant(table-header-selected-disabled);
-
-          }
-
-        }
-
-      }
-
-      // Row Selected
-
-      tr.selected {
-
-        th {
-
-          .text-style-variant(table-header-selected);
-          .shape-style-variant(table-header-selected);
+          .text-style-variant(table-header-active);
+          .shape-style-variant(table-header-active);
 
           &.selectable {
 
             &:hover {
 
-              .text-style-variant(table-header-selected-hover);
-              .shape-style-variant(table-header-selected-hover);
+              .text-style-variant(table-header-active-hover);
+              .shape-style-variant(table-header-active-hover);
 
             }
-
-          }
-          &.active,
-          &.highlight {
-
-            .text-style-variant(table-header-selected-active);
-            .shape-style-variant(table-header-selected-active);
 
           }
 
           &.disabled {
 
-            .text-style-variant(table-header-selected-disabled);
-            .shape-style-variant(table-header-selected-disabled);
+            .text-style-variant(table-header-active-disabled);
+            .shape-style-variant(table-header-active-disabled);
 
           }
 
@@ -306,25 +300,171 @@ table/styles.less
             .text-style-variant(table-cell-hover);
             .shape-style-variant(table-cell-hover);
 
-            // Cell Selected
+            // Cell Active
 
-            &.selected {
+            &.active,
+            &.highlight {
 
-              .text-style-variant(table-cell-selected-hover);
-              .shape-style-variant(table-cell-selected-hover);
+              .text-style-variant(table-cell-active-hover);
+              .shape-style-variant(table-cell-active-hover);
 
             }
 
           }
 
-          // Row Selected
+        }
 
-          &.selected {
+      }
+
+    }
+
+  }
+
+  & when (@table-inverse-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    Inverse Table (.table-inverse)
+    ----------------------------------------------------------------------------- */
+
+    .table.table-inverse {
+
+      .text-style-variant(table-inverse);
+
+      th,
+      td {
+
+        .text-style-variant(table-cell-inverse);
+        .shape-style-variant(table-cell-inverse);
+
+        &.selectable {
+
+          &:hover {
+
+            .text-style-variant(table-cell-inverse-hover);
+            .shape-style-variant(table-cell-inverse-hover);
+
+          }
+
+        }
+
+        &.disabled {
+
+          .text-style-variant(table-cell-inverse-disabled);
+          .shape-style-variant(table-cell-inverse-disabled);
+
+        }
+
+        // Cell Active
+
+        &.active,
+        &.highlight {
+
+          .text-style-variant(table-cell-inverse-active);
+          .shape-style-variant(table-cell-inverse-active);
+
+          &.selectable {
+
+            &:hover {
+
+              .text-style-variant(table-cell-inverse-active-hover);
+              .shape-style-variant(table-cell-inverse-active-hover);
+
+            }
+
+          }
+
+          &.disabled {
+
+            .text-style-variant(table-cell-inverse-active-disabled);
+            .shape-style-variant(table-cell-inverse-active-disabled);
+
+          }
+
+        }
+
+      }
+
+      // Table Head
+
+      thead {
+
+        th {
+
+          .text-style-variant(table-header-inverse);
+          .shape-style-variant(table-header-inverse);
+
+          &.selectable {
+
+            &:hover {
+
+              .text-style-variant(table-header-inverse-hover);
+              .shape-style-variant(table-header-inverse-hover);
+
+            }
+
+          }
+
+          &.disabled {
+
+            .text-style-variant(table-header-inverse-disabled);
+            .shape-style-variant(table-header-inverse-disabled);
+
+          }
+
+          // Cell Active
+
+          &.active,
+          &.highlight {
+
+            .text-style-variant(table-header-inverse-active);
+            .shape-style-variant(table-header-inverse-active);
+
+            &.selectable {
+
+              &:hover {
+
+                .text-style-variant(table-header-inverse-active-hover);
+                .shape-style-variant(table-header-inverse-active-hover);
+
+              }
+
+            }
+
+            &.disabled {
+
+              .text-style-variant(table-header-inverse-active-disabled);
+              .shape-style-variant(table-header-inverse-active-disabled);
+
+            }
+
+          }
+
+        }
+
+      }
+
+      // Table Hover
+
+      &.table-hover {
+
+        tr {
+
+          &:hover {
 
             td {
 
-              .text-style-variant(table-cell-selected-hover);
-              .shape-style-variant(table-cell-selected-hover);
+              .text-style-variant(table-cell-inverse-hover);
+              .shape-style-variant(table-cell-inverse-hover);
+
+              // Cell Active
+
+              &.active,
+              &.highlight {
+
+                .text-style-variant(table-cell-inverse-active-hover);
+                .shape-style-variant(table-cell-inverse-active-hover);
+
+              }
 
             }
 
@@ -348,6 +488,450 @@ table/styles.less
     width: 100%;
     min-height: .01%;
     overflow-x: auto;
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Table Borderless
+  ----------------------------------------------------------------------------- */
+
+  &.table-borderless {
+
+    > thead {
+
+      tr {
+
+        th {
+
+          border-top: 0px;
+          border-bottom: 0px;
+          border-left: 0px;
+          border-right: 0px;
+
+        }
+
+      }
+
+    }
+
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        td,
+        th {
+
+          border: 0px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Table Borderless (Outer Borders)
+  ----------------------------------------------------------------------------- */
+
+  &.table-borderless-outer {
+
+    > thead {
+
+      tr {
+
+        &:first-child {
+
+          th {
+
+            border-top: 0px;
+
+          }
+
+        }
+
+        &:last-child {
+
+          th {
+
+            border-bottom: 0px;
+
+          }
+
+        }
+
+        th {
+
+          &:first-child {
+
+            border-left: 0px;
+
+          }
+
+        }
+
+        th {
+
+          &:last-child {
+
+            border-right: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        &:first-child {
+
+          td,
+          th {
+
+            border-top: 0px;
+
+          }
+
+        }
+
+        &:last-child {
+
+          td,
+          th {
+
+            border-bottom: 0px;
+
+          }
+
+        }
+
+        td,
+        th {
+
+          &:first-child {
+
+            border-left: 0px;
+
+          }
+
+          &:last-child {
+
+            border-right: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Table Borderless (Outer Borders, Rows)
+  ----------------------------------------------------------------------------- */
+
+  &.table-borderless-outer-rows {
+
+    > thead {
+
+      tr {
+
+        &:first-child {
+
+          th {
+
+            border-top: 0px;
+
+          }
+
+        }
+
+        &:last-child {
+
+          th {
+
+            border-bottom: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        &:first-child {
+
+          td,
+          th {
+
+            border-top: 0px;
+
+          }
+
+        }
+
+        &:last-child {
+
+          td,
+          th {
+
+            border-bottom: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Table Borderless (Outer Borders, Columns)
+  ----------------------------------------------------------------------------- */
+
+  &.table-borderless-outer-columns {
+
+    > thead {
+
+      tr {
+
+        th {
+
+          &:first-child {
+
+            border-left: 0px;
+
+          }
+
+        }
+
+        th {
+
+          &:last-child {
+
+            border-right: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        td,
+        th {
+
+          &:first-child {
+
+            border-left: 0px;
+
+          }
+
+          &:last-child {
+
+            border-right: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Table Borderless (Inner Borders)
+  ----------------------------------------------------------------------------- */
+
+  &.table-borderless-inner {
+
+    > thead,
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        &:not(:first-child) {
+
+          td,
+          th {
+
+            border-top: 0px;
+
+          }
+
+        }
+
+        &:not(:last-child) {
+
+          td,
+          th {
+
+            border-bottom: 0px;
+
+          }
+
+        }
+
+        td,
+        th {
+
+          &:not(:first-child) {
+
+            border-left: 0px;
+
+          }
+
+          &:not(:last-child) {
+
+            border-right: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    > thead + tbody {
+
+      tr {
+
+        &:first-child {
+
+          td,
+          th {
+
+            border-top: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Table Borderless (Inner Borders, Rows)
+  ----------------------------------------------------------------------------- */
+
+  &.table-borderless-inner-rows {
+
+    > thead,
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        &:not(:first-child) {
+
+          td,
+          th {
+
+            border-top: 0px;
+
+          }
+
+        }
+
+        &:not(:last-child) {
+
+          td,
+          th {
+
+            border-bottom: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  > thead + tbody {
+
+    tr {
+
+      &:first-child {
+
+        td,
+        th {
+
+          border-top: 0px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Table Borderless (Inner Borders, Columns)
+  ----------------------------------------------------------------------------- */
+
+  &.table-borderless-inner-columns {
+
+    > thead,
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        td,
+        th {
+
+          &:not(:first-child) {
+
+            border-left: 0px;
+
+          }
+
+          &:not(:last-child) {
+
+            border-right: 0px;
+
+          }
+
+        }
+
+      }
+
+    }
 
   }
 

@@ -5542,7 +5542,13 @@ Tabel Cell Styling
 Default
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Selected
+Active
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active (Inverse)
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -5564,7 +5570,13 @@ Tabel Header Styling
 Default
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Selected
+Active
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active (Inverse)
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -5594,6 +5606,10 @@ table/styles.less
   line-height: 1.3rem;
   margin-bottom: 12px;
   border-collapse: collapse;
+  /* -----------------------------------------------------------------------------
+      Table Border Radius
+      ----------------------------------------------------------------------------- */
+  border-radius: 5px;
 }
 .table.table-short {
   margin-bottom: 6px;
@@ -5607,6 +5623,32 @@ table/styles.less
 .table.table-tall-bottom {
   margin-bottom: 24px;
 }
+.table tbody tr:first-child td:first-child,
+.table tbody tr:first-child th:first-child {
+  border-top-left-radius: 5px;
+}
+.table tbody tr:first-child td:last-child,
+.table tbody tr:first-child th:last-child {
+  border-top-right-radius: 5px;
+}
+.table tbody tr:last-child td:first-child,
+.table tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 5px;
+}
+.table tbody tr:last-child td:last-child,
+.table tbody tr:last-child th:last-child {
+  border-bottom-right-radius: 5px;
+}
+.table > thead tr:first-child th:first-child {
+  border-top-left-radius: 5px;
+}
+.table > thead tr:first-child th:last-child {
+  border-top-right-radius: 5px;
+}
+.table > thead + tbody tr:first-child th,
+.table > thead + tbody tr:first-child td {
+  border-radius: 0px !important;
+}
 .table th,
 .table td {
   text-align: left;
@@ -5614,7 +5656,7 @@ table/styles.less
   font-size: 1rem;
   line-height: 1.1rem;
   border-width: 1px;
-  border-color: #e0e1e4;
+  border-color: #ebebed;
   border-style: solid;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -5632,45 +5674,21 @@ table/styles.less
 .table th.selectable:hover,
 .table td.selectable:hover {
   cursor: pointer;
-  background: #fbfbfb;
+  background: #f9f9fa;
 }
 .table th.active,
 .table td.active,
 .table th.highlight,
 .table td.highlight {
-  background: #fbfbfb;
+  background: #f9f9fa;
 }
-.table th.selected,
-.table td.selected {
-  background: #f5f5f6;
-}
-.table th.selected.selectable:hover,
-.table td.selected.selectable:hover {
-  background: #efeff1;
-}
-.table th.selected.active,
-.table td.selected.active,
-.table th.selected.highlight,
-.table td.selected.highlight {
-  background: #f5f5f6;
-}
-.table tr.selected th,
-.table tr.selected td {
-  background: #f5f5f6;
-}
-.table tr.selected th.selectable:hover,
-.table tr.selected td.selectable:hover {
-  background: #efeff1;
-}
-.table tr.selected th.active,
-.table tr.selected td.active,
-.table tr.selected th.highlight,
-.table tr.selected td.highlight {
-  background: #f5f5f6;
+.table th.active.selectable:hover,
+.table td.active.selectable:hover,
+.table th.highlight.selectable:hover,
+.table td.highlight.selectable:hover {
+  background: #f3f3f4;
 }
 .table thead th {
-  font-weight: 600;
-  text-transform: uppercase;
   font-size: 0.9em;
   line-height: 1.17em;
   background: #f5f5f6;
@@ -5683,36 +5701,74 @@ table/styles.less
 }
 .table thead th.active,
 .table thead th.highlight {
-  background: #efeff1;
-}
-.table thead th.selected {
-  background: #efeff1;
-}
-.table thead th.selected.selectable:hover {
   background: #ebebed;
 }
-.table thead th.selected.active,
-.table thead th.selected.highlight {
-  background: #ebebed;
-}
-.table thead tr.selected th {
-  background: #efeff1;
-}
-.table thead tr.selected th.selectable:hover {
-  background: #ebebed;
-}
-.table thead tr.selected th.active,
-.table thead tr.selected th.highlight {
+.table thead th.active.selectable:hover,
+.table thead th.highlight.selectable:hover {
   background: #ebebed;
 }
 .table.table-hover tr:hover td {
-  background: #fbfbfb;
+  background: #f9f9fa;
 }
-.table.table-hover tr:hover td.selected {
-  background: #efeff1;
+.table.table-hover tr:hover td.active,
+.table.table-hover tr:hover td.highlight {
+  background: #f3f3f4;
 }
-.table.table-hover tr:hover.selected td {
-  background: #efeff1;
+/* -----------------------------------------------------------------------------
+    Inverse Table (.table-inverse)
+    ----------------------------------------------------------------------------- */
+.table.table-inverse th,
+.table.table-inverse td {
+  color: #c2c4ca;
+  border-color: #30374a;
+}
+.table.table-inverse th.selectable:hover,
+.table.table-inverse td.selectable:hover {
+  color: #d6d8dc;
+  background: #282e3e;
+}
+.table.table-inverse th.active,
+.table.table-inverse td.active,
+.table.table-inverse th.highlight,
+.table.table-inverse td.highlight {
+  color: #ebebed;
+  background: #2b3142;
+}
+.table.table-inverse th.active.selectable:hover,
+.table.table-inverse td.active.selectable:hover,
+.table.table-inverse th.highlight.selectable:hover,
+.table.table-inverse td.highlight.selectable:hover {
+  color: #f5f5f6;
+  background: #30374a;
+}
+.table.table-inverse thead th {
+  color: #ffffff;
+  background: #323a4e;
+  border-color: #323a4e;
+}
+.table.table-inverse thead th.selectable:hover {
+  color: #ffffff;
+  background: #384053;
+  border-color: #384053;
+}
+.table.table-inverse thead th.active,
+.table.table-inverse thead th.highlight {
+  background: #40485a;
+  border-color: #40485a;
+}
+.table.table-inverse thead th.active.selectable:hover,
+.table.table-inverse thead th.highlight.selectable:hover {
+  background: #40485a;
+  border-color: #40485a;
+}
+.table.table-inverse.table-hover tr:hover td {
+  color: #d6d8dc;
+  background: #282e3e;
+}
+.table.table-inverse.table-hover tr:hover td.active,
+.table.table-inverse.table-hover tr:hover td.highlight {
+  color: #f5f5f6;
+  background: #30374a;
 }
 /* -----------------------------------------------------------------------------
   Responsive Table
@@ -5722,6 +5778,183 @@ table/styles.less
   width: 100%;
   min-height: .01%;
   overflow-x: auto;
+}
+/* -----------------------------------------------------------------------------
+  Table Borderless
+  ----------------------------------------------------------------------------- */
+.table-borderless > thead tr th {
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+.table-borderless > tbody tr td,
+.table-borderless > tfoot tr td,
+.table-borderless > tbody tr th,
+.table-borderless > tfoot tr th {
+  border: 0px;
+}
+/* -----------------------------------------------------------------------------
+  Table Borderless (Outer Borders)
+  ----------------------------------------------------------------------------- */
+.table-borderless-outer > thead tr:first-child th {
+  border-top: 0px;
+}
+.table-borderless-outer > thead tr:last-child th {
+  border-bottom: 0px;
+}
+.table-borderless-outer > thead tr th:first-child {
+  border-left: 0px;
+}
+.table-borderless-outer > thead tr th:last-child {
+  border-right: 0px;
+}
+.table-borderless-outer > tbody tr:first-child td,
+.table-borderless-outer > tfoot tr:first-child td,
+.table-borderless-outer > tbody tr:first-child th,
+.table-borderless-outer > tfoot tr:first-child th {
+  border-top: 0px;
+}
+.table-borderless-outer > tbody tr:last-child td,
+.table-borderless-outer > tfoot tr:last-child td,
+.table-borderless-outer > tbody tr:last-child th,
+.table-borderless-outer > tfoot tr:last-child th {
+  border-bottom: 0px;
+}
+.table-borderless-outer > tbody tr td:first-child,
+.table-borderless-outer > tfoot tr td:first-child,
+.table-borderless-outer > tbody tr th:first-child,
+.table-borderless-outer > tfoot tr th:first-child {
+  border-left: 0px;
+}
+.table-borderless-outer > tbody tr td:last-child,
+.table-borderless-outer > tfoot tr td:last-child,
+.table-borderless-outer > tbody tr th:last-child,
+.table-borderless-outer > tfoot tr th:last-child {
+  border-right: 0px;
+}
+/* -----------------------------------------------------------------------------
+  Table Borderless (Outer Borders, Rows)
+  ----------------------------------------------------------------------------- */
+.table-borderless-outer-rows > thead tr:first-child th {
+  border-top: 0px;
+}
+.table-borderless-outer-rows > thead tr:last-child th {
+  border-bottom: 0px;
+}
+.table-borderless-outer-rows > tbody tr:first-child td,
+.table-borderless-outer-rows > tfoot tr:first-child td,
+.table-borderless-outer-rows > tbody tr:first-child th,
+.table-borderless-outer-rows > tfoot tr:first-child th {
+  border-top: 0px;
+}
+.table-borderless-outer-rows > tbody tr:last-child td,
+.table-borderless-outer-rows > tfoot tr:last-child td,
+.table-borderless-outer-rows > tbody tr:last-child th,
+.table-borderless-outer-rows > tfoot tr:last-child th {
+  border-bottom: 0px;
+}
+/* -----------------------------------------------------------------------------
+  Table Borderless (Outer Borders, Columns)
+  ----------------------------------------------------------------------------- */
+.table-borderless-outer-columns > thead tr th:first-child {
+  border-left: 0px;
+}
+.table-borderless-outer-columns > thead tr th:last-child {
+  border-right: 0px;
+}
+.table-borderless-outer-columns > tbody tr td:first-child,
+.table-borderless-outer-columns > tfoot tr td:first-child,
+.table-borderless-outer-columns > tbody tr th:first-child,
+.table-borderless-outer-columns > tfoot tr th:first-child {
+  border-left: 0px;
+}
+.table-borderless-outer-columns > tbody tr td:last-child,
+.table-borderless-outer-columns > tfoot tr td:last-child,
+.table-borderless-outer-columns > tbody tr th:last-child,
+.table-borderless-outer-columns > tfoot tr th:last-child {
+  border-right: 0px;
+}
+/* -----------------------------------------------------------------------------
+  Table Borderless (Inner Borders)
+  ----------------------------------------------------------------------------- */
+.table-borderless-inner > thead tr:not(:first-child) td,
+.table-borderless-inner > tbody tr:not(:first-child) td,
+.table-borderless-inner > tfoot tr:not(:first-child) td,
+.table-borderless-inner > thead tr:not(:first-child) th,
+.table-borderless-inner > tbody tr:not(:first-child) th,
+.table-borderless-inner > tfoot tr:not(:first-child) th {
+  border-top: 0px;
+}
+.table-borderless-inner > thead tr:not(:last-child) td,
+.table-borderless-inner > tbody tr:not(:last-child) td,
+.table-borderless-inner > tfoot tr:not(:last-child) td,
+.table-borderless-inner > thead tr:not(:last-child) th,
+.table-borderless-inner > tbody tr:not(:last-child) th,
+.table-borderless-inner > tfoot tr:not(:last-child) th {
+  border-bottom: 0px;
+}
+.table-borderless-inner > thead tr td:not(:first-child),
+.table-borderless-inner > tbody tr td:not(:first-child),
+.table-borderless-inner > tfoot tr td:not(:first-child),
+.table-borderless-inner > thead tr th:not(:first-child),
+.table-borderless-inner > tbody tr th:not(:first-child),
+.table-borderless-inner > tfoot tr th:not(:first-child) {
+  border-left: 0px;
+}
+.table-borderless-inner > thead tr td:not(:last-child),
+.table-borderless-inner > tbody tr td:not(:last-child),
+.table-borderless-inner > tfoot tr td:not(:last-child),
+.table-borderless-inner > thead tr th:not(:last-child),
+.table-borderless-inner > tbody tr th:not(:last-child),
+.table-borderless-inner > tfoot tr th:not(:last-child) {
+  border-right: 0px;
+}
+.table-borderless-inner > thead + tbody tr:first-child td,
+.table-borderless-inner > thead + tbody tr:first-child th {
+  border-top: 0px;
+}
+/* -----------------------------------------------------------------------------
+  Table Borderless (Inner Borders, Rows)
+  ----------------------------------------------------------------------------- */
+.table-borderless-inner-rows > thead tr:not(:first-child) td,
+.table-borderless-inner-rows > tbody tr:not(:first-child) td,
+.table-borderless-inner-rows > tfoot tr:not(:first-child) td,
+.table-borderless-inner-rows > thead tr:not(:first-child) th,
+.table-borderless-inner-rows > tbody tr:not(:first-child) th,
+.table-borderless-inner-rows > tfoot tr:not(:first-child) th {
+  border-top: 0px;
+}
+.table-borderless-inner-rows > thead tr:not(:last-child) td,
+.table-borderless-inner-rows > tbody tr:not(:last-child) td,
+.table-borderless-inner-rows > tfoot tr:not(:last-child) td,
+.table-borderless-inner-rows > thead tr:not(:last-child) th,
+.table-borderless-inner-rows > tbody tr:not(:last-child) th,
+.table-borderless-inner-rows > tfoot tr:not(:last-child) th {
+  border-bottom: 0px;
+}
+ > thead + tbody tr:first-child td,
+ > thead + tbody tr:first-child th {
+  border-top: 0px;
+}
+/* -----------------------------------------------------------------------------
+  Table Borderless (Inner Borders, Columns)
+  ----------------------------------------------------------------------------- */
+.table-borderless-inner-columns > thead tr td:not(:first-child),
+.table-borderless-inner-columns > tbody tr td:not(:first-child),
+.table-borderless-inner-columns > tfoot tr td:not(:first-child),
+.table-borderless-inner-columns > thead tr th:not(:first-child),
+.table-borderless-inner-columns > tbody tr th:not(:first-child),
+.table-borderless-inner-columns > tfoot tr th:not(:first-child) {
+  border-left: 0px;
+}
+.table-borderless-inner-columns > thead tr td:not(:last-child),
+.table-borderless-inner-columns > tbody tr td:not(:last-child),
+.table-borderless-inner-columns > tfoot tr td:not(:last-child),
+.table-borderless-inner-columns > thead tr th:not(:last-child),
+.table-borderless-inner-columns > tbody tr th:not(:last-child),
+.table-borderless-inner-columns > tfoot tr th:not(:last-child) {
+  border-right: 0px;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@screen-mini) and wider
@@ -5828,6 +6061,406 @@ table/styles.less
   .table.table-tall-bottom {
     margin-bottom: 64px;
   }
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-selected/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Cell Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-selected/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Table
+  ----------------------------------------------------------------------------- */
+.table tr.selected td,
+.table td.selected {
+  text-decoration: none;
+  background: #f9f9fa;
+}
+.table tr.selected td.selectable:hover,
+.table td.selected.selectable:hover {
+  background: #f9f9fa;
+}
+.table tr.selected td.active,
+.table td.selected.active,
+.table tr.selected td.highlight,
+.table td.selected.highlight {
+  background: #f9f9fa;
+}
+.table tr.selected td.active.selectable:hover,
+.table td.selected.active.selectable:hover,
+.table tr.selected td.highlight.selectable:hover,
+.table td.selected.highlight.selectable:hover {
+  background: #f3f3f4;
+}
+.table.table-hover tr.selected:hover td,
+.table.table-hover tr:hover td.selected {
+  background: #f9f9fa;
+}
+.table.table-hover tr.selected:hover td.active,
+.table.table-hover tr:hover td.selected.active,
+.table.table-hover tr.selected:hover td.highlight,
+.table.table-hover tr:hover td.selected.highlight {
+  background: #f3f3f4;
+}
+/* -----------------------------------------------------------------------------
+    Inverse Table (.table-inverse)
+    ----------------------------------------------------------------------------- */
+.table.table-inverse tr.selected td,
+.table.table-inverse td.selected {
+  color: #ebebed;
+  background: #2b3142;
+}
+.table.table-inverse tr.selected td.selectable:hover,
+.table.table-inverse td.selected.selectable:hover {
+  color: #ebebed;
+  background: #2b3142;
+}
+.table.table-inverse tr.selected td.active.selectable:hover,
+.table.table-inverse td.selected.active.selectable:hover,
+.table.table-inverse tr.selected td.highlight.selectable:hover,
+.table.table-inverse td.selected.highlight.selectable:hover {
+  color: #f5f5f6;
+  background: #30374a;
+}
+.table.table-inverse.table-hover tr.selected:hover td,
+.table.table-inverse.table-hover tr:hover td.selected {
+  color: #ebebed;
+  background: #2b3142;
+}
+.table.table-inverse.table-hover tr.selected:hover td.active,
+.table.table-inverse.table-hover tr:hover td.selected.active,
+.table.table-inverse.table-hover tr.selected:hover td.highlight,
+.table.table-inverse.table-hover tr:hover td.selected.highlight {
+  color: #f5f5f6;
+  background: #30374a;
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-success/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Cell Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-success/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Table
+  ----------------------------------------------------------------------------- */
+.table tr.success td,
+.table td.success {
+  color: #ffffff;
+  background: #27c97b;
+  border-color: #27c97b;
+}
+.table tr.success td.selectable:hover,
+.table td.success.selectable:hover {
+  background: #25bf75;
+  border-color: #25bf75;
+}
+.table tr.success td.active,
+.table td.success.active,
+.table tr.success td.highlight,
+.table td.success.highlight {
+  color: #ffffff;
+  background: #23b56f;
+  border-color: #23b56f;
+}
+.table tr.success td.active.selectable:hover,
+.table td.success.active.selectable:hover,
+.table tr.success td.highlight.selectable:hover,
+.table td.success.highlight.selectable:hover {
+  background: #21ab69;
+  border-color: #21ab69;
+}
+.table.table-hover tr.success:hover td,
+.table.table-hover tr:hover td.success {
+  background: #25bf75;
+  border-color: #25bf75;
+}
+.table.table-hover tr.success:hover td.active,
+.table.table-hover tr:hover td.success.active,
+.table.table-hover tr.success:hover td.highlight,
+.table.table-hover tr:hover td.success.highlight {
+  background: #21ab69;
+  border-color: #21ab69;
+}
+/* -----------------------------------------------------------------------------
+    Inverse Table (.table-inverse)
+    ----------------------------------------------------------------------------- */
+.table.table-inverse tr.success td.selectable:hover,
+.table.table-inverse td.success.selectable:hover {
+  color: #ffffff;
+  background: #25bf75;
+  border-color: #25bf75;
+}
+.table.table-inverse tr.success td.active.selectable:hover,
+.table.table-inverse td.success.active.selectable:hover,
+.table.table-inverse tr.success td.highlight.selectable:hover,
+.table.table-inverse td.success.highlight.selectable:hover {
+  background: #21ab69;
+  border-color: #21ab69;
+}
+.table.table-inverse.table-hover tr.success:hover td,
+.table.table-inverse.table-hover tr:hover td.success {
+  color: #ffffff;
+  background: #25bf75;
+  border-color: #25bf75;
+}
+.table.table-inverse.table-hover tr.success:hover td.active,
+.table.table-inverse.table-hover tr:hover td.success.active,
+.table.table-inverse.table-hover tr.success:hover td.highlight,
+.table.table-inverse.table-hover tr:hover td.success.highlight {
+  background: #21ab69;
+  border-color: #21ab69;
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-warning/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Cell Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-warning/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Table
+  ----------------------------------------------------------------------------- */
+.table tr.warning td,
+.table td.warning {
+  color: #ffffff;
+  background: #f56753;
+  border-color: #f56753;
+}
+.table tr.warning td.selectable:hover,
+.table td.warning.selectable:hover {
+  background: #e9624f;
+  border-color: #e9624f;
+}
+.table tr.warning td.active,
+.table td.warning.active,
+.table tr.warning td.highlight,
+.table td.warning.highlight {
+  color: #ffffff;
+  background: #dd5d4b;
+  border-color: #dd5d4b;
+}
+.table tr.warning td.active.selectable:hover,
+.table td.warning.active.selectable:hover,
+.table tr.warning td.highlight.selectable:hover,
+.table td.warning.highlight.selectable:hover {
+  background: #d05847;
+  border-color: #d05847;
+}
+.table.table-hover tr.warning:hover td,
+.table.table-hover tr:hover td.warning {
+  background: #e9624f;
+  border-color: #e9624f;
+}
+.table.table-hover tr.warning:hover td.active,
+.table.table-hover tr:hover td.warning.active,
+.table.table-hover tr.warning:hover td.highlight,
+.table.table-hover tr:hover td.warning.highlight {
+  background: #d05847;
+  border-color: #d05847;
+}
+/* -----------------------------------------------------------------------------
+    Inverse Table (.table-inverse)
+    ----------------------------------------------------------------------------- */
+.table.table-inverse tr.warning td.selectable:hover,
+.table.table-inverse td.warning.selectable:hover {
+  color: #ffffff;
+  background: #e9624f;
+  border-color: #e9624f;
+}
+.table.table-inverse tr.warning td.active.selectable:hover,
+.table.table-inverse td.warning.active.selectable:hover,
+.table.table-inverse tr.warning td.highlight.selectable:hover,
+.table.table-inverse td.warning.highlight.selectable:hover {
+  background: #d05847;
+  border-color: #d05847;
+}
+.table.table-inverse.table-hover tr.warning:hover td,
+.table.table-inverse.table-hover tr:hover td.warning {
+  color: #ffffff;
+  background: #e9624f;
+  border-color: #e9624f;
+}
+.table.table-inverse.table-hover tr.warning:hover td.active,
+.table.table-inverse.table-hover tr:hover td.warning.active,
+.table.table-inverse.table-hover tr.warning:hover td.highlight,
+.table.table-inverse.table-hover tr:hover td.warning.highlight {
+  background: #d05847;
+  border-color: #d05847;
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-danger/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Tabel Cell Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Default (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Active (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-row-danger/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Table
+  ----------------------------------------------------------------------------- */
+.table tr.danger td,
+.table td.danger {
+  color: #ffffff;
+  background: #f33745;
+  border-color: #f33745;
+}
+.table tr.danger td.selectable:hover,
+.table td.danger.selectable:hover {
+  background: #e73442;
+  border-color: #e73442;
+}
+.table tr.danger td.active,
+.table td.danger.active,
+.table tr.danger td.highlight,
+.table td.danger.highlight {
+  color: #ffffff;
+  background: #db323e;
+  border-color: #db323e;
+}
+.table tr.danger td.active.selectable:hover,
+.table td.danger.active.selectable:hover,
+.table tr.danger td.highlight.selectable:hover,
+.table td.danger.highlight.selectable:hover {
+  background: #cf2f3b;
+  border-color: #cf2f3b;
+}
+.table.table-hover tr.danger:hover td,
+.table.table-hover tr:hover td.danger {
+  background: #e73442;
+  border-color: #e73442;
+}
+.table.table-hover tr.danger:hover td.active,
+.table.table-hover tr:hover td.danger.active,
+.table.table-hover tr.danger:hover td.highlight,
+.table.table-hover tr:hover td.danger.highlight {
+  background: #cf2f3b;
+  border-color: #cf2f3b;
+}
+/* -----------------------------------------------------------------------------
+    Inverse Table (.table-inverse)
+    ----------------------------------------------------------------------------- */
+.table.table-inverse tr.danger td.selectable:hover,
+.table.table-inverse td.danger.selectable:hover {
+  color: #ffffff;
+  background: #e73442;
+  border-color: #e73442;
+}
+.table.table-inverse tr.danger td.active.selectable:hover,
+.table.table-inverse td.danger.active.selectable:hover,
+.table.table-inverse tr.danger td.highlight.selectable:hover,
+.table.table-inverse td.danger.highlight.selectable:hover {
+  background: #cf2f3b;
+  border-color: #cf2f3b;
+}
+.table.table-inverse.table-hover tr.danger:hover td,
+.table.table-inverse.table-hover tr:hover td.danger {
+  color: #ffffff;
+  background: #e73442;
+  border-color: #e73442;
+}
+.table.table-inverse.table-hover tr.danger:hover td.active,
+.table.table-inverse.table-hover tr:hover td.danger.active,
+.table.table-inverse.table-hover tr.danger:hover td.highlight,
+.table.table-inverse.table-hover tr:hover td.danger.highlight {
+  background: #cf2f3b;
+  border-color: #cf2f3b;
 }
 /* -----------------------------------------------------------------------------
 Button

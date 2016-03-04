@@ -45,7 +45,7 @@ Text Styling
 
 // Inverse (.inverse)
 
-@table-inverse-enabled:                                                         null;
+@table-inverse-enabled:                                                         true;
 @table-inverse-text-color:                                                      null;
 @table-inverse-text-font-family:                                                null;
 @table-inverse-text-font-style:                                                 null;
@@ -200,54 +200,6 @@ Layout Variants
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Tabel Cell Styling
@@ -272,7 +224,7 @@ Default
 @table-cell-background-gradient-color-top:                                      null;
 @table-cell-background-gradient-color-bottom:                                   null;
 @table-cell-border-width:                                                       1px;
-@table-cell-border-color:                                                       color-lighten(@neutral, 85);
+@table-cell-border-color:                                                       color-lighten(@neutral, 90);
 @table-cell-border-style:                                                       solid;
 @table-cell-border-top-width:                                                   null;
 @table-cell-border-top-color:                                                   null;
@@ -298,7 +250,7 @@ Default
 @table-cell-hover-text-shadow:                                                  null;
 @table-cell-hover-text-decoration:                                              null;
 @table-cell-hover-text-rendering:                                               null;
-@table-cell-hover-background-color:                                             color-lighten(@neutral, 98);
+@table-cell-hover-background-color:                                             color-lighten(@neutral, 97);
 @table-cell-hover-background-gradient-color-top:                                null;
 @table-cell-hover-background-gradient-color-bottom:                             null;
 @table-cell-hover-border-width:                                                 null;
@@ -317,36 +269,6 @@ Default
 @table-cell-hover-border-left-color:                                            null;
 @table-cell-hover-border-left-style:                                            null;
 @table-cell-hover-shadow:                                                       null;
-
-// Active
-
-@table-cell-active-text-color:                                                  null;
-@table-cell-active-text-font-family:                                            null;
-@table-cell-active-text-font-style:                                             null;
-@table-cell-active-text-font-weight:                                            null;
-@table-cell-active-text-transform:                                              null;
-@table-cell-active-text-shadow:                                                 null;
-@table-cell-active-text-decoration:                                             null;
-@table-cell-active-text-rendering:                                              null;
-@table-cell-active-background-color:                                            color-lighten(@neutral, 98);
-@table-cell-active-background-gradient-color-top:                               null;
-@table-cell-active-background-gradient-color-bottom:                            null;
-@table-cell-active-border-width:                                                null;
-@table-cell-active-border-color:                                                null;
-@table-cell-active-border-style:                                                null;
-@table-cell-active-border-top-width:                                            null;
-@table-cell-active-border-top-color:                                            null;
-@table-cell-active-border-top-style:                                            null;
-@table-cell-active-border-right-width:                                          null;
-@table-cell-active-border-right-color:                                          null;
-@table-cell-active-border-right-style:                                          null;
-@table-cell-active-border-bottom-width:                                         null;
-@table-cell-active-border-bottom-color:                                         null;
-@table-cell-active-border-bottom-style:                                         null;
-@table-cell-active-border-left-width:                                           null;
-@table-cell-active-border-left-color:                                           null;
-@table-cell-active-border-left-style:                                           null;
-@table-cell-active-shadow:                                                      null;
 
 // Disabled
 
@@ -379,128 +301,286 @@ Default
 @table-cell-disabled-shadow:                                                    null;
 
 /* -----------------------------------------------------------------------------
-Selected
+Active
 ----------------------------------------------------------------------------- */
 
 // Normal
 
-@table-cell-selected-text-color:                                                null;
-@table-cell-selected-text-font-family:                                          null;
-@table-cell-selected-text-font-style:                                           null;
-@table-cell-selected-text-font-weight:                                          null;
-@table-cell-selected-text-transform:                                            null;
-@table-cell-selected-text-shadow:                                               null;
-@table-cell-selected-text-decoration:                                           null;
-@table-cell-selected-text-rendering:                                            null;
-@table-cell-selected-background-color:                                          color-lighten(@neutral, 95);
-@table-cell-selected-background-gradient-color-top:                             null;
-@table-cell-selected-background-gradient-color-bottom:                          null;
-@table-cell-selected-border-width:                                              null;
-@table-cell-selected-border-color:                                              null;
-@table-cell-selected-border-style:                                              null;
-@table-cell-selected-border-top-width:                                          null;
-@table-cell-selected-border-top-color:                                          null;
-@table-cell-selected-border-top-style:                                          null;
-@table-cell-selected-border-right-width:                                        null;
-@table-cell-selected-border-right-color:                                        null;
-@table-cell-selected-border-right-style:                                        null;
-@table-cell-selected-border-bottom-width:                                       null;
-@table-cell-selected-border-bottom-color:                                       null;
-@table-cell-selected-border-bottom-style:                                       null;
-@table-cell-selected-border-left-width:                                         null;
-@table-cell-selected-border-left-color:                                         null;
-@table-cell-selected-border-left-style:                                         null;
-@table-cell-selected-shadow:                                                    null;
+@table-cell-active-text-color:                                                  null;
+@table-cell-active-text-font-family:                                            null;
+@table-cell-active-text-font-style:                                             null;
+@table-cell-active-text-font-weight:                                            null;
+@table-cell-active-text-transform:                                              null;
+@table-cell-active-text-shadow:                                                 null;
+@table-cell-active-text-decoration:                                             null;
+@table-cell-active-text-rendering:                                              null;
+@table-cell-active-background-color:                                            color-lighten(@neutral, 97);
+@table-cell-active-background-gradient-color-top:                               null;
+@table-cell-active-background-gradient-color-bottom:                            null;
+@table-cell-active-border-width:                                                null;
+@table-cell-active-border-color:                                                null;
+@table-cell-active-border-style:                                                null;
+@table-cell-active-border-top-width:                                            null;
+@table-cell-active-border-top-color:                                            null;
+@table-cell-active-border-top-style:                                            null;
+@table-cell-active-border-right-width:                                          null;
+@table-cell-active-border-right-color:                                          null;
+@table-cell-active-border-right-style:                                          null;
+@table-cell-active-border-bottom-width:                                         null;
+@table-cell-active-border-bottom-color:                                         null;
+@table-cell-active-border-bottom-style:                                         null;
+@table-cell-active-border-left-width:                                           null;
+@table-cell-active-border-left-color:                                           null;
+@table-cell-active-border-left-style:                                           null;
+@table-cell-active-shadow:                                                      null;
 
 // Hover
 
-@table-cell-selected-hover-text-color:                                          null;
-@table-cell-selected-hover-text-font-family:                                    null;
-@table-cell-selected-hover-text-font-style:                                     null;
-@table-cell-selected-hover-text-font-weight:                                    null;
-@table-cell-selected-hover-text-transform:                                      null;
-@table-cell-selected-hover-text-shadow:                                         null;
-@table-cell-selected-hover-text-decoration:                                     null;
-@table-cell-selected-hover-text-rendering:                                      null;
-@table-cell-selected-hover-background-color:                                    color-lighten(@neutral, 92);
-@table-cell-selected-hover-background-gradient-color-top:                       null;
-@table-cell-selected-hover-background-gradient-color-bottom:                    null;
-@table-cell-selected-hover-border-width:                                        null;
-@table-cell-selected-hover-border-color:                                        null;
-@table-cell-selected-hover-border-style:                                        null;
-@table-cell-selected-hover-border-top-width:                                    null;
-@table-cell-selected-hover-border-top-color:                                    null;
-@table-cell-selected-hover-border-top-style:                                    null;
-@table-cell-selected-hover-border-right-width:                                  null;
-@table-cell-selected-hover-border-right-color:                                  null;
-@table-cell-selected-hover-border-right-style:                                  null;
-@table-cell-selected-hover-border-bottom-width:                                 null;
-@table-cell-selected-hover-border-bottom-color:                                 null;
-@table-cell-selected-hover-border-bottom-style:                                 null;
-@table-cell-selected-hover-border-left-width:                                   null;
-@table-cell-selected-hover-border-left-color:                                   null;
-@table-cell-selected-hover-border-left-style:                                   null;
-@table-cell-selected-hover-shadow:                                              null;
-
-// active
-
-@table-cell-selected-active-text-color:                                         null;
-@table-cell-selected-active-text-font-family:                                   null;
-@table-cell-selected-active-text-font-style:                                    null;
-@table-cell-selected-active-text-font-weight:                                   null;
-@table-cell-selected-active-text-transform:                                     null;
-@table-cell-selected-active-text-shadow:                                        null;
-@table-cell-selected-active-text-decoration:                                    null;
-@table-cell-selected-active-text-rendering:                                     null;
-@table-cell-selected-active-background-color:                                   color-lighten(@neutral, 95);
-@table-cell-selected-active-background-gradient-color-top:                      null;
-@table-cell-selected-active-background-gradient-color-bottom:                   null;
-@table-cell-selected-active-border-width:                                       null;
-@table-cell-selected-active-border-color:                                       null;
-@table-cell-selected-active-border-style:                                       null;
-@table-cell-selected-active-border-top-width:                                   null;
-@table-cell-selected-active-border-top-color:                                   null;
-@table-cell-selected-active-border-top-style:                                   null;
-@table-cell-selected-active-border-right-width:                                 null;
-@table-cell-selected-active-border-right-color:                                 null;
-@table-cell-selected-active-border-right-style:                                 null;
-@table-cell-selected-active-border-bottom-width:                                null;
-@table-cell-selected-active-border-bottom-color:                                null;
-@table-cell-selected-active-border-bottom-style:                                null;
-@table-cell-selected-active-border-left-width:                                  null;
-@table-cell-selected-active-border-left-color:                                  null;
-@table-cell-selected-active-border-left-style:                                  null;
-@table-cell-selected-active-shadow:                                             null;
+@table-cell-active-hover-text-color:                                            null;
+@table-cell-active-hover-text-font-family:                                      null;
+@table-cell-active-hover-text-font-style:                                       null;
+@table-cell-active-hover-text-font-weight:                                      null;
+@table-cell-active-hover-text-transform:                                        null;
+@table-cell-active-hover-text-shadow:                                           null;
+@table-cell-active-hover-text-decoration:                                       null;
+@table-cell-active-hover-text-rendering:                                        null;
+@table-cell-active-hover-background-color:                                      color-lighten(@neutral, 94);
+@table-cell-active-hover-background-gradient-color-top:                         null;
+@table-cell-active-hover-background-gradient-color-bottom:                      null;
+@table-cell-active-hover-border-width:                                          null;
+@table-cell-active-hover-border-color:                                          null;
+@table-cell-active-hover-border-style:                                          null;
+@table-cell-active-hover-border-top-width:                                      null;
+@table-cell-active-hover-border-top-color:                                      null;
+@table-cell-active-hover-border-top-style:                                      null;
+@table-cell-active-hover-border-right-width:                                    null;
+@table-cell-active-hover-border-right-color:                                    null;
+@table-cell-active-hover-border-right-style:                                    null;
+@table-cell-active-hover-border-bottom-width:                                   null;
+@table-cell-active-hover-border-bottom-color:                                   null;
+@table-cell-active-hover-border-bottom-style:                                   null;
+@table-cell-active-hover-border-left-width:                                     null;
+@table-cell-active-hover-border-left-color:                                     null;
+@table-cell-active-hover-border-left-style:                                     null;
+@table-cell-active-hover-shadow:                                                null;
 
 // Disabled
 
-@table-cell-selected-disabled-text-color:                                       null;
-@table-cell-selected-disabled-text-font-family:                                 null;
-@table-cell-selected-disabled-text-font-style:                                  null;
-@table-cell-selected-disabled-text-font-weight:                                 null;
-@table-cell-selected-disabled-text-transform:                                   null;
-@table-cell-selected-disabled-text-shadow:                                      null;
-@table-cell-selected-disabled-text-decoration:                                  null;
-@table-cell-selected-disabled-text-rendering:                                   null;
-@table-cell-selected-disabled-background-color:                                 null;
-@table-cell-selected-disabled-background-gradient-color-top:                    null;
-@table-cell-selected-disabled-background-gradient-color-bottom:                 null;
-@table-cell-selected-disabled-border-width:                                     null;
-@table-cell-selected-disabled-border-color:                                     null;
-@table-cell-selected-disabled-border-style:                                     null;
-@table-cell-selected-disabled-border-top-width:                                 null;
-@table-cell-selected-disabled-border-top-color:                                 null;
-@table-cell-selected-disabled-border-top-style:                                 null;
-@table-cell-selected-disabled-border-right-width:                               null;
-@table-cell-selected-disabled-border-right-color:                               null;
-@table-cell-selected-disabled-border-right-style:                               null;
-@table-cell-selected-disabled-border-bottom-width:                              null;
-@table-cell-selected-disabled-border-bottom-color:                              null;
-@table-cell-selected-disabled-border-bottom-style:                              null;
-@table-cell-selected-disabled-border-left-width:                                null;
-@table-cell-selected-disabled-border-left-color:                                null;
-@table-cell-selected-disabled-border-left-style:                                null;
-@table-cell-selected-disabled-shadow:                                           null;
+@table-cell-active-disabled-text-color:                                         null;
+@table-cell-active-disabled-text-font-family:                                   null;
+@table-cell-active-disabled-text-font-style:                                    null;
+@table-cell-active-disabled-text-font-weight:                                   null;
+@table-cell-active-disabled-text-transform:                                     null;
+@table-cell-active-disabled-text-shadow:                                        null;
+@table-cell-active-disabled-text-decoration:                                    null;
+@table-cell-active-disabled-text-rendering:                                     null;
+@table-cell-active-disabled-background-color:                                   null;
+@table-cell-active-disabled-background-gradient-color-top:                      null;
+@table-cell-active-disabled-background-gradient-color-bottom:                   null;
+@table-cell-active-disabled-border-width:                                       null;
+@table-cell-active-disabled-border-color:                                       null;
+@table-cell-active-disabled-border-style:                                       null;
+@table-cell-active-disabled-border-top-width:                                   null;
+@table-cell-active-disabled-border-top-color:                                   null;
+@table-cell-active-disabled-border-top-style:                                   null;
+@table-cell-active-disabled-border-right-width:                                 null;
+@table-cell-active-disabled-border-right-color:                                 null;
+@table-cell-active-disabled-border-right-style:                                 null;
+@table-cell-active-disabled-border-bottom-width:                                null;
+@table-cell-active-disabled-border-bottom-color:                                null;
+@table-cell-active-disabled-border-bottom-style:                                null;
+@table-cell-active-disabled-border-left-width:                                  null;
+@table-cell-active-disabled-border-left-color:                                  null;
+@table-cell-active-disabled-border-left-style:                                  null;
+@table-cell-active-disabled-shadow:                                             null;
+
+/* -----------------------------------------------------------------------------
+Default (Inverse)
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@table-cell-inverse-text-color:                                                 color-lighten(@neutral, 70);
+@table-cell-inverse-text-font-family:                                           null;
+@table-cell-inverse-text-font-style:                                            null;
+@table-cell-inverse-text-font-weight:                                           null;
+@table-cell-inverse-text-transform:                                             null;
+@table-cell-inverse-text-shadow:                                                null;
+@table-cell-inverse-text-decoration:                                            null;
+@table-cell-inverse-text-rendering:                                             null;
+@table-cell-inverse-background-color:                                           null;
+@table-cell-inverse-background-gradient-color-top:                              null;
+@table-cell-inverse-background-gradient-color-bottom:                           null;
+@table-cell-inverse-border-width:                                               null;
+@table-cell-inverse-border-color:                                               color-lighten(@neutral, -5);
+@table-cell-inverse-border-style:                                               null;
+@table-cell-inverse-border-top-width:                                           null;
+@table-cell-inverse-border-top-color:                                           null;
+@table-cell-inverse-border-top-style:                                           null;
+@table-cell-inverse-border-right-width:                                         null;
+@table-cell-inverse-border-right-color:                                         null;
+@table-cell-inverse-border-right-style:                                         null;
+@table-cell-inverse-border-bottom-width:                                        null;
+@table-cell-inverse-border-bottom-color:                                        null;
+@table-cell-inverse-border-bottom-style:                                        null;
+@table-cell-inverse-border-left-width:                                          null;
+@table-cell-inverse-border-left-color:                                          null;
+@table-cell-inverse-border-left-style:                                          null;
+@table-cell-inverse-shadow:                                                     null;
+
+// Hover
+
+@table-cell-inverse-hover-text-color:                                           color-lighten(@neutral, 80);
+@table-cell-inverse-hover-text-font-family:                                     null;
+@table-cell-inverse-hover-text-font-style:                                      null;
+@table-cell-inverse-hover-text-font-weight:                                     null;
+@table-cell-inverse-hover-text-transform:                                       null;
+@table-cell-inverse-hover-text-shadow:                                          null;
+@table-cell-inverse-hover-text-decoration:                                      null;
+@table-cell-inverse-hover-text-rendering:                                       null;
+@table-cell-inverse-hover-background-color:                                     color-lighten(@neutral, -20);
+@table-cell-inverse-hover-background-gradient-color-top:                        null;
+@table-cell-inverse-hover-background-gradient-color-bottom:                     null;
+@table-cell-inverse-hover-border-width:                                         null;
+@table-cell-inverse-hover-border-color:                                         null;
+@table-cell-inverse-hover-border-style:                                         null;
+@table-cell-inverse-hover-border-top-width:                                     null;
+@table-cell-inverse-hover-border-top-color:                                     null;
+@table-cell-inverse-hover-border-top-style:                                     null;
+@table-cell-inverse-hover-border-right-width:                                   null;
+@table-cell-inverse-hover-border-right-color:                                   null;
+@table-cell-inverse-hover-border-right-style:                                   null;
+@table-cell-inverse-hover-border-bottom-width:                                  null;
+@table-cell-inverse-hover-border-bottom-color:                                  null;
+@table-cell-inverse-hover-border-bottom-style:                                  null;
+@table-cell-inverse-hover-border-left-width:                                    null;
+@table-cell-inverse-hover-border-left-color:                                    null;
+@table-cell-inverse-hover-border-left-style:                                    null;
+@table-cell-inverse-hover-shadow:                                               null;
+
+// Disabled
+
+@table-cell-inverse-disabled-text-color:                                        null;
+@table-cell-inverse-disabled-text-font-family:                                  null;
+@table-cell-inverse-disabled-text-font-style:                                   null;
+@table-cell-inverse-disabled-text-font-weight:                                  null;
+@table-cell-inverse-disabled-text-transform:                                    null;
+@table-cell-inverse-disabled-text-shadow:                                       null;
+@table-cell-inverse-disabled-text-decoration:                                   null;
+@table-cell-inverse-disabled-text-rendering:                                    null;
+@table-cell-inverse-disabled-background-color:                                  null;
+@table-cell-inverse-disabled-background-gradient-color-top:                     null;
+@table-cell-inverse-disabled-background-gradient-color-bottom:                  null;
+@table-cell-inverse-disabled-border-width:                                      null;
+@table-cell-inverse-disabled-border-color:                                      null;
+@table-cell-inverse-disabled-border-style:                                      null;
+@table-cell-inverse-disabled-border-top-width:                                  null;
+@table-cell-inverse-disabled-border-top-color:                                  null;
+@table-cell-inverse-disabled-border-top-style:                                  null;
+@table-cell-inverse-disabled-border-right-width:                                null;
+@table-cell-inverse-disabled-border-right-color:                                null;
+@table-cell-inverse-disabled-border-right-style:                                null;
+@table-cell-inverse-disabled-border-bottom-width:                               null;
+@table-cell-inverse-disabled-border-bottom-color:                               null;
+@table-cell-inverse-disabled-border-bottom-style:                               null;
+@table-cell-inverse-disabled-border-left-width:                                 null;
+@table-cell-inverse-disabled-border-left-color:                                 null;
+@table-cell-inverse-disabled-border-left-style:                                 null;
+@table-cell-inverse-disabled-shadow:                                            null;
+
+/* -----------------------------------------------------------------------------
+Active (Inverse)
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@table-cell-inverse-active-text-color:                                          color-lighten(@neutral, 90);
+@table-cell-inverse-active-text-font-family:                                    null;
+@table-cell-inverse-active-text-font-style:                                     null;
+@table-cell-inverse-active-text-font-weight:                                    null;
+@table-cell-inverse-active-text-transform:                                      null;
+@table-cell-inverse-active-text-shadow:                                         null;
+@table-cell-inverse-active-text-decoration:                                     null;
+@table-cell-inverse-active-text-rendering:                                      null;
+@table-cell-inverse-active-background-color:                                    color-lighten(@neutral, -15);
+@table-cell-inverse-active-background-gradient-color-top:                       null;
+@table-cell-inverse-active-background-gradient-color-bottom:                    null;
+@table-cell-inverse-active-border-width:                                        null;
+@table-cell-inverse-active-border-color:                                        null;
+@table-cell-inverse-active-border-style:                                        null;
+@table-cell-inverse-active-border-top-width:                                    null;
+@table-cell-inverse-active-border-top-color:                                    null;
+@table-cell-inverse-active-border-top-style:                                    null;
+@table-cell-inverse-active-border-right-width:                                  null;
+@table-cell-inverse-active-border-right-color:                                  null;
+@table-cell-inverse-active-border-right-style:                                  null;
+@table-cell-inverse-active-border-bottom-width:                                 null;
+@table-cell-inverse-active-border-bottom-color:                                 null;
+@table-cell-inverse-active-border-bottom-style:                                 null;
+@table-cell-inverse-active-border-left-width:                                   null;
+@table-cell-inverse-active-border-left-color:                                   null;
+@table-cell-inverse-active-border-left-style:                                   null;
+@table-cell-inverse-active-shadow:                                              null;
+
+// Hover
+
+@table-cell-inverse-active-hover-text-color:                                    color-lighten(@neutral, 95);
+@table-cell-inverse-active-hover-text-font-family:                              null;
+@table-cell-inverse-active-hover-text-font-style:                               null;
+@table-cell-inverse-active-hover-text-font-weight:                              null;
+@table-cell-inverse-active-hover-text-transform:                                null;
+@table-cell-inverse-active-hover-text-shadow:                                   null;
+@table-cell-inverse-active-hover-text-decoration:                               null;
+@table-cell-inverse-active-hover-text-rendering:                                null;
+@table-cell-inverse-active-hover-background-color:                              color-lighten(@neutral, -5);
+@table-cell-inverse-active-hover-background-gradient-color-top:                 null;
+@table-cell-inverse-active-hover-background-gradient-color-bottom:              null;
+@table-cell-inverse-active-hover-border-width:                                  null;
+@table-cell-inverse-active-hover-border-color:                                  null;
+@table-cell-inverse-active-hover-border-style:                                  null;
+@table-cell-inverse-active-hover-border-top-width:                              null;
+@table-cell-inverse-active-hover-border-top-color:                              null;
+@table-cell-inverse-active-hover-border-top-style:                              null;
+@table-cell-inverse-active-hover-border-right-width:                            null;
+@table-cell-inverse-active-hover-border-right-color:                            null;
+@table-cell-inverse-active-hover-border-right-style:                            null;
+@table-cell-inverse-active-hover-border-bottom-width:                           null;
+@table-cell-inverse-active-hover-border-bottom-color:                           null;
+@table-cell-inverse-active-hover-border-bottom-style:                           null;
+@table-cell-inverse-active-hover-border-left-width:                             null;
+@table-cell-inverse-active-hover-border-left-color:                             null;
+@table-cell-inverse-active-hover-border-left-style:                             null;
+@table-cell-inverse-active-hover-shadow:                                        null;
+
+// Disabled
+
+@table-cell-inverse-active-disabled-text-color:                                 null;
+@table-cell-inverse-active-disabled-text-font-family:                           null;
+@table-cell-inverse-active-disabled-text-font-style:                            null;
+@table-cell-inverse-active-disabled-text-font-weight:                           null;
+@table-cell-inverse-active-disabled-text-transform:                             null;
+@table-cell-inverse-active-disabled-text-shadow:                                null;
+@table-cell-inverse-active-disabled-text-decoration:                            null;
+@table-cell-inverse-active-disabled-text-rendering:                             null;
+@table-cell-inverse-active-disabled-background-color:                           null;
+@table-cell-inverse-active-disabled-background-gradient-color-top:              null;
+@table-cell-inverse-active-disabled-background-gradient-color-bottom:           null;
+@table-cell-inverse-active-disabled-border-width:                               null;
+@table-cell-inverse-active-disabled-border-color:                               null;
+@table-cell-inverse-active-disabled-border-style:                               null;
+@table-cell-inverse-active-disabled-border-top-width:                           null;
+@table-cell-inverse-active-disabled-border-top-color:                           null;
+@table-cell-inverse-active-disabled-border-top-style:                           null;
+@table-cell-inverse-active-disabled-border-right-width:                         null;
+@table-cell-inverse-active-disabled-border-right-color:                         null;
+@table-cell-inverse-active-disabled-border-right-style:                         null;
+@table-cell-inverse-active-disabled-border-bottom-width:                        null;
+@table-cell-inverse-active-disabled-border-bottom-color:                        null;
+@table-cell-inverse-active-disabled-border-bottom-style:                        null;
+@table-cell-inverse-active-disabled-border-left-width:                          null;
+@table-cell-inverse-active-disabled-border-left-color:                          null;
+@table-cell-inverse-active-disabled-border-left-style:                          null;
+@table-cell-inverse-active-disabled-shadow:                                     null;
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -598,38 +678,6 @@ Padding
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Tabel Header Styling
@@ -645,8 +693,8 @@ Default
 @table-header-text-color:                                                       null;
 @table-header-text-font-family:                                                 null;
 @table-header-text-font-style:                                                  null;
-@table-header-text-font-weight:                                                 600;
-@table-header-text-transform:                                                   uppercase;
+@table-header-text-font-weight:                                                 null;
+@table-header-text-transform:                                                   null;
 @table-header-text-shadow:                                                      null;
 @table-header-text-decoration:                                                  null;
 @table-header-text-rendering:                                                   null;
@@ -700,36 +748,6 @@ Default
 @table-header-hover-border-left-style:                                          null;
 @table-header-hover-shadow:                                                     null;
 
-// Active
-
-@table-header-active-text-color:                                                null;
-@table-header-active-text-font-family:                                          null;
-@table-header-active-text-font-style:                                           null;
-@table-header-active-text-font-weight:                                          null;
-@table-header-active-text-transform:                                            null;
-@table-header-active-text-shadow:                                               null;
-@table-header-active-text-decoration:                                           null;
-@table-header-active-text-rendering:                                            null;
-@table-header-active-background-color:                                          color-lighten(@neutral, 92);
-@table-header-active-background-gradient-color-top:                             null;
-@table-header-active-background-gradient-color-bottom:                          null;
-@table-header-active-border-width:                                              null;
-@table-header-active-border-color:                                              null;
-@table-header-active-border-style:                                              null;
-@table-header-active-border-top-width:                                          null;
-@table-header-active-border-top-color:                                          null;
-@table-header-active-border-top-style:                                          null;
-@table-header-active-border-right-width:                                        null;
-@table-header-active-border-right-color:                                        null;
-@table-header-active-border-right-style:                                        null;
-@table-header-active-border-bottom-width:                                       null;
-@table-header-active-border-bottom-color:                                       null;
-@table-header-active-border-bottom-style:                                       null;
-@table-header-active-border-left-width:                                         null;
-@table-header-active-border-left-color:                                         null;
-@table-header-active-border-left-style:                                         null;
-@table-header-active-shadow:                                                    null;
-
 // Disabled
 
 @table-header-disabled-text-color:                                              null;
@@ -761,128 +779,286 @@ Default
 @table-header-disabled-shadow:                                                  null;
 
 /* -----------------------------------------------------------------------------
-Selected
+Active
 ----------------------------------------------------------------------------- */
 
 // Normal
 
-@table-header-selected-text-color:                                              null;
-@table-header-selected-text-font-family:                                        null;
-@table-header-selected-text-font-style:                                         null;
-@table-header-selected-text-font-weight:                                        null;
-@table-header-selected-text-transform:                                          null;
-@table-header-selected-text-shadow:                                             null;
-@table-header-selected-text-decoration:                                         null;
-@table-header-selected-text-rendering:                                          null;
-@table-header-selected-background-color:                                        color-lighten(@neutral, 92);
-@table-header-selected-background-gradient-color-top:                           null;
-@table-header-selected-background-gradient-color-bottom:                        null;
-@table-header-selected-border-width:                                            null;
-@table-header-selected-border-color:                                            null;
-@table-header-selected-border-style:                                            null;
-@table-header-selected-border-top-width:                                        null;
-@table-header-selected-border-top-color:                                        null;
-@table-header-selected-border-top-style:                                        null;
-@table-header-selected-border-right-width:                                      null;
-@table-header-selected-border-right-color:                                      null;
-@table-header-selected-border-right-style:                                      null;
-@table-header-selected-border-bottom-width:                                     null;
-@table-header-selected-border-bottom-color:                                     null;
-@table-header-selected-border-bottom-style:                                     null;
-@table-header-selected-border-left-width:                                       null;
-@table-header-selected-border-left-color:                                       null;
-@table-header-selected-border-left-style:                                       null;
-@table-header-selected-shadow:                                                  null;
+@table-header-active-text-color:                                                null;
+@table-header-active-text-font-family:                                          null;
+@table-header-active-text-font-style:                                           null;
+@table-header-active-text-font-weight:                                          null;
+@table-header-active-text-transform:                                            null;
+@table-header-active-text-shadow:                                               null;
+@table-header-active-text-decoration:                                           null;
+@table-header-active-text-rendering:                                            null;
+@table-header-active-background-color:                                          color-lighten(@neutral, 90);
+@table-header-active-background-gradient-color-top:                             null;
+@table-header-active-background-gradient-color-bottom:                          null;
+@table-header-active-border-width:                                              null;
+@table-header-active-border-color:                                              null;
+@table-header-active-border-style:                                              null;
+@table-header-active-border-top-width:                                          null;
+@table-header-active-border-top-color:                                          null;
+@table-header-active-border-top-style:                                          null;
+@table-header-active-border-right-width:                                        null;
+@table-header-active-border-right-color:                                        null;
+@table-header-active-border-right-style:                                        null;
+@table-header-active-border-bottom-width:                                       null;
+@table-header-active-border-bottom-color:                                       null;
+@table-header-active-border-bottom-style:                                       null;
+@table-header-active-border-left-width:                                         null;
+@table-header-active-border-left-color:                                         null;
+@table-header-active-border-left-style:                                         null;
+@table-header-active-shadow:                                                    null;
 
 // Hover
 
-@table-header-selected-hover-text-color:                                        null;
-@table-header-selected-hover-text-font-family:                                  null;
-@table-header-selected-hover-text-font-style:                                   null;
-@table-header-selected-hover-text-font-weight:                                  null;
-@table-header-selected-hover-text-transform:                                    null;
-@table-header-selected-hover-text-shadow:                                       null;
-@table-header-selected-hover-text-decoration:                                   null;
-@table-header-selected-hover-text-rendering:                                    null;
-@table-header-selected-hover-background-color:                                  color-lighten(@neutral, 90);
-@table-header-selected-hover-background-gradient-color-top:                     null;
-@table-header-selected-hover-background-gradient-color-bottom:                  null;
-@table-header-selected-hover-border-width:                                      null;
-@table-header-selected-hover-border-color:                                      null;
-@table-header-selected-hover-border-style:                                      null;
-@table-header-selected-hover-border-top-width:                                  null;
-@table-header-selected-hover-border-top-color:                                  null;
-@table-header-selected-hover-border-top-style:                                  null;
-@table-header-selected-hover-border-right-width:                                null;
-@table-header-selected-hover-border-right-color:                                null;
-@table-header-selected-hover-border-right-style:                                null;
-@table-header-selected-hover-border-bottom-width:                               null;
-@table-header-selected-hover-border-bottom-color:                               null;
-@table-header-selected-hover-border-bottom-style:                               null;
-@table-header-selected-hover-border-left-width:                                 null;
-@table-header-selected-hover-border-left-color:                                 null;
-@table-header-selected-hover-border-left-style:                                 null;
-@table-header-selected-hover-shadow:                                            null;
-
-// active
-
-@table-header-selected-active-text-color:                                       null;
-@table-header-selected-active-text-font-family:                                 null;
-@table-header-selected-active-text-font-style:                                  null;
-@table-header-selected-active-text-font-weight:                                 null;
-@table-header-selected-active-text-transform:                                   null;
-@table-header-selected-active-text-shadow:                                      null;
-@table-header-selected-active-text-decoration:                                  null;
-@table-header-selected-active-text-rendering:                                   null;
-@table-header-selected-active-background-color:                                 color-lighten(@neutral, 90);
-@table-header-selected-active-background-gradient-color-top:                    null;
-@table-header-selected-active-background-gradient-color-bottom:                 null;
-@table-header-selected-active-border-width:                                     null;
-@table-header-selected-active-border-color:                                     null;
-@table-header-selected-active-border-style:                                     null;
-@table-header-selected-active-border-top-width:                                 null;
-@table-header-selected-active-border-top-color:                                 null;
-@table-header-selected-active-border-top-style:                                 null;
-@table-header-selected-active-border-right-width:                               null;
-@table-header-selected-active-border-right-color:                               null;
-@table-header-selected-active-border-right-style:                               null;
-@table-header-selected-active-border-bottom-width:                              null;
-@table-header-selected-active-border-bottom-color:                              null;
-@table-header-selected-active-border-bottom-style:                              null;
-@table-header-selected-active-border-left-width:                                null;
-@table-header-selected-active-border-left-color:                                null;
-@table-header-selected-active-border-left-style:                                null;
-@table-header-selected-active-shadow:                                           null;
+@table-header-active-hover-text-color:                                          null;
+@table-header-active-hover-text-font-family:                                    null;
+@table-header-active-hover-text-font-style:                                     null;
+@table-header-active-hover-text-font-weight:                                    null;
+@table-header-active-hover-text-transform:                                      null;
+@table-header-active-hover-text-shadow:                                         null;
+@table-header-active-hover-text-decoration:                                     null;
+@table-header-active-hover-text-rendering:                                      null;
+@table-header-active-hover-background-color:                                    color-lighten(@neutral, 90);
+@table-header-active-hover-background-gradient-color-top:                       null;
+@table-header-active-hover-background-gradient-color-bottom:                    null;
+@table-header-active-hover-border-width:                                        null;
+@table-header-active-hover-border-color:                                        null;
+@table-header-active-hover-border-style:                                        null;
+@table-header-active-hover-border-top-width:                                    null;
+@table-header-active-hover-border-top-color:                                    null;
+@table-header-active-hover-border-top-style:                                    null;
+@table-header-active-hover-border-right-width:                                  null;
+@table-header-active-hover-border-right-color:                                  null;
+@table-header-active-hover-border-right-style:                                  null;
+@table-header-active-hover-border-bottom-width:                                 null;
+@table-header-active-hover-border-bottom-color:                                 null;
+@table-header-active-hover-border-bottom-style:                                 null;
+@table-header-active-hover-border-left-width:                                   null;
+@table-header-active-hover-border-left-color:                                   null;
+@table-header-active-hover-border-left-style:                                   null;
+@table-header-active-hover-shadow:                                              null;
 
 // Disabled
 
-@table-header-selected-disabled-text-color:                                     null;
-@table-header-selected-disabled-text-font-family:                               null;
-@table-header-selected-disabled-text-font-style:                                null;
-@table-header-selected-disabled-text-font-weight:                               null;
-@table-header-selected-disabled-text-transform:                                 null;
-@table-header-selected-disabled-text-shadow:                                    null;
-@table-header-selected-disabled-text-decoration:                                null;
-@table-header-selected-disabled-text-rendering:                                 null;
-@table-header-selected-disabled-background-color:                               null;
-@table-header-selected-disabled-background-gradient-color-top:                  null;
-@table-header-selected-disabled-background-gradient-color-bottom:               null;
-@table-header-selected-disabled-border-width:                                   null;
-@table-header-selected-disabled-border-color:                                   null;
-@table-header-selected-disabled-border-style:                                   null;
-@table-header-selected-disabled-border-top-width:                               null;
-@table-header-selected-disabled-border-top-color:                               null;
-@table-header-selected-disabled-border-top-style:                               null;
-@table-header-selected-disabled-border-right-width:                             null;
-@table-header-selected-disabled-border-right-color:                             null;
-@table-header-selected-disabled-border-right-style:                             null;
-@table-header-selected-disabled-border-bottom-width:                            null;
-@table-header-selected-disabled-border-bottom-color:                            null;
-@table-header-selected-disabled-border-bottom-style:                            null;
-@table-header-selected-disabled-border-left-width:                              null;
-@table-header-selected-disabled-border-left-color:                              null;
-@table-header-selected-disabled-border-left-style:                              null;
-@table-header-selected-disabled-shadow:                                         null;
+@table-header-active-disabled-text-color:                                       null;
+@table-header-active-disabled-text-font-family:                                 null;
+@table-header-active-disabled-text-font-style:                                  null;
+@table-header-active-disabled-text-font-weight:                                 null;
+@table-header-active-disabled-text-transform:                                   null;
+@table-header-active-disabled-text-shadow:                                      null;
+@table-header-active-disabled-text-decoration:                                  null;
+@table-header-active-disabled-text-rendering:                                   null;
+@table-header-active-disabled-background-color:                                 null;
+@table-header-active-disabled-background-gradient-color-top:                    null;
+@table-header-active-disabled-background-gradient-color-bottom:                 null;
+@table-header-active-disabled-border-width:                                     null;
+@table-header-active-disabled-border-color:                                     null;
+@table-header-active-disabled-border-style:                                     null;
+@table-header-active-disabled-border-top-width:                                 null;
+@table-header-active-disabled-border-top-color:                                 null;
+@table-header-active-disabled-border-top-style:                                 null;
+@table-header-active-disabled-border-right-width:                               null;
+@table-header-active-disabled-border-right-color:                               null;
+@table-header-active-disabled-border-right-style:                               null;
+@table-header-active-disabled-border-bottom-width:                              null;
+@table-header-active-disabled-border-bottom-color:                              null;
+@table-header-active-disabled-border-bottom-style:                              null;
+@table-header-active-disabled-border-left-width:                                null;
+@table-header-active-disabled-border-left-color:                                null;
+@table-header-active-disabled-border-left-style:                                null;
+@table-header-active-disabled-shadow:                                           null;
+
+/* -----------------------------------------------------------------------------
+Default (Inverse)
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@table-header-inverse-text-color:                                               @white;
+@table-header-inverse-text-font-family:                                         null;
+@table-header-inverse-text-font-style:                                          null;
+@table-header-inverse-text-font-weight:                                         null;
+@table-header-inverse-text-transform:                                           null;
+@table-header-inverse-text-shadow:                                              null;
+@table-header-inverse-text-decoration:                                          null;
+@table-header-inverse-text-rendering:                                           null;
+@table-header-inverse-background-color:                                         color-lighten(@neutral, 0);
+@table-header-inverse-background-gradient-color-top:                            null;
+@table-header-inverse-background-gradient-color-bottom:                         null;
+@table-header-inverse-border-width:                                             null;
+@table-header-inverse-border-color:                                             color-lighten(@neutral, 0);
+@table-header-inverse-border-style:                                             null;
+@table-header-inverse-border-top-width:                                         null;
+@table-header-inverse-border-top-color:                                         null;
+@table-header-inverse-border-top-style:                                         null;
+@table-header-inverse-border-right-width:                                       null;
+@table-header-inverse-border-right-color:                                       null;
+@table-header-inverse-border-right-style:                                       null;
+@table-header-inverse-border-bottom-width:                                      null;
+@table-header-inverse-border-bottom-color:                                      null;
+@table-header-inverse-border-bottom-style:                                      null;
+@table-header-inverse-border-left-width:                                        null;
+@table-header-inverse-border-left-color:                                        null;
+@table-header-inverse-border-left-style:                                        null;
+@table-header-inverse-shadow:                                                   null;
+
+// Hover
+
+@table-header-inverse-hover-text-color:                                         @white;
+@table-header-inverse-hover-text-font-family:                                   null;
+@table-header-inverse-hover-text-font-style:                                    null;
+@table-header-inverse-hover-text-font-weight:                                   null;
+@table-header-inverse-hover-text-transform:                                     null;
+@table-header-inverse-hover-text-shadow:                                        null;
+@table-header-inverse-hover-text-decoration:                                    null;
+@table-header-inverse-hover-text-rendering:                                     null;
+@table-header-inverse-hover-background-color:                                   color-lighten(@neutral, 3);
+@table-header-inverse-hover-background-gradient-color-top:                      null;
+@table-header-inverse-hover-background-gradient-color-bottom:                   null;
+@table-header-inverse-hover-border-width:                                       null;
+@table-header-inverse-hover-border-color:                                       color-lighten(@neutral, 3);
+@table-header-inverse-hover-border-style:                                       null;
+@table-header-inverse-hover-border-top-width:                                   null;
+@table-header-inverse-hover-border-top-color:                                   null;
+@table-header-inverse-hover-border-top-style:                                   null;
+@table-header-inverse-hover-border-right-width:                                 null;
+@table-header-inverse-hover-border-right-color:                                 null;
+@table-header-inverse-hover-border-right-style:                                 null;
+@table-header-inverse-hover-border-bottom-width:                                null;
+@table-header-inverse-hover-border-bottom-color:                                null;
+@table-header-inverse-hover-border-bottom-style:                                null;
+@table-header-inverse-hover-border-left-width:                                  null;
+@table-header-inverse-hover-border-left-color:                                  null;
+@table-header-inverse-hover-border-left-style:                                  null;
+@table-header-inverse-hover-shadow:                                             null;
+
+// Disabled
+
+@table-header-inverse-disabled-text-color:                                      null;
+@table-header-inverse-disabled-text-font-family:                                null;
+@table-header-inverse-disabled-text-font-style:                                 null;
+@table-header-inverse-disabled-text-font-weight:                                null;
+@table-header-inverse-disabled-text-transform:                                  null;
+@table-header-inverse-disabled-text-shadow:                                     null;
+@table-header-inverse-disabled-text-decoration:                                 null;
+@table-header-inverse-disabled-text-rendering:                                  null;
+@table-header-inverse-disabled-background-color:                                null;
+@table-header-inverse-disabled-background-gradient-color-top:                   null;
+@table-header-inverse-disabled-background-gradient-color-bottom:                null;
+@table-header-inverse-disabled-border-width:                                    null;
+@table-header-inverse-disabled-border-color:                                    null;
+@table-header-inverse-disabled-border-style:                                    null;
+@table-header-inverse-disabled-border-top-width:                                null;
+@table-header-inverse-disabled-border-top-color:                                null;
+@table-header-inverse-disabled-border-top-style:                                null;
+@table-header-inverse-disabled-border-right-width:                              null;
+@table-header-inverse-disabled-border-right-color:                              null;
+@table-header-inverse-disabled-border-right-style:                              null;
+@table-header-inverse-disabled-border-bottom-width:                             null;
+@table-header-inverse-disabled-border-bottom-color:                             null;
+@table-header-inverse-disabled-border-bottom-style:                             null;
+@table-header-inverse-disabled-border-left-width:                               null;
+@table-header-inverse-disabled-border-left-color:                               null;
+@table-header-inverse-disabled-border-left-style:                               null;
+@table-header-inverse-disabled-shadow:                                          null;
+
+/* -----------------------------------------------------------------------------
+Active (Inverse)
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@table-header-inverse-active-text-color:                                        null;
+@table-header-inverse-active-text-font-family:                                  null;
+@table-header-inverse-active-text-font-style:                                   null;
+@table-header-inverse-active-text-font-weight:                                  null;
+@table-header-inverse-active-text-transform:                                    null;
+@table-header-inverse-active-text-shadow:                                       null;
+@table-header-inverse-active-text-decoration:                                   null;
+@table-header-inverse-active-text-rendering:                                    null;
+@table-header-inverse-active-background-color:                                  color-lighten(@neutral, 7);
+@table-header-inverse-active-background-gradient-color-top:                     null;
+@table-header-inverse-active-background-gradient-color-bottom:                  null;
+@table-header-inverse-active-border-width:                                      null;
+@table-header-inverse-active-border-color:                                      color-lighten(@neutral, 7);
+@table-header-inverse-active-border-style:                                      null;
+@table-header-inverse-active-border-top-width:                                  null;
+@table-header-inverse-active-border-top-color:                                  null;
+@table-header-inverse-active-border-top-style:                                  null;
+@table-header-inverse-active-border-right-width:                                null;
+@table-header-inverse-active-border-right-color:                                null;
+@table-header-inverse-active-border-right-style:                                null;
+@table-header-inverse-active-border-bottom-width:                               null;
+@table-header-inverse-active-border-bottom-color:                               null;
+@table-header-inverse-active-border-bottom-style:                               null;
+@table-header-inverse-active-border-left-width:                                 null;
+@table-header-inverse-active-border-left-color:                                 null;
+@table-header-inverse-active-border-left-style:                                 null;
+@table-header-inverse-active-shadow:                                            null;
+
+// Hover
+
+@table-header-inverse-active-hover-text-color:                                  null;
+@table-header-inverse-active-hover-text-font-family:                            null;
+@table-header-inverse-active-hover-text-font-style:                             null;
+@table-header-inverse-active-hover-text-font-weight:                            null;
+@table-header-inverse-active-hover-text-transform:                              null;
+@table-header-inverse-active-hover-text-shadow:                                 null;
+@table-header-inverse-active-hover-text-decoration:                             null;
+@table-header-inverse-active-hover-text-rendering:                              null;
+@table-header-inverse-active-hover-background-color:                            color-lighten(@neutral, 7);
+@table-header-inverse-active-hover-background-gradient-color-top:               null;
+@table-header-inverse-active-hover-background-gradient-color-bottom:            null;
+@table-header-inverse-active-hover-border-width:                                null;
+@table-header-inverse-active-hover-border-color:                                color-lighten(@neutral, 7);
+@table-header-inverse-active-hover-border-style:                                null;
+@table-header-inverse-active-hover-border-top-width:                            null;
+@table-header-inverse-active-hover-border-top-color:                            null;
+@table-header-inverse-active-hover-border-top-style:                            null;
+@table-header-inverse-active-hover-border-right-width:                          null;
+@table-header-inverse-active-hover-border-right-color:                          null;
+@table-header-inverse-active-hover-border-right-style:                          null;
+@table-header-inverse-active-hover-border-bottom-width:                         null;
+@table-header-inverse-active-hover-border-bottom-color:                         null;
+@table-header-inverse-active-hover-border-bottom-style:                         null;
+@table-header-inverse-active-hover-border-left-width:                           null;
+@table-header-inverse-active-hover-border-left-color:                           null;
+@table-header-inverse-active-hover-border-left-style:                           null;
+@table-header-inverse-active-hover-shadow:                                      null;
+
+// Disabled
+
+@table-header-inverse-active-disabled-text-color:                               null;
+@table-header-inverse-active-disabled-text-font-family:                         null;
+@table-header-inverse-active-disabled-text-font-style:                          null;
+@table-header-inverse-active-disabled-text-font-weight:                         null;
+@table-header-inverse-active-disabled-text-transform:                           null;
+@table-header-inverse-active-disabled-text-shadow:                              null;
+@table-header-inverse-active-disabled-text-decoration:                          null;
+@table-header-inverse-active-disabled-text-rendering:                           null;
+@table-header-inverse-active-disabled-background-color:                         null;
+@table-header-inverse-active-disabled-background-gradient-color-top:            null;
+@table-header-inverse-active-disabled-background-gradient-color-bottom:         null;
+@table-header-inverse-active-disabled-border-width:                             null;
+@table-header-inverse-active-disabled-border-color:                             null;
+@table-header-inverse-active-disabled-border-style:                             null;
+@table-header-inverse-active-disabled-border-top-width:                         null;
+@table-header-inverse-active-disabled-border-top-color:                         null;
+@table-header-inverse-active-disabled-border-top-style:                         null;
+@table-header-inverse-active-disabled-border-right-width:                       null;
+@table-header-inverse-active-disabled-border-right-color:                       null;
+@table-header-inverse-active-disabled-border-right-style:                       null;
+@table-header-inverse-active-disabled-border-bottom-width:                      null;
+@table-header-inverse-active-disabled-border-bottom-color:                      null;
+@table-header-inverse-active-disabled-border-bottom-style:                      null;
+@table-header-inverse-active-disabled-border-left-width:                        null;
+@table-header-inverse-active-disabled-border-left-color:                        null;
+@table-header-inverse-active-disabled-border-left-style:                        null;
+@table-header-inverse-active-disabled-shadow:                                   null;
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
