@@ -1,0 +1,193 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+code/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@code-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Code
+  ----------------------------------------------------------------------------- */
+
+  code,
+  .code {
+
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: initial;
+    .text-size-variant(code, null);
+    .shape-layout-variant(code, null);
+    .text-style-variant(code);
+    .shape-style-variant(code);
+
+    & when not (@code-border-radius = null) {
+
+      border-radius: @code-border-radius;
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Code Inverse (.code-inverse)
+    ----------------------------------------------------------------------------- */
+
+    &.code-inverse {
+
+      .text-style-variant(code-inverse);
+      .shape-style-variant(code-inverse);
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@code-enabled) and (@code-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code
+      ----------------------------------------------------------------------------- */
+
+      code,
+      .code {
+
+        .text-size-variant(code, scale-screen-mini);
+        .shape-layout-variant(code, scale-screen-mini);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-scale-screen-mini = null) {
+
+          border-radius: @code-border-radius * @code-border-radius-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@code-enabled) and (@code-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code
+      ----------------------------------------------------------------------------- */
+
+      code,
+      .code {
+
+        .text-size-variant(code, scale-screen-small);
+        .shape-layout-variant(code, scale-screen-small);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-scale-screen-small = null) {
+
+          border-radius: @code-border-radius * @code-border-radius-scale-screen-small;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@code-enabled) and (@code-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code
+      ----------------------------------------------------------------------------- */
+
+      code,
+      .code {
+
+        .text-size-variant(code, scale-screen-medium);
+        .shape-layout-variant(code, scale-screen-medium);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-scale-screen-medium = null) {
+
+          border-radius: @code-border-radius * @code-border-radius-scale-screen-medium;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@code-enabled) and (@code-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code
+      ----------------------------------------------------------------------------- */
+
+      code,
+      .code {
+
+        .text-size-variant(code, scale-screen-large);
+        .shape-layout-variant(code, scale-screen-large);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-scale-screen-large = null) {
+
+          border-radius: @code-border-radius * @code-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

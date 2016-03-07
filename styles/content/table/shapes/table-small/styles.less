@@ -1,0 +1,383 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+table-small/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@table-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Table
+  ----------------------------------------------------------------------------- */
+
+  .table.table-small {
+
+    .text-size-variant(table-small, null);
+    .shape-layout-variant(table-small, null);
+    .shape-layout-variant(table-small, short, null);
+    .shape-layout-variant(table-small, tall, null);
+
+    & when not (@table-small-border-collapse = null) {
+
+      border-collapse: @table-small-border-collapse;
+
+    }
+
+    & when not (@table-small-border-radius = null) {
+
+      /* -----------------------------------------------------------------------------
+      Table Border Radius
+      ----------------------------------------------------------------------------- */
+
+      border-radius: @table-small-border-radius;
+
+      tbody {
+
+        tr {
+
+          &:first-child {
+
+            td,
+            th {
+
+              &:first-child {
+
+                .border-top-left-radius(@table-small-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-top-right-radius(@table-small-border-radius);
+
+              }
+
+            }
+
+          }
+
+          &:last-child {
+
+            td,
+            th {
+
+              &:first-child {
+
+                .border-bottom-left-radius(@table-small-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-bottom-right-radius(@table-small-border-radius);
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      > thead {
+
+        tr {
+
+          &:first-child {
+
+            th {
+
+              &:first-child {
+
+                .border-top-left-radius(@table-small-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-top-right-radius(@table-small-border-radius);
+
+              }
+
+            }
+
+          }
+
+        }
+
+        + tbody {
+
+          tr {
+
+            &:first-child {
+
+              th,
+              td {
+
+                border-radius: 0px !important;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+    th,
+    td {
+
+      .text-size-variant(table-small-cell, null);
+      .shape-layout-variant(table-small-cell, null);
+
+      & when not (@table-small-border-collapse = null) {
+
+        border-collapse: @table-small-border-collapse;
+
+      }
+
+      &:before {
+
+        & when not (@table-small-cell-text-line-height = null) {
+
+          height: @table-small-cell-text-line-height;
+
+        }
+
+      }
+
+    }
+
+    // Table Head
+
+    thead {
+
+      th {
+
+        .text-size-variant(table-small-header, null);
+        .shape-layout-variant(table-small-header, null);
+
+        &:before {
+
+          & when not (@table-small-header-text-line-height = null) {
+
+            height: @table-small-header-text-line-height;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@table-small-enabled) and (@table-small-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table.table-small {
+
+        .text-size-variant(table-small, scale-screen-mini);
+        .shape-layout-variant(table-small, scale-screen-mini);
+        .shape-layout-variant(table-small, short, scale-screen-mini);
+        .shape-layout-variant(table-small, tall, scale-screen-mini);
+
+        th,
+        td {
+
+          .text-size-variant(table-small-cell, scale-screen-mini);
+          .shape-layout-variant(table-small-cell, scale-screen-mini);
+
+          &:before {
+
+            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-mini = null) {
+
+              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-mini;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@table-small-enabled) and (@table-small-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table.table-small {
+
+        .text-size-variant(table-small, scale-screen-small);
+        .shape-layout-variant(table-small, scale-screen-small);
+        .shape-layout-variant(table-small, short, scale-screen-small);
+        .shape-layout-variant(table-small, tall, scale-screen-small);
+
+        th,
+        td {
+
+          .text-size-variant(table-small-cell, scale-screen-small);
+          .shape-layout-variant(table-small-cell, scale-screen-small);
+
+          &:before {
+
+            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-small = null) {
+
+              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-small;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@table-small-enabled) and (@table-small-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table.table-small {
+
+        .text-size-variant(table-small, scale-screen-medium);
+        .shape-layout-variant(table-small, scale-screen-medium);
+        .shape-layout-variant(table-small, short, scale-screen-medium);
+        .shape-layout-variant(table-small, tall, scale-screen-medium);
+
+        th,
+        td {
+
+          .text-size-variant(table-small-cell, scale-screen-medium);
+          .shape-layout-variant(table-small-cell, scale-screen-medium);
+
+          &:before {
+
+            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-medium = null) {
+
+              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-medium;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@table-small-enabled) and (@table-small-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table.table-small {
+
+        .text-size-variant(table-small, scale-screen-large);
+        .shape-layout-variant(table-small, scale-screen-large);
+        .shape-layout-variant(table-small, short, scale-screen-large);
+        .shape-layout-variant(table-small, tall, scale-screen-large);
+
+        th,
+        td {
+
+          .text-size-variant(table-small-cell, scale-screen-large);
+          .shape-layout-variant(table-small-cell, scale-screen-large);
+
+          &:before {
+
+            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-large = null) {
+
+              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-large;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

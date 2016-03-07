@@ -1,0 +1,203 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+code-block/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@code-block-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Code Block
+  ----------------------------------------------------------------------------- */
+
+  pre,
+  .code-block {
+
+    display: block;
+    word-break: break-all;
+    white-space: pre;
+    .text-size-variant(code-block, null);
+    .shape-layout-variant(code-block, null);
+    .text-style-variant(code-block);
+    .shape-style-variant(code-block);
+    .shape-layout-variant(code-block, short, null);
+    .shape-layout-variant(code-block, tall, null);
+
+    & when not (@code-block-border-radius = null) {
+
+      border-radius: @code-block-border-radius;
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Code Block Inverse (.code-block-inverse)
+    ----------------------------------------------------------------------------- */
+
+    &.code-block-inverse {
+
+      .text-style-variant(code-block-inverse);
+      .shape-style-variant(code-block-inverse);
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@screen-mini) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-mini) {
+
+    & when (@code-block-enabled) and (@code-block-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code Block
+      ----------------------------------------------------------------------------- */
+
+      pre,
+      .code-block {
+
+        .text-size-variant(code-block, scale-screen-mini);
+        .shape-layout-variant(code-block, scale-screen-mini);
+        .shape-layout-variant(code-block, short, scale-screen-mini);
+        .shape-layout-variant(code-block, tall, scale-screen-mini);
+
+        & when not (@code-block-border-radius = null) and not (@code-block-border-radius-scale-screen-mini = null) {
+
+          border-radius: @code-block-border-radius * @code-block-border-radius-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@screen-small) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-small) {
+
+    & when (@code-block-enabled) and (@code-block-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code Block
+      ----------------------------------------------------------------------------- */
+
+      pre,
+      .code-block {
+
+        .text-size-variant(code-block, scale-screen-small);
+        .shape-layout-variant(code-block, scale-screen-small);
+        .shape-layout-variant(code-block, short, scale-screen-small);
+        .shape-layout-variant(code-block, tall, scale-screen-small);
+
+        & when not (@code-block-border-radius = null) and not (@code-block-border-radius-scale-screen-small = null) {
+
+          border-radius: @code-block-border-radius * @code-block-border-radius-scale-screen-small;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@screen-medium) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-medium) {
+
+    & when (@code-block-enabled) and (@code-block-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code Block
+      ----------------------------------------------------------------------------- */
+
+      pre,
+      .code-block {
+
+        .text-size-variant(code-block, scale-screen-medium);
+        .shape-layout-variant(code-block, scale-screen-medium);
+        .shape-layout-variant(code-block, short, scale-screen-medium);
+        .shape-layout-variant(code-block, tall, scale-screen-medium);
+
+        & when not (@code-block-border-radius = null) and not (@code-block-border-radius-scale-screen-medium = null) {
+
+          border-radius: @code-block-border-radius * @code-block-border-radius-scale-screen-medium;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@screen-large) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @screen-large) {
+
+    & when (@code-block-enabled) and (@code-block-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code Block
+      ----------------------------------------------------------------------------- */
+
+      pre,
+      .code-block {
+
+        .text-size-variant(code-block, scale-screen-large);
+        .shape-layout-variant(code-block, scale-screen-large);
+        .shape-layout-variant(code-block, short, scale-screen-large);
+        .shape-layout-variant(code-block, tall, scale-screen-large);
+
+        & when not (@code-block-border-radius = null) and not (@code-block-border-radius-scale-screen-large = null) {
+
+          border-radius: @code-block-border-radius * @code-block-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
