@@ -25,6 +25,9 @@ var argv          = require('yargs').argv,
 
 var reload        = browserSync.reload;
 var config        = {};
+var messages = {
+  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+};
 
 var config_vars   = {
   dev: {
@@ -94,10 +97,6 @@ var files = {
 
 gulp.task('default', ['serve']);
 
-// Build Canvas and Documentation
-
-gulp.task('build', ['canvas:build', 'docs:build']);
-
 // Build and Serve Documentation
 
 gulp.task('serve', ['build'], function() {
@@ -116,20 +115,9 @@ gulp.task('serve', ['build'], function() {
 
 });
 
-// Watch for file changes
+// Build Canvas and Documentation
 
-gulp.task("watch", function () {
-
-  gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
-  gulp.watch([dirs.docs.javascripts + "/**/*.js"], ["docs:javascripts"]);
-  gulp.watch([dirs.canvas.styles + "/**/*.less"], ["canvas:styles", "docs:styles"]);
-  gulp.watch([
-      dirs.docs.path + '/**/*.html',
-      dirs.docs.path + '/**/*.md',
-      dirs.docs.path + '/_data/**/*'
-    ], ['jekyll-rebuild']);
-
-});
+gulp.task('build', ['canvas:build', 'docs:build']);
 
 // Build Canvas Styles
 
@@ -157,16 +145,19 @@ gulp.task('clean', function() {
 
 });
 
-// Minify Documentation HTML
+// Watch for file changes
 
-gulp.task('docs:html', function() {
+gulp.task("watch", function () {
 
-  gulp.src(dirs.docs.dist.path + '/**/*.html')
-    .pipe(htmlmin({
-      removeComments: true,
-      collapseWhitespace: true
-    }))
-    .pipe(gulp.dest(dirs.docs.dist.path));
+  gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
+  gulp.watch([dirs.docs.javascripts + "/**/*.js"], ["docs:javascripts"]);
+  gulp.watch([dirs.canvas.styles + "/**/*.less"], ["canvas:styles", "docs:styles"]);
+  gulp.watch([
+    dirs.docs.path + '/**/*.html',
+    dirs.docs.path + '/**/*.md',
+    dirs.docs.path + '/_data/**/*',
+    '!' + dirs.docs.dist.path + '/**/*'
+  ], ['jekyll-rebuild']);
 
 });
 
@@ -192,7 +183,6 @@ gulp.task("canvas:styles", function () {
   return gulp.src(dirs.canvas.styles + "/" + files.canvas.styles + ".less")
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(watchLess(dirs.canvas.styles + '/**/*.less'))
     .pipe(less({
       paths: [dirs.canvas.styles],
       plugins: [colorLighten]
@@ -224,10 +214,6 @@ gulp.task("canvas:styles", function () {
       sourceRoot: dirs.canvas.styles
     }))
     .pipe(gulp.dest(dirs.canvas.dist.styles));
-    // .pipe(browserSync.reload({
-    //   stream: true,
-    //   once: true
-    // }));
 
 });
 
@@ -238,7 +224,6 @@ gulp.task("docs:styles", function () {
   return gulp.src(dirs.docs.styles + "/" + files.docs.styles + ".less")
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(watchLess(dirs.docs.styles + '/**/*.less'))
     .pipe(less({
       paths: [dirs.docs.styles],
       plugins: [colorLighten]
@@ -270,10 +255,6 @@ gulp.task("docs:styles", function () {
       sourceRoot: dirs.docs.styles
     }))
     .pipe(gulp.dest(dirs.docs.dist.styles));
-    // .pipe(browserSync.reload({
-    //   stream: true,
-    //   once: true
-    // }));
 
 });
 
@@ -297,26 +278,13 @@ gulp.task("docs:javascripts", function () {
       this.emit("end");
     }))
     .pipe(gulp.dest(dirs.docs.dist.javascripts));
-    // .pipe(browserSync.reload({
-    //   stream: true,
-    //   once: true
-    // }));
 
 });
 
 // Start Jekyll Server then start Documentation Site
 
-gulp.task('browser-sync', ['jekyll'], function() {
-  var files = [
-      dirs.docs.dist.styles + '/**/*.css',
-      dirs.docs.dist.javascripts + '**/*.js'
-      // dirs.docs.dist.path + '/**/*.html'
-   ];
-
+gulp.task('browser-sync', ['jekyll-build'], function() {
   browserSync({
-    files: files,
-    injectChanges: true,
-    reloadDebounce: 2000,
     server: {
       baseDir: dirs.docs.dist.path,
       open: true,
@@ -327,22 +295,21 @@ gulp.task('browser-sync', ['jekyll'], function() {
 
 // Start Jekyll Server
 
-gulp.task('jekyll', function (gulpCallBack) {
+gulp.task('jekyll-build', function (done) {
+
+  browserSync.notify(messages.jekyllBuild);
 
   var spawn = require('child_process').spawn;
-  var jekyll = spawn('jekyll', ['build', '--config=' + dirs.docs.path + '/' + config.jekyllConfig, '--source=' + dirs.docs.path, '--destination=' + dirs.docs.dist.path], {
-      stdio: 'inherit'
-    });
 
-  jekyll.on('exit', function(code) {
-    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
-  });
+  var jekyll = spawn('jekyll', ['build', '--config=' + dirs.docs.path + '/' + config.jekyllConfig, '--source=' + dirs.docs.path, '--destination=' + dirs.docs.dist.path], {
+    stdio: 'inherit'
+  }).on('close', done);
+
+  return jekyll;
 
 });
 
-// Rebuild Jekyll Server
-
-gulp.task('jekyll-rebuild', ['jekyll'], function() {
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 
   browserSync.reload();
 

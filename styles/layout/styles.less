@@ -8,56 +8,48 @@ layout/styles.less
 
 
 
-/* -----------------------------------------------------------------------------
-Foundation
------------------------------------------------------------------------------ */
-
-*,
-*:before,
-*:after {
-
-  box-sizing: border-box;
-
-}
-
-body {
-
-  margin: 0px;
-  background-color: @body-background-color;
-  height: 100%;
-  overflow-x: hidden;
-  position: relative;
-
-}
-
-/* -----------------------------------------------------------------------------
-Canvas
------------------------------------------------------------------------------ */
-
-.canvas {
-
-  position: relative;
-  background-color: @canvas-background-color;
-
-}
-
-
-
-
-
-
-
-
-
-& when (true) {
+& when (@layout-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Heading 1
+  Foundation
   ----------------------------------------------------------------------------- */
 
-  .element-name {
+  *,
+  *:before,
+  *:after {
 
-    // Heading 2
+    box-sizing: border-box;
+
+  }
+
+  body {
+
+    margin: 0px;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+
+    & when not (@body-background-color = null) {
+
+      background-color: @body-background-color;
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Canvas
+  ----------------------------------------------------------------------------- */
+
+  .canvas {
+
+    position: relative;
+
+    & when not (@canvas-background-color = null) {
+
+      background-color: @canvas-background-color;
+
+    }
 
   }
 
@@ -65,13 +57,13 @@ Canvas
 
 
 
-& when (@screen-mini-enabled) {
+& when (@layout-scale-screen-mini-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@screen-mini) and wider
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @screen-mini) {
+  @media (min-width: @layout-screen-mini-min-width) {
 
   }
 
@@ -79,13 +71,13 @@ Canvas
 
 
 
-& when (@screen-small-enabled) {
+& when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@screen-small) and wider
+  Screen Size: Small (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @screen-small) {
+  @media (min-width: @layout-screen-small-min-width) {
 
   }
 
@@ -93,13 +85,13 @@ Canvas
 
 
 
-& when (@screen-medium-enabled) {
+& when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@screen-medium) and wider
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @screen-medium) {
+  @media (min-width: @layout-screen-medium-min-width) {
 
   }
 
@@ -107,13 +99,13 @@ Canvas
 
 
 
-& when (@screen-large-enabled) {
+& when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@screen-large) and wider
+  Screen Size: large (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @screen-large) {
+  @media (min-width: @layout-screen-large-min-width) {
 
   }
 
