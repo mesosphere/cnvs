@@ -1,0 +1,145 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+pod/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@pod-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  pod
+  ----------------------------------------------------------------------------- */
+
+  .pod {
+
+    .shape-layout-variant(pod, null);
+    .shape-layout-variant(pod, short, null);
+    .shape-layout-variant(pod, tall, null);
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-mini-min-width) {
+
+    & when (@pod-enabled) and (@pod-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      pod
+      ----------------------------------------------------------------------------- */
+
+      .pod {
+
+        .shape-layout-variant(pod, scale-screen-mini);
+        .shape-layout-variant(pod, short, scale-screen-mini);
+        .shape-layout-variant(pod, tall, scale-screen-mini);
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-small-enabled) and (@pod-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@pod-enabled) and (@pod-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      pod
+      ----------------------------------------------------------------------------- */
+
+      .pod {
+
+        .shape-layout-variant(pod, scale-screen-small);
+        .shape-layout-variant(pod, short, scale-screen-small);
+        .shape-layout-variant(pod, tall, scale-screen-small);
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-medium-enabled) and (@pod-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@pod-enabled) and (@pod-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      pod
+      ----------------------------------------------------------------------------- */
+
+      .pod {
+
+        .shape-layout-variant(pod, scale-screen-medium);
+        .shape-layout-variant(pod, short, scale-screen-medium);
+        .shape-layout-variant(pod, tall, scale-screen-medium);
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-large-enabled) and (@pod-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@pod-enabled) and (@pod-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      pod
+      ----------------------------------------------------------------------------- */
+
+      .pod {
+
+        .shape-layout-variant(pod, scale-screen-large);
+        .shape-layout-variant(pod, short, scale-screen-large);
+        .shape-layout-variant(pod, tall, scale-screen-large);
+
+      }
+
+    }
+
+  }
+
+}
