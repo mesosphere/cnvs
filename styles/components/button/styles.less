@@ -20,7 +20,6 @@ button/styles.less
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: @button-height;
     //transition: all 0.05s ease;
     .text-size-variant(button, null);
     .shape-layout-variant(button, null);
@@ -28,6 +27,12 @@ button/styles.less
     .shape-layout-variant(button, wide, null);
     .text-style-variant(button);
     .shape-style-variant(button);
+
+    & when not (@button-height = null) {
+
+      height: @button-height;
+
+    }
 
     & when not (@button-border-radius = null) {
 

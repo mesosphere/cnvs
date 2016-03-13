@@ -86,10 +86,14 @@ $(function() {
     Sticky Sidebar Page Navigation
     --------------------------------------------------------------------------- */
 
-    // $('.page-header').stick_in_parent({
-    //   parent: $('.page')
+    // $('.sidebar').stick_in_parent({
+    //   parent: $('.canvas')
     // });
-    //$('.page-navigation-sticky').stick_in_parent();
+
+    // $('.page-navigation-sticky').stick_in_parent({
+    //   parent: $('#page-navigation')
+    // });
+
     $(".custom-scrollbar").mCustomScrollbar({
       theme: 'dark',
       scrollInertia: 0,

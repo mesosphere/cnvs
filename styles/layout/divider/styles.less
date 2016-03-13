@@ -1,0 +1,228 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+divider/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@divider-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Divider
+  ----------------------------------------------------------------------------- */
+
+  hr,
+  .divider {
+
+    display: block;
+    .shape-layout-variant(divider, null);
+    .shape-layout-variant(divider, short, null);
+    .shape-layout-variant(divider, tall, null);
+    .shape-style-variant(divider);
+
+    & when not (@divider-height = null) {
+
+      height: @divider-height;
+
+    }
+
+    & when not (@divider-border-radius = null) {
+
+      border-radius: @divider-border-radius;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Divider Inverse (.divider-inverse)
+    ----------------------------------------------------------------------------- */
+
+    &.divider-inverse {
+
+      .shape-style-variant(divider-inverse);
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-mini-min-width) {
+
+    & when (@divider-enabled) and (@divider-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Divider
+      ----------------------------------------------------------------------------- */
+
+      hr,
+      .divider {
+
+        .shape-layout-variant(divider, scale-screen-mini);
+        .shape-layout-variant(divider, short, scale-screen-mini);
+        .shape-layout-variant(divider, tall, scale-screen-mini);
+
+        & when not (@divider-height-scale-screen-mini = null) {
+
+          height: @divider-height * @divider-height-scale-screen-mini;
+
+        }
+
+        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-mini = null) {
+
+          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-mini;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-small-enabled) and (@divider-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@divider-enabled) and (@divider-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Divider
+      ----------------------------------------------------------------------------- */
+
+      hr,
+      .divider {
+
+        .shape-layout-variant(divider, scale-screen-small);
+        .shape-layout-variant(divider, short, scale-screen-small);
+        .shape-layout-variant(divider, tall, scale-screen-small);
+
+        & when not (@divider-height-scale-screen-small = null) {
+
+          height: @divider-height * @divider-height-scale-screen-small;
+
+        }
+
+        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-small = null) {
+
+          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-small;
+
+        }
+
+      }
+
+
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-medium-enabled) and (@divider-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@divider-enabled) and (@divider-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Divider
+      ----------------------------------------------------------------------------- */
+
+      hr,
+      .divider {
+
+        .shape-layout-variant(divider, scale-screen-medium);
+        .shape-layout-variant(divider, short, scale-screen-medium);
+        .shape-layout-variant(divider, tall, scale-screen-medium);
+
+        & when not (@divider-height-scale-screen-medium = null) {
+
+          height: @divider-height * @divider-height-scale-screen-medium;
+
+        }
+
+        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-medium = null) {
+
+          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-medium;
+
+        }
+
+      }
+
+
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-large-enabled) and (@divider-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@divider-enabled) and (@divider-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Divider
+      ----------------------------------------------------------------------------- */
+
+      hr,
+      .divider {
+
+        .shape-layout-variant(divider, scale-screen-large);
+        .shape-layout-variant(divider, short, scale-screen-large);
+        .shape-layout-variant(divider, tall, scale-screen-large);
+
+        & when not (@divider-height-scale-screen-large = null) {
+
+          height: @divider-height * @divider-height-scale-screen-large;
+
+        }
+
+        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-large = null) {
+
+          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+
+
+    }
+
+  }
+
+}

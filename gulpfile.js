@@ -299,7 +299,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
       notify: false
     }
   });
-  
+
 });
 
 // Start Jekyll Server
