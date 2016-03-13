@@ -52,11 +52,19 @@ Row
     @screen: replace(replace(@screen-size, 'screen-', '-screen-'), 'null', '');
 
     @gutter-width: "grid-gutter-width@{screen}";
+    @gutter-height: "grid-gutter-height@{screen}";
 
     & when not (@@gutter-width = null) {
 
       margin-left: @@gutter-width * -0.5;
       margin-right: @@gutter-width * -0.5;
+
+    }
+
+    & when not (@@gutter-height = null) {
+
+      //margin-top: @@gutter-height * -0.5;
+      //margin-bottom: @@gutter-height * -0.5;
 
     }
 
@@ -70,9 +78,9 @@ Row
 Grid
 ----------------------------------------------------------------------------- */
 
-.grid (@screen-size, @grid-columns-count, @grid-gutter-width) {
+.grid (@screen-size, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) {
 
-  .calculate-grid-columns-padding(@screen-size, @grid-columns-count, @grid-gutter-width);
+  .calculate-grid-columns-padding(@screen-size, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, width);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, push);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, pull);
@@ -84,25 +92,25 @@ Grid
 Column Padding
 ----------------------------------------------------------------------------- */
 
-.calculate-grid-columns-padding(@screen-size, @grid-columns-count, @grid-gutter-width) {
+.calculate-grid-columns-padding(@screen-size, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) {
 
-  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width) when (@index = 1) {
-
-    @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
-
-    .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @item);
-
-  }
-
-  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @list) when (@index =< @grid-columns-count) {
+  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) when (@index = 1) {
 
     @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
 
-    .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, ~"@{list}, @{item}");
+    .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @item);
 
   }
 
-  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @list) when (@index > @grid-columns-count) and (@screen-size = null) {
+  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index =< @grid-columns-count) {
+
+    @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
+
+    .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, ~"@{list}, @{item}");
+
+  }
+
+  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index > @grid-columns-count) and (@screen-size = null) {
 
     @{list} {
 
@@ -110,23 +118,27 @@ Column Padding
       min-height: 1px;
       padding-left:  (@grid-gutter-width / 2);
       padding-right: (@grid-gutter-width / 2);
+      //margin-top:  (@grid-gutter-width / 2);
+      //margin-bottom: (@grid-gutter-width / 2);
 
     }
 
   }
 
-  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @list) when (@index > @grid-columns-count) {
+  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index > @grid-columns-count) {
 
     @{list} {
 
       padding-left:  (@grid-gutter-width / 2);
       padding-right: (@grid-gutter-width / 2);
+      //margin-top:  (@grid-gutter-width / 2);
+      //margin-bottom: (@grid-gutter-width / 2);
 
     }
 
   }
 
-  .column(@screen-size, 1, @grid-columns-count, @grid-gutter-width);
+  .column(@screen-size, 1, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
 
 }
 

@@ -1180,6 +1180,13 @@ body {
   background-color: #ffffff;
 }
 /* -----------------------------------------------------------------------------
+  Canvas Pod
+  ----------------------------------------------------------------------------- */
+.canvas-pod {
+  width: 100%;
+  position: relative;
+}
+/* -----------------------------------------------------------------------------
   Screen Size: Mini (@layout-screen-mini-min-width) and wider
   ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
@@ -1667,6 +1674,12 @@ layout/styles.less
     margin-left: -12px;
     margin-right: -12px;
   }
+  /* -----------------------------------------------------------------------------
+    Column Overflow
+    ----------------------------------------------------------------------------- */
+  .column-overflow[class*="column-mini-"] {
+    margin-top: 0px;
+  }
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Small (@layout-screen-small-min-width) and wider
@@ -1880,6 +1893,12 @@ layout/styles.less
     margin-left: -16px;
     margin-right: -16px;
   }
+  /* -----------------------------------------------------------------------------
+    Column Overflow
+    ----------------------------------------------------------------------------- */
+  .column-overflow[class*="column-small-"] {
+    margin-top: 0px;
+  }
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Medium (@layout-screen-medium-min-width) and wider
@@ -2090,6 +2109,12 @@ layout/styles.less
   .row {
     margin-left: -24px;
     margin-right: -24px;
+  }
+  /* -----------------------------------------------------------------------------
+    Column Overflow
+    ----------------------------------------------------------------------------- */
+  .column-overflow[class*="column-medium-"] {
+    margin-top: 0px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -2302,10 +2327,189 @@ layout/styles.less
     margin-left: -32px;
     margin-right: -32px;
   }
+  /* -----------------------------------------------------------------------------
+    Column Overflow
+    ----------------------------------------------------------------------------- */
+  .column-overflow[class*="column-large-"] {
+    margin-top: 0px;
+  }
 }
 /* -----------------------------------------------------------------------------
 Flex
 ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+flex/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+flex/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Flex
+  ----------------------------------------------------------------------------- */
+.flex {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.flex:before,
+.flex:after {
+  display: none;
+}
+.flex.flex-wrap {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.flex.flex-fit-height {
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.flex.flex-align-vertical-center {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex.flex-align-horizontal-center {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+  .flex-mini {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .flex-mini.flex-fit-height {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .flex-mini.flex-align-vertical-center {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .flex-mini.flex-align-horizontal-center {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+  .flex-small {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .flex-small.flex-fit-height {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .flex-small.flex-align-vertical-center {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .flex-small.flex-align-horizontal-center {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+  .flex-medium {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .flex-medium.flex-fit-height {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .flex-medium.flex-align-vertical-center {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .flex-medium.flex-align-horizontal-center {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+  .flex-large {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .flex-large.flex-fit-height {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .flex-large.flex-align-vertical-center {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 /* -----------------------------------------------------------------------------
 Pod
 ----------------------------------------------------------------------------- */
@@ -2349,6 +2553,16 @@ pod/styles.less
   padding-top: 12px;
   padding-bottom: 12px;
 }
+.pod.pod-shorter {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.pod.pod-shorter-top {
+  padding-top: 3px;
+}
+.pod.pod-shorter-bottom {
+  padding-bottom: 3px;
+}
 .pod.pod-short {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -2369,6 +2583,16 @@ pod/styles.less
 .pod.pod-tall-bottom {
   padding-bottom: 24px;
 }
+.pod.pod-taller {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.pod.pod-taller-top {
+  padding-top: 48px;
+}
+.pod.pod-taller-bottom {
+  padding-bottom: 48px;
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Mini (@layout-screen-mini-min-width) and wider
   ----------------------------------------------------------------------------- */
@@ -2379,6 +2603,16 @@ pod/styles.less
   .pod {
     padding-top: 12px;
     padding-bottom: 12px;
+  }
+  .pod.pod-shorter {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .pod.pod-shorter-top {
+    padding-top: 3px;
+  }
+  .pod.pod-shorter-bottom {
+    padding-bottom: 3px;
   }
   .pod.pod-short {
     padding-top: 6px;
@@ -2399,6 +2633,16 @@ pod/styles.less
   }
   .pod.pod-tall-bottom {
     padding-bottom: 24px;
+  }
+  .pod.pod-taller {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .pod.pod-taller-top {
+    padding-top: 48px;
+  }
+  .pod.pod-taller-bottom {
+    padding-bottom: 48px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -2412,6 +2656,16 @@ pod/styles.less
     padding-top: 16px;
     padding-bottom: 16px;
   }
+  .pod.pod-shorter {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .pod.pod-shorter-top {
+    padding-top: 4px;
+  }
+  .pod.pod-shorter-bottom {
+    padding-bottom: 4px;
+  }
   .pod.pod-short {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -2431,6 +2685,16 @@ pod/styles.less
   }
   .pod.pod-tall-bottom {
     padding-bottom: 32px;
+  }
+  .pod.pod-taller {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .pod.pod-taller-top {
+    padding-top: 64px;
+  }
+  .pod.pod-taller-bottom {
+    padding-bottom: 64px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -2444,6 +2708,16 @@ pod/styles.less
     padding-top: 24px;
     padding-bottom: 24px;
   }
+  .pod.pod-shorter {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .pod.pod-shorter-top {
+    padding-top: 6px;
+  }
+  .pod.pod-shorter-bottom {
+    padding-bottom: 6px;
+  }
   .pod.pod-short {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -2463,6 +2737,16 @@ pod/styles.less
   }
   .pod.pod-tall-bottom {
     padding-bottom: 48px;
+  }
+  .pod.pod-taller {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .pod.pod-taller-top {
+    padding-top: 96px;
+  }
+  .pod.pod-taller-bottom {
+    padding-bottom: 96px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -2476,6 +2760,16 @@ pod/styles.less
     padding-top: 32px;
     padding-bottom: 32px;
   }
+  .pod.pod-shorter {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .pod.pod-shorter-top {
+    padding-top: 8px;
+  }
+  .pod.pod-shorter-bottom {
+    padding-bottom: 8px;
+  }
   .pod.pod-short {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -2495,6 +2789,16 @@ pod/styles.less
   }
   .pod.pod-tall-bottom {
     padding-bottom: 64px;
+  }
+  .pod.pod-taller {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+  .pod.pod-taller-top {
+    padding-top: 128px;
+  }
+  .pod.pod-taller-bottom {
+    padding-bottom: 128px;
   }
 }
 /* -----------------------------------------------------------------------------

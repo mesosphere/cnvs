@@ -14,7 +14,7 @@ layout/styles.less
   Grid
   ----------------------------------------------------------------------------- */
 
-  .grid(null, @grid-columns-count, @grid-gutter-width);
+  .grid(null, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
 
   /* -----------------------------------------------------------------------------
   Container
@@ -49,7 +49,7 @@ layout/styles.less
     Grid
     ----------------------------------------------------------------------------- */
 
-    .grid(screen-mini, @grid-columns-count, @grid-gutter-width-screen-mini);
+    .grid(screen-mini, @grid-columns-count, @grid-gutter-width-screen-mini, @grid-gutter-height-screen-mini);
 
     /* -----------------------------------------------------------------------------
     Container
@@ -67,6 +67,20 @@ layout/styles.less
     ----------------------------------------------------------------------------- */
 
     .row(screen-mini);
+
+    /* -----------------------------------------------------------------------------
+    Column Overflow
+    ----------------------------------------------------------------------------- */
+
+    .column-overflow {
+
+      &[class*="column-mini-"] {
+
+        margin-top: 0px;
+
+      }
+
+    }
 
   }
 
@@ -86,7 +100,7 @@ layout/styles.less
     Grid
     ----------------------------------------------------------------------------- */
 
-    .grid(screen-small, @grid-columns-count, @grid-gutter-width-screen-small);
+    .grid(screen-small, @grid-columns-count, @grid-gutter-width-screen-small, @grid-gutter-height-screen-small);
 
     /* -----------------------------------------------------------------------------
     Container
@@ -104,6 +118,20 @@ layout/styles.less
     ----------------------------------------------------------------------------- */
 
     .row(screen-small);
+
+    /* -----------------------------------------------------------------------------
+    Column Overflow
+    ----------------------------------------------------------------------------- */
+
+    .column-overflow {
+
+      &[class*="column-small-"] {
+
+        margin-top: 0px;
+
+      }
+
+    }
 
   }
 
@@ -123,7 +151,7 @@ layout/styles.less
     Grid
     ----------------------------------------------------------------------------- */
 
-    .grid(screen-medium, @grid-columns-count, @grid-gutter-width-screen-medium);
+    .grid(screen-medium, @grid-columns-count, @grid-gutter-width-screen-medium, @grid-gutter-height-screen-medium);
 
     /* -----------------------------------------------------------------------------
     Container
@@ -141,6 +169,20 @@ layout/styles.less
     ----------------------------------------------------------------------------- */
 
     .row(screen-medium);
+
+    /* -----------------------------------------------------------------------------
+    Column Overflow
+    ----------------------------------------------------------------------------- */
+
+    .column-overflow {
+
+      &[class*="column-medium-"] {
+
+        margin-top: 0px;
+
+      }
+
+    }
 
   }
 
@@ -160,7 +202,7 @@ layout/styles.less
     Grid
     ----------------------------------------------------------------------------- */
 
-    .grid(screen-large, @grid-columns-count, @grid-gutter-width-screen-large);
+    .grid(screen-large, @grid-columns-count, @grid-gutter-width-screen-large, @grid-gutter-height-screen-large);
 
     /* -----------------------------------------------------------------------------
     Container
@@ -178,6 +220,20 @@ layout/styles.less
     ----------------------------------------------------------------------------- */
 
     .row(screen-large);
+
+    /* -----------------------------------------------------------------------------
+    Column Overflow
+    ----------------------------------------------------------------------------- */
+
+    .column-overflow {
+
+      &[class*="column-large-"] {
+
+        margin-top: 0px;
+
+      }
+
+    }
 
   }
 

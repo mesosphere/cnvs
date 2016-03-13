@@ -1,0 +1,237 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+flex/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@flex-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Flex
+  ----------------------------------------------------------------------------- */
+
+  .flex {
+
+    display: flex;
+    flex-direction: row;
+
+    &:before,
+    &:after {
+
+      display: none;
+
+    }
+
+    &.flex-wrap {
+
+      flex-wrap: wrap;
+
+    }
+
+    &.flex-fit-height {
+
+      align-items: stretch;
+
+    }
+
+    &.flex-align-vertical-center {
+
+      align-items: center;
+
+    }
+
+    &.flex-align-horizontal-center {
+
+      justify-content: center;
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-mini-min-width) {
+
+    & when (@flex-enabled) and (@flex-scale-screen-mini-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+
+      &.flex-mini {
+
+        display: flex;
+        flex-direction: row;
+
+        &.flex-fit-height {
+
+          align-items: stretch;
+
+        }
+
+        &.flex-align-vertical-center {
+
+          align-items: center;
+
+        }
+
+        &.flex-align-horizontal-center {
+
+          justify-content: center;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-small-enabled) and (@flex-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@flex-enabled) and (@flex-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+
+      &.flex-small {
+
+        display: flex;
+        flex-direction: row;
+
+        &.flex-fit-height {
+
+          align-items: stretch;
+
+        }
+
+        &.flex-align-vertical-center {
+
+          align-items: center;
+
+        }
+
+        &.flex-align-horizontal-center {
+
+          justify-content: center;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-medium-enabled) and (@flex-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@flex-enabled) and (@flex-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+
+      &.flex-medium {
+
+        display: flex;
+        flex-direction: row;
+
+        &.flex-fit-height {
+
+          align-items: stretch;
+
+        }
+
+        &.flex-align-vertical-center {
+
+          align-items: center;
+
+        }
+
+        &.flex-align-horizontal-center {
+
+          justify-content: center;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-large-enabled) and (@flex-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@flex-enabled) and (@flex-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+
+      &.flex-large {
+
+        display: flex;
+        flex-direction: row;
+
+        &.flex-fit-height {
+
+          align-items: stretch;
+
+        }
+
+        &.flex-align-vertical-center {
+
+          align-items: center;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
