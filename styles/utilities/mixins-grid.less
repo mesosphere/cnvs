@@ -9,7 +9,7 @@ utilities/mixins-grid.less
 
 
 /* -----------------------------------------------------------------------------
-Container (Fixed)
+Container
 ----------------------------------------------------------------------------- */
 
 .container(@variant, @screen-size) {
@@ -74,9 +74,9 @@ Grid
 
   .calculate-grid-columns-padding(@screen-size, @grid-columns-count, @grid-gutter-width);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, width);
-  //.loop-grid-columns(@grid-columns-count, @screen-size, pull);
-  //.loop-grid-columns(@grid-columns-count, @screen-size, push);
-  //.loop-grid-columns(@grid-columns-count, @screen-size, offset);
+  .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, push);
+  .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, pull);
+  .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, offset);
 
 }
 
@@ -158,102 +158,82 @@ Calculate Grid Column Width
 
 }
 
-// .calculate-grid-column(@index, @type) when (@type = push) and (@index > 0) {
-//
-//   .column-push-@{index} {
-//
-//     left: percentage((@index / @grid-columns-count));
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @class, @type) when (@type = push) and (@index > 0) {
-//
-//   .column-@{class}-push-@{index} {
-//
-//     left: percentage((@index / @grid-columns-count));
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @type) when (@type = push) and (@index = 0) {
-//
-//   .column-push-0 {
-//
-//     left: auto;
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @class, @type) when (@type = push) and (@index = 0) {
-//
-//   .column-@{class}-push-0 {
-//
-//     left: auto;
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @type) when (@type = pull) and (@index > 0) {
-//
-//   .column-pull-@{index} {
-//
-//     right: percentage((@index / @grid-columns-count));
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @class, @type) when (@type = pull) and (@index > 0) {
-//
-//   .column-@{class}-pull-@{index} {
-//
-//     right: percentage((@index / @grid-columns-count));
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @type) when (@type = pull) and (@index = 0) {
-//
-//   .column-pull-0 {
-//
-//     right: auto;
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @class, @type) when (@type = pull) and (@index = 0) {
-//
-//   .column-@{class}-pull-0 {
-//
-//     right: auto;
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @type) when (@type = offset) {
-//
-//   .column-offset-@{index} {
-//
-//     margin-left: percentage((@index / @grid-columns-count));
-//
-//   }
-//
-// }
-//
-// .calculate-grid-column(@index, @class, @type) when (@type = offset) {
-//
-//   .column-@{class}-offset-@{index} {
-//
-//     margin-left: percentage((@index / @grid-columns-count));
-//
-//   }
-//
-// }
+/* -----------------------------------------------------------------------------
+Calculate Grid Column Push
+----------------------------------------------------------------------------- */
+
+.calculate-grid-column(@screen-size, @column-index, @grid-columns-count, @attribute) when (@attribute = push) {
+
+  @screen: replace(replace(@screen-size, 'screen-', '-'), 'null', '');
+
+  & when (@column-index = 0) {
+
+    .column@{screen}-push-@{column-index} {
+
+      left: auto;
+
+    }
+
+  }
+
+  & when (@column-index > 0) {
+
+    .column@{screen}-push-@{column-index} {
+
+      left: percentage((@column-index / @grid-columns-count));
+
+    }
+
+  }
+
+}
+
+/* -----------------------------------------------------------------------------
+Calculate Grid Column Pull
+----------------------------------------------------------------------------- */
+
+.calculate-grid-column(@screen-size, @column-index, @grid-columns-count, @attribute) when (@attribute = pull) {
+
+  @screen: replace(replace(@screen-size, 'screen-', '-'), 'null', '');
+
+  & when (@column-index = 0) {
+
+    .column@{screen}-pull-@{column-index} {
+
+      right: auto;
+
+    }
+
+  }
+
+  & when (@column-index > 0) {
+
+    .column@{screen}-pull-@{column-index} {
+
+      right: -1 * percentage((@column-index / @grid-columns-count));
+
+    }
+
+  }
+
+}
+
+/* -----------------------------------------------------------------------------
+Calculate Grid Column Push
+----------------------------------------------------------------------------- */
+
+.calculate-grid-column(@screen-size, @column-index, @grid-columns-count, @attribute) when (@attribute = offset) {
+
+  @screen: replace(replace(@screen-size, 'screen-', '-'), 'null', '');
+
+  & when (@column-index > 0) {
+
+    .column@{screen}-offset-@{column-index} {
+
+      margin-left: percentage((@column-index / @grid-columns-count));
+
+    }
+
+  }
+
+}
