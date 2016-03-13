@@ -500,44 +500,27 @@ Form Control Group Variant Styling
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
 utilities/mixins-grid.less
-
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
 Container (Fixed)
-
---------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
 Row
-
---------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Columns
-
---------------------------------------------------------------------------------
+Grid
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Mini Column
+Column Padding
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Small Column
+Calculate Grid Columns
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Medium Column
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Large Column
+Calculate Grid Column Width
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -590,16 +573,44 @@ Clearfix
 
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
-.clearfix {
+.clearfix,
+.container,
+.container-fluid,
+.container-fluid-narrower,
+.container-fluid-narrow,
+.container-fluid-wide,
+.container-fluid-wider,
+.row {
   *zoom: 1;
 }
 .clearfix:before,
-.clearfix:after {
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.container-fluid-narrower:before,
+.container-fluid-narrower:after,
+.container-fluid-narrow:before,
+.container-fluid-narrow:after,
+.container-fluid-wide:before,
+.container-fluid-wide:after,
+.container-fluid-wider:before,
+.container-fluid-wider:after,
+.row:before,
+.row:after {
   display: table;
   content: "";
   line-height: 0;
 }
-.clearfix:after {
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.container-fluid-narrower:after,
+.container-fluid-narrow:after,
+.container-fluid-wide:after,
+.container-fluid-wider:after,
+.row:after {
   clear: both;
 }
 /* -----------------------------------------------------------------------------
@@ -1217,10 +1228,572 @@ body {
 Grid
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+grid/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Grid
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Container (Fixed)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Container (Fluid)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Container (Fluid Narrower)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Container (Fluid Narrow)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Container (Fluid Wide)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Container (Fluid Wider)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+layout/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Grid
+  ----------------------------------------------------------------------------- */
+.column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.column-12 {
+  float: left;
+  width: 100%;
+}
+.column-11 {
+  float: left;
+  width: 91.66666667%;
+}
+.column-10 {
+  float: left;
+  width: 83.33333333%;
+}
+.column-9 {
+  float: left;
+  width: 75%;
+}
+.column-8 {
+  float: left;
+  width: 66.66666667%;
+}
+.column-7 {
+  float: left;
+  width: 58.33333333%;
+}
+.column-6 {
+  float: left;
+  width: 50%;
+}
+.column-5 {
+  float: left;
+  width: 41.66666667%;
+}
+.column-4 {
+  float: left;
+  width: 33.33333333%;
+}
+.column-3 {
+  float: left;
+  width: 25%;
+}
+.column-2 {
+  float: left;
+  width: 16.66666667%;
+}
+.column-1 {
+  float: left;
+  width: 8.33333333%;
+}
+.column-0 {
+  float: left;
+  width: 0%;
+}
+/* -----------------------------------------------------------------------------
+  Container
+  ----------------------------------------------------------------------------- */
+.container {
+  width: auto;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.container-fluid {
+  width: auto;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.container-fluid-narrower {
+  width: auto;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.container-fluid-narrow {
+  width: auto;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.container-fluid-wide {
+  width: auto;
+  margin-left: 48px;
+  margin-right: 48px;
+}
+.container-fluid-wider {
+  width: auto;
+  margin-left: 96px;
+  margin-right: 96px;
+}
+/* -----------------------------------------------------------------------------
+  Row
+  ----------------------------------------------------------------------------- */
+.row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+    Grid
+    ----------------------------------------------------------------------------- */
+  .column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .column-mini-12 {
+    float: left;
+    width: 100%;
+  }
+  .column-mini-11 {
+    float: left;
+    width: 91.66666667%;
+  }
+  .column-mini-10 {
+    float: left;
+    width: 83.33333333%;
+  }
+  .column-mini-9 {
+    float: left;
+    width: 75%;
+  }
+  .column-mini-8 {
+    float: left;
+    width: 66.66666667%;
+  }
+  .column-mini-7 {
+    float: left;
+    width: 58.33333333%;
+  }
+  .column-mini-6 {
+    float: left;
+    width: 50%;
+  }
+  .column-mini-5 {
+    float: left;
+    width: 41.66666667%;
+  }
+  .column-mini-4 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .column-mini-3 {
+    float: left;
+    width: 25%;
+  }
+  .column-mini-2 {
+    float: left;
+    width: 16.66666667%;
+  }
+  .column-mini-1 {
+    float: left;
+    width: 8.33333333%;
+  }
+  .column-mini-0 {
+    float: left;
+    width: 0%;
+  }
+  /* -----------------------------------------------------------------------------
+    Container
+    ----------------------------------------------------------------------------- */
+  .container {
+    width: auto;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .container-fluid {
+    width: auto;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .container-fluid-narrower {
+    width: auto;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .container-fluid-narrow {
+    width: auto;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .container-fluid-wide {
+    width: auto;
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .container-fluid-wider {
+    width: auto;
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+  /* -----------------------------------------------------------------------------
+    Row
+    ----------------------------------------------------------------------------- */
+  .row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+    Grid
+    ----------------------------------------------------------------------------- */
+  .column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .column-small-12 {
+    float: left;
+    width: 100%;
+  }
+  .column-small-11 {
+    float: left;
+    width: 91.66666667%;
+  }
+  .column-small-10 {
+    float: left;
+    width: 83.33333333%;
+  }
+  .column-small-9 {
+    float: left;
+    width: 75%;
+  }
+  .column-small-8 {
+    float: left;
+    width: 66.66666667%;
+  }
+  .column-small-7 {
+    float: left;
+    width: 58.33333333%;
+  }
+  .column-small-6 {
+    float: left;
+    width: 50%;
+  }
+  .column-small-5 {
+    float: left;
+    width: 41.66666667%;
+  }
+  .column-small-4 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .column-small-3 {
+    float: left;
+    width: 25%;
+  }
+  .column-small-2 {
+    float: left;
+    width: 16.66666667%;
+  }
+  .column-small-1 {
+    float: left;
+    width: 8.33333333%;
+  }
+  .column-small-0 {
+    float: left;
+    width: 0%;
+  }
+  /* -----------------------------------------------------------------------------
+    Container
+    ----------------------------------------------------------------------------- */
+  .container {
+    width: 730px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid {
+    width: auto;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .container-fluid-narrower {
+    width: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .container-fluid-narrow {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .container-fluid-wide {
+    width: auto;
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+  .container-fluid-wider {
+    width: auto;
+    margin-left: 128px;
+    margin-right: 128px;
+  }
+  /* -----------------------------------------------------------------------------
+    Row
+    ----------------------------------------------------------------------------- */
+  .row {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+    Grid
+    ----------------------------------------------------------------------------- */
+  .column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .column-medium-12 {
+    float: left;
+    width: 100%;
+  }
+  .column-medium-11 {
+    float: left;
+    width: 91.66666667%;
+  }
+  .column-medium-10 {
+    float: left;
+    width: 83.33333333%;
+  }
+  .column-medium-9 {
+    float: left;
+    width: 75%;
+  }
+  .column-medium-8 {
+    float: left;
+    width: 66.66666667%;
+  }
+  .column-medium-7 {
+    float: left;
+    width: 58.33333333%;
+  }
+  .column-medium-6 {
+    float: left;
+    width: 50%;
+  }
+  .column-medium-5 {
+    float: left;
+    width: 41.66666667%;
+  }
+  .column-medium-4 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .column-medium-3 {
+    float: left;
+    width: 25%;
+  }
+  .column-medium-2 {
+    float: left;
+    width: 16.66666667%;
+  }
+  .column-medium-1 {
+    float: left;
+    width: 8.33333333%;
+  }
+  .column-medium-0 {
+    float: left;
+    width: 0%;
+  }
+  /* -----------------------------------------------------------------------------
+    Container
+    ----------------------------------------------------------------------------- */
+  .container {
+    width: 920px;
+  }
+  .container-fluid {
+    width: auto;
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .container-fluid-narrower {
+    width: auto;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .container-fluid-narrow {
+    width: auto;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .container-fluid-wide {
+    width: auto;
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+  .container-fluid-wider {
+    width: auto;
+    margin-left: 192px;
+    margin-right: 192px;
+  }
+  /* -----------------------------------------------------------------------------
+    Row
+    ----------------------------------------------------------------------------- */
+  .row {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+    Grid
+    ----------------------------------------------------------------------------- */
+  .column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .column-large-12 {
+    float: left;
+    width: 100%;
+  }
+  .column-large-11 {
+    float: left;
+    width: 91.66666667%;
+  }
+  .column-large-10 {
+    float: left;
+    width: 83.33333333%;
+  }
+  .column-large-9 {
+    float: left;
+    width: 75%;
+  }
+  .column-large-8 {
+    float: left;
+    width: 66.66666667%;
+  }
+  .column-large-7 {
+    float: left;
+    width: 58.33333333%;
+  }
+  .column-large-6 {
+    float: left;
+    width: 50%;
+  }
+  .column-large-5 {
+    float: left;
+    width: 41.66666667%;
+  }
+  .column-large-4 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .column-large-3 {
+    float: left;
+    width: 25%;
+  }
+  .column-large-2 {
+    float: left;
+    width: 16.66666667%;
+  }
+  .column-large-1 {
+    float: left;
+    width: 8.33333333%;
+  }
+  .column-large-0 {
+    float: left;
+    width: 0%;
+  }
+  /* -----------------------------------------------------------------------------
+    Container
+    ----------------------------------------------------------------------------- */
+  .container {
+    width: 1100px;
+  }
+  .container-fluid {
+    width: auto;
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+  .container-fluid-narrower {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .container-fluid-narrow {
+    width: auto;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .container-fluid-wide {
+    width: auto;
+    margin-left: 128px;
+    margin-right: 128px;
+  }
+  .container-fluid-wider {
+    width: auto;
+    margin-left: 256px;
+    margin-right: 256px;
+  }
+  /* -----------------------------------------------------------------------------
+    Row
+    ----------------------------------------------------------------------------- */
+  .row {
+    margin-left: -32px;
+    margin-right: -32px;
+  }
+}
+/* -----------------------------------------------------------------------------
 Flex
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 Pod
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Divider
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 Typography

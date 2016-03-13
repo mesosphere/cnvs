@@ -284,13 +284,22 @@ gulp.task("docs:javascripts", function () {
 // Start Jekyll Server then start Documentation Site
 
 gulp.task('browser-sync', ['jekyll-build'], function() {
+
+  var files = [
+      dirs.docs.dist.styles + '/**/*.css',
+      dirs.docs.dist.javascripts + '**/*.js'
+   ];
+
   browserSync({
+    files: files,
+    injectChanges: true,
     server: {
       baseDir: dirs.docs.dist.path,
       open: true,
       notify: false
     }
   });
+  
 });
 
 // Start Jekyll Server
