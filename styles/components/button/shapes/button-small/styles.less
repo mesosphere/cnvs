@@ -136,6 +136,20 @@ button-small/styles.less
 
     }
 
+    & when not (@button-small-content-padding-horizontal = null) {
+
+      /* -----------------------------------------------------------------------------
+      Button Content
+      ----------------------------------------------------------------------------- */
+
+      & > * {
+
+        padding-right: @button-small-content-padding-horizontal;
+
+      }
+
+    }
+
   }
 
   & when (@button-group-enabled) {
@@ -375,6 +389,20 @@ button-small/styles.less
               }
 
             }
+
+          }
+
+        }
+
+        & when not (@button-small-content-padding-horizontal = null) and not (@button-small-content-padding-horizontal-scale-screen-mini = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
+
+          & > * {
+
+            padding-right: @button-small-content-padding-horizontal * @button-small-content-padding-horizontal-scale-screen-mini;
 
           }
 
@@ -628,6 +656,20 @@ button-small/styles.less
 
         }
 
+        & when not (@button-small-content-padding-horizontal = null) and not (@button-small-content-padding-horizontal-scale-screen-small = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
+
+          & > * {
+
+            padding-right: @button-small-content-padding-horizontal * @button-small-content-padding-horizontal-scale-screen-small;
+
+          }
+
+        }
+
       }
 
       & when (@button-group-enabled) {
@@ -876,6 +918,20 @@ button-small/styles.less
 
         }
 
+        & when not (@button-small-content-padding-horizontal = null) and not (@button-small-content-padding-horizontal-scale-screen-medium = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
+
+          & > * {
+
+            padding-right: @button-small-content-padding-horizontal * @button-small-content-padding-horizontal-scale-screen-medium;
+
+          }
+
+        }
+
       }
 
       & when (@button-group-enabled) {
@@ -1119,6 +1175,20 @@ button-small/styles.less
               }
 
             }
+
+          }
+
+        }
+
+        & when not (@button-small-content-padding-horizontal = null) and not (@button-small-content-padding-horizontal-scale-screen-large = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
+
+          & > * {
+
+            padding-right: @button-small-content-padding-horizontal * @button-small-content-padding-horizontal-scale-screen-large;
 
           }
 

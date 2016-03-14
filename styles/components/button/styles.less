@@ -40,6 +40,12 @@ button/styles.less
 
     }
 
+    & > * {
+
+      display: inline-flex !important;
+
+    }
+
     /* -----------------------------------------------------------------------------
     Button Dropdown (.button-dropdown)
     ----------------------------------------------------------------------------- */
@@ -148,8 +154,16 @@ button/styles.less
     &:disabled,
     &.disabled {
 
+      cursor: default;
+
       .text-style-variant(button-disabled);
       .shape-style-variant(button-disabled);
+
+      & when not (@button-disabled-opacity = null) {
+
+        opacity: @button-disabled-opacity;
+
+      }
 
       // Button Dropdown (.button-dropdown)
 
@@ -255,6 +269,12 @@ button/styles.less
         .text-style-variant(button-inverse-disabled);
         .shape-style-variant(button-inverse-disabled);
 
+        & when not (@button-inverse-disabled-opacity = null) {
+
+          opacity: @button-inverse-disabled-opacity;
+
+        }
+
         // Button Dropdown (.button-dropdown)
 
         &.button-dropdown,
@@ -344,6 +364,27 @@ button/styles.less
             }
 
           }
+
+        }
+
+      }
+
+    }
+
+    & when not (@button-content-padding-horizontal = null) {
+
+      /* -----------------------------------------------------------------------------
+      Button Content
+      ----------------------------------------------------------------------------- */
+
+      & > * {
+
+        box-sizing: content-box;
+        padding-right: @button-content-padding-horizontal;
+
+        &:last-child {
+
+          padding-right: 0px;
 
         }
 
@@ -659,6 +700,20 @@ button/styles.less
 
         }
 
+        & when not (@button-content-padding-horizontal = null) and not (@button-content-padding-horizontal-scale-screen-mini = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
+
+          & > * {
+
+            padding-right: @button-content-padding-horizontal * @button-content-padding-horizontal-scale-screen-mini;
+
+          }
+
+        }
+
       }
 
       & when (@button-group-enabled) {
@@ -919,6 +974,20 @@ button/styles.less
               }
 
             }
+
+          }
+
+        }
+
+        & when not (@button-content-padding-horizontal = null) and not (@button-content-padding-horizontal-scale-screen-small = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
+
+          & > * {
+
+            padding-right: @button-content-padding-horizontal * @button-content-padding-horizontal-scale-screen-small;
 
           }
 
@@ -1189,6 +1258,20 @@ button/styles.less
 
         }
 
+        & when not (@button-content-padding-horizontal = null) and not (@button-content-padding-horizontal-scale-screen-medium = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
+
+          & > * {
+
+            padding-right: @button-content-padding-horizontal * @button-content-padding-horizontal-scale-screen-medium;
+
+          }
+
+        }
+
       }
 
       & when (@button-group-enabled) {
@@ -1449,6 +1532,20 @@ button/styles.less
               }
 
             }
+
+          }
+
+        }
+
+        & when not (@button-content-padding-horizontal = null) and not (@button-content-padding-horizontal-scale-screen-large = null) {
+
+          /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
+
+          & > * {
+
+            padding-right: @button-content-padding-horizontal * @button-content-padding-horizontal-scale-screen-large;
 
           }
 

@@ -12,15 +12,14 @@ utilities/mixins-grid.less
 Container
 ----------------------------------------------------------------------------- */
 
-.container(@variant, @screen-size) {
+.container(@class, @screen-size) {
 
-  @container-class: replace(e('container-@{variant}'), '-null', '');
+  @container-class: replace(e('container-@{class}'), '-null', '');
+  @screen: replace(replace(@screen-size, 'screen-', '-screen-'), 'null', '');
+  @container-width: "grid-@{container-class}-width@{screen}";
+  @container-gutter-width: "grid-@{container-class}-gutter-width@{screen}";
 
   .@{container-class} {
-
-    @screen: replace(replace(@screen-size, 'screen-', '-screen-'), 'null', '');
-    @container-width: "grid-@{container-class}-width@{screen}";
-    @container-gutter-width: "grid-@{container-class}-gutter-width@{screen}";
 
     & when not (@@container-width = null) {
 
@@ -36,6 +35,41 @@ Container
     }
 
     &:extend(.clearfix all);
+
+  }
+
+}
+
+.container(@class, @variant, @screen-size) {
+
+  @screen: replace(replace(@screen-size, 'screen-', '-screen-'), 'null', '');
+
+  @container-class: replace(e('container-@{class}'), '-null', '');
+  @container-variant-class: replace(e('container-@{class}-@{variant}'), '-null', '');
+
+  @container-gutter-width: "grid-@{container-class}-gutter-width@{screen}";
+  @container-variant-scale: "grid-@{container-variant-class}-margin-scale";
+
+  & when not (@@container-gutter-width = null) and not (@@container-variant-scale = null) {
+
+    .@{container-variant-class} {
+
+      margin-left: @@container-gutter-width * @@container-variant-scale;
+      margin-right: @@container-gutter-width * @@container-variant-scale;
+
+    }
+
+    .@{container-variant-class}-left {
+
+      margin-left: @@container-gutter-width * @@container-variant-scale;
+
+    }
+
+    .@{container-variant-class}-right {
+
+      margin-right: @@container-gutter-width * @@container-variant-scale;
+
+    }
 
   }
 

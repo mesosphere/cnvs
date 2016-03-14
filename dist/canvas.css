@@ -39,62 +39,6 @@ Social Networks
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-variables/variables-layout.less
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Layout
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Screen Sizes
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Screen Resolutions
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Grid
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Fluid Container
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Spacing Unit
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Z-Index Depths
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Foundation
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Body
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Canvas
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Canvas Pod
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Container Pod
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Borders
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
 Utilities & Mixins
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
@@ -608,10 +552,6 @@ Clearfix
 .clearfix,
 .container,
 .container-fluid,
-.container-fluid-narrower,
-.container-fluid-narrow,
-.container-fluid-wide,
-.container-fluid-wider,
 .row {
   *zoom: 1;
 }
@@ -621,14 +561,6 @@ Clearfix
 .container:after,
 .container-fluid:before,
 .container-fluid:after,
-.container-fluid-narrower:before,
-.container-fluid-narrower:after,
-.container-fluid-narrow:before,
-.container-fluid-narrow:after,
-.container-fluid-wide:before,
-.container-fluid-wide:after,
-.container-fluid-wider:before,
-.container-fluid-wider:after,
 .row:before,
 .row:after {
   display: table;
@@ -638,10 +570,6 @@ Clearfix
 .clearfix:after,
 .container:after,
 .container-fluid:after,
-.container-fluid-narrower:after,
-.container-fluid-narrow:after,
-.container-fluid-wide:after,
-.container-fluid-wider:after,
 .row:after {
   clear: both;
 }
@@ -890,6 +818,11 @@ Styling
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Screen Resolution
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 layout/styles.less
 --------------------------------------------------------------------------------
@@ -1120,16 +1053,7 @@ Container (Fixed)
 Container (Fluid)
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Container (Fluid Narrower)
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Container (Fluid Narrow)
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Container (Fluid Wide)
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Container (Fluid Wider)
+Container (Fluid) Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -1330,25 +1254,55 @@ layout/styles.less
   margin-left: 24px;
   margin-right: 24px;
 }
-.container-fluid-narrower {
-  width: auto;
-  margin-left: 6px;
-  margin-right: 6px;
-}
 .container-fluid-narrow {
-  width: auto;
   margin-left: 12px;
   margin-right: 12px;
 }
+.container-fluid-narrow-left {
+  margin-left: 12px;
+}
+.container-fluid-narrow-right {
+  margin-right: 12px;
+}
+.container-fluid-narrower {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.container-fluid-narrower-left {
+  margin-left: 6px;
+}
+.container-fluid-narrower-right {
+  margin-right: 6px;
+}
 .container-fluid-wide {
-  width: auto;
+  margin-left: 36px;
+  margin-right: 36px;
+}
+.container-fluid-wide-left {
+  margin-left: 36px;
+}
+.container-fluid-wide-right {
+  margin-right: 36px;
+}
+.container-fluid-wider {
   margin-left: 48px;
   margin-right: 48px;
 }
-.container-fluid-wider {
-  width: auto;
-  margin-left: 96px;
-  margin-right: 96px;
+.container-fluid-wider-left {
+  margin-left: 48px;
+}
+.container-fluid-wider-right {
+  margin-right: 48px;
+}
+.container-fluid-flush {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.container-fluid-flush-left {
+  margin-left: 0px;
+}
+.container-fluid-flush-right {
+  margin-right: 0px;
 }
 /* -----------------------------------------------------------------------------
   Row
@@ -1546,21 +1500,55 @@ layout/styles.less
     margin-left: 24px;
     margin-right: 24px;
   }
-  .container-fluid-narrower {
-    margin-left: 6px;
-    margin-right: 6px;
-  }
   .container-fluid-narrow {
     margin-left: 12px;
     margin-right: 12px;
   }
+  .container-fluid-narrow-left {
+    margin-left: 12px;
+  }
+  .container-fluid-narrow-right {
+    margin-right: 12px;
+  }
+  .container-fluid-narrower {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .container-fluid-narrower-left {
+    margin-left: 6px;
+  }
+  .container-fluid-narrower-right {
+    margin-right: 6px;
+  }
   .container-fluid-wide {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .container-fluid-wide-left {
+    margin-left: 36px;
+  }
+  .container-fluid-wide-right {
+    margin-right: 36px;
+  }
+  .container-fluid-wider {
     margin-left: 48px;
     margin-right: 48px;
   }
-  .container-fluid-wider {
-    margin-left: 96px;
-    margin-right: 96px;
+  .container-fluid-wider-left {
+    margin-left: 48px;
+  }
+  .container-fluid-wider-right {
+    margin-right: 48px;
+  }
+  .container-fluid-flush {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid-flush-left {
+    margin-left: 0px;
+  }
+  .container-fluid-flush-right {
+    margin-right: 0px;
   }
   /* -----------------------------------------------------------------------------
     Row
@@ -1765,21 +1753,55 @@ layout/styles.less
     margin-left: 32px;
     margin-right: 32px;
   }
-  .container-fluid-narrower {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
   .container-fluid-narrow {
     margin-left: 16px;
     margin-right: 16px;
   }
+  .container-fluid-narrow-left {
+    margin-left: 16px;
+  }
+  .container-fluid-narrow-right {
+    margin-right: 16px;
+  }
+  .container-fluid-narrower {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .container-fluid-narrower-left {
+    margin-left: 8px;
+  }
+  .container-fluid-narrower-right {
+    margin-right: 8px;
+  }
   .container-fluid-wide {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .container-fluid-wide-left {
+    margin-left: 48px;
+  }
+  .container-fluid-wide-right {
+    margin-right: 48px;
+  }
+  .container-fluid-wider {
     margin-left: 64px;
     margin-right: 64px;
   }
-  .container-fluid-wider {
-    margin-left: 128px;
-    margin-right: 128px;
+  .container-fluid-wider-left {
+    margin-left: 64px;
+  }
+  .container-fluid-wider-right {
+    margin-right: 64px;
+  }
+  .container-fluid-flush {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid-flush-left {
+    margin-left: 0px;
+  }
+  .container-fluid-flush-right {
+    margin-right: 0px;
   }
   /* -----------------------------------------------------------------------------
     Row
@@ -1982,21 +2004,55 @@ layout/styles.less
     margin-left: 48px;
     margin-right: 48px;
   }
-  .container-fluid-narrower {
-    margin-left: 12px;
-    margin-right: 12px;
-  }
   .container-fluid-narrow {
     margin-left: 24px;
     margin-right: 24px;
   }
+  .container-fluid-narrow-left {
+    margin-left: 24px;
+  }
+  .container-fluid-narrow-right {
+    margin-right: 24px;
+  }
+  .container-fluid-narrower {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .container-fluid-narrower-left {
+    margin-left: 12px;
+  }
+  .container-fluid-narrower-right {
+    margin-right: 12px;
+  }
   .container-fluid-wide {
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+  .container-fluid-wide-left {
+    margin-left: 72px;
+  }
+  .container-fluid-wide-right {
+    margin-right: 72px;
+  }
+  .container-fluid-wider {
     margin-left: 96px;
     margin-right: 96px;
   }
-  .container-fluid-wider {
-    margin-left: 192px;
-    margin-right: 192px;
+  .container-fluid-wider-left {
+    margin-left: 96px;
+  }
+  .container-fluid-wider-right {
+    margin-right: 96px;
+  }
+  .container-fluid-flush {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid-flush-left {
+    margin-left: 0px;
+  }
+  .container-fluid-flush-right {
+    margin-right: 0px;
   }
   /* -----------------------------------------------------------------------------
     Row
@@ -2199,21 +2255,55 @@ layout/styles.less
     margin-left: 54px;
     margin-right: 54px;
   }
-  .container-fluid-narrower {
-    margin-left: 13.5px;
-    margin-right: 13.5px;
-  }
   .container-fluid-narrow {
     margin-left: 27px;
     margin-right: 27px;
   }
+  .container-fluid-narrow-left {
+    margin-left: 27px;
+  }
+  .container-fluid-narrow-right {
+    margin-right: 27px;
+  }
+  .container-fluid-narrower {
+    margin-left: 13.5px;
+    margin-right: 13.5px;
+  }
+  .container-fluid-narrower-left {
+    margin-left: 13.5px;
+  }
+  .container-fluid-narrower-right {
+    margin-right: 13.5px;
+  }
   .container-fluid-wide {
+    margin-left: 81px;
+    margin-right: 81px;
+  }
+  .container-fluid-wide-left {
+    margin-left: 81px;
+  }
+  .container-fluid-wide-right {
+    margin-right: 81px;
+  }
+  .container-fluid-wider {
     margin-left: 108px;
     margin-right: 108px;
   }
-  .container-fluid-wider {
-    margin-left: 216px;
-    margin-right: 216px;
+  .container-fluid-wider-left {
+    margin-left: 108px;
+  }
+  .container-fluid-wider-right {
+    margin-right: 108px;
+  }
+  .container-fluid-flush {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid-flush-left {
+    margin-left: 0px;
+  }
+  .container-fluid-flush-right {
+    margin-right: 0px;
   }
   /* -----------------------------------------------------------------------------
     Row
@@ -6904,6 +6994,9 @@ button,
   /* -----------------------------------------------------------------------------
     Rounded Button (.button-rounded)
     ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      Button Content
+      ----------------------------------------------------------------------------- */
 }
 button.button-narrow,
 .button.button-narrow {
@@ -6930,6 +7023,12 @@ button.button-wide-left,
 button.button-wide-right,
 .button.button-wide-right {
   padding-right: 3rem;
+}
+button > *,
+.button > * {
+  display: -webkit-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
 }
 button.button-dropdown:after,
 .button.button-dropdown:after,
@@ -6998,6 +7097,33 @@ button.active.dropdown-toggle:after,
   border-color: #5b6171 transparent transparent transparent;
   _border-color: #5b6171 #000000 #000000 #000000;
 }
+button:disabled,
+.button:disabled,
+button.disabled,
+.button.disabled {
+  cursor: default;
+  color: #323a4e;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  text-rendering: optimizelegibility;
+  background: #e0e1e4;
+  border-width: 1px;
+  border-color: #e0e1e4;
+  border-style: solid;
+  opacity: 0.5;
+}
+button:disabled.button-dropdown:after,
+.button:disabled.button-dropdown:after,
+button.disabled.button-dropdown:after,
+.button.disabled.button-dropdown:after,
+button:disabled.dropdown-toggle:after,
+.button:disabled.dropdown-toggle:after,
+button.disabled.dropdown-toggle:after,
+.button.disabled.dropdown-toggle:after {
+  border-color: #323a4e transparent transparent transparent;
+  _border-color: #323a4e #000000 #000000 #000000;
+}
 button.button-inverse,
 .button.button-inverse {
   color: #ffffff;
@@ -7057,6 +7183,26 @@ button.button-inverse.active.dropdown-toggle:after,
   border-color: #c2c4ca transparent transparent transparent;
   _border-color: #c2c4ca #000000 #000000 #000000;
 }
+button.button-inverse:disabled,
+.button.button-inverse:disabled,
+button.button-inverse.disabled,
+.button.button-inverse.disabled {
+  color: #ffffff;
+  background: #474e60;
+  border-color: #474e60;
+  opacity: 0.5;
+}
+button.button-inverse:disabled.button-dropdown:after,
+.button.button-inverse:disabled.button-dropdown:after,
+button.button-inverse.disabled.button-dropdown:after,
+.button.button-inverse.disabled.button-dropdown:after,
+button.button-inverse:disabled.dropdown-toggle:after,
+.button.button-inverse:disabled.dropdown-toggle:after,
+button.button-inverse.disabled.dropdown-toggle:after,
+.button.button-inverse.disabled.dropdown-toggle:after {
+  border-color: #ffffff transparent transparent transparent;
+  _border-color: #ffffff #000000 #000000 #000000;
+}
 button.button-block,
 .button.button-block {
   display: -webkit-flex;
@@ -7087,6 +7233,15 @@ button.button-rounded.button-narrow,
 button.button-rounded.button-wide,
 .button.button-rounded.button-wide {
   padding-right: 3.6rem;
+}
+button > *,
+.button > * {
+  box-sizing: content-box;
+  padding-right: 0.375rem;
+}
+button > *:last-child,
+.button > *:last-child {
+  padding-right: 0px;
 }
 /* -----------------------------------------------------------------------------
     Button Group (.button-group)
@@ -7222,6 +7377,9 @@ button.button-rounded.button-wide,
     /* -----------------------------------------------------------------------------
           Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   button.button-narrow,
   .button.button-narrow {
@@ -7286,6 +7444,10 @@ button.button-rounded.button-wide,
   button.button-rounded.button-wide,
   .button.button-rounded.button-wide {
     padding-right: 3.96rem;
+  }
+  button > *,
+  .button > * {
+    padding-right: 0.4125rem;
   }
   /* -----------------------------------------------------------------------------
         Button Group (.button-group)
@@ -7355,6 +7517,9 @@ button.button-rounded.button-wide,
     /* -----------------------------------------------------------------------------
           Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   button.button-narrow,
   .button.button-narrow {
@@ -7419,6 +7584,10 @@ button.button-rounded.button-wide,
   button.button-rounded.button-wide,
   .button.button-rounded.button-wide {
     padding-right: 4.32rem;
+  }
+  button > *,
+  .button > * {
+    padding-right: 0.45rem;
   }
   /* -----------------------------------------------------------------------------
         Button Group (.button-group)
@@ -7565,6 +7734,9 @@ button-mini/styles.less
   /* -----------------------------------------------------------------------------
     Button Rounded (.button-rounded)
     ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      Button Content
+      ----------------------------------------------------------------------------- */
 }
 .button-mini.button-mini-narrow {
   padding-left: 0.25rem;
@@ -7611,6 +7783,9 @@ button-mini/styles.less
 }
 .button-mini.button-rounded.button-mini-wide {
   padding-right: 1.2rem;
+}
+.button-mini > * {
+  padding-right: 0.135em;
 }
 /* -----------------------------------------------------------------------------
     Button group
@@ -7695,6 +7870,9 @@ button-mini/styles.less
     /* -----------------------------------------------------------------------------
           Button (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   .button-mini.button-mini-narrow {
     padding-left: 0.275rem;
@@ -7739,6 +7917,9 @@ button-mini/styles.less
   }
   .button-mini.button-rounded.button-mini-wide {
     padding-right: 1.32rem;
+  }
+  .button-mini > * {
+    padding-right: 0.1485em;
   }
   /* -----------------------------------------------------------------------------
         Button group
@@ -7795,6 +7976,9 @@ button-mini/styles.less
     /* -----------------------------------------------------------------------------
           Button (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   .button-mini.button-mini-narrow {
     padding-left: 0.3rem;
@@ -7839,6 +8023,9 @@ button-mini/styles.less
   }
   .button-mini.button-rounded.button-mini-wide {
     padding-right: 1.44rem;
+  }
+  .button-mini > * {
+    padding-right: 0.162em;
   }
   /* -----------------------------------------------------------------------------
         Button group
@@ -7964,6 +8151,9 @@ button-small/styles.less
   /* -----------------------------------------------------------------------------
     Button Rounded (.button-rounded)
     ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      Button Content
+      ----------------------------------------------------------------------------- */
 }
 .button-small.button-small-narrow {
   padding-left: 0.5rem;
@@ -8010,6 +8200,9 @@ button-small/styles.less
 }
 .button-small.button-rounded.button-small-wide {
   padding-right: 2.4rem;
+}
+.button-small > * {
+  padding-right: 0.25rem;
 }
 /* -----------------------------------------------------------------------------
     Button group
@@ -8094,6 +8287,9 @@ button-small/styles.less
     /* -----------------------------------------------------------------------------
           Button (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   .button-small.button-small-narrow {
     padding-left: 0.55rem;
@@ -8138,6 +8334,9 @@ button-small/styles.less
   }
   .button-small.button-rounded.button-small-wide {
     padding-right: 2.64rem;
+  }
+  .button-small > * {
+    padding-right: 0.275rem;
   }
   /* -----------------------------------------------------------------------------
         Button group
@@ -8194,6 +8393,9 @@ button-small/styles.less
     /* -----------------------------------------------------------------------------
           Button (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   .button-small.button-small-narrow {
     padding-left: 0.6rem;
@@ -8238,6 +8440,9 @@ button-small/styles.less
   }
   .button-small.button-rounded.button-small-wide {
     padding-right: 2.88rem;
+  }
+  .button-small > * {
+    padding-right: 0.3rem;
   }
   /* -----------------------------------------------------------------------------
         Button group
@@ -8363,6 +8568,9 @@ button-large/styles.less
   /* -----------------------------------------------------------------------------
     Button Rounded (.button-rounded)
     ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      Button Content
+      ----------------------------------------------------------------------------- */
 }
 .button-large.button-large-narrow {
   padding-left: 1rem;
@@ -8409,6 +8617,9 @@ button-large/styles.less
 }
 .button-large.button-rounded.button-large-wide {
   padding-right: 4.8rem;
+}
+.button-large > * {
+  padding-right: 0.5rem;
 }
 /* -----------------------------------------------------------------------------
     Button group
@@ -8493,6 +8704,9 @@ button-large/styles.less
     /* -----------------------------------------------------------------------------
           Button (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   .button-large.button-large-narrow {
     padding-left: 1.1rem;
@@ -8537,6 +8751,9 @@ button-large/styles.less
   }
   .button-large.button-rounded.button-large-wide {
     padding-right: 5.28rem;
+  }
+  .button-large > * {
+    padding-right: 0.55rem;
   }
   /* -----------------------------------------------------------------------------
         Button group
@@ -8593,6 +8810,9 @@ button-large/styles.less
     /* -----------------------------------------------------------------------------
           Button (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   .button-large.button-large-narrow {
     padding-left: 1.2rem;
@@ -8637,6 +8857,9 @@ button-large/styles.less
   }
   .button-large.button-rounded.button-large-wide {
     padding-right: 5.76rem;
+  }
+  .button-large > * {
+    padding-right: 0.6rem;
   }
   /* -----------------------------------------------------------------------------
         Button group
@@ -8762,6 +8985,9 @@ button-jumbo/styles.less
   /* -----------------------------------------------------------------------------
     Button Rounded (.button-rounded)
     ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      Button Content
+      ----------------------------------------------------------------------------- */
 }
 .button-jumbo.button-jumbo-narrow {
   padding-left: 1.25rem;
@@ -8808,6 +9034,9 @@ button-jumbo/styles.less
 }
 .button-jumbo.button-rounded.button-jumbo-wide {
   padding-right: 6rem;
+}
+.button-jumbo > * {
+  padding-right: 0.5rem;
 }
 /* -----------------------------------------------------------------------------
     Button group
@@ -8892,6 +9121,9 @@ button-jumbo/styles.less
     /* -----------------------------------------------------------------------------
           Button (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   .button-jumbo.button-jumbo-narrow {
     padding-left: 1.375rem;
@@ -8936,6 +9168,9 @@ button-jumbo/styles.less
   }
   .button-jumbo.button-rounded.button-jumbo-wide {
     padding-right: 6.6rem;
+  }
+  .button-jumbo > * {
+    padding-right: 0.55rem;
   }
   /* -----------------------------------------------------------------------------
         Button group
@@ -8992,6 +9227,9 @@ button-jumbo/styles.less
     /* -----------------------------------------------------------------------------
           Button (.button-rounded)
           ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Button Content
+          ----------------------------------------------------------------------------- */
   }
   .button-jumbo.button-jumbo-narrow {
     padding-left: 1.5rem;
@@ -9036,6 +9274,9 @@ button-jumbo/styles.less
   }
   .button-jumbo.button-rounded.button-jumbo-wide {
     padding-right: 7.2rem;
+  }
+  .button-jumbo > * {
+    padding-right: 0.6rem;
   }
   /* -----------------------------------------------------------------------------
         Button group
@@ -11518,6 +11759,7 @@ button-collection/styles.less
 }
 .button-collection > .button,
 .button-collection > .button-group {
+  vertical-align: middle;
   margin-bottom: 0px;
   margin-top: 6px;
   margin-left: 6px;
