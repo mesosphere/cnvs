@@ -13,7 +13,7 @@ page-navigation:
 - label: "Fluid-Width Containers"
   link: "#containers-fluid"
   navigation:
-  - label: "Fluid-Width Container Variants"
+  - label: "Fluid-Width Container Options"
     link: "#containers-fluid-variants"
 ---
 
@@ -25,15 +25,13 @@ page-navigation:
 
   <section id="containers">
 
-    <p>
+    <p class="lead">
 
-      Containers provide basic layout functionality. The term "Container" has been borrowed from Twitter's Bootstrap, and is meant to imply an element that wraps or "contains" content. Properties such as a width and margin for the container vary depending on both the class and screen resolution. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
-
-    </p>
+      Containers provide basic layout functionality. The term "container" has been borrowed from Twitter's Bootstrap, and is meant to imply an element that wraps or "contains" content.<p>
 
     <p>
 
-      Unlike Bootstrap, Containers in canvas can be used independent of the <a href="/layout/grid">Grid System</a>.
+      In Canvas, containers can be used independent of the <a href="/layout/grid">Grid System</a>. Properties such as a width and margin for the container vary depending on both the class and screen resolution. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
 
     </p>
 
@@ -69,7 +67,7 @@ page-navigation:
 
       <div class="example-block-content">
 
-        <div class="layout-box">
+        <div class="layout-box containers-fixed">
           <div class="layout-box-item layout-box-item-margin">
             <div class="layout-box-item layout-box-item-padding">
               <div class="layout-box-item layout-box-item-content">
@@ -128,7 +126,7 @@ page-navigation:
 
       <div class="example-block-content">
 
-        <div class="layout-box">
+        <div class="layout-box containers-fluid">
           <div class="layout-box-item layout-box-item-margin">
             <div class="layout-box-item layout-box-item-padding">
               <div class="layout-box-item layout-box-item-content">
@@ -156,20 +154,32 @@ page-navigation:
     ================================================== -->
 
     <!-- =================================================
-    BEGIN: Container (Fluid) Variants
+    BEGIN: Container (Fluid) Options
     ================================================== -->
 
-    <section id="containers-fluid-variants">
+    <section id="containers-fluid-options">
 
       <h3>
 
-        Fluid-Width Container Variants
+        Fluid-Width Container Options
 
       </h3>
 
       <p>
 
-        Added classes have been provided to modify the outer margins applied to fluid-width containers.  These can be used independently or in combination with other variant classes to created your desired layout arrangement.
+        By default, margins are applied evenly to both the left and right of the fluid container. You can easily adjust this behavior by adding a size modifier to the base <code>.container-fluid</code> class. For example <code>.container-fluid-narrow</code> will decrease the margins and <code>.container-fluid-wide</code> will increase the margin. Furthermore, if you are seeking to change the margin in only a single direction, you can add an additional direction modifier. For example, <code>.container-fluid-wide-left</code> increase the margin only the left of the fluid container.
+
+      </p>
+
+      <h4>
+
+        Size Modifiers
+
+      </h4>
+
+      <p>
+
+        To adjust margin apply one of the available container-specific size classes.  For example, simply using the class <code>.container-fluid-narrow</code> will reduce margins evenly on each side of the fluid container.
 
       </p>
 
@@ -305,11 +315,11 @@ page-navigation:
       BEGIN: Example
       ================================================== -->
 
-      <div class="example-block flush-bottom">
+      <div class="example-block">
 
         <div class="example-block-content">
 
-          <div class="layout-box">
+          <div class="layout-box containers-fluid-options-size-modifier">
             <div class="layout-box-item layout-box-item-margin">
               <div class="layout-box-item layout-box-item-padding">
                 <div class="layout-box-item layout-box-item-content">
@@ -322,11 +332,126 @@ page-navigation:
 
         <div class="example-block-footer example-block-footer-codeblock">
 
-    <pre class="prettyprint lang-html flush-bottom">
-  &lt;div class="container-fluid container-fluid-narrow-right container-fluid-wide-left"&gt;
-    &lt;!-- Container content goes here --&gt;
-  &lt;/div&gt;
-    </pre>
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="container-fluid container-fluid-narrow"&gt;
+  &lt;!-- Container content goes here --&gt;
+&lt;/div&gt;
+</pre>
+
+        </div>
+
+      </div>
+
+      <!-- =================================================
+      END: Example
+      ================================================== -->
+
+      <h3>
+
+        Size Direction Modifiers
+
+      </h3>
+
+      <p>
+
+        Add <code>-left</code> or <code>-right</code> to the end of the size modifier class to adjust margin only in the direction implied by the direction modifier.
+
+      </p>
+
+      <table class="table short">
+
+        <thead>
+
+          <tr>
+
+            <th>
+
+              Class
+
+            </th>
+
+            <th>
+
+              Description
+
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>
+
+              <code>
+
+                .container-fluid-*-left
+
+              </code>
+
+            </td>
+
+            <td>
+
+              Adjust margin to the left of the container.
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <code>
+
+                .container-fluid-*-right
+
+              </code>
+
+            </td>
+
+            <td>
+
+              Adjust margin to the right of the container.
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <!-- =================================================
+      BEGIN: Example
+      ================================================== -->
+
+      <div class="example-block flush-bottom">
+
+        <div class="example-block-content">
+
+          <div class="layout-box containers-fluid-options-size-direction-modifier">
+            <div class="layout-box-item layout-box-item-margin">
+              <div class="layout-box-item layout-box-item-padding">
+                <div class="layout-box-item layout-box-item-content">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="container-fluid container-fluid-wider-left container-fluid-narrow-right"&gt;
+  &lt;!-- Container content goes here --&gt;
+&lt;/div&gt;
+</pre>
 
         </div>
 
@@ -339,7 +464,7 @@ page-navigation:
     </section>
 
     <!-- =================================================
-    END: Container (Fluid) Variants
+    END: Container (Fluid) Options
     ================================================== -->
 
   </section>

@@ -127,6 +127,38 @@ Layout Variant
 }
 
 /* -----------------------------------------------------------------------------
+Pod
+----------------------------------------------------------------------------- */
+
+.pod (@variant, @screen-size) when (@variant = null) {
+
+  @pod-class: replace(e('pod-@{variant}'), '-null', '');
+  @pod-screen-size-class: replace("@{pod-class}-@{screen-size}", '-null', '');
+
+  .shape-layout-variant(pod, @screen-size);
+
+}
+
+.pod (@variant, @screen-size) when not (@variant = null) {
+
+  @pod-class: replace(e('pod-@{variant}'), '-null', '');
+  @pod-screen-size-class: replace("@{pod-class}-@{screen-size}", '-null', '');
+
+  &.@{pod-class} {
+
+    .shape-layout-variant(pod, @variant, @screen-size);
+
+  }
+
+  &.@{pod-screen-size-class} {
+
+    .shape-layout-variant(pod, @variant, @screen-size);
+
+  }
+
+}
+
+/* -----------------------------------------------------------------------------
 Clearfix
 ----------------------------------------------------------------------------- */
 

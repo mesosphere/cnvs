@@ -152,6 +152,7 @@ gulp.task("watch", function () {
   gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
   gulp.watch([dirs.docs.javascripts + "/**/*.js"], ["docs:javascripts"]);
   gulp.watch([dirs.canvas.styles + "/**/*.less"], ["canvas:styles", "docs:styles"]);
+  gulp.watch([dirs.docs.path + '/images/**/*'], ["docs:move"]);
   gulp.watch([
     dirs.docs.path + '/**/*.html',
     dirs.docs.path + '/**/*.md',
@@ -287,7 +288,8 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 
   var files = [
       dirs.docs.dist.styles + '/**/*.css',
-      dirs.docs.dist.javascripts + '**/*.js'
+      dirs.docs.dist.javascripts + '**/*.js',
+      dirs.docs.dist + 'images/**/*'
    ];
 
   browserSync({

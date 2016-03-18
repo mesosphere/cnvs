@@ -12,24 +12,18 @@ container/styles.less
 Container (Fixed)
 ----------------------------------------------------------------------------- */
 
-#containers-fixed {
+.layout-box.containers-fixed {
 
-  .layout-box {
+  width: 100%;
+  margin: 0 auto;
 
-    width: 100%;
-    margin: 0 auto;
+  .layout-box-item {
 
-    .layout-box-item {
+    &.layout-box-item-margin {
 
-      &.layout-box-item-margin {
+      & when not (@grid-container-gutter-width = null) {
 
-        padding: 0px 20px;
-
-      }
-
-      &.layout-box-item-content {
-
-        height: 100px;
+        padding: 0px @grid-container-gutter-width;
 
       }
 
@@ -43,24 +37,18 @@ Container (Fixed)
 Container (Fluid)
 ----------------------------------------------------------------------------- */
 
-#containers-fluid {
+.layout-box.containers-fluid {
 
-  .layout-box {
+  width: 100%;
+  margin: 0 auto;
 
-    width: 100%;
-    margin: 0 auto;
+  .layout-box-item {
 
-    .layout-box-item {
+    &.layout-box-item-margin {
 
-      &.layout-box-item-margin {
+      & when not (@grid-container-fluid-gutter-width = null) {
 
-        padding: 0px 20px;
-
-      }
-
-      &.layout-box-item-content {
-
-        height: 100px;
+        padding: 0px @grid-container-fluid-gutter-width;
 
       }
 
@@ -74,24 +62,39 @@ Container (Fluid)
 Container (Fluid)
 ----------------------------------------------------------------------------- */
 
-#containers-fluid-variants {
+.layout-box.containers-fluid-options-size-modifier {
 
-  .layout-box {
+  .layout-box-item {
 
-    width: 100%;
-    margin: 0 auto;
+    &.layout-box-item-margin {
 
-    .layout-box-item {
+      & when not (@grid-container-fluid-narrow-margin-scale = null) {
 
-      &.layout-box-item-margin {
-
-        padding: 0px 10px 0px 40px;
+        padding: 0px (@grid-container-fluid-gutter-width * @grid-container-fluid-narrow-margin-scale);
 
       }
 
-      &.layout-box-item-content {
+    }
 
-        height: 100px;
+  }
+
+}
+
+.layout-box.containers-fluid-options-size-direction-modifier {
+
+  .layout-box-item {
+
+    &.layout-box-item-margin {
+
+      & when not (@grid-container-fluid-gutter-width = null) and not (@grid-container-fluid-wider-margin-scale = null) {
+
+        padding-left: (@grid-container-fluid-gutter-width * @grid-container-fluid-wider-margin-scale);
+
+      }
+
+      & when not (@grid-container-fluid-gutter-width = null) and not (@grid-container-fluid-narrow-margin-scale = null) {
+
+        padding-right: (@grid-container-fluid-gutter-width * @grid-container-fluid-narrow-margin-scale);
 
       }
 
@@ -112,6 +115,96 @@ Container (Fluid)
 
   @media (min-width: @layout-screen-mini-min-width) {
 
+    /* -----------------------------------------------------------------------------
+    Container (Fixed)
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.containers-fixed {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@grid-container-gutter-width-screen-mini = null) {
+
+            padding: 0px @grid-container-gutter-width-screen-mini;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Container (Fluid)
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.containers-fluid {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@grid-container-fluid-gutter-width-screen-mini = null) {
+
+            padding: 0px @grid-container-fluid-gutter-width-screen-mini;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Container (Fluid) Options
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.containers-fluid-options-size-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@grid-container-fluid-gutter-width-screen-mini = null) {
+
+            padding: 0px (@grid-container-fluid-gutter-width-screen-mini * @grid-container-fluid-narrow-margin-scale);
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.containers-fluid-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@grid-container-fluid-gutter-width-screen-mini = null) and not (@grid-container-fluid-wider-margin-scale = null) {
+
+            padding-left: (@grid-container-fluid-gutter-width-screen-mini * @grid-container-fluid-wider-margin-scale);
+
+          }
+
+          & when not (@grid-container-fluid-gutter-width-screen-mini = null) and not (@grid-container-fluid-narrow-margin-scale = null) {
+
+            padding-right: (@grid-container-fluid-gutter-width-screen-mini * @grid-container-fluid-narrow-margin-scale);
+
+          }
+
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -130,19 +223,15 @@ Container (Fluid)
     Container (Fixed)
     ----------------------------------------------------------------------------- */
 
-    #containers-fixed {
+    .layout-box.containers-fixed {
 
-      .layout-box {
+      width: 300px;
 
-        width: 300px;
+      .layout-box-item {
 
-        .layout-box-item {
+        &.layout-box-item-margin {
 
-          &.layout-box-item-margin {
-
-            padding: 0px;
-
-          }
+          padding: 0px;
 
         }
 
@@ -154,15 +243,15 @@ Container (Fluid)
     Container (Fluid)
     ----------------------------------------------------------------------------- */
 
-    #containers-fluid {
+    .layout-box.containers-fluid {
 
-      .layout-box {
+      .layout-box-item {
 
-        .layout-box-item {
+        &.layout-box-item-margin {
 
-          &.layout-box-item-margin {
+          & when not (@grid-container-fluid-gutter-width-screen-small = null) {
 
-            padding: 0px 20px;
+            padding: 0px @grid-container-fluid-gutter-width-screen-small;
 
           }
 
@@ -173,18 +262,42 @@ Container (Fluid)
     }
 
     /* -----------------------------------------------------------------------------
-    Container (Fluid)
+    Container (Fluid) Options
     ----------------------------------------------------------------------------- */
 
-    #containers-fluid-variants {
+    .layout-box.containers-fluid-options-size-modifier {
 
-      .layout-box {
+      .layout-box-item {
 
-        .layout-box-item {
+        &.layout-box-item-margin {
 
-          &.layout-box-item-margin {
+          & when not (@grid-container-fluid-gutter-width-screen-small = null) {
 
-            padding: 0px 10px 0px 40px;
+            padding: 0px (@grid-container-fluid-gutter-width-screen-small * @grid-container-fluid-narrow-margin-scale);
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.containers-fluid-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@grid-container-fluid-gutter-width-screen-small = null) and not (@grid-container-fluid-wider-margin-scale = null) {
+
+            padding-left: (@grid-container-fluid-gutter-width-screen-small * @grid-container-fluid-wider-margin-scale);
+
+          }
+
+          & when not (@grid-container-fluid-gutter-width-screen-small = null) and not (@grid-container-fluid-narrow-margin-scale = null) {
+
+            padding-right: (@grid-container-fluid-gutter-width-screen-small * @grid-container-fluid-narrow-margin-scale);
 
           }
 
@@ -212,13 +325,9 @@ Container (Fluid)
     Container (Fixed)
     ----------------------------------------------------------------------------- */
 
-    #containers-fixed {
+    .layout-box.containers-fixed {
 
-      .layout-box {
-
-        width: 500px;
-
-      }
+      width: 500px;
 
     }
 
@@ -226,15 +335,15 @@ Container (Fluid)
     Container (Fluid)
     ----------------------------------------------------------------------------- */
 
-    #containers-fluid {
+    .layout-box.containers-fluid {
 
-      .layout-box {
+      .layout-box-item {
 
-        .layout-box-item {
+        &.layout-box-item-margin {
 
-          &.layout-box-item-margin {
+          & when not (@grid-container-fluid-gutter-width-screen-medium = null) {
 
-            padding: 0px 30px;
+            padding: 0px @grid-container-fluid-gutter-width-screen-medium;
 
           }
 
@@ -245,18 +354,42 @@ Container (Fluid)
     }
 
     /* -----------------------------------------------------------------------------
-    Container (Fluid)
+    Container (Fluid) Options
     ----------------------------------------------------------------------------- */
 
-    #containers-fluid-variants {
+    .layout-box.containers-fluid-options-size-modifier {
 
-      .layout-box {
+      .layout-box-item {
 
-        .layout-box-item {
+        &.layout-box-item-margin {
 
-          &.layout-box-item-margin {
+          & when not (@grid-container-fluid-gutter-width-screen-medium = null) {
 
-            padding: 0px 15px 0px 60px;
+            padding: 0px (@grid-container-fluid-gutter-width-screen-medium * @grid-container-fluid-narrow-margin-scale);
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.containers-fluid-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@grid-container-fluid-gutter-width-screen-medium = null) and not (@grid-container-fluid-wider-margin-scale = null) {
+
+            padding-left: (@grid-container-fluid-gutter-width-screen-medium * @grid-container-fluid-wider-margin-scale);
+
+          }
+
+          & when not (@grid-container-fluid-gutter-width-screen-medium = null) and not (@grid-container-fluid-narrow-margin-scale = null) {
+
+            padding-right: (@grid-container-fluid-gutter-width-screen-medium * @grid-container-fluid-narrow-margin-scale);
 
           }
 
@@ -284,13 +417,9 @@ Container (Fluid)
     Container (Fixed)
     ----------------------------------------------------------------------------- */
 
-    #containers-fixed {
+    .layout-box.containers-fixed {
 
-      .layout-box {
-
-        width: 600px;
-
-      }
+      width: 600px;
 
     }
 
@@ -298,15 +427,15 @@ Container (Fluid)
     Container (Fluid)
     ----------------------------------------------------------------------------- */
 
-    #containers-fluid {
+    .layout-box.containers-fluid {
 
-      .layout-box {
+      .layout-box-item {
 
-        .layout-box-item {
+        &.layout-box-item-margin {
 
-          &.layout-box-item-margin {
+          & when not (@grid-container-fluid-gutter-width-screen-large = null) {
 
-            padding: 0px 40px;
+            padding: 0px @grid-container-fluid-gutter-width-screen-large;
 
           }
 
@@ -317,18 +446,42 @@ Container (Fluid)
     }
 
     /* -----------------------------------------------------------------------------
-    Container (Fluid)
+    Container (Fluid) Options
     ----------------------------------------------------------------------------- */
 
-    #containers-fluid-variants {
+    .layout-box.containers-fluid-options-size-modifier {
 
-      .layout-box {
+      .layout-box-item {
 
-        .layout-box-item {
+        &.layout-box-item-margin {
 
-          &.layout-box-item-margin {
+          & when not (@grid-container-fluid-gutter-width-screen-large = null) {
 
-            padding: 0px 20px 0px 80px;
+            padding: 0px (@grid-container-fluid-gutter-width-screen-large * @grid-container-fluid-narrow-margin-scale);
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.containers-fluid-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@grid-container-fluid-gutter-width-screen-large = null) and not (@grid-container-fluid-wider-margin-scale = null) {
+
+            padding-left: (@grid-container-fluid-gutter-width-screen-large * @grid-container-fluid-wider-margin-scale);
+
+          }
+
+          & when not (@grid-container-fluid-gutter-width-screen-large = null) and not (@grid-container-fluid-narrow-margin-scale = null) {
+
+            padding-right: (@grid-container-fluid-gutter-width-screen-large * @grid-container-fluid-narrow-margin-scale);
 
           }
 

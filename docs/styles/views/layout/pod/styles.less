@@ -1,0 +1,408 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+pod/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Pod Overview
+----------------------------------------------------------------------------- */
+
+.layout-box.pods-overview {
+
+  width: 100%;
+  margin: 0 auto;
+
+  .layout-box-item {
+
+    &.layout-box-item-padding {
+
+      padding: @pod-padding-top 0px;
+
+    }
+
+  }
+
+}
+
+.layout-box.pods-options-size-modifier {
+
+  .layout-box-item {
+
+    &.layout-box-item-padding {
+
+      & when not (@pod-short-padding-top-scale = null) {
+
+        padding: (@pod-padding-top * @pod-short-padding-top-scale) 0px;
+
+      }
+
+    }
+
+  }
+
+}
+
+.layout-box.pods-options-size-direction-modifier {
+
+  .layout-box-item {
+
+    &.layout-box-item-padding {
+
+      & when not (@pod-short-padding-top-scale = null) {
+
+        padding-top: (@pod-padding-top * @pod-short-padding-top-scale)
+
+      }
+
+      & when not (@pod-taller-padding-bottom-scale = null) {
+
+        padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale)
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-mini-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    Pod Overview
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.pods-overview {
+
+      .layout-box-item {
+
+        & when not (@pod-padding-top-scale-screen-mini = null) {
+
+          &.layout-box-item-padding {
+
+            padding: (@pod-padding-top * @pod-padding-top-scale-screen-mini) 0px;
+
+          }
+
+        }
+
+        &.layout-box-item-content {
+
+          height: 100px;
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-mini = null) {
+
+            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-mini) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-mini = null) {
+
+            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-mini)
+
+          }
+
+          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-mini = null) {
+
+            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-mini)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    Pod Overview
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.pods-overview {
+
+      .layout-box-item {
+
+        & when not (@pod-padding-top-scale-screen-small = null) {
+
+          &.layout-box-item-padding {
+
+            padding: (@pod-padding-top * @pod-padding-top-scale-screen-small) 0px;
+
+          }
+
+        }
+
+        &.layout-box-item-content {
+
+          height: 100px;
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-small = null) {
+
+            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-small) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-small = null) {
+
+            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-small)
+
+          }
+
+          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-small = null) {
+
+            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-small)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    Pod Overview
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.pods-overview {
+
+      .layout-box-item {
+
+        & when not (@pod-padding-top-scale-screen-medium = null) {
+
+          &.layout-box-item-padding {
+
+            padding: (@pod-padding-top * @pod-padding-top-scale-screen-medium) 0px;
+
+          }
+
+        }
+
+        &.layout-box-item-content {
+
+          height: 100px;
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-medium = null) {
+
+            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-medium) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-medium = null) {
+
+            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-medium)
+
+          }
+
+          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-medium = null) {
+
+            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-medium)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    Pod Overview
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.pods-overview {
+
+      .layout-box-item {
+
+        & when not (@pod-padding-top-scale-screen-large = null) {
+
+          &.layout-box-item-padding {
+
+            padding: (@pod-padding-top * @pod-padding-top-scale-screen-large) 0px;
+
+          }
+
+        }
+
+        &.layout-box-item-content {
+
+          height: 100px;
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-large = null) {
+
+            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-large) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-large = null) {
+
+            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-large)
+
+          }
+
+          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-large = null) {
+
+            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-large)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
