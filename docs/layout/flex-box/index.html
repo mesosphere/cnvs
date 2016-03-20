@@ -7,17 +7,861 @@ page-header:
   parent:
     label: "Layout"
     url: "/layout"
+page-navigation:
+- label: "Flex Box Options"
+  link: "#flex-box-options"
+  navigation:
+  - label: "Direction"
+    link: "#flex-box-direction"
+  - label: "Wrap Items"
+    link: "#flex-box-wrap-items"
+  - label: "Align Items"
+    link: "#flex-box-align-items"
+  - label: "Justify Items"
+    link: "#flex-box-justify-items"
+  - label: "Align Content"
+    link: "#flex-box-align-content"
 ---
 
 <!-- =================================================
-BEGIN: Flex
+BEGIN: Flex Box
 ================================================== -->
 
 <section class="canvas-pod" id="flex-box">
 
   <div class="container-fluid pod">
 
+    <p class="lead">
 
+      Flexbox (or "Flexible Box") provides an efficient set of styles for positioning, aligning, and distributing space among items in a container.  CNVS provides a number of available classes for quickly assigning flex box behavior to your layout.
+
+    </p>
+
+    <p>
+
+      The flex box model provides an improvement over the block model in that it does not use floats, nor do the flex container's margins collapse with the margins of its contents.  In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.
+
+    </p>
+
+    <!-- =================================================
+    BEGIN: Flex Box Options
+    ================================================== -->
+
+    <section id="flex-box-options">
+
+      <h2>
+
+        Flex Box Options
+
+      </h2>
+
+      <p>
+
+        CNVS provides a number of available classes for quickly assigning flex box behavior to your layout.  All classes are prefixed with <code>.flex-</code>.  Classes were selected to be human-readable and don't necessarily match directly with the related styling prorperties they invoke.
+
+      </p>
+
+      <table class="table short">
+
+        <thead>
+
+          <tr>
+
+            <th>
+
+              Class
+
+            </th>
+
+            <th>
+
+              Description
+
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>
+
+              <code>
+
+                .flex
+
+              </code>
+
+            </td>
+
+            <td>
+
+              Apply flex box layout behavior to element.
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+              <code>
+
+                .flex-inline
+
+              </code>
+
+            </td>
+
+            <td>
+
+              Apply flex box layout behavior to element, but render as inline element.
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <!-- =================================================
+      BEGIN: Flex Box Direction
+      ================================================== -->
+
+      <section id="flex-box-direction">
+
+        <h3>
+
+          Direction
+
+        </h3>
+
+        <p>
+
+          The <code>.flex-direction-</code> property specifies the direction of the flexible items inside the flex container. The default value of flex-direction is row (left-to-right, top-to-bottom).
+
+        </p>
+
+        <table class="table short">
+
+          <thead>
+
+            <tr>
+
+              <th>
+
+                Class
+
+              </th>
+
+              <th>
+
+                Description
+
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-direction-left-to-right
+
+                </code>
+
+                (default)
+
+              </td>
+
+              <td>
+
+                Arrange flex items left to right along a horizontal axis.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-direction-right-to-left
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Arrange flex items right to left along a horizontal axis.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-direction-top-to-bottom
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Arrange flex items top to bottom along a vertical axis.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-direction-bottom-to-top
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Arrange flex items bottom to top along a vertical axis.
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+      <!-- =================================================
+      END: Flex Box Direction
+      ================================================== -->
+
+      <!-- =================================================
+      BEGIN: Flex Box Wrap
+      ================================================== -->
+
+      <section id="flex-box-wrap-items">
+
+        <h3>
+
+          Wrap Items
+
+        </h3>
+
+        <p>
+
+          The <code>.flex-wrap-items-</code> property specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line.
+
+        </p>
+
+        <table class="table short">
+
+          <thead>
+
+            <tr>
+
+              <th>
+
+                Class
+
+              </th>
+
+              <th>
+
+                Description
+
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-wrap-items-none
+
+                </code>
+
+                (default)
+
+              </td>
+
+              <td>
+
+                Do not wrap the flexible items.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-wrap-items
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Wrap the flexible items if needed.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-wrap-items-reverse
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Wrap the flexible items in reverse order if needed.
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+      <!-- =================================================
+      END: Flex Box Wrap
+      ================================================== -->
+
+      <!-- =================================================
+      BEGIN: Flex Box Item Alignment
+      ================================================== -->
+
+      <section id="flex-box-align-items">
+
+        <h3>
+
+          Align Items
+
+        </h3>
+
+        <p>
+
+          The <code>.flex-align-items-</code> property vertically aligns the flexible container's items when the items do not use all available space on the cross-axis.
+
+        </p>
+
+        <table class="table short">
+
+          <thead>
+
+            <tr>
+
+              <th>
+
+                Class
+
+              </th>
+
+              <th>
+
+                Description
+
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-items-stretch
+
+                </code>
+
+                (default)
+
+              </td>
+
+              <td>
+
+                Items are stretched to fill the container.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-items-start
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Items are positioned along top or beginning of the container.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-items-end
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Items are positioned along the bottom or end of the container.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-items-center
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Items are centered in the container.
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+      <!-- =================================================
+      END: Flex Box Item Alignment
+      ================================================== -->
+
+      <!-- =================================================
+      BEGIN: Flex Box Justify Items
+      ================================================== -->
+
+      <section id="flex-box-justify-items">
+
+        <h3>
+
+          Justify Itens
+
+        </h3>
+
+        <p>
+
+          The <code>.flex-justify-items-</code> property horizontally aligns the flexible container's items when the items do not use all available space on the main-axis.
+
+        </p>
+
+        <table class="table short">
+
+          <thead>
+
+            <tr>
+
+              <th>
+
+                Class
+
+              </th>
+
+              <th>
+
+                Description
+
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-justify-items-start
+
+                </code>
+
+                (default)
+
+              </td>
+
+              <td>
+
+                Items are positioned at the beginning of the container with remaining space after.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-justify-items-end
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Items are positioned at the end of the container with remaining space before.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-justify-items-center
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Items are positioned in the center f the container with remaining space evenly on both sides.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-justify-items-space-between
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Items are positioned with space evenly between them.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-justify-items-space-around
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Items are positioned with space evenly around them.
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+      <!-- =================================================
+      END: Flex Box Justify Items
+      ================================================== -->
+
+      <!-- =================================================
+      BEGIN: Flex Box Align Content
+      ================================================== -->
+
+      <section id="flex-box-align-content">
+
+        <h3>
+
+          Align Content
+
+        </h3>
+
+        <p>
+
+          The <code>.flex-align-content-</code> property modifies the behavior of the flex item wrapping property. It is similar to <code>.flex-align-items-</code>, but instead of aligning flex items, it aligns flex lines.
+
+        </p>
+
+        <table class="table short">
+
+          <thead>
+
+            <tr>
+
+              <th>
+
+                Class
+
+              </th>
+
+              <th>
+
+                Description
+
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-content-stretch
+
+                </code>
+
+                (default)
+
+              </td>
+
+              <td>
+
+                Lines stretch to take up the remaining space.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-content-start
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Align lines at the start of the flex container.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-content-end
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Align lines at the end of the flex container.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-content-center
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Center lines in the flex container.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-content-space-between
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Lines are positioned with space evenly between them.
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <code>
+
+                  .flex-align-content-space-around
+
+                </code>
+
+              </td>
+
+              <td>
+
+                Lines are evenly distributed with equal space around each line.
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+      <!-- =================================================
+      END: Flex Box Align Content
+      ================================================== -->
+
+    </section>
+
+    <!-- =================================================
+    BEGIN: Flex Box Options
+    ================================================== -->
+
+    <!-- =================================================
+    BEGIN: Flex Box Responsive
+    ================================================== -->
+
+    <section id="flex-box-responsive">
+
+      <h2>
+
+        Responsive Flex Box
+
+      </h2>
+
+    </section>
+
+    <!-- =================================================
+    BEGIN: Flex Box Responsive
+    ================================================== -->
 
   </div>
 
