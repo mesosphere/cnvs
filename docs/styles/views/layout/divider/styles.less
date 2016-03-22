@@ -1,0 +1,291 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+divider/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+divider Overview
+----------------------------------------------------------------------------- */
+
+.layout-box.dividers-spacing-modifiers {
+
+  .layout-box-item {
+
+    &.layout-box-item-content {
+
+      height: auto;
+
+    }
+
+    &.layout-box-item-margin {
+
+      & when not (@divider-short-margin-top-scale = null) {
+
+        padding: (@divider-margin-top * @divider-short-margin-top-scale) 0px;
+
+      }
+
+    }
+
+  }
+
+}
+
+.layout-box.dividers-spacing-direction-modifier {
+
+  .layout-box-item {
+
+    &.layout-box-item-content {
+
+      height: auto;
+
+    }
+
+    &.layout-box-item-margin {
+
+      & when not (@divider-short-margin-top-scale = null) {
+
+        padding-top: (@divider-margin-top * @divider-short-margin-top-scale)
+
+      }
+
+      & when not (@divider-taller-margin-bottom-scale = null) {
+
+        padding-bottom: (@divider-margin-bottom * @divider-taller-margin-bottom-scale)
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-mini-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-mini-min-width) {
+
+    .layout-box.dividers-spacing-modifiers {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@divider-short-margin-top-scale = null) and not (@divider-margin-top-scale-screen-mini = null) {
+
+            padding: (@divider-margin-top * @divider-short-margin-top-scale * @divider-margin-top-scale-screen-mini) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.dividers-spacing-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@divider-short-margin-top-scale = null) and not (@divider-margin-top-scale-screen-mini = null) {
+
+            padding-top: (@divider-margin-top * @divider-short-margin-top-scale * @divider-margin-top-scale-screen-mini)
+
+          }
+
+          & when not (@divider-taller-margin-bottom-scale = null) and not (@divider-margin-bottom-scale-screen-mini = null) {
+
+            padding-bottom: (@divider-margin-bottom * @divider-taller-margin-bottom-scale * @divider-margin-bottom-scale-screen-mini)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    .layout-box.dividers-spacing-modifiers {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@divider-short-margin-top-scale = null) and not (@divider-margin-top-scale-screen-small = null) {
+
+            padding: (@divider-margin-top * @divider-short-margin-top-scale * @divider-margin-top-scale-screen-small) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.dividers-spacing-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@divider-short-margin-top-scale = null) and not (@divider-margin-top-scale-screen-small = null) {
+
+            padding-top: (@divider-margin-top * @divider-short-margin-top-scale * @divider-margin-top-scale-screen-small)
+
+          }
+
+          & when not (@divider-taller-margin-bottom-scale = null) and not (@divider-margin-bottom-scale-screen-small = null) {
+
+            padding-bottom: (@divider-margin-bottom * @divider-taller-margin-bottom-scale * @divider-margin-bottom-scale-screen-small)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    .layout-box.dividers-spacing-modifiers {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@divider-short-margin-top-scale = null) and not (@divider-margin-top-scale-screen-medium = null) {
+
+            padding: (@divider-margin-top * @divider-short-margin-top-scale * @divider-margin-top-scale-screen-medium) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.dividers-spacing-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@divider-short-margin-top-scale = null) and not (@divider-margin-top-scale-screen-medium = null) {
+
+            padding-top: (@divider-margin-top * @divider-short-margin-top-scale * @divider-margin-top-scale-screen-medium)
+
+          }
+
+          & when not (@divider-taller-margin-bottom-scale = null) and not (@divider-margin-bottom-scale-screen-medium = null) {
+
+            padding-bottom: (@divider-margin-bottom * @divider-taller-margin-bottom-scale * @divider-margin-bottom-scale-screen-medium)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    .layout-box.dividers-spacing-modifiers {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@divider-short-margin-top-scale = null) and not (@divider-margin-top-scale-screen-large = null) {
+
+            padding: (@divider-margin-top * @divider-short-margin-top-scale * @divider-margin-top-scale-screen-large) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.dividers-spacing-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@divider-short-margin-top-scale = null) and not (@divider-margin-top-scale-screen-large = null) {
+
+            padding-top: (@divider-margin-top * @divider-short-margin-top-scale * @divider-margin-top-scale-screen-large)
+
+          }
+
+          & when not (@divider-taller-margin-bottom-scale = null) and not (@divider-margin-bottom-scale-screen-large = null) {
+
+            padding-bottom: (@divider-margin-bottom * @divider-taller-margin-bottom-scale * @divider-margin-bottom-scale-screen-large)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

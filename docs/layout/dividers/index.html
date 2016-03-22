@@ -7,22 +7,72 @@ page-header:
   parent:
     label: "Layout"
     url: "/layout"
+page-navigation:
+- label: "Inverse Styling"
+  link: "#dividers-inverse-styling"
+- label: "Spacing Modifiers"
+  link: "#dividers-spacing-modifiers"
+  navigation:
+  - label: "Spacing Direction Modifiers"
+    link: "#dividers-spacing-direction-modifiers"
 ---
 
-<!-- =================================================
-BEGIN: Divider
-================================================== -->
+<div class="container-fluid pod">
 
-<section class="canvas-pod" id="dividers">
+  <!-- =================================================
+  BEGIN: Divider
+  ================================================== -->
 
-  <div class="container-fluid pod">
+  <section class="canvas-pod" id="dividers">
 
+    <p class="lead">
 
+      Dividers are a simple way to create separation between content.  CNVS includes a simple divider in both a normal and inverse style.
 
-  </div>
+    </p>
 
-</section>
+    <p>
 
-<!-- =================================================
-END: Divider
-================================================== -->
+      Use either the class <code>.divider</code> or go old-school with the <code>&lt;hr&gt;</code> tag to create a divider.  Dividers fill the width of their parent containers.  By default, dividers have space above and below.
+
+    </p>
+
+    <!-- =================================================
+    BEGIN: Example
+    ================================================== -->
+
+    <div class="example-block">
+
+      <div class="example-block-content">
+
+        <hr>
+
+      </div>
+
+      <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;!-- Alternatively, use &lt;hr&gt; --&gt;
+&lt;div class="divider"&gt;
+  &hellip;
+&lt;/div&gt;
+</pre>
+
+      </div>
+
+    </div>
+
+    <!-- =================================================
+    END: Example
+    ================================================== -->
+
+    {% include layout/dividers/dividers-inverse-styling.html %}
+    {% include layout/dividers/dividers-spacing-modifiers.html %}
+
+  </section>
+
+  <!-- =================================================
+  END: Divider
+  ================================================== -->
+
+</div>
