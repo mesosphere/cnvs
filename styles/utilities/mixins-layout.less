@@ -9,156 +9,6 @@ utilities/mixins-layout.less
 
 
 /* -----------------------------------------------------------------------------
-Shape layout Variant
------------------------------------------------------------------------------ */
-
-.shape-layout-variant (@element, @size) {
-
-  .layout-variant (@element, margin-top, @size);
-  .layout-variant (@element, margin-bottom, @size);
-  .layout-variant (@element, margin-left, @size);
-  .layout-variant (@element, margin-right, @size);
-  .layout-variant (@element, padding-top, @size);
-  .layout-variant (@element, padding-bottom, @size);
-  .layout-variant (@element, padding-left, @size);
-  .layout-variant (@element, padding-right, @size);
-
-}
-
-.shape-layout-variant(@element, @class, @size) {
-
-  &.@{element}-@{class} {
-
-    .layout-variant (@element, @class, margin-top, @size);
-    .layout-variant (@element, @class, margin-bottom, @size);
-    .layout-variant (@element, @class, margin-left, @size);
-    .layout-variant (@element, @class, margin-right, @size);
-    .layout-variant (@element, @class, padding-top, @size);
-    .layout-variant (@element, @class, padding-bottom, @size);
-    .layout-variant (@element, @class, padding-left, @size);
-    .layout-variant (@element, @class, padding-right, @size);
-
-  }
-
-  &.@{element}-@{class}-top {
-
-    .layout-variant (@element, @class, margin-top, @size);
-    .layout-variant (@element, @class, padding-top, @size);
-
-  }
-
-  &.@{element}-@{class}-bottom {
-
-    .layout-variant (@element, @class, margin-bottom, @size);
-    .layout-variant (@element, @class, padding-bottom, @size);
-
-  }
-
-  &.@{element}-@{class}-left {
-
-    .layout-variant (@element, @class, margin-left, @size);
-    .layout-variant (@element, @class, padding-left, @size);
-
-  }
-
-  &.@{element}-@{class}-right {
-
-    .layout-variant (@element, @class, margin-right, @size);
-    .layout-variant (@element, @class, padding-right, @size);
-
-  }
-
-}
-
-/* -----------------------------------------------------------------------------
-Layout Variant
------------------------------------------------------------------------------ */
-
-.layout-variant (@element, @property, @size) when (@size = null) {
-
-  @element-property: "@{element}-@{property}";
-
-  & when not (@@element-property = null) {
-
-    @{property}: @@element-property;
-
-  }
-
-}
-
-.layout-variant (@element, @property, @size) when not (@size = null) {
-
-  @element-property: "@{element}-@{property}";
-  @element-scale: "@{element}-@{property}-@{size}";
-
-  & when not (@@element-property = null) and not (@@element-scale = null) {
-
-    @{property}: @@element-property * @@element-scale;
-
-  }
-
-}
-
-.layout-variant (@element, @class, @property, @size) when (@size = null) {
-
-  @element-property: "@{element}-@{property}";
-  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
-
-  & when not (@@element-property = null) and not (@@element-subclass-scale = null) {
-
-    @{property}: @@element-property * @@element-subclass-scale;
-
-  }
-
-}
-
-.layout-variant (@element, @class, @property, @size) when not (@size = null) {
-
-  @element-property: "@{element}-@{property}";
-  @element-scale: "@{element}-@{property}-@{size}";
-  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
-
-  & when not (@@element-property = null) and not (@@element-scale = null) and not (@@element-subclass-scale = null) {
-
-    @{property}: @@element-property * @@element-scale * @@element-subclass-scale;
-
-  }
-
-}
-
-/* -----------------------------------------------------------------------------
-Pod
------------------------------------------------------------------------------ */
-
-.pod (@variant, @screen-size) when (@variant = null) {
-
-  @pod-class: replace(e('pod-@{variant}'), '-null', '');
-  @pod-screen-size-class: replace("@{pod-class}-@{screen-size}", '-null', '');
-
-  .shape-layout-variant(pod, @screen-size);
-
-}
-
-.pod (@variant, @screen-size) when not (@variant = null) {
-
-  @pod-class: replace(e('pod-@{variant}'), '-null', '');
-  @pod-screen-size-class: replace("@{pod-class}-@{screen-size}", '-null', '');
-
-  &.@{pod-class} {
-
-    .shape-layout-variant(pod, @variant, @screen-size);
-
-  }
-
-  &.@{pod-screen-size-class} {
-
-    .shape-layout-variant(pod, @variant, @screen-size);
-
-  }
-
-}
-
-/* -----------------------------------------------------------------------------
 Clearfix
 ----------------------------------------------------------------------------- */
 
@@ -354,5 +204,180 @@ Transformations
 .translate3d(@x, @y, @z) {
 
   transform: translate3d(@x, @y, @z);
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+Shape layout Variant
+----------------------------------------------------------------------------- */
+
+.shape-layout-variant (@element, @size) {
+
+  .layout-variant (@element, margin-top, @size);
+  .layout-variant (@element, margin-bottom, @size);
+  .layout-variant (@element, margin-left, @size);
+  .layout-variant (@element, margin-right, @size);
+  .layout-variant (@element, padding-top, @size);
+  .layout-variant (@element, padding-bottom, @size);
+  .layout-variant (@element, padding-left, @size);
+  .layout-variant (@element, padding-right, @size);
+
+}
+
+.shape-layout-variant(@element, @class, @size) {
+
+  &.@{element}-@{class} {
+
+    .layout-variant (@element, @class, margin-top, @size);
+    .layout-variant (@element, @class, margin-bottom, @size);
+    .layout-variant (@element, @class, margin-left, @size);
+    .layout-variant (@element, @class, margin-right, @size);
+    .layout-variant (@element, @class, padding-top, @size);
+    .layout-variant (@element, @class, padding-bottom, @size);
+    .layout-variant (@element, @class, padding-left, @size);
+    .layout-variant (@element, @class, padding-right, @size);
+
+  }
+
+  &.@{element}-@{class}-top {
+
+    .layout-variant (@element, @class, margin-top, @size);
+    .layout-variant (@element, @class, padding-top, @size);
+
+  }
+
+  &.@{element}-@{class}-bottom {
+
+    .layout-variant (@element, @class, margin-bottom, @size);
+    .layout-variant (@element, @class, padding-bottom, @size);
+
+  }
+
+  &.@{element}-@{class}-left {
+
+    .layout-variant (@element, @class, margin-left, @size);
+    .layout-variant (@element, @class, padding-left, @size);
+
+  }
+
+  &.@{element}-@{class}-right {
+
+    .layout-variant (@element, @class, margin-right, @size);
+    .layout-variant (@element, @class, padding-right, @size);
+
+  }
+
+}
+
+/* -----------------------------------------------------------------------------
+Layout Variant
+----------------------------------------------------------------------------- */
+
+.layout-variant (@element, @property, @size) when (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+
+  & when not (@@element-property = null) {
+
+    @{property}: @@element-property;
+
+  }
+
+}
+
+.layout-variant (@element, @property, @size) when not (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-scale: "@{element}-@{property}-@{size}";
+
+  & when not (@@element-property = null) and not (@@element-scale = null) {
+
+    @{property}: @@element-property * @@element-scale;
+
+  }
+
+}
+
+.layout-variant (@element, @class, @property, @size) when (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
+
+  & when not (@@element-property = null) and not (@@element-subclass-scale = null) {
+
+    @{property}: @@element-property * @@element-subclass-scale;
+
+  }
+
+}
+
+.layout-variant (@element, @class, @property, @size) when not (@size = null) {
+
+  @element-property: "@{element}-@{property}";
+  @element-scale: "@{element}-@{property}-@{size}";
+  @element-subclass-scale: "@{element}-@{class}-@{property}-scale";
+
+  & when not (@@element-property = null) and not (@@element-scale = null) and not (@@element-subclass-scale = null) {
+
+    @{property}: @@element-property * @@element-scale * @@element-subclass-scale;
+
+  }
+
+}
+
+/* -----------------------------------------------------------------------------
+Pod
+----------------------------------------------------------------------------- */
+
+.pod (@variant, @screen-size) when (@variant = null) {
+
+  @pod-class: replace(e('pod-@{variant}'), '-null', '');
+  @pod-screen-size-class: replace("@{pod-class}-@{screen-size}", '-null', '');
+
+  .shape-layout-variant(pod, @screen-size);
+
+}
+
+.pod (@variant, @screen-size) when not (@variant = null) {
+
+  @pod-class: replace(e('pod-@{variant}'), '-null', '');
+  @pod-screen-size-class: replace("@{pod-class}-@{screen-size}", '-null', '');
+
+  &.@{pod-class} {
+
+    .shape-layout-variant(pod, @variant, @screen-size);
+
+  }
+
+  &.@{pod-screen-size-class} {
+
+    .shape-layout-variant(pod, @variant, @screen-size);
+
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+Generate Index Suffixed Properties for Flex Items
+----------------------------------------------------------------------------- */
+
+.flex-item-property-loop (@class, @property, @screen, @index, @end) when (@index >= @end) {
+
+  @class-name: replace(e('@{class}-@{index}-@{screen}'), '-null', '');
+
+  .@{class-name} {
+
+    @{property}: @index;
+
+  }
+
+  .flex-item-property-loop(@class, @property, @screen, @index - 1, @end);
+}
+
+.flex-item-property-loop (@class, @property, @screen, @index, @end) when (@index < @end) {
 
 }
