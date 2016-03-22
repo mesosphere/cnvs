@@ -1,7 +1,7 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-layout/styles.less
+grid/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
@@ -15,18 +15,6 @@ layout/styles.less
   ----------------------------------------------------------------------------- */
 
   .grid(null, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
-
-  /* -----------------------------------------------------------------------------
-  Container
-  ----------------------------------------------------------------------------- */
-
-  .container(null, null, null);
-  .container(fluid, null, null);
-  .container(fluid, narrow, null);
-  .container(fluid, narrower, null);
-  .container(fluid, wide, null);
-  .container(fluid, wider, null);
-  .container(fluid, flush, null);
 
   /* -----------------------------------------------------------------------------
   Row
@@ -46,39 +34,31 @@ layout/styles.less
 
   @media (min-width: @layout-screen-mini-min-width) {
 
-    /* -----------------------------------------------------------------------------
-    Grid
-    ----------------------------------------------------------------------------- */
+    & when not (@grid-enabled = null) and not (@grid-scale-screen-mini-enabled = null) {
 
-    .grid(screen-mini, @grid-columns-count, @grid-gutter-width-screen-mini, @grid-gutter-height-screen-mini);
+      /* -----------------------------------------------------------------------------
+      Grid
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Container
-    ----------------------------------------------------------------------------- */
+      .grid(screen-mini, @grid-columns-count, @grid-gutter-width-screen-mini, @grid-gutter-height-screen-mini);
 
-    .container(null, null, screen-mini);
-    .container(fluid, null, screen-mini);
-    .container(fluid, narrow, screen-mini);
-    .container(fluid, narrower, screen-mini);
-    .container(fluid, wide, screen-mini);
-    .container(fluid, wider, screen-mini);
-    .container(fluid, flush, screen-mini);
+      /* -----------------------------------------------------------------------------
+      Row
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Row
-    ----------------------------------------------------------------------------- */
+      .row(screen-mini);
 
-    .row(screen-mini);
+      /* -----------------------------------------------------------------------------
+      Column Overflow
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Column Overflow
-    ----------------------------------------------------------------------------- */
+      .column-overflow {
 
-    .column-overflow {
+        &[class*="column-mini-"] {
 
-      &[class*="column-mini-"] {
+          margin-top: 0px;
 
-        margin-top: 0px;
+        }
 
       }
 
@@ -98,39 +78,31 @@ layout/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    /* -----------------------------------------------------------------------------
-    Grid
-    ----------------------------------------------------------------------------- */
+    & when not (@grid-enabled = null) and not (@grid-scale-screen-small-enabled = null) {
 
-    .grid(screen-small, @grid-columns-count, @grid-gutter-width-screen-small, @grid-gutter-height-screen-small);
+      /* -----------------------------------------------------------------------------
+      Grid
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Container
-    ----------------------------------------------------------------------------- */
+      .grid(screen-small, @grid-columns-count, @grid-gutter-width-screen-small, @grid-gutter-height-screen-small);
 
-    .container(null, null, screen-small);
-    .container(fluid, null, screen-small);
-    .container(fluid, narrow, screen-small);
-    .container(fluid, narrower, screen-small);
-    .container(fluid, wide, screen-small);
-    .container(fluid, wider, screen-small);
-    .container(fluid, flush, screen-small);
+      /* -----------------------------------------------------------------------------
+      Row
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Row
-    ----------------------------------------------------------------------------- */
+      .row(screen-small);
 
-    .row(screen-small);
+      /* -----------------------------------------------------------------------------
+      Column Overflow
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Column Overflow
-    ----------------------------------------------------------------------------- */
+      .column-overflow {
 
-    .column-overflow {
+        &[class*="column-small-"] {
 
-      &[class*="column-small-"] {
+          margin-top: 0px;
 
-        margin-top: 0px;
+        }
 
       }
 
@@ -150,42 +122,34 @@ layout/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    /* -----------------------------------------------------------------------------
-    Grid
-    ----------------------------------------------------------------------------- */
+    & when not (@grid-enabled = null) and not (@grid-scale-screen-medium-enabled = null) {
 
-    .grid(screen-medium, @grid-columns-count, @grid-gutter-width-screen-medium, @grid-gutter-height-screen-medium);
+      /* -----------------------------------------------------------------------------
+      Grid
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Container
-    ----------------------------------------------------------------------------- */
+      .grid(screen-medium, @grid-columns-count, @grid-gutter-width-screen-medium, @grid-gutter-height-screen-medium);
 
-    .container(null, null, screen-medium);
-    .container(fluid, null, screen-medium);
-    .container(fluid, narrow, screen-medium);
-    .container(fluid, narrower, screen-medium);
-    .container(fluid, wide, screen-medium);
-    .container(fluid, wider, screen-medium);
-    .container(fluid, flush, screen-medium);
+      /* -----------------------------------------------------------------------------
+      Row
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Row
-    ----------------------------------------------------------------------------- */
+      .row(screen-medium);
 
-    .row(screen-medium);
+      /* -----------------------------------------------------------------------------
+      Column Overflow
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Column Overflow
-    ----------------------------------------------------------------------------- */
+      .column-overflow {
 
-    .column-overflow {
+        &[class*="column-medium-"] {
 
-      &[class*="column-medium-"] {
+          margin-top: 0px;
 
-        margin-top: 0px;
+        }
 
       }
-
+      
     }
 
   }
@@ -202,39 +166,31 @@ layout/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    /* -----------------------------------------------------------------------------
-    Grid
-    ----------------------------------------------------------------------------- */
+    & when not (@grid-enabled = null) and not (@grid-scale-screen-large-enabled = null) {
 
-    .grid(screen-large, @grid-columns-count, @grid-gutter-width-screen-large, @grid-gutter-height-screen-large);
+      /* -----------------------------------------------------------------------------
+      Grid
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Container
-    ----------------------------------------------------------------------------- */
+      .grid(screen-large, @grid-columns-count, @grid-gutter-width-screen-large, @grid-gutter-height-screen-large);
 
-    .container(null, null, screen-large);
-    .container(fluid, null, screen-large);
-    .container(fluid, narrow, screen-large);
-    .container(fluid, narrower, screen-large);
-    .container(fluid, wide, screen-large);
-    .container(fluid, wider, screen-large);
-    .container(fluid, flush, screen-large);
+      /* -----------------------------------------------------------------------------
+      Row
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Row
-    ----------------------------------------------------------------------------- */
+      .row(screen-large);
 
-    .row(screen-large);
+      /* -----------------------------------------------------------------------------
+      Column Overflow
+      ----------------------------------------------------------------------------- */
 
-    /* -----------------------------------------------------------------------------
-    Column Overflow
-    ----------------------------------------------------------------------------- */
+      .column-overflow {
 
-    .column-overflow {
+        &[class*="column-large-"] {
 
-      &[class*="column-large-"] {
+          margin-top: 0px;
 
-        margin-top: 0px;
+        }
 
       }
 

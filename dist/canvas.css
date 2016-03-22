@@ -502,40 +502,6 @@ Form Control Group Variant Styling
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-utilities/mixins-grid.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Container
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Row
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Grid
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Column Padding
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Calculate Grid Columns
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Calculate Grid Column Width
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Calculate Grid Column Push
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Calculate Grid Column Pull
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Calculate Grid Column Push
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
 utilities/mixins-layout.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -585,6 +551,33 @@ Pod
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 Generate Index Suffixed Properties for Flex Items
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Container
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Row
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Grid
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Column Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Calculate Grid Columns
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Calculate Grid Column Width
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Calculate Grid Column Push
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Calculate Grid Column Pull
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Calculate Grid Column Push
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -1030,6 +1023,421 @@ Grid
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+container/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Container (Fixed)
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Container (Fluid)
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Container (Fluid) Variants
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+container/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Container
+  ----------------------------------------------------------------------------- */
+.container {
+  width: container-width;
+  margin-left: container-gutter-width;
+  margin-right: container-gutter-width;
+}
+.container-left {
+  margin-left: container-gutter-width;
+}
+.container-right {
+  margin-right: container-gutter-width;
+}
+.container-fluid {
+  width: auto;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+.container-fluid-left {
+  margin-left: 18px;
+}
+.container-fluid-right {
+  margin-right: 18px;
+}
+.container-fluid-narrow {
+  width: auto;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+.container-fluid-narrow-left {
+  margin-left: 9px;
+}
+.container-fluid-narrow-right {
+  margin-right: 9px;
+}
+.container-fluid-narrower {
+  width: auto;
+  margin-left: 4.5px;
+  margin-right: 4.5px;
+}
+.container-fluid-narrower-left {
+  margin-left: 4.5px;
+}
+.container-fluid-narrower-right {
+  margin-right: 4.5px;
+}
+.container-fluid-wide {
+  width: auto;
+  margin-left: 27px;
+  margin-right: 27px;
+}
+.container-fluid-wide-left {
+  margin-left: 27px;
+}
+.container-fluid-wide-right {
+  margin-right: 27px;
+}
+.container-fluid-wider {
+  width: auto;
+  margin-left: 36px;
+  margin-right: 36px;
+}
+.container-fluid-wider-left {
+  margin-left: 36px;
+}
+.container-fluid-wider-right {
+  margin-right: 36px;
+}
+.container-fluid-flush {
+  width: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.container-fluid-flush-left {
+  margin-left: 0px;
+}
+.container-fluid-flush-right {
+  margin-right: 0px;
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      Container
+      ----------------------------------------------------------------------------- */
+  .container {
+    width: auto;
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  .container-left {
+    margin-left: 18px;
+  }
+  .container-right {
+    margin-right: 18px;
+  }
+  .container-fluid {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  .container-fluid-left {
+    margin-left: 18px;
+  }
+  .container-fluid-right {
+    margin-right: 18px;
+  }
+  .container-fluid-narrow {
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+  .container-fluid-narrow-left {
+    margin-left: 9px;
+  }
+  .container-fluid-narrow-right {
+    margin-right: 9px;
+  }
+  .container-fluid-narrower {
+    margin-left: 4.5px;
+    margin-right: 4.5px;
+  }
+  .container-fluid-narrower-left {
+    margin-left: 4.5px;
+  }
+  .container-fluid-narrower-right {
+    margin-right: 4.5px;
+  }
+  .container-fluid-wide {
+    margin-left: 27px;
+    margin-right: 27px;
+  }
+  .container-fluid-wide-left {
+    margin-left: 27px;
+  }
+  .container-fluid-wide-right {
+    margin-right: 27px;
+  }
+  .container-fluid-wider {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .container-fluid-wider-left {
+    margin-left: 36px;
+  }
+  .container-fluid-wider-right {
+    margin-right: 36px;
+  }
+  .container-fluid-flush {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid-flush-left {
+    margin-left: 0px;
+  }
+  .container-fluid-flush-right {
+    margin-right: 0px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Container
+      ----------------------------------------------------------------------------- */
+  .container {
+    width: 730px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-left {
+    margin-left: 0px;
+  }
+  .container-right {
+    margin-right: 0px;
+  }
+  .container-fluid {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .container-fluid-left {
+    margin-left: 36px;
+  }
+  .container-fluid-right {
+    margin-right: 36px;
+  }
+  .container-fluid-narrow {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  .container-fluid-narrow-left {
+    margin-left: 18px;
+  }
+  .container-fluid-narrow-right {
+    margin-right: 18px;
+  }
+  .container-fluid-narrower {
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+  .container-fluid-narrower-left {
+    margin-left: 9px;
+  }
+  .container-fluid-narrower-right {
+    margin-right: 9px;
+  }
+  .container-fluid-wide {
+    margin-left: 54px;
+    margin-right: 54px;
+  }
+  .container-fluid-wide-left {
+    margin-left: 54px;
+  }
+  .container-fluid-wide-right {
+    margin-right: 54px;
+  }
+  .container-fluid-wider {
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+  .container-fluid-wider-left {
+    margin-left: 72px;
+  }
+  .container-fluid-wider-right {
+    margin-right: 72px;
+  }
+  .container-fluid-flush {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid-flush-left {
+    margin-left: 0px;
+  }
+  .container-fluid-flush-right {
+    margin-right: 0px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      Container
+      ----------------------------------------------------------------------------- */
+  .container {
+    width: 920px;
+  }
+  .container-fluid {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .container-fluid-left {
+    margin-left: 48px;
+  }
+  .container-fluid-right {
+    margin-right: 48px;
+  }
+  .container-fluid-narrow {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .container-fluid-narrow-left {
+    margin-left: 24px;
+  }
+  .container-fluid-narrow-right {
+    margin-right: 24px;
+  }
+  .container-fluid-narrower {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .container-fluid-narrower-left {
+    margin-left: 12px;
+  }
+  .container-fluid-narrower-right {
+    margin-right: 12px;
+  }
+  .container-fluid-wide {
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+  .container-fluid-wide-left {
+    margin-left: 72px;
+  }
+  .container-fluid-wide-right {
+    margin-right: 72px;
+  }
+  .container-fluid-wider {
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+  .container-fluid-wider-left {
+    margin-left: 96px;
+  }
+  .container-fluid-wider-right {
+    margin-right: 96px;
+  }
+  .container-fluid-flush {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid-flush-left {
+    margin-left: 0px;
+  }
+  .container-fluid-flush-right {
+    margin-right: 0px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      Container
+      ----------------------------------------------------------------------------- */
+  .container {
+    width: 1100px;
+  }
+  .container-fluid {
+    margin-left: 57px;
+    margin-right: 57px;
+  }
+  .container-fluid-left {
+    margin-left: 57px;
+  }
+  .container-fluid-right {
+    margin-right: 57px;
+  }
+  .container-fluid-narrow {
+    margin-left: 28.5px;
+    margin-right: 28.5px;
+  }
+  .container-fluid-narrow-left {
+    margin-left: 28.5px;
+  }
+  .container-fluid-narrow-right {
+    margin-right: 28.5px;
+  }
+  .container-fluid-narrower {
+    margin-left: 14.25px;
+    margin-right: 14.25px;
+  }
+  .container-fluid-narrower-left {
+    margin-left: 14.25px;
+  }
+  .container-fluid-narrower-right {
+    margin-right: 14.25px;
+  }
+  .container-fluid-wide {
+    margin-left: 85.5px;
+    margin-right: 85.5px;
+  }
+  .container-fluid-wide-left {
+    margin-left: 85.5px;
+  }
+  .container-fluid-wide-right {
+    margin-right: 85.5px;
+  }
+  .container-fluid-wider {
+    margin-left: 114px;
+    margin-right: 114px;
+  }
+  .container-fluid-wider-left {
+    margin-left: 114px;
+  }
+  .container-fluid-wider-right {
+    margin-right: 114px;
+  }
+  .container-fluid-flush {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-fluid-flush-left {
+    margin-left: 0px;
+  }
+  .container-fluid-flush-right {
+    margin-right: 0px;
+  }
+}
+/* -----------------------------------------------------------------------------
+Grid
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 grid/variables.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -1045,18 +1453,9 @@ Grid
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Container (Fixed)
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Container (Fluid)
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Container (Fluid) Variants
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-layout/styles.less
+grid/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
@@ -1240,86 +1639,6 @@ layout/styles.less
   margin-left: 8.33333333%;
 }
 /* -----------------------------------------------------------------------------
-  Container
-  ----------------------------------------------------------------------------- */
-.container {
-  width: auto;
-  margin-left: 18px;
-  margin-right: 18px;
-}
-.container-left {
-  margin-left: 18px;
-}
-.container-right {
-  margin-right: 18px;
-}
-.container-fluid {
-  width: auto;
-  margin-left: 18px;
-  margin-right: 18px;
-}
-.container-fluid-left {
-  margin-left: 18px;
-}
-.container-fluid-right {
-  margin-right: 18px;
-}
-.container-fluid-narrow {
-  width: auto;
-  margin-left: 9px;
-  margin-right: 9px;
-}
-.container-fluid-narrow-left {
-  margin-left: 9px;
-}
-.container-fluid-narrow-right {
-  margin-right: 9px;
-}
-.container-fluid-narrower {
-  width: auto;
-  margin-left: 4.5px;
-  margin-right: 4.5px;
-}
-.container-fluid-narrower-left {
-  margin-left: 4.5px;
-}
-.container-fluid-narrower-right {
-  margin-right: 4.5px;
-}
-.container-fluid-wide {
-  width: auto;
-  margin-left: 27px;
-  margin-right: 27px;
-}
-.container-fluid-wide-left {
-  margin-left: 27px;
-}
-.container-fluid-wide-right {
-  margin-right: 27px;
-}
-.container-fluid-wider {
-  width: auto;
-  margin-left: 36px;
-  margin-right: 36px;
-}
-.container-fluid-wider-left {
-  margin-left: 36px;
-}
-.container-fluid-wider-right {
-  margin-right: 36px;
-}
-.container-fluid-flush {
-  width: auto;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.container-fluid-flush-left {
-  margin-left: 0px;
-}
-.container-fluid-flush-right {
-  margin-right: 0px;
-}
-/* -----------------------------------------------------------------------------
   Row
   ----------------------------------------------------------------------------- */
 .row {
@@ -1331,8 +1650,8 @@ layout/styles.less
   ----------------------------------------------------------------------------- */
 @media (min-width: 480px) {
   /* -----------------------------------------------------------------------------
-    Grid
-    ----------------------------------------------------------------------------- */
+      Grid
+      ----------------------------------------------------------------------------- */
   .column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
     padding-left: 6px;
     padding-right: 6px;
@@ -1504,89 +1823,15 @@ layout/styles.less
     margin-left: 8.33333333%;
   }
   /* -----------------------------------------------------------------------------
-    Container
-    ----------------------------------------------------------------------------- */
-  .container {
-    width: auto;
-    margin-left: 18px;
-    margin-right: 18px;
-  }
-  .container-left {
-    margin-left: 18px;
-  }
-  .container-right {
-    margin-right: 18px;
-  }
-  .container-fluid {
-    margin-left: 18px;
-    margin-right: 18px;
-  }
-  .container-fluid-left {
-    margin-left: 18px;
-  }
-  .container-fluid-right {
-    margin-right: 18px;
-  }
-  .container-fluid-narrow {
-    margin-left: 9px;
-    margin-right: 9px;
-  }
-  .container-fluid-narrow-left {
-    margin-left: 9px;
-  }
-  .container-fluid-narrow-right {
-    margin-right: 9px;
-  }
-  .container-fluid-narrower {
-    margin-left: 4.5px;
-    margin-right: 4.5px;
-  }
-  .container-fluid-narrower-left {
-    margin-left: 4.5px;
-  }
-  .container-fluid-narrower-right {
-    margin-right: 4.5px;
-  }
-  .container-fluid-wide {
-    margin-left: 27px;
-    margin-right: 27px;
-  }
-  .container-fluid-wide-left {
-    margin-left: 27px;
-  }
-  .container-fluid-wide-right {
-    margin-right: 27px;
-  }
-  .container-fluid-wider {
-    margin-left: 36px;
-    margin-right: 36px;
-  }
-  .container-fluid-wider-left {
-    margin-left: 36px;
-  }
-  .container-fluid-wider-right {
-    margin-right: 36px;
-  }
-  .container-fluid-flush {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .container-fluid-flush-left {
-    margin-left: 0px;
-  }
-  .container-fluid-flush-right {
-    margin-right: 0px;
-  }
-  /* -----------------------------------------------------------------------------
-    Row
-    ----------------------------------------------------------------------------- */
+      Row
+      ----------------------------------------------------------------------------- */
   .row {
     margin-left: -6px;
     margin-right: -6px;
   }
   /* -----------------------------------------------------------------------------
-    Column Overflow
-    ----------------------------------------------------------------------------- */
+      Column Overflow
+      ----------------------------------------------------------------------------- */
   .column-overflow[class*="column-mini-"] {
     margin-top: 0px;
   }
@@ -1596,8 +1841,8 @@ layout/styles.less
   ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
   /* -----------------------------------------------------------------------------
-    Grid
-    ----------------------------------------------------------------------------- */
+      Grid
+      ----------------------------------------------------------------------------- */
   .column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
     padding-left: 12px;
     padding-right: 12px;
@@ -1769,89 +2014,15 @@ layout/styles.less
     margin-left: 8.33333333%;
   }
   /* -----------------------------------------------------------------------------
-    Container
-    ----------------------------------------------------------------------------- */
-  .container {
-    width: 730px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .container-left {
-    margin-left: 0px;
-  }
-  .container-right {
-    margin-right: 0px;
-  }
-  .container-fluid {
-    margin-left: 36px;
-    margin-right: 36px;
-  }
-  .container-fluid-left {
-    margin-left: 36px;
-  }
-  .container-fluid-right {
-    margin-right: 36px;
-  }
-  .container-fluid-narrow {
-    margin-left: 18px;
-    margin-right: 18px;
-  }
-  .container-fluid-narrow-left {
-    margin-left: 18px;
-  }
-  .container-fluid-narrow-right {
-    margin-right: 18px;
-  }
-  .container-fluid-narrower {
-    margin-left: 9px;
-    margin-right: 9px;
-  }
-  .container-fluid-narrower-left {
-    margin-left: 9px;
-  }
-  .container-fluid-narrower-right {
-    margin-right: 9px;
-  }
-  .container-fluid-wide {
-    margin-left: 54px;
-    margin-right: 54px;
-  }
-  .container-fluid-wide-left {
-    margin-left: 54px;
-  }
-  .container-fluid-wide-right {
-    margin-right: 54px;
-  }
-  .container-fluid-wider {
-    margin-left: 72px;
-    margin-right: 72px;
-  }
-  .container-fluid-wider-left {
-    margin-left: 72px;
-  }
-  .container-fluid-wider-right {
-    margin-right: 72px;
-  }
-  .container-fluid-flush {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .container-fluid-flush-left {
-    margin-left: 0px;
-  }
-  .container-fluid-flush-right {
-    margin-right: 0px;
-  }
-  /* -----------------------------------------------------------------------------
-    Row
-    ----------------------------------------------------------------------------- */
+      Row
+      ----------------------------------------------------------------------------- */
   .row {
     margin-left: -12px;
     margin-right: -12px;
   }
   /* -----------------------------------------------------------------------------
-    Column Overflow
-    ----------------------------------------------------------------------------- */
+      Column Overflow
+      ----------------------------------------------------------------------------- */
   .column-overflow[class*="column-small-"] {
     margin-top: 0px;
   }
@@ -1861,8 +2032,8 @@ layout/styles.less
   ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
   /* -----------------------------------------------------------------------------
-    Grid
-    ----------------------------------------------------------------------------- */
+      Grid
+      ----------------------------------------------------------------------------- */
   .column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
     padding-left: 16px;
     padding-right: 16px;
@@ -2034,81 +2205,15 @@ layout/styles.less
     margin-left: 8.33333333%;
   }
   /* -----------------------------------------------------------------------------
-    Container
-    ----------------------------------------------------------------------------- */
-  .container {
-    width: 920px;
-  }
-  .container-fluid {
-    margin-left: 48px;
-    margin-right: 48px;
-  }
-  .container-fluid-left {
-    margin-left: 48px;
-  }
-  .container-fluid-right {
-    margin-right: 48px;
-  }
-  .container-fluid-narrow {
-    margin-left: 24px;
-    margin-right: 24px;
-  }
-  .container-fluid-narrow-left {
-    margin-left: 24px;
-  }
-  .container-fluid-narrow-right {
-    margin-right: 24px;
-  }
-  .container-fluid-narrower {
-    margin-left: 12px;
-    margin-right: 12px;
-  }
-  .container-fluid-narrower-left {
-    margin-left: 12px;
-  }
-  .container-fluid-narrower-right {
-    margin-right: 12px;
-  }
-  .container-fluid-wide {
-    margin-left: 72px;
-    margin-right: 72px;
-  }
-  .container-fluid-wide-left {
-    margin-left: 72px;
-  }
-  .container-fluid-wide-right {
-    margin-right: 72px;
-  }
-  .container-fluid-wider {
-    margin-left: 96px;
-    margin-right: 96px;
-  }
-  .container-fluid-wider-left {
-    margin-left: 96px;
-  }
-  .container-fluid-wider-right {
-    margin-right: 96px;
-  }
-  .container-fluid-flush {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .container-fluid-flush-left {
-    margin-left: 0px;
-  }
-  .container-fluid-flush-right {
-    margin-right: 0px;
-  }
-  /* -----------------------------------------------------------------------------
-    Row
-    ----------------------------------------------------------------------------- */
+      Row
+      ----------------------------------------------------------------------------- */
   .row {
     margin-left: -16px;
     margin-right: -16px;
   }
   /* -----------------------------------------------------------------------------
-    Column Overflow
-    ----------------------------------------------------------------------------- */
+      Column Overflow
+      ----------------------------------------------------------------------------- */
   .column-overflow[class*="column-medium-"] {
     margin-top: 0px;
   }
@@ -2118,8 +2223,8 @@ layout/styles.less
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
-    Grid
-    ----------------------------------------------------------------------------- */
+      Grid
+      ----------------------------------------------------------------------------- */
   .column-1, .column-mini-1, .column-small-1, .column-medium-1, .column-large-1, .column-2, .column-mini-2, .column-small-2, .column-medium-2, .column-large-2, .column-3, .column-mini-3, .column-small-3, .column-medium-3, .column-large-3, .column-4, .column-mini-4, .column-small-4, .column-medium-4, .column-large-4, .column-5, .column-mini-5, .column-small-5, .column-medium-5, .column-large-5, .column-6, .column-mini-6, .column-small-6, .column-medium-6, .column-large-6, .column-7, .column-mini-7, .column-small-7, .column-medium-7, .column-large-7, .column-8, .column-mini-8, .column-small-8, .column-medium-8, .column-large-8, .column-9, .column-mini-9, .column-small-9, .column-medium-9, .column-large-9, .column-10, .column-mini-10, .column-small-10, .column-medium-10, .column-large-10, .column-11, .column-mini-11, .column-small-11, .column-medium-11, .column-large-11, .column-12, .column-mini-12, .column-small-12, .column-medium-12, .column-large-12 {
     padding-left: 19px;
     padding-right: 19px;
@@ -2291,81 +2396,15 @@ layout/styles.less
     margin-left: 8.33333333%;
   }
   /* -----------------------------------------------------------------------------
-    Container
-    ----------------------------------------------------------------------------- */
-  .container {
-    width: 1100px;
-  }
-  .container-fluid {
-    margin-left: 57px;
-    margin-right: 57px;
-  }
-  .container-fluid-left {
-    margin-left: 57px;
-  }
-  .container-fluid-right {
-    margin-right: 57px;
-  }
-  .container-fluid-narrow {
-    margin-left: 28.5px;
-    margin-right: 28.5px;
-  }
-  .container-fluid-narrow-left {
-    margin-left: 28.5px;
-  }
-  .container-fluid-narrow-right {
-    margin-right: 28.5px;
-  }
-  .container-fluid-narrower {
-    margin-left: 14.25px;
-    margin-right: 14.25px;
-  }
-  .container-fluid-narrower-left {
-    margin-left: 14.25px;
-  }
-  .container-fluid-narrower-right {
-    margin-right: 14.25px;
-  }
-  .container-fluid-wide {
-    margin-left: 85.5px;
-    margin-right: 85.5px;
-  }
-  .container-fluid-wide-left {
-    margin-left: 85.5px;
-  }
-  .container-fluid-wide-right {
-    margin-right: 85.5px;
-  }
-  .container-fluid-wider {
-    margin-left: 114px;
-    margin-right: 114px;
-  }
-  .container-fluid-wider-left {
-    margin-left: 114px;
-  }
-  .container-fluid-wider-right {
-    margin-right: 114px;
-  }
-  .container-fluid-flush {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .container-fluid-flush-left {
-    margin-left: 0px;
-  }
-  .container-fluid-flush-right {
-    margin-right: 0px;
-  }
-  /* -----------------------------------------------------------------------------
-    Row
-    ----------------------------------------------------------------------------- */
+      Row
+      ----------------------------------------------------------------------------- */
   .row {
     margin-left: -19px;
     margin-right: -19px;
   }
   /* -----------------------------------------------------------------------------
-    Column Overflow
-    ----------------------------------------------------------------------------- */
+      Column Overflow
+      ----------------------------------------------------------------------------- */
   .column-overflow[class*="column-large-"] {
     margin-top: 0px;
   }

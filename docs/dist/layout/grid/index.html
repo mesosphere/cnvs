@@ -568,23 +568,9 @@ BEGIN: Page Navigation
 
     <li class="">
 
-      <a href="#grid-offsetting-columns" class="">
+      <a href="#grid-offset-columns" class="">
 
-        Offsetting Columns
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#grid-nesting-columns" class="">
-
-        Nesting Columns
+        Offset Columns
 
       </a>
 
@@ -596,9 +582,23 @@ BEGIN: Page Navigation
 
     <li class="">
 
-      <a href="#grid-responsive-columns" class="">
+      <a href="#grid-nested-columns" class="">
 
-        Responsive Columns
+        Nested Columns
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+    <li class="">
+
+      <a href="#grid-responsive-grid-options" class="">
+
+        Responsive Grid Options
 
       </a>
 
@@ -854,149 +854,150 @@ BEGIN: Grid
     </ul>
 
     <!-- =================================================
-    BEGIN: Grid Options
-    ================================================== -->
+BEGIN: Grid Options
+================================================== -->
 
-    <section id="grid-options">
+<section id="grid-options">
 
-      <h2>
+  <h2>
 
-        Grid Options
+    Grid Options
 
-      </h2>
+  </h2>
 
-      <p>
+  <p>
 
-        The column width and position can change based on both screen resolution and class name.  The column count and gutter width are easily modified using Canvas variables.  The grid itself is size independent, the grid column width is defined based on the element wrapping the row.  The only constant size in a grid is the gutter width &mdash; which itself varies based on the width of the viewport.
+    The column width and position can change based on both screen resolution and class name.  The column count and gutter width are easily modified using Canvas variables.  The grid itself is size independent, the grid column width is defined based on the element wrapping the row.  The only constant size in a grid is the gutter width &mdash; which itself varies based on the width of the viewport.
 
-      </p>
+  </p>
 
-      <table class="table table-bordered table-striped">
-        <thead>
-          <tr>
-            <th></th>
-            <th class="text-xs-center">
-              Default<br>
-              <small>&lt;544px</small>
-            </th>
-            <th class="text-xs-center">
-              Mini<br>
-              <small>≥544px</small>
-            </th>
-            <th class="text-xs-center">
-              Small<br>
-              <small>≥544px</small>
-            </th>
-            <th class="text-xs-center">
-              Medium<br>
-              <small>≥768px</small>
-            </th>
-            <th class="text-xs-center">
-              Large<br>
-              <small>≥992px</small>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="text-nowrap" scope="row">Grid behavior</th>
-            <td>Horizontal at all times</td>
-            <td colspan="4">Collapsed to start, horizontal above breakpoints</td>
-          </tr>
-          <tr>
-            <th class="text-nowrap" scope="row">Class prefix</th>
-            <td>N/A</td>
-            <td><code>.column-mini-</code></td>
-            <td><code>.column-small-</code></td>
-            <td><code>.column-medium-</code></td>
-            <td><code>.column-large-</code></td>
-          </tr>
-          <tr>
-            <th class="text-nowrap" scope="row"># of columns</th>
-            <td colspan="5">12 (default)</td>
-          </tr>
-          <tr>
-            <th class="text-nowrap" scope="row">Gutter width</th>
-            <td>12px</td>
-            <td>12px</td>
-            <td>24px</td>
-            <td>32px</td>
-            <td>36px</td>
-          </tr>
-          <tr>
-            <th class="text-nowrap" scope="row">Nestable</th>
-            <td colspan="5">Yes</td>
-          </tr>
-          <tr>
-            <th class="text-nowrap" scope="row">Offsets</th>
-            <td colspan="5">Yes</td>
-          </tr>
-          <tr>
-            <th class="text-nowrap" scope="row">Column ordering</th>
-            <td colspan="5">Yes</td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="text-xs-center">
+          Default<br>
+          <small>&lt;544px</small>
+        </th>
+        <th class="text-xs-center">
+          Mini<br>
+          <small>≥544px</small>
+        </th>
+        <th class="text-xs-center">
+          Small<br>
+          <small>≥544px</small>
+        </th>
+        <th class="text-xs-center">
+          Medium<br>
+          <small>≥768px</small>
+        </th>
+        <th class="text-xs-center">
+          Large<br>
+          <small>≥992px</small>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text-nowrap" scope="row">Grid behavior</th>
+        <td>Horizontal at all times</td>
+        <td colspan="4">Collapsed to start, horizontal above breakpoints</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Class prefix</th>
+        <td>N/A</td>
+        <td><code>.column-mini-</code></td>
+        <td><code>.column-small-</code></td>
+        <td><code>.column-medium-</code></td>
+        <td><code>.column-large-</code></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row"># of columns</th>
+        <td colspan="5">12 (default)</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Gutter width</th>
+        <td>12px</td>
+        <td>12px</td>
+        <td>24px</td>
+        <td>32px</td>
+        <td>36px</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Nestable</th>
+        <td colspan="5">Yes</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Offsets</th>
+        <td colspan="5">Yes</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Column ordering</th>
+        <td colspan="5">Yes</td>
+      </tr>
+    </tbody>
+  </table>
 
-    </section>
+</section>
 
-    <!-- =================================================
-    END: Grid Options
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Grid Offsetting Columns
-    ================================================== -->
-
-    <section id="grid-offsetting-columns">
-
-      <h2>
-
-        Offsetting Columns
-
-      </h2>
-
-    </section>
+<!-- =================================================
+END: Grid Options
+================================================== -->
 
     <!-- =================================================
-    BEGIN: Grid Offsetting Columns
-    ================================================== -->
+BEGIN: Grid Offset Columns
+================================================== -->
+
+<section id="grid-offset-columns">
+
+  <h2>
+
+    Offset Columns
+
+  </h2>
+
+</section>
+
+<!-- =================================================
+BEGIN: Grid Offset Columns
+================================================== -->
 
     <!-- =================================================
-    BEGIN: Grid Nesting Columns
-    ================================================== -->
+BEGIN: Grid Nested Columns
+================================================== -->
 
-    <section id="grid-nesting-columns">
+<section id="grid-nested-columns">
 
-      <h2>
+  <h2>
 
-        Nesting Columns
+    Nested Columns
 
-      </h2>
+  </h2>
 
-    </section>
+</section>
 
-    <!-- =================================================
-    BEGIN: Grid Nesting Columns
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Grid Responsive Columns
-    ================================================== -->
-
-    <section id="grid-responsive-columns">
-
-      <h2>
-
-        Responsive Columns
-
-      </h2>
-
-    </section>
+<!-- =================================================
+BEGIN: Grid Nested Columns
+================================================== -->
 
     <!-- =================================================
-    BEGIN: Grid Responsive Columns
-    ================================================== -->
+BEGIN: Responsive Grid Options
+================================================== -->
+
+<section id="grid-responsive-grid-options">
+
+  <h2>
+
+    Responsive Grid Options
+
+  </h2>
+
+</section>
+
+<!-- =================================================
+END: Responsive Grid Options
+================================================== -->
+
 
   </div>
 
