@@ -1,0 +1,71 @@
+---
+layout: default
+title: Flex
+page-header:
+  headline: "Flex"
+  alignment: left
+  parent:
+    label: "Layout"
+    url: "/layout"
+page-navigation:
+- label: "Flex Options"
+  link: "#flex-options"
+  navigation:
+  - label: "Direction"
+    link: "#flex-direction"
+  - label: "Wrap Items"
+    link: "#flex-wrap-items"
+  - label: "Align Items"
+    link: "#flex-align-items"
+  - label: "Justify Items"
+    link: "#flex-justify-items"
+  - label: "Align Content"
+    link: "#flex-align-content"
+- label: "Flex Item"
+  link: "#flex-item"
+  navigation:
+  - label: "Align"
+    link: "#flex-item-align"
+  - label: "Order"
+    link: "#flex-item-order"
+  - label: "Grow"
+    link: "#flex-item-grow"
+  - label: "Shrink"
+    link: "#flex-item-shrink"
+  - label: "Basis"
+    link: "#flex-item-basis"
+- label: "Responsive Flex"
+  link: "#flex-responsive"
+---
+
+<!-- =================================================
+BEGIN: Flex Box
+================================================== -->
+
+<section class="canvas-pod" id="flex">
+
+  <div class="container-fluid pod">
+
+    <p class="lead">
+
+      CNVS provides a number of available classes for quickly assigning flex box behavior to your layout through the use of the Flex layout toolkit. Flexbox (or "Flexible Box") provides an efficient set of styles for positioning, aligning, and distributing space among items in a container.
+
+    </p>
+
+    <p>
+
+      The flex box model provides an improvement over the block model in that it does not use floats, nor do the flex container's margins collapse with the margins of its contents.  In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.
+
+    </p>
+
+    {% include layout/flex/flex-options.html %}
+    {% include layout/flex/flex-item-options.html %}
+    {% include layout/flex/flex-responsive.html %}
+
+  </div>
+
+</section>
+
+<!-- =================================================
+END: Flex
+================================================== -->

@@ -38,7 +38,7 @@
     BEGIN: Canvas
     ================================================== -->
 
-    <div class="canvas {{ page.id }}">
+    <div class="canvas {{ page.id }} flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-small">
 
       {% include layout/sidebar.html %}
 
@@ -46,7 +46,7 @@
       BEGIN: Page
       ================================================== -->
 
-      <div class="page">
+      <div class="page flex-item-grow-1">
 
         {% include layout/page-header.html %}
 
@@ -54,7 +54,7 @@
         BEGIN: Page Content Wrapper
         ================================================== -->
 
-        <div class="page-content-wrapper">
+        <div class="page-content-wrapper flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
           {% if page.page-navigation %}
 
@@ -66,7 +66,7 @@
           BEGIN: Page Content
           ================================================== -->
 
-          <div class="page-content">
+          <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
 
             {{ content }}
 

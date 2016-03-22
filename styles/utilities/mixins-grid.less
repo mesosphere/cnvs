@@ -12,12 +12,12 @@ utilities/mixins-grid.less
 Container
 ----------------------------------------------------------------------------- */
 
-.container(@class, @screen-size) {
+.container(@class, @variant, @screen-size) {
 
-  @container-class: replace(e('container-@{class}'), '-null', '');
-  @screen: replace(replace(@screen-size, 'screen-', '-screen-'), 'null', '');
-  @container-width: "grid-@{container-class}-width@{screen}";
-  @container-gutter-width: "grid-@{container-class}-gutter-width@{screen}";
+  @container-class: replace(replace(replace(e('container-@{class}-@{variant}'), '-null', ''), '-null', ''), '-null', '');
+  @container-width: replace(replace(e('grid-container-@{class}-width-@{screen-size}'), '-null', ''), '-null', '');
+  @container-gutter-width: replace(replace(e('grid-container-@{class}-gutter-width-@{screen-size}'), '-null', ''), '-null', '');
+  @container-variant-scale: replace(replace(e('grid-container-@{class}-@{variant}-margin-scale'), '-null', ''), '-null', '');
 
   .@{container-class} {
 
@@ -29,45 +29,71 @@ Container
 
     & when not (@@container-gutter-width = null) {
 
-      margin-left: @@container-gutter-width;
-      margin-right: @@container-gutter-width;
+      & when (@variant = null) {
+
+        margin-left: @@container-gutter-width;
+        margin-right: @@container-gutter-width;
+
+      }
+
+      & when not (@variant = null) {
+
+        & when not (@@container-variant-scale = null) {
+
+          margin-left: @@container-gutter-width * @@container-variant-scale;
+          margin-right: @@container-gutter-width * @@container-variant-scale;
+
+        }
+
+      }
 
     }
-
-    &:extend(.clearfix all);
 
   }
 
-}
+  .@{container-class}-left {
 
-.container(@class, @variant, @screen-size) {
+    & when not (@@container-gutter-width = null) {
 
-  @screen: replace(replace(@screen-size, 'screen-', '-screen-'), 'null', '');
+      & when (@variant = null) {
 
-  @container-class: replace(e('container-@{class}'), '-null', '');
-  @container-variant-class: replace(e('container-@{class}-@{variant}'), '-null', '');
+        margin-left: @@container-gutter-width;
 
-  @container-gutter-width: "grid-@{container-class}-gutter-width@{screen}";
-  @container-variant-scale: "grid-@{container-variant-class}-margin-scale";
+      }
 
-  & when not (@@container-gutter-width = null) and not (@@container-variant-scale = null) {
+      & when not (@variant = null) {
 
-    .@{container-variant-class} {
+        & when not (@@container-variant-scale = null) {
 
-      margin-left: @@container-gutter-width * @@container-variant-scale;
-      margin-right: @@container-gutter-width * @@container-variant-scale;
+          margin-left: @@container-gutter-width * @@container-variant-scale;
 
-    }
+        }
 
-    .@{container-variant-class}-left {
-
-      margin-left: @@container-gutter-width * @@container-variant-scale;
+      }
 
     }
 
-    .@{container-variant-class}-right {
+  }
 
-      margin-right: @@container-gutter-width * @@container-variant-scale;
+  .@{container-class}-right {
+
+    & when not (@@container-gutter-width = null) {
+
+      & when (@variant = null) {
+
+        margin-right: @@container-gutter-width;
+
+      }
+
+      & when not (@variant = null) {
+
+        & when not (@@container-variant-scale = null) {
+
+          margin-right: @@container-gutter-width * @@container-variant-scale;
+
+        }
+
+      }
 
     }
 

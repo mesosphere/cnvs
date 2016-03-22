@@ -112,6 +112,12 @@ flex/styles.less
 
   }
 
+  .flex-align-items-baseline {
+
+    align-items: baseline;
+
+  }
+
   // Justify Items
 
   .flex-justify-items-start {
@@ -186,9 +192,6 @@ flex/styles.less
   Flex Item
   ----------------------------------------------------------------------------- */
 
-  .flex-item {
-  }
-
   // Flex Order (.flex-item-order-n, 0..n)
 
   .flex-item-property-loop (flex-item-order, order, null, 100, -100);
@@ -215,23 +218,35 @@ flex/styles.less
 
   }
 
+  .flex-item-basis-none {
+
+    flex-basis: 0;
+
+  }
+
   // Align Items
 
-  .flex-item-align-self-auto {
+  .flex-item-align-auto {
 
     align-self: auto;
 
   }
 
-  .flex-item-align-self-start {
+  .flex-item-align-start {
 
     align-self: flex-start;
 
   }
 
-  .flex-item-align-self-center {
+  .flex-item-align-center {
 
     align-self: center;
+
+  }
+
+  .flex-item-align-end {
+
+    align-self: flex-start;
 
   }
 
@@ -241,7 +256,7 @@ flex/styles.less
 
   }
 
-  .flex-item-align-self-stretch {
+  .flex-item-align-stretch {
 
     align-self: stretch;
 
@@ -319,7 +334,7 @@ flex/styles.less
 
       // Wrap
 
-      .flex-wrap-screen-mini {
+      .flex-wrap-items-screen-mini {
 
         flex-wrap: wrap;
 
@@ -354,6 +369,12 @@ flex/styles.less
       .flex-align-items-end-screen-mini {
 
         align-items: flex-end;
+
+      }
+
+      .flex-align-items-baseline-screen-mini {
+
+        align-items: baseline;
 
       }
 
@@ -437,20 +458,17 @@ flex/styles.less
       Flex Item
       ----------------------------------------------------------------------------- */
 
-      .flex-item-screen-mini {
-      }
-
       // Flex Order (.flex-item-order-n, 0..n)
 
-      .flex-item-property-loop (flex-item-order, order, mini, 100, -100);
+      .flex-item-property-loop (flex-item-order, order, screen-mini, 100, -100);
 
       // Flex Grow (.flex-item-shrink-n, 0..n)
 
-      .flex-item-property-loop (flex-item-grow, flex-grow, mini, 10, 0);
+      .flex-item-property-loop (flex-item-grow, flex-grow, screen-mini, 10, 0);
 
       // Flex Shrink (.flex-item-shrink-n, 0..n)
 
-      .flex-item-property-loop (flex-item-shrink, flex-shrink, mini, 10, 0);
+      .flex-item-property-loop (flex-item-shrink, flex-shrink, screen-mini, 10, 0);
 
       // Flex Basis
 
@@ -468,21 +486,27 @@ flex/styles.less
 
       // Align Items
 
-      .flex-item-align-self-auto-screen-mini {
+      .flex-item-align-auto-screen-mini {
 
         align-self: auto;
 
       }
 
-      .flex-item-align-self-start-screen-mini {
+      .flex-item-align-start-screen-mini {
 
         align-self: flex-start;
 
       }
 
-      .flex-item-align-self-center-screen-mini {
+      .flex-item-align-center-screen-mini {
 
         align-self: center;
+
+      }
+
+      .flex-item-align-end-screen-mini {
+
+        align-self: flex-start;
 
       }
 
@@ -492,7 +516,7 @@ flex/styles.less
 
       }
 
-      .flex-item-align-self-stretch-screen-mini {
+      .flex-item-align-stretch-screen-mini {
 
         align-self: stretch;
 
@@ -574,7 +598,7 @@ flex/styles.less
 
       // Wrap
 
-      .flex-wrap-screen-small {
+      .flex-wrap-items-screen-small {
 
         flex-wrap: wrap;
 
@@ -615,6 +639,18 @@ flex/styles.less
       .flex-align-items-stretch-screen-small {
 
         align-items: stretch;
+
+      }
+
+      .flex-align-items-baseline-screen-mini {
+
+        align-items: baseline;
+
+      }
+
+      .flex-align-items-baseline-screen-mini {
+
+        align-items: baseline;
 
       }
 
@@ -692,20 +728,17 @@ flex/styles.less
       Flex Item
       ----------------------------------------------------------------------------- */
 
-      .flex-item-screen-small {
-      }
-
       // Flex Order (.flex-item-order-n, 0..n)
 
-      .flex-item-property-loop (flex-item-order, order, small, 100, -100);
+      .flex-item-property-loop (flex-item-order, order, screen-small, 100, -100);
 
       // Flex Grow (.flex-item-shrink-n, 0..n)
 
-      .flex-item-property-loop (flex-item-grow, flex-grow, small, 10, 0);
+      .flex-item-property-loop (flex-item-grow, flex-grow, screen-small, 10, 0);
 
       // Flex Shrink (.flex-item-shrink-n, 0..n)
 
-      .flex-item-property-loop (flex-item-shrink, flex-shrink, small, 10, 0);
+      .flex-item-property-loop (flex-item-shrink, flex-shrink, screen-small, 10, 0);
 
       // Flex Basis
 
@@ -721,23 +754,35 @@ flex/styles.less
 
       }
 
+      .flex-item-basis-none-screen-small {
+
+        flex-basis: 0;
+
+      }
+
       // Align Items
 
-      .flex-item-align-self-auto-screen-small {
+      .flex-item-align-auto-screen-small {
 
         align-self: auto;
 
       }
 
-      .flex-item-align-self-start-screen-small {
+      .flex-item-align-start-screen-small {
 
         align-self: flex-start;
 
       }
 
-      .flex-item-align-self-center-screen-small {
+      .flex-item-align-center-screen-small {
 
         align-self: center;
+
+      }
+
+      .flex-item-align-end-screen-small {
+
+        align-self: flex-start;
 
       }
 
@@ -747,7 +792,7 @@ flex/styles.less
 
       }
 
-      .flex-item-align-self-stretch-screen-small {
+      .flex-item-align-stretch-screen-small {
 
         align-self: stretch;
 
@@ -829,7 +874,7 @@ flex/styles.less
 
       // Wrap
 
-      .flex-wrap-screen-medium {
+      .flex-wrap-items-screen-medium {
 
         flex-wrap: wrap;
 
@@ -864,6 +909,12 @@ flex/styles.less
       .flex-align-items-end-screen-medium {
 
         align-items: flex-end;
+
+      }
+
+      .flex-align-items-baseline-screen-medium {
+
+        align-items: baseline;
 
       }
 
@@ -947,20 +998,17 @@ flex/styles.less
       Flex Item
       ----------------------------------------------------------------------------- */
 
-      .flex-item-screen-medium {
-      }
-
       // Flex Order (.flex-item-order-n, 0..n)
 
-      .flex-item-property-loop (flex-item-order, order, medium, 100, -100);
+      .flex-item-property-loop (flex-item-order, order, screen-medium, 100, -100);
 
       // Flex Grow (.flex-item-shrink-n, 0..n)
 
-      .flex-item-property-loop (flex-item-grow, flex-grow, medium, 10, 0);
+      .flex-item-property-loop (flex-item-grow, flex-grow, screen-medium, 10, 0);
 
       // Flex Shrink (.flex-item-shrink-n, 0..n)
 
-      .flex-item-property-loop (flex-item-shrink, flex-shrink, medium, 10, 0);
+      .flex-item-property-loop (flex-item-shrink, flex-shrink, screen-medium, 10, 0);
 
       // Flex Basis
 
@@ -976,23 +1024,35 @@ flex/styles.less
 
       }
 
+      .flex-item-basis-none-screen-medium {
+
+        flex-basis: 0;
+
+      }
+
       // Align Items
 
-      .flex-item-align-self-auto-screen-medium {
+      .flex-item-align-auto-screen-medium {
 
         align-self: auto;
 
       }
 
-      .flex-item-align-self-start-screen-medium {
+      .flex-item-align-start-screen-medium {
 
         align-self: flex-start;
 
       }
 
-      .flex-item-align-self-center-screen-medium {
+      .flex-item-align-center-screen-medium {
 
         align-self: center;
+
+      }
+
+      .flex-item-align-end-screen-medium {
+
+        align-self: flex-start;
 
       }
 
@@ -1002,7 +1062,7 @@ flex/styles.less
 
       }
 
-      .flex-item-align-self-stretch-screen-medium {
+      .flex-item-align-stretch-screen-medium {
 
         align-self: stretch;
 
@@ -1084,7 +1144,7 @@ flex/styles.less
 
       // Wrap
 
-      .flex-wrap-screen-large {
+      .flex-wrap-items-screen-large {
 
         flex-wrap: wrap;
 
@@ -1119,6 +1179,12 @@ flex/styles.less
       .flex-align-items-end-screen-large {
 
         align-items: flex-end;
+
+      }
+
+      .flex-align-items-baseline-screen-large {
+
+        align-items: baseline;
 
       }
 
@@ -1202,20 +1268,17 @@ flex/styles.less
       Flex Item
       ----------------------------------------------------------------------------- */
 
-      .flex-item-screen-large {
-      }
-
       // Flex Order (.flex-item-order-n, 0..n)
 
-      .flex-item-property-loop (flex-item-order, order, large, 100, -100);
+      .flex-item-property-loop (flex-item-order, order, screen-large, 100, -100);
 
       // Flex Grow (.flex-item-shrink-n, 0..n)
 
-      .flex-item-property-loop (flex-item-grow, flex-grow, large, 10, 0);
+      .flex-item-property-loop (flex-item-grow, flex-grow, screen-large, 10, 0);
 
       // Flex Shrink (.flex-item-shrink-n, 0..n)
 
-      .flex-item-property-loop (flex-item-shrink, flex-shrink, large, 10, 0);
+      .flex-item-property-loop (flex-item-shrink, flex-shrink, screen-large, 10, 0);
 
       // Flex Basis
 
@@ -1231,23 +1294,35 @@ flex/styles.less
 
       }
 
+      .flex-item-basis-none-screen-large {
+
+        flex-basis: 0;
+
+      }
+
       // Align Items
 
-      .flex-item-align-self-auto-screen-large {
+      .flex-item-align-auto-screen-large {
 
         align-self: auto;
 
       }
 
-      .flex-item-align-self-start-screen-large {
+      .flex-item-align-start-screen-large {
 
         align-self: flex-start;
 
       }
 
-      .flex-item-align-self-center-screen-large {
+      .flex-item-align-center-screen-large {
 
         align-self: center;
+
+      }
+
+      .flex-item-align-end-screen-large {
+
+        align-self: flex-start;
 
       }
 
@@ -1257,7 +1332,7 @@ flex/styles.less
 
       }
 
-      .flex-item-align-self-stretch-screen-large {
+      .flex-item-align-stretch-screen-large {
 
         align-self: stretch;
 
