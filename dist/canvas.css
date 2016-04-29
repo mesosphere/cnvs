@@ -9548,20 +9548,123 @@ responsive-utilities/styles.less
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-  Heading 1
+  Visiblity Utilities
   ----------------------------------------------------------------------------- */
+.invisible {
+  visibility: hidden;
+  position: absolute !important;
+  left: -9999px !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.hidden-tiny-up {
+  display: none !important;
+}
 /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  Print Utilities
   ----------------------------------------------------------------------------- */
+.visible-print-block {
+  display: none !important;
+}
+.visible-print-inline {
+  display: none !important;
+}
+.visible-print-inline-block {
+  display: none !important;
+}
 /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
-  ----------------------------------------------------------------------------- */
+Print Utilities
+----------------------------------------------------------------------------- */
+@media print {
+  .visible-print-block {
+    display: block !important;
+  }
+  .visible-print-inline {
+    display: inline !important;
+  }
+  .visible-print-inline-block {
+    display: inline-block !important;
+  }
+  .hidden-print {
+    display: none !important;
+  }
+}
 /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
-  ----------------------------------------------------------------------------- */
+    Screen Size: Mini (@layout-screen-mini-min-width) and narrower
+    ----------------------------------------------------------------------------- */
+@media (max-width: 480px - 1) {
+  .hidden-tiny-down {
+    display: none !important;
+  }
+}
 /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
-  ----------------------------------------------------------------------------- */
+    Screen Size: Mini (@layout-screen-mini-min-width) and wider
+    ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  .hidden-mini-up {
+    display: none !important;
+  }
+}
+/* -----------------------------------------------------------------------------
+    Screen Size: Mini (@layout-screen-mini-max-width) and narrower
+    ----------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .hidden-mini-down {
+    display: none !important;
+  }
+}
+/* -----------------------------------------------------------------------------
+    Screen Size: Small (@layout-screen-small-min-width) and wider
+    ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .hidden-small-up {
+    display: none !important;
+  }
+}
+/* -----------------------------------------------------------------------------
+    Screen Size: Small (@layout-screen-small-max-width) and narrower
+    ----------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .hidden-small-down {
+    display: none !important;
+  }
+}
+/* -----------------------------------------------------------------------------
+    Screen Size: medium (@layout-screen-medium-min-width) and wider
+    ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .hidden-medium-up {
+    display: none !important;
+  }
+}
+/* -----------------------------------------------------------------------------
+    Screen Size: medium (@layout-screen-medium-max-width) and narrower
+    ----------------------------------------------------------------------------- */
+@media (max-width: 1399px) {
+  .hidden-medium-down {
+    display: none !important;
+  }
+}
+/* -----------------------------------------------------------------------------
+    Screen Size: large (@layout-screen-large-min-width) and wider
+    ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  .hidden-large-up {
+    display: none !important;
+  }
+}
+/* -----------------------------------------------------------------------------
+    Screen Size: large (@layout-screen-large-max-width) and narrower
+    ----------------------------------------------------------------------------- */
+@media (max-width: null) {
+  .hidden-large-down {
+    display: none !important;
+  }
+}
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Content
