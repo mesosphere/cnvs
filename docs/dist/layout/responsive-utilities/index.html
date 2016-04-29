@@ -544,21 +544,243 @@ END: Page Header
 
           <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
 
-            <!-- =================================================
-BEGIN: Layout
-================================================== -->
+            <div class="container-fluid pod">
 
-<section class="canvas-pod" id="layout">
+  <!-- =================================================
+  BEGIN: Container
+  ================================================== -->
 
-  <div class="container-fluid pod">
+  <section id="responsive-utilities">
 
-  </div>
+    <p class="lead">
 
-</section>
+      Most content and components in CNVS support responsive behavior for scaling either size or spacing.  However, you'll often want to hide and show specific elements of your project based on a given screen resolution.  Similarly, when optimizing your project for printing, you may wish to hide or show components.  Use these useful pre-defined classes to trigger responsive behavior.
 
-<!-- =================================================
-END: Layout
-================================================== -->
+    </p>
+
+    <h2>
+
+      Responsive Options
+
+    </h2>
+
+    <p>
+
+      The <code>.hidden-*</code> class is useful for hiding a given element at a specific screen size.  Replacing the <code>-*</code> modifier with a screen size value (<code>-mini</code>, <code>-small</code>, <code>-medium</code>, <code>-large</code>) will hide the element at that screen-size.  Additionally, appending <code>-up</code> and <code>-down</code> to the <code>.hidden-*-</code> class, will hide a given element up or down respectively at the specified screen-size.
+
+    </p>
+
+    <table class="table">
+
+      <thead>
+
+        <tr>
+
+          <th>
+
+            Class
+
+          </th>
+
+          <th>
+
+            Description
+
+          </th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .hidden-*
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Hide the element at the screen size specified by the <code>-*</code> modifier.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .hidden-*-down
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Hide the element at and below the screen size specified by the <code>-*</code> modifier.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .hidden-*-up
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Hide the element at and below the screen size specified by the <code>-*</code> modifier.
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <h3>
+
+      Available Classes
+
+    </h3>
+
+    <table class="table table-responsive-utilities-classes">
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            Tiny devices<br>
+            <small>Portrait phones (&lt; 480px)</small>
+          </th>
+          <th>
+            Mini devices<br>
+            <small>Landscape phones (≥ 480px)</small>
+          </th>
+          <th>
+            Small devices<br>
+            <small>Tablets (≥ 768px)</small>
+          </th>
+          <th>
+            Medium devices<br>
+            <small>Desktops (≥ 992px)</small>
+          </th>
+          <th>
+            Large devices<br>
+            <small>Desktops (≥ 1400px)</small>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><code>.hidden-tiny-down</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-mini-down</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-small-down</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-medium-down</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-visible">Visible</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-large-down</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-tiny-up</code></th>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-mini-up</code></th>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-small-up</code></th>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-medium-up</code></th>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>.hidden-large-up</code></th>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-visible">Visible</td>
+          <td class="is-hidden">Hidden</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <!-- =================================================
+  END: Container
+  ================================================== -->
+
+</div>
 
 
           </div>
