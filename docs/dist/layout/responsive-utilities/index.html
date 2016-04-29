@@ -538,6 +538,78 @@ END: Page Header
 
           
 
+            <!-- =================================================
+BEGIN: Page Navigation
+================================================== -->
+<!-- flex-screen-medium  -->
+<div class="page-navigation flex-item-shrink-0-screen-medium flex-item-order-1-screen-medium" id="page-navigation">
+
+  <div class="page-navigation-sticky">
+
+    <div class="container-fluid pod">
+
+      <ul class="page-navigation-menu list-unstyled">
+
+  
+
+    <li class="">
+
+      <a href="#responsive-utilities-responsive-options" class="">
+
+        Responsive Options
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+    <li class="">
+
+      <a href="#responsive-utilities-print-options" class="">
+
+        Print Options
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+    <li class="">
+
+      <a href="#responsive-utilities-examples" class="">
+
+        Examples
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+</ul>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- =================================================
+END: Page Navigation
+================================================== -->
+
+
+          
+
           <!-- =================================================
           BEGIN: Page Content
           ================================================== -->
@@ -547,7 +619,7 @@ END: Page Header
             <div class="container-fluid pod">
 
   <!-- =================================================
-  BEGIN: Container
+  BEGIN: Responsive Utilities
   ================================================== -->
 
   <section id="responsive-utilities">
@@ -558,227 +630,320 @@ END: Page Header
 
     </p>
 
-    <h2>
-
-      Responsive Options
-
-    </h2>
-
-    <p>
-
-      The <code>.hidden-*</code> class is useful for hiding a given element at a specific screen size.  Replacing the <code>-*</code> modifier with a screen size value (<code>-mini</code>, <code>-small</code>, <code>-medium</code>, <code>-large</code>) will hide the element at that screen-size.  Additionally, appending <code>-up</code> and <code>-down</code> to the <code>.hidden-*-</code> class, will hide a given element up or down respectively at the specified screen-size.
-
-    </p>
-
-    <table class="table">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .hidden-*
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Hide the element at the screen size specified by the <code>-*</code> modifier.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .hidden-*-down
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Hide the element at and below the screen size specified by the <code>-*</code> modifier.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .hidden-*-up
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Hide the element at and below the screen size specified by the <code>-*</code> modifier.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <h3>
-
-      Available Classes
-
-    </h3>
-
-    <table class="table table-responsive-utilities-classes">
-      <thead>
-        <tr>
-          <th></th>
-          <th>
-            Tiny devices<br>
-            <small>Portrait phones (&lt; 480px)</small>
-          </th>
-          <th>
-            Mini devices<br>
-            <small>Landscape phones (≥ 480px)</small>
-          </th>
-          <th>
-            Small devices<br>
-            <small>Tablets (≥ 768px)</small>
-          </th>
-          <th>
-            Medium devices<br>
-            <small>Desktops (≥ 992px)</small>
-          </th>
-          <th>
-            Large devices<br>
-            <small>Desktops (≥ 1400px)</small>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row"><code>.hidden-tiny-down</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-mini-down</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-small-down</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-medium-down</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-large-down</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-tiny-up</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-mini-up</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-small-up</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-medium-up</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th scope="row"><code>.hidden-large-up</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-      </tbody>
-    </table>
-
   </section>
 
   <!-- =================================================
-  END: Container
+  END: Responsive Utilities
   ================================================== -->
+
+  <!-- =================================================
+BEGIN: Responsive Options
+================================================== -->
+
+<section id="responsive-utilities-responsive-options">
+
+  <h2>
+
+    Responsive Options
+
+  </h2>
+
+  <p>
+
+    tde <code>.hidden-*</code> class is useful for hiding a given element at a specific screen size.  Replacing tde <code>-*</code> modifier witd a screen size value (<code>-mini</code>, <code>-small</code>, <code>-medium</code>, <code>-large</code>) will hide tde element at tdat screen-size.  Additionally, appending <code>-up</code> and <code>-down</code> to tde <code>.hidden-*-</code> class, will hide a given element up or down respectively at tde specified screen-size.
+
+  </p>
+
+  <table class="table">
+
+    <tdead>
+
+      <tr>
+
+        <td>
+
+          Class
+
+        </td>
+
+        <td>
+
+          Description
+
+        </td>
+
+      </tr>
+
+    </tdead>
+
+    <tbody>
+
+      <tr>
+
+        <td>
+
+          <code>
+
+            .hidden-*
+
+          </code>
+
+        </td>
+
+        <td>
+
+          Hide tde element at tde screen size specified by tde <code>-*</code> modifier.
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>
+
+          <code>
+
+            .hidden-*-down
+
+          </code>
+
+        </td>
+
+        <td>
+
+          Hide tde element at and below tde screen size specified by tde <code>-*</code> modifier.
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>
+
+          <code>
+
+            .hidden-*-up
+
+          </code>
+
+        </td>
+
+        <td>
+
+          Hide tde element at and below tde screen size specified by tde <code>-*</code> modifier.
+
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <h3>
+
+    Available Classes
+
+  </h3>
+
+  <table class="table table-responsive-utilities-classes">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="text-align-center">
+          Tiny devices<br>
+          <small>Portrait phones (&lt; 480px)</small>
+        </th>
+        <th class="text-align-center">
+          Mini devices<br>
+          <small>Landscape phones (≥ 480px)</small>
+        </th>
+        <th class="text-align-center">
+          Small devices<br>
+          <small>Tablets (≥ 768px)</small>
+        </th>
+        <th class="text-align-center">
+          Medium devices<br>
+          <small>Desktops (≥ 992px)</small>
+        </th>
+        <th class="text-align-center">
+          Large devices<br>
+          <small>Desktops (≥ 1400px)</small>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row"><code>.hidden-tiny-down</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-mini-down</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-small-down</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-medium-down</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-visible">Visible</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-large-down</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-tiny-up</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-mini-up</code></td>
+        <td class="is-visible">Visible</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-small-up</code></td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-medium-up</code></td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-hidden">Hidden</td>
+      </tr>
+      <tr>
+        <td scope="row"><code>.hidden-large-up</code></td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-visible">Visible</td>
+        <td class="is-hidden">Hidden</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<!-- =================================================
+END: Responsive Options
+================================================== -->
+
+  <!-- =================================================
+BEGIN: Print Options
+================================================== -->
+
+<section id="responsive-utilities-print-options">
+
+  <h2>
+
+    Print Options
+
+  </h2>
+
+  <p>
+
+    Like the responsive class options, there are similar class options for toggling an elements visibility for print. Use the <code>.visible-print-*</code> option to make and element visible when the page is printed.  The <code>-*</code> modifier is used to specify the display type.  For example, <code>.visible-print-inline</code> displays an element as <code>inline</code> only when printed.
+
+  </p>
+
+  <table class="table table-bordered table-striped responsive-utilities">
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th class="text-align-center">Browser</th>
+        <th class="text-align-center">Print</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.visible-print-block</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-visible">Visible</td>
+      </tr>
+      <tr>
+        <td><code>.visible-print-inline</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-visible">Visible</td>
+      </tr>
+      <tr>
+        <td><code>.visible-print-inline-block</code></td>
+        <td class="is-hidden">Hidden</td>
+        <td class="is-visible">Visible</td>
+      </tr>
+      <tr>
+        <td><code>.hidden-print</code></td>
+        <td class="is-visible">Visible</td>
+        <td class="is-hidden">Hidden</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<!-- =================================================
+END: Print Options
+================================================== -->
+
+  <!-- =================================================
+BEGIN: Responsive Options
+================================================== -->
+
+<section id="responsive-utilities-examples">
+
+  <h2>
+
+    Examples
+
+  </h2>
+
+  <p>
+
+    The <code>.hidden-*</code> class is useful for hiding a given element at a specific screen size.  Replacing the <code>-*</code> modifier with a screen size value (<code>-mini</code>, <code>-small</code>, <code>-medium</code>, <code>-large</code>) will hide the element at that screen-size.  Additionally, appending <code>-up</code> and <code>-down</code> to the <code>.hidden-*-</code> class, will hide a given element up or down respectively at the specified screen-size.
+
+  </p>
+
+</section>
+
+<!-- =================================================
+END: Responsive Options
+================================================== -->
+
 
 </div>
 
