@@ -492,17 +492,17 @@ layout/modal/index.less
 
 
 
-& when (@modal-enabled) and (@layout-scale-screen-mini-enabled) {
+& when (@modal-enabled) and (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
 
-  Screen Size: Mini (@layout-screen-mini-min-width) and above
+  Screen Size: Mini (@layout-screen-small-min-width) and above
 
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @layout-screen-mini-min-width) {
+  @media (min-width: @layout-screen-small-min-width) {
 
     /* -----------------------------------------------------------------------------
     --------------------------------------------------------------------------------
@@ -525,17 +525,17 @@ layout/modal/index.less
 
 
 
-& when (@modal-enabled) and (@layout-scale-screen-small-enabled) {
+& when (@modal-enabled) and (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
 
-  Screen Size: Small (@layout-screen-small-min-width) and above
+  Screen Size: Small (@layout-screen-medium-min-width) and above
 
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @layout-screen-small-min-width) {
+  @media (min-width: @layout-screen-medium-min-width) {
 
     /* -----------------------------------------------------------------------------
     --------------------------------------------------------------------------------
@@ -548,8 +548,8 @@ layout/modal/index.less
     .modal {
 
       left: 50%;
-      width: @modal-width-screen-small;
-      margin: 0px 0px 0px (-1 * @modal-width-screen-small * 0.5);
+      width: @modal-width-screen-medium;
+      margin: 0px 0px 0px (-1 * @modal-width-screen-medium * 0.5);
 
 
 
@@ -565,18 +565,18 @@ layout/modal/index.less
 
       .modal-close {
 
-        top: -(@modal-header-padding-vertical-screen-small + (@butttn-large-height * @butttn-large-height-scale-screen-small));
-        width: @butttn-large-height * @butttn-large-height-scale-screen-small;
-        height: @butttn-large-height * @butttn-large-height-scale-screen-small;
-        margin-left: -(@butttn-large-height * @butttn-large-height-scale-screen-small) * 0.5;
+        top: -(@modal-header-padding-vertical-screen-medium + (@butttn-large-height * @butttn-large-height-scale-screen-medium));
+        width: @butttn-large-height * @butttn-large-height-scale-screen-medium;
+        height: @butttn-large-height * @butttn-large-height-scale-screen-medium;
+        margin-left: -(@butttn-large-height * @butttn-large-height-scale-screen-medium) * 0.5;
         border: 1px solid rgba(255, 255, 255, 0.6);
 
         &:before,
         &:after {
 
-          width: @butttn-large-height * @butttn-large-height-scale-screen-small * 0.5;
-          top: (@butttn-large-height * @butttn-large-height-scale-screen-small * 0.5) - 1px;
-          margin-left: -(@butttn-large-height * @butttn-large-height-scale-screen-small * 0.5) * 0.5;
+          width: @butttn-large-height * @butttn-large-height-scale-screen-medium * 0.5;
+          top: (@butttn-large-height * @butttn-large-height-scale-screen-medium * 0.5) - 1px;
+          margin-left: -(@butttn-large-height * @butttn-large-height-scale-screen-medium * 0.5) * 0.5;
           background-color: @white;
 
         }
@@ -635,192 +635,6 @@ layout/modal/index.less
         .modal-content-inner {
 
           padding-top: 0px;
-
-        }
-
-      }
-
-
-
-
-
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-
-      Modal Header
-
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      .modal-header {
-
-        padding: @modal-header-padding-vertical-screen-small @modal-header-padding-horizontal-screen-small;
-
-      }
-
-
-
-
-
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-
-      Modal Body
-
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      .modal-body {
-
-        padding: @modal-body-padding-vertical-screen-small @modal-body-padding-horizontal-screen-small;
-
-      }
-
-
-
-
-
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-
-      Modal footer
-
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      .modal-footer {
-
-        padding: @modal-footer-padding-vertical-screen-small @modal-footer-padding-horizontal-screen-small;
-
-      }
-
-
-
-
-
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-
-      Modal (Fullscreen)
-
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      &.modal-fullscreen {
-
-        /* -----------------------------------------------------------------------------
-        Modal Content
-        ----------------------------------------------------------------------------- */
-
-        .modal-content {
-
-          &:before {
-
-            display: block;
-            height: (2 * (@modal-header-padding-vertical-screen-small * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-small) - ( @modal-header-padding-vertical-screen-small * 0.5);
-
-          }
-
-          .modal-content-inner {
-
-            padding-top: (2 * (@modal-header-padding-vertical-screen-small * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-small) - ( @modal-header-padding-vertical-screen-small * 0.5);
-            padding-bottom: (2 * (@modal-header-padding-vertical-screen-small * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-small) - ( @modal-header-padding-vertical-screen-small * 0.5);
-
-          }
-
-        }
-
-
-
-        /* -----------------------------------------------------------------------------
-        Modal Close
-        ----------------------------------------------------------------------------- */
-
-        .modal-close {
-
-          top: @modal-header-padding-vertical-screen-small * 0.5;;
-
-        }
-
-
-
-        /* -----------------------------------------------------------------------------
-        Container
-        ----------------------------------------------------------------------------- */
-
-        .container {
-
-          width: @modal-fullscreen-container-screen-small;
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
-
-
-
-& when (@modal-enabled) and (@layout-scale-screen-medium-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  --------------------------------------------------------------------------------
-
-  Screen Size: Medium (@layout-screen-medium-min-width) and above
-
-  --------------------------------------------------------------------------------
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-medium-min-width) {
-
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-
-    Modal
-
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
-
-    .modal {
-
-      width: @modal-width-screen-medium;
-      margin: 0px 0px 0px (-1 * @modal-width-screen-medium * 0.5);
-
-
-
-
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-
-      Modal Close
-
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      .modal-close {
-
-        top: -(@modal-header-padding-vertical-screen-medium + (@butttn-large-height * @butttn-large-height-scale-screen-medium));
-        width: @butttn-large-height * @butttn-large-height-scale-screen-medium;
-        height: @butttn-large-height * @butttn-large-height-scale-screen-medium;
-        margin-left: -(@butttn-large-height * @butttn-large-height-scale-screen-medium) * 0.5;
-
-        &:before,
-        &:after {
-
-          width: @butttn-large-height * @butttn-large-height-scale-screen-medium * 0.5;
-          top: (@butttn-large-height * @butttn-large-height-scale-screen-medium * 0.5) - 1px;
-          margin-left: -(@butttn-large-height * @butttn-large-height-scale-screen-medium * 0.5) * 0.5;
 
         }
 
@@ -906,6 +720,7 @@ layout/modal/index.less
 
           &:before {
 
+            display: block;
             height: (2 * (@modal-header-padding-vertical-screen-medium * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-medium) - ( @modal-header-padding-vertical-screen-medium * 0.5);
 
           }
@@ -961,7 +776,7 @@ layout/modal/index.less
   /* -----------------------------------------------------------------------------
   --------------------------------------------------------------------------------
 
-  Screen Size: large (@layout-screen-large-min-width) and above
+  Screen Size: Medium (@layout-screen-large-min-width) and above
 
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
@@ -1091,14 +906,14 @@ layout/modal/index.less
 
           &:before {
 
-            height: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-large);
+            height: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-large) - ( @modal-header-padding-vertical-screen-large * 0.5);
 
           }
 
           .modal-content-inner {
 
-            padding-top: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-large);
-            padding-bottom: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-large);
+            padding-top: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-large) - ( @modal-header-padding-vertical-screen-large * 0.5);
+            padding-bottom: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-large) - ( @modal-header-padding-vertical-screen-large * 0.5);
 
           }
 
@@ -1125,6 +940,191 @@ layout/modal/index.less
         .container {
 
           width: @modal-fullscreen-container-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@modal-enabled) and (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Screen Size: large (@layout-screen-jumbo-min-width) and above
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Modal
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .modal {
+
+      width: @modal-width-screen-jumbo;
+      margin: 0px 0px 0px (-1 * @modal-width-screen-jumbo * 0.5);
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Modal Close
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .modal-close {
+
+        top: -(@modal-header-padding-vertical-screen-jumbo + (@butttn-large-height * @butttn-large-height-scale-screen-jumbo));
+        width: @butttn-large-height * @butttn-large-height-scale-screen-jumbo;
+        height: @butttn-large-height * @butttn-large-height-scale-screen-jumbo;
+        margin-left: -(@butttn-large-height * @butttn-large-height-scale-screen-jumbo) * 0.5;
+
+        &:before,
+        &:after {
+
+          width: @butttn-large-height * @butttn-large-height-scale-screen-jumbo * 0.5;
+          top: (@butttn-large-height * @butttn-large-height-scale-screen-jumbo * 0.5) - 1px;
+          margin-left: -(@butttn-large-height * @butttn-large-height-scale-screen-jumbo * 0.5) * 0.5;
+
+        }
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Modal Header
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .modal-header {
+
+        padding: @modal-header-padding-vertical-screen-jumbo @modal-header-padding-horizontal-screen-jumbo;
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Modal Body
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .modal-body {
+
+        padding: @modal-body-padding-vertical-screen-jumbo @modal-body-padding-horizontal-screen-jumbo;
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Modal footer
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .modal-footer {
+
+        padding: @modal-footer-padding-vertical-screen-jumbo @modal-footer-padding-horizontal-screen-jumbo;
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Modal (Fullscreen)
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      &.modal-fullscreen {
+
+        /* -----------------------------------------------------------------------------
+        Modal Content
+        ----------------------------------------------------------------------------- */
+
+        .modal-content {
+
+          &:before {
+
+            height: (2 * (@modal-header-padding-vertical-screen-jumbo * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-jumbo);
+
+          }
+
+          .modal-content-inner {
+
+            padding-top: (2 * (@modal-header-padding-vertical-screen-jumbo * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-jumbo);
+            padding-bottom: (2 * (@modal-header-padding-vertical-screen-jumbo * 0.5)) + (@butttn-large-height * @butttn-large-height-scale-screen-jumbo);
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Modal Close
+        ----------------------------------------------------------------------------- */
+
+        .modal-close {
+
+          top: @modal-header-padding-vertical-screen-jumbo * 0.5;;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Container
+        ----------------------------------------------------------------------------- */
+
+        .container {
+
+          width: @modal-fullscreen-container-screen-jumbo;
 
         }
 

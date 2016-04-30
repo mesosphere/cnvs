@@ -26,54 +26,10 @@ grid/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when not (@grid-enabled = null) and not (@grid-scale-screen-mini-enabled = null) {
-
-      /* -----------------------------------------------------------------------------
-      Grid
-      ----------------------------------------------------------------------------- */
-
-      .grid(screen-mini, @grid-columns-count, @grid-gutter-width-screen-mini, @grid-gutter-height-screen-mini);
-
-      /* -----------------------------------------------------------------------------
-      Row
-      ----------------------------------------------------------------------------- */
-
-      .row(screen-mini);
-
-      /* -----------------------------------------------------------------------------
-      Column Overflow
-      ----------------------------------------------------------------------------- */
-
-      .column-overflow {
-
-        &[class*="column-mini-"] {
-
-          margin-top: 0px;
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -117,7 +73,7 @@ grid/styles.less
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -149,7 +105,7 @@ grid/styles.less
         }
 
       }
-      
+
     }
 
   }
@@ -161,7 +117,7 @@ grid/styles.less
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -187,6 +143,50 @@ grid/styles.less
       .column-overflow {
 
         &[class*="column-large-"] {
+
+          margin-top: 0px;
+
+        }
+
+      }
+      
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when not (@grid-enabled = null) and not (@grid-scale-screen-jumbo-enabled = null) {
+
+      /* -----------------------------------------------------------------------------
+      Grid
+      ----------------------------------------------------------------------------- */
+
+      .grid(screen-jumbo, @grid-columns-count, @grid-gutter-width-screen-jumbo, @grid-gutter-height-screen-jumbo);
+
+      /* -----------------------------------------------------------------------------
+      Row
+      ----------------------------------------------------------------------------- */
+
+      .row(screen-jumbo);
+
+      /* -----------------------------------------------------------------------------
+      Column Overflow
+      ----------------------------------------------------------------------------- */
+
+      .column-overflow {
+
+        &[class*="column-jumbo-"] {
 
           margin-top: 0px;
 

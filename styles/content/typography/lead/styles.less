@@ -81,29 +81,10 @@ lead/styles.less
 
 
 
-    & when (@layout-scale-screen-mini-enabled) and (@lead-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Screen Size: Mini (@layout-screen-mini-min-width) and wider
-      ----------------------------------------------------------------------------- */
-
-      @media (min-width: @layout-screen-mini-min-width) {
-
-        .text-size-variant(lead, scale-screen-mini);
-        .shape-layout-variant(lead, scale-screen-mini);
-        .shape-layout-variant(lead, short, scale-screen-mini);
-        .shape-layout-variant(lead, tall, scale-screen-mini);
-
-      }
-
-    }
-
-
-
     & when (@layout-scale-screen-small-enabled) and (@lead-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
+      Screen Size: Mini (@layout-screen-small-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-small-min-width) {
@@ -122,7 +103,7 @@ lead/styles.less
     & when (@layout-scale-screen-medium-enabled) and (@lead-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
+      Screen Size: Small (@layout-screen-medium-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-medium-min-width) {
@@ -141,7 +122,7 @@ lead/styles.less
     & when (@layout-scale-screen-large-enabled) and (@lead-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
+      Screen Size: Medium (@layout-screen-large-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-large-min-width) {
@@ -150,6 +131,25 @@ lead/styles.less
         .shape-layout-variant(lead, scale-screen-large);
         .shape-layout-variant(lead, short, scale-screen-large);
         .shape-layout-variant(lead, tall, scale-screen-large);
+
+      }
+
+    }
+
+
+
+    & when (@layout-scale-screen-jumbo-enabled) and (@lead-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Screen Size: Large (@layout-screen-jumbo-min-width) and wider
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @layout-screen-jumbo-min-width) {
+
+        .text-size-variant(lead, scale-screen-jumbo);
+        .shape-layout-variant(lead, scale-screen-jumbo);
+        .shape-layout-variant(lead, short, scale-screen-jumbo);
+        .shape-layout-variant(lead, tall, scale-screen-jumbo);
 
       }
 

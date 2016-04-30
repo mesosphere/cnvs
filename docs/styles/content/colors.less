@@ -995,13 +995,13 @@ Color Blend (.color-blend)
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
+& when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and above
+  Screen Size: Mini (@layout-screen-small-min-width) and above
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @layout-screen-mini-min-width) {
+  @media (min-width: @layout-screen-small-min-width) {
 
   }
 
@@ -1009,13 +1009,13 @@ Color Blend (.color-blend)
 
 
 
-& when (@layout-scale-screen-small-enabled) {
+& when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and above
+  Screen Size: Small (@layout-screen-medium-min-width) and above
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @layout-screen-small-min-width) {
+  @media (min-width: @layout-screen-medium-min-width) {
 
     /* -----------------------------------------------------------------------------
     Color Swatches
@@ -1023,11 +1023,11 @@ Color Blend (.color-blend)
 
     .color-swatches {
 
-      margin-bottom: -(@base-spacing-unit-screen-small * 0.5);
+      margin-bottom: -(@base-spacing-unit-screen-medium * 0.5);
 
       .color-swatch {
 
-        margin-bottom: @base-spacing-unit-screen-small * 0.5;
+        margin-bottom: @base-spacing-unit-screen-medium * 0.5;
 
         .color-swatch-cell {
 
@@ -1048,70 +1048,6 @@ Color Blend (.color-blend)
     .color-blend {
 
       height: 60px;
-      margin-bottom: @base-spacing-unit-screen-small * 0.5;
-
-      .color-blend-base {
-
-        width: 20%;
-
-      }
-
-      .color-blend-spectrum {
-
-        width: 80%;
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
-
-
-
-& when (@layout-scale-screen-medium-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and above
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-medium-min-width) {
-
-    /* -----------------------------------------------------------------------------
-    Color Swatches
-    ----------------------------------------------------------------------------- */
-
-    .color-swatches {
-
-      margin-bottom: -(@base-spacing-unit-screen-medium * 0.5);
-
-      .color-swatch {
-
-        margin-bottom: @base-spacing-unit-screen-medium * 0.5;
-
-        .color-swatch-cell {
-
-          height: 80px;
-
-        }
-
-      }
-
-    }
-
-
-
-    /* -----------------------------------------------------------------------------
-    Color Blend
-    ----------------------------------------------------------------------------- */
-
-    .color-blend {
-
-      height: 80px;
       margin-bottom: @base-spacing-unit-screen-medium * 0.5;
 
       .color-blend-base {
@@ -1140,7 +1076,7 @@ Color Blend (.color-blend)
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and above
+  Screen Size: Medium (@layout-screen-large-min-width) and above
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -1177,6 +1113,70 @@ Color Blend (.color-blend)
 
       height: 80px;
       margin-bottom: @base-spacing-unit-screen-large * 0.5;
+
+      .color-blend-base {
+
+        width: 20%;
+
+      }
+
+      .color-blend-spectrum {
+
+        width: 80%;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-jumbo-min-width) and above
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    Color Swatches
+    ----------------------------------------------------------------------------- */
+
+    .color-swatches {
+
+      margin-bottom: -(@base-spacing-unit-screen-jumbo * 0.5);
+
+      .color-swatch {
+
+        margin-bottom: @base-spacing-unit-screen-jumbo * 0.5;
+
+        .color-swatch-cell {
+
+          height: 80px;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Color Blend
+    ----------------------------------------------------------------------------- */
+
+    .color-blend {
+
+      height: 80px;
+      margin-bottom: @base-spacing-unit-screen-jumbo * 0.5;
 
       .color-blend-base {
 

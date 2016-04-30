@@ -142,54 +142,10 @@ Example Block
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-	/* ----------------------------------------------------------------------------------------------------
-	Screen Size: Mini (@layout-screen-mini-min-width) and above
-	---------------------------------------------------------------------------------------------------- */
-
-	@media (min-width: @layout-screen-mini-min-width) {
-
-		/* ----------------------------------------------------------------------------------------------------
-		Example Block
-		---------------------------------------------------------------------------------------------------- */
-
-		.example-block {
-
-			.example-block-content {
-
-				padding: (@base-spacing-unit-screen-mini * 0.5);
-				//padding-top: (@base-spacing-unit-screen-mini * 0.5) + (2 * @base-spacing-unit-screen-mini * 0.125) + (@small-text-line-height * @small-text-line-height-scale-screen-mini);
-
-				&:before {
-
-					padding: (@base-spacing-unit-screen-mini * 0.125) (@base-spacing-unit-screen-mini * 0.25);
-					//font-size: @small-text-font-size * @small-text-font-size-scale-screen-mini;
-					//line-height: @small-text-line-height * @small-text-line-height-scale-screen-mini;
-
-				}
-
-			}
-
-			.example-block-footer {
-
-				padding: (@base-spacing-unit-screen-mini * 0.5);
-
-			}
-
-		}
-
-	}
-
-}
-
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
 	/* ----------------------------------------------------------------------------------------------------
-	Screen Size: Small (@layout-screen-small-min-width) and above
+	Screen Size: Mini (@layout-screen-small-min-width) and above
 	---------------------------------------------------------------------------------------------------- */
 
 	@media (min-width: @layout-screen-small-min-width) {
@@ -199,8 +155,6 @@ Example Block
 		---------------------------------------------------------------------------------------------------- */
 
 		.example-block {
-
-			margin-bottom: @base-spacing-unit-screen-small * 0.5;
 
 			.example-block-content {
 
@@ -232,12 +186,10 @@ Example Block
 
 
 
-
-
 & when (@layout-scale-screen-medium-enabled) {
 
 	/* ----------------------------------------------------------------------------------------------------
-	Screen Size: Large (@layout-screen-medium-min-width) and above
+	Screen Size: Small (@layout-screen-medium-min-width) and above
 	---------------------------------------------------------------------------------------------------- */
 
 	@media (min-width: @layout-screen-medium-min-width) {
@@ -279,6 +231,9 @@ Example Block
 
 
 
+
+
+
 & when (@layout-scale-screen-large-enabled) {
 
 	/* ----------------------------------------------------------------------------------------------------
@@ -313,6 +268,51 @@ Example Block
 			.example-block-footer {
 
 				padding: (@base-spacing-unit-screen-large * 0.5);
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+	/* ----------------------------------------------------------------------------------------------------
+	Screen Size: Large (@layout-screen-jumbo-min-width) and above
+	---------------------------------------------------------------------------------------------------- */
+
+	@media (min-width: @layout-screen-jumbo-min-width) {
+
+		/* ----------------------------------------------------------------------------------------------------
+		Example Block
+		---------------------------------------------------------------------------------------------------- */
+
+		.example-block {
+
+			margin-bottom: @base-spacing-unit-screen-jumbo * 0.5;
+
+			.example-block-content {
+
+				padding: (@base-spacing-unit-screen-jumbo * 0.5);
+				//padding-top: (@base-spacing-unit-screen-jumbo * 0.5) + (2 * @base-spacing-unit-screen-jumbo * 0.125) + (@small-text-line-height * @small-text-line-height-scale-screen-jumbo);
+
+				&:before {
+
+					padding: (@base-spacing-unit-screen-jumbo * 0.125) (@base-spacing-unit-screen-jumbo * 0.25);
+					//font-size: @small-text-font-size * @small-text-font-size-scale-screen-jumbo;
+					//line-height: @small-text-line-height * @small-text-line-height-scale-screen-jumbo;
+
+				}
+
+			}
+
+			.example-block-footer {
+
+				padding: (@base-spacing-unit-screen-jumbo * 0.5);
 
 			}
 

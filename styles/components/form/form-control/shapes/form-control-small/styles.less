@@ -196,208 +196,10 @@ form-control-small/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when (@form-control-small-enabled) and (@form-control-small-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Form Control (.form-control-small)
-      ----------------------------------------------------------------------------- */
-
-      .form-control-small {
-
-        .text-size-variant(form-control-small, scale-screen-mini);
-        .shape-layout-variant(form-control-small, scale-screen-mini);
-
-        & when not (@form-control-small-height = null) and not (@form-control-small-height-scale-screen-mini = null) {
-
-          height: @form-control-small-height * @form-control-small-height-scale-screen-mini;
-
-        }
-
-        & when not (@form-control-small-border-radius = null) and not (@form-control-small-border-radius-scale-screen-mini = null) {
-
-          border-radius: @form-control-small-border-radius * @form-control-small-border-radius-scale-screen-mini;
-
-        }
-
-        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
-
-          /* -----------------------------------------------------------------------------
-          Form Control Rounded (.form-control-rounded)
-          ----------------------------------------------------------------------------- */
-
-          &.form-control-rounded {
-
-            & when not (@form-control-small-padding-left = null) and not (@form-control-small-padding-left-scale-screen-mini = null) {
-
-              padding-left: @form-control-small-padding-left * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-left-scale-screen-mini;
-
-            }
-
-            & when not (@form-control-small-padding-right = null) and not (@form-control-small-padding-right-scale-screen-mini = null) {
-
-              padding-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-right-scale-screen-mini;
-
-            }
-
-          }
-
-        }
-
-      }
-
-      /* -----------------------------------------------------------------------------
-      Form Control Select (.form-control-select)
-      ----------------------------------------------------------------------------- */
-
-      .form-control-select.form-control-small {
-
-        select {
-
-          .text-size-variant(form-control-small, scale-screen-mini);
-          .shape-layout-variant(form-control-small, scale-screen-mini);
-
-          & when not (@form-control-small-height = null) and not (@form-control-small-height-scale-screen-mini = null) {
-
-            height: @form-control-small-height * @form-control-small-height-scale-screen-mini;
-
-          }
-
-        }
-
-        // Caret
-
-        &:after {
-
-          & when not (@form-control-small-caret-width = null) and not (@form-control-small-caret-width-scale-screen-mini = null) {
-
-            .triangle-size-width("down", (@form-control-small-caret-width * @form-control-small-caret-width-scale-screen-mini));
-
-          }
-
-          & when not (@form-control-small-caret-height = null) and not (@form-control-small-caret-height-scale-screen-mini = null) {
-
-            .triangle-size-height("down", (@form-control-small-caret-height * @form-control-small-caret-height-scale-screen-mini));
-
-          }
-
-          & when not (@form-control-small-caret-margin-left = null) and not (@form-control-small-caret-margin-left-scale-screen-mini = null) {
-
-            margin-left: @form-control-small-caret-margin-left * @form-control-small-caret-margin-left-scale-screen-mini;
-
-          }
-
-          & when not (@form-control-small-caret-margin-top = null) and not (@form-control-small-caret-margin-top-scale-screen-mini = null) {
-
-            margin-top: @form-control-small-caret-margin-top * @form-control-small-caret-margin-top-scale-screen-mini;
-
-          }
-
-          & when not (@form-control-small-padding-right = null) and not (@form-control-small-padding-right-scale-screen-mini = null) {
-
-            margin-right: @form-control-small-padding-right * @form-control-small-padding-right-scale-screen-mini;
-
-          }
-
-        }
-
-        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
-
-          /* -----------------------------------------------------------------------------
-          Form Control Rounded (.form-control-rounded)
-          ----------------------------------------------------------------------------- */
-
-          &.form-control-rounded {
-
-            select {
-
-              & when not (@form-control-small-padding-left = null) and not (@form-control-small-padding-left-scale-screen-mini = null) {
-
-                padding-left: @form-control-small-padding-left * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-left-scale-screen-mini;
-
-              }
-
-              & when not (@form-control-small-padding-right = null) and not (@form-control-small-padding-right-scale-screen-mini = null) {
-
-                padding-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-right-scale-screen-mini;
-
-              }
-
-            }
-
-            // Caret
-
-            &:after {
-
-              & when not (@form-control-small-padding-right = null) and not (@form-control-small-padding-right-scale-screen-mini = null) {
-
-                margin-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-right-scale-screen-mini;
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-      & when (@form-control-group-enabled) and not (@form-control-small-add-on-padding-horizontal = null) and not (@form-control-small-add-on-padding-horizontal-scale-screen-mini = null) {
-
-        /* -----------------------------------------------------------------------------
-        Form Control Group
-        ----------------------------------------------------------------------------- */
-
-        .form-control-group {
-
-          /* -----------------------------------------------------------------------------
-          Nested Form Control
-          ----------------------------------------------------------------------------- */
-
-          &.form-control-small {
-
-            .form-control-group-add-on {
-
-              &:first-child {
-
-                padding-right: @form-control-small-add-on-padding-horizontal * @form-control-small-add-on-padding-horizontal-scale-screen-mini;
-
-              }
-
-              &:last-child {
-
-                padding-left: @form-control-small-add-on-padding-horizontal * @form-control-small-add-on-padding-horizontal-scale-screen-mini;
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -428,7 +230,7 @@ form-control-small/styles.less
         & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
-          .form-control-rounded
+          Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
 
           &.form-control-rounded {
@@ -595,7 +397,7 @@ form-control-small/styles.less
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -626,7 +428,7 @@ form-control-small/styles.less
         & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
-          Form Control Rounded (.form-control-rounded)
+          .form-control-rounded
           ----------------------------------------------------------------------------- */
 
           &.form-control-rounded {
@@ -793,7 +595,7 @@ form-control-small/styles.less
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -969,6 +771,204 @@ form-control-small/styles.less
               &:last-child {
 
                 padding-left: @form-control-small-add-on-padding-horizontal * @form-control-small-add-on-padding-horizontal-scale-screen-large;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@form-control-small-enabled) and (@form-control-small-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Form Control (.form-control-small)
+      ----------------------------------------------------------------------------- */
+
+      .form-control-small {
+
+        .text-size-variant(form-control-small, scale-screen-jumbo);
+        .shape-layout-variant(form-control-small, scale-screen-jumbo);
+
+        & when not (@form-control-small-height = null) and not (@form-control-small-height-scale-screen-jumbo = null) {
+
+          height: @form-control-small-height * @form-control-small-height-scale-screen-jumbo;
+
+        }
+
+        & when not (@form-control-small-border-radius = null) and not (@form-control-small-border-radius-scale-screen-jumbo = null) {
+
+          border-radius: @form-control-small-border-radius * @form-control-small-border-radius-scale-screen-jumbo;
+
+        }
+
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          Form Control Rounded (.form-control-rounded)
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-small-padding-left = null) and not (@form-control-small-padding-left-scale-screen-jumbo = null) {
+
+              padding-left: @form-control-small-padding-left * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-left-scale-screen-jumbo;
+
+            }
+
+            & when not (@form-control-small-padding-right = null) and not (@form-control-small-padding-right-scale-screen-jumbo = null) {
+
+              padding-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-right-scale-screen-jumbo;
+
+            }
+
+          }
+
+        }
+
+      }
+
+      /* -----------------------------------------------------------------------------
+      Form Control Select (.form-control-select)
+      ----------------------------------------------------------------------------- */
+
+      .form-control-select.form-control-small {
+
+        select {
+
+          .text-size-variant(form-control-small, scale-screen-jumbo);
+          .shape-layout-variant(form-control-small, scale-screen-jumbo);
+
+          & when not (@form-control-small-height = null) and not (@form-control-small-height-scale-screen-jumbo = null) {
+
+            height: @form-control-small-height * @form-control-small-height-scale-screen-jumbo;
+
+          }
+
+        }
+
+        // Caret
+
+        &:after {
+
+          & when not (@form-control-small-caret-width = null) and not (@form-control-small-caret-width-scale-screen-jumbo = null) {
+
+            .triangle-size-width("down", (@form-control-small-caret-width * @form-control-small-caret-width-scale-screen-jumbo));
+
+          }
+
+          & when not (@form-control-small-caret-height = null) and not (@form-control-small-caret-height-scale-screen-jumbo = null) {
+
+            .triangle-size-height("down", (@form-control-small-caret-height * @form-control-small-caret-height-scale-screen-jumbo));
+
+          }
+
+          & when not (@form-control-small-caret-margin-left = null) and not (@form-control-small-caret-margin-left-scale-screen-jumbo = null) {
+
+            margin-left: @form-control-small-caret-margin-left * @form-control-small-caret-margin-left-scale-screen-jumbo;
+
+          }
+
+          & when not (@form-control-small-caret-margin-top = null) and not (@form-control-small-caret-margin-top-scale-screen-jumbo = null) {
+
+            margin-top: @form-control-small-caret-margin-top * @form-control-small-caret-margin-top-scale-screen-jumbo;
+
+          }
+
+          & when not (@form-control-small-padding-right = null) and not (@form-control-small-padding-right-scale-screen-jumbo = null) {
+
+            margin-right: @form-control-small-padding-right * @form-control-small-padding-right-scale-screen-jumbo;
+
+          }
+
+        }
+
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
+
+          /* -----------------------------------------------------------------------------
+          Form Control Rounded (.form-control-rounded)
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-small-padding-left = null) and not (@form-control-small-padding-left-scale-screen-jumbo = null) {
+
+                padding-left: @form-control-small-padding-left * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-left-scale-screen-jumbo;
+
+              }
+
+              & when not (@form-control-small-padding-right = null) and not (@form-control-small-padding-right-scale-screen-jumbo = null) {
+
+                padding-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-right-scale-screen-jumbo;
+
+              }
+
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-small-padding-right = null) and not (@form-control-small-padding-right-scale-screen-jumbo = null) {
+
+                margin-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale * @form-control-small-padding-right-scale-screen-jumbo;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      & when (@form-control-group-enabled) and not (@form-control-small-add-on-padding-horizontal = null) and not (@form-control-small-add-on-padding-horizontal-scale-screen-jumbo = null) {
+
+        /* -----------------------------------------------------------------------------
+        Form Control Group
+        ----------------------------------------------------------------------------- */
+
+        .form-control-group {
+
+          /* -----------------------------------------------------------------------------
+          Nested Form Control
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-small {
+
+            .form-control-group-add-on {
+
+              &:first-child {
+
+                padding-right: @form-control-small-add-on-padding-horizontal * @form-control-small-add-on-padding-horizontal-scale-screen-jumbo;
+
+              }
+
+              &:last-child {
+
+                padding-left: @form-control-small-add-on-padding-horizontal * @form-control-small-add-on-padding-horizontal-scale-screen-jumbo;
 
               }
 

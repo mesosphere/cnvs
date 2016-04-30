@@ -183,59 +183,10 @@ dropdown-menu-list/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-mini-enabled){
-
-      /* -----------------------------------------------------------------------------
-      Dropdown Menu List (.dropdown-menu-list)
-      ----------------------------------------------------------------------------- */
-
-      .dropdown-menu-list {
-
-        .text-size-variant(dropdown-menu-list, scale-screen-mini);
-        .shape-layout-variant(dropdown-menu-list, scale-screen-mini);
-
-        li {
-
-          .text-size-variant(dropdown-menu-list-item, scale-screen-mini);
-          .shape-layout-variant(dropdown-menu-list-item, scale-screen-mini);
-
-          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-mini = null){
-
-            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-mini;
-
-          }
-
-          a {
-
-            .text-size-variant(dropdown-menu-list-item-link, scale-screen-mini);
-            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-mini);
-
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -284,7 +235,7 @@ dropdown-menu-list/styles.less
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -333,7 +284,7 @@ dropdown-menu-list/styles.less
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -364,6 +315,55 @@ dropdown-menu-list/styles.less
 
             .text-size-variant(dropdown-menu-list-item-link, scale-screen-large);
             .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-large);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-jumbo-enabled){
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu List (.dropdown-menu-list)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-list {
+
+        .text-size-variant(dropdown-menu-list, scale-screen-jumbo);
+        .shape-layout-variant(dropdown-menu-list, scale-screen-jumbo);
+
+        li {
+
+          .text-size-variant(dropdown-menu-list-item, scale-screen-jumbo);
+          .shape-layout-variant(dropdown-menu-list-item, scale-screen-jumbo);
+
+          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-jumbo = null){
+
+            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-jumbo;
+
+          }
+
+          a {
+
+            .text-size-variant(dropdown-menu-list-item-link, scale-screen-jumbo);
+            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-jumbo);
 
           }
 

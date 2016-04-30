@@ -107,114 +107,10 @@ Container (Fluid)
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    /* -----------------------------------------------------------------------------
-    Container (Fixed)
-    ----------------------------------------------------------------------------- */
-
-    .layout-box.containers-fixed {
-
-      .layout-box-item {
-
-        &.layout-box-item-margin {
-
-          & when not (@container-gutter-width-screen-mini = null) {
-
-            padding: 0px @container-gutter-width-screen-mini;
-
-          }
-
-        }
-
-      }
-
-    }
-
-    /* -----------------------------------------------------------------------------
-    Container (Fluid)
-    ----------------------------------------------------------------------------- */
-
-    .layout-box.containers-fluid {
-
-      .layout-box-item {
-
-        &.layout-box-item-margin {
-
-          & when not (@container-fluid-gutter-width-screen-mini = null) {
-
-            padding: 0px @container-fluid-gutter-width-screen-mini;
-
-          }
-
-        }
-
-      }
-
-    }
-
-    /* -----------------------------------------------------------------------------
-    Container (Fluid) Options
-    ----------------------------------------------------------------------------- */
-
-    .layout-box.containers-fluid-options-size-modifier {
-
-      .layout-box-item {
-
-        &.layout-box-item-margin {
-
-          & when not (@container-fluid-gutter-width-screen-mini = null) {
-
-            padding: 0px (@container-fluid-gutter-width-screen-mini * @container-fluid-narrow-margin-scale);
-
-          }
-
-        }
-
-      }
-
-    }
-
-    .layout-box.containers-fluid-options-size-direction-modifier {
-
-      .layout-box-item {
-
-        &.layout-box-item-margin {
-
-          & when not (@container-fluid-gutter-width-screen-mini = null) and not (@container-fluid-wider-margin-scale = null) {
-
-            padding-left: (@container-fluid-gutter-width-screen-mini * @container-fluid-wider-margin-scale);
-
-          }
-
-          & when not (@container-fluid-gutter-width-screen-mini = null) and not (@container-fluid-narrow-margin-scale = null) {
-
-            padding-right: (@container-fluid-gutter-width-screen-mini * @container-fluid-narrow-margin-scale);
-
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -225,13 +121,15 @@ Container (Fluid)
 
     .layout-box.containers-fixed {
 
-      width: 300px;
-
       .layout-box-item {
 
         &.layout-box-item-margin {
 
-          padding: 0px;
+          & when not (@container-gutter-width-screen-small = null) {
+
+            padding: 0px @container-gutter-width-screen-small;
+
+          }
 
         }
 
@@ -316,7 +214,7 @@ Container (Fluid)
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -327,7 +225,17 @@ Container (Fluid)
 
     .layout-box.containers-fixed {
 
-      width: 500px;
+      width: 300px;
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          padding: 0px;
+
+        }
+
+      }
 
     }
 
@@ -408,7 +316,7 @@ Container (Fluid)
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -419,7 +327,7 @@ Container (Fluid)
 
     .layout-box.containers-fixed {
 
-      width: 600px;
+      width: 500px;
 
     }
 
@@ -482,6 +390,98 @@ Container (Fluid)
           & when not (@container-fluid-gutter-width-screen-large = null) and not (@container-fluid-narrow-margin-scale = null) {
 
             padding-right: (@container-fluid-gutter-width-screen-large * @container-fluid-narrow-margin-scale);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    Container (Fixed)
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.containers-fixed {
+
+      width: 600px;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Container (Fluid)
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.containers-fluid {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@container-fluid-gutter-width-screen-jumbo = null) {
+
+            padding: 0px @container-fluid-gutter-width-screen-jumbo;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Container (Fluid) Options
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.containers-fluid-options-size-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@container-fluid-gutter-width-screen-jumbo = null) {
+
+            padding: 0px (@container-fluid-gutter-width-screen-jumbo * @container-fluid-narrow-margin-scale);
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.containers-fluid-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-margin {
+
+          & when not (@container-fluid-gutter-width-screen-jumbo = null) and not (@container-fluid-wider-margin-scale = null) {
+
+            padding-left: (@container-fluid-gutter-width-screen-jumbo * @container-fluid-wider-margin-scale);
+
+          }
+
+          & when not (@container-fluid-gutter-width-screen-jumbo = null) and not (@container-fluid-narrow-margin-scale = null) {
+
+            padding-right: (@container-fluid-gutter-width-screen-jumbo * @container-fluid-narrow-margin-scale);
 
           }
 

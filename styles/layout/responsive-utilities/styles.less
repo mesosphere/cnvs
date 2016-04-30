@@ -102,15 +102,15 @@ Print Utilities
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
+& when (@layout-scale-screen-small-enabled) {
 
-  & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-mini-enabled) {
+  & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-small-enabled) {
 
     /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@layout-screen-mini-min-width) and narrower
+    Screen Size: Mini (@layout-screen-small-min-width) and narrower
     ----------------------------------------------------------------------------- */
 
-    @media (max-width: @layout-screen-mini-min-width - 1) {
+    @media (max-width: @layout-screen-small-min-width - 1) {
 
       .hidden-tiny-down {
 
@@ -121,10 +121,10 @@ Print Utilities
     }
 
     /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@layout-screen-mini-min-width) and wider
+    Screen Size: Mini (@layout-screen-small-min-width) and wider
     ----------------------------------------------------------------------------- */
 
-    @media (min-width: @layout-screen-mini-min-width) {
+    @media (min-width: @layout-screen-small-min-width) {
 
       .hidden-mini-up {
 
@@ -135,50 +135,12 @@ Print Utilities
     }
 
     /* -----------------------------------------------------------------------------
-    Screen Size: Mini (@layout-screen-mini-max-width) and narrower
-    ----------------------------------------------------------------------------- */
-
-    @media (max-width: @layout-screen-mini-max-width) {
-
-      .hidden-mini-down {
-
-        display: none !important;
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
-& when (@layout-scale-screen-small-enabled) {
-
-  & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-small-enabled) {
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: Small (@layout-screen-small-min-width) and wider
-    ----------------------------------------------------------------------------- */
-
-    @media (min-width: @layout-screen-small-min-width) {
-
-      .hidden-small-up {
-
-        display: none !important;
-
-      }
-
-    }
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: Small (@layout-screen-small-max-width) and narrower
+    Screen Size: Mini (@layout-screen-small-max-width) and narrower
     ----------------------------------------------------------------------------- */
 
     @media (max-width: @layout-screen-small-max-width) {
 
-      .hidden-small-down {
+      .hidden-mini-down {
 
         display: none !important;
 
@@ -197,12 +159,12 @@ Print Utilities
   & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-medium-enabled) {
 
     /* -----------------------------------------------------------------------------
-    Screen Size: medium (@layout-screen-medium-min-width) and wider
+    Screen Size: Small (@layout-screen-medium-min-width) and wider
     ----------------------------------------------------------------------------- */
 
     @media (min-width: @layout-screen-medium-min-width) {
 
-      .hidden-medium-up {
+      .hidden-small-up {
 
         display: none !important;
 
@@ -211,12 +173,12 @@ Print Utilities
     }
 
     /* -----------------------------------------------------------------------------
-    Screen Size: medium (@layout-screen-medium-max-width) and narrower
+    Screen Size: Small (@layout-screen-medium-max-width) and narrower
     ----------------------------------------------------------------------------- */
 
     @media (max-width: @layout-screen-medium-max-width) {
 
-      .hidden-medium-down {
+      .hidden-small-down {
 
         display: none !important;
 
@@ -235,10 +197,48 @@ Print Utilities
   & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-large-enabled) {
 
     /* -----------------------------------------------------------------------------
-    Screen Size: large (@layout-screen-large-min-width) and wider
+    Screen Size: medium (@layout-screen-large-min-width) and wider
     ----------------------------------------------------------------------------- */
 
     @media (min-width: @layout-screen-large-min-width) {
+
+      .hidden-medium-up {
+
+        display: none !important;
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Screen Size: medium (@layout-screen-large-max-width) and narrower
+    ----------------------------------------------------------------------------- */
+
+    @media (max-width: @layout-screen-large-max-width) {
+
+      .hidden-medium-down {
+
+        display: none !important;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-jumbo-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    Screen Size: large (@layout-screen-jumbo-min-width) and wider
+    ----------------------------------------------------------------------------- */
+
+    @media (min-width: @layout-screen-jumbo-min-width) {
 
       .hidden-large-up {
 
@@ -249,10 +249,10 @@ Print Utilities
     }
 
     /* -----------------------------------------------------------------------------
-    Screen Size: large (@layout-screen-large-max-width) and narrower
+    Screen Size: large (@layout-screen-jumbo-max-width) and narrower
     ----------------------------------------------------------------------------- */
 
-    @media (max-width: @layout-screen-large-max-width) {
+    @media (max-width: @layout-screen-jumbo-max-width) {
 
       .hidden-large-down {
 

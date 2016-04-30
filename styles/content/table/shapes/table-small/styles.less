@@ -188,59 +188,10 @@ table-small/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when (@table-small-enabled) and (@table-small-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Table
-      ----------------------------------------------------------------------------- */
-
-      .table.table-small {
-
-        .text-size-variant(table-small, scale-screen-mini);
-        .shape-layout-variant(table-small, scale-screen-mini);
-        .shape-layout-variant(table-small, short, scale-screen-mini);
-        .shape-layout-variant(table-small, tall, scale-screen-mini);
-
-        th,
-        td {
-
-          .text-size-variant(table-small-cell, scale-screen-mini);
-          .shape-layout-variant(table-small-cell, scale-screen-mini);
-
-          &:before {
-
-            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-mini = null) {
-
-              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-mini;
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -289,7 +240,7 @@ table-small/styles.less
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -338,7 +289,7 @@ table-small/styles.less
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -367,6 +318,55 @@ table-small/styles.less
             & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-large = null) {
 
               height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-large;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@table-small-enabled) and (@table-small-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Table
+      ----------------------------------------------------------------------------- */
+
+      .table.table-small {
+
+        .text-size-variant(table-small, scale-screen-jumbo);
+        .shape-layout-variant(table-small, scale-screen-jumbo);
+        .shape-layout-variant(table-small, short, scale-screen-jumbo);
+        .shape-layout-variant(table-small, tall, scale-screen-jumbo);
+
+        th,
+        td {
+
+          .text-size-variant(table-small-cell, scale-screen-jumbo);
+          .shape-layout-variant(table-small-cell, scale-screen-jumbo);
+
+          &:before {
+
+            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-jumbo = null) {
+
+              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-jumbo;
 
             }
 

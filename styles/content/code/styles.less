@@ -50,46 +50,10 @@ code/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when (@code-enabled) and (@code-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Code
-      ----------------------------------------------------------------------------- */
-
-      code,
-      .code {
-
-        .text-size-variant(code, scale-screen-mini);
-        .shape-layout-variant(code, scale-screen-mini);
-
-        & when not (@code-border-radius = null) and not (@code-border-radius-scale-screen-mini = null) {
-
-          border-radius: @code-border-radius * @code-border-radius-scale-screen-mini;
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -125,7 +89,7 @@ code/styles.less
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -161,7 +125,7 @@ code/styles.less
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -181,6 +145,42 @@ code/styles.less
         & when not (@code-border-radius = null) and not (@code-border-radius-scale-screen-large = null) {
 
           border-radius: @code-border-radius * @code-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@code-enabled) and (@code-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Code
+      ----------------------------------------------------------------------------- */
+
+      code,
+      .code {
+
+        .text-size-variant(code, scale-screen-jumbo);
+        .shape-layout-variant(code, scale-screen-jumbo);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-scale-screen-jumbo = null) {
+
+          border-radius: @code-border-radius * @code-border-radius-scale-screen-jumbo;
 
         }
 

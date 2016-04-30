@@ -26,28 +26,10 @@ lists/styles.less
 
 
 
-    & when (@layout-scale-screen-mini-enabled) and (@list-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Screen Size: Mini (@layout-screen-mini-min-width) and wider
-      ----------------------------------------------------------------------------- */
-
-      @media (min-width: @layout-screen-mini-min-width) {
-
-        .shape-layout-variant(list, scale-screen-mini);
-        .shape-layout-variant(list, short, scale-screen-mini);
-        .shape-layout-variant(list, tall, scale-screen-mini);
-
-      }
-
-    }
-
-
-
     & when (@layout-scale-screen-small-enabled) and (@list-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
+      Screen Size: Mini (@layout-screen-small-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-small-min-width) {
@@ -65,7 +47,7 @@ lists/styles.less
     & when (@layout-scale-screen-medium-enabled) and (@list-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
+      Screen Size: Small (@layout-screen-medium-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-medium-min-width) {
@@ -83,7 +65,7 @@ lists/styles.less
     & when (@layout-scale-screen-large-enabled) and (@list-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
+      Screen Size: Medium (@layout-screen-large-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-large-min-width) {
@@ -91,6 +73,24 @@ lists/styles.less
         .shape-layout-variant(list, scale-screen-large);
         .shape-layout-variant(list, short, scale-screen-large);
         .shape-layout-variant(list, tall, scale-screen-large);
+
+      }
+
+    }
+
+
+
+    & when (@layout-scale-screen-jumbo-enabled) and (@list-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Screen Size: Large (@layout-screen-jumbo-min-width) and wider
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @layout-screen-jumbo-min-width) {
+
+        .shape-layout-variant(list, scale-screen-jumbo);
+        .shape-layout-variant(list, short, scale-screen-jumbo);
+        .shape-layout-variant(list, tall, scale-screen-jumbo);
 
       }
 
@@ -152,67 +152,10 @@ lists/styles.less
 
 
 
-      & when (@layout-scale-screen-mini-enabled) and (@list-scale-screen-mini-enabled) {
-
-        /* -----------------------------------------------------------------------------
-        Screen Size: Mini (@layout-screen-mini-min-width) and wider
-        ----------------------------------------------------------------------------- */
-
-        @media (min-width: @layout-screen-mini-min-width) {
-
-          .shape-layout-variant(list-item, scale-screen-mini);
-          .shape-layout-variant(list-item, short, scale-screen-mini);
-          .shape-layout-variant(list-item, tall, scale-screen-mini);
-
-          &:before {
-
-            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-mini = null) {
-
-              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-mini);
-
-            }
-
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-mini = null) {
-
-              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-mini);
-
-            }
-
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-mini = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-mini = null) {
-
-              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-mini) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-mini)));
-
-            }
-
-          }
-
-
-
-          /* -----------------------------------------------------------------------------
-          Nested List
-          ----------------------------------------------------------------------------- */
-
-          > ul,
-          > ol {
-
-            & when not (@list-item-margin-bottom-scale-screen-mini = null) and not (@list-item-margin-bottom = null) {
-
-              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-mini;
-
-            }
-
-          }
-
-        }
-
-      }
-
-
-
       & when (@layout-scale-screen-small-enabled) and (@list-scale-screen-small-enabled) {
 
         /* -----------------------------------------------------------------------------
-        Screen Size: Small (@layout-screen-small-min-width) and wider
+        Screen Size: Mini (@layout-screen-small-min-width) and wider
         ----------------------------------------------------------------------------- */
 
         @media (min-width: @layout-screen-small-min-width) {
@@ -269,7 +212,7 @@ lists/styles.less
       & when (@layout-scale-screen-medium-enabled) and (@list-scale-screen-medium-enabled) {
 
         /* -----------------------------------------------------------------------------
-        Screen Size: Medium (@layout-screen-medium-min-width) and wider
+        Screen Size: Small (@layout-screen-medium-min-width) and wider
         ----------------------------------------------------------------------------- */
 
         @media (min-width: @layout-screen-medium-min-width) {
@@ -326,7 +269,7 @@ lists/styles.less
       & when (@layout-scale-screen-large-enabled) and (@list-scale-screen-large-enabled) {
 
         /* -----------------------------------------------------------------------------
-        Screen Size: Large (@layout-screen-large-min-width) and wider
+        Screen Size: Medium (@layout-screen-large-min-width) and wider
         ----------------------------------------------------------------------------- */
 
         @media (min-width: @layout-screen-large-min-width) {
@@ -369,6 +312,63 @@ lists/styles.less
             & when not (@list-item-margin-bottom-scale-screen-large = null) and not (@list-item-margin-bottom = null) {
 
               margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-large;
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+      & when (@layout-scale-screen-jumbo-enabled) and (@list-scale-screen-jumbo-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Screen Size: Large (@layout-screen-jumbo-min-width) and wider
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @layout-screen-jumbo-min-width) {
+
+          .shape-layout-variant(list-item, scale-screen-jumbo);
+          .shape-layout-variant(list-item, short, scale-screen-jumbo);
+          .shape-layout-variant(list-item, tall, scale-screen-jumbo);
+
+          &:before {
+
+            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-jumbo = null) {
+
+              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-jumbo);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-jumbo = null) {
+
+              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-jumbo);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-jumbo = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-jumbo = null) {
+
+              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-jumbo) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-jumbo)));
+
+            }
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-scale-screen-jumbo = null) and not (@list-item-margin-bottom = null) {
+
+              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-jumbo;
 
             }
 
@@ -450,52 +450,10 @@ lists/styles.less
 
       }
 
-      & when (@layout-scale-screen-mini-enabled) and (@list-scale-screen-mini-enabled) {
-
-        /* -----------------------------------------------------------------------------
-        Screen Size: Mini (@layout-screen-mini-min-width) and wider
-        ----------------------------------------------------------------------------- */
-
-        @media (min-width: @layout-screen-mini-min-width) {
-
-          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-mini = null) {
-
-            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-mini);
-
-          }
-
-          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-mini = null) {
-
-            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-mini);
-
-          }
-
-          > li {
-
-            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-mini = null) {
-
-              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-mini);
-
-            }
-
-            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-mini = null) {
-
-              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-mini);
-
-            }
-
-          }
-
-        }
-
-      }
-
-
-
       & when (@layout-scale-screen-small-enabled) and (@list-scale-screen-small-enabled) {
 
         /* -----------------------------------------------------------------------------
-        Screen Size: Small (@layout-screen-small-min-width) and wider
+        Screen Size: Mini (@layout-screen-small-min-width) and wider
         ----------------------------------------------------------------------------- */
 
         @media (min-width: @layout-screen-small-min-width) {
@@ -537,7 +495,7 @@ lists/styles.less
       & when (@layout-scale-screen-medium-enabled) and (@list-scale-screen-medium-enabled) {
 
         /* -----------------------------------------------------------------------------
-        Screen Size: Medium (@layout-screen-medium-min-width) and wider
+        Screen Size: Small (@layout-screen-medium-min-width) and wider
         ----------------------------------------------------------------------------- */
 
         @media (min-width: @layout-screen-medium-min-width) {
@@ -579,7 +537,7 @@ lists/styles.less
       & when (@layout-scale-screen-large-enabled) and (@list-scale-screen-large-enabled) {
 
         /* -----------------------------------------------------------------------------
-        Screen Size: Large (@layout-screen-large-min-width) and wider
+        Screen Size: Medium (@layout-screen-large-min-width) and wider
         ----------------------------------------------------------------------------- */
 
         @media (min-width: @layout-screen-large-min-width) {
@@ -616,6 +574,48 @@ lists/styles.less
 
       }
 
+
+
+      & when (@layout-scale-screen-jumbo-enabled) and (@list-scale-screen-jumbo-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Screen Size: Large (@layout-screen-jumbo-min-width) and wider
+        ----------------------------------------------------------------------------- */
+
+        @media (min-width: @layout-screen-jumbo-min-width) {
+
+          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-jumbo = null) {
+
+            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-jumbo);
+
+          }
+
+          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-jumbo = null) {
+
+            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-jumbo);
+
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-jumbo = null) {
+
+              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-jumbo);
+
+            }
+
+            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-jumbo = null) {
+
+              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-jumbo);
+
+            }
+
+          }
+
+        }
+
+      }
+
     }
 
   }
@@ -641,9 +641,9 @@ lists/styles.less
         top: 0px;
         border-radius: 0px;
         .set-if-exists(color, @list-item-bullet-color);
-        & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+        & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-large = null) {
 
-          height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium;
+          height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large;
 
         }
 
@@ -799,38 +799,10 @@ lists/styles.less
 
 
 
-    & when (@layout-scale-screen-mini-enabled) and (@list-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Screen Size: Mini (@layout-screen-mini-min-width) and wider
-      ----------------------------------------------------------------------------- */
-
-      @media (min-width: @layout-screen-mini-min-width) {
-
-        > li {
-
-          &:before {
-
-            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-mini = null) {
-
-              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-mini;
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
-
-
     & when (@layout-scale-screen-small-enabled) and (@list-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
+      Screen Size: Mini (@layout-screen-small-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-small-min-width) {
@@ -858,7 +830,7 @@ lists/styles.less
     & when (@layout-scale-screen-medium-enabled) and (@list-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
+      Screen Size: Small (@layout-screen-medium-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-medium-min-width) {
@@ -886,7 +858,7 @@ lists/styles.less
     & when (@layout-scale-screen-large-enabled) and (@list-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
+      Screen Size: Medium (@layout-screen-large-min-width) and wider
       ----------------------------------------------------------------------------- */
 
       @media (min-width: @layout-screen-large-min-width) {
@@ -898,6 +870,34 @@ lists/styles.less
             & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-large = null) {
 
               height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@layout-scale-screen-jumbo-enabled) and (@list-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Screen Size: Large (@layout-screen-jumbo-min-width) and wider
+      ----------------------------------------------------------------------------- */
+
+      @media (min-width: @layout-screen-jumbo-min-width) {
+
+        > li {
+
+          &:before {
+
+            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-jumbo = null) {
+
+              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-jumbo;
 
             }
 

@@ -294,13 +294,13 @@ Flex Responsive
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
+& when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @layout-screen-mini-min-width) {
+  @media (min-width: @layout-screen-small-min-width) {
 
     /* -----------------------------------------------------------------------------
     Example Flex Container
@@ -308,8 +308,8 @@ Flex Responsive
 
     .example-flex-container {
 
-      margin-top: -@grid-gutter-width-screen-mini * 0.5;
-      margin-left: -@grid-gutter-width-screen-mini * 0.5;
+      margin-top: -@grid-gutter-width-screen-small * 0.5;
+      margin-left: -@grid-gutter-width-screen-small * 0.5;
 
     }
 
@@ -319,8 +319,8 @@ Flex Responsive
 
     .example-flex-item {
 
-      margin-top: @grid-gutter-width-screen-mini * 0.5;
-      margin-left: @grid-gutter-width-screen-mini * 0.5;
+      margin-top: @grid-gutter-width-screen-small * 0.5;
+      margin-left: @grid-gutter-width-screen-small * 0.5;
 
     }
 
@@ -368,46 +368,10 @@ Flex Direction
 
 
 
-& when (@layout-scale-screen-small-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-small-min-width) {
-
-    /* -----------------------------------------------------------------------------
-    Example Flex Container
-    ----------------------------------------------------------------------------- */
-
-    .example-flex-container {
-
-      margin-top: -@grid-gutter-width-screen-small * 0.5;
-      margin-left: -@grid-gutter-width-screen-small * 0.5;
-
-    }
-
-    /* -----------------------------------------------------------------------------
-    Example Flex Item
-    ----------------------------------------------------------------------------- */
-
-    .example-flex-item {
-
-      margin-top: @grid-gutter-width-screen-small * 0.5;
-      margin-left: @grid-gutter-width-screen-small * 0.5;
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -443,7 +407,7 @@ Flex Direction
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -467,6 +431,42 @@ Flex Direction
 
       margin-top: @grid-gutter-width-screen-large * 0.5;
       margin-left: @grid-gutter-width-screen-large * 0.5;
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    Example Flex Container
+    ----------------------------------------------------------------------------- */
+
+    .example-flex-container {
+
+      margin-top: -@grid-gutter-width-screen-jumbo * 0.5;
+      margin-left: -@grid-gutter-width-screen-jumbo * 0.5;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Example Flex Item
+    ----------------------------------------------------------------------------- */
+
+    .example-flex-item {
+
+      margin-top: @grid-gutter-width-screen-jumbo * 0.5;
+      margin-left: @grid-gutter-width-screen-jumbo * 0.5;
 
     }
 

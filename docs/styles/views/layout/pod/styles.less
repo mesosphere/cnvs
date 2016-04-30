@@ -73,94 +73,10 @@ Pod Overview
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    /* -----------------------------------------------------------------------------
-    Pod Overview
-    ----------------------------------------------------------------------------- */
-
-    .layout-box.pods-overview {
-
-      .layout-box-item {
-
-        & when not (@pod-padding-top-scale-screen-mini = null) {
-
-          &.layout-box-item-padding {
-
-            padding: (@pod-padding-top * @pod-padding-top-scale-screen-mini) 0px;
-
-          }
-
-        }
-
-        &.layout-box-item-content {
-
-          height: 100px;
-
-        }
-
-      }
-
-    }
-
-    .layout-box.pods-options-size-modifier {
-
-      .layout-box-item {
-
-        &.layout-box-item-padding {
-
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-mini = null) {
-
-            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-mini) 0px;
-
-          }
-
-        }
-
-      }
-
-    }
-
-    .layout-box.pods-options-size-direction-modifier {
-
-      .layout-box-item {
-
-        &.layout-box-item-padding {
-
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-mini = null) {
-
-            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-mini)
-
-          }
-
-          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-mini = null) {
-
-            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-mini)
-
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -244,7 +160,7 @@ Pod Overview
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -328,7 +244,7 @@ Pod Overview
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -394,6 +310,90 @@ Pod Overview
           & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-large = null) {
 
             padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-large)
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    /* -----------------------------------------------------------------------------
+    Pod Overview
+    ----------------------------------------------------------------------------- */
+
+    .layout-box.pods-overview {
+
+      .layout-box-item {
+
+        & when not (@pod-padding-top-scale-screen-jumbo = null) {
+
+          &.layout-box-item-padding {
+
+            padding: (@pod-padding-top * @pod-padding-top-scale-screen-jumbo) 0px;
+
+          }
+
+        }
+
+        &.layout-box-item-content {
+
+          height: 100px;
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-jumbo = null) {
+
+            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-jumbo) 0px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .layout-box.pods-options-size-direction-modifier {
+
+      .layout-box-item {
+
+        &.layout-box-item-padding {
+
+          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-jumbo = null) {
+
+            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-jumbo)
+
+          }
+
+          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-jumbo = null) {
+
+            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-jumbo)
 
           }
 

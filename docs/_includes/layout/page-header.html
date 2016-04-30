@@ -37,22 +37,22 @@
 
 {% if (page.page-header.alignment == 'left') %}
 
-  {% assign page-header-alignment-class = 'column-mini-8 column-small-8 column-medium-10' %}
-  {% assign page-header-headline-alignment-class = 'column-mini-12 column-large-10' %}
+  {% assign page-header-alignment-class = 'column-small-8 column-medium-8 column-large-10' %}
+  {% assign page-header-headline-alignment-class = 'column-small-12 column-jumbo-10' %}
   {% assign page-header-text-alignment-class = 'text-align-left' %}
   {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-left' %}
 
 {% elsif (page.page-header.alignment == 'right') %}
 
-  {% assign page-header-alignment-class = 'column-mini-8 column-mini-offset-4 column-small-7 column-small-offset-5 column-medium-8 column-medium-offset-4' %}
-  {% assign page-header-headline-alignment-class = 'column-mini-12column-large-10 column-large-offset-2' %}
+  {% assign page-header-alignment-class = 'column-small-8 column-small-offset-4 column-medium-7 column-medium-offset-5 column-large-8 column-large-offset-4' %}
+  {% assign page-header-headline-alignment-class = 'column-small-12column-jumbo-10 column-jumbo-offset-2' %}
   {% assign page-header-text-alignment-class = 'text-align-right' %}
   {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-right' %}
 
 {% else %}
 
-  {% assign page-header-alignment-class = 'column-small-10 column-small-offset-1 column-medium-10 column-medium-offset-1' %}
-  {% assign page-header-headline-alignment-class = 'column-mini-8 column-mini-offset-2 column-small-10 column-small-offset-1' %}
+  {% assign page-header-alignment-class = 'column-medium-10 column-medium-offset-1 column-large-10 column-large-offset-1' %}
+  {% assign page-header-headline-alignment-class = 'column-small-8 column-small-offset-2 column-medium-10 column-medium-offset-1' %}
   {% assign page-header-text-alignment-class = 'text-align-center' %}
   {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-center' %}
 
@@ -158,7 +158,7 @@ BEGIN: Page Header
 
               {% for item in page.page-header.actions %}
 
-                <a href="{{ item.link }}" class="button button-large button-wide button-wide-below-screen-mini {{ item.class }}" id="{% if (item.id != null) and (item.id != empty) %}{{ item.id }}{% endif %}" {% if (item.modal != null) and (item.modal != empty) %}data-toggle="modal" data-target="{{ item.modal }}"{% endif %}>
+                <a href="{{ item.link }}" class="button button-large button-wide button-wide-below-screen-small {{ item.class }}" id="{% if (item.id != null) and (item.id != empty) %}{{ item.id }}{% endif %}" {% if (item.modal != null) and (item.modal != empty) %}data-toggle="modal" data-target="{{ item.modal }}"{% endif %}>
 
                   {{ item.label }}
 

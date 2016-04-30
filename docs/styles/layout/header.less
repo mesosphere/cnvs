@@ -34,18 +34,18 @@ Text Size
 // Font Size
 
 @header-logo-text-font-size:                                                    2.0rem;
-@header-logo-text-font-size-scale-screen-mini:                                  null;
 @header-logo-text-font-size-scale-screen-small:                                 null;
 @header-logo-text-font-size-scale-screen-medium:                                null;
 @header-logo-text-font-size-scale-screen-large:                                 null;
+@header-logo-text-font-size-scale-screen-jumbo:                                 null;
 
 // Line Height
 
 @header-logo-text-line-height:                                                  2.0rem;
-@header-logo-text-line-height-scale-screen-mini:                                @header-logo-text-font-size-scale-screen-mini;
 @header-logo-text-line-height-scale-screen-small:                               @header-logo-text-font-size-scale-screen-small;
 @header-logo-text-line-height-scale-screen-medium:                              @header-logo-text-font-size-scale-screen-medium;
 @header-logo-text-line-height-scale-screen-large:                               @header-logo-text-font-size-scale-screen-large;
+@header-logo-text-line-height-scale-screen-jumbo:                               @header-logo-text-font-size-scale-screen-jumbo;
 
 /* -----------------------------------------------------------------------------
 Header Logo Image
@@ -60,21 +60,21 @@ Header Logo Image
 @header-logo-width:                                                             @header-logo-scale * @header-logo-image-width;
 @header-logo-height:                                                            @header-logo-scale * @header-logo-image-height;
 
-@header-logo-scale-screen-mini:                                                 0.4;
-@header-logo-width-screen-mini:                                                 @header-logo-scale-screen-mini * @header-logo-image-width;
-@header-logo-height-screen-mini:                                                @header-logo-scale-screen-mini * @header-logo-image-height;
-
 @header-logo-scale-screen-small:                                                0.4;
-@header-logo-width-screen-small:                                                @header-logo-scale-screen-small * @header-logo-image-width;
-@header-logo-height-screen-small:                                               @header-logo-scale-screen-small * @header-logo-image-height;
+@header-logo-width-screen-small:                                                 @header-logo-scale-screen-small * @header-logo-image-width;
+@header-logo-height-screen-small:                                                @header-logo-scale-screen-small * @header-logo-image-height;
 
-@header-logo-scale-screen-medium:                                               0.5;
-@header-logo-width-screen-medium:                                               @header-logo-scale-screen-medium * @header-logo-image-width;
-@header-logo-height-screen-medium:                                              @header-logo-scale-screen-medium * @header-logo-image-height;
+@header-logo-scale-screen-medium:                                               0.4;
+@header-logo-width-screen-medium:                                                @header-logo-scale-screen-medium * @header-logo-image-width;
+@header-logo-height-screen-medium:                                               @header-logo-scale-screen-medium * @header-logo-image-height;
 
 @header-logo-scale-screen-large:                                                0.5;
-@header-logo-width-screen-large:                                                @header-logo-scale-screen-large * @header-logo-image-width;
-@header-logo-height-screen-large:                                               @header-logo-scale-screen-large * @header-logo-image-height;
+@header-logo-width-screen-large:                                               @header-logo-scale-screen-large * @header-logo-image-width;
+@header-logo-height-screen-large:                                              @header-logo-scale-screen-large * @header-logo-image-height;
+
+@header-logo-scale-screen-jumbo:                                                0.5;
+@header-logo-width-screen-jumbo:                                                @header-logo-scale-screen-jumbo * @header-logo-image-width;
+@header-logo-height-screen-jumbo:                                               @header-logo-scale-screen-jumbo * @header-logo-image-height;
 
 
 
@@ -127,37 +127,11 @@ Header
 
   }
 
-  & when (@layout-scale-screen-mini-enabled) {
-
-    /* -------------------------------------------------------------------------
-    Screen Size: Mini (@layout-screen-mini-min-width) and wider
-    ---------------------------------------------------------------------------*/
-
-    @media (min-width: @layout-screen-mini-min-width) {
-
-      /* -----------------------------------------------------------------------
-      Header Logo
-      ------------------------------------------------------------------------*/
-
-      .header-logo {
-
-        width: @header-logo-width-screen-mini;
-        height: @header-logo-height-screen-mini;
-        .text-size-variant(header-logo, scale-screen-mini);
-
-      }
-
-    }
-
-  }
-
-
-
   & when (@layout-scale-screen-small-enabled) {
 
     /* -------------------------------------------------------------------------
-    Screen Size: Small (@layout-screen-small-min-width) and wider
-    --------------------------------------------------------------------------*/
+    Screen Size: Mini (@layout-screen-small-min-width) and wider
+    ---------------------------------------------------------------------------*/
 
     @media (min-width: @layout-screen-small-min-width) {
 
@@ -182,7 +156,7 @@ Header
   & when (@layout-scale-screen-medium-enabled) {
 
     /* -------------------------------------------------------------------------
-    Screen Size: Medium (@layout-screen-medium-min-width) and wider
+    Screen Size: Small (@layout-screen-medium-min-width) and wider
     --------------------------------------------------------------------------*/
 
     @media (min-width: @layout-screen-medium-min-width) {
@@ -208,7 +182,7 @@ Header
   & when (@layout-scale-screen-large-enabled) {
 
     /* -------------------------------------------------------------------------
-    Screen Size: large (@layout-screen-large-min-width) and wider
+    Screen Size: Medium (@layout-screen-large-min-width) and wider
     --------------------------------------------------------------------------*/
 
     @media (min-width: @layout-screen-large-min-width) {
@@ -222,6 +196,32 @@ Header
         width: @header-logo-width-screen-large;
         height: @header-logo-height-screen-large;
         .text-size-variant(header-logo, scale-screen-large);
+
+      }
+
+    }
+
+  }
+
+
+
+  & when (@layout-scale-screen-jumbo-enabled) {
+
+    /* -------------------------------------------------------------------------
+    Screen Size: large (@layout-screen-jumbo-min-width) and wider
+    --------------------------------------------------------------------------*/
+
+    @media (min-width: @layout-screen-jumbo-min-width) {
+
+      /* -----------------------------------------------------------------------
+      Header Logo
+      ------------------------------------------------------------------------*/
+
+      .header-logo {
+
+        width: @header-logo-width-screen-jumbo;
+        height: @header-logo-height-screen-jumbo;
+        .text-size-variant(header-logo, scale-screen-jumbo);
 
       }
 

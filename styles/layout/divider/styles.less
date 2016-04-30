@@ -54,53 +54,10 @@ divider/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
+& when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when (@divider-enabled) and (@divider-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Divider
-      ----------------------------------------------------------------------------- */
-
-      hr,
-      .divider {
-
-        .shape-layout-variant(divider, scale-screen-mini);
-        .shape-layout-variant(divider, short, scale-screen-mini);
-        .shape-layout-variant(divider, tall, scale-screen-mini);
-
-        & when not (@divider-height-scale-screen-mini = null) {
-
-          height: @divider-height * @divider-height-scale-screen-mini;
-
-        }
-
-        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-mini = null) {
-
-          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-mini;
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
-& when (@layout-scale-screen-small-enabled) and (@divider-scale-screen-small-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -132,8 +89,6 @@ divider/styles.less
 
       }
 
-
-
     }
 
   }
@@ -145,7 +100,7 @@ divider/styles.less
 & when (@layout-scale-screen-medium-enabled) and (@divider-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -190,7 +145,7 @@ divider/styles.less
 & when (@layout-scale-screen-large-enabled) and (@divider-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -217,6 +172,51 @@ divider/styles.less
         & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-large = null) {
 
           border-radius: @divider-border-radius * @divider-border-radius-scale-screen-large;
+
+        }
+
+      }
+
+
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) and (@divider-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@divider-enabled) and (@divider-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Divider
+      ----------------------------------------------------------------------------- */
+
+      hr,
+      .divider {
+
+        .shape-layout-variant(divider, scale-screen-jumbo);
+        .shape-layout-variant(divider, short, scale-screen-jumbo);
+        .shape-layout-variant(divider, tall, scale-screen-jumbo);
+
+        & when not (@divider-height-scale-screen-jumbo = null) {
+
+          height: @divider-height * @divider-height-scale-screen-jumbo;
+
+        }
+
+        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-jumbo = null) {
+
+          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-jumbo;
 
         }
 

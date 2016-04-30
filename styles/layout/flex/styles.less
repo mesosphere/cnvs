@@ -266,274 +266,10 @@ flex/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
+& when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when (@flex-enabled) and (@flex-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Flex
-      ----------------------------------------------------------------------------- */
-
-      .flex-screen-mini {
-
-        display: flex;
-
-        &:before,
-        &:after {
-
-          display: none;
-
-        }
-
-      }
-
-      .flex-inline-screen-mini {
-
-        display: flex-inline;
-
-        &:before,
-        &:after {
-
-          display: none;
-
-        }
-
-      }
-
-      // Direction
-
-      .flex-direction-left-to-right-screen-mini {
-
-        flex-direction: row;
-
-      }
-
-      .flex-direction-right-to-left-screen-mini {
-
-        flex-direction: row-reverse;
-
-      }
-
-      .flex-direction-top-to-bottom-screen-mini {
-
-        flex-direction: column;
-
-      }
-
-      .flex-direction-bottom-to-top-screen-mini {
-
-        flex-direction: column-reverse;
-
-      }
-
-      // Wrap
-
-      .flex-wrap-items-screen-mini {
-
-        flex-wrap: wrap;
-
-      }
-
-      .flex-wrap-items-reverse-screen-mini {
-
-        flex-wrap: wrap-reverse;
-
-      }
-
-      .flex-wrap-items-none-screen-mini {
-
-        flex-wrap: nowrap;
-
-      }
-
-      // Align Items
-
-      .flex-align-items-start-screen-mini {
-
-        align-items: flex-start;
-
-      }
-
-      .flex-align-items-center-screen-mini {
-
-        align-items: center;
-
-      }
-
-      .flex-align-items-end-screen-mini {
-
-        align-items: flex-end;
-
-      }
-
-      .flex-align-items-baseline-screen-mini {
-
-        align-items: baseline;
-
-      }
-
-      .flex-align-items-stretch-screen-mini {
-
-        align-items: stretch;
-
-      }
-
-      // Justify Items
-
-      .flex-justify-items-start-screen-mini {
-
-        justify-content: flex-start;
-
-      }
-
-      .flex-justify-items-end-screen-mini {
-
-        justify-content: flex-end;
-
-      }
-
-      .flex-justify-items-center-screen-mini {
-
-        justify-content: center;
-
-      }
-
-      .flex-justify-items-space-between-screen-mini {
-
-        justify-content: space-between;
-
-      }
-
-      .flex-justify-items-space-around-screen-mini {
-
-        justify-content: space-around;
-
-      }
-
-      // Align Content
-
-      .flex-align-content-start-screen-mini {
-
-        align-content: flex-start;
-
-      }
-
-      .flex-align-content-center-screen-mini {
-
-        align-content: center;
-
-      }
-
-      .flex-align-content-end-screen-mini {
-
-        align-content: flex-end;
-
-      }
-
-      .flex-align-content-stretch-screen-mini {
-
-        align-content: stretch;
-
-      }
-
-      .flex-align-content-space-between-screen-mini {
-
-        align-content: space-between;
-
-      }
-
-      .flex-align-content-space-around-screen-mini {
-
-        align-content: space-around;
-
-      }
-
-      /* -----------------------------------------------------------------------------
-      Flex Item
-      ----------------------------------------------------------------------------- */
-
-      // Flex Order (.flex-item-order-n, 0..n)
-
-      .flex-item-property-loop (flex-item-order, order, screen-mini, 100, -100);
-
-      // Flex Grow (.flex-item-shrink-n, 0..n)
-
-      .flex-item-property-loop (flex-item-grow, flex-grow, screen-mini, 10, 0);
-
-      // Flex Shrink (.flex-item-shrink-n, 0..n)
-
-      .flex-item-property-loop (flex-item-shrink, flex-shrink, screen-mini, 10, 0);
-
-      // Flex Basis
-
-      .flex-item-basis-auto-screen-mini {
-
-        flex-basis: auto;
-
-      }
-
-      .flex-item-basis-content-screen-mini {
-
-        flex-basis: content;
-
-      }
-
-      // Align Items
-
-      .flex-item-align-auto-screen-mini {
-
-        align-self: auto;
-
-      }
-
-      .flex-item-align-start-screen-mini {
-
-        align-self: flex-start;
-
-      }
-
-      .flex-item-align-center-screen-mini {
-
-        align-self: center;
-
-      }
-
-      .flex-item-align-end-screen-mini {
-
-        align-self: flex-start;
-
-      }
-
-      .flex-item-align-baseline-screen-mini {
-
-        align-self: baseline;
-
-      }
-
-      .flex-item-align-stretch-screen-mini {
-
-        align-self: stretch;
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
-& when (@layout-scale-screen-small-enabled) and (@flex-scale-screen-small-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: large (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -636,21 +372,15 @@ flex/styles.less
 
       }
 
+      .flex-align-items-baseline-screen-small {
+
+        align-items: baseline;
+
+      }
+
       .flex-align-items-stretch-screen-small {
 
         align-items: stretch;
-
-      }
-
-      .flex-align-items-baseline-screen-mini {
-
-        align-items: baseline;
-
-      }
-
-      .flex-align-items-baseline-screen-mini {
-
-        align-items: baseline;
 
       }
 
@@ -754,12 +484,6 @@ flex/styles.less
 
       }
 
-      .flex-item-basis-none-screen-small {
-
-        flex-basis: 0;
-
-      }
-
       // Align Items
 
       .flex-item-align-auto-screen-small {
@@ -809,7 +533,7 @@ flex/styles.less
 & when (@layout-scale-screen-medium-enabled) and (@flex-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -912,15 +636,21 @@ flex/styles.less
 
       }
 
-      .flex-align-items-baseline-screen-medium {
+      .flex-align-items-stretch-screen-medium {
+
+        align-items: stretch;
+
+      }
+
+      .flex-align-items-baseline-screen-small {
 
         align-items: baseline;
 
       }
 
-      .flex-align-items-stretch-screen-medium {
+      .flex-align-items-baseline-screen-small {
 
-        align-items: stretch;
+        align-items: baseline;
 
       }
 
@@ -1079,7 +809,7 @@ flex/styles.less
 & when (@layout-scale-screen-large-enabled) and (@flex-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -1333,6 +1063,276 @@ flex/styles.less
       }
 
       .flex-item-align-stretch-screen-large {
+
+        align-self: stretch;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) and (@flex-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@flex-enabled) and (@flex-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Flex
+      ----------------------------------------------------------------------------- */
+
+      .flex-screen-jumbo {
+
+        display: flex;
+
+        &:before,
+        &:after {
+
+          display: none;
+
+        }
+
+      }
+
+      .flex-inline-screen-jumbo {
+
+        display: flex-inline;
+
+        &:before,
+        &:after {
+
+          display: none;
+
+        }
+
+      }
+
+      // Direction
+
+      .flex-direction-left-to-right-screen-jumbo {
+
+        flex-direction: row;
+
+      }
+
+      .flex-direction-right-to-left-screen-jumbo {
+
+        flex-direction: row-reverse;
+
+      }
+
+      .flex-direction-top-to-bottom-screen-jumbo {
+
+        flex-direction: column;
+
+      }
+
+      .flex-direction-bottom-to-top-screen-jumbo {
+
+        flex-direction: column-reverse;
+
+      }
+
+      // Wrap
+
+      .flex-wrap-items-screen-jumbo {
+
+        flex-wrap: wrap;
+
+      }
+
+      .flex-wrap-items-reverse-screen-jumbo {
+
+        flex-wrap: wrap-reverse;
+
+      }
+
+      .flex-wrap-items-none-screen-jumbo {
+
+        flex-wrap: nowrap;
+
+      }
+
+      // Align Items
+
+      .flex-align-items-start-screen-jumbo {
+
+        align-items: flex-start;
+
+      }
+
+      .flex-align-items-center-screen-jumbo {
+
+        align-items: center;
+
+      }
+
+      .flex-align-items-end-screen-jumbo {
+
+        align-items: flex-end;
+
+      }
+
+      .flex-align-items-baseline-screen-jumbo {
+
+        align-items: baseline;
+
+      }
+
+      .flex-align-items-stretch-screen-jumbo {
+
+        align-items: stretch;
+
+      }
+
+      // Justify Items
+
+      .flex-justify-items-start-screen-jumbo {
+
+        justify-content: flex-start;
+
+      }
+
+      .flex-justify-items-end-screen-jumbo {
+
+        justify-content: flex-end;
+
+      }
+
+      .flex-justify-items-center-screen-jumbo {
+
+        justify-content: center;
+
+      }
+
+      .flex-justify-items-space-between-screen-jumbo {
+
+        justify-content: space-between;
+
+      }
+
+      .flex-justify-items-space-around-screen-jumbo {
+
+        justify-content: space-around;
+
+      }
+
+      // Align Content
+
+      .flex-align-content-start-screen-jumbo {
+
+        align-content: flex-start;
+
+      }
+
+      .flex-align-content-center-screen-jumbo {
+
+        align-content: center;
+
+      }
+
+      .flex-align-content-end-screen-jumbo {
+
+        align-content: flex-end;
+
+      }
+
+      .flex-align-content-stretch-screen-jumbo {
+
+        align-content: stretch;
+
+      }
+
+      .flex-align-content-space-between-screen-jumbo {
+
+        align-content: space-between;
+
+      }
+
+      .flex-align-content-space-around-screen-jumbo {
+
+        align-content: space-around;
+
+      }
+
+      /* -----------------------------------------------------------------------------
+      Flex Item
+      ----------------------------------------------------------------------------- */
+
+      // Flex Order (.flex-item-order-n, 0..n)
+
+      .flex-item-property-loop (flex-item-order, order, screen-jumbo, 100, -100);
+
+      // Flex Grow (.flex-item-shrink-n, 0..n)
+
+      .flex-item-property-loop (flex-item-grow, flex-grow, screen-jumbo, 10, 0);
+
+      // Flex Shrink (.flex-item-shrink-n, 0..n)
+
+      .flex-item-property-loop (flex-item-shrink, flex-shrink, screen-jumbo, 10, 0);
+
+      // Flex Basis
+
+      .flex-item-basis-auto-screen-jumbo {
+
+        flex-basis: auto;
+
+      }
+
+      .flex-item-basis-content-screen-jumbo {
+
+        flex-basis: content;
+
+      }
+
+      .flex-item-basis-none-screen-jumbo {
+
+        flex-basis: 0;
+
+      }
+
+      // Align Items
+
+      .flex-item-align-auto-screen-jumbo {
+
+        align-self: auto;
+
+      }
+
+      .flex-item-align-start-screen-jumbo {
+
+        align-self: flex-start;
+
+      }
+
+      .flex-item-align-center-screen-jumbo {
+
+        align-self: center;
+
+      }
+
+      .flex-item-align-end-screen-jumbo {
+
+        align-self: flex-start;
+
+      }
+
+      .flex-item-align-baseline-screen-jumbo {
+
+        align-self: baseline;
+
+      }
+
+      .flex-item-align-stretch-screen-jumbo {
 
         align-self: stretch;
 

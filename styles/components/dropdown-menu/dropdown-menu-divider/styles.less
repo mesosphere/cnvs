@@ -38,50 +38,10 @@ dropdown-menu-divider/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Dropdown Menu Divider (.dropdown-menu-divider)
-      ----------------------------------------------------------------------------- */
-
-      .dropdown-menu-divider {
-
-        .shape-layout-variant(dropdown-menu-divider, scale-screen-mini);
-
-        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-mini = null) {
-
-          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-mini;
-
-        }
-
-        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-mini = null) {
-
-          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-mini;
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -121,7 +81,7 @@ dropdown-menu-divider/styles.less
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -161,7 +121,7 @@ dropdown-menu-divider/styles.less
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -185,6 +145,46 @@ dropdown-menu-divider/styles.less
         & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-large = null) {
 
           height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu Divider (.dropdown-menu-divider)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu-divider {
+
+        .shape-layout-variant(dropdown-menu-divider, scale-screen-jumbo);
+
+        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-jumbo = null) {
+
+          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-jumbo;
+
+        }
+
+        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-jumbo = null) {
+
+          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-jumbo;
 
         }
 

@@ -70,57 +70,10 @@ dropdown-menu/styles.less
 
 
 
-& when (@layout-scale-screen-mini-enabled) {
-
-  /* -----------------------------------------------------------------------------
-  Screen Size: Mini (@layout-screen-mini-min-width) and wider
-  ----------------------------------------------------------------------------- */
-
-  @media (min-width: @layout-screen-mini-min-width) {
-
-    & when (@dropdown-menu-enabled) and (@dropdown-menu-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Dropdown Menu (.dropdown-menu)
-      ----------------------------------------------------------------------------- */
-
-      .dropdown-menu {
-
-        .text-size-variant(dropdown-menu, scale-screen-mini);
-        .shape-layout-variant(dropdown-menu, scale-screen-mini);
-
-        & when not (@dropdown-menu-border-radius = null) and not (@dropdown-menu-border-radius-scale-screen-mini = null) {
-
-          border-radius: @dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-mini;
-
-        }
-
-        & when not (@dropdown-menu-minimum-width = null) and not (@dropdown-menu-minimum-width-scale-screen-mini = null) {
-
-          min-width: @dropdown-menu-minimum-width * @dropdown-menu-minimum-width-scale-screen-mini;
-
-        }
-
-        & when not (@dropdown-menu-maximum-width = null) and not (@dropdown-menu-maximum-width-scale-screen-mini = null) {
-
-          max-width: @dropdown-menu-maximum-width * @dropdown-menu-maximum-width-scale-screen-mini;
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-
-
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Mini (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -167,7 +120,7 @@ dropdown-menu/styles.less
 & when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-medium-min-width) {
@@ -214,7 +167,7 @@ dropdown-menu/styles.less
 & when (@layout-scale-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: large (@layout-screen-large-min-width) and wider
+  Screen Size: Medium (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-large-min-width) {
@@ -245,6 +198,53 @@ dropdown-menu/styles.less
         & when not (@dropdown-menu-maximum-width = null) and not (@dropdown-menu-maximum-width-scale-screen-large = null) {
 
           max-width: @dropdown-menu-maximum-width * @dropdown-menu-maximum-width-scale-screen-large;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: large (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@dropdown-menu-enabled) and (@dropdown-menu-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Dropdown Menu (.dropdown-menu)
+      ----------------------------------------------------------------------------- */
+
+      .dropdown-menu {
+
+        .text-size-variant(dropdown-menu, scale-screen-jumbo);
+        .shape-layout-variant(dropdown-menu, scale-screen-jumbo);
+
+        & when not (@dropdown-menu-border-radius = null) and not (@dropdown-menu-border-radius-scale-screen-jumbo = null) {
+
+          border-radius: @dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-jumbo;
+
+        }
+
+        & when not (@dropdown-menu-minimum-width = null) and not (@dropdown-menu-minimum-width-scale-screen-jumbo = null) {
+
+          min-width: @dropdown-menu-minimum-width * @dropdown-menu-minimum-width-scale-screen-jumbo;
+
+        }
+
+        & when not (@dropdown-menu-maximum-width = null) and not (@dropdown-menu-maximum-width-scale-screen-jumbo = null) {
+
+          max-width: @dropdown-menu-maximum-width * @dropdown-menu-maximum-width-scale-screen-jumbo;
 
         }
 

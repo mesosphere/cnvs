@@ -532,7 +532,7 @@ Column Padding
 
   .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) when (@index = 1) {
 
-    @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
+    @item: ~".column-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}, .column-jumbo-@{index}";
 
     .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @item);
 
@@ -540,7 +540,7 @@ Column Padding
 
   .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index =< @grid-columns-count) {
 
-    @item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
+    @item: ~".column-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}, .column-jumbo-@{index}";
 
     .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, ~"@{list}, @{item}");
 
