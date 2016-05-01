@@ -9820,18 +9820,6 @@ p {
   line-height: 19.5px;
   margin-top: 0px;
   margin-bottom: 0.8rem;
-  /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
 }
 html.body-short,
 body.body-short,
@@ -9903,7 +9891,21 @@ body.inverse .muted,
 p.inverse .muted {
   color: #999da7;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      body
+      ----------------------------------------------------------------------------- */
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      body
+      ----------------------------------------------------------------------------- */
   html,
   body,
   p {
@@ -9930,7 +9932,13 @@ p.inverse .muted {
     margin-bottom: 1.76rem;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      body
+      ----------------------------------------------------------------------------- */
   html,
   body,
   p {
@@ -9958,6 +9966,14 @@ p.inverse .muted {
   p.body-tall-bottom {
     margin-bottom: 1.92rem;
   }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      body
+      ----------------------------------------------------------------------------- */
 }
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -11379,7 +11395,7 @@ h6.inverse .muted,
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-body/variables.less
+list-item/variables.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
@@ -11404,14 +11420,13 @@ Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-List Item
+List Item Text Styling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Styling
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Layout
+--------------------------------------------------------------------------------
+List Item Layout
+--------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 Margin
@@ -11423,7 +11438,34 @@ Padding
 Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+List Item Bullet
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 Inline List
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Definition List
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Text Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -11436,24 +11478,13 @@ lists/styles.less
   Lists
   ----------------------------------------------------------------------------- */
 ul,
-ol {
+ol,
+dl {
   position: relative;
   padding: 0px;
   list-style: none;
   margin-top: 0px;
   margin-bottom: 0.8rem;
-  /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
     List Item
     ----------------------------------------------------------------------------- */
@@ -11465,125 +11496,135 @@ ol {
     ----------------------------------------------------------------------------- */
 }
 ul.list-short,
-ol.list-short {
+ol.list-short,
+dl.list-short {
   margin-top: 0px;
   margin-bottom: 0.4rem;
 }
 ul.list-short-top,
-ol.list-short-top {
+ol.list-short-top,
+dl.list-short-top {
   margin-top: 0px;
 }
 ul.list-short-bottom,
-ol.list-short-bottom {
+ol.list-short-bottom,
+dl.list-short-bottom {
   margin-bottom: 0.4rem;
 }
 ul.list-tall,
-ol.list-tall {
+ol.list-tall,
+dl.list-tall {
   margin-top: 0px;
   margin-bottom: 1.6rem;
 }
 ul.list-tall-top,
-ol.list-tall-top {
+ol.list-tall-top,
+dl.list-tall-top {
   margin-top: 0px;
 }
 ul.list-tall-bottom,
-ol.list-tall-bottom {
+ol.list-tall-bottom,
+dl.list-tall-bottom {
   margin-bottom: 1.6rem;
 }
-@media (min-width: 768px) {
-  ul,
-  ol {
-    margin-bottom: 0.88rem;
-  }
-  ul.list-short,
-  ol.list-short {
-    margin-bottom: 0.44rem;
-  }
-  ul.list-short-bottom,
-  ol.list-short-bottom {
-    margin-bottom: 0.44rem;
-  }
-  ul.list-tall,
-  ol.list-tall {
-    margin-bottom: 1.76rem;
-  }
-  ul.list-tall-bottom,
-  ol.list-tall-bottom {
-    margin-bottom: 1.76rem;
-  }
-}
-@media (min-width: 992px) {
-  ul,
-  ol {
-    margin-bottom: 0.96rem;
-  }
-  ul.list-short,
-  ol.list-short {
-    margin-bottom: 0.48rem;
-  }
-  ul.list-short-bottom,
-  ol.list-short-bottom {
-    margin-bottom: 0.48rem;
-  }
-  ul.list-tall,
-  ol.list-tall {
-    margin-bottom: 1.92rem;
-  }
-  ul.list-tall-bottom,
-  ol.list-tall-bottom {
-    margin-bottom: 1.92rem;
-  }
-}
 ul li,
-ol li {
+ol li,
+dl li,
+ul dt,
+ol dt,
+dl dt,
+ul dd,
+ol dd,
+dl dd {
   position: relative;
+  color: #5b6171;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-rendering: geometricPrecision;
   margin-top: 0px;
   margin-bottom: 0.4rem;
   padding-left: 1.2rem;
   /* -----------------------------------------------------------------------------
       Nested List
       ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-        Screen Size: Small (@layout-screen-small-min-width) and wider
-        ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-        Screen Size: Medium (@layout-screen-medium-min-width) and wider
-        ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-        Screen Size: Large (@layout-screen-large-min-width) and wider
-        ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-        Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-        ----------------------------------------------------------------------------- */
 }
 ul li.list-item-short,
-ol li.list-item-short {
+ol li.list-item-short,
+dl li.list-item-short,
+ul dt.list-item-short,
+ol dt.list-item-short,
+dl dt.list-item-short,
+ul dd.list-item-short,
+ol dd.list-item-short,
+dl dd.list-item-short {
   margin-top: 0px;
   margin-bottom: 0.2rem;
 }
 ul li.list-item-short-top,
-ol li.list-item-short-top {
+ol li.list-item-short-top,
+dl li.list-item-short-top,
+ul dt.list-item-short-top,
+ol dt.list-item-short-top,
+dl dt.list-item-short-top,
+ul dd.list-item-short-top,
+ol dd.list-item-short-top,
+dl dd.list-item-short-top {
   margin-top: 0px;
 }
 ul li.list-item-short-bottom,
-ol li.list-item-short-bottom {
+ol li.list-item-short-bottom,
+dl li.list-item-short-bottom,
+ul dt.list-item-short-bottom,
+ol dt.list-item-short-bottom,
+dl dt.list-item-short-bottom,
+ul dd.list-item-short-bottom,
+ol dd.list-item-short-bottom,
+dl dd.list-item-short-bottom {
   margin-bottom: 0.2rem;
 }
 ul li.list-item-tall,
-ol li.list-item-tall {
+ol li.list-item-tall,
+dl li.list-item-tall,
+ul dt.list-item-tall,
+ol dt.list-item-tall,
+dl dt.list-item-tall,
+ul dd.list-item-tall,
+ol dd.list-item-tall,
+dl dd.list-item-tall {
   margin-top: 0px;
   margin-bottom: 0.8rem;
 }
 ul li.list-item-tall-top,
-ol li.list-item-tall-top {
+ol li.list-item-tall-top,
+dl li.list-item-tall-top,
+ul dt.list-item-tall-top,
+ol dt.list-item-tall-top,
+dl dt.list-item-tall-top,
+ul dd.list-item-tall-top,
+ol dd.list-item-tall-top,
+dl dd.list-item-tall-top {
   margin-top: 0px;
 }
 ul li.list-item-tall-bottom,
-ol li.list-item-tall-bottom {
+ol li.list-item-tall-bottom,
+dl li.list-item-tall-bottom,
+ul dt.list-item-tall-bottom,
+ol dt.list-item-tall-bottom,
+dl dt.list-item-tall-bottom,
+ul dd.list-item-tall-bottom,
+ol dd.list-item-tall-bottom,
+dl dd.list-item-tall-bottom {
   margin-bottom: 0.8rem;
 }
 ul li:before,
-ol li:before {
+ol li:before,
+dl li:before,
+ul dt:before,
+ol dt:before,
+dl dt:before,
+ul dd:before,
+ol dd:before,
+dl dd:before {
   content: '';
   position: absolute;
   display: block;
@@ -11595,148 +11636,72 @@ ol li:before {
   top: 8px;
 }
 ul li:last-child,
-ol li:last-child {
+ol li:last-child,
+dl li:last-child,
+ul dt:last-child,
+ol dt:last-child,
+dl dt:last-child,
+ul dd:last-child,
+ol dd:last-child,
+dl dd:last-child {
   margin-bottom: 0px;
 }
 ul li > ul,
 ol li > ul,
+dl li > ul,
+ul dt > ul,
+ol dt > ul,
+dl dt > ul,
+ul dd > ul,
+ol dd > ul,
+dl dd > ul,
 ul li > ol,
-ol li > ol {
+ol li > ol,
+dl li > ol,
+ul dt > ol,
+ol dt > ol,
+dl dt > ol,
+ul dd > ol,
+ol dd > ol,
+dl dd > ol {
   margin-bottom: 0.4rem;
   margin-bottom: 0px;
 }
-@media (min-width: 480px) {
-  ul li,
-  ol li {
-    /* -----------------------------------------------------------------------------
-          Nested List
-          ----------------------------------------------------------------------------- */
-  }
-}
-@media (min-width: 768px) {
-  ul li,
-  ol li {
-    margin-bottom: 0.44rem;
-    padding-left: 1.32rem;
-    /* -----------------------------------------------------------------------------
-          Nested List
-          ----------------------------------------------------------------------------- */
-  }
-  ul li.list-item-short,
-  ol li.list-item-short {
-    margin-bottom: 0.22rem;
-  }
-  ul li.list-item-short-bottom,
-  ol li.list-item-short-bottom {
-    margin-bottom: 0.22rem;
-  }
-  ul li.list-item-tall,
-  ol li.list-item-tall {
-    margin-bottom: 0.88rem;
-  }
-  ul li.list-item-tall-bottom,
-  ol li.list-item-tall-bottom {
-    margin-bottom: 0.88rem;
-  }
-  ul li:before,
-  ol li:before {
-    width: 5px;
-    height: 5px;
-    top: 9px;
-  }
-  ul li > ul,
-  ol li > ul,
-  ul li > ol,
-  ol li > ol {
-    margin-top: 0.44rem;
-  }
-}
-@media (min-width: 992px) {
-  ul li,
-  ol li {
-    margin-bottom: 0.48rem;
-    padding-left: 1.44rem;
-    /* -----------------------------------------------------------------------------
-          Nested List
-          ----------------------------------------------------------------------------- */
-  }
-  ul li.list-item-short,
-  ol li.list-item-short {
-    margin-bottom: 0.24rem;
-  }
-  ul li.list-item-short-bottom,
-  ol li.list-item-short-bottom {
-    margin-bottom: 0.24rem;
-  }
-  ul li.list-item-tall,
-  ol li.list-item-tall {
-    margin-bottom: 0.96rem;
-  }
-  ul li.list-item-tall-bottom,
-  ol li.list-item-tall-bottom {
-    margin-bottom: 0.96rem;
-  }
-  ul li:before,
-  ol li:before {
-    width: 5px;
-    height: 5px;
-    top: 9px;
-  }
-  ul li > ul,
-  ol li > ul,
-  ul li > ol,
-  ol li > ol {
-    margin-top: 0.48rem;
-  }
-}
-@media (min-width: 1400px) {
-  ul li,
-  ol li {
-    /* -----------------------------------------------------------------------------
-          Nested List
-          ----------------------------------------------------------------------------- */
-  }
-}
 ul.list-unstyled > li,
-ol.list-unstyled > li {
+ol.list-unstyled > li,
+dl.list-unstyled > li {
   padding-left: 0px;
 }
 ul.list-unstyled > li:before,
-ol.list-unstyled > li:before {
+ol.list-unstyled > li:before,
+dl.list-unstyled > li:before {
   display: none;
 }
 ul.list-inline,
-ol.list-inline {
+ol.list-inline,
+dl.list-inline {
   *zoom: 1;
   margin-top: -0.4rem;
   margin-left: -0.8rem;
-  /* -----------------------------------------------------------------------------
-        Screen Size: Small (@layout-screen-small-min-width) and wider
-        ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-        Screen Size: Medium (@layout-screen-medium-min-width) and wider
-        ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-        Screen Size: Large (@layout-screen-large-min-width) and wider
-        ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-        Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-        ----------------------------------------------------------------------------- */
 }
 ul.list-inline:before,
 ol.list-inline:before,
+dl.list-inline:before,
 ul.list-inline:after,
-ol.list-inline:after {
+ol.list-inline:after,
+dl.list-inline:after {
   display: table;
   content: "";
   line-height: 0;
 }
 ul.list-inline:after,
-ol.list-inline:after {
+ol.list-inline:after,
+dl.list-inline:after {
   clear: both;
 }
 ul.list-inline > li,
-ol.list-inline > li {
+ol.list-inline > li,
+dl.list-inline > li {
   padding-left: 0px;
   float: left;
   display: block;
@@ -11745,32 +11710,9 @@ ol.list-inline > li {
   margin-left: 0.8rem;
 }
 ul.list-inline > li:before,
-ol.list-inline > li:before {
+ol.list-inline > li:before,
+dl.list-inline > li:before {
   display: none;
-}
-@media (min-width: 768px) {
-  ul.list-inline,
-  ol.list-inline {
-    margin-top: -0.44rem;
-    margin-left: -0.88rem;
-  }
-  ul.list-inline > li,
-  ol.list-inline > li {
-    margin-top: 0.44rem;
-    margin-left: 0.88rem;
-  }
-}
-@media (min-width: 992px) {
-  ul.list-inline,
-  ol.list-inline {
-    margin-top: -0.48rem;
-    margin-left: -0.96rem;
-  }
-  ul.list-inline > li,
-  ol.list-inline > li {
-    margin-top: 0.48rem;
-    margin-left: 0.96rem;
-  }
 }
 /* -----------------------------------------------------------------------------
   Ordered Lists
@@ -11779,18 +11721,6 @@ ol {
   counter-reset: li;
   /* -----------------------------------------------------------------------------
       Inverse
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
       ----------------------------------------------------------------------------- */
 }
 ol > li:before {
@@ -11837,14 +11767,392 @@ ol.inverse li:before {
   background: none;
   width: auto;
 }
-@media (min-width: 768px) {
+/* -----------------------------------------------------------------------------
+  Definition List
+  ----------------------------------------------------------------------------- */
+dl dt,
+dl dd {
+  padding-left: 0px !important;
+}
+dl dt:before,
+dl dd:before {
+  display: none;
+}
+dl dt {
+  font-weight: 600;
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      Lists
+      ----------------------------------------------------------------------------- */
+  ul,
+  ol,
+  dl {
+    /* -----------------------------------------------------------------------------
+        List Item
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline List
+        ----------------------------------------------------------------------------- */
+  }
+  ul li,
+  ol li,
+  dl li,
+  ul dt,
+  ol dt,
+  dl dt,
+  ul dd,
+  ol dd,
+  dl dd {
+    /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+  }
+  /* -----------------------------------------------------------------------------
+      Ordered Lists
+      ----------------------------------------------------------------------------- */
   ol > li:before {
+    top: 0px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Lists
+      ----------------------------------------------------------------------------- */
+  ul,
+  ol,
+  dl {
+    margin-bottom: 0.88rem;
+    /* -----------------------------------------------------------------------------
+        List Item
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline List
+        ----------------------------------------------------------------------------- */
+  }
+  ul.list-short,
+  ol.list-short,
+  dl.list-short {
+    margin-bottom: 0.44rem;
+  }
+  ul.list-short-bottom,
+  ol.list-short-bottom,
+  dl.list-short-bottom {
+    margin-bottom: 0.44rem;
+  }
+  ul.list-tall,
+  ol.list-tall,
+  dl.list-tall {
+    margin-bottom: 1.76rem;
+  }
+  ul.list-tall-bottom,
+  ol.list-tall-bottom,
+  dl.list-tall-bottom {
+    margin-bottom: 1.76rem;
+  }
+  ul li,
+  ol li,
+  dl li,
+  ul dt,
+  ol dt,
+  dl dt,
+  ul dd,
+  ol dd,
+  dl dd {
+    margin-bottom: 0.44rem;
+    padding-left: 1.32rem;
+    /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+  }
+  ul li.list-item-short,
+  ol li.list-item-short,
+  dl li.list-item-short,
+  ul dt.list-item-short,
+  ol dt.list-item-short,
+  dl dt.list-item-short,
+  ul dd.list-item-short,
+  ol dd.list-item-short,
+  dl dd.list-item-short {
+    margin-bottom: 0.22rem;
+  }
+  ul li.list-item-short-bottom,
+  ol li.list-item-short-bottom,
+  dl li.list-item-short-bottom,
+  ul dt.list-item-short-bottom,
+  ol dt.list-item-short-bottom,
+  dl dt.list-item-short-bottom,
+  ul dd.list-item-short-bottom,
+  ol dd.list-item-short-bottom,
+  dl dd.list-item-short-bottom {
+    margin-bottom: 0.22rem;
+  }
+  ul li.list-item-tall,
+  ol li.list-item-tall,
+  dl li.list-item-tall,
+  ul dt.list-item-tall,
+  ol dt.list-item-tall,
+  dl dt.list-item-tall,
+  ul dd.list-item-tall,
+  ol dd.list-item-tall,
+  dl dd.list-item-tall {
+    margin-bottom: 0.88rem;
+  }
+  ul li.list-item-tall-bottom,
+  ol li.list-item-tall-bottom,
+  dl li.list-item-tall-bottom,
+  ul dt.list-item-tall-bottom,
+  ol dt.list-item-tall-bottom,
+  dl dt.list-item-tall-bottom,
+  ul dd.list-item-tall-bottom,
+  ol dd.list-item-tall-bottom,
+  dl dd.list-item-tall-bottom {
+    margin-bottom: 0.88rem;
+  }
+  ul li:before,
+  ol li:before,
+  dl li:before,
+  ul dt:before,
+  ol dt:before,
+  dl dt:before,
+  ul dd:before,
+  ol dd:before,
+  dl dd:before {
+    width: 5px;
+    height: 5px;
+    top: 9px;
+  }
+  ul li > ul,
+  ol li > ul,
+  dl li > ul,
+  ul dt > ul,
+  ol dt > ul,
+  dl dt > ul,
+  ul dd > ul,
+  ol dd > ul,
+  dl dd > ul,
+  ul li > ol,
+  ol li > ol,
+  dl li > ol,
+  ul dt > ol,
+  ol dt > ol,
+  dl dt > ol,
+  ul dd > ol,
+  ol dd > ol,
+  dl dd > ol {
+    margin-top: 0.44rem;
+  }
+  ul.list-inline,
+  ol.list-inline,
+  dl.list-inline {
+    margin-top: -0.44rem;
+    margin-left: -0.88rem;
+  }
+  ul.list-inline > li,
+  ol.list-inline > li,
+  dl.list-inline > li {
+    margin-top: 0.44rem;
+    margin-left: 0.88rem;
+  }
+  /* -----------------------------------------------------------------------------
+      Ordered Lists
+      ----------------------------------------------------------------------------- */
+  ol > li:before {
+    top: 0px;
     height: 23.52px;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      Lists
+      ----------------------------------------------------------------------------- */
+  ul,
+  ol,
+  dl {
+    margin-bottom: 0.96rem;
+    /* -----------------------------------------------------------------------------
+        List Item
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline List
+        ----------------------------------------------------------------------------- */
+  }
+  ul.list-short,
+  ol.list-short,
+  dl.list-short {
+    margin-bottom: 0.48rem;
+  }
+  ul.list-short-bottom,
+  ol.list-short-bottom,
+  dl.list-short-bottom {
+    margin-bottom: 0.48rem;
+  }
+  ul.list-tall,
+  ol.list-tall,
+  dl.list-tall {
+    margin-bottom: 1.92rem;
+  }
+  ul.list-tall-bottom,
+  ol.list-tall-bottom,
+  dl.list-tall-bottom {
+    margin-bottom: 1.92rem;
+  }
+  ul li,
+  ol li,
+  dl li,
+  ul dt,
+  ol dt,
+  dl dt,
+  ul dd,
+  ol dd,
+  dl dd {
+    margin-bottom: 0.48rem;
+    padding-left: 1.44rem;
+    /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+  }
+  ul li.list-item-short,
+  ol li.list-item-short,
+  dl li.list-item-short,
+  ul dt.list-item-short,
+  ol dt.list-item-short,
+  dl dt.list-item-short,
+  ul dd.list-item-short,
+  ol dd.list-item-short,
+  dl dd.list-item-short {
+    margin-bottom: 0.24rem;
+  }
+  ul li.list-item-short-bottom,
+  ol li.list-item-short-bottom,
+  dl li.list-item-short-bottom,
+  ul dt.list-item-short-bottom,
+  ol dt.list-item-short-bottom,
+  dl dt.list-item-short-bottom,
+  ul dd.list-item-short-bottom,
+  ol dd.list-item-short-bottom,
+  dl dd.list-item-short-bottom {
+    margin-bottom: 0.24rem;
+  }
+  ul li.list-item-tall,
+  ol li.list-item-tall,
+  dl li.list-item-tall,
+  ul dt.list-item-tall,
+  ol dt.list-item-tall,
+  dl dt.list-item-tall,
+  ul dd.list-item-tall,
+  ol dd.list-item-tall,
+  dl dd.list-item-tall {
+    margin-bottom: 0.96rem;
+  }
+  ul li.list-item-tall-bottom,
+  ol li.list-item-tall-bottom,
+  dl li.list-item-tall-bottom,
+  ul dt.list-item-tall-bottom,
+  ol dt.list-item-tall-bottom,
+  dl dt.list-item-tall-bottom,
+  ul dd.list-item-tall-bottom,
+  ol dd.list-item-tall-bottom,
+  dl dd.list-item-tall-bottom {
+    margin-bottom: 0.96rem;
+  }
+  ul li:before,
+  ol li:before,
+  dl li:before,
+  ul dt:before,
+  ol dt:before,
+  dl dt:before,
+  ul dd:before,
+  ol dd:before,
+  dl dd:before {
+    width: 5px;
+    height: 5px;
+    top: 9px;
+  }
+  ul li > ul,
+  ol li > ul,
+  dl li > ul,
+  ul dt > ul,
+  ol dt > ul,
+  dl dt > ul,
+  ul dd > ul,
+  ol dd > ul,
+  dl dd > ul,
+  ul li > ol,
+  ol li > ol,
+  dl li > ol,
+  ul dt > ol,
+  ol dt > ol,
+  dl dt > ol,
+  ul dd > ol,
+  ol dd > ol,
+  dl dd > ol {
+    margin-top: 0.48rem;
+  }
+  ul.list-inline,
+  ol.list-inline,
+  dl.list-inline {
+    margin-top: -0.48rem;
+    margin-left: -0.96rem;
+  }
+  ul.list-inline > li,
+  ol.list-inline > li,
+  dl.list-inline > li {
+    margin-top: 0.48rem;
+    margin-left: 0.96rem;
+  }
+  /* -----------------------------------------------------------------------------
+      Ordered Lists
+      ----------------------------------------------------------------------------- */
   ol > li:before {
+    top: 0px;
     height: 24.64px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      Lists
+      ----------------------------------------------------------------------------- */
+  ul,
+  ol,
+  dl {
+    /* -----------------------------------------------------------------------------
+        List Item
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline List
+        ----------------------------------------------------------------------------- */
+  }
+  ul li,
+  ol li,
+  dl li,
+  ul dt,
+  ol dt,
+  dl dt,
+  ul dd,
+  ol dd,
+  dl dd {
+    /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+  }
+  /* -----------------------------------------------------------------------------
+      Ordered Lists
+      ----------------------------------------------------------------------------- */
+  ol > li:before {
+    top: 0px;
   }
 }
 /* -----------------------------------------------------------------------------

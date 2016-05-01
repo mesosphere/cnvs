@@ -1,7 +1,7 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-body/variables.less
+list-item/variables.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
@@ -135,59 +135,27 @@ Layout Variants
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-List Item
+List Item Text Styling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-/* -----------------------------------------------------------------------------
-Styling
------------------------------------------------------------------------------ */
+@list-item-text-color:                                                          color-lighten(@neutral, 20);
+@list-item-text-font-family:                                                    @font-family-sans-serif;
+@list-item-text-font-style:                                                     null;
+@list-item-text-font-weight:                                                    400;
+@list-item-text-transform:                                                      null;
+@list-item-text-shadow:                                                         null;
+@list-item-text-decoration:                                                     null;
+@list-item-text-rendering:                                                      geometricPrecision;
+@list-item-text-opacity:                                                        null;
 
 
-// Normal
-
-@list-item-bullet-color:                                                        color-lighten(@neutral, 20);
-@list-item-bullet-shadow:                                                       null;
-@list-item-bullet-opacity:                                                      null;
-
-// Inverse (.inverse)
-
-@list-item-inverse-bullet-enabled:                                              true;
-@list-item-inverse-bullet-color:                                                color-lighten(@neutral, 70);
-@list-item-inverse-bullet-shadow:                                               null;
-@list-item-inverse-bullet-opacity:                                              null;
 
 /* -----------------------------------------------------------------------------
-Layout
+--------------------------------------------------------------------------------
+List Item Layout
+--------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
-
-// Border Radius
-
-@list-item-bullet-border-radius:                                                50%;
-
-// Width
-
-@list-item-bullet-width:                                                        16px * 0.3;
-@list-item-bullet-width-scale-screen-small:                                     null;
-@list-item-bullet-width-scale-screen-medium:                                    1.05;
-@list-item-bullet-width-scale-screen-large:                                     1.1;
-@list-item-bullet-width-scale-screen-jumbo:                                     null;
-
-// Height
-
-@list-item-bullet-height:                                                       16px * 0.3;
-@list-item-bullet-height-scale-screen-small:                                    null;
-@list-item-bullet-height-scale-screen-medium:                                   1.05;
-@list-item-bullet-height-scale-screen-large:                                    1.1;
-@list-item-bullet-height-scale-screen-jumbo:                                    null;
-
-// Line Height
-
-@list-item-bullet-line-height:                                                  16px * 1.4;
-@list-item-bullet-line-height-scale-screen-small:                               null;
-@list-item-bullet-line-height-scale-screen-medium:                              1.05;
-@list-item-bullet-line-height-scale-screen-large:                               1.1;
-@list-item-bullet-line-height-scale-screen-jumbo:                               null;
 
 /* -----------------------------------------------------------------------------
 Margin
@@ -292,7 +260,70 @@ Layout Variants
 
 
 /* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+List Item Bullet
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@list-item-bullet-color:                                                        color-lighten(@neutral, 20);
+@list-item-bullet-shadow:                                                       null;
+@list-item-bullet-opacity:                                                      null;
+
+// Inverse (.inverse)
+
+@list-item-inverse-bullet-enabled:                                              true;
+@list-item-inverse-bullet-color:                                                color-lighten(@neutral, 70);
+@list-item-inverse-bullet-shadow:                                               null;
+@list-item-inverse-bullet-opacity:                                              null;
+
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+
+// Border Radius
+
+@list-item-bullet-border-radius:                                                50%;
+
+// Width
+
+@list-item-bullet-width:                                                        16px * 0.3;
+@list-item-bullet-width-scale-screen-small:                                     null;
+@list-item-bullet-width-scale-screen-medium:                                    1.05;
+@list-item-bullet-width-scale-screen-large:                                     1.1;
+@list-item-bullet-width-scale-screen-jumbo:                                     null;
+
+// Height
+
+@list-item-bullet-height:                                                       16px * 0.3;
+@list-item-bullet-height-scale-screen-small:                                    null;
+@list-item-bullet-height-scale-screen-medium:                                   1.05;
+@list-item-bullet-height-scale-screen-large:                                    1.1;
+@list-item-bullet-height-scale-screen-jumbo:                                    null;
+
+// Line Height
+
+@list-item-bullet-line-height:                                                  16px * 1.4;
+@list-item-bullet-line-height-scale-screen-small:                               null;
+@list-item-bullet-line-height-scale-screen-medium:                              1.05;
+@list-item-bullet-line-height-scale-screen-large:                               1.1;
+@list-item-bullet-line-height-scale-screen-jumbo:                               null;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 Inline List
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Layout
 ----------------------------------------------------------------------------- */
 
 // Margin Vertical
@@ -310,3 +341,59 @@ Inline List
 @list-inline-margin-horizontal-scale-screen-medium:                             1.1;
 @list-inline-margin-horizontal-scale-screen-large:                              1.2;
 @list-inline-margin-horizontal-scale-screen-jumbo:                              null;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Definition List
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Text Styling
+----------------------------------------------------------------------------- */
+
+// Title
+
+@definition-list-item-title-text-color:                                         null;
+@definition-list-item-title-text-font-family:                                   null;
+@definition-list-item-title-text-font-style:                                    null;
+@definition-list-item-title-text-font-weight:                                   600;
+@definition-list-item-title-text-transform:                                     null;
+@definition-list-item-title-text-shadow:                                        null;
+@definition-list-item-title-text-decoration:                                    null;
+@definition-list-item-title-text-rendering:                                     null;
+@definition-list-item-title-text-opacity:                                       null;
+
+// Definition
+
+@definition-list-item-text-color:                                               null;
+@definition-list-item-text-font-family:                                         null;
+@definition-list-item-text-font-style:                                          null;
+@definition-list-item-text-font-weight:                                         null;
+@definition-list-item-text-transform:                                           null;
+@definition-list-item-text-shadow:                                              null;
+@definition-list-item-text-decoration:                                          null;
+@definition-list-item-text-rendering:                                           null;
+@definition-list-item-text-opacity:                                             null;
+
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+
+// Title Margin Left
+
+@definition-list-item-margin-left:                                              null;
+@definition-list-item-margin-left-scale-screen-small:                           null;
+@definition-list-item-margin-left-scale-screen-medium:                          null;
+@definition-list-item-margin-left-scale-screen-large:                           null;
+@definition-list-item-margin-left-scale-screen-jumbo:                           null;
+
+// Definition Margin Left
+
+@definition-list-item-margin-left:                                              null;
+@definition-list-item-margin-left-scale-screen-small:                           null;
+@definition-list-item-margin-left-scale-screen-medium:                          null;
+@definition-list-item-margin-left-scale-screen-large:                           null;
+@definition-list-item-margin-left-scale-screen-jumbo:                           null;
