@@ -27,7 +27,7 @@ page-header:
       <dd>
 
         In prior versions of CNVS, there were 5 screen-width break-points, each with a unique name used in class names and variables: portrait phones &lt; 480px (<em>default</em>), landscape phones ≥ 480px (<code>mini</code>), tablets ≥ 768px (<code>small</code>), desktops ≥ 992px (<code>medium</code>), desktops ≥ 1400px (<code>large</code>).  Notice screens below 480px were assumed default and not given an explicit name.  In CNVS 1.0, the identifier <code>mini</code> &emdash; previously assigned to Landscape phones ≥ 480px, now applies to screens below 480px (portrait phones). With this change, the new screen-width break-points are as follows: portrait phones &lt; 480px (<code>mini</code>), landscape phones ≥ 480px (<code>small</code>), tablets ≥ 768px (<code>medium</code>), desktops ≥ 992px (<code>large</code>), desktops ≥ 1400px (<code>jumbo</code>).
-        
+
       </dd>
 
       <dt>
@@ -51,6 +51,18 @@ page-header:
       <dd>
 
 
+
+      </dd>
+
+      <dt>
+
+        Pod behavior now uses margin instead of padding for spacing.
+
+      </dt>
+
+      <dd>
+
+        Pod behavior, previously employed by <code>.container-pod</code> and <code>.row-pod</code> &emdash; now use by the generalized <code>.pod</code>class &emdash; uses margin for spacing rather than padding.  This may result in issues with elements wrapping/containing pods.  Using a simple <code>clearfix</code> will typically resolve these issues.
 
       </dd>
 

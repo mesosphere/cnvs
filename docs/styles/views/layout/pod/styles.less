@@ -21,7 +21,7 @@ Pod Overview
 
     &.layout-box-item-margin {
 
-      padding: @pod-margin-top 0px;
+      padding: @pod-margin-top @pod-margin-right @pod-margin-bottom @pod-margin-left;
 
     }
 
@@ -37,7 +37,7 @@ Pod Overview
 
       & when not (@pod-short-margin-top-scale = null) {
 
-        padding: (@pod-margin-top * @pod-short-margin-top-scale) 0px;
+        padding: (@pod-margin-top * @pod-short-margin-top-scale) (@pod-margin-right * @pod-wider-margin-right-scale) (@pod-margin-bottom * @pod-short-margin-bottom-scale) (@pod-margin-left * @pod-wider-margin-left-scale);
 
       }
 
@@ -59,9 +59,21 @@ Pod Overview
 
       }
 
+      & when not (@pod-narrower-margin-right-scale = null) {
+
+        padding-right: (@pod-margin-right * @pod-narrower-margin-right-scale);
+
+      }
+
       & when not (@pod-taller-margin-bottom-scale = null) {
 
         padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale);
+
+      }
+
+      & when not (@pod-wide-margin-left-scale = null) {
+
+        padding-left: (@pod-margin-left * @pod-wide-margin-left-scale);
 
       }
 
@@ -93,7 +105,37 @@ Pod Overview
 
           &.layout-box-item-margin {
 
-            padding: (@pod-margin-top * @pod-margin-top-scale-screen-small) 0px;
+            padding-top: (@pod-margin-top * @pod-margin-top-scale-screen-small);
+
+          }
+
+        }
+
+        & when not (@pod-margin-right-scale-screen-small = null) {
+
+          &.layout-box-item-margin {
+
+            padding-right: (@pod-margin-right * @pod-margin-right-scale-screen-small);
+
+          }
+
+        }
+
+        & when not (@pod-margin-bottom-scale-screen-small = null) {
+
+          &.layout-box-item-margin {
+
+            padding-bottom: (@pod-margin-bottom * @pod-margin-bottom-scale-screen-small);
+
+          }
+
+        }
+
+        & when not (@pod-margin-left-scale-screen-small = null) {
+
+          &.layout-box-item-margin {
+
+            padding-left: (@pod-margin-left * @pod-margin-left-scale-screen-small);
 
           }
 
@@ -117,7 +159,25 @@ Pod Overview
 
           & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-small = null) {
 
-            padding: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-small) 0px;
+            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-small);
+
+          }
+
+          & when not (@pod-wider-margin-right-scale = null) and not (@pod-margin-right-scale-screen-small = null) {
+
+            padding-right: (@pod-margin-right * @pod-wider-margin-right-scale * @pod-margin-right-scale-screen-small);
+
+          }
+
+          & when not (@pod-short-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-small = null) {
+
+            padding-bottom: (@pod-margin-bottom * @pod-short-margin-bottom-scale * @pod-margin-bottom-scale-screen-small);
+
+          }
+
+          & when not (@pod-wider-margin-left-scale = null) and not (@pod-margin-left-scale-screen-small = null) {
+
+            padding-left: (@pod-margin-left * @pod-wider-margin-left-scale * @pod-margin-left-scale-screen-small);
 
           }
 
@@ -139,9 +199,21 @@ Pod Overview
 
           }
 
+          & when not (@pod-narrower-margin-right-scale = null) and not (@pod-margin-right-scale-screen-small = null) {
+
+            padding-right: (@pod-margin-right * @pod-narrower-margin-right-scale * @pod-margin-right-scale-screen-small)
+
+          }
+
           & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-small = null) {
 
             padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-small)
+
+          }
+
+          & when not (@pod-wide-margin-left-scale = null) and not (@pod-margin-left-scale-screen-small = null) {
+
+            padding-left: (@pod-margin-left * @pod-wide-margin-left-scale * @pod-margin-left-scale-screen-small)
 
           }
 
@@ -177,7 +249,37 @@ Pod Overview
 
           &.layout-box-item-margin {
 
-            padding: (@pod-margin-top * @pod-margin-top-scale-screen-medium) 0px;
+            padding-top: (@pod-margin-top * @pod-margin-top-scale-screen-medium);
+
+          }
+
+        }
+
+        & when not (@pod-margin-right-scale-screen-medium = null) {
+
+          &.layout-box-item-margin {
+
+            padding-right: (@pod-margin-right * @pod-margin-right-scale-screen-medium);
+
+          }
+
+        }
+
+        & when not (@pod-margin-bottom-scale-screen-medium = null) {
+
+          &.layout-box-item-margin {
+
+            padding-bottom: (@pod-margin-bottom * @pod-margin-bottom-scale-screen-medium);
+
+          }
+
+        }
+
+        & when not (@pod-margin-left-scale-screen-medium = null) {
+
+          &.layout-box-item-margin {
+
+            padding-left: (@pod-margin-left * @pod-margin-left-scale-screen-medium);
 
           }
 
@@ -201,7 +303,25 @@ Pod Overview
 
           & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-medium = null) {
 
-            padding: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-medium) 0px;
+            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-medium);
+
+          }
+
+          & when not (@pod-wider-margin-right-scale = null) and not (@pod-margin-right-scale-screen-medium = null) {
+
+            padding-right: (@pod-margin-right * @pod-wider-margin-right-scale * @pod-margin-right-scale-screen-medium);
+
+          }
+
+          & when not (@pod-short-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-medium = null) {
+
+            padding-bottom: (@pod-margin-bottom * @pod-short-margin-bottom-scale * @pod-margin-bottom-scale-screen-medium);
+
+          }
+
+          & when not (@pod-wider-margin-left-scale = null) and not (@pod-margin-left-scale-screen-medium = null) {
+
+            padding-left: (@pod-margin-left * @pod-wider-margin-left-scale * @pod-margin-left-scale-screen-medium);
 
           }
 
@@ -223,9 +343,21 @@ Pod Overview
 
           }
 
+          & when not (@pod-narrower-margin-right-scale = null) and not (@pod-margin-right-scale-screen-medium = null) {
+
+            padding-right: (@pod-margin-right * @pod-narrower-margin-right-scale * @pod-margin-right-scale-screen-medium)
+
+          }
+
           & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-medium = null) {
 
             padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-medium)
+
+          }
+
+          & when not (@pod-wide-margin-left-scale = null) and not (@pod-margin-left-scale-screen-medium = null) {
+
+            padding-left: (@pod-margin-left * @pod-wide-margin-left-scale * @pod-margin-left-scale-screen-medium)
 
           }
 
@@ -261,7 +393,37 @@ Pod Overview
 
           &.layout-box-item-margin {
 
-            padding: (@pod-margin-top * @pod-margin-top-scale-screen-large) 0px;
+            padding-top: (@pod-margin-top * @pod-margin-top-scale-screen-large);
+
+          }
+
+        }
+
+        & when not (@pod-margin-right-scale-screen-large = null) {
+
+          &.layout-box-item-margin {
+
+            padding-right: (@pod-margin-right * @pod-margin-right-scale-screen-large);
+
+          }
+
+        }
+
+        & when not (@pod-margin-bottom-scale-screen-large = null) {
+
+          &.layout-box-item-margin {
+
+            padding-bottom: (@pod-margin-bottom * @pod-margin-bottom-scale-screen-large);
+
+          }
+
+        }
+
+        & when not (@pod-margin-left-scale-screen-large = null) {
+
+          &.layout-box-item-margin {
+
+            padding-left: (@pod-margin-left * @pod-margin-left-scale-screen-large);
 
           }
 
@@ -285,7 +447,25 @@ Pod Overview
 
           & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-large = null) {
 
-            padding: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-large) 0px;
+            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-large);
+
+          }
+
+          & when not (@pod-wider-margin-right-scale = null) and not (@pod-margin-right-scale-screen-large = null) {
+
+            padding-right: (@pod-margin-right * @pod-wider-margin-right-scale * @pod-margin-right-scale-screen-large);
+
+          }
+
+          & when not (@pod-short-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-large = null) {
+
+            padding-bottom: (@pod-margin-bottom * @pod-short-margin-bottom-scale * @pod-margin-bottom-scale-screen-large);
+
+          }
+
+          & when not (@pod-wider-margin-left-scale = null) and not (@pod-margin-left-scale-screen-large = null) {
+
+            padding-left: (@pod-margin-left * @pod-wider-margin-left-scale * @pod-margin-left-scale-screen-large);
 
           }
 
@@ -301,17 +481,29 @@ Pod Overview
 
         &.layout-box-item-margin {
 
-          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-large = null) {
+        & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-large = null) {
 
-            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-large)
+          padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-large)
 
-          }
+        }
 
-          & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-large = null) {
+        & when not (@pod-narrower-margin-right-scale = null) and not (@pod-margin-right-scale-screen-large = null) {
 
-            padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-large)
+          padding-right: (@pod-margin-right * @pod-narrower-margin-right-scale * @pod-margin-right-scale-screen-large)
 
-          }
+        }
+
+        & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-large = null) {
+
+          padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-large)
+
+        }
+
+        & when not (@pod-wide-margin-left-scale = null) and not (@pod-margin-left-scale-screen-large = null) {
+
+          padding-left: (@pod-margin-left * @pod-wide-margin-left-scale * @pod-margin-left-scale-screen-large)
+
+        }
 
         }
 
@@ -345,7 +537,37 @@ Pod Overview
 
           &.layout-box-item-margin {
 
-            padding: (@pod-margin-top * @pod-margin-top-scale-screen-jumbo) 0px;
+            padding-top: (@pod-margin-top * @pod-margin-top-scale-screen-jumbo);
+
+          }
+
+        }
+
+        & when not (@pod-margin-right-scale-screen-jumbo = null) {
+
+          &.layout-box-item-margin {
+
+            padding-right: (@pod-margin-right * @pod-margin-right-scale-screen-jumbo);
+
+          }
+
+        }
+
+        & when not (@pod-margin-bottom-scale-screen-jumbo = null) {
+
+          &.layout-box-item-margin {
+
+            padding-bottom: (@pod-margin-bottom * @pod-margin-bottom-scale-screen-jumbo);
+
+          }
+
+        }
+
+        & when not (@pod-margin-left-scale-screen-jumbo = null) {
+
+          &.layout-box-item-margin {
+
+            padding-left: (@pod-margin-left * @pod-margin-left-scale-screen-jumbo);
 
           }
 
@@ -369,7 +591,25 @@ Pod Overview
 
           & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-jumbo = null) {
 
-            padding: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-jumbo) 0px;
+            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-jumbo);
+
+          }
+
+          & when not (@pod-wider-margin-right-scale = null) and not (@pod-margin-right-scale-screen-jumbo = null) {
+
+            padding-right: (@pod-margin-right * @pod-wider-margin-right-scale * @pod-margin-right-scale-screen-jumbo);
+
+          }
+
+          & when not (@pod-short-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-jumbo = null) {
+
+            padding-bottom: (@pod-margin-bottom * @pod-short-margin-bottom-scale * @pod-margin-bottom-scale-screen-jumbo);
+
+          }
+
+          & when not (@pod-wider-margin-left-scale = null) and not (@pod-margin-left-scale-screen-jumbo = null) {
+
+            padding-left: (@pod-margin-left * @pod-wider-margin-left-scale * @pod-margin-left-scale-screen-jumbo);
 
           }
 
@@ -391,9 +631,21 @@ Pod Overview
 
           }
 
+          & when not (@pod-narrower-margin-right-scale = null) and not (@pod-margin-right-scale-screen-jumbo = null) {
+
+            padding-right: (@pod-margin-right * @pod-narrower-margin-right-scale * @pod-margin-right-scale-screen-jumbo)
+
+          }
+
           & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-jumbo = null) {
 
             padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-jumbo)
+
+          }
+
+          & when not (@pod-wide-margin-left-scale = null) and not (@pod-margin-left-scale-screen-jumbo = null) {
+
+            padding-left: (@pod-margin-left * @pod-wide-margin-left-scale * @pod-margin-left-scale-screen-jumbo)
 
           }
 

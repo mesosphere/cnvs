@@ -677,13 +677,13 @@ BEGIN: Pods
 
       <p class="lead">
 
-        Pods are simple and convient way to adding space above and/or below your content.  With provided classes, you can quickly define layout rules that fit the requirements of your project.
+        Pods are simple and convient way to adding space around your content.  With provided classes, you can quickly define layout rules that fit the requirements of your project.
 
       </p>
 
       <p>
 
-        Use the class <code>.pod</code> to apply vertical padding to any component. By default, padding is applied evenly to both the top and bottom of the pod. However, with the provided classes you can override this to behave different &mdash; taller, shorter, or no padding at all.
+        Use the class <code>.pod</code> to apply vertical and horizontal margin to any component. By default, margin is applied evenly to all sides of the pod. However, with the provided classes you can override this to behave differently &mdash; taller, shorter, narower, wider, or no padding at all.
 
       </p>
 
@@ -742,7 +742,7 @@ BEGIN: Pods Options
 
   <p>
 
-    By default, padding is applied evenly to both the top and bottom of the pod.  You can easily adjust this behavior by adding a size modifier to the base <code>.pod</code>class. For example <code>.pod-short</code> will decrease the padding and <code>.pod-tall</code> will increase the padding. Furthermore, if you are seeking to change the padding in only a single direction, you can add an additional direction modifier. For example, <code>.pod-tall-top</code> increase the padding above the pod.
+    By default, margin is applied evenly to sides of the pod (top, bottom, left, right).  You can easily adjust this behavior by adding a size modifier to the base <code>.pod</code>class. For example <code>.pod-short</code> will decrease the margin and <code>.pod-tall</code> will increase the margin. Furthermore, if you are seeking to change the margin in only a single direction, you can add an additional direction modifier. For example, <code>.pod-tall-top</code> increase the margin above the pod.
 
   </p>
 
@@ -802,7 +802,7 @@ BEGIN: Pods Options
 
           <td>
 
-            Remove the padding in one or both direction entirely.
+            Remove the margins entirely.
 
           </td>
 
@@ -822,7 +822,7 @@ BEGIN: Pods Options
 
           <td>
 
-            Reduce the padding in one or both direction to 25%.
+            Reduce the vertical margins to 25%.
 
           </td>
 
@@ -842,7 +842,7 @@ BEGIN: Pods Options
 
           <td>
 
-            Reduce the padding in one or both direction to 50%.
+            Reduce the vertical margins to 50%.
 
           </td>
 
@@ -862,7 +862,7 @@ BEGIN: Pods Options
 
           <td>
 
-            Increase the padding in one or both direction to 150%.
+            Increase the vertical margins by 150%.
 
           </td>
 
@@ -882,7 +882,87 @@ BEGIN: Pods Options
 
           <td>
 
-            Increase the padding in one or both direction to 200%.
+            Increase the vertical margins by 200%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .pod-narrower
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Reduce the horizontal margins to 25%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .pod-narrow
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Reduce the horizontal margins to 50%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .pod-wide
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Increase the horizontal margins by 150%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .pod-wider
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Increase the horizontal margins by 200%.
 
           </td>
 
@@ -914,7 +994,7 @@ BEGIN: Pods Options
       <div class="example-block-footer example-block-footer-codeblock">
 
 <pre class="prettyprint lang-html flush-bottom">
-&lt;div class="pod pod-short"&gt;
+&lt;div class="pod pod-short pod-wider"&gt;
   &hellip;
 &lt;/div&gt;
 </pre>
@@ -947,7 +1027,7 @@ BEGIN: Pods Options
 
     <p>
 
-      Add <code>-top</code> or <code>-bottom</code> to the end of the size modifier class to adjust padding only in the direction implied by the direction modifier.
+      Add <code>-top</code>, <code>-right</code>, <code>-bottom</code>, or <code>-left</code> to the end of the size modifier class to adjust margin only in the direction implied by the direction modifier.
 
     </p>
 
@@ -989,7 +1069,27 @@ BEGIN: Pods Options
 
           <td>
 
-            Adjust padding above the pod.
+            Adjust margin above the pod.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .pod-*-right
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Adjust margin to the right of the pod.
 
           </td>
 
@@ -1009,7 +1109,27 @@ BEGIN: Pods Options
 
           <td>
 
-            Adjust padding below the pod.
+            Adjust margin below the pod.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .pod-*-left
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Adjust margin to the left of the pod.
 
           </td>
 
@@ -1041,7 +1161,7 @@ BEGIN: Pods Options
       <div class="example-block-footer example-block-footer-codeblock">
 
 <pre class="prettyprint lang-html flush-bottom">
-&lt;div class="pod pod-short-top pod-taller-bottom"&gt;
+&lt;div class="pod pod-short-top pod-taller-bottom pod-wide-left pod-narrower-right"&gt;
   &hellip;
 &lt;/div&gt;
 </pre>
