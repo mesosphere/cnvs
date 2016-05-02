@@ -37,35 +37,35 @@ Margin
 
 // Margin Top
 
-@pod-margin-top:                                                                null;
-@pod-margin-top-scale-screen-small:                                             null;
-@pod-margin-top-scale-screen-medium:                                            null;
-@pod-margin-top-scale-screen-large:                                             null;
-@pod-margin-top-scale-screen-jumbo:                                             null;
+@pod-margin-top:                                                                @base-spacing-unit;
+@pod-margin-top-scale-screen-small:                                             @base-spacing-unit-screen-small / @pod-margin-top;
+@pod-margin-top-scale-screen-medium:                                            @base-spacing-unit-screen-medium / @pod-margin-top;
+@pod-margin-top-scale-screen-large:                                             @base-spacing-unit-screen-large / @pod-margin-top;
+@pod-margin-top-scale-screen-jumbo:                                             @base-spacing-unit-screen-jumbo / @pod-margin-top;
 
 // Margin Bottom
 
-@pod-margin-bottom:                                                             null;
-@pod-margin-bottom-scale-screen-small:                                          null;
-@pod-margin-bottom-scale-screen-medium:                                         null;
-@pod-margin-bottom-scale-screen-large:                                          null;
-@pod-margin-bottom-scale-screen-jumbo:                                          null;
+@pod-margin-bottom:                                                             @pod-margin-top;
+@pod-margin-bottom-scale-screen-small:                                          @pod-margin-top-scale-screen-small;
+@pod-margin-bottom-scale-screen-medium:                                         @pod-margin-top-scale-screen-medium;
+@pod-margin-bottom-scale-screen-large:                                          @pod-margin-top-scale-screen-large;
+@pod-margin-bottom-scale-screen-jumbo:                                          @pod-margin-top-scale-screen-jumbo;
 
 // Margin Left
 
-@pod-margin-left:                                                               null;
-@pod-margin-left-scale-screen-small:                                            null;
-@pod-margin-left-scale-screen-medium:                                           null;
-@pod-margin-left-scale-screen-large:                                            null;
-@pod-margin-left-scale-screen-jumbo:                                            null;
+@pod-margin-left:                                                               @pod-margin-top;
+@pod-margin-left-scale-screen-small:                                            @pod-margin-top-scale-screen-small;
+@pod-margin-left-scale-screen-medium:                                           @pod-margin-top-scale-screen-medium;
+@pod-margin-left-scale-screen-large:                                            @pod-margin-top-scale-screen-large;
+@pod-margin-left-scale-screen-jumbo:                                            @pod-margin-top-scale-screen-jumbo;
 
 // Margin Right
 
-@pod-margin-right:                                                              null;
-@pod-margin-right-scale-screen-small:                                           null;
-@pod-margin-right-scale-screen-medium:                                          null;
-@pod-margin-right-scale-screen-large:                                           null;
-@pod-margin-right-scale-screen-jumbo:                                           null;
+@pod-margin-right:                                                              @pod-margin-top;
+@pod-margin-right-scale-screen-small:                                           @pod-margin-top-scale-screen-small;
+@pod-margin-right-scale-screen-medium:                                          @pod-margin-top-scale-screen-medium;
+@pod-margin-right-scale-screen-large:                                           @pod-margin-top-scale-screen-large;
+@pod-margin-right-scale-screen-jumbo:                                           @pod-margin-top-scale-screen-jumbo;
 
 /* -----------------------------------------------------------------------------
 Padding
@@ -73,19 +73,19 @@ Padding
 
 // Padding Top
 
-@pod-padding-top:                                                               @base-spacing-unit;
-@pod-padding-top-scale-screen-small:                                            @base-spacing-unit-screen-small / @pod-padding-top;
-@pod-padding-top-scale-screen-medium:                                           @base-spacing-unit-screen-medium / @pod-padding-top;
-@pod-padding-top-scale-screen-large:                                            @base-spacing-unit-screen-large / @pod-padding-top;
-@pod-padding-top-scale-screen-jumbo:                                            @base-spacing-unit-screen-jumbo / @pod-padding-top;
+@pod-padding-top:                                                               null;
+@pod-padding-top-scale-screen-small:                                            null;
+@pod-padding-top-scale-screen-medium:                                           null;
+@pod-padding-top-scale-screen-large:                                            null;
+@pod-padding-top-scale-screen-jumbo:                                            null;
 
 // Padding Bottom
 
-@pod-padding-bottom:                                                            @pod-padding-top;
-@pod-padding-bottom-scale-screen-small:                                         @pod-padding-top-scale-screen-small;
-@pod-padding-bottom-scale-screen-medium:                                        @pod-padding-top-scale-screen-medium;
-@pod-padding-bottom-scale-screen-large:                                         @pod-padding-top-scale-screen-large;
-@pod-padding-bottom-scale-screen-jumbo:                                         @pod-padding-top-scale-screen-jumbo;
+@pod-padding-bottom:                                                            null;
+@pod-padding-bottom-scale-screen-small:                                         null;
+@pod-padding-bottom-scale-screen-medium:                                        null;
+@pod-padding-bottom-scale-screen-large:                                         null;
+@pod-padding-bottom-scale-screen-jumbo:                                         null;
 
 // Padding Left
 
@@ -154,3 +154,51 @@ Layout Variants
 @pod-taller-padding-bottom-scale:                                               2.0;
 @pod-taller-padding-left-scale:                                                 null;
 @pod-taller-padding-right-scale:                                                null;
+
+// Narrower
+
+@pod-narrower-margin-top-scale:                                                 null;
+@pod-narrower-margin-bottom-scale:                                              null;
+@pod-narrower-margin-left-scale:                                                0.25;
+@pod-narrower-margin-right-scale:                                               0.25;
+
+@pod-narrower-padding-top-scale:                                                null;
+@pod-narrower-padding-bottom-scale:                                             null;
+@pod-narrower-padding-left-scale:                                               0.25;
+@pod-narrower-padding-right-scale:                                              0.25;
+
+// Narrow
+
+@pod-narrow-margin-top-scale:                                                   null;
+@pod-narrow-margin-bottom-scale:                                                null;
+@pod-narrow-margin-left-scale:                                                  0.5;
+@pod-narrow-margin-right-scale:                                                 0.5;
+
+@pod-narrow-padding-top-scale:                                                  null;
+@pod-narrow-padding-bottom-scale:                                               null;
+@pod-narrow-padding-left-scale:                                                 0.5;
+@pod-narrow-padding-right-scale:                                                0.5;
+
+// Wide
+
+@pod-wide-margin-top-scale:                                                     null;
+@pod-wide-margin-bottom-scale:                                                  null;
+@pod-wide-margin-left-scale:                                                    1.5;
+@pod-wide-margin-right-scale:                                                   1.5;
+
+@pod-wide-padding-top-scale:                                                    null;
+@pod-wide-padding-bottom-scale:                                                 null;
+@pod-wide-padding-left-scale:                                                   1.5;
+@pod-wide-padding-right-scale:                                                  1.5;
+
+// Wider
+
+@pod-wider-margin-top-scale:                                                    null;
+@pod-wider-margin-bottom-scale:                                                 null;
+@pod-wider-margin-left-scale:                                                   2.0;
+@pod-wider-margin-right-scale:                                                  2.0;
+
+@pod-wider-padding-top-scale:                                                   null;
+@pod-wider-padding-bottom-scale:                                                null;
+@pod-wider-padding-left-scale:                                                  2.0;
+@pod-wider-padding-right-scale:                                                 2.0;

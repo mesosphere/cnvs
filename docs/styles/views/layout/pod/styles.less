@@ -15,13 +15,13 @@ Pod Overview
 .layout-box.pods-overview {
 
   width: 100%;
-  margin: 0 auto;
+  padding: 0 auto;
 
   .layout-box-item {
 
-    &.layout-box-item-padding {
+    &.layout-box-item-margin {
 
-      padding: @pod-padding-top 0px;
+      padding: @pod-margin-top 0px;
 
     }
 
@@ -33,11 +33,11 @@ Pod Overview
 
   .layout-box-item {
 
-    &.layout-box-item-padding {
+    &.layout-box-item-margin {
 
-      & when not (@pod-short-padding-top-scale = null) {
+      & when not (@pod-short-margin-top-scale = null) {
 
-        padding: (@pod-padding-top * @pod-short-padding-top-scale) 0px;
+        padding: (@pod-margin-top * @pod-short-margin-top-scale) 0px;
 
       }
 
@@ -51,17 +51,17 @@ Pod Overview
 
   .layout-box-item {
 
-    &.layout-box-item-padding {
+    &.layout-box-item-margin {
 
-      & when not (@pod-short-padding-top-scale = null) {
+      & when not (@pod-short-margin-top-scale = null) {
 
-        padding-top: (@pod-padding-top * @pod-short-padding-top-scale)
+        padding-top: (@pod-margin-top * @pod-short-margin-top-scale);
 
       }
 
-      & when not (@pod-taller-padding-bottom-scale = null) {
+      & when not (@pod-taller-margin-bottom-scale = null) {
 
-        padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale)
+        padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale);
 
       }
 
@@ -89,11 +89,11 @@ Pod Overview
 
       .layout-box-item {
 
-        & when not (@pod-padding-top-scale-screen-small = null) {
+        & when not (@pod-margin-top-scale-screen-small = null) {
 
-          &.layout-box-item-padding {
+          &.layout-box-item-margin {
 
-            padding: (@pod-padding-top * @pod-padding-top-scale-screen-small) 0px;
+            padding: (@pod-margin-top * @pod-margin-top-scale-screen-small) 0px;
 
           }
 
@@ -113,11 +113,11 @@ Pod Overview
 
       .layout-box-item {
 
-        &.layout-box-item-padding {
+        &.layout-box-item-margin {
 
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-small = null) {
+          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-small = null) {
 
-            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-small) 0px;
+            padding: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-small) 0px;
 
           }
 
@@ -131,17 +131,17 @@ Pod Overview
 
       .layout-box-item {
 
-        &.layout-box-item-padding {
+        &.layout-box-item-margin {
 
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-small = null) {
+          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-small = null) {
 
-            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-small)
+            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-small)
 
           }
 
-          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-small = null) {
+          & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-small = null) {
 
-            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-small)
+            padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-small)
 
           }
 
@@ -173,11 +173,11 @@ Pod Overview
 
       .layout-box-item {
 
-        & when not (@pod-padding-top-scale-screen-medium = null) {
+        & when not (@pod-margin-top-scale-screen-medium = null) {
 
-          &.layout-box-item-padding {
+          &.layout-box-item-margin {
 
-            padding: (@pod-padding-top * @pod-padding-top-scale-screen-medium) 0px;
+            padding: (@pod-margin-top * @pod-margin-top-scale-screen-medium) 0px;
 
           }
 
@@ -197,11 +197,11 @@ Pod Overview
 
       .layout-box-item {
 
-        &.layout-box-item-padding {
+        &.layout-box-item-margin {
 
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-medium = null) {
+          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-medium = null) {
 
-            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-medium) 0px;
+            padding: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-medium) 0px;
 
           }
 
@@ -215,17 +215,17 @@ Pod Overview
 
       .layout-box-item {
 
-        &.layout-box-item-padding {
+        &.layout-box-item-margin {
 
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-medium = null) {
+          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-medium = null) {
 
-            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-medium)
+            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-medium)
 
           }
 
-          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-medium = null) {
+          & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-medium = null) {
 
-            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-medium)
+            padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-medium)
 
           }
 
@@ -257,11 +257,11 @@ Pod Overview
 
       .layout-box-item {
 
-        & when not (@pod-padding-top-scale-screen-large = null) {
+        & when not (@pod-margin-top-scale-screen-large = null) {
 
-          &.layout-box-item-padding {
+          &.layout-box-item-margin {
 
-            padding: (@pod-padding-top * @pod-padding-top-scale-screen-large) 0px;
+            padding: (@pod-margin-top * @pod-margin-top-scale-screen-large) 0px;
 
           }
 
@@ -281,11 +281,11 @@ Pod Overview
 
       .layout-box-item {
 
-        &.layout-box-item-padding {
+        &.layout-box-item-margin {
 
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-large = null) {
+          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-large = null) {
 
-            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-large) 0px;
+            padding: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-large) 0px;
 
           }
 
@@ -299,17 +299,17 @@ Pod Overview
 
       .layout-box-item {
 
-        &.layout-box-item-padding {
+        &.layout-box-item-margin {
 
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-large = null) {
+          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-large = null) {
 
-            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-large)
+            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-large)
 
           }
 
-          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-large = null) {
+          & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-large = null) {
 
-            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-large)
+            padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-large)
 
           }
 
@@ -341,11 +341,11 @@ Pod Overview
 
       .layout-box-item {
 
-        & when not (@pod-padding-top-scale-screen-jumbo = null) {
+        & when not (@pod-margin-top-scale-screen-jumbo = null) {
 
-          &.layout-box-item-padding {
+          &.layout-box-item-margin {
 
-            padding: (@pod-padding-top * @pod-padding-top-scale-screen-jumbo) 0px;
+            padding: (@pod-margin-top * @pod-margin-top-scale-screen-jumbo) 0px;
 
           }
 
@@ -365,11 +365,11 @@ Pod Overview
 
       .layout-box-item {
 
-        &.layout-box-item-padding {
+        &.layout-box-item-margin {
 
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-jumbo = null) {
+          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-jumbo = null) {
 
-            padding: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-jumbo) 0px;
+            padding: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-jumbo) 0px;
 
           }
 
@@ -383,17 +383,17 @@ Pod Overview
 
       .layout-box-item {
 
-        &.layout-box-item-padding {
+        &.layout-box-item-margin {
 
-          & when not (@pod-short-padding-top-scale = null) and not (@pod-padding-top-scale-screen-jumbo = null) {
+          & when not (@pod-short-margin-top-scale = null) and not (@pod-margin-top-scale-screen-jumbo = null) {
 
-            padding-top: (@pod-padding-top * @pod-short-padding-top-scale * @pod-padding-top-scale-screen-jumbo)
+            padding-top: (@pod-margin-top * @pod-short-margin-top-scale * @pod-margin-top-scale-screen-jumbo)
 
           }
 
-          & when not (@pod-taller-padding-bottom-scale = null) and not (@pod-padding-bottom-scale-screen-jumbo = null) {
+          & when not (@pod-taller-margin-bottom-scale = null) and not (@pod-margin-bottom-scale-screen-jumbo = null) {
 
-            padding-bottom: (@pod-padding-bottom * @pod-taller-padding-bottom-scale * @pod-padding-bottom-scale-screen-jumbo)
+            padding-bottom: (@pod-margin-bottom * @pod-taller-margin-bottom-scale * @pod-margin-bottom-scale-screen-jumbo)
 
           }
 
