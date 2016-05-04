@@ -44,6 +44,8 @@ BEGIN: Head
 
   </title>
 
+  
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
@@ -253,7 +255,7 @@ BEGIN: Navigation
 
       <a href="/" class="">
 
-        Home
+        Overview
 
       </a>
 
@@ -738,7 +740,7 @@ BEGIN: Container (Fluid)
 
   <p>
 
-    Use <code>.container-fluid</code> for a fluid container.  A fluid container is one where the width of the container is fluid relative to the width of it's parent. By default, a fluid container has outside margins on the left and right.  The width of these margins can be modified with provided classes or removed entirely. For small devices, a fixed and a fluid container behave the same.
+    In previous versions of CNVS, <code>.container-fluid</code> was used to encapsulated content that should fill the width of it's parent.  A fluid container applied outerward spacing to the left and right of the Container and was a quick way to create a header, banner, or other full-width components.  With the introduction of the <code>.pod</code> layout component (see: <a href="/layout/pods"><em>Pods</em></a>) we Containers have been generalized to be used only for bounding content by width.  To create the previously seen by <code>.container-fluid</code> it is now suggested that you wrap content in a <code>.pod</code>.
 
   </p>
 
@@ -764,7 +766,7 @@ BEGIN: Container (Fluid)
     <div class="example-block-footer example-block-footer-codeblock">
 
 <pre class="prettyprint lang-html flush-bottom">
-&lt;div class="container-fluid"&gt;
+&lt;div class="pod pod-flush-top pod-flush-bottom"&gt;
   &lt;!-- Container content goes here --&gt;
 &lt;/div&gt;
 </pre>
@@ -775,320 +777,6 @@ BEGIN: Container (Fluid)
 
   <!-- =================================================
   END: Example
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Container (Fluid) Options
-  ================================================== -->
-
-  <section id="containers-fluid-options">
-
-    <h3>
-
-      Fluid-Width Container Options
-
-    </h3>
-
-    <p>
-
-      By default, margins are applied evenly to both the left and right of the fluid container. You can easily adjust this behavior by adding a size modifier to the base <code>.container-fluid</code> class. For example <code>.container-fluid-narrow</code> will decrease the margins and <code>.container-fluid-wide</code> will increase the margin. Furthermore, if you are seeking to change the margin in only a single direction, you can add an additional direction modifier. For example, <code>.container-fluid-wide-left</code> increase the margin only the left of the fluid container.
-
-    </p>
-
-    <h4>
-
-      Size Modifiers
-
-    </h4>
-
-    <p>
-
-      To adjust margin apply one of the available container-specific size classes.  For example, simply using the class <code>.container-fluid-narrow</code> will reduce margins evenly on each side of the fluid container.
-
-    </p>
-
-    <table class="table">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .container-fluid-flush
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Outside margins are removed entirely.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .container-fluid-narrow
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Outside margins by default are decreased by 50%
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .container-fluid-narrower
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Outside margins by default are decreased by 25%
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .container-fluid-wide
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Outside margins by default are increased to 200%
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .container-fluid-wider
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Outside margins by default are increased to 400%
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="example-block">
-
-      <div class="example-block-content">
-
-        <div class="layout-box containers-fluid-options-size-modifier">
-          <div class="layout-box-item layout-box-item-margin">
-            <div class="layout-box-item layout-box-item-padding">
-              <div class="layout-box-item layout-box-item-content">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="example-block-footer example-block-footer-codeblock">
-
-<pre class="prettyprint lang-html flush-bottom">
-&lt;div class="container-fluid container-fluid-narrow"&gt;
-  &lt;!-- Container content goes here --&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-    <h3>
-
-      Size Direction Modifiers
-
-    </h3>
-
-    <p>
-
-      Add <code>-left</code> or <code>-right</code> to the end of the size modifier class to adjust margin only in the direction implied by the direction modifier.
-
-    </p>
-
-    <table class="table short">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .container-fluid-*-left
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Adjust margin to the left of the container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .container-fluid-*-right
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Adjust margin to the right of the container.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="example-block flush-bottom">
-
-      <div class="example-block-content">
-
-        <div class="layout-box containers-fluid-options-size-direction-modifier">
-          <div class="layout-box-item layout-box-item-margin">
-            <div class="layout-box-item layout-box-item-padding">
-              <div class="layout-box-item layout-box-item-content">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="example-block-footer example-block-footer-codeblock">
-
-<pre class="prettyprint lang-html flush-bottom">
-&lt;div class="container-fluid container-fluid-wider-left container-fluid-narrow-right"&gt;
-  &lt;!-- Container content goes here --&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Container (Fluid) Options
   ================================================== -->
 
 </section>
