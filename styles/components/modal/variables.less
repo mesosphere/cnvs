@@ -38,14 +38,14 @@ Layout
 // Width
 
 @modal-width:                                                                   100%;
-@modal-width-screen-small:                                                      320px;
-@modal-width-screen-medium:                                                     500px;
-@modal-width-screen-large:                                                      600px;
-@modal-width-screen-jumbo:                                                      600px;
+@modal-width-screen-small:                                                      350px;
+@modal-width-screen-medium:                                                     450px;
+@modal-width-screen-large:                                                      500px;
+@modal-width-screen-jumbo:                                                      550px;
 
 // Border Radius
 
-@modal-border-radius:                                                           4px;
+@modal-border-radius:                                                           3px;
 @modal-border-radius-screen-small:                                              null;
 @modal-border-radius-screen-medium:                                             null;
 @modal-border-radius-screen-large:                                              null;
@@ -53,19 +53,19 @@ Layout
 
 // Margin Top
 
-@modal-margin-top:                                                              null;
-@modal-margin-top-screen-small:                                                 null;
-@modal-margin-top-screen-medium:                                                null;
-@modal-margin-top-screen-large:                                                 null;
-@modal-margin-top-screen-jumbo:                                                 null;
+@modal-margin-top:                                                              0.0 * @base-spacing-unit;
+@modal-margin-top-screen-small:                                                 1.0 * @base-spacing-unit-screen-small;
+@modal-margin-top-screen-medium:                                                1.0 * @base-spacing-unit-screen-medium;
+@modal-margin-top-screen-large:                                                 1.0 * @base-spacing-unit-screen-large;
+@modal-margin-top-screen-jumbo:                                                 0.75 * @base-spacing-unit-screen-jumbo;
 
 // Margin Bottom
 
-@modal-margin-bottom:                                                           null;
-@modal-margin-bottom-screen-small:                                              null;
-@modal-margin-bottom-screen-medium:                                             null;
-@modal-margin-bottom-screen-large:                                              null;
-@modal-margin-bottom-screen-jumbo:                                              null;
+@modal-margin-bottom:                                                           0.0 * @base-spacing-unit;
+@modal-margin-bottom-screen-small:                                              1.0 * @base-spacing-unit-screen-small;
+@modal-margin-bottom-screen-medium:                                             1.0 * @base-spacing-unit-screen-medium;
+@modal-margin-bottom-screen-large:                                              1.0 * @base-spacing-unit-screen-large;
+@modal-margin-bottom-screen-jumbo:                                              0.75 * @base-spacing-unit-screen-jumbo;
 
 // Margin Left
 
@@ -139,7 +139,7 @@ Styling
 @modal-border-left-width:                                                       null;
 @modal-border-left-color:                                                       null;
 @modal-border-left-style:                                                       null;
-@modal-shadow:                                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+@modal-shadow:                                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
 
 // Inverse
 
@@ -209,11 +209,11 @@ Layout
 
 // Padding Top
 
-@modal-header-padding-top:                                                      0.5 * @base-spacing-unit;
-@modal-header-padding-top-screen-small:                                         0.5 * @base-spacing-unit-screen-small;
-@modal-header-padding-top-screen-medium:                                        0.5 * @base-spacing-unit-screen-medium;
-@modal-header-padding-top-screen-large:                                         0.5 * @base-spacing-unit-screen-large;
-@modal-header-padding-top-screen-jumbo:                                         0.5 * @base-spacing-unit-screen-jumbo;
+@modal-header-padding-top:                                                      1.0 * @base-spacing-unit;
+@modal-header-padding-top-screen-small:                                         1.0 * @base-spacing-unit-screen-small;
+@modal-header-padding-top-screen-medium:                                        1.0 * @base-spacing-unit-screen-medium;
+@modal-header-padding-top-screen-large:                                         1.0 * @base-spacing-unit-screen-large;
+@modal-header-padding-top-screen-jumbo:                                         0.75 * @base-spacing-unit-screen-jumbo;
 
 // Padding Bottom
 
@@ -225,11 +225,11 @@ Layout
 
 // Padding Left
 
-@modal-header-padding-left:                                                     0.5 * @base-spacing-unit;
-@modal-header-padding-left-screen-small:                                        0.5 * @base-spacing-unit-screen-small;
-@modal-header-padding-left-screen-medium:                                       0.5 * @base-spacing-unit-screen-medium;
-@modal-header-padding-left-screen-large:                                        0.5 * @base-spacing-unit-screen-large;
-@modal-header-padding-left-screen-jumbo:                                        0.5 * @base-spacing-unit-screen-jumbo;
+@modal-header-padding-left:                                                     1.0 * @base-spacing-unit;
+@modal-header-padding-left-screen-small:                                        1.0 * @base-spacing-unit-screen-small;
+@modal-header-padding-left-screen-medium:                                       1.0 * @base-spacing-unit-screen-medium;
+@modal-header-padding-left-screen-large:                                        1.0 * @base-spacing-unit-screen-large;
+@modal-header-padding-left-screen-jumbo:                                        0.75 * @base-spacing-unit-screen-jumbo;
 
 // Padding Right
 
@@ -335,137 +335,11 @@ Layout
 
 // Padding Top
 
-@modal-body-padding-top:                                                        0.5 * @base-spacing-unit;
-@modal-body-padding-top-screen-small:                                           0.5 * @base-spacing-unit-screen-small;
-@modal-body-padding-top-screen-medium:                                          0.5 * @base-spacing-unit-screen-medium;
-@modal-body-padding-top-screen-large:                                           0.5 * @base-spacing-unit-screen-large;
-@modal-body-padding-top-screen-jumbo:                                           0.5 * @base-spacing-unit-screen-jumbo;
-
-// Padding Bottom
-
-@modal-body-padding-bottom:                                                     @modal-body-padding-top;
-@modal-body-padding-bottom-screen-small:                                        @modal-body-padding-top-screen-small;
-@modal-body-padding-bottom-screen-medium:                                       @modal-body-padding-top-screen-medium;
-@modal-body-padding-bottom-screen-large:                                        @modal-body-padding-top-screen-large;
-@modal-body-padding-bottom-screen-jumbo:                                        @modal-body-padding-top-screen-jumbo;
-
-// Padding Left
-
-@modal-body-padding-left:                                                       0.5 * @base-spacing-unit;
-@modal-body-padding-left-screen-small:                                          0.5 * @base-spacing-unit-screen-small;
-@modal-body-padding-left-screen-medium:                                         0.5 * @base-spacing-unit-screen-medium;
-@modal-body-padding-left-screen-large:                                          0.5 * @base-spacing-unit-screen-large;
-@modal-body-padding-left-screen-jumbo:                                          0.5 * @base-spacing-unit-screen-jumbo;
-
-// Padding Right
-
-@modal-body-padding-right:                                                      @modal-body-padding-left;
-@modal-body-padding-right-screen-small:                                         @modal-body-padding-left-screen-small;
-@modal-body-padding-right-screen-medium:                                        @modal-body-padding-left-screen-medium;
-@modal-body-padding-right-screen-large:                                         @modal-body-padding-left-screen-large;
-@modal-body-padding-right-screen-jumbo:                                         @modal-body-padding-left-screen-jumbo;
-
-
-
-/* -----------------------------------------------------------------------------
-Styling
------------------------------------------------------------------------------ */
-
-// Normal
-
-@modal-body-background-color:                                                   @white;
-@modal-body-background-gradient-color-top:                                      null;
-@modal-body-background-gradient-color-bottom:                                   null;
-@modal-body-border-width:                                                       null;
-@modal-body-border-color:                                                       null;
-@modal-body-border-style:                                                       null;
-@modal-body-border-top-width:                                                   null;
-@modal-body-border-top-color:                                                   null;
-@modal-body-border-top-style:                                                   null;
-@modal-body-border-right-width:                                                 null;
-@modal-body-border-right-color:                                                 null;
-@modal-body-border-right-style:                                                 null;
-@modal-body-border-bottom-width:                                                null;
-@modal-body-border-bottom-color:                                                null;
-@modal-body-border-bottom-style:                                                null;
-@modal-body-border-left-width:                                                  null;
-@modal-body-border-left-color:                                                  null;
-@modal-body-border-left-style:                                                  null;
-@modal-body-shadow:                                                             0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-
-// Inverse
-
-@modal-body-inverse-background-color:                                           color-lighten(@neutral, -20);
-@modal-body-inverse-background-gradient-color-top:                              null;
-@modal-body-inverse-background-gradient-color-bottom:                           null;
-@modal-body-inverse-border-width:                                               null;
-@modal-body-inverse-border-color:                                               null;
-@modal-body-inverse-border-style:                                               null;
-@modal-body-inverse-border-top-width:                                           null;
-@modal-body-inverse-border-top-color:                                           null;
-@modal-body-inverse-border-top-style:                                           null;
-@modal-body-inverse-border-right-width:                                         null;
-@modal-body-inverse-border-right-color:                                         null;
-@modal-body-inverse-border-right-style:                                         null;
-@modal-body-inverse-border-bottom-width:                                        null;
-@modal-body-inverse-border-bottom-color:                                        null;
-@modal-body-inverse-border-bottom-style:                                        null;
-@modal-body-inverse-border-left-width:                                          null;
-@modal-body-inverse-border-left-color:                                          null;
-@modal-body-inverse-border-left-style:                                          null;
-@modal-body-inverse-shadow:                                                     none;
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Modal Body
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-/* -----------------------------------------------------------------------------
-Layout
------------------------------------------------------------------------------ */
-
-// Margin Top
-
-@modal-body-margin-top:                                                         null;
-@modal-body-margin-top-screen-small:                                            null;
-@modal-body-margin-top-screen-medium:                                           null;
-@modal-body-margin-top-screen-large:                                            null;
-@modal-body-margin-top-screen-jumbo:                                            null;
-
-// Margin Bottom
-
-@modal-body-margin-bottom:                                                      null;
-@modal-body-margin-bottom-screen-small:                                         null;
-@modal-body-margin-bottom-screen-medium:                                        null;
-@modal-body-margin-bottom-screen-large:                                         null;
-@modal-body-margin-bottom-screen-jumbo:                                         null;
-
-// Margin Left
-
-@modal-body-margin-left:                                                        null;
-@modal-body-margin-left-screen-small:                                           null;
-@modal-body-margin-left-screen-medium:                                          null;
-@modal-body-margin-left-screen-large:                                           null;
-@modal-body-margin-left-screen-jumbo:                                           null;
-
-// Margin Right
-
-@modal-body-margin-right:                                                       null;
-@modal-body-margin-right-screen-small:                                          null;
-@modal-body-margin-right-screen-medium:                                         null;
-@modal-body-margin-right-screen-large:                                          null;
-@modal-body-margin-right-screen-jumbo:                                          null;
-
-// Padding Top
-
 @modal-body-padding-top:                                                        1.0 * @base-spacing-unit;
 @modal-body-padding-top-screen-small:                                           1.0 * @base-spacing-unit-screen-small;
 @modal-body-padding-top-screen-medium:                                          1.0 * @base-spacing-unit-screen-medium;
 @modal-body-padding-top-screen-large:                                           1.0 * @base-spacing-unit-screen-large;
-@modal-body-padding-top-screen-jumbo:                                           1.0 * @base-spacing-unit-screen-jumbo;
+@modal-body-padding-top-screen-jumbo:                                           0.75 * @base-spacing-unit-screen-jumbo;
 
 // Padding Bottom
 
@@ -477,11 +351,11 @@ Layout
 
 // Padding Left
 
-@modal-body-padding-left:                                                       0.5 * @base-spacing-unit;
-@modal-body-padding-left-screen-small:                                          0.5 * @base-spacing-unit-screen-small;
-@modal-body-padding-left-screen-medium:                                         0.5 * @base-spacing-unit-screen-medium;
-@modal-body-padding-left-screen-large:                                          0.5 * @base-spacing-unit-screen-large;
-@modal-body-padding-left-screen-jumbo:                                          0.5 * @base-spacing-unit-screen-jumbo;
+@modal-body-padding-left:                                                       1.0 * @base-spacing-unit;
+@modal-body-padding-left-screen-small:                                          1.0 * @base-spacing-unit-screen-small;
+@modal-body-padding-left-screen-medium:                                         1.0 * @base-spacing-unit-screen-medium;
+@modal-body-padding-left-screen-large:                                          1.0 * @base-spacing-unit-screen-large;
+@modal-body-padding-left-screen-jumbo:                                          0.75 * @base-spacing-unit-screen-jumbo;
 
 // Padding Right
 
@@ -587,11 +461,11 @@ Layout
 
 // Padding Top
 
-@modal-footer-padding-top:                                                      0.5 * @base-spacing-unit;
-@modal-footer-padding-top-screen-small:                                         0.5 * @base-spacing-unit-screen-small;
-@modal-footer-padding-top-screen-medium:                                        0.5 * @base-spacing-unit-screen-medium;
-@modal-footer-padding-top-screen-large:                                         0.5 * @base-spacing-unit-screen-large;
-@modal-footer-padding-top-screen-jumbo:                                         0.5 * @base-spacing-unit-screen-jumbo;
+@modal-footer-padding-top:                                                      1.0 * @base-spacing-unit;
+@modal-footer-padding-top-screen-small:                                         1.0 * @base-spacing-unit-screen-small;
+@modal-footer-padding-top-screen-medium:                                        1.0 * @base-spacing-unit-screen-medium;
+@modal-footer-padding-top-screen-large:                                         1.0 * @base-spacing-unit-screen-large;
+@modal-footer-padding-top-screen-jumbo:                                         0.75 * @base-spacing-unit-screen-jumbo;
 
 // Padding Bottom
 
@@ -603,11 +477,11 @@ Layout
 
 // Padding Left
 
-@modal-footer-padding-left:                                                     0.5 * @base-spacing-unit;
-@modal-footer-padding-left-screen-small:                                        0.5 * @base-spacing-unit-screen-small;
-@modal-footer-padding-left-screen-medium:                                       0.5 * @base-spacing-unit-screen-medium;
-@modal-footer-padding-left-screen-large:                                        0.5 * @base-spacing-unit-screen-large;
-@modal-footer-padding-left-screen-jumbo:                                        0.5 * @base-spacing-unit-screen-jumbo;
+@modal-footer-padding-left:                                                     1.0 * @base-spacing-unit;
+@modal-footer-padding-left-screen-small:                                        1.0 * @base-spacing-unit-screen-small;
+@modal-footer-padding-left-screen-medium:                                       1.0 * @base-spacing-unit-screen-medium;
+@modal-footer-padding-left-screen-large:                                        1.0 * @base-spacing-unit-screen-large;
+@modal-footer-padding-left-screen-jumbo:                                        0.75 * @base-spacing-unit-screen-jumbo;
 
 // Padding Right
 
