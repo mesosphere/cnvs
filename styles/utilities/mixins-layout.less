@@ -695,24 +695,11 @@ Calculate Grid Column Push
 
 
 
-
-/*
-* Generate styles for element at screen-size (e.g. ".pod-narrow")
-* Generate direction modifier styles for element at screen-size (e.g. ".pod-narrow-right")
-* Generate conditional classes for element at screen-size (e.g. ".pod-narrow-screen-medium")
-* Generate direction modifier styles for element at screen-size (e.g. ".pod-narrow-right-screen-medium")
-*/
-
-
-
-
-
-
 /* -----------------------------------------------------------------------------
 Layout Variant
 ----------------------------------------------------------------------------- */
 
-.temp-layout-variant (@element, @subclass, @property, @screen-size-scale) {
+.new-layout-variant (@element, @subclass, @property, @screen-size-scale) {
 
   @element-property: '@{element}-@{property}';
   @element-screen-size-scale: replace(e('@{element}-@{property}-@{size}'), '-null', '');
@@ -773,7 +760,7 @@ Layout Variant
 Shape layout Variant
 ----------------------------------------------------------------------------- */
 
-.pod-layout-variant(@element, @class, @size) {
+.spacing-layout-variant(@element, @class, @size) {
 
   @class-prefix: replace(e('@{element}-@{class}'), '-null', '');
   @class-suffix: replace(replace(e('@{size}'), 'scale-', ''), '-null', '');
@@ -782,42 +769,42 @@ Shape layout Variant
 
     &.@{class-prefix} {
 
-      .temp-layout-variant (@element, @class, margin-top, @size);
-      .temp-layout-variant (@element, @class, margin-bottom, @size);
-      .temp-layout-variant (@element, @class, margin-left, @size);
-      .temp-layout-variant (@element, @class, margin-right, @size);
-      .temp-layout-variant (@element, @class, padding-top, @size);
-      .temp-layout-variant (@element, @class, padding-bottom, @size);
-      .temp-layout-variant (@element, @class, padding-left, @size);
-      .temp-layout-variant (@element, @class, padding-right, @size);
+      .new-layout-variant (@element, @class, margin-top, @size);
+      .new-layout-variant (@element, @class, margin-bottom, @size);
+      .new-layout-variant (@element, @class, margin-left, @size);
+      .new-layout-variant (@element, @class, margin-right, @size);
+      .new-layout-variant (@element, @class, padding-top, @size);
+      .new-layout-variant (@element, @class, padding-bottom, @size);
+      .new-layout-variant (@element, @class, padding-left, @size);
+      .new-layout-variant (@element, @class, padding-right, @size);
 
     }
 
     &.@{class-prefix}-top {
 
-      .temp-layout-variant (@element, @class, margin-top, @size);
-      .temp-layout-variant (@element, @class, padding-top, @size);
+      .new-layout-variant (@element, @class, margin-top, @size);
+      .new-layout-variant (@element, @class, padding-top, @size);
 
     }
 
     &.@{class-prefix}-bottom {
 
-      .temp-layout-variant (@element, @class, margin-bottom, @size);
-      .temp-layout-variant (@element, @class, padding-bottom, @size);
+      .new-layout-variant (@element, @class, margin-bottom, @size);
+      .new-layout-variant (@element, @class, padding-bottom, @size);
 
     }
 
     &.@{class-prefix}-left {
 
-      .temp-layout-variant (@element, @class, margin-left, @size);
-      .temp-layout-variant (@element, @class, padding-left, @size);
+      .new-layout-variant (@element, @class, margin-left, @size);
+      .new-layout-variant (@element, @class, padding-left, @size);
 
     }
 
     &.@{class-prefix}-right {
 
-      .temp-layout-variant (@element, @class, margin-right, @size);
-      .temp-layout-variant (@element, @class, padding-right, @size);
+      .new-layout-variant (@element, @class, margin-right, @size);
+      .new-layout-variant (@element, @class, padding-right, @size);
 
     }
 
@@ -828,46 +815,46 @@ Shape layout Variant
     &.@{class-prefix},
     &.@{class-prefix}-@{class-suffix} {
 
-      .temp-layout-variant (@element, @class, margin-top, @size);
-      .temp-layout-variant (@element, @class, margin-bottom, @size);
-      .temp-layout-variant (@element, @class, margin-left, @size);
-      .temp-layout-variant (@element, @class, margin-right, @size);
-      .temp-layout-variant (@element, @class, padding-top, @size);
-      .temp-layout-variant (@element, @class, padding-bottom, @size);
-      .temp-layout-variant (@element, @class, padding-left, @size);
-      .temp-layout-variant (@element, @class, padding-right, @size);
+      .new-layout-variant (@element, @class, margin-top, @size);
+      .new-layout-variant (@element, @class, margin-bottom, @size);
+      .new-layout-variant (@element, @class, margin-left, @size);
+      .new-layout-variant (@element, @class, margin-right, @size);
+      .new-layout-variant (@element, @class, padding-top, @size);
+      .new-layout-variant (@element, @class, padding-bottom, @size);
+      .new-layout-variant (@element, @class, padding-left, @size);
+      .new-layout-variant (@element, @class, padding-right, @size);
 
     }
 
     &.@{class-prefix}-top,
     &.@{class-prefix}-top-@{class-suffix} {
 
-      .temp-layout-variant (@element, @class, margin-top, @size);
-      .temp-layout-variant (@element, @class, padding-top, @size);
+      .new-layout-variant (@element, @class, margin-top, @size);
+      .new-layout-variant (@element, @class, padding-top, @size);
 
     }
 
     &.@{class-prefix}-bottom,
     &.@{class-prefix}-bottom-@{class-suffix} {
 
-      .temp-layout-variant (@element, @class, margin-bottom, @size);
-      .temp-layout-variant (@element, @class, padding-bottom, @size);
+      .new-layout-variant (@element, @class, margin-bottom, @size);
+      .new-layout-variant (@element, @class, padding-bottom, @size);
 
     }
 
     &.@{class-prefix}-left,
     &.@{class-prefix}-left-@{class-suffix} {
 
-      .temp-layout-variant (@element, @class, margin-left, @size);
-      .temp-layout-variant (@element, @class, padding-left, @size);
+      .new-layout-variant (@element, @class, margin-left, @size);
+      .new-layout-variant (@element, @class, padding-left, @size);
 
     }
 
     &.@{class-prefix}-right,
     &.@{class-prefix}-right-@{class-suffix} {
 
-      .temp-layout-variant (@element, @class, margin-right, @size);
-      .temp-layout-variant (@element, @class, padding-right, @size);
+      .new-layout-variant (@element, @class, margin-right, @size);
+      .new-layout-variant (@element, @class, padding-right, @size);
 
     }
 
