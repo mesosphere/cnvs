@@ -1,6 +1,6 @@
 {% if (page.page-header.theme == 'inverse') %}
 
-  {% assign page-header-class = 'canvas-pod-dark page-header-inverse' %}
+  {% assign page-header-class = 'fill-dark page-header-inverse' %}
   {% assign page-header-title-class = 'inverse' %}
   {% assign page-header-headline-class = 'inverse' %}
   {% assign page-header-description-class = 'inverse' %}
@@ -14,7 +14,7 @@
 
 {% else %}
 
-  {% assign page-header-class = 'canvas-pod-light' %}
+  {% assign page-header-class = 'fill-light' %}
   {% assign page-header-title-class = '' %}
   {% assign page-header-headline-class = '' %}
   {% assign page-header-description-class = '' %}
@@ -62,11 +62,11 @@
 BEGIN: Page Header
 ================================================== -->
 
-<div class="page-header canvas-pod {{ page-header-class }} {{ page.page-header.alignment }}">
+<div class="page-header fill {{ page-header-class }} {{ page.page-header.alignment }}">
 
   {% if (page.page-header.background.image != null) and (page.page-header.background.image != empty) %}
 
-    <div class="canvas-pod-background backstretch" data-backstretch-image="/images/{{ page.page-header.background.image }} %}" data-no-retina></div>
+    <div class="fill-background backstretch" data-backstretch-image="/images/{{ page.page-header.background.image }} %}" data-no-retina></div>
 
   {% endif %}
 
