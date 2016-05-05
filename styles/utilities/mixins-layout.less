@@ -360,7 +360,6 @@ Pod
 }
 
 
-
 /* -----------------------------------------------------------------------------
 Generate Index Suffixed Properties for Flex Items
 ----------------------------------------------------------------------------- */
@@ -679,6 +678,196 @@ Calculate Grid Column Push
     .column@{screen}-offset-@{column-index} {
 
       margin-left: percentage((@column-index / @grid-columns-count));
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* Generate styles for element at screen-size (e.g. ".pod-narrow")
+* Generate direction modifier styles for element at screen-size (e.g. ".pod-narrow-right")
+* Generate conditional classes for element at screen-size (e.g. ".pod-narrow-screen-medium")
+* Generate direction modifier styles for element at screen-size (e.g. ".pod-narrow-right-screen-medium")
+*/
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+Layout Variant
+----------------------------------------------------------------------------- */
+
+.temp-layout-variant (@element, @subclass, @property, @screen-size-scale) {
+
+  @element-property: '@{element}-@{property}';
+  @element-screen-size-scale: replace(e('@{element}-@{property}-@{size}'), '-null', '');
+  @element-subclass-scale: replace(e('@{element}-@{subclass}-@{property}-scale'), '-null', '');
+
+  & when not (@@element-property = null) {
+
+    & when (@subclass = null) {
+
+      & when (@screen-size-scale = null) {
+
+        @{property}: @@element-property;
+
+      }
+
+      & when not (@screen-size-scale = null) {
+
+        & when not (@@element-screen-size-scale = null) {
+
+          @{property}: @@element-property * @@element-screen-size-scale;
+
+        }
+
+      }
+
+    }
+
+    & when not (@subclass = null) {
+
+      & when not (@@element-subclass-scale = null) {
+
+        & when (@screen-size-scale = null) {
+
+          @{property}: @@element-property * @@element-subclass-scale;
+
+        }
+
+        & when not (@screen-size-scale = null) {
+
+          & when not (@@element-screen-size-scale = null) {
+
+            @{property}: @@element-property * @@element-screen-size-scale * @@element-subclass-scale;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+/* -----------------------------------------------------------------------------
+Shape layout Variant
+----------------------------------------------------------------------------- */
+
+.pod-layout-variant(@element, @class, @size) {
+
+  @class-prefix: replace(e('@{element}-@{class}'), '-null', '');
+  @class-suffix: replace(replace(e('@{size}'), 'scale-', ''), '-null', '');
+
+  & when (@class-suffix = null) {
+
+    &.@{class-prefix} {
+
+      .temp-layout-variant (@element, @class, margin-top, @size);
+      .temp-layout-variant (@element, @class, margin-bottom, @size);
+      .temp-layout-variant (@element, @class, margin-left, @size);
+      .temp-layout-variant (@element, @class, margin-right, @size);
+      .temp-layout-variant (@element, @class, padding-top, @size);
+      .temp-layout-variant (@element, @class, padding-bottom, @size);
+      .temp-layout-variant (@element, @class, padding-left, @size);
+      .temp-layout-variant (@element, @class, padding-right, @size);
+
+    }
+
+    &.@{class-prefix}-top {
+
+      .temp-layout-variant (@element, @class, margin-top, @size);
+      .temp-layout-variant (@element, @class, padding-top, @size);
+
+    }
+
+    &.@{class-prefix}-bottom {
+
+      .temp-layout-variant (@element, @class, margin-bottom, @size);
+      .temp-layout-variant (@element, @class, padding-bottom, @size);
+
+    }
+
+    &.@{class-prefix}-left {
+
+      .temp-layout-variant (@element, @class, margin-left, @size);
+      .temp-layout-variant (@element, @class, padding-left, @size);
+
+    }
+
+    &.@{class-prefix}-right {
+
+      .temp-layout-variant (@element, @class, margin-right, @size);
+      .temp-layout-variant (@element, @class, padding-right, @size);
+
+    }
+
+  }
+
+  & when not (@class-suffix = null) {
+
+    &.@{class-prefix},
+    &.@{class-prefix}-@{class-suffix} {
+
+      .temp-layout-variant (@element, @class, margin-top, @size);
+      .temp-layout-variant (@element, @class, margin-bottom, @size);
+      .temp-layout-variant (@element, @class, margin-left, @size);
+      .temp-layout-variant (@element, @class, margin-right, @size);
+      .temp-layout-variant (@element, @class, padding-top, @size);
+      .temp-layout-variant (@element, @class, padding-bottom, @size);
+      .temp-layout-variant (@element, @class, padding-left, @size);
+      .temp-layout-variant (@element, @class, padding-right, @size);
+
+    }
+
+    &.@{class-prefix}-top,
+    &.@{class-prefix}-top-@{class-suffix} {
+
+      .temp-layout-variant (@element, @class, margin-top, @size);
+      .temp-layout-variant (@element, @class, padding-top, @size);
+
+    }
+
+    &.@{class-prefix}-bottom,
+    &.@{class-prefix}-bottom-@{class-suffix} {
+
+      .temp-layout-variant (@element, @class, margin-bottom, @size);
+      .temp-layout-variant (@element, @class, padding-bottom, @size);
+
+    }
+
+    &.@{class-prefix}-left,
+    &.@{class-prefix}-left-@{class-suffix} {
+
+      .temp-layout-variant (@element, @class, margin-left, @size);
+      .temp-layout-variant (@element, @class, padding-left, @size);
+
+    }
+
+    &.@{class-prefix}-right,
+    &.@{class-prefix}-right-@{class-suffix} {
+
+      .temp-layout-variant (@element, @class, margin-right, @size);
+      .temp-layout-variant (@element, @class, padding-right, @size);
 
     }
 

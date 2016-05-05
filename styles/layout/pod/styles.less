@@ -14,46 +14,47 @@ pod/styles.less
   pod
   ----------------------------------------------------------------------------- */
 
-  .pod {
+  .pod-layout-variant(pod, null, null);
+  .pod-layout-variant(pod, shorter, null);
+  .pod-layout-variant(pod, short, null);
+  .pod-layout-variant(pod, tall, null);
+  .pod-layout-variant(pod, taller, null);
+  .pod-layout-variant(pod, narrower, null);
+  .pod-layout-variant(pod, narrow, null);
+  .pod-layout-variant(pod, wide, null);
+  .pod-layout-variant(pod, wider, null);
 
-    .shape-layout-variant(pod, null);
-    .shape-layout-variant(pod, shorter, null);
-    .shape-layout-variant(pod, short, null);
-    .shape-layout-variant(pod, tall, null);
-    .shape-layout-variant(pod, taller, null);
-    .shape-layout-variant(pod, narrower, null);
-    .shape-layout-variant(pod, narrow, null);
-    .shape-layout-variant(pod, wide, null);
-    .shape-layout-variant(pod, wider, null);
+  [class^="pod"],
+  [class*=" pod"] {
 
     &.flush {
 
-      padding-top: 0px !important;
-      padding-bottom: 0px !important;
+      padding-top: 0px;
+      padding-bottom: 0px;
 
     }
 
     &.flush-top {
 
-      padding-top: 0px !important;
+      padding-top: 0px;
 
     }
 
     &.flush-bottom {
 
-      padding-bottom: 0px !important;
+      padding-bottom: 0px;
 
     }
 
     &.flush-left {
 
-      padding-left: 0px !important;
+      padding-left: 0px;
 
     }
 
     &.flush-right {
 
-      padding-right: 0px !important;
+      padding-right: 0px;
 
     }
 
@@ -66,7 +67,7 @@ pod/styles.less
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Small (@layout-screen-small-min-width) and widepod-layout-variantr
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
@@ -77,19 +78,15 @@ pod/styles.less
       pod
       ----------------------------------------------------------------------------- */
 
-      .pod {
-
-        .shape-layout-variant(pod, scale-screen-small);
-        .shape-layout-variant(pod, shorter, scale-screen-small);
-        .shape-layout-variant(pod, short, scale-screen-small);
-        .shape-layout-variant(pod, tall, scale-screen-small);
-        .shape-layout-variant(pod, taller, scale-screen-small);
-        .shape-layout-variant(pod, narrower, scale-screen-small);
-        .shape-layout-variant(pod, narrow, scale-screen-small);
-        .shape-layout-variant(pod, wide, scale-screen-small);
-        .shape-layout-variant(pod, wider, scale-screen-small);
-
-      }
+      .pod-layout-variant(pod, null, scale-screen-small);
+      .pod-layout-variant(pod, shorter, scale-screen-small);
+      .pod-layout-variant(pod, short, scale-screen-small);
+      .pod-layout-variant(pod, tall, scale-screen-small);
+      .pod-layout-variant(pod, taller, scale-screen-small);
+      .pod-layout-variant(pod, narrower, scale-screen-small);
+      .pod-layout-variant(pod, narrow, scale-screen-small);
+      .pod-layout-variant(pod, wide, scale-screen-small);
+      .pod-layout-variant(pod, wider, scale-screen-small);
 
     }
 
@@ -113,19 +110,15 @@ pod/styles.less
       pod
       ----------------------------------------------------------------------------- */
 
-      .pod {
-
-        .shape-layout-variant(pod, scale-screen-medium);
-        .shape-layout-variant(pod, shorter, scale-screen-medium);
-        .shape-layout-variant(pod, short, scale-screen-medium);
-        .shape-layout-variant(pod, tall, scale-screen-medium);
-        .shape-layout-variant(pod, taller, scale-screen-medium);
-        .shape-layout-variant(pod, narrower, scale-screen-medium);
-        .shape-layout-variant(pod, narrow, scale-screen-medium);
-        .shape-layout-variant(pod, wide, scale-screen-medium);
-        .shape-layout-variant(pod, wider, scale-screen-medium);
-
-      }
+      .pod-layout-variant(pod, null, scale-screen-medium);
+      .pod-layout-variant(pod, shorter, scale-screen-medium);
+      .pod-layout-variant(pod, short, scale-screen-medium);
+      .pod-layout-variant(pod, tall, scale-screen-medium);
+      .pod-layout-variant(pod, taller, scale-screen-medium);
+      .pod-layout-variant(pod, narrower, scale-screen-medium);
+      .pod-layout-variant(pod, narrow, scale-screen-medium);
+      .pod-layout-variant(pod, wide, scale-screen-medium);
+      .pod-layout-variant(pod, wider, scale-screen-medium);
 
     }
 
@@ -149,19 +142,15 @@ pod/styles.less
       pod
       ----------------------------------------------------------------------------- */
 
-      .pod {
-
-        .shape-layout-variant(pod, scale-screen-large);
-        .shape-layout-variant(pod, shorter, scale-screen-large);
-        .shape-layout-variant(pod, short, scale-screen-large);
-        .shape-layout-variant(pod, tall, scale-screen-large);
-        .shape-layout-variant(pod, taller, scale-screen-large);
-        .shape-layout-variant(pod, narrower, scale-screen-large);
-        .shape-layout-variant(pod, narrow, scale-screen-large);
-        .shape-layout-variant(pod, wide, scale-screen-large);
-        .shape-layout-variant(pod, wider, scale-screen-large);
-
-      }
+      .pod-layout-variant(pod, null, scale-screen-large);
+      .pod-layout-variant(pod, shorter, scale-screen-large);
+      .pod-layout-variant(pod, short, scale-screen-large);
+      .pod-layout-variant(pod, tall, scale-screen-large);
+      .pod-layout-variant(pod, taller, scale-screen-large);
+      .pod-layout-variant(pod, narrower, scale-screen-large);
+      .pod-layout-variant(pod, narrow, scale-screen-large);
+      .pod-layout-variant(pod, wide, scale-screen-large);
+      .pod-layout-variant(pod, wider, scale-screen-large);
 
     }
 
@@ -185,19 +174,15 @@ pod/styles.less
       pod
       ----------------------------------------------------------------------------- */
 
-      .pod {
-
-        .shape-layout-variant(pod, scale-screen-jumbo);
-        .shape-layout-variant(pod, shorter, scale-screen-jumbo);
-        .shape-layout-variant(pod, short, scale-screen-jumbo);
-        .shape-layout-variant(pod, tall, scale-screen-jumbo);
-        .shape-layout-variant(pod, taller, scale-screen-jumbo);
-        .shape-layout-variant(pod, narrower, scale-screen-jumbo);
-        .shape-layout-variant(pod, narrow, scale-screen-jumbo);
-        .shape-layout-variant(pod, wide, scale-screen-jumbo);
-        .shape-layout-variant(pod, wider, scale-screen-jumbo);
-
-      }
+      .pod-layout-variant(pod, null, scale-screen-jumbo);
+      .pod-layout-variant(pod, shorter, scale-screen-jumbo);
+      .pod-layout-variant(pod, short, scale-screen-jumbo);
+      .pod-layout-variant(pod, tall, scale-screen-jumbo);
+      .pod-layout-variant(pod, taller, scale-screen-jumbo);
+      .pod-layout-variant(pod, narrower, scale-screen-jumbo);
+      .pod-layout-variant(pod, narrow, scale-screen-jumbo);
+      .pod-layout-variant(pod, wide, scale-screen-jumbo);
+      .pod-layout-variant(pod, wider, scale-screen-jumbo);
 
     }
 
