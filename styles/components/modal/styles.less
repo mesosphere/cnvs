@@ -8,15 +8,100 @@ modal/styles.less
 
 
 
-& when (true) {
+& when (@modal-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Heading 1
+  Modal
   ----------------------------------------------------------------------------- */
 
-  .element-name {
+  .modal {
 
-    // Heading 2
+    display: block;
+    position: relative;
+    overflow: hidden;
+    .shape-style-variant(modal);
+    .layout-spacing-variant(modal, null);
+    .layout-property-variant(modal, width, null);
+    .layout-property-variant(modal, border-radius, null);
+
+    /* -----------------------------------------------------------------------------
+    Modal Header
+    ----------------------------------------------------------------------------- */
+
+    .modal-header {
+
+      display: block;
+      position: relative;
+      .shape-style-variant(modal-header);
+      .layout-spacing-variant(modal-header, null);
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Modal Body
+    ----------------------------------------------------------------------------- */
+
+    .modal-body {
+
+      display: block;
+      position: relative;
+      .shape-style-variant(modal-body);
+      .layout-spacing-variant(modal-body, null);
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Modal Footer
+    ----------------------------------------------------------------------------- */
+
+    .modal-footer {
+
+      display: block;
+      position: relative;
+      .shape-style-variant(modal-footer);
+      .layout-spacing-variant(modal-footer, null);
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Modal Inverse (.modal-inverse)
+    ----------------------------------------------------------------------------- */
+
+    &.modal-inverse {
+
+      .shape-style-variant(modal-inverse);
+
+      /* -----------------------------------------------------------------------------
+      Modal Header
+      ----------------------------------------------------------------------------- */
+
+      .modal-header {
+
+        .shape-style-variant(modal-header-inverse);
+
+      }
+
+      /* -----------------------------------------------------------------------------
+      Modal Body
+      ----------------------------------------------------------------------------- */
+
+      .modal-body {
+
+        .shape-style-variant(modal-body-inverse);
+
+      }
+
+      /* -----------------------------------------------------------------------------
+      Modal Footer
+      ----------------------------------------------------------------------------- */
+
+      .modal-footer {
+
+        .shape-style-variant(modal-footer-inverse);
+
+      }
+
+    }
 
   }
 
@@ -27,10 +112,56 @@ modal/styles.less
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: small (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@modal-enabled) and (@modal-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Modal
+      ----------------------------------------------------------------------------- */
+
+      .modal {
+
+        .layout-spacing-variant(modal, screen-small);
+        .layout-property-variant(modal, width, screen-small);
+        .layout-property-variant(modal, border-radius, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Modal Header
+        ----------------------------------------------------------------------------- */
+
+        .modal-header {
+
+          .layout-spacing-variant(modal-header, screen-small);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Modal Body
+        ----------------------------------------------------------------------------- */
+
+        .modal-body {
+
+          .layout-spacing-variant(modal-body, screen-small);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Modal Footer
+        ----------------------------------------------------------------------------- */
+
+        .modal-footer {
+
+          .layout-spacing-variant(modal-footer, screen-small);
+
+        }
+
+      }
+
+    }
 
   }
 
@@ -46,6 +177,52 @@ modal/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
+    & when (@modal-enabled) and (@modal-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Modal
+      ----------------------------------------------------------------------------- */
+
+      .modal {
+
+        .layout-spacing-variant(modal, screen-medium);
+        .layout-property-variant(modal, width, screen-medium);
+        .layout-property-variant(modal, border-radius, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Modal Header
+        ----------------------------------------------------------------------------- */
+
+        .modal-header {
+
+          .layout-spacing-variant(modal-header, screen-medium);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Modal Body
+        ----------------------------------------------------------------------------- */
+
+        .modal-body {
+
+          .layout-spacing-variant(modal-body, screen-medium);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Modal Footer
+        ----------------------------------------------------------------------------- */
+
+        .modal-footer {
+
+          .layout-spacing-variant(modal-footer, screen-medium);
+
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -60,6 +237,52 @@ modal/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
+    & when (@modal-enabled) and (@modal-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Modal
+      ----------------------------------------------------------------------------- */
+
+      .modal {
+
+        .layout-spacing-variant(modal, screen-large);
+        .layout-property-variant(modal, width, screen-large);
+        .layout-property-variant(modal, border-radius, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Modal Header
+        ----------------------------------------------------------------------------- */
+
+        .modal-header {
+
+          .layout-spacing-variant(modal-header, screen-large);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Modal Body
+        ----------------------------------------------------------------------------- */
+
+        .modal-body {
+
+          .layout-spacing-variant(modal-body, screen-large);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Modal Footer
+        ----------------------------------------------------------------------------- */
+
+        .modal-footer {
+
+          .layout-spacing-variant(modal-footer, screen-large);
+
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -73,6 +296,52 @@ modal/styles.less
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@modal-enabled) and (@modal-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Modal
+      ----------------------------------------------------------------------------- */
+
+      .modal {
+
+        .layout-spacing-variant(modal, screen-jumbo);
+        .layout-property-variant(modal, width, screen-jumbo);
+        .layout-property-variant(modal, border-radius, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Modal Header
+        ----------------------------------------------------------------------------- */
+
+        .modal-header {
+
+          .layout-spacing-variant(modal-header, screen-jumbo);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Modal Body
+        ----------------------------------------------------------------------------- */
+
+        .modal-body {
+
+          .layout-spacing-variant(modal-body, screen-jumbo);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Modal Footer
+        ----------------------------------------------------------------------------- */
+
+        .modal-footer {
+
+          .layout-spacing-variant(modal-footer, screen-jumbo);
+
+        }
+
+      }
+
+    }
 
   }
 

@@ -702,7 +702,7 @@ Layout Variant
 .new-layout-variant (@element, @subclass, @property, @screen-size-scale) {
 
   @element-property: '@{element}-@{property}';
-  @element-screen-size-scale: replace(e('@{element}-@{property}-@{size}'), '-null', '');
+  @element-screen-size-scale: replace(e('@{element}-@{property}-@{screen-size-scale}'), '-null', '');
   @element-subclass-scale: replace(e('@{element}-@{subclass}-@{property}-scale'), '-null', '');
 
   & when not (@@element-property = null) {
@@ -760,51 +760,51 @@ Layout Variant
 Shape layout Variant
 ----------------------------------------------------------------------------- */
 
-.spacing-layout-variant(@element, @class, @size) {
+.spacing-layout-variant(@element, @subclass, @screen-size) {
 
-  @class-prefix: replace(e('@{element}-@{class}'), '-null', '');
-  @class-suffix: replace(replace(e('@{size}'), 'scale-', ''), '-null', '');
+  @class-prefix: replace(e('@{element}-@{subclass}'), '-null', '');
+  @class-suffix: replace(replace(e('@{screen-size}'), 'scale-', ''), '-null', '');
 
   & when (@class-suffix = null) {
 
     &.@{class-prefix} {
 
-      .new-layout-variant (@element, @class, margin-top, @size);
-      .new-layout-variant (@element, @class, margin-bottom, @size);
-      .new-layout-variant (@element, @class, margin-left, @size);
-      .new-layout-variant (@element, @class, margin-right, @size);
-      .new-layout-variant (@element, @class, padding-top, @size);
-      .new-layout-variant (@element, @class, padding-bottom, @size);
-      .new-layout-variant (@element, @class, padding-left, @size);
-      .new-layout-variant (@element, @class, padding-right, @size);
+      .new-layout-variant (@element, @subclass, margin-top, @screen-size);
+      .new-layout-variant (@element, @subclass, margin-bottom, @screen-size);
+      .new-layout-variant (@element, @subclass, margin-left, @screen-size);
+      .new-layout-variant (@element, @subclass, margin-right, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-top, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-bottom, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-left, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-right, @screen-size);
 
     }
 
     &.@{class-prefix}-top {
 
-      .new-layout-variant (@element, @class, margin-top, @size);
-      .new-layout-variant (@element, @class, padding-top, @size);
+      .new-layout-variant (@element, @subclass, margin-top, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-top, @screen-size);
 
     }
 
     &.@{class-prefix}-bottom {
 
-      .new-layout-variant (@element, @class, margin-bottom, @size);
-      .new-layout-variant (@element, @class, padding-bottom, @size);
+      .new-layout-variant (@element, @subclass, margin-bottom, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-bottom, @screen-size);
 
     }
 
     &.@{class-prefix}-left {
 
-      .new-layout-variant (@element, @class, margin-left, @size);
-      .new-layout-variant (@element, @class, padding-left, @size);
+      .new-layout-variant (@element, @subclass, margin-left, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-left, @screen-size);
 
     }
 
     &.@{class-prefix}-right {
 
-      .new-layout-variant (@element, @class, margin-right, @size);
-      .new-layout-variant (@element, @class, padding-right, @size);
+      .new-layout-variant (@element, @subclass, margin-right, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-right, @screen-size);
 
     }
 
@@ -815,46 +815,206 @@ Shape layout Variant
     &.@{class-prefix},
     &.@{class-prefix}-@{class-suffix} {
 
-      .new-layout-variant (@element, @class, margin-top, @size);
-      .new-layout-variant (@element, @class, margin-bottom, @size);
-      .new-layout-variant (@element, @class, margin-left, @size);
-      .new-layout-variant (@element, @class, margin-right, @size);
-      .new-layout-variant (@element, @class, padding-top, @size);
-      .new-layout-variant (@element, @class, padding-bottom, @size);
-      .new-layout-variant (@element, @class, padding-left, @size);
-      .new-layout-variant (@element, @class, padding-right, @size);
+      .new-layout-variant (@element, @subclass, margin-top, @screen-size);
+      .new-layout-variant (@element, @subclass, margin-bottom, @screen-size);
+      .new-layout-variant (@element, @subclass, margin-left, @screen-size);
+      .new-layout-variant (@element, @subclass, margin-right, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-top, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-bottom, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-left, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-right, @screen-size);
 
     }
 
     &.@{class-prefix}-top,
     &.@{class-prefix}-top-@{class-suffix} {
 
-      .new-layout-variant (@element, @class, margin-top, @size);
-      .new-layout-variant (@element, @class, padding-top, @size);
+      .new-layout-variant (@element, @subclass, margin-top, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-top, @screen-size);
 
     }
 
     &.@{class-prefix}-bottom,
     &.@{class-prefix}-bottom-@{class-suffix} {
 
-      .new-layout-variant (@element, @class, margin-bottom, @size);
-      .new-layout-variant (@element, @class, padding-bottom, @size);
+      .new-layout-variant (@element, @subclass, margin-bottom, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-bottom, @screen-size);
 
     }
 
     &.@{class-prefix}-left,
     &.@{class-prefix}-left-@{class-suffix} {
 
-      .new-layout-variant (@element, @class, margin-left, @size);
-      .new-layout-variant (@element, @class, padding-left, @size);
+      .new-layout-variant (@element, @subclass, margin-left, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-left, @screen-size);
 
     }
 
     &.@{class-prefix}-right,
     &.@{class-prefix}-right-@{class-suffix} {
 
-      .new-layout-variant (@element, @class, margin-right, @size);
-      .new-layout-variant (@element, @class, padding-right, @size);
+      .new-layout-variant (@element, @subclass, margin-right, @screen-size);
+      .new-layout-variant (@element, @subclass, padding-right, @screen-size);
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// THESE ARE CANDIDATE MIXINS FOR LAYOUT
+
+
+
+
+/* -----------------------------------------------------------------------------
+Layout Variant
+----------------------------------------------------------------------------- */
+
+.layout-property-variant (@class, @property, @screen-size) {
+
+  @element-property: replace(e('@{class}-@{property}-@{screen-size}'), '-null', '');
+
+  & when not (@@element-property = null) {
+
+    @{property}: @@element-property;
+
+  }
+
+}
+
+/* -----------------------------------------------------------------------------
+Shape layout Variant
+----------------------------------------------------------------------------- */
+
+.layout-spacing-variant(@class, @screen-size) {
+
+  .layout-property-variant(@class, margin-top, @screen-size);
+  .layout-property-variant(@class, margin-bottom, @screen-size);
+  .layout-property-variant(@class, margin-left, @screen-size);
+  .layout-property-variant(@class, margin-right, @screen-size);
+  .layout-property-variant(@class, padding-top, @screen-size);
+  .layout-property-variant(@class, padding-bottom, @screen-size);
+  .layout-property-variant(@class, padding-left, @screen-size);
+  .layout-property-variant(@class, padding-right, @screen-size);
+
+}
+
+/* -----------------------------------------------------------------------------
+Shape layout Variant
+----------------------------------------------------------------------------- */
+
+.layout-spacing-conditional-variant(@class, @screen-size) {
+
+  @class-suffix: replace(e('-@{screen-size}'), '-null', '');
+
+  & when (@class-suffix = null) {
+
+    &.@{class} {
+
+      .layout-property-variant (@class, margin-top, @screen-size);
+      .layout-property-variant (@class, margin-bottom, @screen-size);
+      .layout-property-variant (@class, margin-left, @screen-size);
+      .layout-property-variant (@class, margin-right, @screen-size);
+      .layout-property-variant (@class, padding-top, @screen-size);
+      .layout-property-variant (@class, padding-bottom, @screen-size);
+      .layout-property-variant (@class, padding-left, @screen-size);
+      .layout-property-variant (@class, padding-right, @screen-size);
+
+    }
+
+    &.@{class}-top {
+
+      .layout-property-variant (@class, margin-top, @screen-size);
+      .layout-property-variant (@class, padding-top, @screen-size);
+
+    }
+
+    &.@{class}-bottom {
+
+      .layout-property-variant (@class, margin-bottom, @screen-size);
+      .layout-property-variant (@class, padding-bottom, @screen-size);
+
+    }
+
+    &.@{class}-left {
+
+      .layout-property-variant (@class, margin-left, @screen-size);
+      .layout-property-variant (@class, padding-left, @screen-size);
+
+    }
+
+    &.@{class}-right {
+
+      .layout-property-variant (@class, margin-right, @screen-size);
+      .layout-property-variant (@class, padding-right, @screen-size);
+
+    }
+
+  }
+
+  & when not (@screen-size = null) {
+
+    &.@{class},
+    &.@{class}@{class-suffix} {
+
+      .layout-property-variant (@class, margin-top, @screen-size);
+      .layout-property-variant (@class, margin-bottom, @screen-size);
+      .layout-property-variant (@class, margin-left, @screen-size);
+      .layout-property-variant (@class, margin-right, @screen-size);
+      .layout-property-variant (@class, padding-top, @screen-size);
+      .layout-property-variant (@class, padding-bottom, @screen-size);
+      .layout-property-variant (@class, padding-left, @screen-size);
+      .layout-property-variant (@class, padding-right, @screen-size);
+
+    }
+
+    &.@{class}-top,
+    &.@{class}-top@{class-suffix} {
+
+      .layout-property-variant (@class, margin-top, @screen-size);
+      .layout-property-variant (@class, padding-top, @screen-size);
+
+    }
+
+    &.@{class}-bottom,
+    &.@{class}-bottom@{class-suffix} {
+
+      .layout-property-variant (@class, margin-bottom, @screen-size);
+      .layout-property-variant (@class, padding-bottom, @screen-size);
+
+    }
+
+    &.@{class}-left,
+    &.@{class}-left@{class-suffix} {
+
+      .layout-property-variant (@class, margin-left, @screen-size);
+      .layout-property-variant (@class, padding-left, @screen-size);
+
+    }
+
+    &.@{class}-right,
+    &.@{class}-right@{class-suffix} {
+
+      .layout-property-variant (@class, margin-right, @screen-size);
+      .layout-property-variant (@class, padding-right, @screen-size);
 
     }
 

@@ -1,0 +1,668 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+modal/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+@modal-enabled:                                                                 true;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@modal-scale-screen-small-enabled:                                              true;
+@modal-scale-screen-medium-enabled:                                             true;
+@modal-scale-screen-large-enabled:                                              true;
+@modal-scale-screen-jumbo-enabled:                                              true;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Modal
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+
+// Width
+
+@modal-width:                                                                   100%;
+@modal-width-screen-small:                                                      320px;
+@modal-width-screen-medium:                                                     500px;
+@modal-width-screen-large:                                                      600px;
+@modal-width-screen-jumbo:                                                      600px;
+
+// Border Radius
+
+@modal-border-radius:                                                           4px;
+@modal-border-radius-screen-small:                                              null;
+@modal-border-radius-screen-medium:                                             null;
+@modal-border-radius-screen-large:                                              null;
+@modal-border-radius-screen-jumbo:                                              null;
+
+// Margin Top
+
+@modal-margin-top:                                                              null;
+@modal-margin-top-screen-small:                                                 null;
+@modal-margin-top-screen-medium:                                                null;
+@modal-margin-top-screen-large:                                                 null;
+@modal-margin-top-screen-jumbo:                                                 null;
+
+// Margin Bottom
+
+@modal-margin-bottom:                                                           null;
+@modal-margin-bottom-screen-small:                                              null;
+@modal-margin-bottom-screen-medium:                                             null;
+@modal-margin-bottom-screen-large:                                              null;
+@modal-margin-bottom-screen-jumbo:                                              null;
+
+// Margin Left
+
+@modal-margin-left:                                                             0px;
+@modal-margin-left-screen-small:                                                auto;
+@modal-margin-left-screen-medium:                                               null;
+@modal-margin-left-screen-large:                                                null;
+@modal-margin-left-screen-jumbo:                                                null;
+
+// Margin Right
+
+@modal-margin-right:                                                            0px;
+@modal-margin-right-screen-small:                                               auto;
+@modal-margin-right-screen-medium:                                              null;
+@modal-margin-right-screen-large:                                               null;
+@modal-margin-right-screen-jumbo:                                               null;
+
+// Padding Top
+
+@modal-padding-top:                                                             null;
+@modal-padding-top-screen-small:                                                null;
+@modal-padding-top-screen-medium:                                               null;
+@modal-padding-top-screen-large:                                                null;
+@modal-padding-top-screen-jumbo:                                                null;
+
+// Padding Bottom
+
+@modal-padding-bottom:                                                          null;
+@modal-padding-bottom-screen-small:                                             null;
+@modal-padding-bottom-screen-medium:                                            null;
+@modal-padding-bottom-screen-large:                                             null;
+@modal-padding-bottom-screen-jumbo:                                             null;
+
+// Padding Left
+
+@modal-padding-left:                                                            null;
+@modal-padding-left-screen-small:                                               null;
+@modal-padding-left-screen-medium:                                              null;
+@modal-padding-left-screen-large:                                               null;
+@modal-padding-left-screen-jumbo:                                               null;
+
+// Padding Right
+
+@modal-padding-right:                                                           null;
+@modal-padding-right-screen-small:                                              null;
+@modal-padding-right-screen-medium:                                             null;
+@modal-padding-right-screen-large:                                              null;
+@modal-padding-right-screen-jumbo:                                              null;
+
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@modal-background-color:                                                        @white;
+@modal-background-gradient-color-top:                                           null;
+@modal-background-gradient-color-bottom:                                        null;
+@modal-border-width:                                                            null;
+@modal-border-color:                                                            null;
+@modal-border-style:                                                            null;
+@modal-border-top-width:                                                        null;
+@modal-border-top-color:                                                        null;
+@modal-border-top-style:                                                        null;
+@modal-border-right-width:                                                      null;
+@modal-border-right-color:                                                      null;
+@modal-border-right-style:                                                      null;
+@modal-border-bottom-width:                                                     null;
+@modal-border-bottom-color:                                                     null;
+@modal-border-bottom-style:                                                     null;
+@modal-border-left-width:                                                       null;
+@modal-border-left-color:                                                       null;
+@modal-border-left-style:                                                       null;
+@modal-shadow:                                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+// Inverse
+
+@modal-inverse-background-color:                                                color-lighten(@neutral, -20);
+@modal-inverse-background-gradient-color-top:                                   null;
+@modal-inverse-background-gradient-color-bottom:                                null;
+@modal-inverse-border-width:                                                    null;
+@modal-inverse-border-color:                                                    null;
+@modal-inverse-border-style:                                                    null;
+@modal-inverse-border-top-width:                                                null;
+@modal-inverse-border-top-color:                                                null;
+@modal-inverse-border-top-style:                                                null;
+@modal-inverse-border-right-width:                                              null;
+@modal-inverse-border-right-color:                                              null;
+@modal-inverse-border-right-style:                                              null;
+@modal-inverse-border-bottom-width:                                             null;
+@modal-inverse-border-bottom-color:                                             null;
+@modal-inverse-border-bottom-style:                                             null;
+@modal-inverse-border-left-width:                                               null;
+@modal-inverse-border-left-color:                                               null;
+@modal-inverse-border-left-style:                                               null;
+@modal-inverse-shadow:                                                          none;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Modal Header
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@modal-header-margin-top:                                                       null;
+@modal-header-margin-top-screen-small:                                          null;
+@modal-header-margin-top-screen-medium:                                         null;
+@modal-header-margin-top-screen-large:                                          null;
+@modal-header-margin-top-screen-jumbo:                                          null;
+
+// Margin Bottom
+
+@modal-header-margin-bottom:                                                    null;
+@modal-header-margin-bottom-screen-small:                                       null;
+@modal-header-margin-bottom-screen-medium:                                      null;
+@modal-header-margin-bottom-screen-large:                                       null;
+@modal-header-margin-bottom-screen-jumbo:                                       null;
+
+// Margin Left
+
+@modal-header-margin-left:                                                      null;
+@modal-header-margin-left-screen-small:                                         null;
+@modal-header-margin-left-screen-medium:                                        null;
+@modal-header-margin-left-screen-large:                                         null;
+@modal-header-margin-left-screen-jumbo:                                         null;
+
+// Margin Right
+
+@modal-header-margin-right:                                                     null;
+@modal-header-margin-right-screen-small:                                        null;
+@modal-header-margin-right-screen-medium:                                       null;
+@modal-header-margin-right-screen-large:                                        null;
+@modal-header-margin-right-screen-jumbo:                                        null;
+
+// Padding Top
+
+@modal-header-padding-top:                                                      0.5 * @base-spacing-unit;
+@modal-header-padding-top-screen-small:                                         0.5 * @base-spacing-unit-screen-small;
+@modal-header-padding-top-screen-medium:                                        0.5 * @base-spacing-unit-screen-medium;
+@modal-header-padding-top-screen-large:                                         0.5 * @base-spacing-unit-screen-large;
+@modal-header-padding-top-screen-jumbo:                                         0.5 * @base-spacing-unit-screen-jumbo;
+
+// Padding Bottom
+
+@modal-header-padding-bottom:                                                   @modal-header-padding-top;
+@modal-header-padding-bottom-screen-small:                                      @modal-header-padding-top-screen-small;
+@modal-header-padding-bottom-screen-medium:                                     @modal-header-padding-top-screen-medium;
+@modal-header-padding-bottom-screen-large:                                      @modal-header-padding-top-screen-large;
+@modal-header-padding-bottom-screen-jumbo:                                      @modal-header-padding-top-screen-jumbo;
+
+// Padding Left
+
+@modal-header-padding-left:                                                     0.5 * @base-spacing-unit;
+@modal-header-padding-left-screen-small:                                        0.5 * @base-spacing-unit-screen-small;
+@modal-header-padding-left-screen-medium:                                       0.5 * @base-spacing-unit-screen-medium;
+@modal-header-padding-left-screen-large:                                        0.5 * @base-spacing-unit-screen-large;
+@modal-header-padding-left-screen-jumbo:                                        0.5 * @base-spacing-unit-screen-jumbo;
+
+// Padding Right
+
+@modal-header-padding-right:                                                    @modal-header-padding-left;
+@modal-header-padding-right-screen-small:                                       @modal-header-padding-left-screen-small;
+@modal-header-padding-right-screen-medium:                                      @modal-header-padding-left-screen-medium;
+@modal-header-padding-right-screen-large:                                       @modal-header-padding-left-screen-large;
+@modal-header-padding-right-screen-jumbo:                                       @modal-header-padding-left-screen-jumbo;
+
+
+
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@modal-header-background-color:                                                 @white;
+@modal-header-background-gradient-color-top:                                    null;
+@modal-header-background-gradient-color-bottom:                                 null;
+@modal-header-border-width:                                                     null;
+@modal-header-border-color:                                                     null;
+@modal-header-border-style:                                                     null;
+@modal-header-border-top-width:                                                 null;
+@modal-header-border-top-color:                                                 null;
+@modal-header-border-top-style:                                                 null;
+@modal-header-border-right-width:                                               null;
+@modal-header-border-right-color:                                               null;
+@modal-header-border-right-style:                                               null;
+@modal-header-border-bottom-width:                                              null;
+@modal-header-border-bottom-color:                                              null;
+@modal-header-border-bottom-style:                                              null;
+@modal-header-border-left-width:                                                null;
+@modal-header-border-left-color:                                                null;
+@modal-header-border-left-style:                                                null;
+@modal-header-shadow:                                                           0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+// Inverse
+
+@modal-header-inverse-background-color:                                         color-lighten(@neutral, -20);
+@modal-header-inverse-background-gradient-color-top:                            null;
+@modal-header-inverse-background-gradient-color-bottom:                         null;
+@modal-header-inverse-border-width:                                             null;
+@modal-header-inverse-border-color:                                             null;
+@modal-header-inverse-border-style:                                             null;
+@modal-header-inverse-border-top-width:                                         null;
+@modal-header-inverse-border-top-color:                                         null;
+@modal-header-inverse-border-top-style:                                         null;
+@modal-header-inverse-border-right-width:                                       null;
+@modal-header-inverse-border-right-color:                                       null;
+@modal-header-inverse-border-right-style:                                       null;
+@modal-header-inverse-border-bottom-width:                                      null;
+@modal-header-inverse-border-bottom-color:                                      null;
+@modal-header-inverse-border-bottom-style:                                      null;
+@modal-header-inverse-border-left-width:                                        null;
+@modal-header-inverse-border-left-color:                                        null;
+@modal-header-inverse-border-left-style:                                        null;
+@modal-header-inverse-shadow:                                                   none;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Modal body
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@modal-body-margin-top:                                                         null;
+@modal-body-margin-top-screen-small:                                            null;
+@modal-body-margin-top-screen-medium:                                           null;
+@modal-body-margin-top-screen-large:                                            null;
+@modal-body-margin-top-screen-jumbo:                                            null;
+
+// Margin Bottom
+
+@modal-body-margin-bottom:                                                      null;
+@modal-body-margin-bottom-screen-small:                                         null;
+@modal-body-margin-bottom-screen-medium:                                        null;
+@modal-body-margin-bottom-screen-large:                                         null;
+@modal-body-margin-bottom-screen-jumbo:                                         null;
+
+// Margin Left
+
+@modal-body-margin-left:                                                        null;
+@modal-body-margin-left-screen-small:                                           null;
+@modal-body-margin-left-screen-medium:                                          null;
+@modal-body-margin-left-screen-large:                                           null;
+@modal-body-margin-left-screen-jumbo:                                           null;
+
+// Margin Right
+
+@modal-body-margin-right:                                                       null;
+@modal-body-margin-right-screen-small:                                          null;
+@modal-body-margin-right-screen-medium:                                         null;
+@modal-body-margin-right-screen-large:                                          null;
+@modal-body-margin-right-screen-jumbo:                                          null;
+
+// Padding Top
+
+@modal-body-padding-top:                                                        0.5 * @base-spacing-unit;
+@modal-body-padding-top-screen-small:                                           0.5 * @base-spacing-unit-screen-small;
+@modal-body-padding-top-screen-medium:                                          0.5 * @base-spacing-unit-screen-medium;
+@modal-body-padding-top-screen-large:                                           0.5 * @base-spacing-unit-screen-large;
+@modal-body-padding-top-screen-jumbo:                                           0.5 * @base-spacing-unit-screen-jumbo;
+
+// Padding Bottom
+
+@modal-body-padding-bottom:                                                     @modal-body-padding-top;
+@modal-body-padding-bottom-screen-small:                                        @modal-body-padding-top-screen-small;
+@modal-body-padding-bottom-screen-medium:                                       @modal-body-padding-top-screen-medium;
+@modal-body-padding-bottom-screen-large:                                        @modal-body-padding-top-screen-large;
+@modal-body-padding-bottom-screen-jumbo:                                        @modal-body-padding-top-screen-jumbo;
+
+// Padding Left
+
+@modal-body-padding-left:                                                       0.5 * @base-spacing-unit;
+@modal-body-padding-left-screen-small:                                          0.5 * @base-spacing-unit-screen-small;
+@modal-body-padding-left-screen-medium:                                         0.5 * @base-spacing-unit-screen-medium;
+@modal-body-padding-left-screen-large:                                          0.5 * @base-spacing-unit-screen-large;
+@modal-body-padding-left-screen-jumbo:                                          0.5 * @base-spacing-unit-screen-jumbo;
+
+// Padding Right
+
+@modal-body-padding-right:                                                      @modal-body-padding-left;
+@modal-body-padding-right-screen-small:                                         @modal-body-padding-left-screen-small;
+@modal-body-padding-right-screen-medium:                                        @modal-body-padding-left-screen-medium;
+@modal-body-padding-right-screen-large:                                         @modal-body-padding-left-screen-large;
+@modal-body-padding-right-screen-jumbo:                                         @modal-body-padding-left-screen-jumbo;
+
+
+
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@modal-body-background-color:                                                   @white;
+@modal-body-background-gradient-color-top:                                      null;
+@modal-body-background-gradient-color-bottom:                                   null;
+@modal-body-border-width:                                                       null;
+@modal-body-border-color:                                                       null;
+@modal-body-border-style:                                                       null;
+@modal-body-border-top-width:                                                   null;
+@modal-body-border-top-color:                                                   null;
+@modal-body-border-top-style:                                                   null;
+@modal-body-border-right-width:                                                 null;
+@modal-body-border-right-color:                                                 null;
+@modal-body-border-right-style:                                                 null;
+@modal-body-border-bottom-width:                                                null;
+@modal-body-border-bottom-color:                                                null;
+@modal-body-border-bottom-style:                                                null;
+@modal-body-border-left-width:                                                  null;
+@modal-body-border-left-color:                                                  null;
+@modal-body-border-left-style:                                                  null;
+@modal-body-shadow:                                                             0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+// Inverse
+
+@modal-body-inverse-background-color:                                           color-lighten(@neutral, -20);
+@modal-body-inverse-background-gradient-color-top:                              null;
+@modal-body-inverse-background-gradient-color-bottom:                           null;
+@modal-body-inverse-border-width:                                               null;
+@modal-body-inverse-border-color:                                               null;
+@modal-body-inverse-border-style:                                               null;
+@modal-body-inverse-border-top-width:                                           null;
+@modal-body-inverse-border-top-color:                                           null;
+@modal-body-inverse-border-top-style:                                           null;
+@modal-body-inverse-border-right-width:                                         null;
+@modal-body-inverse-border-right-color:                                         null;
+@modal-body-inverse-border-right-style:                                         null;
+@modal-body-inverse-border-bottom-width:                                        null;
+@modal-body-inverse-border-bottom-color:                                        null;
+@modal-body-inverse-border-bottom-style:                                        null;
+@modal-body-inverse-border-left-width:                                          null;
+@modal-body-inverse-border-left-color:                                          null;
+@modal-body-inverse-border-left-style:                                          null;
+@modal-body-inverse-shadow:                                                     none;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Modal Body
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@modal-body-margin-top:                                                         null;
+@modal-body-margin-top-screen-small:                                            null;
+@modal-body-margin-top-screen-medium:                                           null;
+@modal-body-margin-top-screen-large:                                            null;
+@modal-body-margin-top-screen-jumbo:                                            null;
+
+// Margin Bottom
+
+@modal-body-margin-bottom:                                                      null;
+@modal-body-margin-bottom-screen-small:                                         null;
+@modal-body-margin-bottom-screen-medium:                                        null;
+@modal-body-margin-bottom-screen-large:                                         null;
+@modal-body-margin-bottom-screen-jumbo:                                         null;
+
+// Margin Left
+
+@modal-body-margin-left:                                                        null;
+@modal-body-margin-left-screen-small:                                           null;
+@modal-body-margin-left-screen-medium:                                          null;
+@modal-body-margin-left-screen-large:                                           null;
+@modal-body-margin-left-screen-jumbo:                                           null;
+
+// Margin Right
+
+@modal-body-margin-right:                                                       null;
+@modal-body-margin-right-screen-small:                                          null;
+@modal-body-margin-right-screen-medium:                                         null;
+@modal-body-margin-right-screen-large:                                          null;
+@modal-body-margin-right-screen-jumbo:                                          null;
+
+// Padding Top
+
+@modal-body-padding-top:                                                        1.0 * @base-spacing-unit;
+@modal-body-padding-top-screen-small:                                           1.0 * @base-spacing-unit-screen-small;
+@modal-body-padding-top-screen-medium:                                          1.0 * @base-spacing-unit-screen-medium;
+@modal-body-padding-top-screen-large:                                           1.0 * @base-spacing-unit-screen-large;
+@modal-body-padding-top-screen-jumbo:                                           1.0 * @base-spacing-unit-screen-jumbo;
+
+// Padding Bottom
+
+@modal-body-padding-bottom:                                                     @modal-body-padding-top;
+@modal-body-padding-bottom-screen-small:                                        @modal-body-padding-top-screen-small;
+@modal-body-padding-bottom-screen-medium:                                       @modal-body-padding-top-screen-medium;
+@modal-body-padding-bottom-screen-large:                                        @modal-body-padding-top-screen-large;
+@modal-body-padding-bottom-screen-jumbo:                                        @modal-body-padding-top-screen-jumbo;
+
+// Padding Left
+
+@modal-body-padding-left:                                                       0.5 * @base-spacing-unit;
+@modal-body-padding-left-screen-small:                                          0.5 * @base-spacing-unit-screen-small;
+@modal-body-padding-left-screen-medium:                                         0.5 * @base-spacing-unit-screen-medium;
+@modal-body-padding-left-screen-large:                                          0.5 * @base-spacing-unit-screen-large;
+@modal-body-padding-left-screen-jumbo:                                          0.5 * @base-spacing-unit-screen-jumbo;
+
+// Padding Right
+
+@modal-body-padding-right:                                                      @modal-body-padding-left;
+@modal-body-padding-right-screen-small:                                         @modal-body-padding-left-screen-small;
+@modal-body-padding-right-screen-medium:                                        @modal-body-padding-left-screen-medium;
+@modal-body-padding-right-screen-large:                                         @modal-body-padding-left-screen-large;
+@modal-body-padding-right-screen-jumbo:                                         @modal-body-padding-left-screen-jumbo;
+
+
+
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@modal-body-background-color:                                                   @white;
+@modal-body-background-gradient-color-top:                                      null;
+@modal-body-background-gradient-color-bottom:                                   null;
+@modal-body-border-width:                                                       null;
+@modal-body-border-color:                                                       null;
+@modal-body-border-style:                                                       null;
+@modal-body-border-top-width:                                                   null;
+@modal-body-border-top-color:                                                   null;
+@modal-body-border-top-style:                                                   null;
+@modal-body-border-right-width:                                                 null;
+@modal-body-border-right-color:                                                 null;
+@modal-body-border-right-style:                                                 null;
+@modal-body-border-bottom-width:                                                null;
+@modal-body-border-bottom-color:                                                null;
+@modal-body-border-bottom-style:                                                null;
+@modal-body-border-left-width:                                                  null;
+@modal-body-border-left-color:                                                  null;
+@modal-body-border-left-style:                                                  null;
+@modal-body-shadow:                                                             0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+// Inverse
+
+@modal-body-inverse-background-color:                                           color-lighten(@neutral, -20);
+@modal-body-inverse-background-gradient-color-top:                              null;
+@modal-body-inverse-background-gradient-color-bottom:                           null;
+@modal-body-inverse-border-width:                                               null;
+@modal-body-inverse-border-color:                                               null;
+@modal-body-inverse-border-style:                                               null;
+@modal-body-inverse-border-top-width:                                           null;
+@modal-body-inverse-border-top-color:                                           null;
+@modal-body-inverse-border-top-style:                                           null;
+@modal-body-inverse-border-right-width:                                         null;
+@modal-body-inverse-border-right-color:                                         null;
+@modal-body-inverse-border-right-style:                                         null;
+@modal-body-inverse-border-bottom-width:                                        null;
+@modal-body-inverse-border-bottom-color:                                        null;
+@modal-body-inverse-border-bottom-style:                                        null;
+@modal-body-inverse-border-left-width:                                          null;
+@modal-body-inverse-border-left-color:                                          null;
+@modal-body-inverse-border-left-style:                                          null;
+@modal-body-inverse-shadow:                                                     none;
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Modal Footer
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+
+// Margin Top
+
+@modal-footer-margin-top:                                                       null;
+@modal-footer-margin-top-screen-small:                                          null;
+@modal-footer-margin-top-screen-medium:                                         null;
+@modal-footer-margin-top-screen-large:                                          null;
+@modal-footer-margin-top-screen-jumbo:                                          null;
+
+// Margin Bottom
+
+@modal-footer-margin-bottom:                                                    null;
+@modal-footer-margin-bottom-screen-small:                                       null;
+@modal-footer-margin-bottom-screen-medium:                                      null;
+@modal-footer-margin-bottom-screen-large:                                       null;
+@modal-footer-margin-bottom-screen-jumbo:                                       null;
+
+// Margin Left
+
+@modal-footer-margin-left:                                                      null;
+@modal-footer-margin-left-screen-small:                                         null;
+@modal-footer-margin-left-screen-medium:                                        null;
+@modal-footer-margin-left-screen-large:                                         null;
+@modal-footer-margin-left-screen-jumbo:                                         null;
+
+// Margin Right
+
+@modal-footer-margin-right:                                                     null;
+@modal-footer-margin-right-screen-small:                                        null;
+@modal-footer-margin-right-screen-medium:                                       null;
+@modal-footer-margin-right-screen-large:                                        null;
+@modal-footer-margin-right-screen-jumbo:                                        null;
+
+// Padding Top
+
+@modal-footer-padding-top:                                                      0.5 * @base-spacing-unit;
+@modal-footer-padding-top-screen-small:                                         0.5 * @base-spacing-unit-screen-small;
+@modal-footer-padding-top-screen-medium:                                        0.5 * @base-spacing-unit-screen-medium;
+@modal-footer-padding-top-screen-large:                                         0.5 * @base-spacing-unit-screen-large;
+@modal-footer-padding-top-screen-jumbo:                                         0.5 * @base-spacing-unit-screen-jumbo;
+
+// Padding Bottom
+
+@modal-footer-padding-bottom:                                                   @modal-footer-padding-top;
+@modal-footer-padding-bottom-screen-small:                                      @modal-footer-padding-top-screen-small;
+@modal-footer-padding-bottom-screen-medium:                                     @modal-footer-padding-top-screen-medium;
+@modal-footer-padding-bottom-screen-large:                                      @modal-footer-padding-top-screen-large;
+@modal-footer-padding-bottom-screen-jumbo:                                      @modal-footer-padding-top-screen-jumbo;
+
+// Padding Left
+
+@modal-footer-padding-left:                                                     0.5 * @base-spacing-unit;
+@modal-footer-padding-left-screen-small:                                        0.5 * @base-spacing-unit-screen-small;
+@modal-footer-padding-left-screen-medium:                                       0.5 * @base-spacing-unit-screen-medium;
+@modal-footer-padding-left-screen-large:                                        0.5 * @base-spacing-unit-screen-large;
+@modal-footer-padding-left-screen-jumbo:                                        0.5 * @base-spacing-unit-screen-jumbo;
+
+// Padding Right
+
+@modal-footer-padding-right:                                                    @modal-footer-padding-left;
+@modal-footer-padding-right-screen-small:                                       @modal-footer-padding-left-screen-small;
+@modal-footer-padding-right-screen-medium:                                      @modal-footer-padding-left-screen-medium;
+@modal-footer-padding-right-screen-large:                                       @modal-footer-padding-left-screen-large;
+@modal-footer-padding-right-screen-jumbo:                                       @modal-footer-padding-left-screen-jumbo;
+
+
+
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+
+// Normal
+
+@modal-footer-background-color:                                                 @white;
+@modal-footer-background-gradient-color-top:                                    null;
+@modal-footer-background-gradient-color-bottom:                                 null;
+@modal-footer-border-width:                                                     null;
+@modal-footer-border-color:                                                     null;
+@modal-footer-border-style:                                                     null;
+@modal-footer-border-top-width:                                                 null;
+@modal-footer-border-top-color:                                                 null;
+@modal-footer-border-top-style:                                                 null;
+@modal-footer-border-right-width:                                               null;
+@modal-footer-border-right-color:                                               null;
+@modal-footer-border-right-style:                                               null;
+@modal-footer-border-bottom-width:                                              null;
+@modal-footer-border-bottom-color:                                              null;
+@modal-footer-border-bottom-style:                                              null;
+@modal-footer-border-left-width:                                                null;
+@modal-footer-border-left-color:                                                null;
+@modal-footer-border-left-style:                                                null;
+@modal-footer-shadow:                                                           0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+// Inverse
+
+@modal-footer-inverse-background-color:                                         color-lighten(@neutral, -20);
+@modal-footer-inverse-background-gradient-color-top:                            null;
+@modal-footer-inverse-background-gradient-color-bottom:                         null;
+@modal-footer-inverse-border-width:                                             null;
+@modal-footer-inverse-border-color:                                             null;
+@modal-footer-inverse-border-style:                                             null;
+@modal-footer-inverse-border-top-width:                                         null;
+@modal-footer-inverse-border-top-color:                                         null;
+@modal-footer-inverse-border-top-style:                                         null;
+@modal-footer-inverse-border-right-width:                                       null;
+@modal-footer-inverse-border-right-color:                                       null;
+@modal-footer-inverse-border-right-style:                                       null;
+@modal-footer-inverse-border-bottom-width:                                      null;
+@modal-footer-inverse-border-bottom-color:                                      null;
+@modal-footer-inverse-border-bottom-style:                                      null;
+@modal-footer-inverse-border-left-width:                                        null;
+@modal-footer-inverse-border-left-color:                                        null;
+@modal-footer-inverse-border-left-style:                                        null;
+@modal-footer-inverse-shadow:                                                   none;
