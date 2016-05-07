@@ -16,9 +16,20 @@ modal-large/styles.less
 
   .modal.modal-large {
 
-    .layout-spacing-variant(modal-large, null);
     .layout-property-variant(modal-large, width, null);
     .layout-property-variant(modal-large, border-radius, null);
+
+    & when not (@modal-large-margin-vertical = null) {
+
+      max-height: calc(e('100% - (2 * @{modal-large-margin-vertical})'));
+
+    }
+
+    & when not (@modal-large-margin-horizontal-screen-small = null) {
+
+      max-width: calc(e('100% - (2 * @{modal-large-margin-horizontal})'));
+
+    }
 
     /* -----------------------------------------------------------------------------
     Modal Header
@@ -72,9 +83,20 @@ modal-large/styles.less
 
       .modal.modal-large {
 
-        .layout-spacing-variant(modal-large, screen-small);
         .layout-property-variant(modal-large, width, screen-small);
         .layout-property-variant(modal-large, border-radius, screen-small);
+
+        & when not (@modal-large-margin-vertical-screen-small = null) {
+
+          max-height: calc(e('100% - (2 * @{modal-large-margin-vertical-screen-small})'));
+
+        }
+
+        & when not (@modal-large-margin-horizontal-screen-small = null) {
+
+          max-width: calc(e('100% - (2 * @{modal-large-margin-horizontal-screen-small})'));
+
+        }
 
         /* -----------------------------------------------------------------------------
         Modal Header
@@ -132,9 +154,20 @@ modal-large/styles.less
 
       .modal.modal-large {
 
-        .layout-spacing-variant(modal-large, screen-medium);
         .layout-property-variant(modal-large, width, screen-medium);
         .layout-property-variant(modal-large, border-radius, screen-medium);
+
+        & when not (@modal-large-margin-vertical-screen-medium = null) {
+
+          max-height: calc(e('100% - (2 * @{modal-large-margin-vertical-screen-medium})'));
+
+        }
+
+        & when not (@modal-large-margin-horizontal-screen-medium = null) {
+
+          max-width: calc(e('100% - (2 * @{modal-large-margin-horizontal-screen-medium})'));
+
+        }
 
         /* -----------------------------------------------------------------------------
         Modal Header
@@ -192,9 +225,20 @@ modal-large/styles.less
 
       .modal.modal-large {
 
-        .layout-spacing-variant(modal-large, screen-large);
         .layout-property-variant(modal-large, width, screen-large);
         .layout-property-variant(modal-large, border-radius, screen-large);
+
+        & when not (@modal-large-margin-vertical-screen-large = null) {
+
+          max-height: calc(e('100% - (2 * @{modal-large-margin-vertical-screen-large})'));
+
+        }
+
+        & when not (@modal-large-margin-horizontal-screen-large = null) {
+
+          max-width: calc(e('100% - (2 * @{modal-large-margin-horizontal-screen-large})'));
+
+        }
 
         /* -----------------------------------------------------------------------------
         Modal Header
@@ -252,9 +296,20 @@ modal-large/styles.less
 
       .modal.modal-large {
 
-        .layout-spacing-variant(modal-large, screen-jumbo);
         .layout-property-variant(modal-large, width, screen-jumbo);
         .layout-property-variant(modal-large, border-radius, screen-jumbo);
+
+        & when not (@modal-large-margin-vertical-screen-jumbo = null) {
+
+          max-height: calc(e('100% - (2 * @{modal-large-margin-vertical-screen-jumbo})'));
+
+        }
+
+        & when not (@modal-large-margin-horizontal-screen-jumbo = null) {
+
+          max-width: calc(e('100% - (2 * @{modal-large-margin-horizontal-screen-jumbo})'));
+
+        }
 
         /* -----------------------------------------------------------------------------
         Modal Header

@@ -10,8 +10,16 @@ page-header:
 page-navigation:
 - label: "Modal Structure"
   link: "#modals-structure"
-- label: "Modal Options"
-  link: "#modals-options"
+  navigation:
+  - label: "Modal Backdrop"
+    link: "#modals-structure-backdrop"
+- label: "Modal Sizes"
+  link: "#modals-sizes"
+  navigation:
+  - label: "Small Modal"
+    link: "#modals-sizes-small"
+  - label: "Large Modal"
+    link: "#modals-sizes-large"
 ---
 
 
@@ -50,48 +58,64 @@ BEGIN: Modals
 
         <div class="example-block-content">
 
-          <div class="modal-backdrop">
+          <div class="modal-backdrop modal-backdrop-inline">
           </div>
 
-          <div class="modal">
+          <div class="modal modal-inline">
 
-            <div class="modal-content">
+            <div class="modal-header">
 
-              <div class="modal-header">
+              <h5 class="modal-header-title flush">
 
-                <h5 class="modal-header-title flush">
+                Join Our Mailing List
 
-                  Modal Header Title
+              </h5>
 
-                </h5>
+            </div>
 
-              </div>
+            <div class="modal-body">
 
-              <div class="modal-body">
+              <p>
 
-                <p class="flush">
+                Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
 
-                  Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </p>
 
-                </p>
+              <div class="form flush-bottom">
 
-              </div>
+                <div class="row">
 
-              <div class="modal-footer">
+                  <div class="column-small-6">
 
-                <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
+                    <div class="form-group flush-bottom-screen-small">
 
-                  <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+                      <label>
 
-                    Close
+                        Full Name
 
-                  </a>
+                      </label>
 
-                  <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+                      <input class="form-control" type="text">
 
-                    Submit
+                    </div>
 
-                  </a>
+                  </div>
+
+                  <div class="column-small-6">
+
+                    <div class="form-group flush-bottom-screen-small">
+
+                      <label>
+
+                        Email
+
+                      </label>
+
+                      <input class="form-control" type="email">
+
+                    </div>
+
+                  </div>
 
                 </div>
 
@@ -99,29 +123,27 @@ BEGIN: Modals
 
             </div>
 
+            <div class="modal-footer">
+
+              <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
+
+                <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+
+                  Submit
+
+                </a>
+
+                <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+
+                  Close
+
+                </a>
+
+              </div>
+
+            </div>
+
           </div>
-
-        </div>
-
-        <div class="example-block-footer example-block-footer-codeblock">
-
-<pre class="prettyprint lang-html flush-bottom">
-&lt;div class="modal"&gt;
-  &lt;div class="modal-content"&gt;
-    &lt;div class="modal-header"&gt;
-      &lt;h5 class="modal-header-title flush"&gt;
-        Modal Header Title
-      &lt;/h5&gt;
-    &lt;/div&gt;
-    &lt;div class="modal-body"&gt;
-      &hellip;
-    &lt;/div&gt;
-    &lt;div class="modal-footer"&gt;
-      &hellip;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
 
         </div>
 
@@ -138,7 +160,7 @@ BEGIN: Modals
     ================================================== -->
 
     {% include components/modals/modals-structure.html %}
-    {% include components/modals/modals-options.html %}
+    {% include components/modals/modals-sizes.html %}
 
   </div>
 

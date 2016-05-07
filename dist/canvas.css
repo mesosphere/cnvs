@@ -871,27 +871,27 @@ Hidden
     Flush Margins
     ----------------------------------------------------------------------------- */
   .flush-screen-small {
-    margin: 0px;
+    margin: 0px !important;
   }
   .flush-vertical-screen-small {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
   .flush-horizontal-screen-small {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .flush-top-screen-small {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
   .flush-bottom-screen-small {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
   .flush-left-screen-small {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
   .flush-right-screen-small {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
   /* -----------------------------------------------------------------------------
     Hidden
@@ -919,27 +919,27 @@ Hidden
     Flush Margins
     ----------------------------------------------------------------------------- */
   .flush-screen-medium {
-    margin: 0px;
+    margin: 0px !important;
   }
   .flush-vertical-screen-medium {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
   .flush-horizontal-screen-medium {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .flush-top-screen-medium {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
   .flush-bottom-screen-medium {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
   .flush-left-screen-medium {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
   .flush-right-screen-medium {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
   /* -----------------------------------------------------------------------------
     Hidden
@@ -967,27 +967,27 @@ Hidden
     Flush Margins
     ----------------------------------------------------------------------------- */
   .flush-screen-large {
-    margin: 0px;
+    margin: 0px !important;
   }
   .flush-vertical-screen-large {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
   .flush-horizontal-screen-large {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .flush-top-screen-large {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
   .flush-bottom-screen-large {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
   .flush-left-screen-large {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
   .flush-right-screen-large {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
   /* -----------------------------------------------------------------------------
     Hidden
@@ -1015,27 +1015,27 @@ Hidden
     Flush Margins
     ----------------------------------------------------------------------------- */
   .flush-screen-jumbo {
-    margin: 0px;
+    margin: 0px !important;
   }
   .flush-vertical-screen-jumbo {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
   .flush-horizontal-screen-jumbo {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .flush-top-screen-jumbo {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
   .flush-bottom-screen-jumbo {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
   .flush-left-screen-jumbo {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
   .flush-right-screen-jumbo {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
   /* -----------------------------------------------------------------------------
     Hidden
@@ -23665,17 +23665,34 @@ modal/styles.less
   Modal
   ----------------------------------------------------------------------------- */
 .modal {
-  display: block;
-  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3D(-50%, -50%, 0) scale(1, 1);
+          transform: translate3D(-50%, -50%, 0) scale(1, 1);
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 10001;
   background: #ffffff;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
   width: 100%;
-  border-radius: 3px;
+  border-radius: 0px;
+  max-height: 95%;
+  max-height: calc(100% - (2 * 0px));
+  max-width: 95%;
+  max-width: calc(100% - (2 * 0px));
+  /* -----------------------------------------------------------------------------
+    Inline Modal
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
     Modal Header
     ----------------------------------------------------------------------------- */
@@ -23689,9 +23706,26 @@ modal/styles.less
     Modal Inverse (.modal-inverse)
     ----------------------------------------------------------------------------- */
 }
+.modal.modal-inline {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  -webkit-transform: none;
+          transform: none;
+  z-index: auto;
+  margin: 0 auto;
+}
 .modal .modal-header {
   display: block;
   position: relative;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   background: #ffffff;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   padding-top: 24px;
@@ -23702,6 +23736,10 @@ modal/styles.less
 .modal .modal-body {
   display: block;
   position: relative;
+  -webkit-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  overflow-y: auto;
   background: #ffffff;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   padding-top: 24px;
@@ -23712,6 +23750,12 @@ modal/styles.less
 .modal .modal-footer {
   display: block;
   position: relative;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   background: #ffffff;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   padding-top: 24px;
@@ -23752,11 +23796,12 @@ modal/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: auto;
     width: 350px;
+    border-radius: 3px;
+    max-height: 95%;
+    max-height: calc(100% - (2 * 24px));
+    max-width: 95%;
+    max-width: calc(100% - (2 * 24px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -23794,9 +23839,11 @@ modal/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal {
-    margin-top: 32px;
-    margin-bottom: 32px;
     width: 450px;
+    max-height: 95%;
+    max-height: calc(100% - (2 * 32px));
+    max-width: 95%;
+    max-width: calc(100% - (2 * 32px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -23834,9 +23881,11 @@ modal/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal {
-    margin-top: 36px;
-    margin-bottom: 36px;
     width: 500px;
+    max-height: 95%;
+    max-height: calc(100% - (2 * 36px));
+    max-width: 95%;
+    max-width: calc(100% - (2 * 36px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -23874,9 +23923,11 @@ modal/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal {
-    margin-top: 36px;
-    margin-bottom: 36px;
     width: 550px;
+    max-height: 95%;
+    max-height: calc(100% - (2 * 36px));
+    max-width: 95%;
+    max-width: calc(100% - (2 * 36px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -23935,10 +23986,17 @@ modal-backdrop/styles.less
   left: 0px;
   width: 100%;
   height: 100%;
+  z-index: 10000;
   background: rgba(20, 23, 31, 0.9);
+  /* -----------------------------------------------------------------------------
+    Inline Modal
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
     Modal Backdrop Inverse (.modal-backdrop-inverse)
     ----------------------------------------------------------------------------- */
+}
+.modal-backdrop.modal-backdrop-inline {
+  z-index: auto;
 }
 .modal-backdrop.modal-backdrop-inverse {
   background: rgba(255, 255, 255, 0.9);
@@ -24010,12 +24068,10 @@ modal-small/styles.less
   Modal
   ----------------------------------------------------------------------------- */
 .modal.modal-small {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
   width: 100%;
   border-radius: 3px;
+  max-height: calc(100% - (2 * 0px));
+  max-width: calc(100% - (2 * 0px));
   /* -----------------------------------------------------------------------------
     Modal Header
     ----------------------------------------------------------------------------- */
@@ -24026,19 +24082,19 @@ modal-small/styles.less
     Modal Footer
     ----------------------------------------------------------------------------- */
 }
-.modal.modal-small .modal-small-header {
+.modal.modal-small .modal-header {
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 24px;
   padding-right: 24px;
 }
-.modal.modal-small .modal-small-body {
+.modal.modal-small .modal-body {
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 24px;
   padding-right: 24px;
 }
-.modal.modal-small .modal-small-footer {
+.modal.modal-small .modal-footer {
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 24px;
@@ -24052,11 +24108,9 @@ modal-small/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal.modal-small {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: auto;
     width: 350px;
+    max-height: calc(100% - (2 * 24px));
+    max-width: calc(100% - (2 * 24px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -24067,19 +24121,19 @@ modal-small/styles.less
         Modal Footer
         ----------------------------------------------------------------------------- */
   }
-  .modal.modal-small .modal-small-header {
+  .modal.modal-small .modal-header {
     padding-top: 24px;
     padding-bottom: 24px;
     padding-left: 24px;
     padding-right: 24px;
   }
-  .modal.modal-small .modal-small-body {
+  .modal.modal-small .modal-body {
     padding-top: 24px;
     padding-bottom: 24px;
     padding-left: 24px;
     padding-right: 24px;
   }
-  .modal.modal-small .modal-small-footer {
+  .modal.modal-small .modal-footer {
     padding-top: 24px;
     padding-bottom: 24px;
     padding-left: 24px;
@@ -24094,9 +24148,9 @@ modal-small/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal.modal-small {
-    margin-top: 32px;
-    margin-bottom: 32px;
     width: 350px;
+    max-height: calc(100% - (2 * 32px));
+    max-width: calc(100% - (2 * 32px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -24107,19 +24161,19 @@ modal-small/styles.less
         Modal Footer
         ----------------------------------------------------------------------------- */
   }
-  .modal.modal-small .modal-small-header {
+  .modal.modal-small .modal-header {
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 32px;
     padding-right: 32px;
   }
-  .modal.modal-small .modal-small-body {
+  .modal.modal-small .modal-body {
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 32px;
     padding-right: 32px;
   }
-  .modal.modal-small .modal-small-footer {
+  .modal.modal-small .modal-footer {
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 32px;
@@ -24134,9 +24188,9 @@ modal-small/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal.modal-small {
-    margin-top: 36px;
-    margin-bottom: 36px;
     width: 350px;
+    max-height: calc(100% - (2 * 36px));
+    max-width: calc(100% - (2 * 36px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -24147,19 +24201,19 @@ modal-small/styles.less
         Modal Footer
         ----------------------------------------------------------------------------- */
   }
-  .modal.modal-small .modal-small-header {
+  .modal.modal-small .modal-header {
     padding-top: 36px;
     padding-bottom: 36px;
     padding-left: 36px;
     padding-right: 36px;
   }
-  .modal.modal-small .modal-small-body {
+  .modal.modal-small .modal-body {
     padding-top: 36px;
     padding-bottom: 36px;
     padding-left: 36px;
     padding-right: 36px;
   }
-  .modal.modal-small .modal-small-footer {
+  .modal.modal-small .modal-footer {
     padding-top: 36px;
     padding-bottom: 36px;
     padding-left: 36px;
@@ -24174,9 +24228,9 @@ modal-small/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal.modal-small {
-    margin-top: 36px;
-    margin-bottom: 36px;
     width: 350px;
+    max-height: calc(100% - (2 * 36px));
+    max-width: calc(100% - (2 * 36px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -24187,19 +24241,19 @@ modal-small/styles.less
         Modal Footer
         ----------------------------------------------------------------------------- */
   }
-  .modal.modal-small .modal-small-header {
+  .modal.modal-small .modal-header {
     padding-top: 36px;
     padding-bottom: 36px;
     padding-left: 36px;
     padding-right: 36px;
   }
-  .modal.modal-small .modal-small-body {
+  .modal.modal-small .modal-body {
     padding-top: 36px;
     padding-bottom: 36px;
     padding-left: 36px;
     padding-right: 36px;
   }
-  .modal.modal-small .modal-small-footer {
+  .modal.modal-small .modal-footer {
     padding-top: 36px;
     padding-bottom: 36px;
     padding-left: 36px;
@@ -24261,12 +24315,10 @@ modal-large/styles.less
   Modal
   ----------------------------------------------------------------------------- */
 .modal.modal-large {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
   width: 100%;
   border-radius: 3px;
+  max-height: calc(100% - (2 * 0px));
+  max-width: calc(100% - (2 * 0px));
   /* -----------------------------------------------------------------------------
     Modal Header
     ----------------------------------------------------------------------------- */
@@ -24303,11 +24355,9 @@ modal-large/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal.modal-large {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: auto;
     width: 400px;
+    max-height: calc(100% - (2 * 24px));
+    max-width: calc(100% - (2 * 24px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -24345,9 +24395,9 @@ modal-large/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal.modal-large {
-    margin-top: 32px;
-    margin-bottom: 32px;
     width: 600px;
+    max-height: calc(100% - (2 * 32px));
+    max-width: calc(100% - (2 * 32px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -24385,9 +24435,9 @@ modal-large/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal.modal-large {
-    margin-top: 36px;
-    margin-bottom: 36px;
     width: 700px;
+    max-height: calc(100% - (2 * 36px));
+    max-width: calc(100% - (2 * 36px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */
@@ -24425,9 +24475,9 @@ modal-large/styles.less
       Modal
       ----------------------------------------------------------------------------- */
   .modal.modal-large {
-    margin-top: 36px;
-    margin-bottom: 36px;
     width: 800px;
+    max-height: calc(100% - (2 * 36px));
+    max-width: calc(100% - (2 * 36px));
     /* -----------------------------------------------------------------------------
         Modal Header
         ----------------------------------------------------------------------------- */

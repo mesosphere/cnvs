@@ -16,13 +16,50 @@ modal/styles.less
 
   .modal {
 
-    display: block;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate3D(-50%, -50%, 0) scale(1.0, 1.0);
+    filter: blur(0);
+    backface-visibility: hidden;
+    z-index: 10001;
     .shape-style-variant(modal);
-    .layout-spacing-variant(modal, null);
     .layout-property-variant(modal, width, null);
     .layout-property-variant(modal, border-radius, null);
+
+    & when not (@modal-margin-vertical = null) {
+
+      max-height: 95%;
+      max-height: calc(e('100% - (2 * @{modal-margin-vertical})'));
+
+    }
+
+    & when not (@modal-margin-horizontal-screen-small = null) {
+
+      max-width: 95%;
+      max-width: calc(e('100% - (2 * @{modal-margin-horizontal})'));
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Inline Modal
+    ----------------------------------------------------------------------------- */
+
+    &.modal-inline {
+
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      transform: none;
+      z-index: auto;
+      margin: 0 auto;
+
+    }
 
     /* -----------------------------------------------------------------------------
     Modal Header
@@ -32,6 +69,8 @@ modal/styles.less
 
       display: block;
       position: relative;
+      flex: 1;
+      flex-shrink: 0;
       .shape-style-variant(modal-header);
       .layout-spacing-variant(modal-header, null);
 
@@ -45,6 +84,8 @@ modal/styles.less
 
       display: block;
       position: relative;
+      flex: 8;
+      overflow-y: auto;
       .shape-style-variant(modal-body);
       .layout-spacing-variant(modal-body, null);
 
@@ -58,6 +99,8 @@ modal/styles.less
 
       display: block;
       position: relative;
+      flex: 1;
+      flex-shrink: 0;
       .shape-style-variant(modal-footer);
       .layout-spacing-variant(modal-footer, null);
 
@@ -125,9 +168,22 @@ modal/styles.less
 
       .modal {
 
-        .layout-spacing-variant(modal, screen-small);
         .layout-property-variant(modal, width, screen-small);
         .layout-property-variant(modal, border-radius, screen-small);
+
+        & when not (@modal-margin-vertical-screen-small = null) {
+
+          max-height: 95%;
+          max-height: calc(e('100% - (2 * @{modal-margin-vertical-screen-small})'));
+
+        }
+
+        & when not (@modal-margin-horizontal-screen-small = null) {
+
+          max-width: 95%;
+          max-width: calc(e('100% - (2 * @{modal-margin-horizontal-screen-small})'));
+
+        }
 
         /* -----------------------------------------------------------------------------
         Modal Header
@@ -185,9 +241,22 @@ modal/styles.less
 
       .modal {
 
-        .layout-spacing-variant(modal, screen-medium);
         .layout-property-variant(modal, width, screen-medium);
         .layout-property-variant(modal, border-radius, screen-medium);
+
+        & when not (@modal-margin-vertical-screen-medium = null) {
+
+          max-height: 95%;
+          max-height: calc(e('100% - (2 * @{modal-margin-vertical-screen-medium})'));
+
+        }
+
+        & when not (@modal-margin-horizontal-screen-medium = null) {
+
+          max-width: 95%;
+          max-width: calc(e('100% - (2 * @{modal-margin-horizontal-screen-medium})'));
+
+        }
 
         /* -----------------------------------------------------------------------------
         Modal Header
@@ -245,9 +314,22 @@ modal/styles.less
 
       .modal {
 
-        .layout-spacing-variant(modal, screen-large);
         .layout-property-variant(modal, width, screen-large);
         .layout-property-variant(modal, border-radius, screen-large);
+
+        & when not (@modal-margin-vertical-screen-large = null) {
+
+          max-height: 95%;
+          max-height: calc(e('100% - (2 * @{modal-margin-vertical-screen-large})'));
+
+        }
+
+        & when not (@modal-margin-horizontal-screen-large = null) {
+
+          max-width: 95%;
+          max-width: calc(e('100% - (2 * @{modal-margin-horizontal-screen-large})'));
+
+        }
 
         /* -----------------------------------------------------------------------------
         Modal Header
@@ -305,9 +387,22 @@ modal/styles.less
 
       .modal {
 
-        .layout-spacing-variant(modal, screen-jumbo);
         .layout-property-variant(modal, width, screen-jumbo);
         .layout-property-variant(modal, border-radius, screen-jumbo);
+
+        & when not (@modal-margin-vertical-screen-jumbo = null) {
+
+          max-height: 95%;
+          max-height: calc(e('100% - (2 * @{modal-margin-vertical-screen-jumbo})'));
+
+        }
+
+        & when not (@modal-margin-horizontal-screen-jumbo = null) {
+
+          max-width: 95%;
+          max-width: calc(e('100% - (2 * @{modal-margin-horizontal-screen-jumbo})'));
+
+        }
 
         /* -----------------------------------------------------------------------------
         Modal Header
