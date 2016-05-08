@@ -48,6 +48,25 @@ modal/styles.less
     Inline Modal
     ----------------------------------------------------------------------------- */
 
+    &.fade {
+
+      opacity: 0.0;
+      transition: e('opacity 0.25s ease, margin-top 0.25s ease');
+      margin-top: -50px;
+
+      &.in {
+
+        opacity: 1.0;
+        margin-top: 0px;
+
+      }
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Inline Modal
+    ----------------------------------------------------------------------------- */
+
     &.modal-inline {
 
       position: relative;
@@ -84,7 +103,7 @@ modal/styles.less
 
       display: block;
       position: relative;
-      flex: 8;
+      flex: 1;
       overflow-y: auto;
       .shape-style-variant(modal-body);
       .layout-spacing-variant(modal-body, null);
@@ -141,6 +160,40 @@ modal/styles.less
       .modal-footer {
 
         .shape-style-variant(modal-footer-inverse);
+
+      }
+
+    }
+
+  }
+
+  /* -----------------------------------------------------------------------------
+  Modal Backdrop
+  ----------------------------------------------------------------------------- */
+
+  .modal-backdrop {
+
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    .shape-style-variant(modal-backdrop);
+
+    /* -----------------------------------------------------------------------------
+    Fade
+    ----------------------------------------------------------------------------- */
+
+    &.fade {
+
+      opacity: 0.0;
+      transition: opacity 0.25s ease;
+
+      &.in {
+
+        opacity: 1.0;
 
       }
 

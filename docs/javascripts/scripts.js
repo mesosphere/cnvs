@@ -101,6 +101,12 @@ $(function() {
     });
 
     /* ---------------------------------------------------------------------------
+    Initialize Modals
+    --------------------------------------------------------------------------- */
+
+    modals_init();
+
+    /* ---------------------------------------------------------------------------
     Initialize Views
     --------------------------------------------------------------------------- */
 
@@ -305,5 +311,119 @@ $(function() {
   }
 
   window.get_scrollbar_width = get_scrollbar_width;
+
+  /* ---------------------------------------------------------------------------
+  Get Transition Time
+  --------------------------------------------------------------------------- */
+
+  function getTransitionDuration (el, with_delay) {
+
+    var duration = el.css('transition-duration');
+    var delay = el.css('transition-delay');
+
+    duration = (duration.indexOf("ms")>-1) ? parseFloat(duration) : parseFloat(duration)*1000;
+    delay = (delay.indexOf("ms")>-1) ? parseFloat(delay) : parseFloat(delay)*1000;
+
+    if (with_delay) {
+
+      return (duration + delay);
+
+    } else {
+
+      return duration;
+
+    }
+
+  }
+
+  /* ---------------------------------------------------------------------------
+  Initialize Modals
+  --------------------------------------------------------------------------- */
+
+  function modals_init() {
+
+    // Listen for and handle click events on Modal Triggers
+
+    $('*[data-toggle="modal"]').each(function() {
+
+      $(this).click(function(event) {
+
+        event.preventDefault();
+        var modal = $($(this).data('target'));
+
+        if (modal.length) {
+
+          var modal_backdrop = $('.modal-backdrop');
+
+          if (!modal_backdrop.length) {
+
+            modal_backdrop = $('<div class="modal-backdrop fade" style="display: block;"></div>');
+            modal_backdrop.appendTo($('body'));
+
+          }
+
+          setTimeout(function() {
+
+            modal.css({'display': 'flex'});
+            modal_backdrop.css({'display': 'block'});
+
+            setTimeout(function() {
+
+              modal.addClass("in");
+              modal_backdrop.addClass("in");
+
+            }, 20);
+
+          }, 20);
+
+        }
+
+      });
+
+    });
+
+    // Initialize event handlers for modal close buttons
+
+    $('.modal:not(.modal-inline)').each(function() {
+
+      var modal = $(this);
+      modal.css({'display': 'none'});
+
+      modal.find('[data-dismiss="modal"]').each(function() {
+
+        $(this).click(function(event) {
+
+          event.preventDefault();
+
+          var transition_duration = getTransitionDuration(modal, true);
+          modal.removeClass("in");
+
+          var modal_backdrop = $('.modal-backdrop');
+
+          if (modal_backdrop.length) {
+
+            modal_backdrop.removeClass("in");
+
+          }
+
+          setTimeout(function() {
+
+            modal.css({'display': 'none'});
+
+            if (modal_backdrop.length) {
+
+              modal_backdrop.css({'display': 'none'});
+
+            }
+
+          }, transition_duration);
+
+        });
+
+      });
+
+    });
+
+  }
 
 });

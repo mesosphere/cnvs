@@ -136,7 +136,8 @@ BEGIN: Head
 
   <script type="text/javascript" src="/javascripts/vendor/jquery-2.2.0.min.js"></script>
   <!-- <script type="text/javascript" src="/javascripts/vendor/modernizr-custom.min.js"></script> -->
-  <script type="text/javascript" src="/javascripts/vendor/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="/javascripts/vendor/bootstrap.min.js"></script> -->
+  <!-- <script type="text/javascript" src="/javascripts/vendor/bootstrap/modal.js"></script> -->
   <script type="text/javascript" src="/javascripts/vendor/google-code-prettify/prettify.js"></script>
   <script type="text/javascript" src="/javascripts/vendor/jquery.sticky-kit.min.js"></script>
   <!-- <script type="text/javascript" src="/javascripts/vendor/waypoints/jquery.waypoints.min.js"></script> -->
@@ -199,6 +200,10 @@ BEGIN: Canvas Sidebar
 <div class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
 
   
+
+  
+
+
 
 <!-- =================================================
 BEGIN: Header
@@ -473,11 +478,29 @@ BEGIN: Canvas Sidebar
 
         
 
+  
+  
+  
+  
 
 
 
 
 
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
 
 
 
@@ -606,29 +629,6 @@ BEGIN: Page Navigation
 
       
 
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#modals-structure-backdrop" class="">
-
-        Modal Backdrop
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-      
-
     </li>
 
   
@@ -736,12 +736,9 @@ BEGIN: Modals
       BEGIN: Example
       ================================================== -->
 
-      <div class="example-block flush-bottom">
+      <div class="example-block inverse flush-bottom">
 
         <div class="example-block-content">
-
-          <div class="modal-backdrop modal-backdrop-inline">
-          </div>
 
           <div class="modal modal-inline">
 
@@ -842,6 +839,140 @@ BEGIN: Modals
     ================================================== -->
 
     <!-- =================================================
+BEGIN: Modal Example
+================================================== -->
+
+<section id="modals-example">
+
+  <h2>
+
+    Example
+
+  </h2>
+
+  <p>
+
+
+    Will some simple Javascript, it's pretty simple to toggle a modals visibility.  Add the class <code>.hide</code> to a modal.
+
+  </p>
+
+  <!-- =================================================
+  BEGIN: Example
+  ================================================== -->
+
+  <div class="example-block flush-bottom">
+
+    <div class="example-block-content">
+
+      <a href="#" class="button" data-toggle="modal" data-target="#myModal">Show Modal</a>
+
+      <div class="modal fade" id="myModal">
+
+        <div class="modal-header">
+
+          <h5 class="modal-header-title flush">
+
+            Join Our Mailing List
+
+          </h5>
+
+        </div>
+
+        <div class="modal-body">
+
+          <p>
+
+            Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
+
+          </p>
+
+          <div class="form flush-bottom">
+
+            <div class="row">
+
+              <div class="column-small-6">
+
+                <div class="form-group flush-bottom-screen-small">
+
+                  <label>
+
+                    Full Name
+
+                  </label>
+
+                  <input class="form-control" type="text">
+
+                </div>
+
+              </div>
+
+              <div class="column-small-6">
+
+                <div class="form-group flush-bottom-screen-small">
+
+                  <label>
+
+                    Email
+
+                  </label>
+
+                  <input class="form-control" type="email">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+          <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
+
+            <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+
+              Submit
+
+            </a>
+
+            <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium" data-dismiss="modal">
+
+              Close
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+</pre>
+
+    </div>
+
+  </div>
+
+  <!-- =================================================
+  END: Example
+  ================================================== -->
+
+</section>
+
+<!-- =================================================
+END: Modal Example
+================================================== -->
+
+    <!-- =================================================
 BEGIN: Modal Structure
 ================================================== -->
 
@@ -915,180 +1046,6 @@ BEGIN: Modal Structure
   END: Example
   ================================================== -->
 
-  <!-- =================================================
-  BEGIN: Modal Backdrop
-  ================================================== -->
-
-  <section id="modals-backdrop">
-
-    <h3>
-
-      Modal Backdrop
-
-    </h3>
-
-    <p>
-
-      Use the <code>.modal-backdrop</code> class to create an overlay that your modal lay on top of.  This is optional, but is often nice to hide content behind the modal and keep your user's attention on the modal itself.  The modal backdrop can also serve as a click-target for closing the modal.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="example-block flush-bottom">
-
-      <div class="example-block-content">
-
-        <div class="modal-backdrop modal-backdrop-inline">
-        </div>
-
-        <div class="modal modal-inline">
-
-          <div class="modal-close">
-          </div>
-
-          <div class="modal-body">
-
-            <p class="flush">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum duis mollis, est non commodo.
-
-          </div>
-
-          <div class="modal-footer text-align-center">
-
-            <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
-
-              <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                Close
-
-              </a>
-
-              <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                Submit
-
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="example-block-footer example-block-footer-codeblock">
-
-<pre class="prettyprint lang-html flush-bottom">
-&lt;div class="modal-backdrop"&gt;
-&lt;/div&gt;
-&lt;div class="modal"&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Modal Backdrop (Inverse)
-    ================================================== -->
-
-    <section id="modals-structure-backdrop">
-
-      <h4>
-
-        Inverse Modal Backdrop
-
-      </h4>
-
-      <p>
-
-        By default the modal backdrop element is dark, but can be easily inverted to a white appearance using <code>.modal-backdrop-inverse</code>.
-
-      </p>
-
-      <!-- =================================================
-      BEGIN: Example
-      ================================================== -->
-
-      <div class="example-block flush-bottom">
-
-        <div class="example-block-content">
-
-          <div class="modal-backdrop modal-backdrop-inline modal-backdrop-inverse">
-          </div>
-
-          <div class="modal modal-inline">
-
-            <div class="modal-close">
-            </div>
-
-            <div class="modal-body">
-
-              <p class="flush">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum duis mollis, est non commodo.
-
-            </div>
-
-            <div class="modal-footer text-align-center">
-
-              <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
-
-                <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                  Close
-
-                </a>
-
-                <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                  Submit
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="example-block-footer example-block-footer-codeblock">
-
-<pre class="prettyprint lang-html flush-bottom">
-&lt;div class="modal-backdrop modal-backdrop-inverse"&gt;
-&lt;/div&gt;
-&lt;div class="modal"&gt;
-&lt;/div&gt;
-</pre>
-
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      END: Example
-      ================================================== -->
-
-    </section>
-
-    <!-- =================================================
-    END: Modal Backdrop
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Modal Backdrop (Inverse)
-  ================================================== -->
-
 </section>
 
 <!-- =================================================
@@ -1135,12 +1092,9 @@ BEGIN: Modal Sizes
     BEGIN: Example
     ================================================== -->
 
-    <div class="example-block flush-bottom">
+    <div class="example-block inverse flush-bottom">
 
       <div class="example-block-content">
-
-        <div class="modal-backdrop modal-backdrop-inline">
-        </div>
 
         <div class="modal modal-small modal-inline">
 
@@ -1233,12 +1187,9 @@ BEGIN: Modal Sizes
     BEGIN: Example
     ================================================== -->
 
-    <div class="example-block flush-bottom">
+    <div class="example-block inverse flush-bottom">
 
       <div class="example-block-content">
-
-        <div class="modal-backdrop modal-backdrop-inline">
-        </div>
 
         <div class="modal modal-large modal-inline">
 
