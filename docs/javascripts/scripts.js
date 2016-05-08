@@ -372,6 +372,13 @@ $(function() {
               modal.addClass("in");
               modal_backdrop.addClass("in");
 
+              modal_backdrop.click(function(event) {
+
+                event.preventDefault();
+                modal_close_helper(modal);
+
+              });
+
             }, 20);
 
           }, 20);
@@ -394,35 +401,44 @@ $(function() {
         $(this).click(function(event) {
 
           event.preventDefault();
-
-          var transition_duration = getTransitionDuration(modal, true);
-          modal.removeClass("in");
-
-          var modal_backdrop = $('.modal-backdrop');
-
-          if (modal_backdrop.length) {
-
-            modal_backdrop.removeClass("in");
-
-          }
-
-          setTimeout(function() {
-
-            modal.css({'display': 'none'});
-
-            if (modal_backdrop.length) {
-
-              modal_backdrop.css({'display': 'none'});
-
-            }
-
-          }, transition_duration);
+          modal_close_helper(modal);
 
         });
 
       });
 
     });
+
+  }
+
+  /* ---------------------------------------------------------------------------
+  Modal Close Helper
+  --------------------------------------------------------------------------- */
+
+  function modal_close_helper(modal) {
+
+    var transition_duration = getTransitionDuration(modal, true);
+    modal.removeClass("in");
+
+    var modal_backdrop = $('.modal-backdrop');
+
+    if (modal_backdrop.length) {
+
+      modal_backdrop.removeClass("in");
+
+    }
+
+    setTimeout(function() {
+
+      modal.css({'display': 'none'});
+
+      if (modal_backdrop.length) {
+
+        modal_backdrop.css({'display': 'none'});
+
+      }
+
+    }, transition_duration);
 
   }
 
