@@ -7,12 +7,99 @@ page-header:
   parent:
     label: "Components"
     url: "/components/"
+page-navigation:
+- label: "Panel Cell"
+  link: "#panels-cells"
+  navigation:
+  - label: "Size Modifiers"
+    link: "#panels-cells-size-modifiers"
+  - label: "Size Direction Modifiers"
+    link: "#panels-cells-size-direction-modifiers"
+- label: "Panel Styling"
+  link: "#panels-styling"
 ---
 
-<div class="fill">
+<!-- =================================================
+BEGIN: Panels
+================================================== -->
+
+<div class="fill" id="panels">
 
   <div class="container-fluid pod">
+
+    <!-- =================================================
+    BEGIN: Panels Overview
+    ================================================== -->
+
+    <section id="panels-overview">
+
+      <p class="lead">
+
+        A panel is a simple, flexible, and customizable content container. In combination with panel cells, panels can be used to create a wide range of layout and content display options.
+
+      </p>
+
+      <p>
+
+        To create a new panel use the <code>.panel</code> class. By itself, a panel is pretty basic - offering nothing more than box styling and outer spacing.  Use one or more nested panel cells (<code>.panel-cell</code>) to create a layout that fits your specific project requirements.
+
+      </p>
+
+      <!-- =================================================
+      BEGIN: Example
+      ================================================== -->
+
+      <div class="example-block flush-bottom">
+
+        <div class="example-block-content">
+
+          <div class="row">
+
+            <div class="column-12 column-small-8 column-small-offset-2 column-medium-8 column-medium-offset-2 column-large-6 column-large-offset-3 column-jumbo-4 column-jumbo-offset-4">
+
+              <div class="panel panel-inline">
+
+                <div class="panel-cell">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="panel"&gt;
+  &hellip;
+&lt;/div&gt;
+</pre>
+
+        </div>
+
+      </div>
+
+      <!-- =================================================
+      END: Example
+      ================================================== -->
+
+    </section>
+
+    <!-- =================================================
+    END: Panels Overview
+    ================================================== -->
+
+    {% include components/panels/panels-cells.html %}
+    {% include components/panels/panels-styling.html %}
 
   </div>
 
 </div>
+
+<!-- =================================================
+END: Panels
+================================================== -->

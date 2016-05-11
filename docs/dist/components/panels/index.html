@@ -201,10 +201,6 @@ BEGIN: Canvas Sidebar
 
   
 
-  
-
-
-
 <!-- =================================================
 BEGIN: Header
 ================================================== -->
@@ -478,29 +474,11 @@ BEGIN: Canvas Sidebar
 
         
 
-  
-  
-  
-  
 
 
 
 
 
-
-
-  
-
-
-
-
-
-
-
-  
-  
-  
-  
 
 
 
@@ -605,19 +583,1110 @@ END: Page Header
 
           
 
+            <!-- =================================================
+BEGIN: Page Navigation
+================================================== -->
+<!-- flex-screen-large  -->
+<div class="page-navigation flex-item-shrink-0-screen-large flex-item-order-1-screen-large" id="page-navigation">
+
+  <div class="page-navigation-sticky">
+
+    <div class="container-fluid pod">
+
+      <ul class="page-navigation-menu list-unstyled">
+
+  
+
+    <li class="">
+
+      <a href="#panels-cells" class="">
+
+        Panel Cell
+
+      </a>
+
+      
+
+        <ul class="page-navigation-menu list-unstyled">
+
+  
+
+    <li class="">
+
+      <a href="#panels-cells-size-modifiers" class="">
+
+        Size Modifiers
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+    <li class="">
+
+      <a href="#panels-cells-size-direction-modifiers" class="">
+
+        Size Direction Modifiers
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+</ul>
+
+
+      
+
+    </li>
+
+  
+
+    <li class="">
+
+      <a href="#panels-styling" class="">
+
+        Panel Styling
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+</ul>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- =================================================
+END: Page Navigation
+================================================== -->
+
+
+          
+
           <!-- =================================================
           BEGIN: Page Content
           ================================================== -->
 
           <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
 
-            <div class="fill">
+            <!-- =================================================
+BEGIN: Panels
+================================================== -->
+
+<div class="fill" id="panels">
 
   <div class="container-fluid pod">
+
+    <!-- =================================================
+    BEGIN: Panels Overview
+    ================================================== -->
+
+    <section id="panels-overview">
+
+      <p class="lead">
+
+        A panel is a simple, flexible, and customizable content container. In combination with panel cells, panels can be used to create a wide range of layout and content display options.
+
+      </p>
+
+      <p>
+
+        To create a new panel use the <code>.panel</code> class. By itself, a panel is pretty basic - offering nothing more than box styling and outer spacing.  Use one or more nested panel cells (<code>.panel-cell</code>) to create a layout that fits your specific project requirements.
+
+      </p>
+
+      <!-- =================================================
+      BEGIN: Example
+      ================================================== -->
+
+      <div class="example-block flush-bottom">
+
+        <div class="example-block-content">
+
+          <div class="row">
+
+            <div class="column-12 column-small-8 column-small-offset-2 column-medium-8 column-medium-offset-2 column-large-6 column-large-offset-3 column-jumbo-4 column-jumbo-offset-4">
+
+              <div class="panel panel-inline">
+
+                <div class="panel-cell">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="panel"&gt;
+  &hellip;
+&lt;/div&gt;
+</pre>
+
+        </div>
+
+      </div>
+
+      <!-- =================================================
+      END: Example
+      ================================================== -->
+
+    </section>
+
+    <!-- =================================================
+    END: Panels Overview
+    ================================================== -->
+
+    <!-- =================================================
+BEGIN: Panel Structure
+================================================== -->
+
+<section id="panels-cells">
+
+  <h2>
+
+    Panel Cell
+
+  </h2>
+
+  <p>
+
+    The panel cell (<code>.panel-cell</code>) is the basic building block of panels. Any number of panel cells can be used in a panel.  Panel cells offer a variety of spacing and styling options.
+
+  </p>
+
+  <!-- =================================================
+  BEGIN: Example
+  ================================================== -->
+
+  <div class="example-block flush-bottom">
+
+    <div class="example-block-content">
+
+      <div class="panel panel-inline">
+
+        <div class="panel-cell panel-header text-align-center">
+
+          <code>.panel-cell</code>
+
+        </div>
+
+        <div class="panel-cell panel-body text-align-center">
+
+          <code>.panel-cell</code>
+
+        </div>
+
+        <div class="panel-cell panel-footer text-align-center">
+
+          <code>.panel-cell</code>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="panel"&gt;
+  &lt;div class="panel-cell"&gt;
+    &hellip;
+  &lt;/div&gt;
+  &lt;div class="panel-cell"&gt;
+    &hellip;
+  &lt;/div&gt;
+  &lt;div class="panel-cell"&gt;
+    &hellip;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+    </div>
+
+  </div>
+
+  <!-- =================================================
+  END: Example
+  ================================================== -->
+
+  <!-- =================================================
+  BEGIN: Panel Cell Size Modifiers
+  ================================================== -->
+
+  <section id="panels-cells-size-modifiers">
+
+    <h3>
+
+      Size Modifiers
+
+    </h3>
+
+    <p>
+
+      To adjust the inner padding applied to a panel cell, use one of the available panel-specific size classes. For example, simply using the class <code>.panel-cell-short</code> will reduce padding evenly above and below the panel cell.  Use of these modifiers allows you the ability to create unique panel layouts to meet your specific project needs.
+
+    </p>
+
+    <table class="table short">
+
+      <thead>
+
+        <tr>
+
+          <th>
+
+            Class
+
+          </th>
+
+          <th>
+
+            Description
+
+          </th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-shorter
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Reduce the vertical margins to 25%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-short
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Reduce the vertical margins to 50%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-tall
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Increase the vertical margins by 150%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-taller
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Increase the vertical margins by 200%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-narrower
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Reduce the horizontal margins to 25%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-narrow
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Reduce the horizontal margins to 50%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-wide
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Increase the horizontal margins by 150%.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-wider
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Increase the horizontal margins by 200%.
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <!-- =================================================
+    BEGIN: Example
+    ================================================== -->
+
+    <div class="example-block flush-bottom">
+
+      <div class="example-block-content">
+
+        <div class="row">
+
+          <div class="column-12 column-small-6 column-medium-6 column-large-5 column-large-offset-1 column-jumbo-4 column-jumbo-offset-2">
+
+            <div class="panel">
+
+              <div class="panel-cell">
+
+                <h4 class="flush-top">
+
+                  Event Name
+
+                </h4>
+
+                <p class="flush-bottom">
+
+                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
+
+                </p>
+
+              </div>
+
+              <div class="panel-cell panel-cell-short text-align-center">
+
+                <a href="#" class="button button-primary">
+
+                  Learn More &rarr;
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="column-12 column-small-6 column-medium-6 column-large-5 column-jumbo-4">
+
+            <div class="panel">
+
+              <div class="layout-box pods-options-size-direction-modifier">
+
+                <div class="layout-box-item layout-box-item-margin">
+
+                  <div class="layout-box-item layout-box-item-padding panel-cell">
+
+                    <div class="layout-box-item layout-box-item-content">
+
+                      <h4 class="flush-top">
+
+                        Event Name
+
+                      </h4>
+
+                      <p class="flush-bottom">
+
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="layout-box pods-options-size-direction-modifier">
+
+                <div class="layout-box-item layout-box-item-margin">
+
+                  <div class="layout-box-item layout-box-item-padding panel-cell panel-cell-short">
+
+                    <div class="layout-box-item layout-box-item-content text-align-center">
+
+                      <a href="#" class="button button-primary">
+
+                        Learn More &rarr;
+
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="panel"&gt;
+  &lt;div class="panel-cell"&gt;
+    &hellip;
+  &lt;/div&gt;
+  &lt;div class="panel-cell panel-cell-short"&gt;
+    &hellip;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+      </div>
+
+    </div>
+
+    <!-- =================================================
+    END: Example
+    ================================================== -->
+
+  </section>
+
+  <!-- =================================================
+  END: Panel Cell Size Modifiers
+  ================================================== -->
+
+  <!-- =================================================
+  BEGIN: Panel Cell Size Direction Modifiers
+  ================================================== -->
+
+  <section id="panels-cells-size-direction-modifiers">
+
+    <h3>
+
+      Size Direction Modifiers
+
+    </h3>
+
+    <p>
+
+      Add <code>-top</code>, <code>-right</code>, <code>-bottom</code>, or <code>-left</code> to the end of the size modifier class to adjust margin only in the direction implied by the direction modifier.
+
+    </p>
+
+    <table class="table short">
+
+      <thead>
+
+        <tr>
+
+          <th>
+
+            Class
+
+          </th>
+
+          <th>
+
+            Description
+
+          </th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-*-top
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Adjust margin above the panel-cell.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-*-right
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Adjust margin to the right of the panel-cell.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-*-bottom
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Adjust margin below the panel-cell.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-*-left
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Adjust margin to the left of the panel-cell.
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <!-- =================================================
+    BEGIN: Example
+    ================================================== -->
+
+    <div class="example-block flush-bottom">
+
+      <div class="example-block-content">
+
+        <div class="row">
+
+          <div class="column-12 column-small-6 column-medium-6 column-large-5 column-large-offset-1 column-jumbo-4 column-jumbo-offset-2">
+
+            <div class="panel">
+
+              <div class="panel-cell panel-cell-taller-bottom panel-cell-wider-right">
+
+                <h4 class="flush-top">
+
+                  Event Name
+
+                </h4>
+
+                <p class="flush-bottom">
+
+                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="column-12 column-small-6 column-medium-6 column-large-5 column-jumbo-4">
+
+            <div class="panel">
+
+              <div class="layout-box pods-options-size-direction-modifier">
+
+                <div class="layout-box-item layout-box-item-margin">
+
+                  <div class="layout-box-item layout-box-item-padding panel-cell panel-cell-taller-bottom panel-cell-wider-right">
+
+                    <div class="layout-box-item layout-box-item-content">
+
+                      <h4 class="flush-top">
+
+                        Event Name
+
+                      </h4>
+
+                      <p class="flush-bottom">
+
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="panel"&gt;
+  &lt;div class="panel-cell panel-cell-taller-bottom panel-cell-wider-right"&gt;
+    &hellip;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+      </div>
+
+    </div>
+
+    <!-- =================================================
+    END: Example
+    ================================================== -->
+
+  </section>
+
+  <!-- =================================================
+  END: panels-cell Size Direction Modifiers
+  ================================================== -->
+
+</section>
+
+<!-- =================================================
+END: Panel Structure
+================================================== -->
+
+    <!-- =================================================
+BEGIN: Panel Styling
+================================================== -->
+
+<section id="panels-styling">
+
+  <h2>
+
+    Panel Styling
+
+  </h2>
+
+  <p>
+
+    Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
+
+  </p>
+
+  <!-- =================================================
+  BEGIN: Panel Inverse Styling
+  ================================================== -->
+
+  <section id="panels-styling-inverse">
+
+    <h3>
+
+      Inverse Panels
+
+    </h3>
+
+    <p>
+
+      Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
+
+    </p>
+
+    <!-- =================================================
+    BEGIN: Example
+    ================================================== -->
+
+    <div class="example-block inverse flush-bottom">
+
+      <div class="example-block-content">
+
+        <div class="row">
+
+          <div class="column-12 column-small-8 column-small-offset-2 column-medium-8 column-medium-offset-2 column-large-6 column-large-offset-3 column-jumbo-4 column-jumbo-offset-4">
+
+            <div class="panel panel-inverse">
+
+              <div class="panel-cell">
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="panel panel-inverse"&gt;
+  &hellip;
+&lt;/div&gt;
+</pre>
+
+      </div>
+
+    </div>
+
+    <!-- =================================================
+    END: Example
+    ================================================== -->
+
+  </section>
+
+  <!-- =================================================
+  END: Panel Inverse Styling
+  ================================================== -->
+
+  <!-- =================================================
+  BEGIN: Panel Cells Styling
+  ================================================== -->
+
+  <section id="panels-cells-styling">
+
+    <h3>
+
+      Panel Cell Styling
+
+    </h3>
+
+    <p>
+
+      Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
+
+    </p>
+
+    <table class="table short">
+
+      <thead>
+
+        <tr>
+
+          <th>
+
+            Class
+
+          </th>
+
+          <th>
+
+            Description
+
+          </th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-borderless
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Remove all borders from panel cell.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-light
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Add a light background to panel cell.
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <code>
+
+              .panel-cell-dark
+
+            </code>
+
+          </td>
+
+          <td>
+
+            Add a dark background to panel cell.
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <!-- =================================================
+    BEGIN: Example
+    ================================================== -->
+
+    <div class="example-block flush-bottom">
+
+      <div class="example-block-content">
+
+        <div class="row">
+
+          <div class="column-12 column-small-8 column-small-offset-2 column-medium-8 column-medium-offset-2 column-large-6 column-large-offset-3 column-jumbo-4 column-jumbo-offset-4">
+
+            <div class="panel">
+
+              <div class="panel-cell panel-cell-borderless panel-cell-short-bottom text-align-center">
+
+                <span class="h5 flush">
+
+                  Frontend Developer
+
+                </span>
+
+              </div>
+
+              <div class="panel-cell flush-top">
+
+                <p class="text-align-center flush">
+
+                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo vol luctus.
+
+                </p>
+
+              </div>
+
+              <div class="panel-cell panel-cell-light panel-cell-short text-align-center">
+
+                <a href="#" class="button button-success button-rounded">
+
+                  Apply Today &rarr;
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="example-block-footer example-block-footer-codeblock">
+
+<pre class="prettyprint lang-html flush-bottom">
+&lt;div class="panel"&gt;
+  &lt;div class="panel-cell panel-cell-borderless panel-cell-short-bottom"&gt;
+    &hellip;
+  &lt;/div&gt;
+  &lt;div class="panel-cell flush-top"&gt;
+    &hellip;
+  &lt;/div&gt;
+  &lt;div class="panel-cell panel-cell-dark panel-cell-short"&gt;
+    &hellip;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+      </div>
+
+    </div>
+
+    <!-- =================================================
+    END: Example
+    ================================================== -->
+
+  </section>
+
+  <!-- =================================================
+  END: Panel Cells Styling
+  ================================================== -->
+
+</section>
+
+<!-- =================================================
+END: Panel Styling
+================================================== -->
+
 
   </div>
 
 </div>
+
+<!-- =================================================
+END: Panels
+================================================== -->
 
 
           </div>

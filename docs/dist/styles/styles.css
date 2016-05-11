@@ -24496,25 +24496,870 @@ Panel
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+panel/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Panel
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Panel Header
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Panel Body
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Panel Footer
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Panel Cell
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Default)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Short)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Shorter)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Tall)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Taller)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Narrow)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Narrower)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Wide)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Wider)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 panel/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-  Heading 1
+  Panel
   ----------------------------------------------------------------------------- */
+.panel {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  /* -----------------------------------------------------------------------------
+    Panel Inverse (.panel-inverse)
+    ----------------------------------------------------------------------------- */
+}
+.panel.panel-inverse {
+  background: #474e60;
+  box-shadow: none;
+}
 /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: small (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      Panel
+      ----------------------------------------------------------------------------- */
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Medium (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Panel
+      ----------------------------------------------------------------------------- */
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Large (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      Panel
+      ----------------------------------------------------------------------------- */
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      Panel
+      ----------------------------------------------------------------------------- */
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+panel-cell/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Default)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Short)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Shorter)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Tall)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Taller)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Narrow)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Narrower)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Wide)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout (Wider)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+panel-cell/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Panel Cell
+  ----------------------------------------------------------------------------- */
+.panel-cell {
+  display: block;
+  position: relative;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-bottom-style: solid;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  /* -----------------------------------------------------------------------------
+    Panel Cell Inverse (.panel-cell-inverse)
+    ----------------------------------------------------------------------------- */
+}
+.panel-cell.panel-cell-shorter {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.panel-cell.panel-cell-shorter-top {
+  padding-top: 6px;
+}
+.panel-cell.panel-cell-shorter-bottom {
+  padding-bottom: 6px;
+}
+.panel-cell.panel-cell-short {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.panel-cell.panel-cell-short-top {
+  padding-top: 12px;
+}
+.panel-cell.panel-cell-short-bottom {
+  padding-bottom: 12px;
+}
+.panel-cell.panel-cell-tall {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.panel-cell.panel-cell-tall-top {
+  padding-top: 36px;
+}
+.panel-cell.panel-cell-tall-bottom {
+  padding-bottom: 36px;
+}
+.panel-cell.panel-cell-taller {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.panel-cell.panel-cell-taller-top {
+  padding-top: 48px;
+}
+.panel-cell.panel-cell-taller-bottom {
+  padding-bottom: 48px;
+}
+.panel-cell.panel-cell-narrower {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.panel-cell.panel-cell-narrower-left {
+  padding-left: 6px;
+}
+.panel-cell.panel-cell-narrower-right {
+  padding-right: 6px;
+}
+.panel-cell.panel-cell-narrow {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.panel-cell.panel-cell-narrow-left {
+  padding-left: 12px;
+}
+.panel-cell.panel-cell-narrow-right {
+  padding-right: 12px;
+}
+.panel-cell.panel-cell-wide {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+.panel-cell.panel-cell-wide-left {
+  padding-left: 36px;
+}
+.panel-cell.panel-cell-wide-right {
+  padding-right: 36px;
+}
+.panel-cell.panel-cell-wider {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.panel-cell.panel-cell-wider-left {
+  padding-left: 48px;
+}
+.panel-cell.panel-cell-wider-right {
+  padding-right: 48px;
+}
+.panel-cell:last-child {
+  border-bottom: none;
+}
+.panel-cell.flush {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.panel-cell.flush-vertical {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.panel-cell.flush-horizontal {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.panel-cell.flush-top {
+  padding-top: 0px !important;
+}
+.panel-cell.flush-bottom {
+  padding-bottom: 0px !important;
+}
+.panel-cell.flush-left {
+  padding-left: 0px !important;
+}
+.panel-cell.flush-right {
+  padding-right: 0px !important;
+}
+.panel-cell.panel-cell-borderless {
+  border: none;
+}
+.panel-cell.panel-cell-inverse {
+  box-shadow: none;
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      Panel Cell
+      ----------------------------------------------------------------------------- */
+  .panel-cell {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .panel-cell.panel-cell-shorter,
+  .panel-cell.panel-cell-shorter-screen-small {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .panel-cell.panel-cell-shorter-top,
+  .panel-cell.panel-cell-shorter-top-screen-small {
+    padding-top: 6px;
+  }
+  .panel-cell.panel-cell-shorter-bottom,
+  .panel-cell.panel-cell-shorter-bottom-screen-small {
+    padding-bottom: 6px;
+  }
+  .panel-cell.panel-cell-short,
+  .panel-cell.panel-cell-short-screen-small {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .panel-cell.panel-cell-short-top,
+  .panel-cell.panel-cell-short-top-screen-small {
+    padding-top: 12px;
+  }
+  .panel-cell.panel-cell-short-bottom,
+  .panel-cell.panel-cell-short-bottom-screen-small {
+    padding-bottom: 12px;
+  }
+  .panel-cell.panel-cell-tall,
+  .panel-cell.panel-cell-tall-screen-small {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .panel-cell.panel-cell-tall-top,
+  .panel-cell.panel-cell-tall-top-screen-small {
+    padding-top: 36px;
+  }
+  .panel-cell.panel-cell-tall-bottom,
+  .panel-cell.panel-cell-tall-bottom-screen-small {
+    padding-bottom: 36px;
+  }
+  .panel-cell.panel-cell-taller,
+  .panel-cell.panel-cell-taller-screen-small {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .panel-cell.panel-cell-taller-top,
+  .panel-cell.panel-cell-taller-top-screen-small {
+    padding-top: 48px;
+  }
+  .panel-cell.panel-cell-taller-bottom,
+  .panel-cell.panel-cell-taller-bottom-screen-small {
+    padding-bottom: 48px;
+  }
+  .panel-cell.panel-cell-narrower,
+  .panel-cell.panel-cell-narrower-screen-small {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .panel-cell.panel-cell-narrower-left,
+  .panel-cell.panel-cell-narrower-left-screen-small {
+    padding-left: 6px;
+  }
+  .panel-cell.panel-cell-narrower-right,
+  .panel-cell.panel-cell-narrower-right-screen-small {
+    padding-right: 6px;
+  }
+  .panel-cell.panel-cell-narrow,
+  .panel-cell.panel-cell-narrow-screen-small {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .panel-cell.panel-cell-narrow-left,
+  .panel-cell.panel-cell-narrow-left-screen-small {
+    padding-left: 12px;
+  }
+  .panel-cell.panel-cell-narrow-right,
+  .panel-cell.panel-cell-narrow-right-screen-small {
+    padding-right: 12px;
+  }
+  .panel-cell.panel-cell-wide,
+  .panel-cell.panel-cell-wide-screen-small {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .panel-cell.panel-cell-wide-left,
+  .panel-cell.panel-cell-wide-left-screen-small {
+    padding-left: 36px;
+  }
+  .panel-cell.panel-cell-wide-right,
+  .panel-cell.panel-cell-wide-right-screen-small {
+    padding-right: 36px;
+  }
+  .panel-cell.panel-cell-wider,
+  .panel-cell.panel-cell-wider-screen-small {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .panel-cell.panel-cell-wider-left,
+  .panel-cell.panel-cell-wider-left-screen-small {
+    padding-left: 48px;
+  }
+  .panel-cell.panel-cell-wider-right,
+  .panel-cell.panel-cell-wider-right-screen-small {
+    padding-right: 48px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Panel Cell
+      ----------------------------------------------------------------------------- */
+  .panel-cell {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .panel-cell.panel-cell-shorter,
+  .panel-cell.panel-cell-shorter-screen-medium {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .panel-cell.panel-cell-shorter-top,
+  .panel-cell.panel-cell-shorter-top-screen-medium {
+    padding-top: 8px;
+  }
+  .panel-cell.panel-cell-shorter-bottom,
+  .panel-cell.panel-cell-shorter-bottom-screen-medium {
+    padding-bottom: 8px;
+  }
+  .panel-cell.panel-cell-short,
+  .panel-cell.panel-cell-short-screen-medium {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .panel-cell.panel-cell-short-top,
+  .panel-cell.panel-cell-short-top-screen-medium {
+    padding-top: 16px;
+  }
+  .panel-cell.panel-cell-short-bottom,
+  .panel-cell.panel-cell-short-bottom-screen-medium {
+    padding-bottom: 16px;
+  }
+  .panel-cell.panel-cell-tall,
+  .panel-cell.panel-cell-tall-screen-medium {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .panel-cell.panel-cell-tall-top,
+  .panel-cell.panel-cell-tall-top-screen-medium {
+    padding-top: 48px;
+  }
+  .panel-cell.panel-cell-tall-bottom,
+  .panel-cell.panel-cell-tall-bottom-screen-medium {
+    padding-bottom: 48px;
+  }
+  .panel-cell.panel-cell-taller,
+  .panel-cell.panel-cell-taller-screen-medium {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .panel-cell.panel-cell-taller-top,
+  .panel-cell.panel-cell-taller-top-screen-medium {
+    padding-top: 64px;
+  }
+  .panel-cell.panel-cell-taller-bottom,
+  .panel-cell.panel-cell-taller-bottom-screen-medium {
+    padding-bottom: 64px;
+  }
+  .panel-cell.panel-cell-narrower,
+  .panel-cell.panel-cell-narrower-screen-medium {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .panel-cell.panel-cell-narrower-left,
+  .panel-cell.panel-cell-narrower-left-screen-medium {
+    padding-left: 8px;
+  }
+  .panel-cell.panel-cell-narrower-right,
+  .panel-cell.panel-cell-narrower-right-screen-medium {
+    padding-right: 8px;
+  }
+  .panel-cell.panel-cell-narrow,
+  .panel-cell.panel-cell-narrow-screen-medium {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .panel-cell.panel-cell-narrow-left,
+  .panel-cell.panel-cell-narrow-left-screen-medium {
+    padding-left: 16px;
+  }
+  .panel-cell.panel-cell-narrow-right,
+  .panel-cell.panel-cell-narrow-right-screen-medium {
+    padding-right: 16px;
+  }
+  .panel-cell.panel-cell-wide,
+  .panel-cell.panel-cell-wide-screen-medium {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .panel-cell.panel-cell-wide-left,
+  .panel-cell.panel-cell-wide-left-screen-medium {
+    padding-left: 48px;
+  }
+  .panel-cell.panel-cell-wide-right,
+  .panel-cell.panel-cell-wide-right-screen-medium {
+    padding-right: 48px;
+  }
+  .panel-cell.panel-cell-wider,
+  .panel-cell.panel-cell-wider-screen-medium {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  .panel-cell.panel-cell-wider-left,
+  .panel-cell.panel-cell-wider-left-screen-medium {
+    padding-left: 64px;
+  }
+  .panel-cell.panel-cell-wider-right,
+  .panel-cell.panel-cell-wider-right-screen-medium {
+    padding-right: 64px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      Panel Cell
+      ----------------------------------------------------------------------------- */
+  .panel-cell {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .panel-cell.panel-cell-shorter,
+  .panel-cell.panel-cell-shorter-screen-large {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .panel-cell.panel-cell-shorter-top,
+  .panel-cell.panel-cell-shorter-top-screen-large {
+    padding-top: 9px;
+  }
+  .panel-cell.panel-cell-shorter-bottom,
+  .panel-cell.panel-cell-shorter-bottom-screen-large {
+    padding-bottom: 9px;
+  }
+  .panel-cell.panel-cell-short,
+  .panel-cell.panel-cell-short-screen-large {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .panel-cell.panel-cell-short-top,
+  .panel-cell.panel-cell-short-top-screen-large {
+    padding-top: 18px;
+  }
+  .panel-cell.panel-cell-short-bottom,
+  .panel-cell.panel-cell-short-bottom-screen-large {
+    padding-bottom: 18px;
+  }
+  .panel-cell.panel-cell-tall,
+  .panel-cell.panel-cell-tall-screen-large {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+  .panel-cell.panel-cell-tall-top,
+  .panel-cell.panel-cell-tall-top-screen-large {
+    padding-top: 54px;
+  }
+  .panel-cell.panel-cell-tall-bottom,
+  .panel-cell.panel-cell-tall-bottom-screen-large {
+    padding-bottom: 54px;
+  }
+  .panel-cell.panel-cell-taller,
+  .panel-cell.panel-cell-taller-screen-large {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .panel-cell.panel-cell-taller-top,
+  .panel-cell.panel-cell-taller-top-screen-large {
+    padding-top: 72px;
+  }
+  .panel-cell.panel-cell-taller-bottom,
+  .panel-cell.panel-cell-taller-bottom-screen-large {
+    padding-bottom: 72px;
+  }
+  .panel-cell.panel-cell-narrower,
+  .panel-cell.panel-cell-narrower-screen-large {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  .panel-cell.panel-cell-narrower-left,
+  .panel-cell.panel-cell-narrower-left-screen-large {
+    padding-left: 9px;
+  }
+  .panel-cell.panel-cell-narrower-right,
+  .panel-cell.panel-cell-narrower-right-screen-large {
+    padding-right: 9px;
+  }
+  .panel-cell.panel-cell-narrow,
+  .panel-cell.panel-cell-narrow-screen-large {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .panel-cell.panel-cell-narrow-left,
+  .panel-cell.panel-cell-narrow-left-screen-large {
+    padding-left: 18px;
+  }
+  .panel-cell.panel-cell-narrow-right,
+  .panel-cell.panel-cell-narrow-right-screen-large {
+    padding-right: 18px;
+  }
+  .panel-cell.panel-cell-wide,
+  .panel-cell.panel-cell-wide-screen-large {
+    padding-left: 54px;
+    padding-right: 54px;
+  }
+  .panel-cell.panel-cell-wide-left,
+  .panel-cell.panel-cell-wide-left-screen-large {
+    padding-left: 54px;
+  }
+  .panel-cell.panel-cell-wide-right,
+  .panel-cell.panel-cell-wide-right-screen-large {
+    padding-right: 54px;
+  }
+  .panel-cell.panel-cell-wider,
+  .panel-cell.panel-cell-wider-screen-large {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+  .panel-cell.panel-cell-wider-left,
+  .panel-cell.panel-cell-wider-left-screen-large {
+    padding-left: 72px;
+  }
+  .panel-cell.panel-cell-wider-right,
+  .panel-cell.panel-cell-wider-right-screen-large {
+    padding-right: 72px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      Panel Cell
+      ----------------------------------------------------------------------------- */
+  .panel-cell {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .panel-cell.panel-cell-shorter,
+  .panel-cell.panel-cell-shorter-screen-jumbo {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .panel-cell.panel-cell-shorter-top,
+  .panel-cell.panel-cell-shorter-top-screen-jumbo {
+    padding-top: 9px;
+  }
+  .panel-cell.panel-cell-shorter-bottom,
+  .panel-cell.panel-cell-shorter-bottom-screen-jumbo {
+    padding-bottom: 9px;
+  }
+  .panel-cell.panel-cell-short,
+  .panel-cell.panel-cell-short-screen-jumbo {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .panel-cell.panel-cell-short-top,
+  .panel-cell.panel-cell-short-top-screen-jumbo {
+    padding-top: 18px;
+  }
+  .panel-cell.panel-cell-short-bottom,
+  .panel-cell.panel-cell-short-bottom-screen-jumbo {
+    padding-bottom: 18px;
+  }
+  .panel-cell.panel-cell-tall,
+  .panel-cell.panel-cell-tall-screen-jumbo {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+  .panel-cell.panel-cell-tall-top,
+  .panel-cell.panel-cell-tall-top-screen-jumbo {
+    padding-top: 54px;
+  }
+  .panel-cell.panel-cell-tall-bottom,
+  .panel-cell.panel-cell-tall-bottom-screen-jumbo {
+    padding-bottom: 54px;
+  }
+  .panel-cell.panel-cell-taller,
+  .panel-cell.panel-cell-taller-screen-jumbo {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .panel-cell.panel-cell-taller-top,
+  .panel-cell.panel-cell-taller-top-screen-jumbo {
+    padding-top: 72px;
+  }
+  .panel-cell.panel-cell-taller-bottom,
+  .panel-cell.panel-cell-taller-bottom-screen-jumbo {
+    padding-bottom: 72px;
+  }
+  .panel-cell.panel-cell-narrower,
+  .panel-cell.panel-cell-narrower-screen-jumbo {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  .panel-cell.panel-cell-narrower-left,
+  .panel-cell.panel-cell-narrower-left-screen-jumbo {
+    padding-left: 9px;
+  }
+  .panel-cell.panel-cell-narrower-right,
+  .panel-cell.panel-cell-narrower-right-screen-jumbo {
+    padding-right: 9px;
+  }
+  .panel-cell.panel-cell-narrow,
+  .panel-cell.panel-cell-narrow-screen-jumbo {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .panel-cell.panel-cell-narrow-left,
+  .panel-cell.panel-cell-narrow-left-screen-jumbo {
+    padding-left: 18px;
+  }
+  .panel-cell.panel-cell-narrow-right,
+  .panel-cell.panel-cell-narrow-right-screen-jumbo {
+    padding-right: 18px;
+  }
+  .panel-cell.panel-cell-wide,
+  .panel-cell.panel-cell-wide-screen-jumbo {
+    padding-left: 54px;
+    padding-right: 54px;
+  }
+  .panel-cell.panel-cell-wide-left,
+  .panel-cell.panel-cell-wide-left-screen-jumbo {
+    padding-left: 54px;
+  }
+  .panel-cell.panel-cell-wide-right,
+  .panel-cell.panel-cell-wide-right-screen-jumbo {
+    padding-right: 54px;
+  }
+  .panel-cell.panel-cell-wider,
+  .panel-cell.panel-cell-wider-screen-jumbo {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+  .panel-cell.panel-cell-wider-left,
+  .panel-cell.panel-cell-wider-left-screen-jumbo {
+    padding-left: 72px;
+  }
+  .panel-cell.panel-cell-wider-right,
+  .panel-cell.panel-cell-wider-right-screen-jumbo {
+    padding-right: 72px;
+  }
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+panel-cell-light-inverse/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+panel-cell-light/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Panel Cell (Light)
+  ----------------------------------------------------------------------------- */
+.panel-cell-light {
+  background: #f5f5f6;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-bottom-style: solid;
+  /* -----------------------------------------------------------------------------
+    Panel Cell Inverse (.panel-cell-inverse)
+    ----------------------------------------------------------------------------- */
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+panel-cell-dark-inverse/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+panel-cell-dark/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Panel Cell (Dark)
+  ----------------------------------------------------------------------------- */
+.panel-cell-dark {
+  background: #282e3e;
+  border-bottom-width: 0px;
+  /* -----------------------------------------------------------------------------
+    Panel Cell Inverse (.panel-cell-inverse)
+    ----------------------------------------------------------------------------- */
+}
 /* -----------------------------------------------------------------------------
 Variables
 ----------------------------------------------------------------------------- */
@@ -24666,7 +25511,7 @@ Header
   width: auto;
   width: 62px;
   height: 16px;
-  background-image: url("../images/layout/header/header-logo.png?cache=531289844");
+  background-image: url("../images/layout/header/header-logo.png?cache=244466161");
   background-size: 100% 100%;
   color: #ffffff;
   font-weight: 500;
@@ -24741,7 +25586,7 @@ Header
       ------------------------------------------------------------------------*/
   }
   .header .header-logo {
-    background-image: url("../images/layout/header/header-logo@2x.png?cache=113982172");
+    background-image: url("../images/layout/header/header-logo@2x.png?cache=844635737");
   }
 }
 /* -----------------------------------------------------------------------------
@@ -26294,6 +27139,8 @@ Layout Box
 }
 .layout-box .layout-box-item.layout-box-item-content {
   background: #9fc4ea;
+}
+.layout-box .layout-box-item.layout-box-item-content.layout-box-item-content-fixed-height {
   height: 100px;
 }
 /* -----------------------------------------------------------------------------
@@ -26333,7 +27180,6 @@ Example Block
 .example-block .example-block-content {
   background: #ffffff;
   padding: 6px;
-  padding-top: 10.04px;
   position: relative;
   /* ----------------------------------------------------------------------------------------------------
 		Dropdown Open/Expanded

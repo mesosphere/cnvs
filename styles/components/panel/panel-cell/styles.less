@@ -1,0 +1,249 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+panel-cell/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@panel-cell-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Panel Cell
+  ----------------------------------------------------------------------------- */
+
+  .panel-cell {
+
+    display: block;
+    position: relative;
+    flex: 1;
+    flex-shrink: 0;
+    .shape-style-variant(panel-cell);
+    .layout-spacing-variant(panel-cell, null);
+    .layout-spacing-conditional-variant(panel-cell-shorter, null);
+    .layout-spacing-conditional-variant(panel-cell-short, null);
+    .layout-spacing-conditional-variant(panel-cell-tall, null);
+    .layout-spacing-conditional-variant(panel-cell-taller, null);
+    .layout-spacing-conditional-variant(panel-cell-narrower, null);
+    .layout-spacing-conditional-variant(panel-cell-narrow, null);
+    .layout-spacing-conditional-variant(panel-cell-wide, null);
+    .layout-spacing-conditional-variant(panel-cell-wider, null);
+
+    &:last-child {
+
+      border-bottom: none;
+
+    }
+
+    &.flush {
+
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+
+    }
+
+    &.flush-vertical {
+
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+
+    }
+
+    &.flush-horizontal {
+
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+
+    }
+
+    &.flush-top {
+
+      padding-top: 0px !important;
+
+    }
+
+    &.flush-bottom {
+
+      padding-bottom: 0px !important;
+
+    }
+
+    &.flush-left {
+
+      padding-left: 0px !important;
+
+    }
+
+    &.flush-right {
+
+      padding-right: 0px !important;
+
+    }
+
+    &.panel-cell-borderless {
+
+      border: none;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Panel Cell Inverse (.panel-cell-inverse)
+    ----------------------------------------------------------------------------- */
+
+    &.panel-cell-inverse {
+
+      .shape-style-variant(panel-cell-inverse);
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@panel-cell-enabled) and (@panel-cell-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Panel Cell
+      ----------------------------------------------------------------------------- */
+
+      .panel-cell {
+
+        .layout-spacing-variant(panel-cell, screen-small);
+        .layout-spacing-conditional-variant(panel-cell-shorter, screen-small);
+        .layout-spacing-conditional-variant(panel-cell-short, screen-small);
+        .layout-spacing-conditional-variant(panel-cell-tall, screen-small);
+        .layout-spacing-conditional-variant(panel-cell-taller, screen-small);
+        .layout-spacing-conditional-variant(panel-cell-narrower, screen-small);
+        .layout-spacing-conditional-variant(panel-cell-narrow, screen-small);
+        .layout-spacing-conditional-variant(panel-cell-wide, screen-small);
+        .layout-spacing-conditional-variant(panel-cell-wider, screen-small);
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@panel-cell-enabled) and (@panel-cell-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Panel Cell
+      ----------------------------------------------------------------------------- */
+
+      .panel-cell {
+
+        .layout-spacing-variant(panel-cell, screen-medium);
+        .layout-spacing-conditional-variant(panel-cell-shorter, screen-medium);
+        .layout-spacing-conditional-variant(panel-cell-short, screen-medium);
+        .layout-spacing-conditional-variant(panel-cell-tall, screen-medium);
+        .layout-spacing-conditional-variant(panel-cell-taller, screen-medium);
+        .layout-spacing-conditional-variant(panel-cell-narrower, screen-medium);
+        .layout-spacing-conditional-variant(panel-cell-narrow, screen-medium);
+        .layout-spacing-conditional-variant(panel-cell-wide, screen-medium);
+        .layout-spacing-conditional-variant(panel-cell-wider, screen-medium);
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@panel-cell-enabled) and (@panel-cell-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Panel Cell
+      ----------------------------------------------------------------------------- */
+
+      .panel-cell {
+
+        .layout-spacing-variant(panel-cell, screen-large);
+        .layout-spacing-conditional-variant(panel-cell-shorter, screen-large);
+        .layout-spacing-conditional-variant(panel-cell-short, screen-large);
+        .layout-spacing-conditional-variant(panel-cell-tall, screen-large);
+        .layout-spacing-conditional-variant(panel-cell-taller, screen-large);
+        .layout-spacing-conditional-variant(panel-cell-narrower, screen-large);
+        .layout-spacing-conditional-variant(panel-cell-narrow, screen-large);
+        .layout-spacing-conditional-variant(panel-cell-wide, screen-large);
+        .layout-spacing-conditional-variant(panel-cell-wider, screen-large);
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@panel-cell-enabled) and (@panel-cell-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Panel Cell
+      ----------------------------------------------------------------------------- */
+
+      .panel-cell {
+
+        .layout-spacing-variant(panel-cell, screen-jumbo);
+        .layout-spacing-conditional-variant(panel-cell-shorter, screen-jumbo);
+        .layout-spacing-conditional-variant(panel-cell-short, screen-jumbo);
+        .layout-spacing-conditional-variant(panel-cell-tall, screen-jumbo);
+        .layout-spacing-conditional-variant(panel-cell-taller, screen-jumbo);
+        .layout-spacing-conditional-variant(panel-cell-narrower, screen-jumbo);
+        .layout-spacing-conditional-variant(panel-cell-narrow, screen-jumbo);
+        .layout-spacing-conditional-variant(panel-cell-wide, screen-jumbo);
+        .layout-spacing-conditional-variant(panel-cell-wider, screen-jumbo);
+
+      }
+
+    }
+
+  }
+
+}

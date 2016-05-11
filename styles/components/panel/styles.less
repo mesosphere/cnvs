@@ -8,15 +8,30 @@ panel/styles.less
 
 
 
-& when (true) {
+& when (@panel-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Heading 1
+  Panel
   ----------------------------------------------------------------------------- */
 
-  .element-name {
+  .panel {
 
-    // Heading 2
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    .shape-style-variant(panel);
+    .layout-property-variant(panel, border-radius, null);
+
+    /* -----------------------------------------------------------------------------
+    Panel Inverse (.panel-inverse)
+    ----------------------------------------------------------------------------- */
+
+    &.panel-inverse {
+
+      .shape-style-variant(panel-inverse);
+
+    }
 
   }
 
@@ -27,10 +42,24 @@ panel/styles.less
 & when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: small (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@panel-enabled) and (@panel-scale-screen-small-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Panel
+      ----------------------------------------------------------------------------- */
+
+      .panel {
+
+        .layout-property-variant(panel, border-radius, screen-small);
+
+      }
+
+    }
 
   }
 
@@ -46,6 +75,20 @@ panel/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
+    & when (@panel-enabled) and (@panel-scale-screen-medium-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Panel
+      ----------------------------------------------------------------------------- */
+
+      .panel {
+
+        .layout-property-variant(panel, border-radius, screen-medium);
+
+      }
+
+    }
+
   }
 
 }
@@ -60,6 +103,20 @@ panel/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
+    & when (@panel-enabled) and (@panel-scale-screen-large-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Panel
+      ----------------------------------------------------------------------------- */
+
+      .panel {
+
+        .layout-property-variant(panel, border-radius, screen-large);
+
+      }
+
+    }
+
   }
 
 }
@@ -73,6 +130,20 @@ panel/styles.less
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@panel-enabled) and (@panel-scale-screen-jumbo-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Panel
+      ----------------------------------------------------------------------------- */
+
+      .panel {
+
+        .layout-property-variant(panel, border-radius, screen-jumbo);
+
+      }
+
+    }
 
   }
 

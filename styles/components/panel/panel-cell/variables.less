@@ -1,14 +1,14 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-panel/variables.less
+panel-cell/variables.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
 
 
-@panel-enabled:                                                                 true;
+@panel-cell-enabled:                                                            true;
 
 
 
@@ -18,252 +18,68 @@ Responsive Scaling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
-@panel-scale-screen-small-enabled:                                              true;
-@panel-scale-screen-medium-enabled:                                             true;
-@panel-scale-screen-large-enabled:                                              true;
-@panel-scale-screen-jumbo-enabled:                                              true;
+@panel-cell-scale-screen-small-enabled:                                         true;
+@panel-cell-scale-screen-medium-enabled:                                        true;
+@panel-cell-scale-screen-large-enabled:                                         true;
+@panel-cell-scale-screen-jumbo-enabled:                                         true;
 
 
 
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Panel
+Styling
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
+// Normal
+
+@panel-cell-background-color:                                                   null;
+@panel-cell-background-gradient-color-top:                                      null;
+@panel-cell-background-gradient-color-bottom:                                   null;
+@panel-cell-border-width:                                                       null;
+@panel-cell-border-color:                                                       null;
+@panel-cell-border-style:                                                       null;
+@panel-cell-border-top-width:                                                   null;
+@panel-cell-border-top-color:                                                   null;
+@panel-cell-border-top-style:                                                   null;
+@panel-cell-border-right-width:                                                 null;
+@panel-cell-border-right-color:                                                 null;
+@panel-cell-border-right-style:                                                 null;
+@panel-cell-border-bottom-width:                                                1px;
+@panel-cell-border-bottom-color:                                                rgba(0, 0, 0, 0.1);
+@panel-cell-border-bottom-style:                                                solid;
+@panel-cell-border-left-width:                                                  null;
+@panel-cell-border-left-color:                                                  null;
+@panel-cell-border-left-style:                                                  null;
+@panel-cell-shadow:                                                             null;
+
+// Inverse
+
+@panel-cell-inverse-background-color:                                           null;
+@panel-cell-inverse-background-gradient-color-top:                              null;
+@panel-cell-inverse-background-gradient-color-bottom:                           null;
+@panel-cell-inverse-border-width:                                               null;
+@panel-cell-inverse-border-color:                                               null;
+@panel-cell-inverse-border-style:                                               null;
+@panel-cell-inverse-border-top-width:                                           null;
+@panel-cell-inverse-border-top-color:                                           null;
+@panel-cell-inverse-border-top-style:                                           null;
+@panel-cell-inverse-border-right-width:                                         null;
+@panel-cell-inverse-border-right-color:                                         null;
+@panel-cell-inverse-border-right-style:                                         null;
+@panel-cell-inverse-border-bottom-width:                                        null;
+@panel-cell-inverse-border-bottom-color:                                        null;
+@panel-cell-inverse-border-bottom-style:                                        null;
+@panel-cell-inverse-border-left-width:                                          null;
+@panel-cell-inverse-border-left-color:                                          null;
+@panel-cell-inverse-border-left-style:                                          null;
+@panel-cell-inverse-shadow:                                                     none;
+
+
+
 /* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 Layout
------------------------------------------------------------------------------ */
-
-// Border Radius
-
-@panel-border-radius:                                                           3px;
-@panel-border-radius-screen-small:                                              null;
-@panel-border-radius-screen-medium:                                             null;
-@panel-border-radius-screen-large:                                              null;
-@panel-border-radius-screen-jumbo:                                              null;
-
-/* -----------------------------------------------------------------------------
-Styling
------------------------------------------------------------------------------ */
-
-// Normal
-
-@panel-background-color:                                                        @white;
-@panel-background-gradient-color-top:                                           null;
-@panel-background-gradient-color-bottom:                                        null;
-@panel-border-width:                                                            null;
-@panel-border-color:                                                            null;
-@panel-border-style:                                                            null;
-@panel-border-top-width:                                                        null;
-@panel-border-top-color:                                                        null;
-@panel-border-top-style:                                                        null;
-@panel-border-right-width:                                                      null;
-@panel-border-right-color:                                                      null;
-@panel-border-right-style:                                                      null;
-@panel-border-bottom-width:                                                     null;
-@panel-border-bottom-color:                                                     null;
-@panel-border-bottom-style:                                                     null;
-@panel-border-left-width:                                                       null;
-@panel-border-left-color:                                                       null;
-@panel-border-left-style:                                                       null;
-@panel-shadow:                                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-
-// Inverse
-
-@panel-inverse-background-color:                                                color-lighten(@neutral, 10);
-@panel-inverse-background-gradient-color-top:                                   null;
-@panel-inverse-background-gradient-color-bottom:                                null;
-@panel-inverse-border-width:                                                    null;
-@panel-inverse-border-color:                                                    null;
-@panel-inverse-border-style:                                                    null;
-@panel-inverse-border-top-width:                                                null;
-@panel-inverse-border-top-color:                                                null;
-@panel-inverse-border-top-style:                                                null;
-@panel-inverse-border-right-width:                                              null;
-@panel-inverse-border-right-color:                                              null;
-@panel-inverse-border-right-style:                                              null;
-@panel-inverse-border-bottom-width:                                             null;
-@panel-inverse-border-bottom-color:                                             null;
-@panel-inverse-border-bottom-style:                                             null;
-@panel-inverse-border-left-width:                                               null;
-@panel-inverse-border-left-color:                                               null;
-@panel-inverse-border-left-style:                                               null;
-@panel-inverse-shadow:                                                          none;
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Panel Header
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-/* -----------------------------------------------------------------------------
-Styling
------------------------------------------------------------------------------ */
-
-// Normal
-
-@panel-header-background-color:                                                 null;
-@panel-header-background-gradient-color-top:                                    null;
-@panel-header-background-gradient-color-bottom:                                 null;
-@panel-header-border-width:                                                     null;
-@panel-header-border-color:                                                     null;
-@panel-header-border-style:                                                     null;
-@panel-header-border-top-width:                                                 null;
-@panel-header-border-top-color:                                                 null;
-@panel-header-border-top-style:                                                 null;
-@panel-header-border-right-width:                                               null;
-@panel-header-border-right-color:                                               null;
-@panel-header-border-right-style:                                               null;
-@panel-header-border-bottom-width:                                              1px;
-@panel-header-border-bottom-color:                                              rgba(0, 0, 0, 0.1);
-@panel-header-border-bottom-style:                                              solid;
-@panel-header-border-left-width:                                                null;
-@panel-header-border-left-color:                                                null;
-@panel-header-border-left-style:                                                null;
-@panel-header-shadow:                                                           null;
-
-// Inverse
-
-@panel-header-inverse-background-color:                                         null;
-@panel-header-inverse-background-gradient-color-top:                            null;
-@panel-header-inverse-background-gradient-color-bottom:                         null;
-@panel-header-inverse-border-width:                                             null;
-@panel-header-inverse-border-color:                                             null;
-@panel-header-inverse-border-style:                                             null;
-@panel-header-inverse-border-top-width:                                         null;
-@panel-header-inverse-border-top-color:                                         null;
-@panel-header-inverse-border-top-style:                                         null;
-@panel-header-inverse-border-right-width:                                       null;
-@panel-header-inverse-border-right-color:                                       null;
-@panel-header-inverse-border-right-style:                                       null;
-@panel-header-inverse-border-bottom-width:                                      null;
-@panel-header-inverse-border-bottom-color:                                      null;
-@panel-header-inverse-border-bottom-style:                                      null;
-@panel-header-inverse-border-left-width:                                        null;
-@panel-header-inverse-border-left-color:                                        null;
-@panel-header-inverse-border-left-style:                                        null;
-@panel-header-inverse-shadow:                                                   none;
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Panel Body
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-/* -----------------------------------------------------------------------------
-Styling
------------------------------------------------------------------------------ */
-
-// Normal
-
-@panel-body-background-color:                                                   null;
-@panel-body-background-gradient-color-top:                                      null;
-@panel-body-background-gradient-color-bottom:                                   null;
-@panel-body-border-width:                                                       null;
-@panel-body-border-color:                                                       null;
-@panel-body-border-style:                                                       null;
-@panel-body-border-top-width:                                                   null;
-@panel-body-border-top-color:                                                   null;
-@panel-body-border-top-style:                                                   null;
-@panel-body-border-right-width:                                                 null;
-@panel-body-border-right-color:                                                 null;
-@panel-body-border-right-style:                                                 null;
-@panel-body-border-bottom-width:                                                1px;
-@panel-body-border-bottom-color:                                                rgba(0, 0, 0, 0.1);
-@panel-body-border-bottom-style:                                                solid;
-@panel-body-border-left-width:                                                  null;
-@panel-body-border-left-color:                                                  null;
-@panel-body-border-left-style:                                                  null;
-@panel-body-shadow:                                                             null;
-
-// Inverse
-
-@panel-body-inverse-background-color:                                           null;
-@panel-body-inverse-background-gradient-color-top:                              null;
-@panel-body-inverse-background-gradient-color-bottom:                           null;
-@panel-body-inverse-border-width:                                               null;
-@panel-body-inverse-border-color:                                               null;
-@panel-body-inverse-border-style:                                               null;
-@panel-body-inverse-border-top-width:                                           null;
-@panel-body-inverse-border-top-color:                                           null;
-@panel-body-inverse-border-top-style:                                           null;
-@panel-body-inverse-border-right-width:                                         null;
-@panel-body-inverse-border-right-color:                                         null;
-@panel-body-inverse-border-right-style:                                         null;
-@panel-body-inverse-border-bottom-width:                                        null;
-@panel-body-inverse-border-bottom-color:                                        null;
-@panel-body-inverse-border-bottom-style:                                        null;
-@panel-body-inverse-border-left-width:                                          null;
-@panel-body-inverse-border-left-color:                                          null;
-@panel-body-inverse-border-left-style:                                          null;
-@panel-body-inverse-shadow:                                                     none;
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Panel Footer
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-/* -----------------------------------------------------------------------------
-Styling
------------------------------------------------------------------------------ */
-
-// Normal
-
-@panel-footer-background-color:                                                 null;
-@panel-footer-background-gradient-color-top:                                    null;
-@panel-footer-background-gradient-color-bottom:                                 null;
-@panel-footer-border-width:                                                     null;
-@panel-footer-border-color:                                                     null;
-@panel-footer-border-style:                                                     null;
-@panel-footer-border-top-width:                                                 null;
-@panel-footer-border-top-color:                                                 null;
-@panel-footer-border-top-style:                                                 null;
-@panel-footer-border-right-width:                                               null;
-@panel-footer-border-right-color:                                               null;
-@panel-footer-border-right-style:                                               null;
-@panel-footer-border-bottom-width:                                              1px;
-@panel-footer-border-bottom-color:                                              rgba(0, 0, 0, 0.1);
-@panel-footer-border-bottom-style:                                              solid;
-@panel-footer-border-left-width:                                                null;
-@panel-footer-border-left-color:                                                null;
-@panel-footer-border-left-style:                                                null;
-@panel-footer-shadow:                                                           null;
-
-// Inverse
-
-@panel-footer-inverse-background-color:                                         null;
-@panel-footer-inverse-background-gradient-color-top:                            null;
-@panel-footer-inverse-background-gradient-color-bottom:                         null;
-@panel-footer-inverse-border-width:                                             null;
-@panel-footer-inverse-border-color:                                             null;
-@panel-footer-inverse-border-style:                                             null;
-@panel-footer-inverse-border-top-width:                                         null;
-@panel-footer-inverse-border-top-color:                                         null;
-@panel-footer-inverse-border-top-style:                                         null;
-@panel-footer-inverse-border-right-width:                                       null;
-@panel-footer-inverse-border-right-color:                                       null;
-@panel-footer-inverse-border-right-style:                                       null;
-@panel-footer-inverse-border-bottom-width:                                      null;
-@panel-footer-inverse-border-bottom-color:                                      null;
-@panel-footer-inverse-border-bottom-style:                                      null;
-@panel-footer-inverse-border-left-width:                                        null;
-@panel-footer-inverse-border-left-color:                                        null;
-@panel-footer-inverse-border-left-style:                                        null;
-@panel-footer-inverse-shadow:                                                   none;
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Panel Cell
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
