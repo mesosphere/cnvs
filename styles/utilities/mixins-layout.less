@@ -900,6 +900,62 @@ Layout Variant
 
 }
 
+.layout-property-variant (@class, @property, @modifier, @screen-size) {
+
+  @element-property: e('@{class}-@{property}');
+  @element-property-screen-size-scale: replace(e('@{class}-@{property}-scale-@{screen-size}'), '-null', '');
+  @element-modifier-property-scale: replace(e('@{class}-@{modifier}-@{property}-scale'), '-null', '');
+
+  & when not (@@element-property = null) {
+
+    & when (@screen-size = null) {
+
+      & when (@modifier = null) {
+
+        @{property}: @@element-property;
+
+      }
+
+      & when not (@modifier = null) {
+
+        & when not (@@element-modifier-property-scale = null) {
+
+          @{property}: @@element-property * @@element-modifier-property-scale;
+
+        }
+
+      }
+
+    }
+
+    & when not (@screen-size = null) {
+
+      & when not (@@element-property-screen-size-scale = null) {
+
+        & when (@modifier = null) {
+
+          @{property}: @@element-property * @@element-property-screen-size-scale;
+
+        }
+
+        & when not (@modifier = null) {
+
+          & when not (@@element-modifier-property-scale = null) {
+
+            @{property}: @@element-property * @@element-property-screen-size-scale* @@element-modifier-property-scale;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
 /* -----------------------------------------------------------------------------
 Shape layout Variant
 ----------------------------------------------------------------------------- */
@@ -921,50 +977,47 @@ Shape layout Variant
 Shape layout Variant
 ----------------------------------------------------------------------------- */
 
-.layout-spacing-conditional-variant(@class, @screen-size) {
+.layout-spacing-variant(@class, @modifier, @screen-size) {
 
+  @class-prefix: replace(e('@{class}-@{modifier}'), '-null', '');
   @class-suffix: replace(e('-@{screen-size}'), '-null', '');
 
   & when (@screen-size = null) {
 
-    &.@{class} {
+    .layout-property-variant (@class, margin-top, @modifier, @screen-size);
+    .layout-property-variant (@class, margin-bottom, @modifier, @screen-size);
+    .layout-property-variant (@class, margin-left, @modifier, @screen-size);
+    .layout-property-variant (@class, margin-right, @modifier, @screen-size);
+    .layout-property-variant (@class, padding-top, @modifier, @screen-size);
+    .layout-property-variant (@class, padding-bottom, @modifier, @screen-size);
+    .layout-property-variant (@class, padding-left, @modifier, @screen-size);
+    .layout-property-variant (@class, padding-right, @modifier, @screen-size);
 
-      .layout-property-variant (@class, margin-top, @screen-size);
-      .layout-property-variant (@class, margin-bottom, @screen-size);
-      .layout-property-variant (@class, margin-left, @screen-size);
-      .layout-property-variant (@class, margin-right, @screen-size);
-      .layout-property-variant (@class, padding-top, @screen-size);
-      .layout-property-variant (@class, padding-bottom, @screen-size);
-      .layout-property-variant (@class, padding-left, @screen-size);
-      .layout-property-variant (@class, padding-right, @screen-size);
+    &-top {
 
-    }
-
-    &.@{class}-top {
-
-      .layout-property-variant (@class, margin-top, @screen-size);
-      .layout-property-variant (@class, padding-top, @screen-size);
+      .layout-property-variant (@class, margin-top, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-top, @modifier, @screen-size);
 
     }
 
-    &.@{class}-bottom {
+    &-bottom {
 
-      .layout-property-variant (@class, margin-bottom, @screen-size);
-      .layout-property-variant (@class, padding-bottom, @screen-size);
-
-    }
-
-    &.@{class}-left {
-
-      .layout-property-variant (@class, margin-left, @screen-size);
-      .layout-property-variant (@class, padding-left, @screen-size);
+      .layout-property-variant (@class, margin-bottom, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-bottom, @modifier, @screen-size);
 
     }
 
-    &.@{class}-right {
+    &-left {
 
-      .layout-property-variant (@class, margin-right, @screen-size);
-      .layout-property-variant (@class, padding-right, @screen-size);
+      .layout-property-variant (@class, margin-left, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-left, @modifier, @screen-size);
+
+    }
+
+    &-right {
+
+      .layout-property-variant (@class, margin-right, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-right, @modifier, @screen-size);
 
     }
 
@@ -972,49 +1025,57 @@ Shape layout Variant
 
   & when not (@screen-size = null) {
 
-    &.@{class},
-    &.@{class}@{class-suffix} {
+    .layout-property-variant (@class, margin-top, @modifier, @screen-size);
+    .layout-property-variant (@class, margin-bottom, @modifier, @screen-size);
+    .layout-property-variant (@class, margin-left, @modifier, @screen-size);
+    .layout-property-variant (@class, margin-right, @modifier, @screen-size);
+    .layout-property-variant (@class, padding-top, @modifier, @screen-size);
+    .layout-property-variant (@class, padding-bottom, @modifier, @screen-size);
+    .layout-property-variant (@class, padding-left, @modifier, @screen-size);
+    .layout-property-variant (@class, padding-right, @modifier, @screen-size);
 
-      .layout-property-variant (@class, margin-top, @screen-size);
-      .layout-property-variant (@class, margin-bottom, @screen-size);
-      .layout-property-variant (@class, margin-left, @screen-size);
-      .layout-property-variant (@class, margin-right, @screen-size);
-      .layout-property-variant (@class, padding-top, @screen-size);
-      .layout-property-variant (@class, padding-bottom, @screen-size);
-      .layout-property-variant (@class, padding-left, @screen-size);
-      .layout-property-variant (@class, padding-right, @screen-size);
+    &@{class-suffix} {
 
-    }
-
-    &.@{class}-top,
-    &.@{class}-top@{class-suffix} {
-
-      .layout-property-variant (@class, margin-top, @screen-size);
-      .layout-property-variant (@class, padding-top, @screen-size);
-
-    }
-
-    &.@{class}-bottom,
-    &.@{class}-bottom@{class-suffix} {
-
-      .layout-property-variant (@class, margin-bottom, @screen-size);
-      .layout-property-variant (@class, padding-bottom, @screen-size);
+      .layout-property-variant (@class, margin-top, @modifier, @screen-size);
+      .layout-property-variant (@class, margin-bottom, @modifier, @screen-size);
+      .layout-property-variant (@class, margin-left, @modifier, @screen-size);
+      .layout-property-variant (@class, margin-right, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-top, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-bottom, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-left, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-right, @modifier, @screen-size);
 
     }
 
-    &.@{class}-left,
-    &.@{class}-left@{class-suffix} {
+    &-top,
+    &-top@{class-suffix} {
 
-      .layout-property-variant (@class, margin-left, @screen-size);
-      .layout-property-variant (@class, padding-left, @screen-size);
+      .layout-property-variant (@class, margin-top, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-top, @modifier, @screen-size);
 
     }
 
-    &.@{class}-right,
-    &.@{class}-right@{class-suffix} {
+    &-bottom,
+    &-bottom@{class-suffix} {
 
-      .layout-property-variant (@class, margin-right, @screen-size);
-      .layout-property-variant (@class, padding-right, @screen-size);
+      .layout-property-variant (@class, margin-bottom, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-bottom, @modifier, @screen-size);
+
+    }
+
+    &-left,
+    &-left@{class-suffix} {
+
+      .layout-property-variant (@class, margin-left, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-left, @modifier, @screen-size);
+
+    }
+
+    &-right,
+    &-right@{class-suffix} {
+
+      .layout-property-variant (@class, margin-right, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-right, @modifier, @screen-size);
 
     }
 
