@@ -20,9 +20,27 @@ heading-h1/styles.less
     display: block;
     .text-style-variant(heading-h1);
     .text-size-variant(heading-h1, null);
-    .shape-layout-variant(heading-h1, null);
-    .shape-layout-variant(heading-h1, short, null);
-    .shape-layout-variant(heading-h1, tall, null);
+    .abcdef(heading-h1, null, null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .abcdef(heading-h1, short, null);
+
+    }
+
+    &.tall {
+
+      .abcdef(heading-h1, tall, null);
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 
     & when (@heading-h1-emphasis-enabled) {
 
@@ -45,8 +63,6 @@ heading-h1/styles.less
       }
 
     }
-
-
 
     & when (@heading-h1-inverse-enabled) {
 
@@ -80,77 +96,149 @@ heading-h1/styles.less
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-small-enabled) and (@heading-h1-scale-screen-small-enabled) {
+
+& when (@layout-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@heading-h1-enabled) and (@heading-h1-scale-screen-small-enabled) {
+
+      .text-size-variant(heading-h1, scale-screen-small);
+      .abcdef(heading-h1, null, screen-small);
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
+      Layout Variants
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-small-min-width) {
+      &.short {
 
-        .text-size-variant(heading-h1, scale-screen-small);
-        .shape-layout-variant(heading-h1, scale-screen-small);
-        .shape-layout-variant(heading-h1, short, scale-screen-small);
-        .shape-layout-variant(heading-h1, tall, scale-screen-small);
+        .abcdef(heading-h1, short, screen-small);
+
+      }
+
+      &.tall {
+
+        .abcdef(heading-h1, tall, screen-small);
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-medium-enabled) and (@heading-h1-scale-screen-medium-enabled) {
+
+& when (@layout-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@heading-h1-enabled) and (@heading-h1-scale-screen-medium-enabled) {
+
+      .text-size-variant(heading-h1, scale-screen-medium);
+      .abcdef(heading-h1, null, screen-medium);
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
+      Layout Variants
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-medium-min-width) {
+      &.short {
 
-        .text-size-variant(heading-h1, scale-screen-medium);
-        .shape-layout-variant(heading-h1, scale-screen-medium);
-        .shape-layout-variant(heading-h1, short, scale-screen-medium);
-        .shape-layout-variant(heading-h1, tall, scale-screen-medium);
+        .abcdef(heading-h1, short, screen-medium);
+
+      }
+
+      &.tall {
+
+        .abcdef(heading-h1, tall, screen-medium);
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-large-enabled) and (@heading-h1-scale-screen-large-enabled) {
+
+& when (@layout-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@heading-h1-enabled) and (@heading-h1-scale-screen-large-enabled) {
+
+      .text-size-variant(heading-h1, scale-screen-large);
+      .abcdef(heading-h1, null, screen-large);
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
+      Layout Variants
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-large-min-width) {
+      &.short {
 
-        .text-size-variant(heading-h1, scale-screen-large);
-        .shape-layout-variant(heading-h1, scale-screen-large);
-        .shape-layout-variant(heading-h1, short, scale-screen-large);
-        .shape-layout-variant(heading-h1, tall, scale-screen-large);
+        .abcdef(heading-h1, short, screen-large);
+
+      }
+
+      &.tall {
+
+        .abcdef(heading-h1, tall, screen-large);
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-jumbo-enabled) and (@heading-h1-scale-screen-jumbo-enabled) {
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@heading-h1-enabled) and (@heading-h1-scale-screen-jumbo-enabled) {
+
+      .text-size-variant(heading-h1, scale-screen-jumbo);
+      .abcdef(heading-h1, null, screen-jumbo);
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+      Layout Variants
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-jumbo-min-width) {
+      &.short {
 
-        .text-size-variant(heading-h1, scale-screen-jumbo);
-        .shape-layout-variant(heading-h1, scale-screen-jumbo);
-        .shape-layout-variant(heading-h1, short, scale-screen-jumbo);
-        .shape-layout-variant(heading-h1, tall, scale-screen-jumbo);
+        .abcdef(heading-h1, short, screen-jumbo);
+
+      }
+
+      &.tall {
+
+        .abcdef(heading-h1, tall, screen-jumbo);
 
       }
 

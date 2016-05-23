@@ -1082,3 +1082,62 @@ Shape layout Variant
   }
 
 }
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+Shape layout Variant
+----------------------------------------------------------------------------- */
+
+.abcdef(@class, @modifier, @screen-size) {
+
+  @class-prefix: replace(e('@{class}-@{modifier}'), '-null', '');
+  @class-suffix: replace(e('-@{screen-size}'), '-null', '');
+
+  .layout-property-variant (@class, margin-top, @modifier, @screen-size);
+  .layout-property-variant (@class, margin-bottom, @modifier, @screen-size);
+  .layout-property-variant (@class, margin-left, @modifier, @screen-size);
+  .layout-property-variant (@class, margin-right, @modifier, @screen-size);
+  .layout-property-variant (@class, padding-top, @modifier, @screen-size);
+  .layout-property-variant (@class, padding-bottom, @modifier, @screen-size);
+  .layout-property-variant (@class, padding-left, @modifier, @screen-size);
+  .layout-property-variant (@class, padding-right, @modifier, @screen-size);
+
+  & when not (@modifier = null) {
+
+    &-top {
+
+      .layout-property-variant (@class, margin-top, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-top, @modifier, @screen-size);
+
+    }
+
+    &-bottom {
+
+      .layout-property-variant (@class, margin-bottom, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-bottom, @modifier, @screen-size);
+
+    }
+
+    &-left {
+
+      .layout-property-variant (@class, margin-left, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-left, @modifier, @screen-size);
+
+    }
+
+    &-right {
+
+      .layout-property-variant (@class, margin-right, @modifier, @screen-size);
+      .layout-property-variant (@class, padding-right, @modifier, @screen-size);
+
+    }
+
+  }
+
+}
