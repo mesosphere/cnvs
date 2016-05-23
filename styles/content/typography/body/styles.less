@@ -20,9 +20,6 @@ body/styles.less
     display: block;
     .text-style-variant(body);
     .text-size-variant(body, null);
-    .shape-layout-variant(body, null);
-    .shape-layout-variant(body, short, null);
-    .shape-layout-variant(body, tall, null);
 
     & when (@body-emphasis-enabled) {
 
@@ -45,8 +42,6 @@ body/styles.less
       }
 
     }
-
-
 
     & when (@body-inverse-enabled) {
 
@@ -82,6 +77,32 @@ body/styles.less
 
   }
 
+  /* -----------------------------------------------------------------------------
+  Paragraph
+  ----------------------------------------------------------------------------- */
+
+  p {
+
+    .layout-spacing-variant(body, null, null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .layout-spacing-variant(body, short, null);
+
+    }
+
+    &.tall {
+
+      .layout-spacing-variant(body, tall, null);
+
+    }
+
+  }
+
 }
 
 
@@ -97,7 +118,7 @@ body/styles.less
     & when (@body-enabled) and (@body-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      body
+      Body
       ----------------------------------------------------------------------------- */
 
       html,
@@ -105,9 +126,32 @@ body/styles.less
       p {
 
         .text-size-variant(body, scale-screen-small);
-        .shape-layout-variant(body, scale-screen-small);
-        .shape-layout-variant(body, short, scale-screen-small);
-        .shape-layout-variant(body, tall, scale-screen-small);
+
+      }
+
+      /* -----------------------------------------------------------------------------
+      Paragraph
+      ----------------------------------------------------------------------------- */
+
+      p {
+
+        .layout-spacing-variant(body, null, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .layout-spacing-variant(body, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .layout-spacing-variant(body, tall, screen-small);
+
+        }
 
       }
 
@@ -130,7 +174,7 @@ body/styles.less
     & when (@body-enabled) and (@body-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      body
+      Body
       ----------------------------------------------------------------------------- */
 
       html,
@@ -138,9 +182,32 @@ body/styles.less
       p {
 
         .text-size-variant(body, scale-screen-medium);
-        .shape-layout-variant(body, scale-screen-medium);
-        .shape-layout-variant(body, short, scale-screen-medium);
-        .shape-layout-variant(body, tall, scale-screen-medium);
+
+      }
+
+      /* -----------------------------------------------------------------------------
+      Paragraph
+      ----------------------------------------------------------------------------- */
+
+      p {
+
+        .layout-spacing-variant(body, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .layout-spacing-variant(body, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .layout-spacing-variant(body, tall, screen-medium);
+
+        }
 
       }
 
@@ -171,9 +238,32 @@ body/styles.less
       p {
 
         .text-size-variant(body, scale-screen-large);
-        .shape-layout-variant(body, scale-screen-large);
-        .shape-layout-variant(body, short, scale-screen-large);
-        .shape-layout-variant(body, tall, scale-screen-large);
+
+      }
+
+      /* -----------------------------------------------------------------------------
+      Paragraph
+      ----------------------------------------------------------------------------- */
+
+      p {
+
+        .layout-spacing-variant(body, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .layout-spacing-variant(body, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .layout-spacing-variant(body, tall, screen-large);
+
+        }
 
       }
 
@@ -204,9 +294,32 @@ body/styles.less
       p {
 
         .text-size-variant(body, scale-screen-jumbo);
-        .shape-layout-variant(body, scale-screen-jumbo);
-        .shape-layout-variant(body, short, scale-screen-jumbo);
-        .shape-layout-variant(body, tall, scale-screen-jumbo);
+
+      }
+
+      /* -----------------------------------------------------------------------------
+      Paragraph
+      ----------------------------------------------------------------------------- */
+
+      p {
+
+        .layout-spacing-variant(body, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .layout-spacing-variant(body, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .layout-spacing-variant(body, tall, screen-jumbo);
+
+        }
 
       }
 

@@ -18,13 +18,8 @@ divider/styles.less
   .divider {
 
     display: block;
-    .shape-layout-variant(divider, null);
-    .shape-layout-variant(divider, flush, null);
-    .shape-layout-variant(divider, shorter, null);
-    .shape-layout-variant(divider, short, null);
-    .shape-layout-variant(divider, tall, null);
-    .shape-layout-variant(divider, taller, null);
     .shape-style-variant(divider);
+    .layout-spacing-variant(divider, null, null);
 
     & when not (@divider-height = null) {
 
@@ -45,6 +40,87 @@ divider/styles.less
     &.divider-inverse {
 
       .shape-style-variant(divider-inverse);
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Divider Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &-shorter {
+
+      .layout-spacing-variant(divider, shorter, null);
+
+    }
+
+    &-short {
+
+      .layout-spacing-variant(divider, short, null);
+
+    }
+
+    &-tall {
+
+      .layout-spacing-variant(divider, tall, null);
+
+    }
+
+    &-taller {
+
+      .layout-spacing-variant(divider, taller, null);
+
+    }
+
+  }
+
+  hr,
+  [class^="divider"],
+  [class*=" divider"] {
+
+    &.flush {
+
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+
+    }
+
+    &.flush-vertical {
+
+      padding-top: 0px;
+      padding-bottom: 0px;
+
+    }
+
+    &.flush-horizontal {
+
+      padding-left: 0px;
+      padding-right: 0px;
+
+    }
+
+    &.flush-top {
+
+      padding-top: 0px;
+
+    }
+
+    &.flush-bottom {
+
+      padding-bottom: 0px;
+
+    }
+
+    &.flush-left {
+
+      padding-left: 0px;
+
+    }
+
+    &.flush-right {
+
+      padding-right: 0px;
 
     }
 
@@ -71,11 +147,7 @@ divider/styles.less
       hr,
       .divider {
 
-        .shape-layout-variant(divider, scale-screen-small);
-        .shape-layout-variant(divider, shorter, scale-screen-small);
-        .shape-layout-variant(divider, short, scale-screen-small);
-        .shape-layout-variant(divider, tall, scale-screen-small);
-        .shape-layout-variant(divider, taller, scale-screen-small);
+        .layout-spacing-variant(divider, null, screen-small);
 
         & when not (@divider-height-scale-screen-small = null) {
 
@@ -86,6 +158,34 @@ divider/styles.less
         & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-small = null) {
 
           border-radius: @divider-border-radius * @divider-border-radius-scale-screen-small;
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Divider Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &-shorter {
+
+          .layout-spacing-variant(divider, shorter, screen-small);
+
+        }
+
+        &-short {
+
+          .layout-spacing-variant(divider, short, screen-small);
+
+        }
+
+        &-tall {
+
+          .layout-spacing-variant(divider, tall, screen-small);
+
+        }
+
+        &-taller {
+
+          .layout-spacing-variant(divider, taller, screen-small);
 
         }
 
@@ -116,11 +216,7 @@ divider/styles.less
       hr,
       .divider {
 
-        .shape-layout-variant(divider, scale-screen-medium);
-        .shape-layout-variant(divider, shorter, scale-screen-medium);
-        .shape-layout-variant(divider, short, scale-screen-medium);
-        .shape-layout-variant(divider, tall, scale-screen-medium);
-        .shape-layout-variant(divider, taller, scale-screen-medium);
+        .layout-spacing-variant(divider, null, screen-medium);
 
         & when not (@divider-height-scale-screen-medium = null) {
 
@@ -131,6 +227,34 @@ divider/styles.less
         & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-medium = null) {
 
           border-radius: @divider-border-radius * @divider-border-radius-scale-screen-medium;
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Divider Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &-shorter {
+
+          .layout-spacing-variant(divider, shorter, screen-medium);
+
+        }
+
+        &-short {
+
+          .layout-spacing-variant(divider, short, screen-medium);
+
+        }
+
+        &-tall {
+
+          .layout-spacing-variant(divider, tall, screen-medium);
+
+        }
+
+        &-taller {
+
+          .layout-spacing-variant(divider, taller, screen-medium);
 
         }
 
@@ -163,11 +287,7 @@ divider/styles.less
       hr,
       .divider {
 
-        .shape-layout-variant(divider, scale-screen-large);
-        .shape-layout-variant(divider, shorter, scale-screen-large);
-        .shape-layout-variant(divider, short, scale-screen-large);
-        .shape-layout-variant(divider, tall, scale-screen-large);
-        .shape-layout-variant(divider, taller, scale-screen-large);
+        .layout-spacing-variant(divider, null, screen-large);
 
         & when not (@divider-height-scale-screen-large = null) {
 
@@ -181,9 +301,35 @@ divider/styles.less
 
         }
 
+        /* -----------------------------------------------------------------------------
+        Divider Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &-shorter {
+
+          .layout-spacing-variant(divider, shorter, screen-large);
+
+        }
+
+        &-short {
+
+          .layout-spacing-variant(divider, short, screen-large);
+
+        }
+
+        &-tall {
+
+          .layout-spacing-variant(divider, tall, screen-large);
+
+        }
+
+        &-taller {
+
+          .layout-spacing-variant(divider, taller, screen-large);
+
+        }
+
       }
-
-
 
     }
 
@@ -210,11 +356,7 @@ divider/styles.less
       hr,
       .divider {
 
-        .shape-layout-variant(divider, scale-screen-jumbo);
-        .shape-layout-variant(divider, shorter, scale-screen-jumbo);
-        .shape-layout-variant(divider, short, scale-screen-jumbo);
-        .shape-layout-variant(divider, tall, scale-screen-jumbo);
-        .shape-layout-variant(divider, taller, scale-screen-jumbo);
+        .layout-spacing-variant(divider, null, screen-jumbo);
 
         & when not (@divider-height-scale-screen-jumbo = null) {
 
@@ -228,9 +370,35 @@ divider/styles.less
 
         }
 
+        /* -----------------------------------------------------------------------------
+        Divider Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &-shorter {
+
+          .layout-spacing-variant(divider, shorter, screen-jumbo);
+
+        }
+
+        &-short {
+
+          .layout-spacing-variant(divider, short, screen-jumbo);
+
+        }
+
+        &-tall {
+
+          .layout-spacing-variant(divider, tall, screen-jumbo);
+
+        }
+
+        &-taller {
+
+          .layout-spacing-variant(divider, taller, screen-jumbo);
+
+        }
+
       }
-
-
 
     }
 
