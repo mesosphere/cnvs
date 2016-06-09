@@ -20,18 +20,8 @@ divider/styles.less
     display: block;
     .shape-style-variant(divider);
     .element-spacing(divider, null, null);
-
-    & when not (@divider-height = null) {
-
-      height: @divider-height;
-
-    }
-
-    & when not (@divider-border-radius = null) {
-
-      border-radius: @divider-border-radius;
-
-    }
+    .prop-variant(divider, height, null, null);
+    .prop-variant(divider, border-radius, null, null);
 
     /* -----------------------------------------------------------------------------
     Divider Inverse (.divider-inverse)
@@ -138,7 +128,7 @@ divider/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@divider-enabled) and (@divider-scale-screen-small-enabled) {
+    & when (@divider-enabled) and (@divider-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Divider
@@ -148,18 +138,8 @@ divider/styles.less
       .divider {
 
         .element-spacing(divider, null, screen-small);
-
-        & when not (@divider-height-scale-screen-small = null) {
-
-          height: @divider-height * @divider-height-scale-screen-small;
-
-        }
-
-        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-small = null) {
-
-          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-small;
-
-        }
+        .prop-variant(divider, height, null, screen-small);
+        .prop-variant(divider, border-radius, null, screen-small);
 
         /* -----------------------------------------------------------------------------
         Divider Layout Variants
@@ -199,7 +179,7 @@ divider/styles.less
 
 
 
-& when (@layout-scale-screen-medium-enabled) and (@divider-scale-screen-medium-enabled) {
+& when (@layout-scale-screen-medium-enabled) and (@divider-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Medium (@layout-screen-medium-min-width) and wider
@@ -207,7 +187,7 @@ divider/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@divider-enabled) and (@divider-scale-screen-medium-enabled) {
+    & when (@divider-enabled) and (@divider-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Divider
@@ -217,18 +197,8 @@ divider/styles.less
       .divider {
 
         .element-spacing(divider, null, screen-medium);
-
-        & when not (@divider-height-scale-screen-medium = null) {
-
-          height: @divider-height * @divider-height-scale-screen-medium;
-
-        }
-
-        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-medium = null) {
-
-          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-medium;
-
-        }
+        .prop-variant(divider, height, null, screen-medium);
+        .prop-variant(divider, border-radius, null, screen-medium);
 
         /* -----------------------------------------------------------------------------
         Divider Layout Variants
@@ -270,7 +240,7 @@ divider/styles.less
 
 
 
-& when (@layout-scale-screen-large-enabled) and (@divider-scale-screen-large-enabled) {
+& when (@layout-scale-screen-large-enabled) and (@divider-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Large (@layout-screen-large-min-width) and wider
@@ -278,7 +248,7 @@ divider/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@divider-enabled) and (@divider-scale-screen-large-enabled) {
+    & when (@divider-enabled) and (@divider-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Divider
@@ -288,18 +258,8 @@ divider/styles.less
       .divider {
 
         .element-spacing(divider, null, screen-large);
-
-        & when not (@divider-height-scale-screen-large = null) {
-
-          height: @divider-height * @divider-height-scale-screen-large;
-
-        }
-
-        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-large = null) {
-
-          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-large;
-
-        }
+        .prop-variant(divider, height, null, screen-large);
+        .prop-variant(divider, border-radius, null, screen-large);
 
         /* -----------------------------------------------------------------------------
         Divider Layout Variants
@@ -339,7 +299,7 @@ divider/styles.less
 
 
 
-& when (@layout-scale-screen-jumbo-enabled) and (@divider-scale-screen-jumbo-enabled) {
+& when (@layout-scale-screen-jumbo-enabled) and (@divider-screen-jumbo-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
@@ -347,7 +307,7 @@ divider/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@divider-enabled) and (@divider-scale-screen-jumbo-enabled) {
+    & when (@divider-enabled) and (@divider-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Divider
@@ -357,18 +317,8 @@ divider/styles.less
       .divider {
 
         .element-spacing(divider, null, screen-jumbo);
-
-        & when not (@divider-height-scale-screen-jumbo = null) {
-
-          height: @divider-height * @divider-height-scale-screen-jumbo;
-
-        }
-
-        & when not (@divider-border-radius = null) and not (@divider-border-radius-scale-screen-jumbo = null) {
-
-          border-radius: @divider-border-radius * @divider-border-radius-scale-screen-jumbo;
-
-        }
+        .prop-variant(divider, height, null, screen-jumbo);
+        .prop-variant(divider, border-radius, null, screen-jumbo);
 
         /* -----------------------------------------------------------------------------
         Divider Layout Variants

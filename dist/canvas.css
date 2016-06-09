@@ -543,12 +543,6 @@ Calculate Grid Column Pull
 Calculate Grid Column Push
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Shape layout Variant
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Shape layout Variant
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 utilities/mixins-logic.less
@@ -1090,18 +1084,6 @@ container/styles.less
   margin-left: 24px;
   margin-right: 24px;
 }
-.container-top {
-  margin-top: 0px;
-}
-.container-bottom {
-  margin-bottom: 0px;
-}
-.container-left {
-  margin-left: 24px;
-}
-.container-right {
-  margin-right: 24px;
-}
 /* -----------------------------------------------------------------------------
   Screen Size: Small (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
@@ -1113,18 +1095,6 @@ container/styles.less
     margin-left: 24px;
     margin-right: 24px;
   }
-  .container-screen-small {
-    margin-left: 24px;
-    margin-right: 24px;
-  }
-  .container-left,
-  .container-left-screen-small {
-    margin-left: 24px;
-  }
-  .container-right,
-  .container-right-screen-small {
-    margin-right: 24px;
-  }
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Medium (@layout-screen-medium-min-width) and wider
@@ -1134,20 +1104,8 @@ container/styles.less
       Container
       ----------------------------------------------------------------------------- */
   .container {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .container-screen-medium {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .container-left,
-  .container-left-screen-medium {
-    margin-left: 0px;
-  }
-  .container-right,
-  .container-right-screen-medium {
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -8723,25 +8681,15 @@ pod/styles.less
     Pod Layout Variants
     ----------------------------------------------------------------------------- */
 }
-.pod-top {
-  margin-top: 24px;
-}
-.pod-bottom {
-  margin-bottom: 24px;
-}
-.pod-left {
-  margin-left: 24px;
-}
-.pod-right {
-  margin-right: 24px;
-}
 .pod-shorter {
   margin-top: 6px;
   margin-bottom: 6px;
 }
+.pod-shorter-top,
 .pod-shorter-top {
   margin-top: 6px;
 }
+.pod-shorter-bottom,
 .pod-shorter-bottom {
   margin-bottom: 6px;
 }
@@ -8749,9 +8697,11 @@ pod/styles.less
   margin-top: 12px;
   margin-bottom: 12px;
 }
+.pod-short-top,
 .pod-short-top {
   margin-top: 12px;
 }
+.pod-short-bottom,
 .pod-short-bottom {
   margin-bottom: 12px;
 }
@@ -8759,9 +8709,11 @@ pod/styles.less
   margin-top: 36px;
   margin-bottom: 36px;
 }
+.pod-tall-top,
 .pod-tall-top {
   margin-top: 36px;
 }
+.pod-tall-bottom,
 .pod-tall-bottom {
   margin-bottom: 36px;
 }
@@ -8769,9 +8721,11 @@ pod/styles.less
   margin-top: 48px;
   margin-bottom: 48px;
 }
+.pod-taller-top,
 .pod-taller-top {
   margin-top: 48px;
 }
+.pod-taller-bottom,
 .pod-taller-bottom {
   margin-bottom: 48px;
 }
@@ -8779,9 +8733,11 @@ pod/styles.less
   margin-left: 6px;
   margin-right: 6px;
 }
+.pod-narrower-left,
 .pod-narrower-left {
   margin-left: 6px;
 }
+.pod-narrower-right,
 .pod-narrower-right {
   margin-right: 6px;
 }
@@ -8789,9 +8745,11 @@ pod/styles.less
   margin-left: 12px;
   margin-right: 12px;
 }
+.pod-narrow-left,
 .pod-narrow-left {
   margin-left: 12px;
 }
+.pod-narrow-right,
 .pod-narrow-right {
   margin-right: 12px;
 }
@@ -8799,9 +8757,11 @@ pod/styles.less
   margin-left: 36px;
   margin-right: 36px;
 }
+.pod-wide-left,
 .pod-wide-left {
   margin-left: 36px;
 }
+.pod-wide-right,
 .pod-wide-right {
   margin-right: 36px;
 }
@@ -8809,9 +8769,11 @@ pod/styles.less
   margin-left: 48px;
   margin-right: 48px;
 }
+.pod-wider-left,
 .pod-wider-left {
   margin-left: 48px;
 }
+.pod-wider-right,
 .pod-wider-right {
   margin-right: 48px;
 }
@@ -8852,33 +8814,7 @@ pod/styles.less
         Pod Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  .pod-screen-small {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: 24px;
-    margin-right: 24px;
-  }
-  .pod-top,
-  .pod-top-screen-small {
-    margin-top: 24px;
-  }
-  .pod-bottom,
-  .pod-bottom-screen-small {
-    margin-bottom: 24px;
-  }
-  .pod-left,
-  .pod-left-screen-small {
-    margin-left: 24px;
-  }
-  .pod-right,
-  .pod-right-screen-small {
-    margin-right: 24px;
-  }
   .pod-shorter {
-    margin-top: 6px;
-    margin-bottom: 6px;
-  }
-  .pod-shorter-screen-small {
     margin-top: 6px;
     margin-bottom: 6px;
   }
@@ -8894,10 +8830,6 @@ pod/styles.less
     margin-top: 12px;
     margin-bottom: 12px;
   }
-  .pod-short-screen-small {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
   .pod-short-top,
   .pod-short-top-screen-small {
     margin-top: 12px;
@@ -8907,10 +8839,6 @@ pod/styles.less
     margin-bottom: 12px;
   }
   .pod-tall {
-    margin-top: 36px;
-    margin-bottom: 36px;
-  }
-  .pod-tall-screen-small {
     margin-top: 36px;
     margin-bottom: 36px;
   }
@@ -8926,10 +8854,6 @@ pod/styles.less
     margin-top: 48px;
     margin-bottom: 48px;
   }
-  .pod-taller-screen-small {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
   .pod-taller-top,
   .pod-taller-top-screen-small {
     margin-top: 48px;
@@ -8939,10 +8863,6 @@ pod/styles.less
     margin-bottom: 48px;
   }
   .pod-narrower {
-    margin-left: 6px;
-    margin-right: 6px;
-  }
-  .pod-narrower-screen-small {
     margin-left: 6px;
     margin-right: 6px;
   }
@@ -8958,10 +8878,6 @@ pod/styles.less
     margin-left: 12px;
     margin-right: 12px;
   }
-  .pod-narrow-screen-small {
-    margin-left: 12px;
-    margin-right: 12px;
-  }
   .pod-narrow-left,
   .pod-narrow-left-screen-small {
     margin-left: 12px;
@@ -8974,10 +8890,6 @@ pod/styles.less
     margin-left: 36px;
     margin-right: 36px;
   }
-  .pod-wide-screen-small {
-    margin-left: 36px;
-    margin-right: 36px;
-  }
   .pod-wide-left,
   .pod-wide-left-screen-small {
     margin-left: 36px;
@@ -8987,10 +8899,6 @@ pod/styles.less
     margin-right: 36px;
   }
   .pod-wider {
-    margin-left: 48px;
-    margin-right: 48px;
-  }
-  .pod-wider-screen-small {
     margin-left: 48px;
     margin-right: 48px;
   }
@@ -9019,33 +8927,7 @@ pod/styles.less
         Pod Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  .pod-screen-medium {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    margin-left: 32px;
-    margin-right: 32px;
-  }
-  .pod-top,
-  .pod-top-screen-medium {
-    margin-top: 32px;
-  }
-  .pod-bottom,
-  .pod-bottom-screen-medium {
-    margin-bottom: 32px;
-  }
-  .pod-left,
-  .pod-left-screen-medium {
-    margin-left: 32px;
-  }
-  .pod-right,
-  .pod-right-screen-medium {
-    margin-right: 32px;
-  }
   .pod-shorter {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-  .pod-shorter-screen-medium {
     margin-top: 8px;
     margin-bottom: 8px;
   }
@@ -9061,10 +8943,6 @@ pod/styles.less
     margin-top: 16px;
     margin-bottom: 16px;
   }
-  .pod-short-screen-medium {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
   .pod-short-top,
   .pod-short-top-screen-medium {
     margin-top: 16px;
@@ -9074,10 +8952,6 @@ pod/styles.less
     margin-bottom: 16px;
   }
   .pod-tall {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
-  .pod-tall-screen-medium {
     margin-top: 48px;
     margin-bottom: 48px;
   }
@@ -9093,10 +8967,6 @@ pod/styles.less
     margin-top: 64px;
     margin-bottom: 64px;
   }
-  .pod-taller-screen-medium {
-    margin-top: 64px;
-    margin-bottom: 64px;
-  }
   .pod-taller-top,
   .pod-taller-top-screen-medium {
     margin-top: 64px;
@@ -9106,10 +8976,6 @@ pod/styles.less
     margin-bottom: 64px;
   }
   .pod-narrower {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  .pod-narrower-screen-medium {
     margin-left: 8px;
     margin-right: 8px;
   }
@@ -9125,10 +8991,6 @@ pod/styles.less
     margin-left: 16px;
     margin-right: 16px;
   }
-  .pod-narrow-screen-medium {
-    margin-left: 16px;
-    margin-right: 16px;
-  }
   .pod-narrow-left,
   .pod-narrow-left-screen-medium {
     margin-left: 16px;
@@ -9141,10 +9003,6 @@ pod/styles.less
     margin-left: 48px;
     margin-right: 48px;
   }
-  .pod-wide-screen-medium {
-    margin-left: 48px;
-    margin-right: 48px;
-  }
   .pod-wide-left,
   .pod-wide-left-screen-medium {
     margin-left: 48px;
@@ -9154,10 +9012,6 @@ pod/styles.less
     margin-right: 48px;
   }
   .pod-wider {
-    margin-left: 64px;
-    margin-right: 64px;
-  }
-  .pod-wider-screen-medium {
     margin-left: 64px;
     margin-right: 64px;
   }
@@ -9186,33 +9040,7 @@ pod/styles.less
         Pod Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  .pod-screen-large {
-    margin-top: 36px;
-    margin-bottom: 36px;
-    margin-left: 36px;
-    margin-right: 36px;
-  }
-  .pod-top,
-  .pod-top-screen-large {
-    margin-top: 36px;
-  }
-  .pod-bottom,
-  .pod-bottom-screen-large {
-    margin-bottom: 36px;
-  }
-  .pod-left,
-  .pod-left-screen-large {
-    margin-left: 36px;
-  }
-  .pod-right,
-  .pod-right-screen-large {
-    margin-right: 36px;
-  }
   .pod-shorter {
-    margin-top: 9px;
-    margin-bottom: 9px;
-  }
-  .pod-shorter-screen-large {
     margin-top: 9px;
     margin-bottom: 9px;
   }
@@ -9228,10 +9056,6 @@ pod/styles.less
     margin-top: 18px;
     margin-bottom: 18px;
   }
-  .pod-short-screen-large {
-    margin-top: 18px;
-    margin-bottom: 18px;
-  }
   .pod-short-top,
   .pod-short-top-screen-large {
     margin-top: 18px;
@@ -9241,10 +9065,6 @@ pod/styles.less
     margin-bottom: 18px;
   }
   .pod-tall {
-    margin-top: 54px;
-    margin-bottom: 54px;
-  }
-  .pod-tall-screen-large {
     margin-top: 54px;
     margin-bottom: 54px;
   }
@@ -9260,10 +9080,6 @@ pod/styles.less
     margin-top: 72px;
     margin-bottom: 72px;
   }
-  .pod-taller-screen-large {
-    margin-top: 72px;
-    margin-bottom: 72px;
-  }
   .pod-taller-top,
   .pod-taller-top-screen-large {
     margin-top: 72px;
@@ -9273,10 +9089,6 @@ pod/styles.less
     margin-bottom: 72px;
   }
   .pod-narrower {
-    margin-left: 9px;
-    margin-right: 9px;
-  }
-  .pod-narrower-screen-large {
     margin-left: 9px;
     margin-right: 9px;
   }
@@ -9292,10 +9104,6 @@ pod/styles.less
     margin-left: 18px;
     margin-right: 18px;
   }
-  .pod-narrow-screen-large {
-    margin-left: 18px;
-    margin-right: 18px;
-  }
   .pod-narrow-left,
   .pod-narrow-left-screen-large {
     margin-left: 18px;
@@ -9308,10 +9116,6 @@ pod/styles.less
     margin-left: 54px;
     margin-right: 54px;
   }
-  .pod-wide-screen-large {
-    margin-left: 54px;
-    margin-right: 54px;
-  }
   .pod-wide-left,
   .pod-wide-left-screen-large {
     margin-left: 54px;
@@ -9321,10 +9125,6 @@ pod/styles.less
     margin-right: 54px;
   }
   .pod-wider {
-    margin-left: 72px;
-    margin-right: 72px;
-  }
-  .pod-wider-screen-large {
     margin-left: 72px;
     margin-right: 72px;
   }
@@ -9353,33 +9153,7 @@ pod/styles.less
         Pod Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  .pod-screen-jumbo {
-    margin-top: 48px;
-    margin-bottom: 48px;
-    margin-left: 48px;
-    margin-right: 48px;
-  }
-  .pod-top,
-  .pod-top-screen-jumbo {
-    margin-top: 48px;
-  }
-  .pod-bottom,
-  .pod-bottom-screen-jumbo {
-    margin-bottom: 48px;
-  }
-  .pod-left,
-  .pod-left-screen-jumbo {
-    margin-left: 48px;
-  }
-  .pod-right,
-  .pod-right-screen-jumbo {
-    margin-right: 48px;
-  }
   .pod-shorter {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-  .pod-shorter-screen-jumbo {
     margin-top: 12px;
     margin-bottom: 12px;
   }
@@ -9395,10 +9169,6 @@ pod/styles.less
     margin-top: 24px;
     margin-bottom: 24px;
   }
-  .pod-short-screen-jumbo {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
   .pod-short-top,
   .pod-short-top-screen-jumbo {
     margin-top: 24px;
@@ -9408,10 +9178,6 @@ pod/styles.less
     margin-bottom: 24px;
   }
   .pod-tall {
-    margin-top: 72px;
-    margin-bottom: 72px;
-  }
-  .pod-tall-screen-jumbo {
     margin-top: 72px;
     margin-bottom: 72px;
   }
@@ -9427,10 +9193,6 @@ pod/styles.less
     margin-top: 96px;
     margin-bottom: 96px;
   }
-  .pod-taller-screen-jumbo {
-    margin-top: 96px;
-    margin-bottom: 96px;
-  }
   .pod-taller-top,
   .pod-taller-top-screen-jumbo {
     margin-top: 96px;
@@ -9440,10 +9202,6 @@ pod/styles.less
     margin-bottom: 96px;
   }
   .pod-narrower {
-    margin-left: 12px;
-    margin-right: 12px;
-  }
-  .pod-narrower-screen-jumbo {
     margin-left: 12px;
     margin-right: 12px;
   }
@@ -9459,10 +9217,6 @@ pod/styles.less
     margin-left: 24px;
     margin-right: 24px;
   }
-  .pod-narrow-screen-jumbo {
-    margin-left: 24px;
-    margin-right: 24px;
-  }
   .pod-narrow-left,
   .pod-narrow-left-screen-jumbo {
     margin-left: 24px;
@@ -9475,10 +9229,6 @@ pod/styles.less
     margin-left: 72px;
     margin-right: 72px;
   }
-  .pod-wide-screen-jumbo {
-    margin-left: 72px;
-    margin-right: 72px;
-  }
   .pod-wide-left,
   .pod-wide-left-screen-jumbo {
     margin-left: 72px;
@@ -9488,10 +9238,6 @@ pod/styles.less
     margin-right: 72px;
   }
   .pod-wider {
-    margin-left: 96px;
-    margin-right: 96px;
-  }
-  .pod-wider-screen-jumbo {
     margin-left: 96px;
     margin-right: 96px;
   }
@@ -9570,14 +9316,6 @@ hr,
     Divider Layout Variants
     ----------------------------------------------------------------------------- */
 }
-hr-top,
-.divider-top {
-  margin-top: 12px;
-}
-hr-bottom,
-.divider-bottom {
-  margin-bottom: 12px;
-}
 hr.divider-inverse,
 .divider.divider-inverse {
   background: #474e60;
@@ -9588,9 +9326,13 @@ hr-shorter,
   margin-bottom: 3px;
 }
 hr-shorter-top,
+.divider-shorter-top,
+hr-shorter-top,
 .divider-shorter-top {
   margin-top: 3px;
 }
+hr-shorter-bottom,
+.divider-shorter-bottom,
 hr-shorter-bottom,
 .divider-shorter-bottom {
   margin-bottom: 3px;
@@ -9601,9 +9343,13 @@ hr-short,
   margin-bottom: 6px;
 }
 hr-short-top,
+.divider-short-top,
+hr-short-top,
 .divider-short-top {
   margin-top: 6px;
 }
+hr-short-bottom,
+.divider-short-bottom,
 hr-short-bottom,
 .divider-short-bottom {
   margin-bottom: 6px;
@@ -9614,9 +9360,13 @@ hr-tall,
   margin-bottom: 18px;
 }
 hr-tall-top,
+.divider-tall-top,
+hr-tall-top,
 .divider-tall-top {
   margin-top: 18px;
 }
+hr-tall-bottom,
+.divider-tall-bottom,
 hr-tall-bottom,
 .divider-tall-bottom {
   margin-bottom: 18px;
@@ -9627,9 +9377,13 @@ hr-taller,
   margin-bottom: 24px;
 }
 hr-taller-top,
+.divider-taller-top,
+hr-taller-top,
 .divider-taller-top {
   margin-top: 24px;
 }
+hr-taller-bottom,
+.divider-taller-bottom,
 hr-taller-bottom,
 .divider-taller-bottom {
   margin-bottom: 24px;
@@ -9689,30 +9443,8 @@ hr.flush-right,
         Divider Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  hr-screen-small,
-  .divider-screen-small {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
-  hr-top,
-  .divider-top,
-  hr-top-screen-small,
-  .divider-top-screen-small {
-    margin-top: 24px;
-  }
-  hr-bottom,
-  .divider-bottom,
-  hr-bottom-screen-small,
-  .divider-bottom-screen-small {
-    margin-bottom: 24px;
-  }
   hr-shorter,
   .divider-shorter {
-    margin-top: 6px;
-    margin-bottom: 6px;
-  }
-  hr-shorter-screen-small,
-  .divider-shorter-screen-small {
     margin-top: 6px;
     margin-bottom: 6px;
   }
@@ -9733,11 +9465,6 @@ hr.flush-right,
     margin-top: 12px;
     margin-bottom: 12px;
   }
-  hr-short-screen-small,
-  .divider-short-screen-small {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
   hr-short-top,
   .divider-short-top,
   hr-short-top-screen-small,
@@ -9755,11 +9482,6 @@ hr.flush-right,
     margin-top: 36px;
     margin-bottom: 36px;
   }
-  hr-tall-screen-small,
-  .divider-tall-screen-small {
-    margin-top: 36px;
-    margin-bottom: 36px;
-  }
   hr-tall-top,
   .divider-tall-top,
   hr-tall-top-screen-small,
@@ -9774,11 +9496,6 @@ hr.flush-right,
   }
   hr-taller,
   .divider-taller {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
-  hr-taller-screen-small,
-  .divider-taller-screen-small {
     margin-top: 48px;
     margin-bottom: 48px;
   }
@@ -9810,30 +9527,8 @@ hr.flush-right,
         Divider Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  hr-screen-medium,
-  .divider-screen-medium {
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
-  hr-top,
-  .divider-top,
-  hr-top-screen-medium,
-  .divider-top-screen-medium {
-    margin-top: 32px;
-  }
-  hr-bottom,
-  .divider-bottom,
-  hr-bottom-screen-medium,
-  .divider-bottom-screen-medium {
-    margin-bottom: 32px;
-  }
   hr-shorter,
   .divider-shorter {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-  hr-shorter-screen-medium,
-  .divider-shorter-screen-medium {
     margin-top: 8px;
     margin-bottom: 8px;
   }
@@ -9854,11 +9549,6 @@ hr.flush-right,
     margin-top: 16px;
     margin-bottom: 16px;
   }
-  hr-short-screen-medium,
-  .divider-short-screen-medium {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
   hr-short-top,
   .divider-short-top,
   hr-short-top-screen-medium,
@@ -9876,11 +9566,6 @@ hr.flush-right,
     margin-top: 48px;
     margin-bottom: 48px;
   }
-  hr-tall-screen-medium,
-  .divider-tall-screen-medium {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
   hr-tall-top,
   .divider-tall-top,
   hr-tall-top-screen-medium,
@@ -9895,11 +9580,6 @@ hr.flush-right,
   }
   hr-taller,
   .divider-taller {
-    margin-top: 64px;
-    margin-bottom: 64px;
-  }
-  hr-taller-screen-medium,
-  .divider-taller-screen-medium {
     margin-top: 64px;
     margin-bottom: 64px;
   }
@@ -9931,30 +9611,8 @@ hr.flush-right,
         Divider Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  hr-screen-large,
-  .divider-screen-large {
-    margin-top: 36px;
-    margin-bottom: 36px;
-  }
-  hr-top,
-  .divider-top,
-  hr-top-screen-large,
-  .divider-top-screen-large {
-    margin-top: 36px;
-  }
-  hr-bottom,
-  .divider-bottom,
-  hr-bottom-screen-large,
-  .divider-bottom-screen-large {
-    margin-bottom: 36px;
-  }
   hr-shorter,
   .divider-shorter {
-    margin-top: 9px;
-    margin-bottom: 9px;
-  }
-  hr-shorter-screen-large,
-  .divider-shorter-screen-large {
     margin-top: 9px;
     margin-bottom: 9px;
   }
@@ -9975,11 +9633,6 @@ hr.flush-right,
     margin-top: 18px;
     margin-bottom: 18px;
   }
-  hr-short-screen-large,
-  .divider-short-screen-large {
-    margin-top: 18px;
-    margin-bottom: 18px;
-  }
   hr-short-top,
   .divider-short-top,
   hr-short-top-screen-large,
@@ -9997,11 +9650,6 @@ hr.flush-right,
     margin-top: 54px;
     margin-bottom: 54px;
   }
-  hr-tall-screen-large,
-  .divider-tall-screen-large {
-    margin-top: 54px;
-    margin-bottom: 54px;
-  }
   hr-tall-top,
   .divider-tall-top,
   hr-tall-top-screen-large,
@@ -10016,11 +9664,6 @@ hr.flush-right,
   }
   hr-taller,
   .divider-taller {
-    margin-top: 72px;
-    margin-bottom: 72px;
-  }
-  hr-taller-screen-large,
-  .divider-taller-screen-large {
     margin-top: 72px;
     margin-bottom: 72px;
   }
@@ -10052,30 +9695,8 @@ hr.flush-right,
         Divider Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  hr-screen-jumbo,
-  .divider-screen-jumbo {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
-  hr-top,
-  .divider-top,
-  hr-top-screen-jumbo,
-  .divider-top-screen-jumbo {
-    margin-top: 48px;
-  }
-  hr-bottom,
-  .divider-bottom,
-  hr-bottom-screen-jumbo,
-  .divider-bottom-screen-jumbo {
-    margin-bottom: 48px;
-  }
   hr-shorter,
   .divider-shorter {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-  hr-shorter-screen-jumbo,
-  .divider-shorter-screen-jumbo {
     margin-top: 12px;
     margin-bottom: 12px;
   }
@@ -10096,11 +9717,6 @@ hr.flush-right,
     margin-top: 24px;
     margin-bottom: 24px;
   }
-  hr-short-screen-jumbo,
-  .divider-short-screen-jumbo {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
   hr-short-top,
   .divider-short-top,
   hr-short-top-screen-jumbo,
@@ -10118,11 +9734,6 @@ hr.flush-right,
     margin-top: 72px;
     margin-bottom: 72px;
   }
-  hr-tall-screen-jumbo,
-  .divider-tall-screen-jumbo {
-    margin-top: 72px;
-    margin-bottom: 72px;
-  }
   hr-tall-top,
   .divider-tall-top,
   hr-tall-top-screen-jumbo,
@@ -10137,11 +9748,6 @@ hr.flush-right,
   }
   hr-taller,
   .divider-taller {
-    margin-top: 96px;
-    margin-bottom: 96px;
-  }
-  hr-taller-screen-jumbo,
-  .divider-taller-screen-jumbo {
     margin-top: 96px;
     margin-bottom: 96px;
   }
