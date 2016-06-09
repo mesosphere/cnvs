@@ -21,9 +21,23 @@ lists/styles.less
     position: relative;
     padding: 0px;
     list-style: none;
-    .shape-layout-variant(list, null);
-    .shape-layout-variant(list, short, null);
-    .shape-layout-variant(list, tall, null);
+    .element-spacing(list, null, null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .element-spacing(list, short, null);
+
+    }
+
+    &.tall {
+
+      .element-spacing(list, tall, null);
+
+    }
 
     /* -----------------------------------------------------------------------------
     List Item
@@ -35,9 +49,23 @@ lists/styles.less
 
       position: relative;
       .text-style-variant(list-item);
-      .shape-layout-variant(list-item, null);
-      .shape-layout-variant(list-item, short, null);
-      .shape-layout-variant(list-item, tall, null);
+      .element-spacing(list-item, null, null);
+
+      /* -----------------------------------------------------------------------------
+      Layout Variants
+      ----------------------------------------------------------------------------- */
+
+      &.short {
+
+        .element-spacing(list-item, short, null);
+
+      }
+
+      &.tall {
+
+        .element-spacing(list-item, tall, null);
+
+      }
 
       &:before {
 
@@ -107,6 +135,7 @@ lists/styles.less
     &.list-inline {
 
       .clearfix();
+
       & when not (@list-inline-margin-vertical = null) {
 
         margin-top: -@list-inline-margin-vertical;
@@ -362,15 +391,15 @@ lists/styles.less
 
 
 
-& when (@layout-scale-screen-small-enabled) {
+& when (@layout-scale-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @layout-screen-small-min-width) {
+  @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@list-enabled) and (@list-scale-screen-small-enabled) {
+    & when (@list-enabled) and (@list-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Lists
@@ -380,9 +409,23 @@ lists/styles.less
       ol,
       dl {
 
-        .shape-layout-variant(list, scale-screen-small);
-        .shape-layout-variant(list, short, scale-screen-small);
-        .shape-layout-variant(list, tall, scale-screen-small);
+        .element-spacing(list, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(list, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(list, tall, screen-medium);
+
+        }
 
         /* -----------------------------------------------------------------------------
         List Item
@@ -392,27 +435,41 @@ lists/styles.less
         dt,
         dd {
 
-          .shape-layout-variant(list-item, scale-screen-small);
-          .shape-layout-variant(list-item, short, scale-screen-small);
-          .shape-layout-variant(list-item, tall, scale-screen-small);
+          .element-spacing(list-item, null, screen-medium);
+
+          /* -----------------------------------------------------------------------------
+          Layout Variants
+          ----------------------------------------------------------------------------- */
+
+          &.short {
+
+            .element-spacing(list-item, short, screen-medium);
+
+          }
+
+          &.tall {
+
+            .element-spacing(list-item, tall, screen-medium);
+
+          }
 
           &:before {
 
-            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-small = null) {
+            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-medium = null) {
 
-              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-small);
-
-            }
-
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-small = null) {
-
-              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-small);
+              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-medium);
 
             }
 
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-small = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-small = null) {
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) {
 
-              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-small) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-small)));
+              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium);
+
+            }
+
+            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+
+              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium)));
 
             }
 
@@ -427,9 +484,9 @@ lists/styles.less
           > ul,
           > ol {
 
-            & when not (@list-item-margin-bottom-scale-screen-small = null) and not (@list-item-margin-bottom = null) {
+            & when not (@list-item-margin-bottom-scale-screen-medium = null) and not (@list-item-margin-bottom = null) {
 
-              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-small;
+              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-medium;
 
             }
 
@@ -443,29 +500,29 @@ lists/styles.less
 
         &.list-inline {
 
-          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-small = null) {
+          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-medium = null) {
 
-            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-small);
+            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-medium);
 
           }
 
-          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-small = null) {
+          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-medium = null) {
 
-            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-small);
+            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-medium);
 
           }
 
           > li {
 
-            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-small = null) {
+            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-medium = null) {
 
-              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-small);
+              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-medium);
 
             }
 
-            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-small = null) {
+            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-medium = null) {
 
-              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-small);
+              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-medium);
 
             }
 
@@ -487,9 +544,9 @@ lists/styles.less
 
             top: 0px;
 
-            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-small = null) {
+            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
 
-              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-small;
+              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium;
 
             }
 
@@ -525,9 +582,23 @@ lists/styles.less
       ol,
       dl {
 
-        .shape-layout-variant(list, scale-screen-medium);
-        .shape-layout-variant(list, short, scale-screen-medium);
-        .shape-layout-variant(list, tall, scale-screen-medium);
+        .element-spacing(list, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(list, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(list, tall, screen-medium);
+
+        }
 
         /* -----------------------------------------------------------------------------
         List Item
@@ -537,9 +608,23 @@ lists/styles.less
         dt,
         dd {
 
-          .shape-layout-variant(list-item, scale-screen-medium);
-          .shape-layout-variant(list-item, short, scale-screen-medium);
-          .shape-layout-variant(list-item, tall, scale-screen-medium);
+          .element-spacing(list-item, null, screen-medium);
+
+          /* -----------------------------------------------------------------------------
+          Layout Variants
+          ----------------------------------------------------------------------------- */
+
+          &.short {
+
+            .element-spacing(list-item, short, screen-medium);
+
+          }
+
+          &.tall {
+
+            .element-spacing(list-item, tall, screen-medium);
+
+          }
 
           &:before {
 
@@ -670,9 +755,23 @@ lists/styles.less
       ol,
       dl {
 
-        .shape-layout-variant(list, scale-screen-large);
-        .shape-layout-variant(list, short, scale-screen-large);
-        .shape-layout-variant(list, tall, scale-screen-large);
+        .element-spacing(list, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(list, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(list, tall, screen-large);
+
+        }
 
         /* -----------------------------------------------------------------------------
         List Item
@@ -682,9 +781,23 @@ lists/styles.less
         dt,
         dd {
 
-          .shape-layout-variant(list-item, scale-screen-large);
-          .shape-layout-variant(list-item, short, scale-screen-large);
-          .shape-layout-variant(list-item, tall, scale-screen-large);
+          .element-spacing(list-item, null, screen-large);
+
+          /* -----------------------------------------------------------------------------
+          Layout Variants
+          ----------------------------------------------------------------------------- */
+
+          &.short {
+
+            .element-spacing(list-item, short, screen-large);
+
+          }
+
+          &.tall {
+
+            .element-spacing(list-item, tall, screen-large);
+
+          }
 
           &:before {
 
@@ -815,9 +928,23 @@ lists/styles.less
       ol,
       dl {
 
-        .shape-layout-variant(list, scale-screen-jumbo);
-        .shape-layout-variant(list, short, scale-screen-jumbo);
-        .shape-layout-variant(list, tall, scale-screen-jumbo);
+        .element-spacing(list, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(list, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(list, tall, screen-jumbo);
+
+        }
 
         /* -----------------------------------------------------------------------------
         List Item
@@ -827,9 +954,23 @@ lists/styles.less
         dt,
         dd {
 
-          .shape-layout-variant(list-item, scale-screen-jumbo);
-          .shape-layout-variant(list-item, short, scale-screen-jumbo);
-          .shape-layout-variant(list-item, tall, scale-screen-jumbo);
+          .element-spacing(list-item, null, screen-jumbo);
+
+          /* -----------------------------------------------------------------------------
+          Layout Variants
+          ----------------------------------------------------------------------------- */
+
+          &.short {
+
+            .element-spacing(list-item, short, screen-jumbo);
+
+          }
+
+          &.tall {
+
+            .element-spacing(list-item, tall, screen-jumbo);
+
+          }
 
           &:before {
 

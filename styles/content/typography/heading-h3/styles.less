@@ -20,9 +20,27 @@ heading-h3/styles.less
     display: block;
     .text-style-variant(heading-h3);
     .text-size-variant(heading-h3, null);
-    .shape-layout-variant(heading-h3, null);
-    .shape-layout-variant(heading-h3, short, null);
-    .shape-layout-variant(heading-h3, tall, null);
+    .element-spacing(heading-h3, null, null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .element-spacing(heading-h3, short, null);
+
+    }
+
+    &.tall {
+
+      .element-spacing(heading-h3, tall, null);
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 
     & when (@heading-h3-emphasis-enabled) {
 
@@ -45,8 +63,6 @@ heading-h3/styles.less
       }
 
     }
-
-
 
     & when (@heading-h3-inverse-enabled) {
 
@@ -80,77 +96,185 @@ heading-h3/styles.less
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-small-enabled) and (@heading-h3-scale-screen-small-enabled) {
+
+& when (@layout-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@heading-h3-enabled) and (@heading-h3-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
+      heading-h3
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-small-min-width) {
+      h3,
+      .h3 {
 
         .text-size-variant(heading-h3, scale-screen-small);
-        .shape-layout-variant(heading-h3, scale-screen-small);
-        .shape-layout-variant(heading-h3, short, scale-screen-small);
-        .shape-layout-variant(heading-h3, tall, scale-screen-small);
+        .element-spacing(heading-h3, null, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(heading-h3, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .element-spacing(heading-h3, tall, screen-small);
+
+        }
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-medium-enabled) and (@heading-h3-scale-screen-medium-enabled) {
+
+& when (@layout-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@heading-h3-enabled) and (@heading-h3-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
+      heading-h3
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-medium-min-width) {
+      h3,
+      .h3 {
 
         .text-size-variant(heading-h3, scale-screen-medium);
-        .shape-layout-variant(heading-h3, scale-screen-medium);
-        .shape-layout-variant(heading-h3, short, scale-screen-medium);
-        .shape-layout-variant(heading-h3, tall, scale-screen-medium);
+        .element-spacing(heading-h3, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(heading-h3, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(heading-h3, tall, screen-medium);
+
+        }
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-large-enabled) and (@heading-h3-scale-screen-large-enabled) {
+
+& when (@layout-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@heading-h3-enabled) and (@heading-h3-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
+      heading-h3
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-large-min-width) {
+      h3,
+      .h3 {
 
         .text-size-variant(heading-h3, scale-screen-large);
-        .shape-layout-variant(heading-h3, scale-screen-large);
-        .shape-layout-variant(heading-h3, short, scale-screen-large);
-        .shape-layout-variant(heading-h3, tall, scale-screen-large);
+        .element-spacing(heading-h3, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(heading-h3, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(heading-h3, tall, screen-large);
+
+        }
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-jumbo-enabled) and (@heading-h3-scale-screen-jumbo-enabled) {
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@heading-h3-enabled) and (@heading-h3-scale-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+      heading-h3
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-jumbo-min-width) {
+      h3,
+      .h3 {
 
         .text-size-variant(heading-h3, scale-screen-jumbo);
-        .shape-layout-variant(heading-h3, scale-screen-jumbo);
-        .shape-layout-variant(heading-h3, short, scale-screen-jumbo);
-        .shape-layout-variant(heading-h3, tall, scale-screen-jumbo);
+        .element-spacing(heading-h3, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(heading-h3, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(heading-h3, tall, screen-jumbo);
+
+        }
 
       }
 

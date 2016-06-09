@@ -1,7 +1,7 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-small/styles.l
+small/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
@@ -14,14 +14,33 @@ small/styles.l
   small
   ----------------------------------------------------------------------------- */
 
+  small,
   .small {
 
     display: block;
     .text-style-variant(small);
     .text-size-variant(small, null);
-    .shape-layout-variant(small, null);
-    .shape-layout-variant(small, short, null);
-    .shape-layout-variant(small, tall, null);
+    .element-spacing(small, null, null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .element-spacing(small, short, null);
+
+    }
+
+    &.tall {
+
+      .element-spacing(small, tall, null);
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 
     & when (@small-emphasis-enabled) {
 
@@ -44,8 +63,6 @@ small/styles.l
       }
 
     }
-
-
 
     & when (@small-inverse-enabled) {
 
@@ -79,77 +96,185 @@ small/styles.l
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-small-enabled) and (@small-scale-screen-small-enabled) {
+
+& when (@layout-scale-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@small-enabled) and (@small-scale-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
+      small
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-small-min-width) {
+      small,
+      .small {
 
         .text-size-variant(small, scale-screen-small);
-        .shape-layout-variant(small, scale-screen-small);
-        .shape-layout-variant(small, short, scale-screen-small);
-        .shape-layout-variant(small, tall, scale-screen-small);
+        .element-spacing(small, null, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(small, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .element-spacing(small, tall, screen-small);
+
+        }
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-medium-enabled) and (@small-scale-screen-medium-enabled) {
+
+& when (@layout-scale-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@small-enabled) and (@small-scale-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
+      small
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-medium-min-width) {
+      small,
+      .small {
 
         .text-size-variant(small, scale-screen-medium);
-        .shape-layout-variant(small, scale-screen-medium);
-        .shape-layout-variant(small, short, scale-screen-medium);
-        .shape-layout-variant(small, tall, scale-screen-medium);
+        .element-spacing(small, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(small, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(small, tall, screen-medium);
+
+        }
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-large-enabled) and (@small-scale-screen-large-enabled) {
+
+& when (@layout-scale-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@small-enabled) and (@small-scale-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
+      small
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-large-min-width) {
+      small,
+      .small {
 
         .text-size-variant(small, scale-screen-large);
-        .shape-layout-variant(small, scale-screen-large);
-        .shape-layout-variant(small, short, scale-screen-large);
-        .shape-layout-variant(small, tall, scale-screen-large);
+        .element-spacing(small, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(small, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(small, tall, screen-large);
+
+        }
 
       }
 
     }
 
+  }
+
+}
 
 
-    & when (@layout-scale-screen-jumbo-enabled) and (@small-scale-screen-jumbo-enabled) {
+
+& when (@layout-scale-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@small-enabled) and (@small-scale-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+      small
       ----------------------------------------------------------------------------- */
 
-      @media (min-width: @layout-screen-jumbo-min-width) {
+      small,
+      .small {
 
         .text-size-variant(small, scale-screen-jumbo);
-        .shape-layout-variant(small, scale-screen-jumbo);
-        .shape-layout-variant(small, short, scale-screen-jumbo);
-        .shape-layout-variant(small, tall, scale-screen-jumbo);
+        .element-spacing(small, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(small, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(small, tall, screen-jumbo);
+
+        }
 
       }
 

@@ -457,6 +457,16 @@ utilities/mixins-layout.less
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
+Element Spacing
+--
+Using CNVS-specific variable structure, applies padding and margin to an element
+specified by the @class variable.  If a @modifier is defined, then added classes
+are created to apply the modifier spacing properties in just a single
+direction (e.g. h2.short-top).  Similarly, if @screen-size is defined, the
+space is adjusted to fit that screen-size, and direction-specific modifier
+classes are created just for that screen-size (e.g. h2.short-top-screen-small).
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
 Clearfix
 ----------------------------------------------------------------------------- */
 .clearfix,
@@ -531,15 +541,6 @@ Calculate Grid Column Push
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 Layout Variant
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Shape layout Variant
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Layout Variant
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Shape layout Variant
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 Shape layout Variant
@@ -10338,9 +10339,7 @@ Link Text Styling
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
 typography/styles.less
-
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
@@ -10510,19 +10509,15 @@ p {
     Layout Variants
     ----------------------------------------------------------------------------- */
 }
-p-top {
-  margin-top: 0px;
-}
-p-bottom {
-  margin-bottom: 0.8rem;
-}
 p.short {
   margin-top: 0px;
   margin-bottom: 0.4rem;
 }
+p.short-top,
 p.short-top {
   margin-top: 0px;
 }
+p.short-bottom,
 p.short-bottom {
   margin-bottom: 0.4rem;
 }
@@ -10530,9 +10525,11 @@ p.tall {
   margin-top: 0px;
   margin-bottom: 1.6rem;
 }
+p.tall-top,
 p.tall-top {
   margin-top: 0px;
 }
+p.tall-bottom,
 p.tall-bottom {
   margin-bottom: 1.6rem;
 }
@@ -10568,17 +10565,7 @@ p.tall-bottom {
         Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  p-screen-medium {
-    margin-bottom: 0.88rem;
-  }
-  p-bottom,
-  p-bottom-screen-medium {
-    margin-bottom: 0.88rem;
-  }
   p.short {
-    margin-bottom: 0.44rem;
-  }
-  p.short-screen-medium {
     margin-bottom: 0.44rem;
   }
   p.short-bottom,
@@ -10586,9 +10573,6 @@ p.tall-bottom {
     margin-bottom: 0.44rem;
   }
   p.tall {
-    margin-bottom: 1.76rem;
-  }
-  p.tall-screen-medium {
     margin-bottom: 1.76rem;
   }
   p.tall-bottom,
@@ -10618,17 +10602,7 @@ p.tall-bottom {
         Layout Variants
         ----------------------------------------------------------------------------- */
   }
-  p-screen-large {
-    margin-bottom: 0.96rem;
-  }
-  p-bottom,
-  p-bottom-screen-large {
-    margin-bottom: 0.96rem;
-  }
   p.short {
-    margin-bottom: 0.48rem;
-  }
-  p.short-screen-large {
     margin-bottom: 0.48rem;
   }
   p.short-bottom,
@@ -10636,9 +10610,6 @@ p.tall-bottom {
     margin-bottom: 0.48rem;
   }
   p.tall {
-    margin-bottom: 1.92rem;
-  }
-  p.tall-screen-large {
     margin-bottom: 1.92rem;
   }
   p.tall-bottom,
@@ -10717,36 +10688,34 @@ lead/styles.less
   margin-top: 0px;
   margin-bottom: 0.8rem;
   /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 }
-.lead.lead-short {
+.lead.short {
   margin-top: 0px;
   margin-bottom: 0.4rem;
 }
-.lead.lead-short-top {
+.lead.short-top,
+.lead.short-top {
   margin-top: 0px;
 }
-.lead.lead-short-bottom {
+.lead.short-bottom,
+.lead.short-bottom {
   margin-bottom: 0.4rem;
 }
-.lead.lead-tall {
+.lead.tall {
   margin-top: 0px;
   margin-bottom: 1.6rem;
 }
-.lead.lead-tall-top {
+.lead.tall-top,
+.lead.tall-top {
   margin-top: 0px;
 }
-.lead.lead-tall-bottom {
+.lead.tall-bottom,
+.lead.tall-bottom {
   margin-bottom: 1.6rem;
 }
 .lead.emphasis,
@@ -10768,38 +10737,86 @@ lead/styles.less
 .lead.inverse .muted {
   color: #999da7;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      lead
+      ----------------------------------------------------------------------------- */
+  .lead {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      lead
+      ----------------------------------------------------------------------------- */
   .lead {
     margin-bottom: 0.88rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  .lead.lead-short {
+  .lead.short {
     margin-bottom: 0.44rem;
   }
-  .lead.lead-short-bottom {
+  .lead.short-bottom,
+  .lead.short-bottom-screen-medium {
     margin-bottom: 0.44rem;
   }
-  .lead.lead-tall {
+  .lead.tall {
     margin-bottom: 1.76rem;
   }
-  .lead.lead-tall-bottom {
+  .lead.tall-bottom,
+  .lead.tall-bottom-screen-medium {
     margin-bottom: 1.76rem;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      lead
+      ----------------------------------------------------------------------------- */
   .lead {
     margin-bottom: 0.96rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  .lead.lead-short {
+  .lead.short {
     margin-bottom: 0.48rem;
   }
-  .lead.lead-short-bottom {
+  .lead.short-bottom,
+  .lead.short-bottom-screen-large {
     margin-bottom: 0.48rem;
   }
-  .lead.lead-tall {
+  .lead.tall {
     margin-bottom: 1.92rem;
   }
-  .lead.lead-tall-bottom {
+  .lead.tall-bottom,
+  .lead.tall-bottom-screen-large {
     margin-bottom: 1.92rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      lead
+      ----------------------------------------------------------------------------- */
+  .lead {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
@@ -10841,13 +10858,14 @@ Layout Variants
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-small/styles.l
+small/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
   small
   ----------------------------------------------------------------------------- */
+small,
 .small {
   display: block;
   color: #848995;
@@ -10859,90 +10877,171 @@ small/styles.l
   margin-top: 0px;
   margin-bottom: 0.8rem;
   /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 }
-.small.small-short {
+small.short,
+.small.short {
   margin-top: 0px;
   margin-bottom: 0.4rem;
 }
-.small.small-short-top {
+small.short-top,
+.small.short-top,
+small.short-top,
+.small.short-top {
   margin-top: 0px;
 }
-.small.small-short-bottom {
+small.short-bottom,
+.small.short-bottom,
+small.short-bottom,
+.small.short-bottom {
   margin-bottom: 0.4rem;
 }
-.small.small-tall {
+small.tall,
+.small.tall {
   margin-top: 0px;
   margin-bottom: 1.6rem;
 }
-.small.small-tall-top {
+small.tall-top,
+.small.tall-top,
+small.tall-top,
+.small.tall-top {
   margin-top: 0px;
 }
-.small.small-tall-bottom {
+small.tall-bottom,
+.small.tall-bottom,
+small.tall-bottom,
+.small.tall-bottom {
   margin-bottom: 1.6rem;
 }
+small.emphasis,
 .small.emphasis,
+small .emphasis,
 .small .emphasis {
   color: #323a4e;
   font-weight: 600;
 }
+small.muted,
 .small.muted,
+small .muted,
 .small .muted {
   color: #d6d8dc;
 }
+small.inverse,
 .small.inverse {
   color: #999da7;
 }
+small.inverse.emphasis,
 .small.inverse.emphasis,
+small.inverse .emphasis,
 .small.inverse .emphasis {
   color: #d6d8dc;
 }
+small.inverse.muted,
 .small.inverse.muted,
+small.inverse .muted,
 .small.inverse .muted {
   color: #707583;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      small
+      ----------------------------------------------------------------------------- */
+  small,
+  .small {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      small
+      ----------------------------------------------------------------------------- */
+  small,
   .small {
     margin-bottom: 0.88rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  .small.small-short {
+  small.short,
+  .small.short {
     margin-bottom: 0.44rem;
   }
-  .small.small-short-bottom {
+  small.short-bottom,
+  .small.short-bottom,
+  small.short-bottom-screen-medium,
+  .small.short-bottom-screen-medium {
     margin-bottom: 0.44rem;
   }
-  .small.small-tall {
+  small.tall,
+  .small.tall {
     margin-bottom: 1.76rem;
   }
-  .small.small-tall-bottom {
+  small.tall-bottom,
+  .small.tall-bottom,
+  small.tall-bottom-screen-medium,
+  .small.tall-bottom-screen-medium {
     margin-bottom: 1.76rem;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      small
+      ----------------------------------------------------------------------------- */
+  small,
   .small {
     margin-bottom: 0.96rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  .small.small-short {
+  small.short,
+  .small.short {
     margin-bottom: 0.48rem;
   }
-  .small.small-short-bottom {
+  small.short-bottom,
+  .small.short-bottom,
+  small.short-bottom-screen-large,
+  .small.short-bottom-screen-large {
     margin-bottom: 0.48rem;
   }
-  .small.small-tall {
+  small.tall,
+  .small.tall {
     margin-bottom: 1.92rem;
   }
-  .small.small-tall-bottom {
+  small.tall-bottom,
+  .small.tall-bottom,
+  small.tall-bottom-screen-large,
+  .small.tall-bottom-screen-large {
     margin-bottom: 1.92rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      small
+      ----------------------------------------------------------------------------- */
+  small,
+  .small {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
@@ -11013,9 +11112,13 @@ h1.short,
   margin-bottom: 1.1rem;
 }
 h1.short-top,
+.h1.short-top,
+h1.short-top,
 .h1.short-top {
   margin-top: 1.5rem;
 }
+h1.short-bottom,
+.h1.short-bottom,
 h1.short-bottom,
 .h1.short-bottom {
   margin-bottom: 1.1rem;
@@ -11026,9 +11129,13 @@ h1.tall,
   margin-bottom: 4.4rem;
 }
 h1.tall-top,
+.h1.tall-top,
+h1.tall-top,
 .h1.tall-top {
   margin-top: 6rem;
 }
+h1.tall-bottom,
+.h1.tall-bottom,
 h1.tall-bottom,
 .h1.tall-bottom {
   margin-bottom: 4.4rem;
@@ -11067,36 +11174,62 @@ h1.inverse .muted,
   ----------------------------------------------------------------------------- */
 @media (min-width: 480px) {
   /* -----------------------------------------------------------------------------
-      Layout Variants
+      heading-h1
       ----------------------------------------------------------------------------- */
+  h1,
+  .h1 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
-  margin-top: 3.3rem;
-  margin-bottom: 2.42rem;
   /* -----------------------------------------------------------------------------
-      Layout Variants
+      heading-h1
       ----------------------------------------------------------------------------- */
-  .short {
+  h1,
+  .h1 {
+    margin-top: 3.3rem;
+    margin-bottom: 2.42rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  h1.short,
+  .h1.short {
     margin-top: 1.65rem;
     margin-bottom: 1.21rem;
   }
-  .short-top {
+  h1.short-top,
+  .h1.short-top,
+  h1.short-top-screen-medium,
+  .h1.short-top-screen-medium {
     margin-top: 1.65rem;
   }
-  .short-bottom {
+  h1.short-bottom,
+  .h1.short-bottom,
+  h1.short-bottom-screen-medium,
+  .h1.short-bottom-screen-medium {
     margin-bottom: 1.21rem;
   }
-  .tall {
+  h1.tall,
+  .h1.tall {
     margin-top: 6.6rem;
     margin-bottom: 4.84rem;
   }
-  .tall-top {
+  h1.tall-top,
+  .h1.tall-top,
+  h1.tall-top-screen-medium,
+  .h1.tall-top-screen-medium {
     margin-top: 6.6rem;
   }
-  .tall-bottom {
+  h1.tall-bottom,
+  .h1.tall-bottom,
+  h1.tall-bottom-screen-medium,
+  .h1.tall-bottom-screen-medium {
     margin-bottom: 4.84rem;
   }
 }
@@ -11104,29 +11237,49 @@ h1.inverse .muted,
   Screen Size: Small (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
-  margin-top: 3.6rem;
-  margin-bottom: 2.64rem;
   /* -----------------------------------------------------------------------------
-      Layout Variants
+      heading-h1
       ----------------------------------------------------------------------------- */
-  .short {
+  h1,
+  .h1 {
+    margin-top: 3.6rem;
+    margin-bottom: 2.64rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  h1.short,
+  .h1.short {
     margin-top: 1.8rem;
     margin-bottom: 1.32rem;
   }
-  .short-top {
+  h1.short-top,
+  .h1.short-top,
+  h1.short-top-screen-large,
+  .h1.short-top-screen-large {
     margin-top: 1.8rem;
   }
-  .short-bottom {
+  h1.short-bottom,
+  .h1.short-bottom,
+  h1.short-bottom-screen-large,
+  .h1.short-bottom-screen-large {
     margin-bottom: 1.32rem;
   }
-  .tall {
+  h1.tall,
+  .h1.tall {
     margin-top: 7.2rem;
     margin-bottom: 5.28rem;
   }
-  .tall-top {
+  h1.tall-top,
+  .h1.tall-top,
+  h1.tall-top-screen-large,
+  .h1.tall-top-screen-large {
     margin-top: 7.2rem;
   }
-  .tall-bottom {
+  h1.tall-bottom,
+  .h1.tall-bottom,
+  h1.tall-bottom-screen-large,
+  .h1.tall-bottom-screen-large {
     margin-bottom: 5.28rem;
   }
 }
@@ -11135,8 +11288,14 @@ h1.inverse .muted,
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
-      Layout Variants
+      heading-h1
       ----------------------------------------------------------------------------- */
+  h1,
+  .h1 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
 }
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -11194,42 +11353,44 @@ h2,
   margin-top: 2.2rem;
   margin-bottom: 1.7rem;
   /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 }
-h2.heading-h2-short,
-.h2.heading-h2-short {
+h2.short,
+.h2.short {
   margin-top: 1.1rem;
   margin-bottom: 0.85rem;
 }
-h2.heading-h2-short-top,
-.h2.heading-h2-short-top {
+h2.short-top,
+.h2.short-top,
+h2.short-top,
+.h2.short-top {
   margin-top: 1.1rem;
 }
-h2.heading-h2-short-bottom,
-.h2.heading-h2-short-bottom {
+h2.short-bottom,
+.h2.short-bottom,
+h2.short-bottom,
+.h2.short-bottom {
   margin-bottom: 0.85rem;
 }
-h2.heading-h2-tall,
-.h2.heading-h2-tall {
+h2.tall,
+.h2.tall {
   margin-top: 4.4rem;
   margin-bottom: 3.4rem;
 }
-h2.heading-h2-tall-top,
-.h2.heading-h2-tall-top {
+h2.tall-top,
+.h2.tall-top,
+h2.tall-top,
+.h2.tall-top {
   margin-top: 4.4rem;
 }
-h2.heading-h2-tall-bottom,
-.h2.heading-h2-tall-bottom {
+h2.tall-bottom,
+.h2.tall-bottom,
+h2.tall-bottom,
+.h2.tall-bottom {
   margin-bottom: 3.4rem;
 }
 h2.emphasis,
@@ -11261,70 +11422,132 @@ h2.inverse .muted,
 .h2.inverse .muted {
   color: #848995;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      heading-h2
+      ----------------------------------------------------------------------------- */
+  h2,
+  .h2 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      heading-h2
+      ----------------------------------------------------------------------------- */
   h2,
   .h2 {
     margin-top: 2.42rem;
     margin-bottom: 1.87rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h2.heading-h2-short,
-  .h2.heading-h2-short {
+  h2.short,
+  .h2.short {
     margin-top: 1.21rem;
     margin-bottom: 0.935rem;
   }
-  h2.heading-h2-short-top,
-  .h2.heading-h2-short-top {
+  h2.short-top,
+  .h2.short-top,
+  h2.short-top-screen-medium,
+  .h2.short-top-screen-medium {
     margin-top: 1.21rem;
   }
-  h2.heading-h2-short-bottom,
-  .h2.heading-h2-short-bottom {
+  h2.short-bottom,
+  .h2.short-bottom,
+  h2.short-bottom-screen-medium,
+  .h2.short-bottom-screen-medium {
     margin-bottom: 0.935rem;
   }
-  h2.heading-h2-tall,
-  .h2.heading-h2-tall {
+  h2.tall,
+  .h2.tall {
     margin-top: 4.84rem;
     margin-bottom: 3.74rem;
   }
-  h2.heading-h2-tall-top,
-  .h2.heading-h2-tall-top {
+  h2.tall-top,
+  .h2.tall-top,
+  h2.tall-top-screen-medium,
+  .h2.tall-top-screen-medium {
     margin-top: 4.84rem;
   }
-  h2.heading-h2-tall-bottom,
-  .h2.heading-h2-tall-bottom {
+  h2.tall-bottom,
+  .h2.tall-bottom,
+  h2.tall-bottom-screen-medium,
+  .h2.tall-bottom-screen-medium {
     margin-bottom: 3.74rem;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      heading-h2
+      ----------------------------------------------------------------------------- */
   h2,
   .h2 {
     margin-top: 2.64rem;
     margin-bottom: 2.04rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h2.heading-h2-short,
-  .h2.heading-h2-short {
+  h2.short,
+  .h2.short {
     margin-top: 1.32rem;
     margin-bottom: 1.02rem;
   }
-  h2.heading-h2-short-top,
-  .h2.heading-h2-short-top {
+  h2.short-top,
+  .h2.short-top,
+  h2.short-top-screen-large,
+  .h2.short-top-screen-large {
     margin-top: 1.32rem;
   }
-  h2.heading-h2-short-bottom,
-  .h2.heading-h2-short-bottom {
+  h2.short-bottom,
+  .h2.short-bottom,
+  h2.short-bottom-screen-large,
+  .h2.short-bottom-screen-large {
     margin-bottom: 1.02rem;
   }
-  h2.heading-h2-tall,
-  .h2.heading-h2-tall {
+  h2.tall,
+  .h2.tall {
     margin-top: 5.28rem;
     margin-bottom: 4.08rem;
   }
-  h2.heading-h2-tall-top,
-  .h2.heading-h2-tall-top {
+  h2.tall-top,
+  .h2.tall-top,
+  h2.tall-top-screen-large,
+  .h2.tall-top-screen-large {
     margin-top: 5.28rem;
   }
-  h2.heading-h2-tall-bottom,
-  .h2.heading-h2-tall-bottom {
+  h2.tall-bottom,
+  .h2.tall-bottom,
+  h2.tall-bottom-screen-large,
+  .h2.tall-bottom-screen-large {
     margin-bottom: 4.08rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      heading-h2
+      ----------------------------------------------------------------------------- */
+  h2,
+  .h2 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
@@ -11383,42 +11606,44 @@ h3,
   margin-top: 1.7rem;
   margin-bottom: 1.3rem;
   /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 }
-h3.heading-h3-short,
-.h3.heading-h3-short {
+h3.short,
+.h3.short {
   margin-top: 0.85rem;
   margin-bottom: 0.65rem;
 }
-h3.heading-h3-short-top,
-.h3.heading-h3-short-top {
+h3.short-top,
+.h3.short-top,
+h3.short-top,
+.h3.short-top {
   margin-top: 0.85rem;
 }
-h3.heading-h3-short-bottom,
-.h3.heading-h3-short-bottom {
+h3.short-bottom,
+.h3.short-bottom,
+h3.short-bottom,
+.h3.short-bottom {
   margin-bottom: 0.65rem;
 }
-h3.heading-h3-tall,
-.h3.heading-h3-tall {
+h3.tall,
+.h3.tall {
   margin-top: 3.4rem;
   margin-bottom: 2.6rem;
 }
-h3.heading-h3-tall-top,
-.h3.heading-h3-tall-top {
+h3.tall-top,
+.h3.tall-top,
+h3.tall-top,
+.h3.tall-top {
   margin-top: 3.4rem;
 }
-h3.heading-h3-tall-bottom,
-.h3.heading-h3-tall-bottom {
+h3.tall-bottom,
+.h3.tall-bottom,
+h3.tall-bottom,
+.h3.tall-bottom {
   margin-bottom: 2.6rem;
 }
 h3.emphasis,
@@ -11450,70 +11675,132 @@ h3.inverse .muted,
 .h3.inverse .muted {
   color: #848995;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      heading-h3
+      ----------------------------------------------------------------------------- */
+  h3,
+  .h3 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      heading-h3
+      ----------------------------------------------------------------------------- */
   h3,
   .h3 {
     margin-top: 1.87rem;
     margin-bottom: 1.43rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h3.heading-h3-short,
-  .h3.heading-h3-short {
+  h3.short,
+  .h3.short {
     margin-top: 0.935rem;
     margin-bottom: 0.715rem;
   }
-  h3.heading-h3-short-top,
-  .h3.heading-h3-short-top {
+  h3.short-top,
+  .h3.short-top,
+  h3.short-top-screen-medium,
+  .h3.short-top-screen-medium {
     margin-top: 0.935rem;
   }
-  h3.heading-h3-short-bottom,
-  .h3.heading-h3-short-bottom {
+  h3.short-bottom,
+  .h3.short-bottom,
+  h3.short-bottom-screen-medium,
+  .h3.short-bottom-screen-medium {
     margin-bottom: 0.715rem;
   }
-  h3.heading-h3-tall,
-  .h3.heading-h3-tall {
+  h3.tall,
+  .h3.tall {
     margin-top: 3.74rem;
     margin-bottom: 2.86rem;
   }
-  h3.heading-h3-tall-top,
-  .h3.heading-h3-tall-top {
+  h3.tall-top,
+  .h3.tall-top,
+  h3.tall-top-screen-medium,
+  .h3.tall-top-screen-medium {
     margin-top: 3.74rem;
   }
-  h3.heading-h3-tall-bottom,
-  .h3.heading-h3-tall-bottom {
+  h3.tall-bottom,
+  .h3.tall-bottom,
+  h3.tall-bottom-screen-medium,
+  .h3.tall-bottom-screen-medium {
     margin-bottom: 2.86rem;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      heading-h3
+      ----------------------------------------------------------------------------- */
   h3,
   .h3 {
     margin-top: 2.04rem;
     margin-bottom: 1.56rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h3.heading-h3-short,
-  .h3.heading-h3-short {
+  h3.short,
+  .h3.short {
     margin-top: 1.02rem;
     margin-bottom: 0.78rem;
   }
-  h3.heading-h3-short-top,
-  .h3.heading-h3-short-top {
+  h3.short-top,
+  .h3.short-top,
+  h3.short-top-screen-large,
+  .h3.short-top-screen-large {
     margin-top: 1.02rem;
   }
-  h3.heading-h3-short-bottom,
-  .h3.heading-h3-short-bottom {
+  h3.short-bottom,
+  .h3.short-bottom,
+  h3.short-bottom-screen-large,
+  .h3.short-bottom-screen-large {
     margin-bottom: 0.78rem;
   }
-  h3.heading-h3-tall,
-  .h3.heading-h3-tall {
+  h3.tall,
+  .h3.tall {
     margin-top: 4.08rem;
     margin-bottom: 3.12rem;
   }
-  h3.heading-h3-tall-top,
-  .h3.heading-h3-tall-top {
+  h3.tall-top,
+  .h3.tall-top,
+  h3.tall-top-screen-large,
+  .h3.tall-top-screen-large {
     margin-top: 4.08rem;
   }
-  h3.heading-h3-tall-bottom,
-  .h3.heading-h3-tall-bottom {
+  h3.tall-bottom,
+  .h3.tall-bottom,
+  h3.tall-bottom-screen-large,
+  .h3.tall-bottom-screen-large {
     margin-bottom: 3.12rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      heading-h3
+      ----------------------------------------------------------------------------- */
+  h3,
+  .h3 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
@@ -11572,42 +11859,44 @@ h4,
   margin-top: 1.3rem;
   margin-bottom: 1.1rem;
   /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 }
-h4.heading-h4-short,
-.h4.heading-h4-short {
+h4.short,
+.h4.short {
   margin-top: 0.65rem;
   margin-bottom: 0.55rem;
 }
-h4.heading-h4-short-top,
-.h4.heading-h4-short-top {
+h4.short-top,
+.h4.short-top,
+h4.short-top,
+.h4.short-top {
   margin-top: 0.65rem;
 }
-h4.heading-h4-short-bottom,
-.h4.heading-h4-short-bottom {
+h4.short-bottom,
+.h4.short-bottom,
+h4.short-bottom,
+.h4.short-bottom {
   margin-bottom: 0.55rem;
 }
-h4.heading-h4-tall,
-.h4.heading-h4-tall {
+h4.tall,
+.h4.tall {
   margin-top: 2.6rem;
   margin-bottom: 2.2rem;
 }
-h4.heading-h4-tall-top,
-.h4.heading-h4-tall-top {
+h4.tall-top,
+.h4.tall-top,
+h4.tall-top,
+.h4.tall-top {
   margin-top: 2.6rem;
 }
-h4.heading-h4-tall-bottom,
-.h4.heading-h4-tall-bottom {
+h4.tall-bottom,
+.h4.tall-bottom,
+h4.tall-bottom,
+.h4.tall-bottom {
   margin-bottom: 2.2rem;
 }
 h4.emphasis,
@@ -11639,70 +11928,132 @@ h4.inverse .muted,
 .h4.inverse .muted {
   color: #848995;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      heading-h4
+      ----------------------------------------------------------------------------- */
+  h4,
+  .h4 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      heading-h4
+      ----------------------------------------------------------------------------- */
   h4,
   .h4 {
     margin-top: 1.43rem;
     margin-bottom: 1.21rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h4.heading-h4-short,
-  .h4.heading-h4-short {
+  h4.short,
+  .h4.short {
     margin-top: 0.715rem;
     margin-bottom: 0.605rem;
   }
-  h4.heading-h4-short-top,
-  .h4.heading-h4-short-top {
+  h4.short-top,
+  .h4.short-top,
+  h4.short-top-screen-medium,
+  .h4.short-top-screen-medium {
     margin-top: 0.715rem;
   }
-  h4.heading-h4-short-bottom,
-  .h4.heading-h4-short-bottom {
+  h4.short-bottom,
+  .h4.short-bottom,
+  h4.short-bottom-screen-medium,
+  .h4.short-bottom-screen-medium {
     margin-bottom: 0.605rem;
   }
-  h4.heading-h4-tall,
-  .h4.heading-h4-tall {
+  h4.tall,
+  .h4.tall {
     margin-top: 2.86rem;
     margin-bottom: 2.42rem;
   }
-  h4.heading-h4-tall-top,
-  .h4.heading-h4-tall-top {
+  h4.tall-top,
+  .h4.tall-top,
+  h4.tall-top-screen-medium,
+  .h4.tall-top-screen-medium {
     margin-top: 2.86rem;
   }
-  h4.heading-h4-tall-bottom,
-  .h4.heading-h4-tall-bottom {
+  h4.tall-bottom,
+  .h4.tall-bottom,
+  h4.tall-bottom-screen-medium,
+  .h4.tall-bottom-screen-medium {
     margin-bottom: 2.42rem;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      heading-h4
+      ----------------------------------------------------------------------------- */
   h4,
   .h4 {
     margin-top: 1.56rem;
     margin-bottom: 1.32rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h4.heading-h4-short,
-  .h4.heading-h4-short {
+  h4.short,
+  .h4.short {
     margin-top: 0.78rem;
     margin-bottom: 0.66rem;
   }
-  h4.heading-h4-short-top,
-  .h4.heading-h4-short-top {
+  h4.short-top,
+  .h4.short-top,
+  h4.short-top-screen-large,
+  .h4.short-top-screen-large {
     margin-top: 0.78rem;
   }
-  h4.heading-h4-short-bottom,
-  .h4.heading-h4-short-bottom {
+  h4.short-bottom,
+  .h4.short-bottom,
+  h4.short-bottom-screen-large,
+  .h4.short-bottom-screen-large {
     margin-bottom: 0.66rem;
   }
-  h4.heading-h4-tall,
-  .h4.heading-h4-tall {
+  h4.tall,
+  .h4.tall {
     margin-top: 3.12rem;
     margin-bottom: 2.64rem;
   }
-  h4.heading-h4-tall-top,
-  .h4.heading-h4-tall-top {
+  h4.tall-top,
+  .h4.tall-top,
+  h4.tall-top-screen-large,
+  .h4.tall-top-screen-large {
     margin-top: 3.12rem;
   }
-  h4.heading-h4-tall-bottom,
-  .h4.heading-h4-tall-bottom {
+  h4.tall-bottom,
+  .h4.tall-bottom,
+  h4.tall-bottom-screen-large,
+  .h4.tall-bottom-screen-large {
     margin-bottom: 2.64rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      heading-h4
+      ----------------------------------------------------------------------------- */
+  h4,
+  .h4 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
@@ -11761,42 +12112,44 @@ h5,
   margin-top: 1.1rem;
   margin-bottom: 1rem;
   /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 }
-h5.heading-h5-short,
-.h5.heading-h5-short {
+h5.short,
+.h5.short {
   margin-top: 0.55rem;
   margin-bottom: 0.5rem;
 }
-h5.heading-h5-short-top,
-.h5.heading-h5-short-top {
+h5.short-top,
+.h5.short-top,
+h5.short-top,
+.h5.short-top {
   margin-top: 0.55rem;
 }
-h5.heading-h5-short-bottom,
-.h5.heading-h5-short-bottom {
+h5.short-bottom,
+.h5.short-bottom,
+h5.short-bottom,
+.h5.short-bottom {
   margin-bottom: 0.5rem;
 }
-h5.heading-h5-tall,
-.h5.heading-h5-tall {
+h5.tall,
+.h5.tall {
   margin-top: 2.2rem;
   margin-bottom: 2rem;
 }
-h5.heading-h5-tall-top,
-.h5.heading-h5-tall-top {
+h5.tall-top,
+.h5.tall-top,
+h5.tall-top,
+.h5.tall-top {
   margin-top: 2.2rem;
 }
-h5.heading-h5-tall-bottom,
-.h5.heading-h5-tall-bottom {
+h5.tall-bottom,
+.h5.tall-bottom,
+h5.tall-bottom,
+.h5.tall-bottom {
   margin-bottom: 2rem;
 }
 h5.emphasis,
@@ -11828,70 +12181,132 @@ h5.inverse .muted,
 .h5.inverse .muted {
   color: #848995;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      heading-h5
+      ----------------------------------------------------------------------------- */
+  h5,
+  .h5 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      heading-h5
+      ----------------------------------------------------------------------------- */
   h5,
   .h5 {
     margin-top: 1.21rem;
     margin-bottom: 1.1rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h5.heading-h5-short,
-  .h5.heading-h5-short {
+  h5.short,
+  .h5.short {
     margin-top: 0.605rem;
     margin-bottom: 0.55rem;
   }
-  h5.heading-h5-short-top,
-  .h5.heading-h5-short-top {
+  h5.short-top,
+  .h5.short-top,
+  h5.short-top-screen-medium,
+  .h5.short-top-screen-medium {
     margin-top: 0.605rem;
   }
-  h5.heading-h5-short-bottom,
-  .h5.heading-h5-short-bottom {
+  h5.short-bottom,
+  .h5.short-bottom,
+  h5.short-bottom-screen-medium,
+  .h5.short-bottom-screen-medium {
     margin-bottom: 0.55rem;
   }
-  h5.heading-h5-tall,
-  .h5.heading-h5-tall {
+  h5.tall,
+  .h5.tall {
     margin-top: 2.42rem;
     margin-bottom: 2.2rem;
   }
-  h5.heading-h5-tall-top,
-  .h5.heading-h5-tall-top {
+  h5.tall-top,
+  .h5.tall-top,
+  h5.tall-top-screen-medium,
+  .h5.tall-top-screen-medium {
     margin-top: 2.42rem;
   }
-  h5.heading-h5-tall-bottom,
-  .h5.heading-h5-tall-bottom {
+  h5.tall-bottom,
+  .h5.tall-bottom,
+  h5.tall-bottom-screen-medium,
+  .h5.tall-bottom-screen-medium {
     margin-bottom: 2.2rem;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      heading-h5
+      ----------------------------------------------------------------------------- */
   h5,
   .h5 {
     margin-top: 1.32rem;
     margin-bottom: 1.2rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h5.heading-h5-short,
-  .h5.heading-h5-short {
+  h5.short,
+  .h5.short {
     margin-top: 0.66rem;
     margin-bottom: 0.6rem;
   }
-  h5.heading-h5-short-top,
-  .h5.heading-h5-short-top {
+  h5.short-top,
+  .h5.short-top,
+  h5.short-top-screen-large,
+  .h5.short-top-screen-large {
     margin-top: 0.66rem;
   }
-  h5.heading-h5-short-bottom,
-  .h5.heading-h5-short-bottom {
+  h5.short-bottom,
+  .h5.short-bottom,
+  h5.short-bottom-screen-large,
+  .h5.short-bottom-screen-large {
     margin-bottom: 0.6rem;
   }
-  h5.heading-h5-tall,
-  .h5.heading-h5-tall {
+  h5.tall,
+  .h5.tall {
     margin-top: 2.64rem;
     margin-bottom: 2.4rem;
   }
-  h5.heading-h5-tall-top,
-  .h5.heading-h5-tall-top {
+  h5.tall-top,
+  .h5.tall-top,
+  h5.tall-top-screen-large,
+  .h5.tall-top-screen-large {
     margin-top: 2.64rem;
   }
-  h5.heading-h5-tall-bottom,
-  .h5.heading-h5-tall-bottom {
+  h5.tall-bottom,
+  .h5.tall-bottom,
+  h5.tall-bottom-screen-large,
+  .h5.tall-bottom-screen-large {
     margin-bottom: 2.4rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      heading-h5
+      ----------------------------------------------------------------------------- */
+  h5,
+  .h5 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
@@ -11950,42 +12365,44 @@ h6,
   margin-top: 1rem;
   margin-bottom: 1rem;
   /* -----------------------------------------------------------------------------
-      Screen Size: Small (@layout-screen-small-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-      Screen Size: Medium (@layout-screen-medium-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Large (@layout-screen-large-min-width) and wider
-      ----------------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------------
-      Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-      ----------------------------------------------------------------------------- */
+    Styling Variants
+    ----------------------------------------------------------------------------- */
 }
-h6.heading-h6-short,
-.h6.heading-h6-short {
+h6.short,
+.h6.short {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-h6.heading-h6-short-top,
-.h6.heading-h6-short-top {
+h6.short-top,
+.h6.short-top,
+h6.short-top,
+.h6.short-top {
   margin-top: 0.5rem;
 }
-h6.heading-h6-short-bottom,
-.h6.heading-h6-short-bottom {
+h6.short-bottom,
+.h6.short-bottom,
+h6.short-bottom,
+.h6.short-bottom {
   margin-bottom: 0.5rem;
 }
-h6.heading-h6-tall,
-.h6.heading-h6-tall {
+h6.tall,
+.h6.tall {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-h6.heading-h6-tall-top,
-.h6.heading-h6-tall-top {
+h6.tall-top,
+.h6.tall-top,
+h6.tall-top,
+.h6.tall-top {
   margin-top: 2rem;
 }
-h6.heading-h6-tall-bottom,
-.h6.heading-h6-tall-bottom {
+h6.tall-bottom,
+.h6.tall-bottom,
+h6.tall-bottom,
+.h6.tall-bottom {
   margin-bottom: 2rem;
 }
 h6.emphasis,
@@ -12017,70 +12434,132 @@ h6.inverse .muted,
 .h6.inverse .muted {
   color: #848995;
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      heading-h6
+      ----------------------------------------------------------------------------- */
+  h6,
+  .h6 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      heading-h6
+      ----------------------------------------------------------------------------- */
   h6,
   .h6 {
     margin-top: 1.1rem;
     margin-bottom: 1.1rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h6.heading-h6-short,
-  .h6.heading-h6-short {
+  h6.short,
+  .h6.short {
     margin-top: 0.55rem;
     margin-bottom: 0.55rem;
   }
-  h6.heading-h6-short-top,
-  .h6.heading-h6-short-top {
+  h6.short-top,
+  .h6.short-top,
+  h6.short-top-screen-medium,
+  .h6.short-top-screen-medium {
     margin-top: 0.55rem;
   }
-  h6.heading-h6-short-bottom,
-  .h6.heading-h6-short-bottom {
+  h6.short-bottom,
+  .h6.short-bottom,
+  h6.short-bottom-screen-medium,
+  .h6.short-bottom-screen-medium {
     margin-bottom: 0.55rem;
   }
-  h6.heading-h6-tall,
-  .h6.heading-h6-tall {
+  h6.tall,
+  .h6.tall {
     margin-top: 2.2rem;
     margin-bottom: 2.2rem;
   }
-  h6.heading-h6-tall-top,
-  .h6.heading-h6-tall-top {
+  h6.tall-top,
+  .h6.tall-top,
+  h6.tall-top-screen-medium,
+  .h6.tall-top-screen-medium {
     margin-top: 2.2rem;
   }
-  h6.heading-h6-tall-bottom,
-  .h6.heading-h6-tall-bottom {
+  h6.tall-bottom,
+  .h6.tall-bottom,
+  h6.tall-bottom-screen-medium,
+  .h6.tall-bottom-screen-medium {
     margin-bottom: 2.2rem;
   }
 }
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      heading-h6
+      ----------------------------------------------------------------------------- */
   h6,
   .h6 {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  h6.heading-h6-short,
-  .h6.heading-h6-short {
+  h6.short,
+  .h6.short {
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
   }
-  h6.heading-h6-short-top,
-  .h6.heading-h6-short-top {
+  h6.short-top,
+  .h6.short-top,
+  h6.short-top-screen-large,
+  .h6.short-top-screen-large {
     margin-top: 0.6rem;
   }
-  h6.heading-h6-short-bottom,
-  .h6.heading-h6-short-bottom {
+  h6.short-bottom,
+  .h6.short-bottom,
+  h6.short-bottom-screen-large,
+  .h6.short-bottom-screen-large {
     margin-bottom: 0.6rem;
   }
-  h6.heading-h6-tall,
-  .h6.heading-h6-tall {
+  h6.tall,
+  .h6.tall {
     margin-top: 2.4rem;
     margin-bottom: 2.4rem;
   }
-  h6.heading-h6-tall-top,
-  .h6.heading-h6-tall-top {
+  h6.tall-top,
+  .h6.tall-top,
+  h6.tall-top-screen-large,
+  .h6.tall-top-screen-large {
     margin-top: 2.4rem;
   }
-  h6.heading-h6-tall-bottom,
-  .h6.heading-h6-tall-bottom {
+  h6.tall-bottom,
+  .h6.tall-bottom,
+  h6.tall-bottom-screen-large,
+  .h6.tall-bottom-screen-large {
     margin-bottom: 2.4rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      heading-h6
+      ----------------------------------------------------------------------------- */
+  h6,
+  .h6 {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
@@ -12177,6 +12656,9 @@ dl {
   margin-top: 0px;
   margin-bottom: 0.8rem;
   /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
     List Item
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
@@ -12186,36 +12668,48 @@ dl {
     Inline List
     ----------------------------------------------------------------------------- */
 }
-ul.list-short,
-ol.list-short,
-dl.list-short {
+ul.short,
+ol.short,
+dl.short {
   margin-top: 0px;
   margin-bottom: 0.4rem;
 }
-ul.list-short-top,
-ol.list-short-top,
-dl.list-short-top {
+ul.short-top,
+ol.short-top,
+dl.short-top,
+ul.short-top,
+ol.short-top,
+dl.short-top {
   margin-top: 0px;
 }
-ul.list-short-bottom,
-ol.list-short-bottom,
-dl.list-short-bottom {
+ul.short-bottom,
+ol.short-bottom,
+dl.short-bottom,
+ul.short-bottom,
+ol.short-bottom,
+dl.short-bottom {
   margin-bottom: 0.4rem;
 }
-ul.list-tall,
-ol.list-tall,
-dl.list-tall {
+ul.tall,
+ol.tall,
+dl.tall {
   margin-top: 0px;
   margin-bottom: 1.6rem;
 }
-ul.list-tall-top,
-ol.list-tall-top,
-dl.list-tall-top {
+ul.tall-top,
+ol.tall-top,
+dl.tall-top,
+ul.tall-top,
+ol.tall-top,
+dl.tall-top {
   margin-top: 0px;
 }
-ul.list-tall-bottom,
-ol.list-tall-bottom,
-dl.list-tall-bottom {
+ul.tall-bottom,
+ol.tall-bottom,
+dl.tall-bottom,
+ul.tall-bottom,
+ol.tall-bottom,
+dl.tall-bottom {
   margin-bottom: 1.6rem;
 }
 ul li,
@@ -12236,75 +12730,114 @@ dl dd {
   margin-bottom: 0.4rem;
   padding-left: 1.2rem;
   /* -----------------------------------------------------------------------------
+      Layout Variants
+      ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
       Nested List
       ----------------------------------------------------------------------------- */
 }
-ul li.list-item-short,
-ol li.list-item-short,
-dl li.list-item-short,
-ul dt.list-item-short,
-ol dt.list-item-short,
-dl dt.list-item-short,
-ul dd.list-item-short,
-ol dd.list-item-short,
-dl dd.list-item-short {
+ul li.short,
+ol li.short,
+dl li.short,
+ul dt.short,
+ol dt.short,
+dl dt.short,
+ul dd.short,
+ol dd.short,
+dl dd.short {
   margin-top: 0px;
   margin-bottom: 0.2rem;
 }
-ul li.list-item-short-top,
-ol li.list-item-short-top,
-dl li.list-item-short-top,
-ul dt.list-item-short-top,
-ol dt.list-item-short-top,
-dl dt.list-item-short-top,
-ul dd.list-item-short-top,
-ol dd.list-item-short-top,
-dl dd.list-item-short-top {
+ul li.short-top,
+ol li.short-top,
+dl li.short-top,
+ul dt.short-top,
+ol dt.short-top,
+dl dt.short-top,
+ul dd.short-top,
+ol dd.short-top,
+dl dd.short-top,
+ul li.short-top,
+ol li.short-top,
+dl li.short-top,
+ul dt.short-top,
+ol dt.short-top,
+dl dt.short-top,
+ul dd.short-top,
+ol dd.short-top,
+dl dd.short-top {
   margin-top: 0px;
 }
-ul li.list-item-short-bottom,
-ol li.list-item-short-bottom,
-dl li.list-item-short-bottom,
-ul dt.list-item-short-bottom,
-ol dt.list-item-short-bottom,
-dl dt.list-item-short-bottom,
-ul dd.list-item-short-bottom,
-ol dd.list-item-short-bottom,
-dl dd.list-item-short-bottom {
+ul li.short-bottom,
+ol li.short-bottom,
+dl li.short-bottom,
+ul dt.short-bottom,
+ol dt.short-bottom,
+dl dt.short-bottom,
+ul dd.short-bottom,
+ol dd.short-bottom,
+dl dd.short-bottom,
+ul li.short-bottom,
+ol li.short-bottom,
+dl li.short-bottom,
+ul dt.short-bottom,
+ol dt.short-bottom,
+dl dt.short-bottom,
+ul dd.short-bottom,
+ol dd.short-bottom,
+dl dd.short-bottom {
   margin-bottom: 0.2rem;
 }
-ul li.list-item-tall,
-ol li.list-item-tall,
-dl li.list-item-tall,
-ul dt.list-item-tall,
-ol dt.list-item-tall,
-dl dt.list-item-tall,
-ul dd.list-item-tall,
-ol dd.list-item-tall,
-dl dd.list-item-tall {
+ul li.tall,
+ol li.tall,
+dl li.tall,
+ul dt.tall,
+ol dt.tall,
+dl dt.tall,
+ul dd.tall,
+ol dd.tall,
+dl dd.tall {
   margin-top: 0px;
   margin-bottom: 0.8rem;
 }
-ul li.list-item-tall-top,
-ol li.list-item-tall-top,
-dl li.list-item-tall-top,
-ul dt.list-item-tall-top,
-ol dt.list-item-tall-top,
-dl dt.list-item-tall-top,
-ul dd.list-item-tall-top,
-ol dd.list-item-tall-top,
-dl dd.list-item-tall-top {
+ul li.tall-top,
+ol li.tall-top,
+dl li.tall-top,
+ul dt.tall-top,
+ol dt.tall-top,
+dl dt.tall-top,
+ul dd.tall-top,
+ol dd.tall-top,
+dl dd.tall-top,
+ul li.tall-top,
+ol li.tall-top,
+dl li.tall-top,
+ul dt.tall-top,
+ol dt.tall-top,
+dl dt.tall-top,
+ul dd.tall-top,
+ol dd.tall-top,
+dl dd.tall-top {
   margin-top: 0px;
 }
-ul li.list-item-tall-bottom,
-ol li.list-item-tall-bottom,
-dl li.list-item-tall-bottom,
-ul dt.list-item-tall-bottom,
-ol dt.list-item-tall-bottom,
-dl dt.list-item-tall-bottom,
-ul dd.list-item-tall-bottom,
-ol dd.list-item-tall-bottom,
-dl dd.list-item-tall-bottom {
+ul li.tall-bottom,
+ol li.tall-bottom,
+dl li.tall-bottom,
+ul dt.tall-bottom,
+ol dt.tall-bottom,
+dl dt.tall-bottom,
+ul dd.tall-bottom,
+ol dd.tall-bottom,
+dl dd.tall-bottom,
+ul li.tall-bottom,
+ol li.tall-bottom,
+dl li.tall-bottom,
+ul dt.tall-bottom,
+ol dt.tall-bottom,
+dl dt.tall-bottom,
+ul dd.tall-bottom,
+ol dd.tall-bottom,
+dl dd.tall-bottom {
   margin-bottom: 0.8rem;
 }
 ul li:before,
@@ -12473,44 +13006,7 @@ dl dt {
   font-weight: 600;
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
-  ----------------------------------------------------------------------------- */
-@media (min-width: 480px) {
-  /* -----------------------------------------------------------------------------
-      Lists
-      ----------------------------------------------------------------------------- */
-  ul,
-  ol,
-  dl {
-    /* -----------------------------------------------------------------------------
-        List Item
-        ----------------------------------------------------------------------------- */
-    /* -----------------------------------------------------------------------------
-        Inline List
-        ----------------------------------------------------------------------------- */
-  }
-  ul li,
-  ol li,
-  dl li,
-  ul dt,
-  ol dt,
-  dl dt,
-  ul dd,
-  ol dd,
-  dl dd {
-    /* -----------------------------------------------------------------------------
-          Nested List
-          ----------------------------------------------------------------------------- */
-  }
-  /* -----------------------------------------------------------------------------
-      Ordered Lists
-      ----------------------------------------------------------------------------- */
-  ol > li:before {
-    top: 0px;
-  }
-}
-/* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-medium-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
   /* -----------------------------------------------------------------------------
@@ -12521,30 +13017,39 @@ dl dt {
   dl {
     margin-bottom: 0.88rem;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         List Item
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
         Inline List
         ----------------------------------------------------------------------------- */
   }
-  ul.list-short,
-  ol.list-short,
-  dl.list-short {
+  ul.short,
+  ol.short,
+  dl.short {
     margin-bottom: 0.44rem;
   }
-  ul.list-short-bottom,
-  ol.list-short-bottom,
-  dl.list-short-bottom {
+  ul.short-bottom,
+  ol.short-bottom,
+  dl.short-bottom,
+  ul.short-bottom-screen-medium,
+  ol.short-bottom-screen-medium,
+  dl.short-bottom-screen-medium {
     margin-bottom: 0.44rem;
   }
-  ul.list-tall,
-  ol.list-tall,
-  dl.list-tall {
+  ul.tall,
+  ol.tall,
+  dl.tall {
     margin-bottom: 1.76rem;
   }
-  ul.list-tall-bottom,
-  ol.list-tall-bottom,
-  dl.list-tall-bottom {
+  ul.tall-bottom,
+  ol.tall-bottom,
+  dl.tall-bottom,
+  ul.tall-bottom-screen-medium,
+  ol.tall-bottom-screen-medium,
+  dl.tall-bottom-screen-medium {
     margin-bottom: 1.76rem;
   }
   ul li,
@@ -12559,51 +13064,252 @@ dl dt {
     margin-bottom: 0.44rem;
     padding-left: 1.32rem;
     /* -----------------------------------------------------------------------------
+          Layout Variants
+          ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
           Nested List
           ----------------------------------------------------------------------------- */
   }
-  ul li.list-item-short,
-  ol li.list-item-short,
-  dl li.list-item-short,
-  ul dt.list-item-short,
-  ol dt.list-item-short,
-  dl dt.list-item-short,
-  ul dd.list-item-short,
-  ol dd.list-item-short,
-  dl dd.list-item-short {
+  ul li.short,
+  ol li.short,
+  dl li.short,
+  ul dt.short,
+  ol dt.short,
+  dl dt.short,
+  ul dd.short,
+  ol dd.short,
+  dl dd.short {
     margin-bottom: 0.22rem;
   }
-  ul li.list-item-short-bottom,
-  ol li.list-item-short-bottom,
-  dl li.list-item-short-bottom,
-  ul dt.list-item-short-bottom,
-  ol dt.list-item-short-bottom,
-  dl dt.list-item-short-bottom,
-  ul dd.list-item-short-bottom,
-  ol dd.list-item-short-bottom,
-  dl dd.list-item-short-bottom {
+  ul li.short-bottom,
+  ol li.short-bottom,
+  dl li.short-bottom,
+  ul dt.short-bottom,
+  ol dt.short-bottom,
+  dl dt.short-bottom,
+  ul dd.short-bottom,
+  ol dd.short-bottom,
+  dl dd.short-bottom,
+  ul li.short-bottom-screen-medium,
+  ol li.short-bottom-screen-medium,
+  dl li.short-bottom-screen-medium,
+  ul dt.short-bottom-screen-medium,
+  ol dt.short-bottom-screen-medium,
+  dl dt.short-bottom-screen-medium,
+  ul dd.short-bottom-screen-medium,
+  ol dd.short-bottom-screen-medium,
+  dl dd.short-bottom-screen-medium {
     margin-bottom: 0.22rem;
   }
-  ul li.list-item-tall,
-  ol li.list-item-tall,
-  dl li.list-item-tall,
-  ul dt.list-item-tall,
-  ol dt.list-item-tall,
-  dl dt.list-item-tall,
-  ul dd.list-item-tall,
-  ol dd.list-item-tall,
-  dl dd.list-item-tall {
+  ul li.tall,
+  ol li.tall,
+  dl li.tall,
+  ul dt.tall,
+  ol dt.tall,
+  dl dt.tall,
+  ul dd.tall,
+  ol dd.tall,
+  dl dd.tall {
     margin-bottom: 0.88rem;
   }
-  ul li.list-item-tall-bottom,
-  ol li.list-item-tall-bottom,
-  dl li.list-item-tall-bottom,
-  ul dt.list-item-tall-bottom,
-  ol dt.list-item-tall-bottom,
-  dl dt.list-item-tall-bottom,
-  ul dd.list-item-tall-bottom,
-  ol dd.list-item-tall-bottom,
-  dl dd.list-item-tall-bottom {
+  ul li.tall-bottom,
+  ol li.tall-bottom,
+  dl li.tall-bottom,
+  ul dt.tall-bottom,
+  ol dt.tall-bottom,
+  dl dt.tall-bottom,
+  ul dd.tall-bottom,
+  ol dd.tall-bottom,
+  dl dd.tall-bottom,
+  ul li.tall-bottom-screen-medium,
+  ol li.tall-bottom-screen-medium,
+  dl li.tall-bottom-screen-medium,
+  ul dt.tall-bottom-screen-medium,
+  ol dt.tall-bottom-screen-medium,
+  dl dt.tall-bottom-screen-medium,
+  ul dd.tall-bottom-screen-medium,
+  ol dd.tall-bottom-screen-medium,
+  dl dd.tall-bottom-screen-medium {
+    margin-bottom: 0.88rem;
+  }
+  ul li:before,
+  ol li:before,
+  dl li:before,
+  ul dt:before,
+  ol dt:before,
+  dl dt:before,
+  ul dd:before,
+  ol dd:before,
+  dl dd:before {
+    width: 5px;
+    height: 5px;
+    top: 9px;
+  }
+  ul li > ul,
+  ol li > ul,
+  dl li > ul,
+  ul dt > ul,
+  ol dt > ul,
+  dl dt > ul,
+  ul dd > ul,
+  ol dd > ul,
+  dl dd > ul,
+  ul li > ol,
+  ol li > ol,
+  dl li > ol,
+  ul dt > ol,
+  ol dt > ol,
+  dl dt > ol,
+  ul dd > ol,
+  ol dd > ol,
+  dl dd > ol {
+    margin-top: 0.44rem;
+  }
+  ul.list-inline,
+  ol.list-inline,
+  dl.list-inline {
+    margin-top: -0.44rem;
+    margin-left: -0.88rem;
+  }
+  ul.list-inline > li,
+  ol.list-inline > li,
+  dl.list-inline > li {
+    margin-top: 0.44rem;
+    margin-left: 0.88rem;
+  }
+  /* -----------------------------------------------------------------------------
+      Ordered Lists
+      ----------------------------------------------------------------------------- */
+  ol > li:before {
+    top: 0px;
+    height: 23.52px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Lists
+      ----------------------------------------------------------------------------- */
+  ul,
+  ol,
+  dl {
+    margin-bottom: 0.88rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        List Item
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline List
+        ----------------------------------------------------------------------------- */
+  }
+  ul.short,
+  ol.short,
+  dl.short {
+    margin-bottom: 0.44rem;
+  }
+  ul.short-bottom,
+  ol.short-bottom,
+  dl.short-bottom,
+  ul.short-bottom-screen-medium,
+  ol.short-bottom-screen-medium,
+  dl.short-bottom-screen-medium {
+    margin-bottom: 0.44rem;
+  }
+  ul.tall,
+  ol.tall,
+  dl.tall {
+    margin-bottom: 1.76rem;
+  }
+  ul.tall-bottom,
+  ol.tall-bottom,
+  dl.tall-bottom,
+  ul.tall-bottom-screen-medium,
+  ol.tall-bottom-screen-medium,
+  dl.tall-bottom-screen-medium {
+    margin-bottom: 1.76rem;
+  }
+  ul li,
+  ol li,
+  dl li,
+  ul dt,
+  ol dt,
+  dl dt,
+  ul dd,
+  ol dd,
+  dl dd {
+    margin-bottom: 0.44rem;
+    padding-left: 1.32rem;
+    /* -----------------------------------------------------------------------------
+          Layout Variants
+          ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Nested List
+          ----------------------------------------------------------------------------- */
+  }
+  ul li.short,
+  ol li.short,
+  dl li.short,
+  ul dt.short,
+  ol dt.short,
+  dl dt.short,
+  ul dd.short,
+  ol dd.short,
+  dl dd.short {
+    margin-bottom: 0.22rem;
+  }
+  ul li.short-bottom,
+  ol li.short-bottom,
+  dl li.short-bottom,
+  ul dt.short-bottom,
+  ol dt.short-bottom,
+  dl dt.short-bottom,
+  ul dd.short-bottom,
+  ol dd.short-bottom,
+  dl dd.short-bottom,
+  ul li.short-bottom-screen-medium,
+  ol li.short-bottom-screen-medium,
+  dl li.short-bottom-screen-medium,
+  ul dt.short-bottom-screen-medium,
+  ol dt.short-bottom-screen-medium,
+  dl dt.short-bottom-screen-medium,
+  ul dd.short-bottom-screen-medium,
+  ol dd.short-bottom-screen-medium,
+  dl dd.short-bottom-screen-medium {
+    margin-bottom: 0.22rem;
+  }
+  ul li.tall,
+  ol li.tall,
+  dl li.tall,
+  ul dt.tall,
+  ol dt.tall,
+  dl dt.tall,
+  ul dd.tall,
+  ol dd.tall,
+  dl dd.tall {
+    margin-bottom: 0.88rem;
+  }
+  ul li.tall-bottom,
+  ol li.tall-bottom,
+  dl li.tall-bottom,
+  ul dt.tall-bottom,
+  ol dt.tall-bottom,
+  dl dt.tall-bottom,
+  ul dd.tall-bottom,
+  ol dd.tall-bottom,
+  dl dd.tall-bottom,
+  ul li.tall-bottom-screen-medium,
+  ol li.tall-bottom-screen-medium,
+  dl li.tall-bottom-screen-medium,
+  ul dt.tall-bottom-screen-medium,
+  ol dt.tall-bottom-screen-medium,
+  dl dt.tall-bottom-screen-medium,
+  ul dd.tall-bottom-screen-medium,
+  ol dd.tall-bottom-screen-medium,
+  dl dd.tall-bottom-screen-medium {
     margin-bottom: 0.88rem;
   }
   ul li:before,
@@ -12671,30 +13377,39 @@ dl dt {
   dl {
     margin-bottom: 0.96rem;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         List Item
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
         Inline List
         ----------------------------------------------------------------------------- */
   }
-  ul.list-short,
-  ol.list-short,
-  dl.list-short {
+  ul.short,
+  ol.short,
+  dl.short {
     margin-bottom: 0.48rem;
   }
-  ul.list-short-bottom,
-  ol.list-short-bottom,
-  dl.list-short-bottom {
+  ul.short-bottom,
+  ol.short-bottom,
+  dl.short-bottom,
+  ul.short-bottom-screen-large,
+  ol.short-bottom-screen-large,
+  dl.short-bottom-screen-large {
     margin-bottom: 0.48rem;
   }
-  ul.list-tall,
-  ol.list-tall,
-  dl.list-tall {
+  ul.tall,
+  ol.tall,
+  dl.tall {
     margin-bottom: 1.92rem;
   }
-  ul.list-tall-bottom,
-  ol.list-tall-bottom,
-  dl.list-tall-bottom {
+  ul.tall-bottom,
+  ol.tall-bottom,
+  dl.tall-bottom,
+  ul.tall-bottom-screen-large,
+  ol.tall-bottom-screen-large,
+  dl.tall-bottom-screen-large {
     margin-bottom: 1.92rem;
   }
   ul li,
@@ -12709,51 +13424,72 @@ dl dt {
     margin-bottom: 0.48rem;
     padding-left: 1.44rem;
     /* -----------------------------------------------------------------------------
+          Layout Variants
+          ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
           Nested List
           ----------------------------------------------------------------------------- */
   }
-  ul li.list-item-short,
-  ol li.list-item-short,
-  dl li.list-item-short,
-  ul dt.list-item-short,
-  ol dt.list-item-short,
-  dl dt.list-item-short,
-  ul dd.list-item-short,
-  ol dd.list-item-short,
-  dl dd.list-item-short {
+  ul li.short,
+  ol li.short,
+  dl li.short,
+  ul dt.short,
+  ol dt.short,
+  dl dt.short,
+  ul dd.short,
+  ol dd.short,
+  dl dd.short {
     margin-bottom: 0.24rem;
   }
-  ul li.list-item-short-bottom,
-  ol li.list-item-short-bottom,
-  dl li.list-item-short-bottom,
-  ul dt.list-item-short-bottom,
-  ol dt.list-item-short-bottom,
-  dl dt.list-item-short-bottom,
-  ul dd.list-item-short-bottom,
-  ol dd.list-item-short-bottom,
-  dl dd.list-item-short-bottom {
+  ul li.short-bottom,
+  ol li.short-bottom,
+  dl li.short-bottom,
+  ul dt.short-bottom,
+  ol dt.short-bottom,
+  dl dt.short-bottom,
+  ul dd.short-bottom,
+  ol dd.short-bottom,
+  dl dd.short-bottom,
+  ul li.short-bottom-screen-large,
+  ol li.short-bottom-screen-large,
+  dl li.short-bottom-screen-large,
+  ul dt.short-bottom-screen-large,
+  ol dt.short-bottom-screen-large,
+  dl dt.short-bottom-screen-large,
+  ul dd.short-bottom-screen-large,
+  ol dd.short-bottom-screen-large,
+  dl dd.short-bottom-screen-large {
     margin-bottom: 0.24rem;
   }
-  ul li.list-item-tall,
-  ol li.list-item-tall,
-  dl li.list-item-tall,
-  ul dt.list-item-tall,
-  ol dt.list-item-tall,
-  dl dt.list-item-tall,
-  ul dd.list-item-tall,
-  ol dd.list-item-tall,
-  dl dd.list-item-tall {
+  ul li.tall,
+  ol li.tall,
+  dl li.tall,
+  ul dt.tall,
+  ol dt.tall,
+  dl dt.tall,
+  ul dd.tall,
+  ol dd.tall,
+  dl dd.tall {
     margin-bottom: 0.96rem;
   }
-  ul li.list-item-tall-bottom,
-  ol li.list-item-tall-bottom,
-  dl li.list-item-tall-bottom,
-  ul dt.list-item-tall-bottom,
-  ol dt.list-item-tall-bottom,
-  dl dt.list-item-tall-bottom,
-  ul dd.list-item-tall-bottom,
-  ol dd.list-item-tall-bottom,
-  dl dd.list-item-tall-bottom {
+  ul li.tall-bottom,
+  ol li.tall-bottom,
+  dl li.tall-bottom,
+  ul dt.tall-bottom,
+  ol dt.tall-bottom,
+  dl dt.tall-bottom,
+  ul dd.tall-bottom,
+  ol dd.tall-bottom,
+  dl dd.tall-bottom,
+  ul li.tall-bottom-screen-large,
+  ol li.tall-bottom-screen-large,
+  dl li.tall-bottom-screen-large,
+  ul dt.tall-bottom-screen-large,
+  ol dt.tall-bottom-screen-large,
+  dl dt.tall-bottom-screen-large,
+  ul dd.tall-bottom-screen-large,
+  ol dd.tall-bottom-screen-large,
+  dl dd.tall-bottom-screen-large {
     margin-bottom: 0.96rem;
   }
   ul li:before,
@@ -12820,6 +13556,9 @@ dl dt {
   ol,
   dl {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         List Item
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
@@ -12835,6 +13574,9 @@ dl dt {
   ul dd,
   ol dd,
   dl dd {
+    /* -----------------------------------------------------------------------------
+          Layout Variants
+          ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Nested List
           ----------------------------------------------------------------------------- */
@@ -24188,6 +24930,18 @@ modal/styles.less
   padding-left: 24px;
   padding-right: 24px;
 }
+.modal .modal-header-top {
+  padding-top: 24px;
+}
+.modal .modal-header-bottom {
+  padding-bottom: 24px;
+}
+.modal .modal-header-left {
+  padding-left: 24px;
+}
+.modal .modal-header-right {
+  padding-right: 24px;
+}
 .modal .modal-body {
   display: block;
   position: relative;
@@ -24200,6 +24954,18 @@ modal/styles.less
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 24px;
+  padding-right: 24px;
+}
+.modal .modal-body-top {
+  padding-top: 24px;
+}
+.modal .modal-body-bottom {
+  padding-bottom: 24px;
+}
+.modal .modal-body-left {
+  padding-left: 24px;
+}
+.modal .modal-body-right {
   padding-right: 24px;
 }
 .modal .modal-footer {
@@ -24216,6 +24982,18 @@ modal/styles.less
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 24px;
+  padding-right: 24px;
+}
+.modal .modal-footer-top {
+  padding-top: 24px;
+}
+.modal .modal-footer-bottom {
+  padding-bottom: 24px;
+}
+.modal .modal-footer-left {
+  padding-left: 24px;
+}
+.modal .modal-footer-right {
   padding-right: 24px;
 }
 .modal.modal-inverse {

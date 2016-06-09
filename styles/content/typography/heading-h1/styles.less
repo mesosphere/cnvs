@@ -20,7 +20,7 @@ heading-h1/styles.less
     display: block;
     .text-style-variant(heading-h1);
     .text-size-variant(heading-h1, null);
-    .abcdef(heading-h1, null, null);
+    .element-spacing(heading-h1, null, null);
 
     /* -----------------------------------------------------------------------------
     Layout Variants
@@ -28,13 +28,13 @@ heading-h1/styles.less
 
     &.short {
 
-      .abcdef(heading-h1, short, null);
+      .element-spacing(heading-h1, short, null);
 
     }
 
     &.tall {
 
-      .abcdef(heading-h1, tall, null);
+      .element-spacing(heading-h1, tall, null);
 
     }
 
@@ -112,22 +112,31 @@ heading-h1/styles.less
 
     & when (@heading-h1-enabled) and (@heading-h1-scale-screen-small-enabled) {
 
-      .text-size-variant(heading-h1, scale-screen-small);
-      .abcdef(heading-h1, null, screen-small);
-
       /* -----------------------------------------------------------------------------
-      Layout Variants
+      heading-h1
       ----------------------------------------------------------------------------- */
 
-      &.short {
+      h1,
+      .h1 {
 
-        .abcdef(heading-h1, short, screen-small);
+        .text-size-variant(heading-h1, scale-screen-small);
+        .element-spacing(heading-h1, null, screen-small);
 
-      }
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
 
-      &.tall {
+        &.short {
 
-        .abcdef(heading-h1, tall, screen-small);
+          .element-spacing(heading-h1, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .element-spacing(heading-h1, tall, screen-small);
+
+        }
 
       }
 
@@ -149,22 +158,31 @@ heading-h1/styles.less
 
     & when (@heading-h1-enabled) and (@heading-h1-scale-screen-medium-enabled) {
 
-      .text-size-variant(heading-h1, scale-screen-medium);
-      .abcdef(heading-h1, null, screen-medium);
-
       /* -----------------------------------------------------------------------------
-      Layout Variants
+      heading-h1
       ----------------------------------------------------------------------------- */
 
-      &.short {
+      h1,
+      .h1 {
 
-        .abcdef(heading-h1, short, screen-medium);
+        .text-size-variant(heading-h1, scale-screen-medium);
+        .element-spacing(heading-h1, null, screen-medium);
 
-      }
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
 
-      &.tall {
+        &.short {
 
-        .abcdef(heading-h1, tall, screen-medium);
+          .element-spacing(heading-h1, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(heading-h1, tall, screen-medium);
+
+        }
 
       }
 
@@ -186,22 +204,31 @@ heading-h1/styles.less
 
     & when (@heading-h1-enabled) and (@heading-h1-scale-screen-large-enabled) {
 
-      .text-size-variant(heading-h1, scale-screen-large);
-      .abcdef(heading-h1, null, screen-large);
-
       /* -----------------------------------------------------------------------------
-      Layout Variants
+      heading-h1
       ----------------------------------------------------------------------------- */
 
-      &.short {
+      h1,
+      .h1 {
 
-        .abcdef(heading-h1, short, screen-large);
+        .text-size-variant(heading-h1, scale-screen-large);
+        .element-spacing(heading-h1, null, screen-large);
 
-      }
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
 
-      &.tall {
+        &.short {
 
-        .abcdef(heading-h1, tall, screen-large);
+          .element-spacing(heading-h1, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(heading-h1, tall, screen-large);
+
+        }
 
       }
 
@@ -223,22 +250,31 @@ heading-h1/styles.less
 
     & when (@heading-h1-enabled) and (@heading-h1-scale-screen-jumbo-enabled) {
 
-      .text-size-variant(heading-h1, scale-screen-jumbo);
-      .abcdef(heading-h1, null, screen-jumbo);
-
       /* -----------------------------------------------------------------------------
-      Layout Variants
+      heading-h1
       ----------------------------------------------------------------------------- */
 
-      &.short {
+      h1,
+      .h1 {
 
-        .abcdef(heading-h1, short, screen-jumbo);
+        .text-size-variant(heading-h1, scale-screen-jumbo);
+        .element-spacing(heading-h1, null, screen-jumbo);
 
-      }
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
 
-      &.tall {
+        &.short {
 
-        .abcdef(heading-h1, tall, screen-jumbo);
+          .element-spacing(heading-h1, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(heading-h1, tall, screen-jumbo);
+
+        }
 
       }
 
