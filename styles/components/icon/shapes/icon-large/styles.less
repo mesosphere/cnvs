@@ -11,30 +11,15 @@ icon/styles.less
 & when (@icon-large-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Icon Large (.icon-large)
+  Icon large (.icon-large)
   ----------------------------------------------------------------------------- */
 
   .icon-large {
 
-    .shape-layout-variant(icon-large, null);
-
-    & when not (@icon-large-width = null) {
-
-      width: @icon-large-width;
-
-    }
-
-    & when not (@icon-large-height = null) {
-
-      height: @icon-large-height;
-
-    }
-
-    & when not (@icon-large-border-radius = null) {
-
-      border-radius: @icon-large-border-radius;
-
-    }
+    .element-spacing(icon-large, null, null);
+    .prop-variant(icon-large, width, null, null);
+    .prop-variant(icon-large, height, null, null);
+    .prop-variant(icon-large, border-radius, null, null);
 
   }
 
@@ -50,33 +35,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@icon-large-enabled) and (@icon-large-scale-screen-small-enabled) {
+    & when (@icon-large-enabled) and (@icon-large-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Large (.icon-large)
+      Icon large (.icon-large)
       ----------------------------------------------------------------------------- */
 
       .icon-large {
 
-        .shape-layout-variant(icon-large, scale-screen-small);
-
-        & when not (@icon-large-width = null) and not (@icon-large-width-scale-screen-small = null) {
-
-          width: @icon-large-width * @icon-large-width-scale-screen-small;
-
-        }
-
-        & when not (@icon-large-height = null) and not (@icon-large-height-scale-screen-small = null) {
-
-          height: @icon-large-height * @icon-large-height-scale-screen-small;
-
-        }
-
-        & when not (@icon-large-border-radius = null) and not (@icon-large-border-radius-scale-screen-small = null) {
-
-          border-radius: @icon-large-border-radius * @icon-large-border-radius-scale-screen-small;
-
-        }
+        .element-spacing(icon-large, null, screen-small);
+        .prop-variant(icon-large, width, null, screen-small);
+        .prop-variant(icon-large, height, null, screen-small);
+        .prop-variant(icon-large, border-radius, null, screen-small);
 
       }
 
@@ -96,33 +66,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@icon-large-enabled) and (@icon-large-scale-screen-medium-enabled) {
+    & when (@icon-large-enabled) and (@icon-large-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Large (.icon-large)
+      Icon large (.icon-large)
       ----------------------------------------------------------------------------- */
 
       .icon-large {
 
-        .shape-layout-variant(icon-large, scale-screen-medium);
-
-        & when not (@icon-large-width = null) and not (@icon-large-width-scale-screen-medium = null) {
-
-          width: @icon-large-width * @icon-large-width-scale-screen-medium;
-
-        }
-
-        & when not (@icon-large-height = null) and not (@icon-large-height-scale-screen-medium = null) {
-
-          height: @icon-large-height * @icon-large-height-scale-screen-medium;
-
-        }
-
-        & when not (@icon-large-border-radius = null) and not (@icon-large-border-radius-scale-screen-medium = null) {
-
-          border-radius: @icon-large-border-radius * @icon-large-border-radius-scale-screen-medium;
-
-        }
+        .element-spacing(icon-large, null, screen-medium);
+        .prop-variant(icon-large, width, null, screen-medium);
+        .prop-variant(icon-large, height, null, screen-medium);
+        .prop-variant(icon-large, border-radius, null, screen-medium);
 
       }
 
@@ -142,33 +97,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@icon-large-enabled) and (@icon-large-scale-screen-large-enabled) {
+    & when (@icon-large-enabled) and (@icon-large-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Large (.icon-large)
+      Icon large (.icon-large)
       ----------------------------------------------------------------------------- */
 
       .icon-large {
 
-        .shape-layout-variant(icon-large, scale-screen-large);
-
-        & when not (@icon-large-width = null) and not (@icon-large-width-scale-screen-large = null) {
-
-          width: @icon-large-width * @icon-large-width-scale-screen-large;
-
-        }
-
-        & when not (@icon-large-height = null) and not (@icon-large-height-scale-screen-large = null) {
-
-          height: @icon-large-height * @icon-large-height-scale-screen-large;
-
-        }
-
-        & when not (@icon-large-border-radius = null) and not (@icon-large-border-radius-scale-screen-large = null) {
-
-          border-radius: @icon-large-border-radius * @icon-large-border-radius-scale-screen-large;
-
-        }
+        .element-spacing(icon-large, null, screen-large);
+        .prop-variant(icon-large, width, null, screen-large);
+        .prop-variant(icon-large, height, null, screen-large);
+        .prop-variant(icon-large, border-radius, null, screen-large);
 
       }
 
@@ -188,33 +128,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@icon-large-enabled) and (@icon-large-scale-screen-jumbo-enabled) {
+    & when (@icon-large-enabled) and (@icon-large-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Large (.icon-large)
+      Icon large (.icon-large)
       ----------------------------------------------------------------------------- */
 
       .icon-large {
 
-        .shape-layout-variant(icon-large, scale-screen-jumbo);
-
-        & when not (@icon-large-width = null) and not (@icon-large-width-scale-screen-jumbo = null) {
-
-          width: @icon-large-width * @icon-large-width-scale-screen-jumbo;
-
-        }
-
-        & when not (@icon-large-height = null) and not (@icon-large-height-scale-screen-jumbo = null) {
-
-          height: @icon-large-height * @icon-large-height-scale-screen-jumbo;
-
-        }
-
-        & when not (@icon-large-border-radius = null) and not (@icon-large-border-radius-scale-screen-jumbo = null) {
-
-          border-radius: @icon-large-border-radius * @icon-large-border-radius-scale-screen-jumbo;
-
-        }
+        .element-spacing(icon-large, null, screen-jumbo);
+        .prop-variant(icon-large, width, null, screen-jumbo);
+        .prop-variant(icon-large, height, null, screen-jumbo);
+        .prop-variant(icon-large, border-radius, null, screen-jumbo);
 
       }
 

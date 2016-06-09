@@ -11,30 +11,15 @@ icon/styles.less
 & when (@icon-jumbo-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Icon Jumbo (.icon-jumbo)
+  Icon jumbo (.icon-jumbo)
   ----------------------------------------------------------------------------- */
 
   .icon-jumbo {
 
-    .shape-layout-variant(icon-jumbo, null);
-
-    & when not (@icon-jumbo-width = null) {
-
-      width: @icon-jumbo-width;
-
-    }
-
-    & when not (@icon-jumbo-height = null) {
-
-      height: @icon-jumbo-height;
-
-    }
-
-    & when not (@icon-jumbo-border-radius = null) {
-
-      border-radius: @icon-jumbo-border-radius;
-
-    }
+    .element-spacing(icon-jumbo, null, null);
+    .prop-variant(icon-jumbo, width, null, null);
+    .prop-variant(icon-jumbo, height, null, null);
+    .prop-variant(icon-jumbo, border-radius, null, null);
 
   }
 
@@ -50,33 +35,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@icon-jumbo-enabled) and (@icon-jumbo-scale-screen-small-enabled) {
+    & when (@icon-jumbo-enabled) and (@icon-jumbo-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Jumbo (.icon-jumbo)
+      Icon jumbo (.icon-jumbo)
       ----------------------------------------------------------------------------- */
 
       .icon-jumbo {
 
-        .shape-layout-variant(icon-jumbo, scale-screen-small);
-
-        & when not (@icon-jumbo-width = null) and not (@icon-jumbo-width-scale-screen-small = null) {
-
-          width: @icon-jumbo-width * @icon-jumbo-width-scale-screen-small;
-
-        }
-
-        & when not (@icon-jumbo-height = null) and not (@icon-jumbo-height-scale-screen-small = null) {
-
-          height: @icon-jumbo-height * @icon-jumbo-height-scale-screen-small;
-
-        }
-
-        & when not (@icon-jumbo-border-radius = null) and not (@icon-jumbo-border-radius-scale-screen-small = null) {
-
-          border-radius: @icon-jumbo-border-radius * @icon-jumbo-border-radius-scale-screen-small;
-
-        }
+        .element-spacing(icon-jumbo, null, screen-small);
+        .prop-variant(icon-jumbo, width, null, screen-small);
+        .prop-variant(icon-jumbo, height, null, screen-small);
+        .prop-variant(icon-jumbo, border-radius, null, screen-small);
 
       }
 
@@ -96,33 +66,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@icon-jumbo-enabled) and (@icon-jumbo-scale-screen-medium-enabled) {
+    & when (@icon-jumbo-enabled) and (@icon-jumbo-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Jumbo (.icon-jumbo)
+      Icon jumbo (.icon-jumbo)
       ----------------------------------------------------------------------------- */
 
       .icon-jumbo {
 
-        .shape-layout-variant(icon-jumbo, scale-screen-medium);
-
-        & when not (@icon-jumbo-width = null) and not (@icon-jumbo-width-scale-screen-medium = null) {
-
-          width: @icon-jumbo-width * @icon-jumbo-width-scale-screen-medium;
-
-        }
-
-        & when not (@icon-jumbo-height = null) and not (@icon-jumbo-height-scale-screen-medium = null) {
-
-          height: @icon-jumbo-height * @icon-jumbo-height-scale-screen-medium;
-
-        }
-
-        & when not (@icon-jumbo-border-radius = null) and not (@icon-jumbo-border-radius-scale-screen-medium = null) {
-
-          border-radius: @icon-jumbo-border-radius * @icon-jumbo-border-radius-scale-screen-medium;
-
-        }
+        .element-spacing(icon-jumbo, null, screen-medium);
+        .prop-variant(icon-jumbo, width, null, screen-medium);
+        .prop-variant(icon-jumbo, height, null, screen-medium);
+        .prop-variant(icon-jumbo, border-radius, null, screen-medium);
 
       }
 
@@ -142,33 +97,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@icon-jumbo-enabled) and (@icon-jumbo-scale-screen-large-enabled) {
+    & when (@icon-jumbo-enabled) and (@icon-jumbo-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Jumbo (.icon-jumbo)
+      Icon jumbo (.icon-jumbo)
       ----------------------------------------------------------------------------- */
 
       .icon-jumbo {
 
-        .shape-layout-variant(icon-jumbo, scale-screen-large);
-
-        & when not (@icon-jumbo-width = null) and not (@icon-jumbo-width-scale-screen-large = null) {
-
-          width: @icon-jumbo-width * @icon-jumbo-width-scale-screen-large;
-
-        }
-
-        & when not (@icon-jumbo-height = null) and not (@icon-jumbo-height-scale-screen-large = null) {
-
-          height: @icon-jumbo-height * @icon-jumbo-height-scale-screen-large;
-
-        }
-
-        & when not (@icon-jumbo-border-radius = null) and not (@icon-jumbo-border-radius-scale-screen-large = null) {
-
-          border-radius: @icon-jumbo-border-radius * @icon-jumbo-border-radius-scale-screen-large;
-
-        }
+        .element-spacing(icon-jumbo, null, screen-large);
+        .prop-variant(icon-jumbo, width, null, screen-large);
+        .prop-variant(icon-jumbo, height, null, screen-large);
+        .prop-variant(icon-jumbo, border-radius, null, screen-large);
 
       }
 
@@ -188,33 +128,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@icon-jumbo-enabled) and (@icon-jumbo-scale-screen-jumbo-enabled) {
+    & when (@icon-jumbo-enabled) and (@icon-jumbo-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Jumbo (.icon-jumbo)
+      Icon jumbo (.icon-jumbo)
       ----------------------------------------------------------------------------- */
 
       .icon-jumbo {
 
-        .shape-layout-variant(icon-jumbo, scale-screen-jumbo);
-
-        & when not (@icon-jumbo-width = null) and not (@icon-jumbo-width-scale-screen-jumbo = null) {
-
-          width: @icon-jumbo-width * @icon-jumbo-width-scale-screen-jumbo;
-
-        }
-
-        & when not (@icon-jumbo-height = null) and not (@icon-jumbo-height-scale-screen-jumbo = null) {
-
-          height: @icon-jumbo-height * @icon-jumbo-height-scale-screen-jumbo;
-
-        }
-
-        & when not (@icon-jumbo-border-radius = null) and not (@icon-jumbo-border-radius-scale-screen-jumbo = null) {
-
-          border-radius: @icon-jumbo-border-radius * @icon-jumbo-border-radius-scale-screen-jumbo;
-
-        }
+        .element-spacing(icon-jumbo, null, screen-jumbo);
+        .prop-variant(icon-jumbo, width, null, screen-jumbo);
+        .prop-variant(icon-jumbo, height, null, screen-jumbo);
+        .prop-variant(icon-jumbo, border-radius, null, screen-jumbo);
 
       }
 

@@ -11,30 +11,15 @@ icon/styles.less
 & when (@icon-mini-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Icon Mini (.icon-mini)
+  Icon mini (.icon-mini)
   ----------------------------------------------------------------------------- */
 
   .icon-mini {
 
-    .shape-layout-variant(icon-mini, null);
-
-    & when not (@icon-mini-width = null) {
-
-      width: @icon-mini-width;
-
-    }
-
-    & when not (@icon-mini-height = null) {
-
-      height: @icon-mini-height;
-
-    }
-
-    & when not (@icon-mini-border-radius = null) {
-
-      border-radius: @icon-mini-border-radius;
-
-    }
+    .element-spacing(icon-mini, null, null);
+    .prop-variant(icon-mini, width, null, null);
+    .prop-variant(icon-mini, height, null, null);
+    .prop-variant(icon-mini, border-radius, null, null);
 
   }
 
@@ -50,33 +35,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@icon-mini-enabled) and (@icon-mini-scale-screen-small-enabled) {
+    & when (@icon-mini-enabled) and (@icon-mini-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Mini (.icon-mini)
+      Icon mini (.icon-mini)
       ----------------------------------------------------------------------------- */
 
       .icon-mini {
 
-        .shape-layout-variant(icon-mini, scale-screen-small);
-
-        & when not (@icon-mini-width = null) and not (@icon-mini-width-scale-screen-small = null) {
-
-          width: @icon-mini-width * @icon-mini-width-scale-screen-small;
-
-        }
-
-        & when not (@icon-mini-height = null) and not (@icon-mini-height-scale-screen-small = null) {
-
-          height: @icon-mini-height * @icon-mini-height-scale-screen-small;
-
-        }
-
-        & when not (@icon-mini-border-radius = null) and not (@icon-mini-border-radius-scale-screen-small = null) {
-
-          border-radius: @icon-mini-border-radius * @icon-mini-border-radius-scale-screen-small;
-
-        }
+        .element-spacing(icon-mini, null, screen-small);
+        .prop-variant(icon-mini, width, null, screen-small);
+        .prop-variant(icon-mini, height, null, screen-small);
+        .prop-variant(icon-mini, border-radius, null, screen-small);
 
       }
 
@@ -96,33 +66,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@icon-mini-enabled) and (@icon-mini-scale-screen-medium-enabled) {
+    & when (@icon-mini-enabled) and (@icon-mini-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Mini (.icon-mini)
+      Icon mini (.icon-mini)
       ----------------------------------------------------------------------------- */
 
       .icon-mini {
 
-        .shape-layout-variant(icon-mini, scale-screen-medium);
-
-        & when not (@icon-mini-width = null) and not (@icon-mini-width-scale-screen-medium = null) {
-
-          width: @icon-mini-width * @icon-mini-width-scale-screen-medium;
-
-        }
-
-        & when not (@icon-mini-height = null) and not (@icon-mini-height-scale-screen-medium = null) {
-
-          height: @icon-mini-height * @icon-mini-height-scale-screen-medium;
-
-        }
-
-        & when not (@icon-mini-border-radius = null) and not (@icon-mini-border-radius-scale-screen-medium = null) {
-
-          border-radius: @icon-mini-border-radius * @icon-mini-border-radius-scale-screen-medium;
-
-        }
+        .element-spacing(icon-mini, null, screen-medium);
+        .prop-variant(icon-mini, width, null, screen-medium);
+        .prop-variant(icon-mini, height, null, screen-medium);
+        .prop-variant(icon-mini, border-radius, null, screen-medium);
 
       }
 
@@ -142,33 +97,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@icon-mini-enabled) and (@icon-mini-scale-screen-large-enabled) {
+    & when (@icon-mini-enabled) and (@icon-mini-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Mini (.icon-mini)
+      Icon mini (.icon-mini)
       ----------------------------------------------------------------------------- */
 
       .icon-mini {
 
-        .shape-layout-variant(icon-mini, scale-screen-large);
-
-        & when not (@icon-mini-width = null) and not (@icon-mini-width-scale-screen-large = null) {
-
-          width: @icon-mini-width * @icon-mini-width-scale-screen-large;
-
-        }
-
-        & when not (@icon-mini-height = null) and not (@icon-mini-height-scale-screen-large = null) {
-
-          height: @icon-mini-height * @icon-mini-height-scale-screen-large;
-
-        }
-
-        & when not (@icon-mini-border-radius = null) and not (@icon-mini-border-radius-scale-screen-large = null) {
-
-          border-radius: @icon-mini-border-radius * @icon-mini-border-radius-scale-screen-large;
-
-        }
+        .element-spacing(icon-mini, null, screen-large);
+        .prop-variant(icon-mini, width, null, screen-large);
+        .prop-variant(icon-mini, height, null, screen-large);
+        .prop-variant(icon-mini, border-radius, null, screen-large);
 
       }
 
@@ -188,33 +128,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@icon-mini-enabled) and (@icon-mini-scale-screen-jumbo-enabled) {
+    & when (@icon-mini-enabled) and (@icon-mini-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Mini (.icon-mini)
+      Icon mini (.icon-mini)
       ----------------------------------------------------------------------------- */
 
       .icon-mini {
 
-        .shape-layout-variant(icon-mini, scale-screen-jumbo);
-
-        & when not (@icon-mini-width = null) and not (@icon-mini-width-scale-screen-jumbo = null) {
-
-          width: @icon-mini-width * @icon-mini-width-scale-screen-jumbo;
-
-        }
-
-        & when not (@icon-mini-height = null) and not (@icon-mini-height-scale-screen-jumbo = null) {
-
-          height: @icon-mini-height * @icon-mini-height-scale-screen-jumbo;
-
-        }
-
-        & when not (@icon-mini-border-radius = null) and not (@icon-mini-border-radius-scale-screen-jumbo = null) {
-
-          border-radius: @icon-mini-border-radius * @icon-mini-border-radius-scale-screen-jumbo;
-
-        }
+        .element-spacing(icon-mini, null, screen-jumbo);
+        .prop-variant(icon-mini, width, null, screen-jumbo);
+        .prop-variant(icon-mini, height, null, screen-jumbo);
+        .prop-variant(icon-mini, border-radius, null, screen-jumbo);
 
       }
 

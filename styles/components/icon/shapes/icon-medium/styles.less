@@ -11,30 +11,15 @@ icon/styles.less
 & when (@icon-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Icon Medium (.icon-medium)
+  Icon medium (.icon-medium)
   ----------------------------------------------------------------------------- */
 
   .icon-medium {
 
-    .shape-layout-variant(icon-medium, null);
-
-    & when not (@icon-medium-width = null) {
-
-      width: @icon-medium-width;
-
-    }
-
-    & when not (@icon-medium-height = null) {
-
-      height: @icon-medium-height;
-
-    }
-
-    & when not (@icon-medium-border-radius = null) {
-
-      border-radius: @icon-medium-border-radius;
-
-    }
+    .element-spacing(icon-medium, null, null);
+    .prop-variant(icon-medium, width, null, null);
+    .prop-variant(icon-medium, height, null, null);
+    .prop-variant(icon-medium, border-radius, null, null);
 
   }
 
@@ -50,33 +35,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@icon-medium-enabled) and (@icon-medium-scale-screen-small-enabled) {
+    & when (@icon-medium-enabled) and (@icon-medium-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Medium (.icon-medium)
+      Icon medium (.icon-medium)
       ----------------------------------------------------------------------------- */
 
       .icon-medium {
 
-        .shape-layout-variant(icon-medium, scale-screen-small);
-
-        & when not (@icon-medium-width = null) and not (@icon-medium-width-scale-screen-small = null) {
-
-          width: @icon-medium-width * @icon-medium-width-scale-screen-small;
-
-        }
-
-        & when not (@icon-medium-height = null) and not (@icon-medium-height-scale-screen-small = null) {
-
-          height: @icon-medium-height * @icon-medium-height-scale-screen-small;
-
-        }
-
-        & when not (@icon-medium-border-radius = null) and not (@icon-medium-border-radius-scale-screen-small = null) {
-
-          border-radius: @icon-medium-border-radius * @icon-medium-border-radius-scale-screen-small;
-
-        }
+        .element-spacing(icon-medium, null, screen-small);
+        .prop-variant(icon-medium, width, null, screen-small);
+        .prop-variant(icon-medium, height, null, screen-small);
+        .prop-variant(icon-medium, border-radius, null, screen-small);
 
       }
 
@@ -96,33 +66,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@icon-medium-enabled) and (@icon-medium-scale-screen-medium-enabled) {
+    & when (@icon-medium-enabled) and (@icon-medium-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Medium (.icon-medium)
+      Icon medium (.icon-medium)
       ----------------------------------------------------------------------------- */
 
       .icon-medium {
 
-        .shape-layout-variant(icon-medium, scale-screen-medium);
-
-        & when not (@icon-medium-width = null) and not (@icon-medium-width-scale-screen-medium = null) {
-
-          width: @icon-medium-width * @icon-medium-width-scale-screen-medium;
-
-        }
-
-        & when not (@icon-medium-height = null) and not (@icon-medium-height-scale-screen-medium = null) {
-
-          height: @icon-medium-height * @icon-medium-height-scale-screen-medium;
-
-        }
-
-        & when not (@icon-medium-border-radius = null) and not (@icon-medium-border-radius-scale-screen-medium = null) {
-
-          border-radius: @icon-medium-border-radius * @icon-medium-border-radius-scale-screen-medium;
-
-        }
+        .element-spacing(icon-medium, null, screen-medium);
+        .prop-variant(icon-medium, width, null, screen-medium);
+        .prop-variant(icon-medium, height, null, screen-medium);
+        .prop-variant(icon-medium, border-radius, null, screen-medium);
 
       }
 
@@ -142,33 +97,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@icon-medium-enabled) and (@icon-medium-scale-screen-large-enabled) {
+    & when (@icon-medium-enabled) and (@icon-medium-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Medium (.icon-medium)
+      Icon medium (.icon-medium)
       ----------------------------------------------------------------------------- */
 
       .icon-medium {
 
-        .shape-layout-variant(icon-medium, scale-screen-large);
-
-        & when not (@icon-medium-width = null) and not (@icon-medium-width-scale-screen-large = null) {
-
-          width: @icon-medium-width * @icon-medium-width-scale-screen-large;
-
-        }
-
-        & when not (@icon-medium-height = null) and not (@icon-medium-height-scale-screen-large = null) {
-
-          height: @icon-medium-height * @icon-medium-height-scale-screen-large;
-
-        }
-
-        & when not (@icon-medium-border-radius = null) and not (@icon-medium-border-radius-scale-screen-large = null) {
-
-          border-radius: @icon-medium-border-radius * @icon-medium-border-radius-scale-screen-large;
-
-        }
+        .element-spacing(icon-medium, null, screen-large);
+        .prop-variant(icon-medium, width, null, screen-large);
+        .prop-variant(icon-medium, height, null, screen-large);
+        .prop-variant(icon-medium, border-radius, null, screen-large);
 
       }
 
@@ -188,33 +128,18 @@ icon/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@icon-medium-enabled) and (@icon-medium-scale-screen-jumbo-enabled) {
+    & when (@icon-medium-enabled) and (@icon-medium-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Icon Medium (.icon-medium)
+      Icon medium (.icon-medium)
       ----------------------------------------------------------------------------- */
 
       .icon-medium {
 
-        .shape-layout-variant(icon-medium, scale-screen-jumbo);
-
-        & when not (@icon-medium-width = null) and not (@icon-medium-width-scale-screen-jumbo = null) {
-
-          width: @icon-medium-width * @icon-medium-width-scale-screen-jumbo;
-
-        }
-
-        & when not (@icon-medium-height = null) and not (@icon-medium-height-scale-screen-jumbo = null) {
-
-          height: @icon-medium-height * @icon-medium-height-scale-screen-jumbo;
-
-        }
-
-        & when not (@icon-medium-border-radius = null) and not (@icon-medium-border-radius-scale-screen-jumbo = null) {
-
-          border-radius: @icon-medium-border-radius * @icon-medium-border-radius-scale-screen-jumbo;
-
-        }
+        .element-spacing(icon-medium, null, screen-jumbo);
+        .prop-variant(icon-medium, width, null, screen-jumbo);
+        .prop-variant(icon-medium, height, null, screen-jumbo);
+        .prop-variant(icon-medium, border-radius, null, screen-jumbo);
 
       }
 
