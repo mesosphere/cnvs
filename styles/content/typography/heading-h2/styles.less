@@ -18,9 +18,10 @@ heading-h2/styles.less
   .h2 {
 
     display: block;
-    .text-style-variant(heading-h2);
-    .text-size-variant(heading-h2, null);
+    .element-text-style(heading-h2);
+    .element-text-size(heading-h2, null);
     .element-spacing(heading-h2, null, null);
+    .prop-variant(heading-h2, opacity, null, null);
 
     /* -----------------------------------------------------------------------------
     Layout Variants
@@ -47,7 +48,8 @@ heading-h2/styles.less
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(heading-h2-emphasis);
+        .element-text-style(heading-h2-emphasis);
+        .prop-variant(heading-h2-emphasis, opacity, null, null);
 
       }
 
@@ -58,7 +60,8 @@ heading-h2/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(heading-h2-muted);
+        .element-text-style(heading-h2-muted);
+        .prop-variant(heading-h2-muted, opacity, null, null);
 
       }
 
@@ -68,14 +71,16 @@ heading-h2/styles.less
 
       &.inverse {
 
-        .text-style-variant(heading-h2-inverse);
+        .element-text-style(heading-h2-inverse);
+        .prop-variant(heading-h2-inverse, opacity, null, null);
 
         & when (@heading-h2-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(heading-h2-inverse-emphasis);
+            .element-text-style(heading-h2-inverse-emphasis);
+            .prop-variant(heading-h2-inverse-emphasis, opacity, null, null);
 
           }
 
@@ -86,7 +91,8 @@ heading-h2/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(heading-h2-inverse-muted);
+            .element-text-style(heading-h2-inverse-muted);
+            .prop-variant(heading-h2-inverse-muted, opacity, null, null);
 
           }
 
@@ -110,7 +116,7 @@ heading-h2/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@heading-h2-enabled) and (@heading-h2-scale-screen-small-enabled) {
+    & when (@heading-h2-enabled) and (@heading-h2-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       heading-h2
@@ -119,7 +125,7 @@ heading-h2/styles.less
       h2,
       .h2 {
 
-        .text-size-variant(heading-h2, scale-screen-small);
+        .element-text-size(heading-h2, screen-small);
         .element-spacing(heading-h2, null, screen-small);
 
         /* -----------------------------------------------------------------------------
@@ -156,7 +162,7 @@ heading-h2/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@heading-h2-enabled) and (@heading-h2-scale-screen-medium-enabled) {
+    & when (@heading-h2-enabled) and (@heading-h2-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       heading-h2
@@ -165,7 +171,7 @@ heading-h2/styles.less
       h2,
       .h2 {
 
-        .text-size-variant(heading-h2, scale-screen-medium);
+        .element-text-size(heading-h2, screen-medium);
         .element-spacing(heading-h2, null, screen-medium);
 
         /* -----------------------------------------------------------------------------
@@ -202,7 +208,7 @@ heading-h2/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@heading-h2-enabled) and (@heading-h2-scale-screen-large-enabled) {
+    & when (@heading-h2-enabled) and (@heading-h2-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       heading-h2
@@ -211,7 +217,7 @@ heading-h2/styles.less
       h2,
       .h2 {
 
-        .text-size-variant(heading-h2, scale-screen-large);
+        .element-text-size(heading-h2, screen-large);
         .element-spacing(heading-h2, null, screen-large);
 
         /* -----------------------------------------------------------------------------
@@ -248,7 +254,7 @@ heading-h2/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@heading-h2-enabled) and (@heading-h2-scale-screen-jumbo-enabled) {
+    & when (@heading-h2-enabled) and (@heading-h2-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       heading-h2
@@ -257,7 +263,7 @@ heading-h2/styles.less
       h2,
       .h2 {
 
-        .text-size-variant(heading-h2, scale-screen-jumbo);
+        .element-text-size(heading-h2, screen-jumbo);
         .element-spacing(heading-h2, null, screen-jumbo);
 
         /* -----------------------------------------------------------------------------

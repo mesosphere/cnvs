@@ -27,8 +27,8 @@ modal/styles.less
     backface-visibility: hidden;
     z-index: 10001;
     .shape-style-variant(modal);
-    .layout-property-variant(modal, width, null);
-    .layout-property-variant(modal, border-radius, null);
+    .prop-variant(modal, width, null, null);
+    .prop-variant(modal, border-radius, null, null);
 
     & when not (@modal-margin-vertical = null) {
 
@@ -91,7 +91,7 @@ modal/styles.less
       flex: 1;
       flex-shrink: 0;
       .shape-style-variant(modal-header);
-      .layout-spacing-variant(modal-header, null);
+      .element-spacing(modal-header, null, null);
 
     }
 
@@ -106,7 +106,7 @@ modal/styles.less
       flex: 1;
       overflow-y: auto;
       .shape-style-variant(modal-body);
-      .layout-spacing-variant(modal-body, null);
+      .element-spacing(modal-body, null, null);
 
     }
 
@@ -121,7 +121,7 @@ modal/styles.less
       flex: 1;
       flex-shrink: 0;
       .shape-style-variant(modal-footer);
-      .layout-spacing-variant(modal-footer, null);
+      .element-spacing(modal-footer, null, null);
 
     }
 
@@ -213,7 +213,7 @@ modal/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@modal-enabled) and (@modal-scale-screen-small-enabled) {
+    & when (@modal-enabled) and (@modal-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Modal
@@ -221,8 +221,8 @@ modal/styles.less
 
       .modal {
 
-        .layout-property-variant(modal, width, screen-small);
-        .layout-property-variant(modal, border-radius, screen-small);
+        .prop-variant(modal, width, null, screen-small);
+        .prop-variant(modal, border-radius, null, screen-small);
 
         & when not (@modal-margin-vertical-screen-small = null) {
 
@@ -244,7 +244,7 @@ modal/styles.less
 
         .modal-header {
 
-          .layout-spacing-variant(modal-header, screen-small);
+          .element-spacing(modal-header, null, screen-small);
 
         }
 
@@ -254,7 +254,7 @@ modal/styles.less
 
         .modal-body {
 
-          .layout-spacing-variant(modal-body, screen-small);
+          .element-spacing(modal-body, null, screen-small);
 
         }
 
@@ -264,7 +264,7 @@ modal/styles.less
 
         .modal-footer {
 
-          .layout-spacing-variant(modal-footer, screen-small);
+          .element-spacing(modal-footer, null, screen-small);
 
         }
 
@@ -286,7 +286,7 @@ modal/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@modal-enabled) and (@modal-scale-screen-medium-enabled) {
+    & when (@modal-enabled) and (@modal-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Modal
@@ -294,8 +294,8 @@ modal/styles.less
 
       .modal {
 
-        .layout-property-variant(modal, width, screen-medium);
-        .layout-property-variant(modal, border-radius, screen-medium);
+        .prop-variant(modal, width, null, screen-medium);
+        .prop-variant(modal, border-radius, null, screen-medium);
 
         & when not (@modal-margin-vertical-screen-medium = null) {
 
@@ -317,7 +317,7 @@ modal/styles.less
 
         .modal-header {
 
-          .layout-spacing-variant(modal-header, screen-medium);
+          .element-spacing(modal-header, null, screen-medium);
 
         }
 
@@ -327,7 +327,7 @@ modal/styles.less
 
         .modal-body {
 
-          .layout-spacing-variant(modal-body, screen-medium);
+          .element-spacing(modal-body, null, screen-medium);
 
         }
 
@@ -337,7 +337,7 @@ modal/styles.less
 
         .modal-footer {
 
-          .layout-spacing-variant(modal-footer, screen-medium);
+          .element-spacing(modal-footer, null, screen-medium);
 
         }
 
@@ -359,7 +359,7 @@ modal/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@modal-enabled) and (@modal-scale-screen-large-enabled) {
+    & when (@modal-enabled) and (@modal-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Modal
@@ -367,8 +367,8 @@ modal/styles.less
 
       .modal {
 
-        .layout-property-variant(modal, width, screen-large);
-        .layout-property-variant(modal, border-radius, screen-large);
+        .prop-variant(modal, width, null, screen-large);
+        .prop-variant(modal, border-radius, null, screen-large);
 
         & when not (@modal-margin-vertical-screen-large = null) {
 
@@ -390,7 +390,7 @@ modal/styles.less
 
         .modal-header {
 
-          .layout-spacing-variant(modal-header, screen-large);
+          .element-spacing(modal-header, null, screen-large);
 
         }
 
@@ -400,7 +400,7 @@ modal/styles.less
 
         .modal-body {
 
-          .layout-spacing-variant(modal-body, screen-large);
+          .element-spacing(modal-body, null, screen-large);
 
         }
 
@@ -410,7 +410,7 @@ modal/styles.less
 
         .modal-footer {
 
-          .layout-spacing-variant(modal-footer, screen-large);
+          .element-spacing(modal-footer, null, screen-large);
 
         }
 
@@ -432,7 +432,7 @@ modal/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@modal-enabled) and (@modal-scale-screen-jumbo-enabled) {
+    & when (@modal-enabled) and (@modal-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Modal
@@ -440,8 +440,8 @@ modal/styles.less
 
       .modal {
 
-        .layout-property-variant(modal, width, screen-jumbo);
-        .layout-property-variant(modal, border-radius, screen-jumbo);
+        .prop-variant(modal, width, null, screen-jumbo);
+        .prop-variant(modal, border-radius, null, screen-jumbo);
 
         & when not (@modal-margin-vertical-screen-jumbo = null) {
 
@@ -463,7 +463,7 @@ modal/styles.less
 
         .modal-header {
 
-          .layout-spacing-variant(modal-header, screen-jumbo);
+          .element-spacing(modal-header, null, screen-jumbo);
 
         }
 
@@ -473,7 +473,7 @@ modal/styles.less
 
         .modal-body {
 
-          .layout-spacing-variant(modal-body, screen-jumbo);
+          .element-spacing(modal-body, null, screen-jumbo);
 
         }
 
@@ -483,7 +483,7 @@ modal/styles.less
 
         .modal-footer {
 
-          .layout-spacing-variant(modal-footer, screen-jumbo);
+          .element-spacing(modal-footer, null, screen-jumbo);
 
         }
 

@@ -18,15 +18,15 @@ body/styles.less
   p {
 
     display: block;
-    .text-style-variant(body);
-    .text-size-variant(body, null);
+    .element-text-style(body);
+    .element-text-size(body, null);
 
     & when (@body-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(body-emphasis);
+        .element-text-style(body-emphasis);
 
       }
 
@@ -37,7 +37,7 @@ body/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(body-muted);
+        .element-text-style(body-muted);
 
       }
 
@@ -47,14 +47,14 @@ body/styles.less
 
       &.inverse {
 
-        .text-style-variant(body-inverse);
+        .element-text-style(body-inverse);
 
         & when (@body-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(body-inverse-emphasis);
+            .element-text-style(body-inverse-emphasis);
 
           }
 
@@ -65,7 +65,7 @@ body/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(body-inverse-muted);
+            .element-text-style(body-inverse-muted);
 
           }
 
@@ -115,7 +115,7 @@ body/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@body-enabled) and (@body-scale-screen-small-enabled) {
+    & when (@body-enabled) and (@body-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Body
@@ -125,7 +125,7 @@ body/styles.less
       body,
       p {
 
-        .text-size-variant(body, scale-screen-small);
+        .element-text-size(body, screen-small);
 
       }
 
@@ -171,7 +171,7 @@ body/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@body-enabled) and (@body-scale-screen-medium-enabled) {
+    & when (@body-enabled) and (@body-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Body
@@ -181,7 +181,7 @@ body/styles.less
       body,
       p {
 
-        .text-size-variant(body, scale-screen-medium);
+        .element-text-size(body, screen-medium);
 
       }
 
@@ -227,7 +227,7 @@ body/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@body-enabled) and (@body-scale-screen-large-enabled) {
+    & when (@body-enabled) and (@body-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       body
@@ -237,7 +237,7 @@ body/styles.less
       body,
       p {
 
-        .text-size-variant(body, scale-screen-large);
+        .element-text-size(body, screen-large);
 
       }
 
@@ -283,7 +283,7 @@ body/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@body-enabled) and (@body-scale-screen-jumbo-enabled) {
+    & when (@body-enabled) and (@body-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       body
@@ -293,7 +293,7 @@ body/styles.less
       body,
       p {
 
-        .text-size-variant(body, scale-screen-jumbo);
+        .element-text-size(body, screen-jumbo);
 
       }
 

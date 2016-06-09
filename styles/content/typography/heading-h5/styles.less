@@ -18,9 +18,10 @@ heading-h5/styles.less
   .h5 {
 
     display: block;
-    .text-style-variant(heading-h5);
-    .text-size-variant(heading-h5, null);
+    .element-text-style(heading-h5);
+    .element-text-size(heading-h5, null);
     .element-spacing(heading-h5, null, null);
+    .prop-variant(heading-h5, opacity, null, null);
 
     /* -----------------------------------------------------------------------------
     Layout Variants
@@ -47,7 +48,8 @@ heading-h5/styles.less
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(heading-h5-emphasis);
+        .element-text-style(heading-h5-emphasis);
+        .prop-variant(heading-h5-emphasis, opacity, null, null);
 
       }
 
@@ -58,7 +60,8 @@ heading-h5/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(heading-h5-muted);
+        .element-text-style(heading-h5-muted);
+        .prop-variant(heading-h5-muted, opacity, null, null);
 
       }
 
@@ -68,14 +71,16 @@ heading-h5/styles.less
 
       &.inverse {
 
-        .text-style-variant(heading-h5-inverse);
+        .element-text-style(heading-h5-inverse);
+        .prop-variant(heading-h5-inverse, opacity, null, null);
 
         & when (@heading-h5-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(heading-h5-inverse-emphasis);
+            .element-text-style(heading-h5-inverse-emphasis);
+            .prop-variant(heading-h5-inverse-emphasis, opacity, null, null);
 
           }
 
@@ -86,7 +91,8 @@ heading-h5/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(heading-h5-inverse-muted);
+            .element-text-style(heading-h5-inverse-muted);
+            .prop-variant(heading-h5-inverse-muted, opacity, null, null);
 
           }
 
@@ -110,7 +116,7 @@ heading-h5/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@heading-h5-enabled) and (@heading-h5-scale-screen-small-enabled) {
+    & when (@heading-h5-enabled) and (@heading-h5-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       heading-h5
@@ -119,7 +125,7 @@ heading-h5/styles.less
       h5,
       .h5 {
 
-        .text-size-variant(heading-h5, scale-screen-small);
+        .element-text-size(heading-h5, screen-small);
         .element-spacing(heading-h5, null, screen-small);
 
         /* -----------------------------------------------------------------------------
@@ -156,7 +162,7 @@ heading-h5/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@heading-h5-enabled) and (@heading-h5-scale-screen-medium-enabled) {
+    & when (@heading-h5-enabled) and (@heading-h5-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       heading-h5
@@ -165,7 +171,7 @@ heading-h5/styles.less
       h5,
       .h5 {
 
-        .text-size-variant(heading-h5, scale-screen-medium);
+        .element-text-size(heading-h5, screen-medium);
         .element-spacing(heading-h5, null, screen-medium);
 
         /* -----------------------------------------------------------------------------
@@ -202,7 +208,7 @@ heading-h5/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@heading-h5-enabled) and (@heading-h5-scale-screen-large-enabled) {
+    & when (@heading-h5-enabled) and (@heading-h5-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       heading-h5
@@ -211,7 +217,7 @@ heading-h5/styles.less
       h5,
       .h5 {
 
-        .text-size-variant(heading-h5, scale-screen-large);
+        .element-text-size(heading-h5, screen-large);
         .element-spacing(heading-h5, null, screen-large);
 
         /* -----------------------------------------------------------------------------
@@ -248,7 +254,7 @@ heading-h5/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@heading-h5-enabled) and (@heading-h5-scale-screen-jumbo-enabled) {
+    & when (@heading-h5-enabled) and (@heading-h5-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       heading-h5
@@ -257,7 +263,7 @@ heading-h5/styles.less
       h5,
       .h5 {
 
-        .text-size-variant(heading-h5, scale-screen-jumbo);
+        .element-text-size(heading-h5, screen-jumbo);
         .element-spacing(heading-h5, null, screen-jumbo);
 
         /* -----------------------------------------------------------------------------

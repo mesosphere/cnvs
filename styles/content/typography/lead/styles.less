@@ -17,8 +17,8 @@ lead/styles.less
   .lead {
 
     display: block;
-    .text-style-variant(lead);
-    .text-size-variant(lead, null);
+    .element-text-style(lead);
+    .element-text-size(lead, null);
     .element-spacing(lead, null, null);
 
     /* -----------------------------------------------------------------------------
@@ -46,7 +46,7 @@ lead/styles.less
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(lead-emphasis);
+        .element-text-style(lead-emphasis);
 
       }
 
@@ -57,7 +57,7 @@ lead/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(lead-muted);
+        .element-text-style(lead-muted);
 
       }
 
@@ -67,14 +67,14 @@ lead/styles.less
 
       &.inverse {
 
-        .text-style-variant(lead-inverse);
+        .element-text-style(lead-inverse);
 
         & when (@lead-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(lead-inverse-emphasis);
+            .element-text-style(lead-inverse-emphasis);
 
           }
 
@@ -85,7 +85,7 @@ lead/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(lead-inverse-muted);
+            .element-text-style(lead-inverse-muted);
 
           }
 
@@ -109,7 +109,7 @@ lead/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@lead-enabled) and (@lead-scale-screen-small-enabled) {
+    & when (@lead-enabled) and (@lead-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       lead
@@ -117,7 +117,7 @@ lead/styles.less
 
       .lead {
 
-        .text-size-variant(lead, scale-screen-small);
+        .element-text-size(lead, screen-small);
         .element-spacing(lead, null, screen-small);
 
         /* -----------------------------------------------------------------------------
@@ -154,7 +154,7 @@ lead/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@lead-enabled) and (@lead-scale-screen-medium-enabled) {
+    & when (@lead-enabled) and (@lead-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       lead
@@ -162,7 +162,7 @@ lead/styles.less
 
       .lead {
 
-        .text-size-variant(lead, scale-screen-medium);
+        .element-text-size(lead, screen-medium);
         .element-spacing(lead, null, screen-medium);
 
         /* -----------------------------------------------------------------------------
@@ -199,7 +199,7 @@ lead/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@lead-enabled) and (@lead-scale-screen-large-enabled) {
+    & when (@lead-enabled) and (@lead-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       lead
@@ -207,7 +207,7 @@ lead/styles.less
 
       .lead {
 
-        .text-size-variant(lead, scale-screen-large);
+        .element-text-size(lead, screen-large);
         .element-spacing(lead, null, screen-large);
 
         /* -----------------------------------------------------------------------------
@@ -244,7 +244,7 @@ lead/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@lead-enabled) and (@lead-scale-screen-jumbo-enabled) {
+    & when (@lead-enabled) and (@lead-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       lead
@@ -252,7 +252,7 @@ lead/styles.less
 
       .lead {
 
-        .text-size-variant(lead, scale-screen-jumbo);
+        .element-text-size(lead, screen-jumbo);
         .element-spacing(lead, null, screen-jumbo);
 
         /* -----------------------------------------------------------------------------

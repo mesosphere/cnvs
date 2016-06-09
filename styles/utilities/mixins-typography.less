@@ -1,12 +1,56 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-
 utilities/mixins-typography.less
-
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Text Size Variant
+----------------------------------------------------------------------------- */
+
+.element-text-size (@class, @screen-size) {
+
+  .prop-variant(@class, font-size, null, @screen-size);
+  .prop-variant(@class, line-height, null, @screen-size);
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+Text Style Variant
+----------------------------------------------------------------------------- */
+
+.element-text-style (@class) {
+
+  .prop-variant(@class, color, null, null);
+  .prop-variant(@class, font-family, null, null);
+  .prop-variant(@class, font-style, null, null);
+  .prop-variant(@class, font-weight, null, null);
+  .prop-variant(@class, text-transform, null, null);
+  .prop-variant(@class, text-shadow, null, null);
+  .prop-variant(@class, text-decoration, null, null);
+  .prop-variant(@class, text-rendering, null, null);
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -21,7 +21,7 @@ panel/styles.less
     overflow: hidden;
     position: relative;
     .shape-style-variant(panel);
-    .layout-property-variant(panel, border-radius, null);
+    .prop-variant(panel, border-radius, null, null);
 
     /* -----------------------------------------------------------------------------
     Panel Inverse (.panel-inverse)
@@ -47,7 +47,7 @@ panel/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@panel-enabled) and (@panel-scale-screen-small-enabled) {
+    & when (@panel-enabled) and (@panel-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Panel
@@ -55,7 +55,7 @@ panel/styles.less
 
       .panel {
 
-        .layout-property-variant(panel, border-radius, screen-small);
+        .prop-variant(panel, border-radius, null, screen-small);
 
       }
 
@@ -75,7 +75,7 @@ panel/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@panel-enabled) and (@panel-scale-screen-medium-enabled) {
+    & when (@panel-enabled) and (@panel-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Panel
@@ -83,7 +83,7 @@ panel/styles.less
 
       .panel {
 
-        .layout-property-variant(panel, border-radius, screen-medium);
+        .prop-variant(panel, border-radius, null, screen-medium);
 
       }
 
@@ -103,7 +103,7 @@ panel/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@panel-enabled) and (@panel-scale-screen-large-enabled) {
+    & when (@panel-enabled) and (@panel-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Panel
@@ -111,7 +111,7 @@ panel/styles.less
 
       .panel {
 
-        .layout-property-variant(panel, border-radius, screen-large);
+        .prop-variant(panel, border-radius, null, screen-large);
 
       }
 
@@ -131,7 +131,7 @@ panel/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@panel-enabled) and (@panel-scale-screen-jumbo-enabled) {
+    & when (@panel-enabled) and (@panel-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Panel
@@ -139,7 +139,7 @@ panel/styles.less
 
       .panel {
 
-        .layout-property-variant(panel, border-radius, screen-jumbo);
+        .prop-variant(panel, border-radius, null, screen-jumbo);
 
       }
 

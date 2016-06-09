@@ -18,8 +18,8 @@ small/styles.less
   .small {
 
     display: block;
-    .text-style-variant(small);
-    .text-size-variant(small, null);
+    .element-text-style(small);
+    .element-text-size(small, null);
     .element-spacing(small, null, null);
 
     /* -----------------------------------------------------------------------------
@@ -47,7 +47,7 @@ small/styles.less
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(small-emphasis);
+        .element-text-style(small-emphasis);
 
       }
 
@@ -58,7 +58,7 @@ small/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(small-muted);
+        .element-text-style(small-muted);
 
       }
 
@@ -68,14 +68,14 @@ small/styles.less
 
       &.inverse {
 
-        .text-style-variant(small-inverse);
+        .element-text-style(small-inverse);
 
         & when (@small-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(small-inverse-emphasis);
+            .element-text-style(small-inverse-emphasis);
 
           }
 
@@ -86,7 +86,7 @@ small/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(small-inverse-muted);
+            .element-text-style(small-inverse-muted);
 
           }
 
@@ -110,7 +110,7 @@ small/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@small-enabled) and (@small-scale-screen-small-enabled) {
+    & when (@small-enabled) and (@small-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       small
@@ -119,7 +119,7 @@ small/styles.less
       small,
       .small {
 
-        .text-size-variant(small, scale-screen-small);
+        .element-text-size(small, screen-small);
         .element-spacing(small, null, screen-small);
 
         /* -----------------------------------------------------------------------------
@@ -156,7 +156,7 @@ small/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@small-enabled) and (@small-scale-screen-medium-enabled) {
+    & when (@small-enabled) and (@small-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       small
@@ -165,7 +165,7 @@ small/styles.less
       small,
       .small {
 
-        .text-size-variant(small, scale-screen-medium);
+        .element-text-size(small, screen-medium);
         .element-spacing(small, null, screen-medium);
 
         /* -----------------------------------------------------------------------------
@@ -202,7 +202,7 @@ small/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@small-enabled) and (@small-scale-screen-large-enabled) {
+    & when (@small-enabled) and (@small-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       small
@@ -211,7 +211,7 @@ small/styles.less
       small,
       .small {
 
-        .text-size-variant(small, scale-screen-large);
+        .element-text-size(small, screen-large);
         .element-spacing(small, null, screen-large);
 
         /* -----------------------------------------------------------------------------
@@ -248,7 +248,7 @@ small/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@small-enabled) and (@small-scale-screen-jumbo-enabled) {
+    & when (@small-enabled) and (@small-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       small
@@ -257,7 +257,7 @@ small/styles.less
       small,
       .small {
 
-        .text-size-variant(small, scale-screen-jumbo);
+        .element-text-size(small, screen-jumbo);
         .element-spacing(small, null, screen-jumbo);
 
         /* -----------------------------------------------------------------------------

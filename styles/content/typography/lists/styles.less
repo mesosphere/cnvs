@@ -48,7 +48,7 @@ lists/styles.less
     dd {
 
       position: relative;
-      .text-style-variant(list-item);
+      .element-text-style(list-item);
       .element-spacing(list-item, null, null);
 
       /* -----------------------------------------------------------------------------
@@ -198,9 +198,10 @@ lists/styles.less
         top: 0px;
         border-radius: 0px;
         .set-if-exists(color, @list-item-bullet-color);
-        & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-large = null) {
 
-          height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large;
+        & when not (@list-item-bullet-line-height-screen-large = null) {
+
+          height: @list-item-bullet-line-height-screen-large;
 
         }
 
@@ -375,13 +376,13 @@ lists/styles.less
 
     dt {
 
-      .text-style-variant(definition-list-item-title);
+      .element-text-style(definition-list-item-title);
 
     }
 
     dl {
 
-      .text-style-variant(definition-list-item);
+      .element-text-style(definition-list-item);
 
     }
 
@@ -391,15 +392,15 @@ lists/styles.less
 
 
 
-& when (@layout-scale-screen-medium-enabled) {
+& when (@layout-scale-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-medium-min-width) and wider
+  Screen Size: Small (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 
-  @media (min-width: @layout-screen-medium-min-width) {
+  @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@list-enabled) and (@list-scale-screen-medium-enabled) {
+    & when (@list-enabled) and (@list-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Lists
@@ -409,7 +410,7 @@ lists/styles.less
       ol,
       dl {
 
-        .element-spacing(list, null, screen-medium);
+        .element-spacing(list, null, screen-small);
 
         /* -----------------------------------------------------------------------------
         Layout Variants
@@ -417,13 +418,13 @@ lists/styles.less
 
         &.short {
 
-          .element-spacing(list, short, screen-medium);
+          .element-spacing(list, short, screen-small);
 
         }
 
         &.tall {
 
-          .element-spacing(list, tall, screen-medium);
+          .element-spacing(list, tall, screen-small);
 
         }
 
@@ -435,7 +436,7 @@ lists/styles.less
         dt,
         dd {
 
-          .element-spacing(list-item, null, screen-medium);
+          .element-spacing(list-item, null, screen-small);
 
           /* -----------------------------------------------------------------------------
           Layout Variants
@@ -443,33 +444,33 @@ lists/styles.less
 
           &.short {
 
-            .element-spacing(list-item, short, screen-medium);
+            .element-spacing(list-item, short, screen-small);
 
           }
 
           &.tall {
 
-            .element-spacing(list-item, tall, screen-medium);
+            .element-spacing(list-item, tall, screen-small);
 
           }
 
           &:before {
 
-            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-medium = null) {
+            & when not (@list-item-bullet-width-screen-small = null) {
 
-              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-medium);
-
-            }
-
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) {
-
-              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium);
+              width: @list-item-bullet-width-screen-small;
 
             }
 
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+            & when not (@list-item-bullet-height-screen-small = null) {
 
-              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium)));
+              height: @list-item-bullet-height-screen-small;
+
+            }
+
+            & when not (@list-item-bullet-height-screen-small = null) and not (@list-item-bullet-line-height-screen-small = null) {
+
+              top: 0.5 * (@list-item-bullet-line-height-screen-small - @list-item-bullet-height-screen-small);
 
             }
 
@@ -484,9 +485,9 @@ lists/styles.less
           > ul,
           > ol {
 
-            & when not (@list-item-margin-bottom-scale-screen-medium = null) and not (@list-item-margin-bottom = null) {
+            & when not (@list-item-margin-bottom-screen-small = null) {
 
-              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-medium;
+              margin-top: @list-item-margin-bottom-screen-small;
 
             }
 
@@ -500,29 +501,29 @@ lists/styles.less
 
         &.list-inline {
 
-          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-medium = null) {
+          & when not (@list-inline-margin-vertical-screen-small = null) {
 
-            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-medium);
+            margin-top: -(@list-inline-margin-vertical-screen-small);
 
           }
 
-          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-medium = null) {
+          & when not (@list-inline-margin-horizontal-screen-small = null) {
 
-            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-medium);
+            margin-left: -(@list-inline-margin-horizontal-screen-small);
 
           }
 
           > li {
 
-            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-medium = null) {
+            & when not (@list-inline-margin-vertical-screen-small = null) {
 
-              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-medium);
+              margin-top: (@list-inline-margin-vertical-screen-small);
 
             }
 
-            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-medium = null) {
+            & when not (@list-inline-margin-horizontal-screen-small = null) {
 
-              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-medium);
+              margin-left: (@list-inline-margin-horizontal-screen-small);
 
             }
 
@@ -544,9 +545,9 @@ lists/styles.less
 
             top: 0px;
 
-            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+            & when not (@list-item-bullet-line-height-screen-small = null) {
 
-              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium;
+              height: @list-item-bullet-line-height-screen-small;
 
             }
 
@@ -572,7 +573,7 @@ lists/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@list-enabled) and (@list-scale-screen-medium-enabled) {
+    & when (@list-enabled) and (@list-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Lists
@@ -628,21 +629,21 @@ lists/styles.less
 
           &:before {
 
-            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-medium = null) {
+            & when not (@list-item-bullet-width-screen-medium = null) {
 
-              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-medium);
-
-            }
-
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) {
-
-              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium);
+              width: @list-item-bullet-width-screen-medium;
 
             }
 
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-medium = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+            & when not (@list-item-bullet-height-screen-medium = null) {
 
-              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-medium)));
+              height: @list-item-bullet-height-screen-medium;
+
+            }
+
+            & when not (@list-item-bullet-height-screen-medium = null) and not (@list-item-bullet-line-height-screen-medium = null) {
+
+              top: 0.5 * (@list-item-bullet-line-height-screen-medium - @list-item-bullet-height-screen-medium);
 
             }
 
@@ -657,9 +658,9 @@ lists/styles.less
           > ul,
           > ol {
 
-            & when not (@list-item-margin-bottom-scale-screen-medium = null) and not (@list-item-margin-bottom = null) {
+            & when not (@list-item-margin-bottom-screen-medium = null) {
 
-              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-medium;
+              margin-top: @list-item-margin-bottom-screen-medium;
 
             }
 
@@ -673,29 +674,29 @@ lists/styles.less
 
         &.list-inline {
 
-          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-medium = null) {
+          & when not (@list-inline-margin-vertical-screen-medium = null) {
 
-            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-medium);
+            margin-top: -(@list-inline-margin-vertical-screen-medium);
 
           }
 
-          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-medium = null) {
+          & when not (@list-inline-margin-horizontal-screen-medium = null) {
 
-            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-medium);
+            margin-left: -(@list-inline-margin-horizontal-screen-medium);
 
           }
 
           > li {
 
-            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-medium = null) {
+            & when not (@list-inline-margin-vertical-screen-medium = null) {
 
-              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-medium);
+              margin-top: (@list-inline-margin-vertical-screen-medium);
 
             }
 
-            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-medium = null) {
+            & when not (@list-inline-margin-horizontal-screen-medium = null) {
 
-              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-medium);
+              margin-left: (@list-inline-margin-horizontal-screen-medium);
 
             }
 
@@ -717,9 +718,9 @@ lists/styles.less
 
             top: 0px;
 
-            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-medium = null) {
+            & when not (@list-item-bullet-line-height-screen-medium = null) {
 
-              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-medium;
+              height: @list-item-bullet-line-height-screen-medium;
 
             }
 
@@ -745,7 +746,7 @@ lists/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@list-enabled) and (@list-scale-screen-large-enabled) {
+    & when (@list-enabled) and (@list-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Lists
@@ -801,21 +802,21 @@ lists/styles.less
 
           &:before {
 
-            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-large = null) {
+            & when not (@list-item-bullet-width-screen-large = null) {
 
-              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-large);
-
-            }
-
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-large = null) {
-
-              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-large);
+              width: @list-item-bullet-width-screen-large;
 
             }
 
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-large = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-large = null) {
+            & when not (@list-item-bullet-height-screen-large = null) {
 
-              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-large)));
+              height: @list-item-bullet-height-screen-large;
+
+            }
+
+            & when not (@list-item-bullet-height-screen-large = null) and not (@list-item-bullet-line-height-screen-large = null) {
+
+              top: 0.5 * (@list-item-bullet-line-height-screen-large - @list-item-bullet-height-screen-large);
 
             }
 
@@ -830,9 +831,9 @@ lists/styles.less
           > ul,
           > ol {
 
-            & when not (@list-item-margin-bottom-scale-screen-large = null) and not (@list-item-margin-bottom = null) {
+            & when not (@list-item-margin-bottom-screen-large = null) {
 
-              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-large;
+              margin-top: @list-item-margin-bottom-screen-large;
 
             }
 
@@ -846,29 +847,29 @@ lists/styles.less
 
         &.list-inline {
 
-          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-large = null) {
+          & when not (@list-inline-margin-vertical-screen-large = null) {
 
-            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-large);
+            margin-top: -(@list-inline-margin-vertical-screen-large);
 
           }
 
-          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-large = null) {
+          & when not (@list-inline-margin-horizontal-screen-large = null) {
 
-            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-large);
+            margin-left: -(@list-inline-margin-horizontal-screen-large);
 
           }
 
           > li {
 
-            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-large = null) {
+            & when not (@list-inline-margin-vertical-screen-large = null) {
 
-              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-large);
+              margin-top: (@list-inline-margin-vertical-screen-large);
 
             }
 
-            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-large = null) {
+            & when not (@list-inline-margin-horizontal-screen-large = null) {
 
-              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-large);
+              margin-left: (@list-inline-margin-horizontal-screen-large);
 
             }
 
@@ -890,9 +891,9 @@ lists/styles.less
 
             top: 0px;
 
-            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-large = null) {
+            & when not (@list-item-bullet-line-height-screen-large = null) {
 
-              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-large;
+              height: @list-item-bullet-line-height-screen-large;
 
             }
 
@@ -918,7 +919,7 @@ lists/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@list-enabled) and (@list-scale-screen-jumbo-enabled) {
+    & when (@list-enabled) and (@list-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Lists
@@ -974,21 +975,21 @@ lists/styles.less
 
           &:before {
 
-            & when not (@list-item-bullet-width = null) and not (@list-item-bullet-width-scale-screen-jumbo = null) {
+            & when not (@list-item-bullet-width-screen-jumbo = null) {
 
-              width: floor(@list-item-bullet-width * @list-item-bullet-width-scale-screen-jumbo);
-
-            }
-
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-jumbo = null) {
-
-              height: floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-jumbo);
+              width: @list-item-bullet-width-screen-jumbo;
 
             }
 
-            & when not (@list-item-bullet-height = null) and not (@list-item-bullet-height-scale-screen-jumbo = null) and not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-jumbo = null) {
+            & when not (@list-item-bullet-height-screen-jumbo = null) {
 
-              top: floor(0.5 * (floor(@list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-jumbo) - floor(@list-item-bullet-height * @list-item-bullet-height-scale-screen-jumbo)));
+              height: @list-item-bullet-height-screen-jumbo;
+
+            }
+
+            & when not (@list-item-bullet-height-screen-jumbo = null) and not (@list-item-bullet-line-height-screen-jumbo = null) {
+
+              top: 0.5 * (@list-item-bullet-line-height-screen-jumbo - @list-item-bullet-height-screen-jumbo);
 
             }
 
@@ -1003,9 +1004,9 @@ lists/styles.less
           > ul,
           > ol {
 
-            & when not (@list-item-margin-bottom-scale-screen-jumbo = null) and not (@list-item-margin-bottom = null) {
+            & when not (@list-item-margin-bottom-screen-jumbo = null) {
 
-              margin-top: @list-item-margin-bottom * @list-item-margin-bottom-scale-screen-jumbo;
+              margin-top: @list-item-margin-bottom-screen-jumbo;
 
             }
 
@@ -1019,29 +1020,29 @@ lists/styles.less
 
         &.list-inline {
 
-          & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-jumbo = null) {
+          & when not (@list-inline-margin-vertical-screen-jumbo = null) {
 
-            margin-top: -(@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-jumbo);
+            margin-top: -(@list-inline-margin-vertical-screen-jumbo);
 
           }
 
-          & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-jumbo = null) {
+          & when not (@list-inline-margin-horizontal-screen-jumbo = null) {
 
-            margin-left: -(@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-jumbo);
+            margin-left: -(@list-inline-margin-horizontal-screen-jumbo);
 
           }
 
           > li {
 
-            & when not (@list-inline-margin-vertical = null) and not (@list-inline-margin-vertical-scale-screen-jumbo = null) {
+            & when not (@list-inline-margin-vertical-screen-jumbo = null) {
 
-              margin-top: (@list-inline-margin-vertical * @list-inline-margin-vertical-scale-screen-jumbo);
+              margin-top: (@list-inline-margin-vertical-screen-jumbo);
 
             }
 
-            & when not (@list-inline-margin-horizontal = null) and not (@list-inline-margin-horizontal-scale-screen-jumbo = null) {
+            & when not (@list-inline-margin-horizontal-screen-jumbo = null) {
 
-              margin-left: (@list-inline-margin-horizontal * @list-inline-margin-horizontal-scale-screen-jumbo);
+              margin-left: (@list-inline-margin-horizontal-screen-jumbo);
 
             }
 
@@ -1063,9 +1064,9 @@ lists/styles.less
 
             top: 0px;
 
-            & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-line-height-scale-screen-jumbo = null) {
+            & when not (@list-item-bullet-line-height-screen-jumbo = null) {
 
-              height: @list-item-bullet-line-height * @list-item-bullet-line-height-scale-screen-jumbo;
+              height: @list-item-bullet-line-height-screen-jumbo;
 
             }
 
