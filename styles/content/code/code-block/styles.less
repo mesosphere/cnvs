@@ -20,18 +20,13 @@ code-block/styles.less
     display: block;
     word-break: break-all;
     white-space: pre;
-    .text-size-variant(code-block, null);
-    .shape-layout-variant(code-block, null);
-    .text-style-variant(code-block);
+    .element-text-size(code-block, null);
+    .element-spacing(code-block, null, null);
+    .element-text-style(code-block);
     .shape-style-variant(code-block);
-    .shape-layout-variant(code-block, short, null);
-    .shape-layout-variant(code-block, tall, null);
-
-    & when not (@code-block-border-radius = null) {
-
-      border-radius: @code-block-border-radius;
-
-    }
+    .element-spacing(code-block, short, null);
+    .element-spacing(code-block, tall, null);
+    .prop-variant(code, border-radius, null, null);
 
 
 
@@ -41,7 +36,7 @@ code-block/styles.less
 
     &.code-block-inverse {
 
-      .text-style-variant(code-block-inverse);
+      .element-text-style(code-block-inverse);
       .shape-style-variant(code-block-inverse);
 
     }
@@ -52,7 +47,7 @@ code-block/styles.less
 
 
 
-& when (@layout-scale-screen-small-enabled) {
+& when (@layout-screen-small-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Small (@layout-screen-small-min-width) and wider
@@ -60,7 +55,7 @@ code-block/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@code-block-enabled) and (@code-block-scale-screen-small-enabled) {
+    & when (@code-block-enabled) and (@code-block-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Code Block
@@ -69,16 +64,11 @@ code-block/styles.less
       pre,
       .code-block {
 
-        .text-size-variant(code-block, scale-screen-small);
-        .shape-layout-variant(code-block, scale-screen-small);
-        .shape-layout-variant(code-block, short, scale-screen-small);
-        .shape-layout-variant(code-block, tall, scale-screen-small);
-
-        & when not (@code-block-border-radius = null) and not (@code-block-border-radius-scale-screen-small = null) {
-
-          border-radius: @code-block-border-radius * @code-block-border-radius-scale-screen-small;
-
-        }
+        .element-text-size(code-block, screen-small);
+        .element-spacing(code-block, null, screen-small);
+        .element-spacing(code-block, short, screen-small);
+        .element-spacing(code-block, tall, screen-small);
+        .prop-variant(code, border-radius, null, screen-small);
 
       }
 
@@ -90,7 +80,7 @@ code-block/styles.less
 
 
 
-& when (@layout-scale-screen-medium-enabled) {
+& when (@layout-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Medium (@layout-screen-medium-min-width) and wider
@@ -98,7 +88,7 @@ code-block/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@code-block-enabled) and (@code-block-scale-screen-medium-enabled) {
+    & when (@code-block-enabled) and (@code-block-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Code Block
@@ -107,16 +97,11 @@ code-block/styles.less
       pre,
       .code-block {
 
-        .text-size-variant(code-block, scale-screen-medium);
-        .shape-layout-variant(code-block, scale-screen-medium);
-        .shape-layout-variant(code-block, short, scale-screen-medium);
-        .shape-layout-variant(code-block, tall, scale-screen-medium);
-
-        & when not (@code-block-border-radius = null) and not (@code-block-border-radius-scale-screen-medium = null) {
-
-          border-radius: @code-block-border-radius * @code-block-border-radius-scale-screen-medium;
-
-        }
+        .element-text-size(code-block, screen-medium);
+        .element-spacing(code-block, null, screen-medium);
+        .element-spacing(code-block, short, screen-medium);
+        .element-spacing(code-block, tall, screen-medium);
+        .prop-variant(code, border-radius, null, screen-medium);
 
       }
 
@@ -128,7 +113,7 @@ code-block/styles.less
 
 
 
-& when (@layout-scale-screen-large-enabled) {
+& when (@layout-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Large (@layout-screen-large-min-width) and wider
@@ -136,7 +121,7 @@ code-block/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@code-block-enabled) and (@code-block-scale-screen-large-enabled) {
+    & when (@code-block-enabled) and (@code-block-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Code Block
@@ -145,17 +130,12 @@ code-block/styles.less
       pre,
       .code-block {
 
-        .text-size-variant(code-block, scale-screen-large);
-        .shape-layout-variant(code-block, scale-screen-large);
-        .shape-layout-variant(code-block, short, scale-screen-large);
-        .shape-layout-variant(code-block, tall, scale-screen-large);
-
-        & when not (@code-block-border-radius = null) and not (@code-block-border-radius-scale-screen-large = null) {
-
-          border-radius: @code-block-border-radius * @code-block-border-radius-scale-screen-large;
-
-        }
-
+        .element-text-size(code-block, screen-large);
+        .element-spacing(code-block, null, screen-large);
+        .element-spacing(code-block, short, screen-large);
+        .element-spacing(code-block, tall, screen-large);
+        .prop-variant(code, border-radius, null, screen-large);
+        
       }
 
     }
@@ -166,7 +146,7 @@ code-block/styles.less
 
 
 
-& when (@layout-scale-screen-jumbo-enabled) {
+& when (@layout-screen-jumbo-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
@@ -174,7 +154,7 @@ code-block/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@code-block-enabled) and (@code-block-scale-screen-jumbo-enabled) {
+    & when (@code-block-enabled) and (@code-block-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Code Block
@@ -183,16 +163,11 @@ code-block/styles.less
       pre,
       .code-block {
 
-        .text-size-variant(code-block, scale-screen-jumbo);
-        .shape-layout-variant(code-block, scale-screen-jumbo);
-        .shape-layout-variant(code-block, short, scale-screen-jumbo);
-        .shape-layout-variant(code-block, tall, scale-screen-jumbo);
-
-        & when not (@code-block-border-radius = null) and not (@code-block-border-radius-scale-screen-jumbo = null) {
-
-          border-radius: @code-block-border-radius * @code-block-border-radius-scale-screen-jumbo;
-
-        }
+        .element-text-size(code-block, screen-jumbo);
+        .element-spacing(code-block, null, screen-jumbo);
+        .element-spacing(code-block, short, screen-jumbo);
+        .element-spacing(code-block, tall, screen-jumbo);
+        .prop-variant(code, border-radius, null, screen-jumbo);
 
       }
 
