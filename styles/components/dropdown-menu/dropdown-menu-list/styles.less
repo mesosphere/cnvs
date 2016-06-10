@@ -16,9 +16,9 @@ dropdown-menu-list/styles.less
 
   .dropdown-menu-list {
 
-    .text-size-variant(dropdown-menu-list, null);
-    .shape-layout-variant(dropdown-menu-list, null);
-    .text-style-variant(dropdown-menu-list);
+    .element-text-size(dropdown-menu-list, null);
+    .element-spacing(dropdown-menu-list, null, null);
+    .element-text-style(dropdown-menu-list);
     .shape-style-variant(dropdown-menu-list);
 
     &:last-child {
@@ -29,10 +29,11 @@ dropdown-menu-list/styles.less
 
     li {
 
-      .text-size-variant(dropdown-menu-list-item, null);
-      .shape-layout-variant(dropdown-menu-list-item, null);
-      .text-style-variant(dropdown-menu-list-item);
+      .element-text-size(dropdown-menu-list-item, null);
+      .element-spacing(dropdown-menu-list-item, null, null);
+      .element-text-style(dropdown-menu-list-item);
       .shape-style-variant(dropdown-menu-list-item);
+      .prop-variant(dropdown-menu-list-item, border-radius, null);
 
       &:before {
 
@@ -40,18 +41,12 @@ dropdown-menu-list/styles.less
 
       }
 
-      & when not (@dropdown-menu-list-item-border-radius = null) {
-
-        border-radius: @dropdown-menu-list-item-border-radius;
-
-      }
-
       a {
 
         display: block;
-        .text-size-variant(dropdown-menu-list-item-link, null);
-        .shape-layout-variant(dropdown-menu-list-item-link, null);
-        .text-style-variant(dropdown-menu-list-item-link);
+        .element-text-size(dropdown-menu-list-item-link, null);
+        .element-spacing(dropdown-menu-list-item-link, null, null);
+        .element-text-style(dropdown-menu-list-item-link);
         .shape-style-variant(dropdown-menu-list-item-link);
 
       }
@@ -60,7 +55,7 @@ dropdown-menu-list/styles.less
 
         a {
 
-          .text-style-variant(dropdown-menu-list-item-link-hover);
+          .element-text-style(dropdown-menu-list-item-link-hover);
           .shape-style-variant(dropdown-menu-list-item-link-hover);
 
         }
@@ -72,7 +67,7 @@ dropdown-menu-list/styles.less
 
         a {
 
-          .text-style-variant(dropdown-menu-list-item-link-active);
+          .element-text-style(dropdown-menu-list-item-link-active);
           .shape-style-variant(dropdown-menu-list-item-link-active);
 
         }
@@ -83,7 +78,7 @@ dropdown-menu-list/styles.less
 
         a {
 
-          .text-style-variant(dropdown-menu-list-item-link-selected);
+          .element-text-style(dropdown-menu-list-item-link-selected);
           .shape-style-variant(dropdown-menu-list-item-link-selected);
 
         }
@@ -96,7 +91,7 @@ dropdown-menu-list/styles.less
         a {
 
           cursor: default;
-          .text-style-variant(dropdown-menu-list-item-link-disabled);
+          .element-text-style(dropdown-menu-list-item-link-disabled);
           .shape-style-variant(dropdown-menu-list-item-link-disabled);
 
         }
@@ -114,17 +109,17 @@ dropdown-menu-list/styles.less
   .dropdown-menu-list-inverse,
   .dropdown-menu-inverse .dropdown-menu-list {
 
-    .text-style-variant(dropdown-menu-list-inverse);
+    .element-text-style(dropdown-menu-list-inverse);
     .shape-style-variant(dropdown-menu-list-inverse);
 
     li {
 
-      .text-style-variant(dropdown-menu-list-item-inverse);
+      .element-text-style(dropdown-menu-list-item-inverse);
       .shape-style-variant(dropdown-menu-list-item-inverse);
 
       a {
 
-        .text-style-variant(dropdown-menu-list-item-link-inverse);
+        .element-text-style(dropdown-menu-list-item-link-inverse);
         .shape-style-variant(dropdown-menu-list-item-link-inverse);
 
       }
@@ -133,7 +128,7 @@ dropdown-menu-list/styles.less
 
         a {
 
-          .text-style-variant(dropdown-menu-list-item-link-inverse-hover);
+          .element-text-style(dropdown-menu-list-item-link-inverse-hover);
           .shape-style-variant(dropdown-menu-list-item-link-inverse-hover);
 
         }
@@ -145,7 +140,7 @@ dropdown-menu-list/styles.less
 
         a {
 
-          .text-style-variant(dropdown-menu-list-item-link-inverse-active);
+          .element-text-style(dropdown-menu-list-item-link-inverse-active);
           .shape-style-variant(dropdown-menu-list-item-link-inverse-active);
 
         }
@@ -156,7 +151,7 @@ dropdown-menu-list/styles.less
 
         a {
 
-          .text-style-variant(dropdown-menu-list-item-link-inverse-selected);
+          .element-text-style(dropdown-menu-list-item-link-inverse-selected);
           .shape-style-variant(dropdown-menu-list-item-link-inverse-selected);
 
         }
@@ -168,7 +163,7 @@ dropdown-menu-list/styles.less
 
         a {
 
-          .text-style-variant(dropdown-menu-list-item-link-inverse-disabled);
+          .element-text-style(dropdown-menu-list-item-link-inverse-disabled);
           .shape-style-variant(dropdown-menu-list-item-link-inverse-disabled);
 
         }
@@ -191,7 +186,7 @@ dropdown-menu-list/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-small-enabled){
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-small-enabled){
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu List (.dropdown-menu-list)
@@ -199,24 +194,19 @@ dropdown-menu-list/styles.less
 
       .dropdown-menu-list {
 
-        .text-size-variant(dropdown-menu-list, scale-screen-small);
-        .shape-layout-variant(dropdown-menu-list, scale-screen-small);
+        .element-text-size(dropdown-menu-list, screen-small);
+        .element-spacing(dropdown-menu-list, null, screen-small);
 
         li {
 
-          .text-size-variant(dropdown-menu-list-item, scale-screen-small);
-          .shape-layout-variant(dropdown-menu-list-item, scale-screen-small);
-
-          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-small = null){
-
-            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-small;
-
-          }
+          .element-text-size(dropdown-menu-list-item, screen-small);
+          .element-spacing(dropdown-menu-list-item, null, screen-small);
+          .prop-variant(dropdown-menu-list-item, border-radius, screen-small);
 
           a {
 
-            .text-size-variant(dropdown-menu-list-item-link, scale-screen-small);
-            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-small);
+            .element-text-size(dropdown-menu-list-item-link, screen-small);
+            .element-spacing(dropdown-menu-list-item-link, null, screen-small);
 
           }
 
@@ -240,7 +230,7 @@ dropdown-menu-list/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-medium-enabled){
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-medium-enabled){
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu List (.dropdown-menu-list)
@@ -248,24 +238,19 @@ dropdown-menu-list/styles.less
 
       .dropdown-menu-list {
 
-        .text-size-variant(dropdown-menu-list, scale-screen-medium);
-        .shape-layout-variant(dropdown-menu-list, scale-screen-medium);
+        .element-text-size(dropdown-menu-list, screen-medium);
+        .element-spacing(dropdown-menu-list, null, screen-medium);
 
         li {
 
-          .text-size-variant(dropdown-menu-list-item, scale-screen-medium);
-          .shape-layout-variant(dropdown-menu-list-item, scale-screen-medium);
-
-          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-medium = null){
-
-            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-medium;
-
-          }
+          .element-text-size(dropdown-menu-list-item, screen-medium);
+          .element-spacing(dropdown-menu-list-item, null, screen-medium);
+          .prop-variant(dropdown-menu-list-item, border-radius, screen-medium);
 
           a {
 
-            .text-size-variant(dropdown-menu-list-item-link, scale-screen-medium);
-            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-medium);
+            .element-text-size(dropdown-menu-list-item-link, screen-medium);
+            .element-spacing(dropdown-menu-list-item-link, null, screen-medium);
 
           }
 
@@ -289,7 +274,7 @@ dropdown-menu-list/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-large-enabled){
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-large-enabled){
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu List (.dropdown-menu-list)
@@ -297,24 +282,19 @@ dropdown-menu-list/styles.less
 
       .dropdown-menu-list {
 
-        .text-size-variant(dropdown-menu-list, scale-screen-large);
-        .shape-layout-variant(dropdown-menu-list, scale-screen-large);
+        .element-text-size(dropdown-menu-list, screen-large);
+        .element-spacing(dropdown-menu-list, null, screen-large);
 
         li {
 
-          .text-size-variant(dropdown-menu-list-item, scale-screen-large);
-          .shape-layout-variant(dropdown-menu-list-item, scale-screen-large);
-
-          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-large = null){
-
-            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-large;
-
-          }
+          .element-text-size(dropdown-menu-list-item, screen-large);
+          .element-spacing(dropdown-menu-list-item, null, screen-large);
+          .prop-variant(dropdown-menu-list-item, border-radius, screen-large);
 
           a {
 
-            .text-size-variant(dropdown-menu-list-item-link, scale-screen-large);
-            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-large);
+            .element-text-size(dropdown-menu-list-item-link, screen-large);
+            .element-spacing(dropdown-menu-list-item-link, null, screen-large);
 
           }
 
@@ -338,7 +318,7 @@ dropdown-menu-list/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-scale-screen-jumbo-enabled){
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-jumbo-enabled){
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu List (.dropdown-menu-list)
@@ -346,24 +326,19 @@ dropdown-menu-list/styles.less
 
       .dropdown-menu-list {
 
-        .text-size-variant(dropdown-menu-list, scale-screen-jumbo);
-        .shape-layout-variant(dropdown-menu-list, scale-screen-jumbo);
+        .element-text-size(dropdown-menu-list, screen-jumbo);
+        .element-spacing(dropdown-menu-list, null, screen-jumbo);
 
         li {
 
-          .text-size-variant(dropdown-menu-list-item, scale-screen-jumbo);
-          .shape-layout-variant(dropdown-menu-list-item, scale-screen-jumbo);
-
-          & when not (@dropdown-menu-list-item-border-radius = null) and not (@dropdown-menu-list-item-border-radius-scale-screen-jumbo = null){
-
-            border-radius: @dropdown-menu-list-item-border-radius * @dropdown-menu-list-item-border-radius-scale-screen-jumbo;
-
-          }
+          .element-text-size(dropdown-menu-list-item, screen-jumbo);
+          .element-spacing(dropdown-menu-list-item, null, screen-jumbo);
+          .prop-variant(dropdown-menu-list-item, border-radius, screen-jumbo);
 
           a {
 
-            .text-size-variant(dropdown-menu-list-item-link, scale-screen-jumbo);
-            .shape-layout-variant(dropdown-menu-list-item-link, scale-screen-jumbo);
+            .element-text-size(dropdown-menu-list-item-link, screen-jumbo);
+            .element-spacing(dropdown-menu-list-item-link, null, screen-jumbo);
 
           }
 

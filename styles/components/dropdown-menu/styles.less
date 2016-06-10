@@ -22,27 +22,12 @@ dropdown-menu/styles.less
     position: absolute;
     top: 100%;
     left: 0;
-    .text-size-variant(dropdown-menu, null);
-    .shape-layout-variant(dropdown-menu, null);
+    .element-text-size(dropdown-menu, null);
+    .element-spacing(dropdown-menu, null, null);
     .shape-style-variant(dropdown-menu);
-
-    & when not (@dropdown-menu-border-radius = null) {
-
-      border-radius: @dropdown-menu-border-radius;
-
-    }
-
-    & when not (@dropdown-menu-minimum-width = null) {
-
-      min-width: @dropdown-menu-minimum-width;
-
-    }
-
-    & when not (@dropdown-menu-maximum-width = null) {
-
-      max-width: @dropdown-menu-maximum-width;
-
-    }
+    .prop-variant(dropdown-menu, border-radius, null);
+    .prop-variant(dropdown-menu, min-width, minimum-width, null, null);
+    .prop-variant(dropdown-menu, max-width, maximum-width, null, null);
 
     /* -----------------------------------------------------------------------------
     Dropdown Menu Inverse (.dropdown-menu-inverse)
@@ -78,7 +63,7 @@ dropdown-menu/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@dropdown-menu-enabled) and (@dropdown-menu-scale-screen-small-enabled) {
+    & when (@dropdown-menu-enabled) and (@dropdown-menu-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu (.dropdown-menu)
@@ -86,26 +71,11 @@ dropdown-menu/styles.less
 
       .dropdown-menu {
 
-        .text-size-variant(dropdown-menu, scale-screen-small);
-        .shape-layout-variant(dropdown-menu, scale-screen-small);
-
-        & when not (@dropdown-menu-border-radius = null) and not (@dropdown-menu-border-radius-scale-screen-small = null) {
-
-          border-radius: @dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-small;
-
-        }
-
-        & when not (@dropdown-menu-minimum-width = null) and not (@dropdown-menu-minimum-width-scale-screen-small = null) {
-
-          min-width: @dropdown-menu-minimum-width * @dropdown-menu-minimum-width-scale-screen-small;
-
-        }
-
-        & when not (@dropdown-menu-maximum-width = null) and not (@dropdown-menu-maximum-width-scale-screen-small = null) {
-
-          max-width: @dropdown-menu-maximum-width * @dropdown-menu-maximum-width-scale-screen-small;
-
-        }
+        .element-text-size(dropdown-menu, screen-small);
+        .element-spacing(dropdown-menu, null, screen-small);
+        .prop-variant(dropdown-menu, border-radius, screen-small);
+        .prop-variant(dropdown-menu, min-width, minimum-width, null, screen-small);
+        .prop-variant(dropdown-menu, max-width, maximum-width, null, screen-small);
 
       }
 
@@ -125,7 +95,7 @@ dropdown-menu/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@dropdown-menu-enabled) and (@dropdown-menu-scale-screen-medium-enabled) {
+    & when (@dropdown-menu-enabled) and (@dropdown-menu-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu (.dropdown-menu)
@@ -133,26 +103,11 @@ dropdown-menu/styles.less
 
       .dropdown-menu {
 
-        .text-size-variant(dropdown-menu, scale-screen-medium);
-        .shape-layout-variant(dropdown-menu, scale-screen-medium);
-
-        & when not (@dropdown-menu-border-radius = null) and not (@dropdown-menu-border-radius-scale-screen-medium = null) {
-
-          border-radius: @dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-medium;
-
-        }
-
-        & when not (@dropdown-menu-minimum-width = null) and not (@dropdown-menu-minimum-width-scale-screen-medium = null) {
-
-          min-width: @dropdown-menu-minimum-width * @dropdown-menu-minimum-width-scale-screen-medium;
-
-        }
-
-        & when not (@dropdown-menu-maximum-width = null) and not (@dropdown-menu-maximum-width-scale-screen-medium = null) {
-
-          max-width: @dropdown-menu-maximum-width * @dropdown-menu-maximum-width-scale-screen-medium;
-
-        }
+        .element-text-size(dropdown-menu, screen-medium);
+        .element-spacing(dropdown-menu, null, screen-medium);
+        .prop-variant(dropdown-menu, border-radius, screen-medium);
+        .prop-variant(dropdown-menu, min-width, minimum-width, null, screen-medium);
+        .prop-variant(dropdown-menu, max-width, maximum-width, null, screen-medium);
 
       }
 
@@ -172,7 +127,7 @@ dropdown-menu/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@dropdown-menu-enabled) and (@dropdown-menu-scale-screen-large-enabled) {
+    & when (@dropdown-menu-enabled) and (@dropdown-menu-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu (.dropdown-menu)
@@ -180,26 +135,11 @@ dropdown-menu/styles.less
 
       .dropdown-menu {
 
-        .text-size-variant(dropdown-menu, scale-screen-large);
-        .shape-layout-variant(dropdown-menu, scale-screen-large);
-
-        & when not (@dropdown-menu-border-radius = null) and not (@dropdown-menu-border-radius-scale-screen-large = null) {
-
-          border-radius: @dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-large;
-
-        }
-
-        & when not (@dropdown-menu-minimum-width = null) and not (@dropdown-menu-minimum-width-scale-screen-large = null) {
-
-          min-width: @dropdown-menu-minimum-width * @dropdown-menu-minimum-width-scale-screen-large;
-
-        }
-
-        & when not (@dropdown-menu-maximum-width = null) and not (@dropdown-menu-maximum-width-scale-screen-large = null) {
-
-          max-width: @dropdown-menu-maximum-width * @dropdown-menu-maximum-width-scale-screen-large;
-
-        }
+        .element-text-size(dropdown-menu, screen-large);
+        .element-spacing(dropdown-menu, null, screen-large);
+        .prop-variant(dropdown-menu, border-radius, screen-large);
+        .prop-variant(dropdown-menu, min-width, minimum-width, null, screen-large);
+        .prop-variant(dropdown-menu, max-width, maximum-width, null, screen-large);
 
       }
 
@@ -219,7 +159,7 @@ dropdown-menu/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@dropdown-menu-enabled) and (@dropdown-menu-scale-screen-jumbo-enabled) {
+    & when (@dropdown-menu-enabled) and (@dropdown-menu-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu (.dropdown-menu)
@@ -227,26 +167,11 @@ dropdown-menu/styles.less
 
       .dropdown-menu {
 
-        .text-size-variant(dropdown-menu, scale-screen-jumbo);
-        .shape-layout-variant(dropdown-menu, scale-screen-jumbo);
-
-        & when not (@dropdown-menu-border-radius = null) and not (@dropdown-menu-border-radius-scale-screen-jumbo = null) {
-
-          border-radius: @dropdown-menu-border-radius * @dropdown-menu-border-radius-scale-screen-jumbo;
-
-        }
-
-        & when not (@dropdown-menu-minimum-width = null) and not (@dropdown-menu-minimum-width-scale-screen-jumbo = null) {
-
-          min-width: @dropdown-menu-minimum-width * @dropdown-menu-minimum-width-scale-screen-jumbo;
-
-        }
-
-        & when not (@dropdown-menu-maximum-width = null) and not (@dropdown-menu-maximum-width-scale-screen-jumbo = null) {
-
-          max-width: @dropdown-menu-maximum-width * @dropdown-menu-maximum-width-scale-screen-jumbo;
-
-        }
+        .element-text-size(dropdown-menu, screen-jumbo);
+        .element-spacing(dropdown-menu, null, screen-jumbo);
+        .prop-variant(dropdown-menu, border-radius, screen-jumbo);
+        .prop-variant(dropdown-menu, min-width, minimum-width, null, screen-jumbo);
+        .prop-variant(dropdown-menu, max-width, maximum-width, null, screen-jumbo);
 
       }
 

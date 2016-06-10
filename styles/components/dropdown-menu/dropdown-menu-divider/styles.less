@@ -17,20 +17,10 @@ dropdown-menu-divider/styles.less
   .dropdown-menu-divider {
 
     display: block;
-    .shape-layout-variant(dropdown-menu-divider, null);
+    .element-spacing(dropdown-menu-divider, null, null);
     .shape-style-variant(dropdown-menu-divider);
-
-    & when not (@dropdown-menu-divider-border-radius = null) {
-
-      border-radius: @dropdown-menu-divider-border-radius;
-
-    }
-
-    & when not (@dropdown-menu-divider-height = null) {
-
-      height: @dropdown-menu-divider-height;
-
-    }
+    .prop-variant(dropdown-menu-divider, border-radius, null);
+    .prop-variant(dropdown-menu-divider, height, null);
 
   }
 
@@ -46,7 +36,7 @@ dropdown-menu-divider/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-small-enabled) {
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu Divider (.dropdown-menu-divider)
@@ -54,19 +44,9 @@ dropdown-menu-divider/styles.less
 
       .dropdown-menu-divider {
 
-        .shape-layout-variant(dropdown-menu-divider, scale-screen-small);
-
-        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-small = null) {
-
-          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-small;
-
-        }
-
-        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-small = null) {
-
-          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-small;
-
-        }
+        .element-spacing(dropdown-menu-divider, null, screen-small);
+        .prop-variant(dropdown-menu-divider, border-radius, screen-small);
+        .prop-variant(dropdown-menu-divider, height, screen-small);
 
       }
 
@@ -86,7 +66,7 @@ dropdown-menu-divider/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-medium-enabled) {
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu Divider (.dropdown-menu-divider)
@@ -94,19 +74,9 @@ dropdown-menu-divider/styles.less
 
       .dropdown-menu-divider {
 
-        .shape-layout-variant(dropdown-menu-divider, scale-screen-medium);
-
-        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-medium = null) {
-
-          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-medium;
-
-        }
-
-        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-medium = null) {
-
-          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-medium;
-
-        }
+        .element-spacing(dropdown-menu-divider, null, screen-medium);
+        .prop-variant(dropdown-menu-divider, border-radius, screen-medium);
+        .prop-variant(dropdown-menu-divider, height, screen-medium);
 
       }
 
@@ -126,7 +96,7 @@ dropdown-menu-divider/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-large-enabled) {
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu Divider (.dropdown-menu-divider)
@@ -134,19 +104,9 @@ dropdown-menu-divider/styles.less
 
       .dropdown-menu-divider {
 
-        .shape-layout-variant(dropdown-menu-divider, scale-screen-large);
-
-        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-large = null) {
-
-          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-large;
-
-        }
-
-        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-large = null) {
-
-          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-large;
-
-        }
+        .element-spacing(dropdown-menu-divider, null, screen-large);
+        .prop-variant(dropdown-menu-divider, border-radius, screen-large);
+        .prop-variant(dropdown-menu-divider, height, screen-large);
 
       }
 
@@ -166,7 +126,7 @@ dropdown-menu-divider/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-scale-screen-jumbo-enabled) {
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Dropdown Menu Divider (.dropdown-menu-divider)
@@ -174,19 +134,9 @@ dropdown-menu-divider/styles.less
 
       .dropdown-menu-divider {
 
-        .shape-layout-variant(dropdown-menu-divider, scale-screen-jumbo);
-
-        & when not (@dropdown-menu-divider-border-radius = null) and not (@dropdown-menu-divider-border-radius-scale-screen-jumbo = null) {
-
-          border-radius: @dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-jumbo;
-
-        }
-
-        & when not (@dropdown-menu-divider-height = null) and not (@dropdown-menu-divider-height-scale-screen-jumbo = null) {
-
-          height: @dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-jumbo;
-
-        }
+        .element-spacing(dropdown-menu-divider, null, screen-jumbo);
+        .prop-variant(dropdown-menu-divider, border-radius, screen-jumbo);
+        .prop-variant(dropdown-menu-divider, height, screen-jumbo);
 
       }
 

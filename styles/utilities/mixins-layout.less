@@ -147,11 +147,23 @@ Property Variant
 
 
 
+.prop-variant (@class, @property, @screen-size) {
+
+  .prop-variant (@class, @property, @property, null, @screen-size);
+
+}
+
 .prop-variant (@class, @property, @modifier, @screen-size) {
 
-  @element-property: e('@{class}-@{property}');
-  @element-property-screen-size: replace(e('@{class}-@{property}-@{screen-size}'), '-null', '');
-  @element-modifier-property-scale: replace(e('@{class}-@{modifier}-@{property}-scale'), '-null', '');
+  .prop-variant (@class, @property, @property, @modifier, @screen-size);
+
+}
+
+.prop-variant (@class, @property, @variable, @modifier, @screen-size) {
+
+  @element-property: e('@{class}-@{variable}');
+  @element-property-screen-size: replace(e('@{class}-@{variable}-@{screen-size}'), '-null', '');
+  @element-modifier-property-scale: replace(e('@{class}-@{modifier}-@{variable}-scale'), '-null', '');
 
   & when not (@@element-property = null) {
 
@@ -202,7 +214,6 @@ Property Variant
   }
 
 }
-
 
 
 

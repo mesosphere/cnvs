@@ -86,7 +86,11 @@ button-group/styles.less
       + .button,
       + .button-group {
 
-        margin-left: @button-group-button-offset-horizontal;
+        & when not (@button-group-button-offset-horizontal = null) {
+
+          margin-left: @button-group-button-offset-horizontal;
+
+        }
 
       }
 
