@@ -19,7 +19,7 @@ button-collection/styles.less
     display: block;
     font-size: 0px;
     .clearfix();
-    .shape-layout-variant(button-collection, null);
+    .element-spacing(button-collection, null, null);
 
     & when not (@button-collection-margin-vertical = null) {
 
@@ -142,7 +142,7 @@ button-collection/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@button-collection-enabled) and (@button-collection-scale-screen-small-enabled) {
+    & when (@button-collection-enabled) and (@button-collection-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Button Collection (.button-collection)
@@ -150,32 +150,32 @@ button-collection/styles.less
 
       .button-collection {
 
-        .shape-layout-variant(button-collection, scale-screen-small);
+        .element-spacing(button-collection, null, screen-small);
 
-        & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-small = null) {
+        & when not (@button-collection-margin-vertical-screen-small = null) {
 
-          margin-top: -(@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-small);
+          margin-top: -@button-collection-margin-vertical-screen-small;
 
         }
 
-        & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-small = null) {
+        & when not (@button-collection-margin-horizontal-screen-small = null) {
 
-          margin-left: -(@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-small);
+          margin-left: -@button-collection-margin-horizontal-screen-small;
 
         }
 
         > .button,
         > .button-group {
 
-          & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-small = null) {
+          & when not (@button-collection-margin-vertical-screen-small = null) {
 
-            margin-top: (@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-small);
+            margin-top: @button-collection-margin-vertical-screen-small;
 
           }
 
-          & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-small = null) {
+          & when not (@button-collection-margin-horizontal-screen-small = null) {
 
-            margin-left: (@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-small);
+            margin-left: @button-collection-margin-horizontal-screen-small;
 
           }
 
@@ -199,7 +199,7 @@ button-collection/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@button-collection-enabled) and (@button-collection-scale-screen-medium-enabled) {
+    & when (@button-collection-enabled) and (@button-collection-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Button Collection (.button-collection)
@@ -207,32 +207,32 @@ button-collection/styles.less
 
       .button-collection {
 
-        .shape-layout-variant(button-collection, scale-screen-medium);
+        .element-spacing(button-collection, null, screen-medium);
 
-        & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-medium = null) {
+        & when not (@button-collection-margin-vertical-screen-medium = null) {
 
-          margin-top: -(@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-medium);
+          margin-top: -@button-collection-margin-vertical-screen-medium;
 
         }
 
-        & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-medium = null) {
+        & when not (@button-collection-margin-horizontal-screen-medium = null) {
 
-          margin-left: -(@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-medium);
+          margin-left: -@button-collection-margin-horizontal-screen-medium;
 
         }
 
         > .button,
         > .button-group {
 
-          & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-medium = null) {
+          & when not (@button-collection-margin-vertical-screen-medium = null) {
 
-            margin-top: (@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-medium);
+            margin-top: @button-collection-margin-vertical-screen-medium;
 
           }
 
-          & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-medium = null) {
+          & when not (@button-collection-margin-horizontal-screen-medium = null) {
 
-            margin-left: (@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-medium);
+            margin-left: @button-collection-margin-horizontal-screen-medium;
 
           }
 
@@ -256,7 +256,7 @@ button-collection/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@button-collection-enabled) and (@button-collection-scale-screen-large-enabled) {
+    & when (@button-collection-enabled) and (@button-collection-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Button Collection (.button-collection)
@@ -264,32 +264,32 @@ button-collection/styles.less
 
       .button-collection {
 
-        .shape-layout-variant(button-collection, scale-screen-large);
+        .element-spacing(button-collection, null, screen-large);
 
-        & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-large = null) {
+        & when not (@button-collection-margin-vertical-screen-large = null) {
 
-          margin-top: -(@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-large);
+          margin-top: -@button-collection-margin-vertical-screen-large;
 
         }
 
-        & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-large = null) {
+        & when not (@button-collection-margin-horizontal-screen-large = null) {
 
-          margin-left: -(@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-large);
+          margin-left: -@button-collection-margin-horizontal-screen-large;
 
         }
 
         > .button,
         > .button-group {
 
-          & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-large = null) {
+          & when not (@button-collection-margin-vertical-screen-large = null) {
 
-            margin-top: (@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-large);
+            margin-top: @button-collection-margin-vertical-screen-large;
 
           }
 
-          & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-large = null) {
+          & when not (@button-collection-margin-horizontal-screen-large = null) {
 
-            margin-left: (@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-large);
+            margin-left: @button-collection-margin-horizontal-screen-large;
 
           }
 
@@ -313,7 +313,7 @@ button-collection/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@button-collection-enabled) and (@button-collection-scale-screen-jumbo-enabled) {
+    & when (@button-collection-enabled) and (@button-collection-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Button Collection (.button-collection)
@@ -321,32 +321,32 @@ button-collection/styles.less
 
       .button-collection {
 
-        .shape-layout-variant(button-collection, scale-screen-jumbo);
+        .element-spacing(button-collection, null, screen-jumbo);
 
-        & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-jumbo = null) {
+        & when not (@button-collection-margin-vertical-screen-jumbo = null) {
 
-          margin-top: -(@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-jumbo);
+          margin-top: -@button-collection-margin-vertical-screen-jumbo;
 
         }
 
-        & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-jumbo = null) {
+        & when not (@button-collection-margin-horizontal-screen-jumbo = null) {
 
-          margin-left: -(@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-jumbo);
+          margin-left: -@button-collection-margin-horizontal-screen-jumbo;
 
         }
 
         > .button,
         > .button-group {
 
-          & when not (@button-collection-margin-vertical = null) and not (@button-collection-margin-vertical-scale-screen-jumbo = null) {
+          & when not (@button-collection-margin-vertical-screen-jumbo = null) {
 
-            margin-top: (@button-collection-margin-vertical * @button-collection-margin-vertical-scale-screen-jumbo);
+            margin-top: @button-collection-margin-vertical-screen-jumbo;
 
           }
 
-          & when not (@button-collection-margin-horizontal = null) and not (@button-collection-margin-horizontal-scale-screen-jumbo = null) {
+          & when not (@button-collection-margin-horizontal-screen-jumbo = null) {
 
-            margin-left: (@button-collection-margin-horizontal * @button-collection-margin-horizontal-scale-screen-jumbo);
+            margin-left: @button-collection-margin-horizontal-screen-jumbo;
 
           }
 
