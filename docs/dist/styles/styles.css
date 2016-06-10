@@ -14815,8 +14815,6 @@ button,
           align-items: center;
   font-size: 1rem;
   line-height: 1.1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   color: #323a4e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -14826,8 +14824,13 @@ button,
   border-width: 1px;
   border-color: #e0e1e4;
   border-style: solid;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   height: 38px;
   border-radius: 5px;
+  /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
     Button Dropdown (.button-dropdown)
     ----------------------------------------------------------------------------- */
@@ -14850,9 +14853,13 @@ button.button-narrow,
   padding-right: 0.75rem;
 }
 button.button-narrow-left,
+.button.button-narrow-left,
+button.button-narrow-left,
 .button.button-narrow-left {
   padding-left: 0.75rem;
 }
+button.button-narrow-right,
+.button.button-narrow-right,
 button.button-narrow-right,
 .button.button-narrow-right {
   padding-right: 0.75rem;
@@ -14863,9 +14870,13 @@ button.button-wide,
   padding-right: 3rem;
 }
 button.button-wide-left,
+.button.button-wide-left,
+button.button-wide-left,
 .button.button-wide-left {
   padding-left: 3rem;
 }
+button.button-wide-right,
+.button.button-wide-right,
 button.button-wide-right,
 .button.button-wide-right {
   padding-right: 3rem;
@@ -14889,12 +14900,12 @@ button.dropdown-toggle:after,
   line-height: 0px;
   border-color: #323a4e transparent transparent transparent;
   _border-color: #323a4e #000000 #000000 #000000;
+  margin-left: 0.375rem;
+  margin-top: 2px;
   border-right-width: 4.5px;
   border-left-width: 4.5px;
   border-top-width: 5px;
   border-bottom-width: 0px;
-  margin-left: 0.375rem;
-  margin-top: 2px;
 }
 button:hover,
 .button:hover {
@@ -15171,6 +15182,9 @@ button > *:last-child,
   button,
   .button {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
@@ -15215,6 +15229,9 @@ button > *:last-child,
     padding-right: 1.65rem;
     height: 41.8px;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
@@ -15233,11 +15250,15 @@ button > *:last-child,
     padding-right: 0.825rem;
   }
   button.button-narrow-left,
-  .button.button-narrow-left {
+  .button.button-narrow-left,
+  button.button-narrow-left-screen-medium,
+  .button.button-narrow-left-screen-medium {
     padding-left: 0.825rem;
   }
   button.button-narrow-right,
-  .button.button-narrow-right {
+  .button.button-narrow-right,
+  button.button-narrow-right-screen-medium,
+  .button.button-narrow-right-screen-medium {
     padding-right: 0.825rem;
   }
   button.button-wide,
@@ -15246,22 +15267,26 @@ button > *:last-child,
     padding-right: 3.3rem;
   }
   button.button-wide-left,
-  .button.button-wide-left {
+  .button.button-wide-left,
+  button.button-wide-left-screen-medium,
+  .button.button-wide-left-screen-medium {
     padding-left: 3.3rem;
   }
   button.button-wide-right,
-  .button.button-wide-right {
+  .button.button-wide-right,
+  button.button-wide-right-screen-medium,
+  .button.button-wide-right-screen-medium {
     padding-right: 3.3rem;
   }
   button.button-dropdown:after,
   .button.button-dropdown:after,
   button.dropdown-toggle:after,
   .button.dropdown-toggle:after {
+    margin-left: 0.4125rem;
     border-right-width: 4.95px;
     border-left-width: 4.95px;
     border-top-width: 5.5px;
     border-bottom-width: 0px;
-    margin-left: 0.4125rem;
   }
   button.button-block.button-block-below-screen-medium,
   .button.button-block.button-block-below-screen-medium {
@@ -15311,6 +15336,22 @@ button > *:last-child,
   }
   .button-group button.button-rounded:not(:first-of-type):not(:last-of-type),
   .button-group .button.button-rounded:not(:first-of-type):not(:last-of-type) {
+    padding-left: 1.65rem;
+  }
+  .button-group button.button-rounded:first-of-type,
+  .button-group .button.button-rounded:first-of-type {
+    padding-left: 1.65rem;
+  }
+  .button-group button.button-rounded:first-of-type.button-narrow,
+  .button-group .button.button-rounded:first-of-type.button-narrow {
+    padding-left: 0.825rem;
+  }
+  .button-group button.button-rounded:first-of-type.button-wide,
+  .button-group .button.button-rounded:first-of-type.button-wide {
+    padding-left: 3.3rem;
+  }
+  .button-group button.button-rounded:not(:first-of-type):not(:last-of-type),
+  .button-group .button.button-rounded:not(:first-of-type):not(:last-of-type) {
     padding-right: 1.65rem;
   }
   .button-group button.button-rounded:first-of-type,
@@ -15325,25 +15366,9 @@ button > *:last-child,
   .button-group .button.button-rounded:first-of-type.button-wide {
     padding-right: 3.3rem;
   }
-  .button-group button.button-rounded:not(:first-of-type):not(:last-of-type),
-  .button-group .button.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 1.65rem;
-  }
-  .button-group button.button-rounded:last-of-type,
-  .button-group .button.button-rounded:last-of-type {
-    padding-left: 1.65rem;
-  }
-  .button-group button.button-rounded:last-of-type.button-narrow,
-  .button-group .button.button-rounded:last-of-type.button-narrow {
-    padding-left: 0.825rem;
-  }
-  .button-group button.button-rounded:last-of-type.button-wide,
-  .button-group .button.button-rounded:last-of-type.button-wide {
-    padding-left: 3.3rem;
-  }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
+  Screen Size: Small (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
   /* -----------------------------------------------------------------------------
@@ -15354,6 +15379,9 @@ button > *:last-child,
     padding-left: 1.8rem;
     padding-right: 1.8rem;
     height: 45.6px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
@@ -15373,11 +15401,15 @@ button > *:last-child,
     padding-right: 0.9rem;
   }
   button.button-narrow-left,
-  .button.button-narrow-left {
+  .button.button-narrow-left,
+  button.button-narrow-left-screen-large,
+  .button.button-narrow-left-screen-large {
     padding-left: 0.9rem;
   }
   button.button-narrow-right,
-  .button.button-narrow-right {
+  .button.button-narrow-right,
+  button.button-narrow-right-screen-large,
+  .button.button-narrow-right-screen-large {
     padding-right: 0.9rem;
   }
   button.button-wide,
@@ -15386,22 +15418,26 @@ button > *:last-child,
     padding-right: 3.6rem;
   }
   button.button-wide-left,
-  .button.button-wide-left {
+  .button.button-wide-left,
+  button.button-wide-left-screen-large,
+  .button.button-wide-left-screen-large {
     padding-left: 3.6rem;
   }
   button.button-wide-right,
-  .button.button-wide-right {
+  .button.button-wide-right,
+  button.button-wide-right-screen-large,
+  .button.button-wide-right-screen-large {
     padding-right: 3.6rem;
   }
   button.button-dropdown:after,
   .button.button-dropdown:after,
   button.dropdown-toggle:after,
   .button.dropdown-toggle:after {
+    margin-left: 0.45rem;
     border-right-width: 5.4px;
     border-left-width: 5.4px;
     border-top-width: 6px;
     border-bottom-width: 0px;
-    margin-left: 0.45rem;
   }
   button.button-block.button-block-below-screen-large,
   .button.button-block.button-block-below-screen-large {
@@ -15451,6 +15487,22 @@ button > *:last-child,
   }
   .button-group button.button-rounded:not(:first-of-type):not(:last-of-type),
   .button-group .button.button-rounded:not(:first-of-type):not(:last-of-type) {
+    padding-left: 1.8rem;
+  }
+  .button-group button.button-rounded:first-of-type,
+  .button-group .button.button-rounded:first-of-type {
+    padding-left: 1.8rem;
+  }
+  .button-group button.button-rounded:first-of-type.button-narrow,
+  .button-group .button.button-rounded:first-of-type.button-narrow {
+    padding-left: 0.9rem;
+  }
+  .button-group button.button-rounded:first-of-type.button-wide,
+  .button-group .button.button-rounded:first-of-type.button-wide {
+    padding-left: 3.6rem;
+  }
+  .button-group button.button-rounded:not(:first-of-type):not(:last-of-type),
+  .button-group .button.button-rounded:not(:first-of-type):not(:last-of-type) {
     padding-right: 1.8rem;
   }
   .button-group button.button-rounded:first-of-type,
@@ -15465,25 +15517,9 @@ button > *:last-child,
   .button-group .button.button-rounded:first-of-type.button-wide {
     padding-right: 3.6rem;
   }
-  .button-group button.button-rounded:not(:first-of-type):not(:last-of-type),
-  .button-group .button.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 1.8rem;
-  }
-  .button-group button.button-rounded:last-of-type,
-  .button-group .button.button-rounded:last-of-type {
-    padding-left: 1.8rem;
-  }
-  .button-group button.button-rounded:last-of-type.button-narrow,
-  .button-group .button.button-rounded:last-of-type.button-narrow {
-    padding-left: 0.9rem;
-  }
-  .button-group button.button-rounded:last-of-type.button-wide,
-  .button-group .button.button-rounded:last-of-type.button-wide {
-    padding-left: 3.6rem;
-  }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
@@ -15492,13 +15528,16 @@ button > *:last-child,
   button,
   .button {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
         Block Button (.button-block)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   button.button-block.button-block-below-screen-jumbo,
@@ -15555,7 +15594,7 @@ Padding
 Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Rounded Button
+Rounded button-mini
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -15575,66 +15614,73 @@ button-mini/styles.less
   height: 24px;
   border-radius: 3px;
   /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
     Button Dropdown (.button-dropdown)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-    Button Rounded (.button-rounded)
+    Rounded Button (.button-rounded)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
       Button Content
       ----------------------------------------------------------------------------- */
 }
-.button-mini.button-mini-narrow {
+.button-mini.button-narrow {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
-.button-mini.button-mini-narrow-left {
+.button-mini.button-narrow-left,
+.button-mini.button-narrow-left {
   padding-left: 0.25rem;
 }
-.button-mini.button-mini-narrow-right {
+.button-mini.button-narrow-right,
+.button-mini.button-narrow-right {
   padding-right: 0.25rem;
 }
-.button-mini.button-mini-wide {
+.button-mini.button-wide {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.button-mini.button-mini-wide-left {
+.button-mini.button-wide-left,
+.button-mini.button-wide-left {
   padding-left: 1rem;
 }
-.button-mini.button-mini-wide-right {
+.button-mini.button-wide-right,
+.button-mini.button-wide-right {
   padding-right: 1rem;
 }
 .button-mini.button-dropdown:after,
 .button-mini.dropdown-toggle:after {
+  margin-left: 0.125rem;
+  margin-top: 2px;
   border-right-width: 2.84210526px;
   border-left-width: 2.84210526px;
   border-top-width: 3.15789474px;
   border-bottom-width: 0px;
-  margin-left: 0.125rem;
-  margin-top: 2px;
 }
 .button-mini.button-rounded {
   border-radius: 1000px;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
 }
-.button-mini.button-rounded.button-mini-narrow {
+.button-mini.button-rounded.button-narrow {
   padding-left: 0.3rem;
 }
-.button-mini.button-rounded.button-mini-wide {
+.button-mini.button-rounded.button-wide {
   padding-left: 1.2rem;
 }
-.button-mini.button-rounded.button-mini-narrow {
+.button-mini.button-rounded.button-narrow {
   padding-right: 0.3rem;
 }
-.button-mini.button-rounded.button-mini-wide {
+.button-mini.button-rounded.button-wide {
   padding-right: 1.2rem;
 }
 .button-mini > * {
-  padding-right: 0.135em;
+  padding-right: 0.125rem;
 }
 /* -----------------------------------------------------------------------------
-    Button group
+    Button Group (.button-group)
     ----------------------------------------------------------------------------- */
 .button-group {
   /* -----------------------------------------------------------------------------
@@ -15679,14 +15725,17 @@ button-mini/styles.less
       ----------------------------------------------------------------------------- */
   .button-mini {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -15695,7 +15744,7 @@ button-mini/styles.less
   }
   .button-group .button-mini {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
 }
@@ -15711,64 +15760,71 @@ button-mini/styles.less
     padding-right: 0.55rem;
     height: 26.4px;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Button Content
           ----------------------------------------------------------------------------- */
   }
-  .button-mini.button-mini-narrow {
+  .button-mini.button-narrow {
     padding-left: 0.275rem;
     padding-right: 0.275rem;
   }
-  .button-mini.button-mini-narrow-left {
+  .button-mini.button-narrow-left,
+  .button-mini.button-narrow-left-screen-medium {
     padding-left: 0.275rem;
   }
-  .button-mini.button-mini-narrow-right {
+  .button-mini.button-narrow-right,
+  .button-mini.button-narrow-right-screen-medium {
     padding-right: 0.275rem;
   }
-  .button-mini.button-mini-wide {
+  .button-mini.button-wide {
     padding-left: 1.1rem;
     padding-right: 1.1rem;
   }
-  .button-mini.button-mini-wide-left {
+  .button-mini.button-wide-left,
+  .button-mini.button-wide-left-screen-medium {
     padding-left: 1.1rem;
   }
-  .button-mini.button-mini-wide-right {
+  .button-mini.button-wide-right,
+  .button-mini.button-wide-right-screen-medium {
     padding-right: 1.1rem;
   }
   .button-mini.button-dropdown:after,
   .button-mini.dropdown-toggle:after {
+    margin-left: 0.1375rem;
     border-right-width: 3.12631579px;
     border-left-width: 3.12631579px;
     border-top-width: 3.47368421px;
     border-bottom-width: 0px;
-    margin-left: 0.1375rem;
   }
   .button-mini.button-rounded {
     padding-left: 0.66rem;
     padding-right: 0.66rem;
   }
-  .button-mini.button-rounded.button-mini-narrow {
+  .button-mini.button-rounded.button-narrow {
     padding-left: 0.33rem;
   }
-  .button-mini.button-rounded.button-mini-wide {
+  .button-mini.button-rounded.button-wide {
     padding-left: 1.32rem;
   }
-  .button-mini.button-rounded.button-mini-narrow {
+  .button-mini.button-rounded.button-narrow {
     padding-right: 0.33rem;
   }
-  .button-mini.button-rounded.button-mini-wide {
+  .button-mini.button-rounded.button-wide {
     padding-right: 1.32rem;
   }
   .button-mini > * {
-    padding-right: 0.1485em;
+    padding-right: 0.1375rem;
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -15777,8 +15833,20 @@ button-mini/styles.less
   }
   .button-group .button-mini {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
+  }
+  .button-group .button-mini.button-rounded:not(:first-of-type):not(:last-of-type) {
+    padding-left: 0.55rem;
+  }
+  .button-group .button-mini.button-rounded:first-of-type {
+    padding-left: 0.55rem;
+  }
+  .button-group .button-mini.button-rounded:first-of-type.button-narrow {
+    padding-left: 0.275rem;
+  }
+  .button-group .button-mini.button-rounded:first-of-type.button-wide {
+    padding-left: 1.1rem;
   }
   .button-group .button-mini.button-rounded:not(:first-of-type):not(:last-of-type) {
     padding-right: 0.55rem;
@@ -15792,21 +15860,9 @@ button-mini/styles.less
   .button-group .button-mini.button-rounded:first-of-type.button-wide {
     padding-right: 1.1rem;
   }
-  .button-group .button-mini.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 0.55rem;
-  }
-  .button-group .button-mini.button-rounded:last-of-type {
-    padding-left: 0.55rem;
-  }
-  .button-group .button-mini.button-rounded:last-of-type.button-narrow {
-    padding-left: 0.275rem;
-  }
-  .button-group .button-mini.button-rounded:last-of-type.button-wide {
-    padding-left: 1.1rem;
-  }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
+  Screen Size: Small (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
   /* -----------------------------------------------------------------------------
@@ -15817,64 +15873,71 @@ button-mini/styles.less
     padding-right: 0.6rem;
     height: 28.8px;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Button Content
           ----------------------------------------------------------------------------- */
   }
-  .button-mini.button-mini-narrow {
+  .button-mini.button-narrow {
     padding-left: 0.3rem;
     padding-right: 0.3rem;
   }
-  .button-mini.button-mini-narrow-left {
+  .button-mini.button-narrow-left,
+  .button-mini.button-narrow-left-screen-large {
     padding-left: 0.3rem;
   }
-  .button-mini.button-mini-narrow-right {
+  .button-mini.button-narrow-right,
+  .button-mini.button-narrow-right-screen-large {
     padding-right: 0.3rem;
   }
-  .button-mini.button-mini-wide {
+  .button-mini.button-wide {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
   }
-  .button-mini.button-mini-wide-left {
+  .button-mini.button-wide-left,
+  .button-mini.button-wide-left-screen-large {
     padding-left: 1.2rem;
   }
-  .button-mini.button-mini-wide-right {
+  .button-mini.button-wide-right,
+  .button-mini.button-wide-right-screen-large {
     padding-right: 1.2rem;
   }
   .button-mini.button-dropdown:after,
   .button-mini.dropdown-toggle:after {
+    margin-left: 0.15rem;
     border-right-width: 3.41052632px;
     border-left-width: 3.41052632px;
     border-top-width: 3.78947368px;
     border-bottom-width: 0px;
-    margin-left: 0.15rem;
   }
   .button-mini.button-rounded {
     padding-left: 0.72rem;
     padding-right: 0.72rem;
   }
-  .button-mini.button-rounded.button-mini-narrow {
+  .button-mini.button-rounded.button-narrow {
     padding-left: 0.36rem;
   }
-  .button-mini.button-rounded.button-mini-wide {
+  .button-mini.button-rounded.button-wide {
     padding-left: 1.44rem;
   }
-  .button-mini.button-rounded.button-mini-narrow {
+  .button-mini.button-rounded.button-narrow {
     padding-right: 0.36rem;
   }
-  .button-mini.button-rounded.button-mini-wide {
+  .button-mini.button-rounded.button-wide {
     padding-right: 1.44rem;
   }
   .button-mini > * {
-    padding-right: 0.162em;
+    padding-right: 0.15rem;
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -15883,8 +15946,20 @@ button-mini/styles.less
   }
   .button-group .button-mini {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
+  }
+  .button-group .button-mini.button-rounded:not(:first-of-type):not(:last-of-type) {
+    padding-left: 0.6rem;
+  }
+  .button-group .button-mini.button-rounded:first-of-type {
+    padding-left: 0.6rem;
+  }
+  .button-group .button-mini.button-rounded:first-of-type.button-narrow {
+    padding-left: 0.3rem;
+  }
+  .button-group .button-mini.button-rounded:first-of-type.button-wide {
+    padding-left: 1.2rem;
   }
   .button-group .button-mini.button-rounded:not(:first-of-type):not(:last-of-type) {
     padding-right: 0.6rem;
@@ -15898,21 +15973,9 @@ button-mini/styles.less
   .button-group .button-mini.button-rounded:first-of-type.button-wide {
     padding-right: 1.2rem;
   }
-  .button-group .button-mini.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 0.6rem;
-  }
-  .button-group .button-mini.button-rounded:last-of-type {
-    padding-left: 0.6rem;
-  }
-  .button-group .button-mini.button-rounded:last-of-type.button-narrow {
-    padding-left: 0.3rem;
-  }
-  .button-group .button-mini.button-rounded:last-of-type.button-wide {
-    padding-left: 1.2rem;
-  }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
@@ -15920,14 +15983,17 @@ button-mini/styles.less
       ----------------------------------------------------------------------------- */
   .button-mini {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -15936,7 +16002,7 @@ button-mini/styles.less
   }
   .button-group .button-mini {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
 }
@@ -15972,7 +16038,7 @@ Padding
 Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Rounded Button
+Rounded button-small
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -15992,66 +16058,73 @@ button-small/styles.less
   height: 32px;
   border-radius: 4px;
   /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
     Button Dropdown (.button-dropdown)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-    Button Rounded (.button-rounded)
+    Rounded Button (.button-rounded)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
       Button Content
       ----------------------------------------------------------------------------- */
 }
-.button-small.button-small-narrow {
+.button-small.button-narrow {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.button-small.button-small-narrow-left {
+.button-small.button-narrow-left,
+.button-small.button-narrow-left {
   padding-left: 0.5rem;
 }
-.button-small.button-small-narrow-right {
+.button-small.button-narrow-right,
+.button-small.button-narrow-right {
   padding-right: 0.5rem;
 }
-.button-small.button-small-wide {
+.button-small.button-wide {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.button-small.button-small-wide-left {
+.button-small.button-wide-left,
+.button-small.button-wide-left {
   padding-left: 2rem;
 }
-.button-small.button-small-wide-right {
+.button-small.button-wide-right,
+.button-small.button-wide-right {
   padding-right: 2rem;
 }
 .button-small.button-dropdown:after,
 .button-small.dropdown-toggle:after {
+  margin-left: 0.25rem;
+  margin-top: 2px;
   border-right-width: 3.78947368px;
   border-left-width: 3.78947368px;
   border-top-width: 4.21052632px;
   border-bottom-width: 0px;
-  margin-left: 0.25rem;
-  margin-top: 2px;
 }
 .button-small.button-rounded {
   border-radius: 1000px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
 }
-.button-small.button-rounded.button-small-narrow {
+.button-small.button-rounded.button-narrow {
   padding-left: 0.6rem;
 }
-.button-small.button-rounded.button-small-wide {
+.button-small.button-rounded.button-wide {
   padding-left: 2.4rem;
 }
-.button-small.button-rounded.button-small-narrow {
+.button-small.button-rounded.button-narrow {
   padding-right: 0.6rem;
 }
-.button-small.button-rounded.button-small-wide {
+.button-small.button-rounded.button-wide {
   padding-right: 2.4rem;
 }
 .button-small > * {
   padding-right: 0.25rem;
 }
 /* -----------------------------------------------------------------------------
-    Button group
+    Button Group (.button-group)
     ----------------------------------------------------------------------------- */
 .button-group {
   /* -----------------------------------------------------------------------------
@@ -16096,14 +16169,17 @@ button-small/styles.less
       ----------------------------------------------------------------------------- */
   .button-small {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16112,7 +16188,7 @@ button-small/styles.less
   }
   .button-group .button-small {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
 }
@@ -16128,64 +16204,71 @@ button-small/styles.less
     padding-right: 1.1rem;
     height: 35.2px;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Button Content
           ----------------------------------------------------------------------------- */
   }
-  .button-small.button-small-narrow {
+  .button-small.button-narrow {
     padding-left: 0.55rem;
     padding-right: 0.55rem;
   }
-  .button-small.button-small-narrow-left {
+  .button-small.button-narrow-left,
+  .button-small.button-narrow-left-screen-medium {
     padding-left: 0.55rem;
   }
-  .button-small.button-small-narrow-right {
+  .button-small.button-narrow-right,
+  .button-small.button-narrow-right-screen-medium {
     padding-right: 0.55rem;
   }
-  .button-small.button-small-wide {
+  .button-small.button-wide {
     padding-left: 2.2rem;
     padding-right: 2.2rem;
   }
-  .button-small.button-small-wide-left {
+  .button-small.button-wide-left,
+  .button-small.button-wide-left-screen-medium {
     padding-left: 2.2rem;
   }
-  .button-small.button-small-wide-right {
+  .button-small.button-wide-right,
+  .button-small.button-wide-right-screen-medium {
     padding-right: 2.2rem;
   }
   .button-small.button-dropdown:after,
   .button-small.dropdown-toggle:after {
+    margin-left: 0.275rem;
     border-right-width: 4.16842105px;
     border-left-width: 4.16842105px;
     border-top-width: 4.63157895px;
     border-bottom-width: 0px;
-    margin-left: 0.275rem;
   }
   .button-small.button-rounded {
     padding-left: 1.32rem;
     padding-right: 1.32rem;
   }
-  .button-small.button-rounded.button-small-narrow {
+  .button-small.button-rounded.button-narrow {
     padding-left: 0.66rem;
   }
-  .button-small.button-rounded.button-small-wide {
+  .button-small.button-rounded.button-wide {
     padding-left: 2.64rem;
   }
-  .button-small.button-rounded.button-small-narrow {
+  .button-small.button-rounded.button-narrow {
     padding-right: 0.66rem;
   }
-  .button-small.button-rounded.button-small-wide {
+  .button-small.button-rounded.button-wide {
     padding-right: 2.64rem;
   }
   .button-small > * {
     padding-right: 0.275rem;
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16194,8 +16277,20 @@ button-small/styles.less
   }
   .button-group .button-small {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
+  }
+  .button-group .button-small.button-rounded:not(:first-of-type):not(:last-of-type) {
+    padding-left: 1.1rem;
+  }
+  .button-group .button-small.button-rounded:first-of-type {
+    padding-left: 1.1rem;
+  }
+  .button-group .button-small.button-rounded:first-of-type.button-narrow {
+    padding-left: 0.55rem;
+  }
+  .button-group .button-small.button-rounded:first-of-type.button-wide {
+    padding-left: 2.2rem;
   }
   .button-group .button-small.button-rounded:not(:first-of-type):not(:last-of-type) {
     padding-right: 1.1rem;
@@ -16209,21 +16304,9 @@ button-small/styles.less
   .button-group .button-small.button-rounded:first-of-type.button-wide {
     padding-right: 2.2rem;
   }
-  .button-group .button-small.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 1.1rem;
-  }
-  .button-group .button-small.button-rounded:last-of-type {
-    padding-left: 1.1rem;
-  }
-  .button-group .button-small.button-rounded:last-of-type.button-narrow {
-    padding-left: 0.55rem;
-  }
-  .button-group .button-small.button-rounded:last-of-type.button-wide {
-    padding-left: 2.2rem;
-  }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
+  Screen Size: Small (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
   /* -----------------------------------------------------------------------------
@@ -16234,64 +16317,71 @@ button-small/styles.less
     padding-right: 1.2rem;
     height: 38.4px;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Button Content
           ----------------------------------------------------------------------------- */
   }
-  .button-small.button-small-narrow {
+  .button-small.button-narrow {
     padding-left: 0.6rem;
     padding-right: 0.6rem;
   }
-  .button-small.button-small-narrow-left {
+  .button-small.button-narrow-left,
+  .button-small.button-narrow-left-screen-large {
     padding-left: 0.6rem;
   }
-  .button-small.button-small-narrow-right {
+  .button-small.button-narrow-right,
+  .button-small.button-narrow-right-screen-large {
     padding-right: 0.6rem;
   }
-  .button-small.button-small-wide {
+  .button-small.button-wide {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
   }
-  .button-small.button-small-wide-left {
+  .button-small.button-wide-left,
+  .button-small.button-wide-left-screen-large {
     padding-left: 2.4rem;
   }
-  .button-small.button-small-wide-right {
+  .button-small.button-wide-right,
+  .button-small.button-wide-right-screen-large {
     padding-right: 2.4rem;
   }
   .button-small.button-dropdown:after,
   .button-small.dropdown-toggle:after {
+    margin-left: 0.3rem;
     border-right-width: 4.54736842px;
     border-left-width: 4.54736842px;
     border-top-width: 5.05263158px;
     border-bottom-width: 0px;
-    margin-left: 0.3rem;
   }
   .button-small.button-rounded {
     padding-left: 1.44rem;
     padding-right: 1.44rem;
   }
-  .button-small.button-rounded.button-small-narrow {
+  .button-small.button-rounded.button-narrow {
     padding-left: 0.72rem;
   }
-  .button-small.button-rounded.button-small-wide {
+  .button-small.button-rounded.button-wide {
     padding-left: 2.88rem;
   }
-  .button-small.button-rounded.button-small-narrow {
+  .button-small.button-rounded.button-narrow {
     padding-right: 0.72rem;
   }
-  .button-small.button-rounded.button-small-wide {
+  .button-small.button-rounded.button-wide {
     padding-right: 2.88rem;
   }
   .button-small > * {
     padding-right: 0.3rem;
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16300,8 +16390,20 @@ button-small/styles.less
   }
   .button-group .button-small {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
+  }
+  .button-group .button-small.button-rounded:not(:first-of-type):not(:last-of-type) {
+    padding-left: 1.2rem;
+  }
+  .button-group .button-small.button-rounded:first-of-type {
+    padding-left: 1.2rem;
+  }
+  .button-group .button-small.button-rounded:first-of-type.button-narrow {
+    padding-left: 0.6rem;
+  }
+  .button-group .button-small.button-rounded:first-of-type.button-wide {
+    padding-left: 2.4rem;
   }
   .button-group .button-small.button-rounded:not(:first-of-type):not(:last-of-type) {
     padding-right: 1.2rem;
@@ -16315,21 +16417,9 @@ button-small/styles.less
   .button-group .button-small.button-rounded:first-of-type.button-wide {
     padding-right: 2.4rem;
   }
-  .button-group .button-small.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 1.2rem;
-  }
-  .button-group .button-small.button-rounded:last-of-type {
-    padding-left: 1.2rem;
-  }
-  .button-group .button-small.button-rounded:last-of-type.button-narrow {
-    padding-left: 0.6rem;
-  }
-  .button-group .button-small.button-rounded:last-of-type.button-wide {
-    padding-left: 2.4rem;
-  }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
@@ -16337,14 +16427,17 @@ button-small/styles.less
       ----------------------------------------------------------------------------- */
   .button-small {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16353,7 +16446,7 @@ button-small/styles.less
   }
   .button-group .button-small {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
 }
@@ -16389,7 +16482,7 @@ Padding
 Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Rounded Button
+Rounded button-large
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -16403,72 +16496,79 @@ button-large/styles.less
   ----------------------------------------------------------------------------- */
 .button-large {
   font-size: 1.1rem;
-  line-height: 1.1rem;
+  line-height: 1.21rem;
   padding-left: 2rem;
   padding-right: 2rem;
   height: 46px;
   border-radius: 6px;
   /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
     Button Dropdown (.button-dropdown)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-    Button Rounded (.button-rounded)
+    Rounded Button (.button-rounded)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
       Button Content
       ----------------------------------------------------------------------------- */
 }
-.button-large.button-large-narrow {
+.button-large.button-narrow {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.button-large.button-large-narrow-left {
+.button-large.button-narrow-left,
+.button-large.button-narrow-left {
   padding-left: 1rem;
 }
-.button-large.button-large-narrow-right {
+.button-large.button-narrow-right,
+.button-large.button-narrow-right {
   padding-right: 1rem;
 }
-.button-large.button-large-wide {
+.button-large.button-wide {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-.button-large.button-large-wide-left {
+.button-large.button-wide-left,
+.button-large.button-wide-left {
   padding-left: 4rem;
 }
-.button-large.button-large-wide-right {
+.button-large.button-wide-right,
+.button-large.button-wide-right {
   padding-right: 4rem;
 }
 .button-large.button-dropdown:after,
 .button-large.dropdown-toggle:after {
+  margin-left: 0.5rem;
+  margin-top: 2px;
   border-right-width: 5.44736842px;
   border-left-width: 5.44736842px;
   border-top-width: 6.05263158px;
   border-bottom-width: 0px;
-  margin-left: 0.5rem;
-  margin-top: 2px;
 }
 .button-large.button-rounded {
   border-radius: 1000px;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
 }
-.button-large.button-rounded.button-large-narrow {
+.button-large.button-rounded.button-narrow {
   padding-left: 1.2rem;
 }
-.button-large.button-rounded.button-large-wide {
+.button-large.button-rounded.button-wide {
   padding-left: 4.8rem;
 }
-.button-large.button-rounded.button-large-narrow {
+.button-large.button-rounded.button-narrow {
   padding-right: 1.2rem;
 }
-.button-large.button-rounded.button-large-wide {
+.button-large.button-rounded.button-wide {
   padding-right: 4.8rem;
 }
 .button-large > * {
   padding-right: 0.5rem;
 }
 /* -----------------------------------------------------------------------------
-    Button group
+    Button Group (.button-group)
     ----------------------------------------------------------------------------- */
 .button-group {
   /* -----------------------------------------------------------------------------
@@ -16513,14 +16613,17 @@ button-large/styles.less
       ----------------------------------------------------------------------------- */
   .button-large {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16529,7 +16632,7 @@ button-large/styles.less
   }
   .button-group .button-large {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
 }
@@ -16545,64 +16648,71 @@ button-large/styles.less
     padding-right: 2.2rem;
     height: 50.6px;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Button Content
           ----------------------------------------------------------------------------- */
   }
-  .button-large.button-large-narrow {
+  .button-large.button-narrow {
     padding-left: 1.1rem;
     padding-right: 1.1rem;
   }
-  .button-large.button-large-narrow-left {
+  .button-large.button-narrow-left,
+  .button-large.button-narrow-left-screen-medium {
     padding-left: 1.1rem;
   }
-  .button-large.button-large-narrow-right {
+  .button-large.button-narrow-right,
+  .button-large.button-narrow-right-screen-medium {
     padding-right: 1.1rem;
   }
-  .button-large.button-large-wide {
+  .button-large.button-wide {
     padding-left: 4.4rem;
     padding-right: 4.4rem;
   }
-  .button-large.button-large-wide-left {
+  .button-large.button-wide-left,
+  .button-large.button-wide-left-screen-medium {
     padding-left: 4.4rem;
   }
-  .button-large.button-large-wide-right {
+  .button-large.button-wide-right,
+  .button-large.button-wide-right-screen-medium {
     padding-right: 4.4rem;
   }
   .button-large.button-dropdown:after,
   .button-large.dropdown-toggle:after {
+    margin-left: 0.55rem;
     border-right-width: 5.99210526px;
     border-left-width: 5.99210526px;
     border-top-width: 6.65789474px;
     border-bottom-width: 0px;
-    margin-left: 0.55rem;
   }
   .button-large.button-rounded {
     padding-left: 2.64rem;
     padding-right: 2.64rem;
   }
-  .button-large.button-rounded.button-large-narrow {
+  .button-large.button-rounded.button-narrow {
     padding-left: 1.32rem;
   }
-  .button-large.button-rounded.button-large-wide {
+  .button-large.button-rounded.button-wide {
     padding-left: 5.28rem;
   }
-  .button-large.button-rounded.button-large-narrow {
+  .button-large.button-rounded.button-narrow {
     padding-right: 1.32rem;
   }
-  .button-large.button-rounded.button-large-wide {
+  .button-large.button-rounded.button-wide {
     padding-right: 5.28rem;
   }
   .button-large > * {
     padding-right: 0.55rem;
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16611,8 +16721,20 @@ button-large/styles.less
   }
   .button-group .button-large {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
+  }
+  .button-group .button-large.button-rounded:not(:first-of-type):not(:last-of-type) {
+    padding-left: 2.2rem;
+  }
+  .button-group .button-large.button-rounded:first-of-type {
+    padding-left: 2.2rem;
+  }
+  .button-group .button-large.button-rounded:first-of-type.button-narrow {
+    padding-left: 1.1rem;
+  }
+  .button-group .button-large.button-rounded:first-of-type.button-wide {
+    padding-left: 4.4rem;
   }
   .button-group .button-large.button-rounded:not(:first-of-type):not(:last-of-type) {
     padding-right: 2.2rem;
@@ -16626,21 +16748,9 @@ button-large/styles.less
   .button-group .button-large.button-rounded:first-of-type.button-wide {
     padding-right: 4.4rem;
   }
-  .button-group .button-large.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 2.2rem;
-  }
-  .button-group .button-large.button-rounded:last-of-type {
-    padding-left: 2.2rem;
-  }
-  .button-group .button-large.button-rounded:last-of-type.button-narrow {
-    padding-left: 1.1rem;
-  }
-  .button-group .button-large.button-rounded:last-of-type.button-wide {
-    padding-left: 4.4rem;
-  }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
+  Screen Size: Small (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
   /* -----------------------------------------------------------------------------
@@ -16651,64 +16761,71 @@ button-large/styles.less
     padding-right: 2.4rem;
     height: 55.2px;
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Button Content
           ----------------------------------------------------------------------------- */
   }
-  .button-large.button-large-narrow {
+  .button-large.button-narrow {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
   }
-  .button-large.button-large-narrow-left {
+  .button-large.button-narrow-left,
+  .button-large.button-narrow-left-screen-large {
     padding-left: 1.2rem;
   }
-  .button-large.button-large-narrow-right {
+  .button-large.button-narrow-right,
+  .button-large.button-narrow-right-screen-large {
     padding-right: 1.2rem;
   }
-  .button-large.button-large-wide {
+  .button-large.button-wide {
     padding-left: 4.8rem;
     padding-right: 4.8rem;
   }
-  .button-large.button-large-wide-left {
+  .button-large.button-wide-left,
+  .button-large.button-wide-left-screen-large {
     padding-left: 4.8rem;
   }
-  .button-large.button-large-wide-right {
+  .button-large.button-wide-right,
+  .button-large.button-wide-right-screen-large {
     padding-right: 4.8rem;
   }
   .button-large.button-dropdown:after,
   .button-large.dropdown-toggle:after {
+    margin-left: 0.6rem;
     border-right-width: 6.53684211px;
     border-left-width: 6.53684211px;
     border-top-width: 7.26315789px;
     border-bottom-width: 0px;
-    margin-left: 0.6rem;
   }
   .button-large.button-rounded {
     padding-left: 2.88rem;
     padding-right: 2.88rem;
   }
-  .button-large.button-rounded.button-large-narrow {
+  .button-large.button-rounded.button-narrow {
     padding-left: 1.44rem;
   }
-  .button-large.button-rounded.button-large-wide {
+  .button-large.button-rounded.button-wide {
     padding-left: 5.76rem;
   }
-  .button-large.button-rounded.button-large-narrow {
+  .button-large.button-rounded.button-narrow {
     padding-right: 1.44rem;
   }
-  .button-large.button-rounded.button-large-wide {
+  .button-large.button-rounded.button-wide {
     padding-right: 5.76rem;
   }
   .button-large > * {
     padding-right: 0.6rem;
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16717,8 +16834,20 @@ button-large/styles.less
   }
   .button-group .button-large {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
+  }
+  .button-group .button-large.button-rounded:not(:first-of-type):not(:last-of-type) {
+    padding-left: 2.4rem;
+  }
+  .button-group .button-large.button-rounded:first-of-type {
+    padding-left: 2.4rem;
+  }
+  .button-group .button-large.button-rounded:first-of-type.button-narrow {
+    padding-left: 1.2rem;
+  }
+  .button-group .button-large.button-rounded:first-of-type.button-wide {
+    padding-left: 4.8rem;
   }
   .button-group .button-large.button-rounded:not(:first-of-type):not(:last-of-type) {
     padding-right: 2.4rem;
@@ -16732,21 +16861,9 @@ button-large/styles.less
   .button-group .button-large.button-rounded:first-of-type.button-wide {
     padding-right: 4.8rem;
   }
-  .button-group .button-large.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 2.4rem;
-  }
-  .button-group .button-large.button-rounded:last-of-type {
-    padding-left: 2.4rem;
-  }
-  .button-group .button-large.button-rounded:last-of-type.button-narrow {
-    padding-left: 1.2rem;
-  }
-  .button-group .button-large.button-rounded:last-of-type.button-wide {
-    padding-left: 4.8rem;
-  }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
@@ -16754,14 +16871,17 @@ button-large/styles.less
       ----------------------------------------------------------------------------- */
   .button-large {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16770,7 +16890,7 @@ button-large/styles.less
   }
   .button-group .button-large {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
 }
@@ -16806,7 +16926,7 @@ Padding
 Layout Variants
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-Rounded Button
+Rounded button-jumbo
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -16821,71 +16941,78 @@ button-jumbo/styles.less
 .button-jumbo {
   font-size: 1.3rem;
   line-height: 1.3rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   height: 56px;
   border-radius: 7px;
+  /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
     Button Dropdown (.button-dropdown)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
-    Button Rounded (.button-rounded)
+    Rounded Button (.button-rounded)
     ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
       Button Content
       ----------------------------------------------------------------------------- */
 }
-.button-jumbo.button-jumbo-narrow {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+.button-jumbo.button-narrow {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.button-jumbo.button-jumbo-narrow-left {
-  padding-left: 1.25rem;
+.button-jumbo.button-narrow-left,
+.button-jumbo.button-narrow-left {
+  padding-left: 1rem;
 }
-.button-jumbo.button-jumbo-narrow-right {
-  padding-right: 1.25rem;
+.button-jumbo.button-narrow-right,
+.button-jumbo.button-narrow-right {
+  padding-right: 1rem;
 }
-.button-jumbo.button-jumbo-wide {
-  padding-left: 5rem;
-  padding-right: 5rem;
+.button-jumbo.button-wide {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
-.button-jumbo.button-jumbo-wide-left {
-  padding-left: 5rem;
+.button-jumbo.button-wide-left,
+.button-jumbo.button-wide-left {
+  padding-left: 4rem;
 }
-.button-jumbo.button-jumbo-wide-right {
-  padding-right: 5rem;
+.button-jumbo.button-wide-right,
+.button-jumbo.button-wide-right {
+  padding-right: 4rem;
 }
 .button-jumbo.button-dropdown:after,
 .button-jumbo.dropdown-toggle:after {
+  margin-left: 0.5rem;
+  margin-top: 2px;
   border-right-width: 6.63157895px;
   border-left-width: 6.63157895px;
   border-top-width: 7.36842105px;
   border-bottom-width: 0px;
-  margin-left: 0.625rem;
-  margin-top: 2px;
 }
 .button-jumbo.button-rounded {
   border-radius: 1000px;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
-.button-jumbo.button-rounded.button-jumbo-narrow {
-  padding-left: 1.5rem;
+.button-jumbo.button-rounded.button-narrow {
+  padding-left: 1.2rem;
 }
-.button-jumbo.button-rounded.button-jumbo-wide {
-  padding-left: 6rem;
+.button-jumbo.button-rounded.button-wide {
+  padding-left: 4.8rem;
 }
-.button-jumbo.button-rounded.button-jumbo-narrow {
-  padding-right: 1.5rem;
+.button-jumbo.button-rounded.button-narrow {
+  padding-right: 1.2rem;
 }
-.button-jumbo.button-rounded.button-jumbo-wide {
-  padding-right: 6rem;
+.button-jumbo.button-rounded.button-wide {
+  padding-right: 4.8rem;
 }
 .button-jumbo > * {
   padding-right: 0.5rem;
 }
 /* -----------------------------------------------------------------------------
-    Button group
+    Button Group (.button-group)
     ----------------------------------------------------------------------------- */
 .button-group {
   /* -----------------------------------------------------------------------------
@@ -16898,28 +17025,28 @@ button-jumbo/styles.less
           ----------------------------------------------------------------------------- */
 }
 .button-group .button-jumbo.button-rounded:not(:first-of-type):not(:last-of-type) {
-  padding-right: 2.5rem;
+  padding-right: 2rem;
 }
 .button-group .button-jumbo.button-rounded:first-of-type {
-  padding-right: 2.5rem;
+  padding-right: 2rem;
 }
 .button-group .button-jumbo.button-rounded:first-of-type.button-narrow {
-  padding-right: 1.25rem;
+  padding-right: 1rem;
 }
 .button-group .button-jumbo.button-rounded:first-of-type.button-wide {
-  padding-right: 5rem;
+  padding-right: 4rem;
 }
 .button-group .button-jumbo.button-rounded:not(:first-of-type):not(:last-of-type) {
-  padding-left: 2.5rem;
+  padding-left: 2rem;
 }
 .button-group .button-jumbo.button-rounded:last-of-type {
-  padding-left: 2.5rem;
+  padding-left: 2rem;
 }
 .button-group .button-jumbo.button-rounded:last-of-type.button-narrow {
-  padding-left: 1.25rem;
+  padding-left: 1rem;
 }
 .button-group .button-jumbo.button-rounded:last-of-type.button-wide {
-  padding-left: 5rem;
+  padding-left: 4rem;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Small (@layout-screen-small-min-width) and wider
@@ -16930,14 +17057,17 @@ button-jumbo/styles.less
       ----------------------------------------------------------------------------- */
   .button-jumbo {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -16946,7 +17076,7 @@ button-jumbo/styles.less
   }
   .button-group .button-jumbo {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
 }
@@ -16958,68 +17088,75 @@ button-jumbo/styles.less
       Button Jumbo (.button-jumbo)
       ----------------------------------------------------------------------------- */
   .button-jumbo {
-    padding-left: 2.75rem;
-    padding-right: 2.75rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
     height: 61.6px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Button Content
           ----------------------------------------------------------------------------- */
   }
-  .button-jumbo.button-jumbo-narrow {
-    padding-left: 1.375rem;
-    padding-right: 1.375rem;
+  .button-jumbo.button-narrow {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
   }
-  .button-jumbo.button-jumbo-narrow-left {
-    padding-left: 1.375rem;
+  .button-jumbo.button-narrow-left,
+  .button-jumbo.button-narrow-left-screen-medium {
+    padding-left: 1.1rem;
   }
-  .button-jumbo.button-jumbo-narrow-right {
-    padding-right: 1.375rem;
+  .button-jumbo.button-narrow-right,
+  .button-jumbo.button-narrow-right-screen-medium {
+    padding-right: 1.1rem;
   }
-  .button-jumbo.button-jumbo-wide {
-    padding-left: 5.5rem;
-    padding-right: 5.5rem;
+  .button-jumbo.button-wide {
+    padding-left: 4.4rem;
+    padding-right: 4.4rem;
   }
-  .button-jumbo.button-jumbo-wide-left {
-    padding-left: 5.5rem;
+  .button-jumbo.button-wide-left,
+  .button-jumbo.button-wide-left-screen-medium {
+    padding-left: 4.4rem;
   }
-  .button-jumbo.button-jumbo-wide-right {
-    padding-right: 5.5rem;
+  .button-jumbo.button-wide-right,
+  .button-jumbo.button-wide-right-screen-medium {
+    padding-right: 4.4rem;
   }
   .button-jumbo.button-dropdown:after,
   .button-jumbo.dropdown-toggle:after {
+    margin-left: 0.55rem;
     border-right-width: 7.29473684px;
     border-left-width: 7.29473684px;
     border-top-width: 8.10526316px;
     border-bottom-width: 0px;
-    margin-left: 0.6875rem;
   }
   .button-jumbo.button-rounded {
-    padding-left: 3.3rem;
-    padding-right: 3.3rem;
+    padding-left: 2.64rem;
+    padding-right: 2.64rem;
   }
-  .button-jumbo.button-rounded.button-jumbo-narrow {
-    padding-left: 1.65rem;
+  .button-jumbo.button-rounded.button-narrow {
+    padding-left: 1.32rem;
   }
-  .button-jumbo.button-rounded.button-jumbo-wide {
-    padding-left: 6.6rem;
+  .button-jumbo.button-rounded.button-wide {
+    padding-left: 5.28rem;
   }
-  .button-jumbo.button-rounded.button-jumbo-narrow {
-    padding-right: 1.65rem;
+  .button-jumbo.button-rounded.button-narrow {
+    padding-right: 1.32rem;
   }
-  .button-jumbo.button-rounded.button-jumbo-wide {
-    padding-right: 6.6rem;
+  .button-jumbo.button-rounded.button-wide {
+    padding-right: 5.28rem;
   }
   .button-jumbo > * {
     padding-right: 0.55rem;
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -17028,104 +17165,111 @@ button-jumbo/styles.less
   }
   .button-group .button-jumbo {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
   .button-group .button-jumbo.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-right: 2.75rem;
+    padding-left: 2.2rem;
   }
   .button-group .button-jumbo.button-rounded:first-of-type {
-    padding-right: 2.75rem;
+    padding-left: 2.2rem;
   }
   .button-group .button-jumbo.button-rounded:first-of-type.button-narrow {
-    padding-right: 1.375rem;
+    padding-left: 1.1rem;
   }
   .button-group .button-jumbo.button-rounded:first-of-type.button-wide {
-    padding-right: 5.5rem;
+    padding-left: 4.4rem;
   }
   .button-group .button-jumbo.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 2.75rem;
+    padding-right: 2.2rem;
   }
-  .button-group .button-jumbo.button-rounded:last-of-type {
-    padding-left: 2.75rem;
+  .button-group .button-jumbo.button-rounded:first-of-type {
+    padding-right: 2.2rem;
   }
-  .button-group .button-jumbo.button-rounded:last-of-type.button-narrow {
-    padding-left: 1.375rem;
+  .button-group .button-jumbo.button-rounded:first-of-type.button-narrow {
+    padding-right: 1.1rem;
   }
-  .button-group .button-jumbo.button-rounded:last-of-type.button-wide {
-    padding-left: 5.5rem;
+  .button-group .button-jumbo.button-rounded:first-of-type.button-wide {
+    padding-right: 4.4rem;
   }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
+  Screen Size: Small (@layout-screen-large-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
   /* -----------------------------------------------------------------------------
       Button Jumbo (.button-jumbo)
       ----------------------------------------------------------------------------- */
   .button-jumbo {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
     height: 67.2px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
           Button Content
           ----------------------------------------------------------------------------- */
   }
-  .button-jumbo.button-jumbo-narrow {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .button-jumbo.button-narrow {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
-  .button-jumbo.button-jumbo-narrow-left {
-    padding-left: 1.5rem;
+  .button-jumbo.button-narrow-left,
+  .button-jumbo.button-narrow-left-screen-large {
+    padding-left: 1.2rem;
   }
-  .button-jumbo.button-jumbo-narrow-right {
-    padding-right: 1.5rem;
+  .button-jumbo.button-narrow-right,
+  .button-jumbo.button-narrow-right-screen-large {
+    padding-right: 1.2rem;
   }
-  .button-jumbo.button-jumbo-wide {
-    padding-left: 6rem;
-    padding-right: 6rem;
+  .button-jumbo.button-wide {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
   }
-  .button-jumbo.button-jumbo-wide-left {
-    padding-left: 6rem;
+  .button-jumbo.button-wide-left,
+  .button-jumbo.button-wide-left-screen-large {
+    padding-left: 4.8rem;
   }
-  .button-jumbo.button-jumbo-wide-right {
-    padding-right: 6rem;
+  .button-jumbo.button-wide-right,
+  .button-jumbo.button-wide-right-screen-large {
+    padding-right: 4.8rem;
   }
   .button-jumbo.button-dropdown:after,
   .button-jumbo.dropdown-toggle:after {
+    margin-left: 0.6rem;
     border-right-width: 7.95789474px;
     border-left-width: 7.95789474px;
     border-top-width: 8.84210526px;
     border-bottom-width: 0px;
-    margin-left: 0.75rem;
   }
   .button-jumbo.button-rounded {
-    padding-left: 3.6rem;
-    padding-right: 3.6rem;
+    padding-left: 2.88rem;
+    padding-right: 2.88rem;
   }
-  .button-jumbo.button-rounded.button-jumbo-narrow {
-    padding-left: 1.8rem;
+  .button-jumbo.button-rounded.button-narrow {
+    padding-left: 1.44rem;
   }
-  .button-jumbo.button-rounded.button-jumbo-wide {
-    padding-left: 7.2rem;
+  .button-jumbo.button-rounded.button-wide {
+    padding-left: 5.76rem;
   }
-  .button-jumbo.button-rounded.button-jumbo-narrow {
-    padding-right: 1.8rem;
+  .button-jumbo.button-rounded.button-narrow {
+    padding-right: 1.44rem;
   }
-  .button-jumbo.button-rounded.button-jumbo-wide {
-    padding-right: 7.2rem;
+  .button-jumbo.button-rounded.button-wide {
+    padding-right: 5.76rem;
   }
   .button-jumbo > * {
     padding-right: 0.6rem;
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -17134,36 +17278,36 @@ button-jumbo/styles.less
   }
   .button-group .button-jumbo {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
   .button-group .button-jumbo.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-right: 3rem;
+    padding-left: 2.4rem;
   }
   .button-group .button-jumbo.button-rounded:first-of-type {
-    padding-right: 3rem;
+    padding-left: 2.4rem;
   }
   .button-group .button-jumbo.button-rounded:first-of-type.button-narrow {
-    padding-right: 1.5rem;
+    padding-left: 1.2rem;
   }
   .button-group .button-jumbo.button-rounded:first-of-type.button-wide {
-    padding-right: 6rem;
+    padding-left: 4.8rem;
   }
   .button-group .button-jumbo.button-rounded:not(:first-of-type):not(:last-of-type) {
-    padding-left: 3rem;
+    padding-right: 2.4rem;
   }
-  .button-group .button-jumbo.button-rounded:last-of-type {
-    padding-left: 3rem;
+  .button-group .button-jumbo.button-rounded:first-of-type {
+    padding-right: 2.4rem;
   }
-  .button-group .button-jumbo.button-rounded:last-of-type.button-narrow {
-    padding-left: 1.5rem;
+  .button-group .button-jumbo.button-rounded:first-of-type.button-narrow {
+    padding-right: 1.2rem;
   }
-  .button-group .button-jumbo.button-rounded:last-of-type.button-wide {
-    padding-left: 6rem;
+  .button-group .button-jumbo.button-rounded:first-of-type.button-wide {
+    padding-right: 4.8rem;
   }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
@@ -17171,14 +17315,17 @@ button-jumbo/styles.less
       ----------------------------------------------------------------------------- */
   .button-jumbo {
     /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
         Button Dropdown (.button-dropdown)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Button (.button-rounded)
+          Button Rounded (.button-rounded)
           ----------------------------------------------------------------------------- */
   }
   /* -----------------------------------------------------------------------------
-        Button group
+        Button Group (.button-group)
         ----------------------------------------------------------------------------- */
   .button-group {
     /* -----------------------------------------------------------------------------
@@ -17187,7 +17334,7 @@ button-jumbo/styles.less
   }
   .button-group .button-jumbo {
     /* -----------------------------------------------------------------------------
-              Button Rounded (.button-rounded)
+              Button Rounded (.button-rouded)
               ----------------------------------------------------------------------------- */
   }
 }
@@ -26161,7 +26308,7 @@ Header
   width: auto;
   width: 62px;
   height: 16px;
-  background-image: url("../images/layout/header/header-logo.png?cache=850106789");
+  background-image: url("../images/layout/header/header-logo.png?cache=385858996");
   background-size: 100% 100%;
   color: #ffffff;
   font-weight: 500;
@@ -26236,7 +26383,7 @@ Header
       ------------------------------------------------------------------------*/
   }
   .header .header-logo {
-    background-image: url("../images/layout/header/header-logo@2x.png?cache=399794322");
+    background-image: url("../images/layout/header/header-logo@2x.png?cache=965879867");
   }
 }
 /* -----------------------------------------------------------------------------
