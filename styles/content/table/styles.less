@@ -18,15 +18,24 @@ table/styles.less
 
     width: 100%;
     max-width: 100%;
-    .text-style-variant(table);
-    .text-size-variant(table, null);
-    .shape-layout-variant(table, null);
-    .shape-layout-variant(table, short, null);
-    .shape-layout-variant(table, tall, null);
+    .element-text-style(table);
+    .element-text-size(table, null);
+    .element-spacing(table, null, null);
+    .prop-variant(table, border-collapse, null);
 
-    & when not (@table-border-collapse = null) {
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
 
-      border-collapse: @table-border-collapse;
+    &.table-short {
+
+      .element-spacing(table, short, null);
+
+    }
+
+    &.table-tall {
+
+      .element-spacing(table, tall, null);
 
     }
 
@@ -142,28 +151,18 @@ table/styles.less
     td {
 
       text-align: left;
-      .text-style-variant(table-cell);
-      .text-size-variant(table-cell, null);
+      .element-text-style(table-cell);
+      .element-text-size(table-cell, null);
       .shape-style-variant(table-cell);
-      .shape-layout-variant(table-cell, null);
-
-      & when not (@table-border-collapse = null) {
-
-        border-collapse: @table-border-collapse;
-
-      }
+      .element-spacing(table-cell, null, null);
+      .prop-variant(table, border-collapse, null);
 
       &:before {
 
         content: '';
         display: block;
         float: left;
-
-        & when not (@table-cell-text-line-height = null) {
-
-          height: @table-cell-text-line-height;
-
-        }
+        .prop-variant(table-cell, height, line-height, null, null);
 
       }
 
@@ -172,7 +171,7 @@ table/styles.less
         &:hover {
 
           cursor: pointer;
-          .text-style-variant(table-cell-hover);
+          .element-text-style(table-cell-hover);
           .shape-style-variant(table-cell-hover);
 
         }
@@ -181,7 +180,7 @@ table/styles.less
 
       &.disabled {
 
-        .text-style-variant(table-cell-disabled);
+        .element-text-style(table-cell-disabled);
         .shape-style-variant(table-cell-disabled);
 
       }
@@ -191,14 +190,14 @@ table/styles.less
       &.active,
       &.highlight {
 
-        .text-style-variant(table-cell-active);
+        .element-text-style(table-cell-active);
         .shape-style-variant(table-cell-active);
 
         &.selectable {
 
           &:hover {
 
-            .text-style-variant(table-cell-active-hover);
+            .element-text-style(table-cell-active-hover);
             .shape-style-variant(table-cell-active-hover);
 
           }
@@ -207,7 +206,7 @@ table/styles.less
 
         &.disabled {
 
-          .text-style-variant(table-cell-active-disabled);
+          .element-text-style(table-cell-active-disabled);
           .shape-style-variant(table-cell-active-disabled);
 
         }
@@ -222,18 +221,14 @@ table/styles.less
 
       th {
 
-        .text-style-variant(table-header);
-        .text-size-variant(table-header, null);
+        .element-text-style(table-header);
+        .element-text-size(table-header, null);
         .shape-style-variant(table-header);
-        .shape-layout-variant(table-header, null);
+        .element-spacing(table-header, null, null);
 
         &:before {
 
-          & when not (@table-header-text-line-height = null) {
-
-            height: @table-header-text-line-height;
-
-          }
+          .prop-variant(table-header, height, line-height, null, null);
 
         }
 
@@ -241,7 +236,7 @@ table/styles.less
 
           &:hover {
 
-            .text-style-variant(table-header-hover);
+            .element-text-style(table-header-hover);
             .shape-style-variant(table-header-hover);
 
           }
@@ -250,7 +245,7 @@ table/styles.less
 
         &.disabled {
 
-          .text-style-variant(table-header-disabled);
+          .element-text-style(table-header-disabled);
           .shape-style-variant(table-header-disabled);
 
         }
@@ -260,14 +255,14 @@ table/styles.less
         &.active,
         &.highlight {
 
-          .text-style-variant(table-header-active);
+          .element-text-style(table-header-active);
           .shape-style-variant(table-header-active);
 
           &.selectable {
 
             &:hover {
 
-              .text-style-variant(table-header-active-hover);
+              .element-text-style(table-header-active-hover);
               .shape-style-variant(table-header-active-hover);
 
             }
@@ -276,7 +271,7 @@ table/styles.less
 
           &.disabled {
 
-            .text-style-variant(table-header-active-disabled);
+            .element-text-style(table-header-active-disabled);
             .shape-style-variant(table-header-active-disabled);
 
           }
@@ -297,7 +292,7 @@ table/styles.less
 
           td {
 
-            .text-style-variant(table-cell-hover);
+            .element-text-style(table-cell-hover);
             .shape-style-variant(table-cell-hover);
 
             // Cell Active
@@ -305,7 +300,7 @@ table/styles.less
             &.active,
             &.highlight {
 
-              .text-style-variant(table-cell-active-hover);
+              .element-text-style(table-cell-active-hover);
               .shape-style-variant(table-cell-active-hover);
 
             }
@@ -328,19 +323,19 @@ table/styles.less
 
     .table.table-inverse {
 
-      .text-style-variant(table-inverse);
+      .element-text-style(table-inverse);
 
       th,
       td {
 
-        .text-style-variant(table-cell-inverse);
+        .element-text-style(table-cell-inverse);
         .shape-style-variant(table-cell-inverse);
 
         &.selectable {
 
           &:hover {
 
-            .text-style-variant(table-cell-inverse-hover);
+            .element-text-style(table-cell-inverse-hover);
             .shape-style-variant(table-cell-inverse-hover);
 
           }
@@ -349,7 +344,7 @@ table/styles.less
 
         &.disabled {
 
-          .text-style-variant(table-cell-inverse-disabled);
+          .element-text-style(table-cell-inverse-disabled);
           .shape-style-variant(table-cell-inverse-disabled);
 
         }
@@ -359,14 +354,14 @@ table/styles.less
         &.active,
         &.highlight {
 
-          .text-style-variant(table-cell-inverse-active);
+          .element-text-style(table-cell-inverse-active);
           .shape-style-variant(table-cell-inverse-active);
 
           &.selectable {
 
             &:hover {
 
-              .text-style-variant(table-cell-inverse-active-hover);
+              .element-text-style(table-cell-inverse-active-hover);
               .shape-style-variant(table-cell-inverse-active-hover);
 
             }
@@ -375,7 +370,7 @@ table/styles.less
 
           &.disabled {
 
-            .text-style-variant(table-cell-inverse-active-disabled);
+            .element-text-style(table-cell-inverse-active-disabled);
             .shape-style-variant(table-cell-inverse-active-disabled);
 
           }
@@ -390,14 +385,14 @@ table/styles.less
 
         th {
 
-          .text-style-variant(table-header-inverse);
+          .element-text-style(table-header-inverse);
           .shape-style-variant(table-header-inverse);
 
           &.selectable {
 
             &:hover {
 
-              .text-style-variant(table-header-inverse-hover);
+              .element-text-style(table-header-inverse-hover);
               .shape-style-variant(table-header-inverse-hover);
 
             }
@@ -406,7 +401,7 @@ table/styles.less
 
           &.disabled {
 
-            .text-style-variant(table-header-inverse-disabled);
+            .element-text-style(table-header-inverse-disabled);
             .shape-style-variant(table-header-inverse-disabled);
 
           }
@@ -416,14 +411,14 @@ table/styles.less
           &.active,
           &.highlight {
 
-            .text-style-variant(table-header-inverse-active);
+            .element-text-style(table-header-inverse-active);
             .shape-style-variant(table-header-inverse-active);
 
             &.selectable {
 
               &:hover {
 
-                .text-style-variant(table-header-inverse-active-hover);
+                .element-text-style(table-header-inverse-active-hover);
                 .shape-style-variant(table-header-inverse-active-hover);
 
               }
@@ -432,7 +427,7 @@ table/styles.less
 
             &.disabled {
 
-              .text-style-variant(table-header-inverse-active-disabled);
+              .element-text-style(table-header-inverse-active-disabled);
               .shape-style-variant(table-header-inverse-active-disabled);
 
             }
@@ -453,7 +448,7 @@ table/styles.less
 
             td {
 
-              .text-style-variant(table-cell-inverse-hover);
+              .element-text-style(table-cell-inverse-hover);
               .shape-style-variant(table-cell-inverse-hover);
 
               // Cell Active
@@ -461,7 +456,7 @@ table/styles.less
               &.active,
               &.highlight {
 
-                .text-style-variant(table-cell-inverse-active-hover);
+                .element-text-style(table-cell-inverse-active-hover);
                 .shape-style-variant(table-cell-inverse-active-hover);
 
               }
@@ -947,7 +942,7 @@ table/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@table-enabled) and (@table-scale-screen-small-enabled) {
+    & when (@table-enabled) and (@table-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Table
@@ -955,24 +950,34 @@ table/styles.less
 
       .table {
 
-        .text-size-variant(table, scale-screen-small);
-        .shape-layout-variant(table, scale-screen-small);
-        .shape-layout-variant(table, short, scale-screen-small);
-        .shape-layout-variant(table, tall, scale-screen-small);
+        .element-text-size(table, screen-small);
+        .element-spacing(table, null, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.table-short {
+
+          .element-spacing(table, short, screen-small);
+
+        }
+
+        &.table-tall {
+
+          .element-spacing(table, tall, screen-small);
+
+        }
 
         th,
         td {
 
-          .text-size-variant(table-cell, scale-screen-small);
-          .shape-layout-variant(table-cell, scale-screen-small);
+          .element-text-size(table-cell, screen-small);
+          .element-spacing(table-cell, null, screen-small);
 
           &:before {
 
-            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-small = null) {
-
-              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-small;
-
-            }
+            .prop-variant(table-cell, height, line-height, null, screen-small);
 
           }
 
@@ -996,7 +1001,7 @@ table/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@table-enabled) and (@table-scale-screen-medium-enabled) {
+    & when (@table-enabled) and (@table-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Table
@@ -1004,24 +1009,34 @@ table/styles.less
 
       .table {
 
-        .text-size-variant(table, scale-screen-medium);
-        .shape-layout-variant(table, scale-screen-medium);
-        .shape-layout-variant(table, short, scale-screen-medium);
-        .shape-layout-variant(table, tall, scale-screen-medium);
+        .element-text-size(table, screen-medium);
+        .element-spacing(table, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.table-short {
+
+          .element-spacing(table, short, screen-medium);
+
+        }
+
+        &.table-tall {
+
+          .element-spacing(table, tall, screen-medium);
+
+        }
 
         th,
         td {
 
-          .text-size-variant(table-cell, scale-screen-medium);
-          .shape-layout-variant(table-cell, scale-screen-medium);
+          .element-text-size(table-cell, screen-medium);
+          .element-spacing(table-cell, null, screen-medium);
 
           &:before {
 
-            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-medium = null) {
-
-              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-medium;
-
-            }
+            .prop-variant(table-cell, height, line-height, null, screen-medium);
 
           }
 
@@ -1045,7 +1060,7 @@ table/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@table-enabled) and (@table-scale-screen-large-enabled) {
+    & when (@table-enabled) and (@table-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Table
@@ -1053,24 +1068,34 @@ table/styles.less
 
       .table {
 
-        .text-size-variant(table, scale-screen-large);
-        .shape-layout-variant(table, scale-screen-large);
-        .shape-layout-variant(table, short, scale-screen-large);
-        .shape-layout-variant(table, tall, scale-screen-large);
+        .element-text-size(table, screen-large);
+        .element-spacing(table, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.table-short {
+
+          .element-spacing(table, short, screen-large);
+
+        }
+
+        &.table-tall {
+
+          .element-spacing(table, tall, screen-large);
+
+        }
 
         th,
         td {
 
-          .text-size-variant(table-cell, scale-screen-large);
-          .shape-layout-variant(table-cell, scale-screen-large);
+          .element-text-size(table-cell, screen-large);
+          .element-spacing(table-cell, null, screen-large);
 
           &:before {
 
-            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-large = null) {
-
-              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-large;
-
-            }
+            .prop-variant(table-cell, height, line-height, null, screen-large);
 
           }
 
@@ -1094,7 +1119,7 @@ table/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@table-enabled) and (@table-scale-screen-jumbo-enabled) {
+    & when (@table-enabled) and (@table-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Table
@@ -1102,24 +1127,34 @@ table/styles.less
 
       .table {
 
-        .text-size-variant(table, scale-screen-jumbo);
-        .shape-layout-variant(table, scale-screen-jumbo);
-        .shape-layout-variant(table, short, scale-screen-jumbo);
-        .shape-layout-variant(table, tall, scale-screen-jumbo);
+        .element-text-size(table, screen-jumbo);
+        .element-spacing(table, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.table-short {
+
+          .element-spacing(table, short, screen-jumbo);
+
+        }
+
+        &.table-tall {
+
+          .element-spacing(table, tall, screen-jumbo);
+
+        }
 
         th,
         td {
 
-          .text-size-variant(table-cell, scale-screen-jumbo);
-          .shape-layout-variant(table-cell, scale-screen-jumbo);
+          .element-text-size(table-cell, screen-jumbo);
+          .element-spacing(table-cell, null, screen-jumbo);
 
           &:before {
 
-            & when not (@table-cell-text-line-height = null) and not (@table-cell-text-line-height-scale-screen-jumbo = null) {
-
-              height: @table-cell-text-line-height * @table-cell-text-line-height-scale-screen-jumbo;
-
-            }
+            .prop-variant(table-cell, height, line-height, null, screen-jumbo);
 
           }
 

@@ -16,14 +16,23 @@ table-small/styles.less
 
   .table.table-small {
 
-    .text-size-variant(table-small, null);
-    .shape-layout-variant(table-small, null);
-    .shape-layout-variant(table-small, short, null);
-    .shape-layout-variant(table-small, tall, null);
+    .element-text-size(table-small, null);
+    .element-spacing(table-small, null, null);
+    .prop-variant(table-small, border-collapse, null);
 
-    & when not (@table-small-border-collapse = null) {
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
 
-      border-collapse: @table-small-border-collapse;
+    &.short {
+
+      .element-spacing(table-small, short, null);
+
+    }
+
+    &.tall {
+
+      .element-spacing(table-small, tall, null);
 
     }
 
@@ -138,22 +147,13 @@ table-small/styles.less
     th,
     td {
 
-      .text-size-variant(table-small-cell, null);
-      .shape-layout-variant(table-small-cell, null);
-
-      & when not (@table-small-border-collapse = null) {
-
-        border-collapse: @table-small-border-collapse;
-
-      }
+      .element-text-size(table-small-cell, null);
+      .element-spacing(table-small-cell, null, null);
+      .prop-variant(table-small, border-collapse, null);
 
       &:before {
 
-        & when not (@table-small-cell-text-line-height = null) {
-
-          height: @table-small-cell-text-line-height;
-
-        }
+        .prop-variant(table-small-cell, height, line-height, null, null);
 
       }
 
@@ -165,16 +165,12 @@ table-small/styles.less
 
       th {
 
-        .text-size-variant(table-small-header, null);
-        .shape-layout-variant(table-small-header, null);
+        .element-text-size(table-small-header, null);
+        .element-spacing(table-small-header, null, null);
 
         &:before {
 
-          & when not (@table-small-header-text-line-height = null) {
-
-            height: @table-small-header-text-line-height;
-
-          }
+          .prop-variant(table-small-header, height, line-height, null, null);
 
         }
 
@@ -196,7 +192,7 @@ table-small/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@table-small-enabled) and (@table-small-scale-screen-small-enabled) {
+    & when (@table-small-enabled) and (@table-small-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Table
@@ -204,24 +200,34 @@ table-small/styles.less
 
       .table.table-small {
 
-        .text-size-variant(table-small, scale-screen-small);
-        .shape-layout-variant(table-small, scale-screen-small);
-        .shape-layout-variant(table-small, short, scale-screen-small);
-        .shape-layout-variant(table-small, tall, scale-screen-small);
+        .element-text-size(table-small, screen-small);
+        .element-spacing(table-small, null, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(table-small, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .element-spacing(table-small, tall, screen-small);
+
+        }
 
         th,
         td {
 
-          .text-size-variant(table-small-cell, scale-screen-small);
-          .shape-layout-variant(table-small-cell, scale-screen-small);
+          .element-text-size(table-small-cell, screen-small);
+          .element-spacing(table-small-cell, null, screen-small);
 
           &:before {
 
-            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-small = null) {
-
-              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-small;
-
-            }
+            .prop-variant(table-small-cell, height, line-height, null, screen-small);
 
           }
 
@@ -245,7 +251,7 @@ table-small/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@table-small-enabled) and (@table-small-scale-screen-medium-enabled) {
+    & when (@table-small-enabled) and (@table-small-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Table
@@ -253,24 +259,34 @@ table-small/styles.less
 
       .table.table-small {
 
-        .text-size-variant(table-small, scale-screen-medium);
-        .shape-layout-variant(table-small, scale-screen-medium);
-        .shape-layout-variant(table-small, short, scale-screen-medium);
-        .shape-layout-variant(table-small, tall, scale-screen-medium);
+        .element-text-size(table-small, screen-medium);
+        .element-spacing(table-small, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(table-small, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(table-small, tall, screen-medium);
+
+        }
 
         th,
         td {
 
-          .text-size-variant(table-small-cell, scale-screen-medium);
-          .shape-layout-variant(table-small-cell, scale-screen-medium);
+          .element-text-size(table-small-cell, screen-medium);
+          .element-spacing(table-small-cell, null, screen-medium);
 
           &:before {
 
-            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-medium = null) {
-
-              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-medium;
-
-            }
+            .prop-variant(table-small-cell, height, line-height, null, screen-medium);
 
           }
 
@@ -294,7 +310,7 @@ table-small/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@table-small-enabled) and (@table-small-scale-screen-large-enabled) {
+    & when (@table-small-enabled) and (@table-small-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Table
@@ -302,24 +318,34 @@ table-small/styles.less
 
       .table.table-small {
 
-        .text-size-variant(table-small, scale-screen-large);
-        .shape-layout-variant(table-small, scale-screen-large);
-        .shape-layout-variant(table-small, short, scale-screen-large);
-        .shape-layout-variant(table-small, tall, scale-screen-large);
+        .element-text-size(table-small, screen-large);
+        .element-spacing(table-small, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(table-small, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(table-small, tall, screen-large);
+
+        }
 
         th,
         td {
 
-          .text-size-variant(table-small-cell, scale-screen-large);
-          .shape-layout-variant(table-small-cell, scale-screen-large);
+          .element-text-size(table-small-cell, screen-large);
+          .element-spacing(table-small-cell, null, screen-large);
 
           &:before {
 
-            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-large = null) {
-
-              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-large;
-
-            }
+            .prop-variant(table-small-cell, height, line-height, null, screen-large);
 
           }
 
@@ -343,7 +369,7 @@ table-small/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@table-small-enabled) and (@table-small-scale-screen-jumbo-enabled) {
+    & when (@table-small-enabled) and (@table-small-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Table
@@ -351,24 +377,34 @@ table-small/styles.less
 
       .table.table-small {
 
-        .text-size-variant(table-small, scale-screen-jumbo);
-        .shape-layout-variant(table-small, scale-screen-jumbo);
-        .shape-layout-variant(table-small, short, scale-screen-jumbo);
-        .shape-layout-variant(table-small, tall, scale-screen-jumbo);
+        .element-text-size(table-small, screen-jumbo);
+        .element-spacing(table-small, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(table-small, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(table-small, tall, screen-jumbo);
+
+        }
 
         th,
         td {
 
-          .text-size-variant(table-small-cell, scale-screen-jumbo);
-          .shape-layout-variant(table-small-cell, scale-screen-jumbo);
+          .element-text-size(table-small-cell, screen-jumbo);
+          .element-spacing(table-small-cell, null, screen-jumbo);
 
           &:before {
 
-            & when not (@table-small-cell-text-line-height = null) and not (@table-small-cell-text-line-height-scale-screen-jumbo = null) {
-
-              height: @table-small-cell-text-line-height * @table-small-cell-text-line-height-scale-screen-jumbo;
-
-            }
+            .prop-variant(table-small-cell, height, line-height, null, screen-jumbo);
 
           }
 
