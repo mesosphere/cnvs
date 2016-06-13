@@ -22687,8 +22687,708 @@ form-control-group/styles.less
 Form Label
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+label/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+label/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Label
+  ----------------------------------------------------------------------------- */
+label:not(.button),
+.label:not(.button) {
+  display: block;
+  color: #5b6171;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-rendering: geometricPrecision;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  margin-top: 0px;
+  margin-bottom: 0.5rem;
+  /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+}
+label:not(.button).short,
+.label:not(.button).short {
+  margin-top: 0px;
+  margin-bottom: 0.25rem;
+}
+label:not(.button).short-top,
+.label:not(.button).short-top,
+label:not(.button).short-top,
+.label:not(.button).short-top {
+  margin-top: 0px;
+}
+label:not(.button).short-bottom,
+.label:not(.button).short-bottom,
+label:not(.button).short-bottom,
+.label:not(.button).short-bottom {
+  margin-bottom: 0.25rem;
+}
+label:not(.button).tall,
+.label:not(.button).tall {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+}
+label:not(.button).tall-top,
+.label:not(.button).tall-top,
+label:not(.button).tall-top,
+.label:not(.button).tall-top {
+  margin-top: 0px;
+}
+label:not(.button).tall-bottom,
+.label:not(.button).tall-bottom,
+label:not(.button).tall-bottom,
+.label:not(.button).tall-bottom {
+  margin-bottom: 1rem;
+}
+label:not(.button).emphasis,
+.label:not(.button).emphasis,
+label:not(.button) .emphasis,
+.label:not(.button) .emphasis {
+  color: #282e3e;
+  font-weight: 800;
+}
+label:not(.button).muted,
+.label:not(.button).muted,
+label:not(.button) .muted,
+.label:not(.button) .muted {
+  color: #adb0b8;
+}
+label:not(.button).inverse,
+.label:not(.button).inverse {
+  color: #c2c4ca;
+}
+label:not(.button).inverse.emphasis,
+.label:not(.button).inverse.emphasis,
+label:not(.button).inverse .emphasis,
+.label:not(.button).inverse .emphasis {
+  color: #ffffff;
+}
+label:not(.button).inverse.muted,
+.label:not(.button).inverse.muted,
+label:not(.button).inverse .muted,
+.label:not(.button).inverse .muted {
+  color: #999da7;
+}
+/* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  /* -----------------------------------------------------------------------------
+      Label
+      ----------------------------------------------------------------------------- */
+  label:not(.button),
+  .label:not(.button) {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  /* -----------------------------------------------------------------------------
+      Label
+      ----------------------------------------------------------------------------- */
+  label:not(.button),
+  .label:not(.button) {
+    font-size: 0.84rem;
+    line-height: 0.84rem;
+    margin-bottom: 0.55rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  label:not(.button).short,
+  .label:not(.button).short {
+    margin-bottom: 0.275rem;
+  }
+  label:not(.button).short-bottom,
+  .label:not(.button).short-bottom,
+  label:not(.button).short-bottom-screen-medium,
+  .label:not(.button).short-bottom-screen-medium {
+    margin-bottom: 0.275rem;
+  }
+  label:not(.button).tall,
+  .label:not(.button).tall {
+    margin-bottom: 1.1rem;
+  }
+  label:not(.button).tall-bottom,
+  .label:not(.button).tall-bottom,
+  label:not(.button).tall-bottom-screen-medium,
+  .label:not(.button).tall-bottom-screen-medium {
+    margin-bottom: 1.1rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-large-min-width) and wider
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* -----------------------------------------------------------------------------
+      Label
+      ----------------------------------------------------------------------------- */
+  label:not(.button),
+  .label:not(.button) {
+    font-size: 0.88rem;
+    line-height: 0.88rem;
+    margin-bottom: 0.6rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  label:not(.button).short,
+  .label:not(.button).short {
+    margin-bottom: 0.3rem;
+  }
+  label:not(.button).short-bottom,
+  .label:not(.button).short-bottom,
+  label:not(.button).short-bottom-screen-large,
+  .label:not(.button).short-bottom-screen-large {
+    margin-bottom: 0.3rem;
+  }
+  label:not(.button).tall,
+  .label:not(.button).tall {
+    margin-bottom: 1.2rem;
+  }
+  label:not(.button).tall-bottom,
+  .label:not(.button).tall-bottom,
+  label:not(.button).tall-bottom-screen-large,
+  .label:not(.button).tall-bottom-screen-large {
+    margin-bottom: 1.2rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  /* -----------------------------------------------------------------------------
+      Label
+      ----------------------------------------------------------------------------- */
+  label:not(.button),
+  .label:not(.button) {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+label-success/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+label-success/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Label success (.label-success)
+  ----------------------------------------------------------------------------- */
+label:not(.button).label-success,
+.label:not(.button).label-success,
+.form-group.form-group-success label:not(.button),
+.form-group.form-group-success .label:not(.button) {
+  color: #27c97b;
+  /* -----------------------------------------------------------------------------
+    Label success Inverse (.label-success.inverse)
+    ----------------------------------------------------------------------------- */
+}
+label:not(.button).label-success.emphasis,
+.label:not(.button).label-success.emphasis,
+.form-group.form-group-success label:not(.button).emphasis,
+.form-group.form-group-success .label:not(.button).emphasis,
+label:not(.button).label-success .emphasis,
+.label:not(.button).label-success .emphasis,
+.form-group.form-group-success label:not(.button) .emphasis,
+.form-group.form-group-success .label:not(.button) .emphasis {
+  color: #27c97b;
+}
+label:not(.button).label-success.muted,
+.label:not(.button).label-success.muted,
+.form-group.form-group-success label:not(.button).muted,
+.form-group.form-group-success .label:not(.button).muted,
+label:not(.button).label-success .muted,
+.label:not(.button).label-success .muted,
+.form-group.form-group-success label:not(.button) .muted,
+.form-group.form-group-success .label:not(.button) .muted {
+  color: #52d495;
+}
+label:not(.button).label-success.inverse,
+.label:not(.button).label-success.inverse,
+.form-group.form-group-success label:not(.button).inverse,
+.form-group.form-group-success .label:not(.button).inverse {
+  color: #27c97b;
+}
+label:not(.button).label-success.inverse.emphasis,
+.label:not(.button).label-success.inverse.emphasis,
+.form-group.form-group-success label:not(.button).inverse.emphasis,
+.form-group.form-group-success .label:not(.button).inverse.emphasis,
+label:not(.button).label-success.inverse .emphasis,
+.label:not(.button).label-success.inverse .emphasis,
+.form-group.form-group-success label:not(.button).inverse .emphasis,
+.form-group.form-group-success .label:not(.button).inverse .emphasis {
+  color: #27c97b;
+}
+label:not(.button).label-success.inverse.muted,
+.label:not(.button).label-success.inverse.muted,
+.form-group.form-group-success label:not(.button).inverse.muted,
+.form-group.form-group-success .label:not(.button).inverse.muted,
+label:not(.button).label-success.inverse .muted,
+.label:not(.button).label-success.inverse .muted,
+.form-group.form-group-success label:not(.button).inverse .muted,
+.form-group.form-group-success .label:not(.button).inverse .muted {
+  color: #52d495;
+}
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+label-error/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Text Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+label-error/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Label Error (.label-error)
+  ----------------------------------------------------------------------------- */
+label:not(.button).label-error,
+.label:not(.button).label-error,
+.form-group.form-group-error label:not(.button),
+.form-group.form-group-error .label:not(.button) {
+  color: #f33745;
+  /* -----------------------------------------------------------------------------
+    Label Error Inverse (.label-error.inverse)
+    ----------------------------------------------------------------------------- */
+}
+label:not(.button).label-error.emphasis,
+.label:not(.button).label-error.emphasis,
+.form-group.form-group-error label:not(.button).emphasis,
+.form-group.form-group-error .label:not(.button).emphasis,
+label:not(.button).label-error .emphasis,
+.label:not(.button).label-error .emphasis,
+.form-group.form-group-error label:not(.button) .emphasis,
+.form-group.form-group-error .label:not(.button) .emphasis {
+  color: #f33745;
+}
+label:not(.button).label-error.muted,
+.label:not(.button).label-error.muted,
+.form-group.form-group-error label:not(.button).muted,
+.form-group.form-group-error .label:not(.button).muted,
+label:not(.button).label-error .muted,
+.label:not(.button).label-error .muted,
+.form-group.form-group-error label:not(.button) .muted,
+.form-group.form-group-error .label:not(.button) .muted {
+  color: #f55f6a;
+}
+label:not(.button).label-error.inverse,
+.label:not(.button).label-error.inverse,
+.form-group.form-group-error label:not(.button).inverse,
+.form-group.form-group-error .label:not(.button).inverse {
+  color: #f33745;
+}
+label:not(.button).label-error.inverse.emphasis,
+.label:not(.button).label-error.inverse.emphasis,
+.form-group.form-group-error label:not(.button).inverse.emphasis,
+.form-group.form-group-error .label:not(.button).inverse.emphasis,
+label:not(.button).label-error.inverse .emphasis,
+.label:not(.button).label-error.inverse .emphasis,
+.form-group.form-group-error label:not(.button).inverse .emphasis,
+.form-group.form-group-error .label:not(.button).inverse .emphasis {
+  color: #f33745;
+}
+label:not(.button).label-error.inverse.muted,
+.label:not(.button).label-error.inverse.muted,
+.form-group.form-group-error label:not(.button).inverse.muted,
+.form-group.form-group-error .label:not(.button).inverse.muted,
+label:not(.button).label-error.inverse .muted,
+.label:not(.button).label-error.inverse .muted,
+.form-group.form-group-error label:not(.button).inverse .muted,
+.form-group.form-group-error .label:not(.button).inverse .muted {
+  color: #f55f6a;
+}
+/* -----------------------------------------------------------------------------
 Toggle
 ----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+toggle/variables.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Responsive Scaling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout Variants
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Inline Label
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Label Text Styling
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Label Text Size
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Label Layout
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Margin
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Padding
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+toggle/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+  Toggle
+  ----------------------------------------------------------------------------- */
+.checkbox,
+.radio {
+  *zoom: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+  /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Inline Toggle
+    ----------------------------------------------------------------------------- */
+}
+.checkbox:before,
+.radio:before,
+.checkbox:after,
+.radio:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.checkbox:after,
+.radio:after {
+  clear: both;
+}
+.checkbox.short,
+.radio.short {
+  margin-bottom: 0.25rem;
+}
+.checkbox.short-bottom,
+.radio.short-bottom,
+.checkbox.short-bottom,
+.radio.short-bottom {
+  margin-bottom: 0.25rem;
+}
+.checkbox.tall,
+.radio.tall {
+  margin-bottom: 1rem;
+}
+.checkbox.tall-bottom,
+.radio.tall-bottom,
+.checkbox.tall-bottom,
+.radio.tall-bottom {
+  margin-bottom: 1rem;
+}
+.checkbox input[type="checkbox"],
+.radio input[type="checkbox"],
+.checkbox input[type="radio"],
+.radio input[type="radio"] {
+  width: 16px;
+  height: 16px;
+}
+.checkbox label,
+.radio label {
+  margin: 0px;
+  position: relative;
+  color: #5b6171;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-rendering: geometricPrecision;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  padding-left: 1.2rem;
+}
+.checkbox label input[type="checkbox"],
+.radio label input[type="checkbox"],
+.checkbox label input[type="radio"],
+.radio label input[type="radio"] {
+  position: absolute;
+  left: 0px;
+}
+.checkbox label.emphasis,
+.radio label.emphasis,
+.checkbox label .emphasis,
+.radio label .emphasis {
+  color: #282e3e;
+  font-weight: 800;
+}
+.checkbox label.muted,
+.radio label.muted,
+.checkbox label .muted,
+.radio label .muted {
+  color: #adb0b8;
+}
+.checkbox label.inverse,
+.radio label.inverse {
+  color: #c2c4ca;
+}
+.checkbox label.inverse.emphasis,
+.radio label.inverse.emphasis,
+.checkbox label.inverse .emphasis,
+.radio label.inverse .emphasis {
+  color: #ffffff;
+}
+.checkbox label.inverse.muted,
+.radio label.inverse.muted,
+.checkbox label.inverse .muted,
+.radio label.inverse .muted {
+  color: #999da7;
+}
+.checkbox:last-child,
+.radio:last-child {
+  margin-bottom: 0px;
+}
+.checkbox.checkbox-inline,
+.radio.checkbox-inline,
+.checkbox.radio-inline,
+.radio.radio-inline {
+  float: left;
+  margin-left: 0.8rem;
+}
+.checkbox.checkbox-inline:first-child,
+.radio.checkbox-inline:first-child,
+.checkbox.radio-inline:first-child,
+.radio.radio-inline:first-child {
+  margin-left: 0px;
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 480px) {
+  .checkbox,
+  .radio {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .checkbox,
+  .radio {
+    margin-bottom: 0.55rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+  }
+  .checkbox.short,
+  .radio.short {
+    margin-bottom: 0.275rem;
+  }
+  .checkbox.short-bottom,
+  .radio.short-bottom,
+  .checkbox.short-bottom-screen-medium,
+  .radio.short-bottom-screen-medium {
+    margin-bottom: 0.275rem;
+  }
+  .checkbox.tall,
+  .radio.tall {
+    margin-bottom: 1.1rem;
+  }
+  .checkbox.tall-bottom,
+  .radio.tall-bottom,
+  .checkbox.tall-bottom-screen-medium,
+  .radio.tall-bottom-screen-medium {
+    margin-bottom: 1.1rem;
+  }
+  .checkbox label,
+  .radio label {
+    font-size: 0.84rem;
+    line-height: 0.84rem;
+    padding-left: 1.32rem;
+  }
+  .checkbox.checkbox-inline,
+  .radio.checkbox-inline,
+  .checkbox.radio-inline,
+  .radio.radio-inline {
+    margin-left: 0.88rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .checkbox,
+  .radio {
+    margin-bottom: 0.6rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+  }
+  .checkbox.short,
+  .radio.short {
+    margin-bottom: 0.3rem;
+  }
+  .checkbox.short-bottom,
+  .radio.short-bottom,
+  .checkbox.short-bottom-screen-large,
+  .radio.short-bottom-screen-large {
+    margin-bottom: 0.3rem;
+  }
+  .checkbox.tall,
+  .radio.tall {
+    margin-bottom: 1.2rem;
+  }
+  .checkbox.tall-bottom,
+  .radio.tall-bottom,
+  .checkbox.tall-bottom-screen-large,
+  .radio.tall-bottom-screen-large {
+    margin-bottom: 1.2rem;
+  }
+  .checkbox label,
+  .radio label {
+    font-size: 0.88rem;
+    line-height: 0.88rem;
+    padding-left: 1.44rem;
+  }
+  .checkbox.checkbox-inline,
+  .radio.checkbox-inline,
+  .checkbox.radio-inline,
+  .radio.radio-inline {
+    margin-left: 0.96rem;
+  }
+}
+/* -----------------------------------------------------------------------------
+  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  .checkbox,
+  .radio {
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+  }
+}
 /* -----------------------------------------------------------------------------
 Dropdown
 ----------------------------------------------------------------------------- */

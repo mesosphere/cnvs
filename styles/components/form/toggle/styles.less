@@ -19,9 +19,23 @@ toggle/styles.less
 
     .clearfix();
     display: block;
-    .element-spacing(toggle, null);
-    .element-spacing(toggle, short, null);
-    .element-spacing(toggle, tall, null);
+    .element-spacing(toggle, null,  null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .element-spacing(toggle, short, null);
+
+    }
+
+    &.tall {
+
+      .element-spacing(toggle, tall, null);
+
+    }
 
     input[type="checkbox"],
     input[type="radio"] {
@@ -37,7 +51,7 @@ toggle/styles.less
       position: relative;
       .element-text-style(toggle-label);
       .element-text-size(toggle-label, null);
-      .element-spacing(toggle-label, null);
+      .element-spacing(toggle-label, null, null);
 
       input[type="checkbox"],
       input[type="radio"] {
@@ -117,12 +131,7 @@ toggle/styles.less
     &.radio-inline {
 
       float: left;
-
-      & when not (@toggle-inline-margin-horizontal = null) {
-
-        margin-left: @toggle-inline-margin-horizontal;
-
-      }
+      .prop-variant(toggle-inline, margin-left, margin-horizontal, null, null);
 
       &:first-child {
 
@@ -151,14 +160,28 @@ toggle/styles.less
       .checkbox,
       .radio {
 
-        .element-spacing(toggle, screen-small);
-        .element-spacing(toggle, short, screen-small);
-        .element-spacing(toggle, tall, screen-small);
+        .element-spacing(toggle, null, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(toggle, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .element-spacing(toggle, tall, screen-small);
+
+        }
 
         label {
 
           .element-text-size(toggle-label, screen-small);
-          .element-spacing(toggle-label, screen-small);
+          .element-spacing(toggle-label, null, screen-small);
 
         }
 
@@ -169,11 +192,8 @@ toggle/styles.less
         &.checkbox-inline,
         &.radio-inline {
 
-          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-screen-small = null) {
+          .prop-variant(toggle-inline, margin-left, margin-horizontal, null, screen-small);
 
-            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-screen-small);
-
-          }
 
         }
 
@@ -200,14 +220,28 @@ toggle/styles.less
       .checkbox,
       .radio {
 
-        .element-spacing(toggle, screen-medium);
-        .element-spacing(toggle, short, screen-medium);
-        .element-spacing(toggle, tall, screen-medium);
+        .element-spacing(toggle, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(toggle, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(toggle, tall, screen-medium);
+
+        }
 
         label {
 
           .element-text-size(toggle-label, screen-medium);
-          .element-spacing(toggle-label, screen-medium);
+          .element-spacing(toggle-label, null, screen-medium);
 
         }
 
@@ -218,11 +252,8 @@ toggle/styles.less
         &.checkbox-inline,
         &.radio-inline {
 
-          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-screen-medium = null) {
+          .prop-variant(toggle-inline, margin-left, margin-horizontal, null, screen-medium);
 
-            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-screen-medium);
-
-          }
 
         }
 
@@ -249,14 +280,28 @@ toggle/styles.less
       .checkbox,
       .radio {
 
-        .element-spacing(toggle, screen-large);
-        .element-spacing(toggle, short, screen-large);
-        .element-spacing(toggle, tall, screen-large);
+        .element-spacing(toggle, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(toggle, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(toggle, tall, screen-large);
+
+        }
 
         label {
 
           .element-text-size(toggle-label, screen-large);
-          .element-spacing(toggle-label, screen-large);
+          .element-spacing(toggle-label, null, screen-large);
 
         }
 
@@ -267,11 +312,8 @@ toggle/styles.less
         &.checkbox-inline,
         &.radio-inline {
 
-          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-screen-large = null) {
+          .prop-variant(toggle-inline, margin-left, margin-horizontal, null, screen-large);
 
-            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-screen-large);
-
-          }
 
         }
 
@@ -298,14 +340,28 @@ toggle/styles.less
       .checkbox,
       .radio {
 
-        .element-spacing(toggle, screen-jumbo);
-        .element-spacing(toggle, short, screen-jumbo);
-        .element-spacing(toggle, tall, screen-jumbo);
+        .element-spacing(toggle, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(toggle, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(toggle, tall, screen-jumbo);
+
+        }
 
         label {
 
           .element-text-size(toggle-label, screen-jumbo);
-          .element-spacing(toggle-label, screen-jumbo);
+          .element-spacing(toggle-label, null, screen-jumbo);
 
         }
 
@@ -316,11 +372,8 @@ toggle/styles.less
         &.checkbox-inline,
         &.radio-inline {
 
-          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-screen-jumbo = null) {
+          .prop-variant(toggle-inline, margin-left, margin-horizontal, null, screen-jumbo);
 
-            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-screen-jumbo);
-
-          }
 
         }
 
