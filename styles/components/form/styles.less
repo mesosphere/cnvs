@@ -18,9 +18,23 @@ form/styles.less
 
     .clearfix();
     display: block;
-    .shape-layout-variant(form, null);
-    .shape-layout-variant(form, short, null);
-    .shape-layout-variant(form, tall, null);
+    .element-spacing(form, null, null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .element-spacing(form, short, null);
+
+    }
+
+    &.tall {
+
+      .element-spacing(form, tall, null);
+
+    }
 
   }
 
@@ -36,7 +50,7 @@ form/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@form-enabled) and (@form-scale-screen-small-enabled) {
+    & when (@form-enabled) and (@form-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Form
@@ -44,9 +58,23 @@ form/styles.less
 
       .form {
 
-        .shape-layout-variant(form, scale-screen-small);
-        .shape-layout-variant(form, short, scale-screen-small);
-        .shape-layout-variant(form, tall, scale-screen-small);
+        .element-spacing(form, null, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(form, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .element-spacing(form, tall, screen-small);
+
+        }
 
       }
 
@@ -58,7 +86,7 @@ form/styles.less
 
 
 
-& when (@layout-screen-medium-enabled) and (@form-scale-screen-medium-enabled) {
+& when (@layout-screen-medium-enabled) and (@form-screen-medium-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Medium (@layout-screen-medium-min-width) and wider
@@ -66,7 +94,7 @@ form/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@form-enabled) and (@form-scale-screen-medium-enabled) {
+    & when (@form-enabled) and (@form-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Form
@@ -74,9 +102,23 @@ form/styles.less
 
       .form {
 
-        .shape-layout-variant(form, scale-screen-medium);
-        .shape-layout-variant(form, short, scale-screen-medium);
-        .shape-layout-variant(form, tall, scale-screen-medium);
+        .element-spacing(form, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(form, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(form, tall, screen-medium);
+
+        }
 
       }
 
@@ -88,7 +130,7 @@ form/styles.less
 
 
 
-& when (@layout-screen-large-enabled) and (@form-scale-screen-large-enabled) {
+& when (@layout-screen-large-enabled) and (@form-screen-large-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Large (@layout-screen-large-min-width) and wider
@@ -96,7 +138,7 @@ form/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@form-enabled) and (@form-scale-screen-large-enabled) {
+    & when (@form-enabled) and (@form-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Form
@@ -104,9 +146,23 @@ form/styles.less
 
       .form {
 
-        .shape-layout-variant(form, scale-screen-large);
-        .shape-layout-variant(form, short, scale-screen-large);
-        .shape-layout-variant(form, tall, scale-screen-large);
+        .element-spacing(form, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(form, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(form, tall, screen-large);
+
+        }
 
       }
 
@@ -118,7 +174,7 @@ form/styles.less
 
 
 
-& when (@layout-screen-jumbo-enabled) and (@form-scale-screen-jumbo-enabled) {
+& when (@layout-screen-jumbo-enabled) and (@form-screen-jumbo-enabled) {
 
   /* -----------------------------------------------------------------------------
   Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
@@ -126,7 +182,7 @@ form/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@form-enabled) and (@form-scale-screen-jumbo-enabled) {
+    & when (@form-enabled) and (@form-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Form
@@ -134,9 +190,23 @@ form/styles.less
 
       .form {
 
-        .shape-layout-variant(form, scale-screen-jumbo);
-        .shape-layout-variant(form, short, scale-screen-jumbo);
-        .shape-layout-variant(form, tall, scale-screen-jumbo);
+        .element-spacing(form, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(form, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(form, tall, screen-jumbo);
+
+        }
 
       }
 

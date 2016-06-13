@@ -18,18 +18,18 @@ label/styles.less
   .label:not(.button) {
 
     display: block;
-    .text-style-variant(label);
-    .text-size-variant(label, null);
-    .shape-layout-variant(label, null);
-    .shape-layout-variant(label, short, null);
-    .shape-layout-variant(label, tall, null);
+    .element-text-style(label);
+    .element-text-size(label, null);
+    .element-spacing(label, null);
+    .element-spacing(label, short, null);
+    .element-spacing(label, tall, null);
 
     & when (@label-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
 
-        .text-style-variant(label-emphasis);
+        .element-text-style(label-emphasis);
 
       }
 
@@ -40,7 +40,7 @@ label/styles.less
       &.muted,
       .muted {
 
-        .text-style-variant(label-muted);
+        .element-text-style(label-muted);
 
       }
 
@@ -52,14 +52,14 @@ label/styles.less
 
       &.inverse {
 
-        .text-style-variant(label-inverse);
+        .element-text-style(label-inverse);
 
         & when (@label-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
 
-            .text-style-variant(label-inverse-emphasis);
+            .element-text-style(label-inverse-emphasis);
 
           }
 
@@ -70,7 +70,7 @@ label/styles.less
           &.muted,
           .muted {
 
-            .text-style-variant(label-inverse-muted);
+            .element-text-style(label-inverse-muted);
 
           }
 
@@ -96,7 +96,7 @@ label/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@label-enabled) and (@label-scale-screen-small-enabled) {
+    & when (@label-enabled) and (@label-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Label
@@ -105,10 +105,10 @@ label/styles.less
       label:not(.button),
       .label:not(.button) {
 
-        .text-size-variant(label, scale-screen-small);
-        .shape-layout-variant(label, scale-screen-small);
-        .shape-layout-variant(label, short, scale-screen-small);
-        .shape-layout-variant(label, tall, scale-screen-small);
+        .element-text-size(label, screen-small);
+        .element-spacing(label, screen-small);
+        .element-spacing(label, short, screen-small);
+        .element-spacing(label, tall, screen-small);
 
       }
 
@@ -130,7 +130,7 @@ label/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@label-enabled) and (@label-scale-screen-medium-enabled) {
+    & when (@label-enabled) and (@label-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Label
@@ -139,10 +139,10 @@ label/styles.less
       label:not(.button),
       .label:not(.button) {
 
-        .text-size-variant(label, scale-screen-medium);
-        .shape-layout-variant(label, scale-screen-medium);
-        .shape-layout-variant(label, short, scale-screen-medium);
-        .shape-layout-variant(label, tall, scale-screen-medium);
+        .element-text-size(label, screen-medium);
+        .element-spacing(label, screen-medium);
+        .element-spacing(label, short, screen-medium);
+        .element-spacing(label, tall, screen-medium);
 
       }
 
@@ -164,7 +164,7 @@ label/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@label-enabled) and (@label-scale-screen-large-enabled) {
+    & when (@label-enabled) and (@label-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Label
@@ -173,10 +173,10 @@ label/styles.less
       label:not(.button),
       .label:not(.button) {
 
-        .text-size-variant(label, scale-screen-large);
-        .shape-layout-variant(label, scale-screen-large);
-        .shape-layout-variant(label, short, scale-screen-large);
-        .shape-layout-variant(label, tall, scale-screen-large);
+        .element-text-size(label, screen-large);
+        .element-spacing(label, screen-large);
+        .element-spacing(label, short, screen-large);
+        .element-spacing(label, tall, screen-large);
 
       }
 
@@ -198,7 +198,7 @@ label/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@label-enabled) and (@label-scale-screen-jumbo-enabled) {
+    & when (@label-enabled) and (@label-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Label
@@ -207,10 +207,10 @@ label/styles.less
       label:not(.button),
       .label:not(.button) {
 
-        .text-size-variant(label, scale-screen-jumbo);
-        .shape-layout-variant(label, scale-screen-jumbo);
-        .shape-layout-variant(label, short, scale-screen-jumbo);
-        .shape-layout-variant(label, tall, scale-screen-jumbo);
+        .element-text-size(label, screen-jumbo);
+        .element-spacing(label, screen-jumbo);
+        .element-spacing(label, short, screen-jumbo);
+        .element-spacing(label, tall, screen-jumbo);
 
       }
 

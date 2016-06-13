@@ -19,9 +19,9 @@ toggle/styles.less
 
     .clearfix();
     display: block;
-    .shape-layout-variant(toggle, null);
-    .shape-layout-variant(toggle, short, null);
-    .shape-layout-variant(toggle, tall, null);
+    .element-spacing(toggle, null);
+    .element-spacing(toggle, short, null);
+    .element-spacing(toggle, tall, null);
 
     input[type="checkbox"],
     input[type="radio"] {
@@ -35,9 +35,9 @@ toggle/styles.less
 
       margin: 0px;
       position: relative;
-      .text-style-variant(toggle-label);
-      .text-size-variant(toggle-label, null);
-      .shape-layout-variant(toggle-label, null);
+      .element-text-style(toggle-label);
+      .element-text-size(toggle-label, null);
+      .element-spacing(toggle-label, null);
 
       input[type="checkbox"],
       input[type="radio"] {
@@ -52,7 +52,7 @@ toggle/styles.less
         &.emphasis,
         .emphasis {
 
-          .text-style-variant(toggle-label-emphasis);
+          .element-text-style(toggle-label-emphasis);
 
         }
 
@@ -63,7 +63,7 @@ toggle/styles.less
         &.muted,
         .muted {
 
-          .text-style-variant(toggle-label-muted);
+          .element-text-style(toggle-label-muted);
 
         }
 
@@ -73,14 +73,14 @@ toggle/styles.less
 
         &.inverse {
 
-          .text-style-variant(toggle-label-inverse);
+          .element-text-style(toggle-label-inverse);
 
           & when (@label-inverse-emphasis-enabled) {
 
             &.emphasis,
             .emphasis {
 
-              .text-style-variant(toggle-label-inverse-emphasis);
+              .element-text-style(toggle-label-inverse-emphasis);
 
             }
 
@@ -91,7 +91,7 @@ toggle/styles.less
             &.muted,
             .muted {
 
-              .text-style-variant(toggle-label-inverse-muted);
+              .element-text-style(toggle-label-inverse-muted);
 
             }
 
@@ -146,19 +146,19 @@ toggle/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@toggle-enabled) and (@toggle-scale-screen-small-enabled) {
+    & when (@toggle-enabled) and (@toggle-screen-small-enabled) {
 
       .checkbox,
       .radio {
 
-        .shape-layout-variant(toggle, scale-screen-small);
-        .shape-layout-variant(toggle, short, scale-screen-small);
-        .shape-layout-variant(toggle, tall, scale-screen-small);
+        .element-spacing(toggle, screen-small);
+        .element-spacing(toggle, short, screen-small);
+        .element-spacing(toggle, tall, screen-small);
 
         label {
 
-          .text-size-variant(toggle-label, scale-screen-small);
-          .shape-layout-variant(toggle-label, scale-screen-small);
+          .element-text-size(toggle-label, screen-small);
+          .element-spacing(toggle-label, screen-small);
 
         }
 
@@ -169,9 +169,9 @@ toggle/styles.less
         &.checkbox-inline,
         &.radio-inline {
 
-          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-scale-screen-small = null) {
+          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-screen-small = null) {
 
-            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-scale-screen-small);
+            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-screen-small);
 
           }
 
@@ -195,19 +195,19 @@ toggle/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@toggle-enabled) and (@toggle-scale-screen-medium-enabled) {
+    & when (@toggle-enabled) and (@toggle-screen-medium-enabled) {
 
       .checkbox,
       .radio {
 
-        .shape-layout-variant(toggle, scale-screen-medium);
-        .shape-layout-variant(toggle, short, scale-screen-medium);
-        .shape-layout-variant(toggle, tall, scale-screen-medium);
+        .element-spacing(toggle, screen-medium);
+        .element-spacing(toggle, short, screen-medium);
+        .element-spacing(toggle, tall, screen-medium);
 
         label {
 
-          .text-size-variant(toggle-label, scale-screen-medium);
-          .shape-layout-variant(toggle-label, scale-screen-medium);
+          .element-text-size(toggle-label, screen-medium);
+          .element-spacing(toggle-label, screen-medium);
 
         }
 
@@ -218,9 +218,9 @@ toggle/styles.less
         &.checkbox-inline,
         &.radio-inline {
 
-          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-scale-screen-medium = null) {
+          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-screen-medium = null) {
 
-            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-scale-screen-medium);
+            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-screen-medium);
 
           }
 
@@ -244,19 +244,19 @@ toggle/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@toggle-enabled) and (@toggle-scale-screen-large-enabled) {
+    & when (@toggle-enabled) and (@toggle-screen-large-enabled) {
 
       .checkbox,
       .radio {
 
-        .shape-layout-variant(toggle, scale-screen-large);
-        .shape-layout-variant(toggle, short, scale-screen-large);
-        .shape-layout-variant(toggle, tall, scale-screen-large);
+        .element-spacing(toggle, screen-large);
+        .element-spacing(toggle, short, screen-large);
+        .element-spacing(toggle, tall, screen-large);
 
         label {
 
-          .text-size-variant(toggle-label, scale-screen-large);
-          .shape-layout-variant(toggle-label, scale-screen-large);
+          .element-text-size(toggle-label, screen-large);
+          .element-spacing(toggle-label, screen-large);
 
         }
 
@@ -267,9 +267,9 @@ toggle/styles.less
         &.checkbox-inline,
         &.radio-inline {
 
-          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-scale-screen-large = null) {
+          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-screen-large = null) {
 
-            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-scale-screen-large);
+            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-screen-large);
 
           }
 
@@ -293,19 +293,19 @@ toggle/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@toggle-enabled) and (@toggle-scale-screen-jumbo-enabled) {
+    & when (@toggle-enabled) and (@toggle-screen-jumbo-enabled) {
 
       .checkbox,
       .radio {
 
-        .shape-layout-variant(toggle, scale-screen-jumbo);
-        .shape-layout-variant(toggle, short, scale-screen-jumbo);
-        .shape-layout-variant(toggle, tall, scale-screen-jumbo);
+        .element-spacing(toggle, screen-jumbo);
+        .element-spacing(toggle, short, screen-jumbo);
+        .element-spacing(toggle, tall, screen-jumbo);
 
         label {
 
-          .text-size-variant(toggle-label, scale-screen-jumbo);
-          .shape-layout-variant(toggle-label, scale-screen-jumbo);
+          .element-text-size(toggle-label, screen-jumbo);
+          .element-spacing(toggle-label, screen-jumbo);
 
         }
 
@@ -316,9 +316,9 @@ toggle/styles.less
         &.checkbox-inline,
         &.radio-inline {
 
-          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-scale-screen-jumbo = null) {
+          & when not (@toggle-inline-margin-horizontal = null) and not (@toggle-inline-margin-horizontal-screen-jumbo = null) {
 
-            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-scale-screen-jumbo);
+            margin-left: (@toggle-inline-margin-horizontal * @toggle-inline-margin-horizontal-screen-jumbo);
 
           }
 

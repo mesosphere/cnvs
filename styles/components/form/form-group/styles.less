@@ -18,9 +18,23 @@ form-group/styles.less
 
     .clearfix();
     display: block;
-    .shape-layout-variant(form-group, null);
-    .shape-layout-variant(form-group, short, null);
-    .shape-layout-variant(form-group, tall, null);
+    .element-spacing(form-group, null, null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .element-spacing(form-group, short, null);
+
+    }
+
+    &.tall {
+
+      .element-spacing(form-group, tall, null);
+
+    }
 
   }
 
@@ -36,7 +50,7 @@ form-group/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@form-group-enabled) and (@form-group-scale-screen-small-enabled) {
+    & when (@form-group-enabled) and (@form-group-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
       Form Group (.form-group)
@@ -44,9 +58,23 @@ form-group/styles.less
 
       .form-group {
 
-        .shape-layout-variant(form-group, scale-screen-small);
-        .shape-layout-variant(form-group, short, scale-screen-small);
-        .shape-layout-variant(form-group, tall, scale-screen-small);
+        .element-spacing(form-group, null, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(form-group, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .element-spacing(form-group, tall, screen-small);
+
+        }
 
       }
 
@@ -66,7 +94,7 @@ form-group/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@form-group-enabled) and (@form-group-scale-screen-medium-enabled) {
+    & when (@form-group-enabled) and (@form-group-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
       Form Group (.form-group)
@@ -74,9 +102,23 @@ form-group/styles.less
 
       .form-group {
 
-        .shape-layout-variant(form-group, scale-screen-medium);
-        .shape-layout-variant(form-group, short, scale-screen-medium);
-        .shape-layout-variant(form-group, tall, scale-screen-medium);
+        .element-spacing(form-group, null, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(form-group, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(form-group, tall, screen-medium);
+
+        }
 
       }
 
@@ -96,7 +138,7 @@ form-group/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@form-group-enabled) and (@form-group-scale-screen-large-enabled) {
+    & when (@form-group-enabled) and (@form-group-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
       Form Group (.form-group)
@@ -104,9 +146,23 @@ form-group/styles.less
 
       .form-group {
 
-        .shape-layout-variant(form-group, scale-screen-large);
-        .shape-layout-variant(form-group, short, scale-screen-large);
-        .shape-layout-variant(form-group, tall, scale-screen-large);
+        .element-spacing(form-group, null, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(form-group, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(form-group, tall, screen-large);
+
+        }
 
       }
 
@@ -126,7 +182,7 @@ form-group/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@form-group-enabled) and (@form-group-scale-screen-jumbo-enabled) {
+    & when (@form-group-enabled) and (@form-group-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
       Form Group (.form-group)
@@ -134,9 +190,23 @@ form-group/styles.less
 
       .form-group {
 
-        .shape-layout-variant(form-group, scale-screen-jumbo);
-        .shape-layout-variant(form-group, short, scale-screen-jumbo);
-        .shape-layout-variant(form-group, tall, scale-screen-jumbo);
+        .element-spacing(form-group, null, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(form-group, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(form-group, tall, screen-jumbo);
+
+        }
 
       }
 

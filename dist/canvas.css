@@ -20030,6 +20030,9 @@ form/styles.less
   *zoom: 1;
   display: block;
   margin-bottom: 12px;
+  /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
 }
 .form:before,
 .form:after {
@@ -20040,16 +20043,18 @@ form/styles.less
 .form:after {
   clear: both;
 }
-.form.form-short {
+.form.short {
   margin-bottom: 6px;
 }
-.form.form-short-bottom {
+.form.short-bottom,
+.form.short-bottom {
   margin-bottom: 6px;
 }
-.form.form-tall {
+.form.tall {
   margin-bottom: 24px;
 }
-.form.form-tall-bottom {
+.form.tall-bottom,
+.form.tall-bottom {
   margin-bottom: 24px;
 }
 /* -----------------------------------------------------------------------------
@@ -20060,19 +20065,24 @@ form/styles.less
       Form
       ----------------------------------------------------------------------------- */
   .form {
+    margin-bottom: 12px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  .form.short {
+    margin-bottom: 6px;
+  }
+  .form.short-bottom,
+  .form.short-bottom-screen-small {
+    margin-bottom: 6px;
+  }
+  .form.tall {
     margin-bottom: 24px;
   }
-  .form.form-short {
-    margin-bottom: 12px;
-  }
-  .form.form-short-bottom {
-    margin-bottom: 12px;
-  }
-  .form.form-tall {
-    margin-bottom: 48px;
-  }
-  .form.form-tall-bottom {
-    margin-bottom: 48px;
+  .form.tall-bottom,
+  .form.tall-bottom-screen-small {
+    margin-bottom: 24px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20083,19 +20093,24 @@ form/styles.less
       Form
       ----------------------------------------------------------------------------- */
   .form {
+    margin-bottom: 16px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  .form.short {
+    margin-bottom: 8px;
+  }
+  .form.short-bottom,
+  .form.short-bottom-screen-medium {
+    margin-bottom: 8px;
+  }
+  .form.tall {
     margin-bottom: 32px;
   }
-  .form.form-short {
-    margin-bottom: 16px;
-  }
-  .form.form-short-bottom {
-    margin-bottom: 16px;
-  }
-  .form.form-tall {
-    margin-bottom: 64px;
-  }
-  .form.form-tall-bottom {
-    margin-bottom: 64px;
+  .form.tall-bottom,
+  .form.tall-bottom-screen-medium {
+    margin-bottom: 32px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20106,19 +20121,24 @@ form/styles.less
       Form
       ----------------------------------------------------------------------------- */
   .form {
+    margin-bottom: 18px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  .form.short {
+    margin-bottom: 9px;
+  }
+  .form.short-bottom,
+  .form.short-bottom-screen-large {
+    margin-bottom: 9px;
+  }
+  .form.tall {
     margin-bottom: 36px;
   }
-  .form.form-short {
-    margin-bottom: 18px;
-  }
-  .form.form-short-bottom {
-    margin-bottom: 18px;
-  }
-  .form.form-tall {
-    margin-bottom: 72px;
-  }
-  .form.form-tall-bottom {
-    margin-bottom: 72px;
+  .form.tall-bottom,
+  .form.tall-bottom-screen-large {
+    margin-bottom: 36px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20129,19 +20149,24 @@ form/styles.less
       Form
       ----------------------------------------------------------------------------- */
   .form {
+    margin-bottom: 24px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  .form.short {
+    margin-bottom: 12px;
+  }
+  .form.short-bottom,
+  .form.short-bottom-screen-jumbo {
+    margin-bottom: 12px;
+  }
+  .form.tall {
     margin-bottom: 48px;
   }
-  .form.form-short {
-    margin-bottom: 24px;
-  }
-  .form.form-short-bottom {
-    margin-bottom: 24px;
-  }
-  .form.form-tall {
-    margin-bottom: 96px;
-  }
-  .form.form-tall-bottom {
-    margin-bottom: 96px;
+  .form.tall-bottom,
+  .form.tall-bottom-screen-jumbo {
+    margin-bottom: 48px;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20463,9 +20488,9 @@ form-control/styles.less
 }
 textarea.form-control,
 .form-control select[multiple] {
+  height: auto !important;
   padding-top: 7.8px;
   padding-bottom: 7.8px;
-  height: auto !important;
 }
 /* -----------------------------------------------------------------------------
   Form Control Select (.form-control-select)
@@ -20497,9 +20522,6 @@ textarea.form-control,
   border-left-width: 4.5px;
   border-top-width: 5px;
   border-bottom-width: 0px;
-  margin-left: 0.375rem;
-  margin-top: 2px;
-  margin-right: 1rem;
 }
 .form-control.form-control-select select {
   display: block;
@@ -20520,8 +20542,8 @@ textarea.form-control,
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-rendering: optimizelegibility;
-  padding-right: 0px !important;
   height: 38px;
+  padding-right: 0px !important;
 }
 .form-control.form-control-select.form-control-select-multiple:after {
   display: none;
@@ -20663,14 +20685,14 @@ textarea.form-control,
   .form-control {
     font-size: 16.8px;
     line-height: 23.52px;
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-    height: 41.8px;
+    padding-left: 1.1;
+    padding-right: 1.1;
+    height: 1.1;
     /* -----------------------------------------------------------------------------
         Block Form Control (.form-control-block)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Rounded Form Control (.form-control-rounded)
+          Rounded Form Control (.form-control-block)
           ----------------------------------------------------------------------------- */
   }
   .form-control.form-control-block.form-control-block-below-screen-medium {
@@ -20680,13 +20702,13 @@ textarea.form-control,
     display: inline-flex;
   }
   .form-control.form-control-rounded {
-    padding-left: 1.32rem;
-    padding-right: 1.32rem;
+    padding-left: 1.32;
+    padding-right: 1.32;
   }
   textarea.form-control,
   .form-control select[multiple] {
-    padding-top: 9.14px;
-    padding-bottom: 9.14px;
+    padding-top: -11.21px;
+    padding-bottom: -11.21px;
   }
   /* -----------------------------------------------------------------------------
       Form Control Select (.form-control-select)
@@ -20699,24 +20721,24 @@ textarea.form-control,
   .form-control.form-control-select select {
     font-size: 16.8px;
     line-height: 23.52px;
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-    height: 41.8px;
+    padding-left: 1.1;
+    padding-right: 1.1;
+    height: 1.1;
   }
   .form-control.form-control-select:after {
+    margin-left: 1.1;
+    margin-right: 1.1;
     border-right-width: 4.95px;
     border-left-width: 4.95px;
     border-top-width: 5.5px;
     border-bottom-width: 0px;
-    margin-left: 0.4125rem;
-    margin-right: 1.1rem;
   }
   .form-control.form-control-select.form-control-rounded select {
-    padding-left: 1.32rem;
-    padding-right: 1.32rem;
+    padding-left: 1.32;
+    padding-right: 1.32;
   }
   .form-control.form-control-select.form-control-rounded:after {
-    margin-right: 1.32rem;
+    margin-right: 1.32;
   }
   /* -----------------------------------------------------------------------------
         Form Control Group
@@ -20727,10 +20749,10 @@ textarea.form-control,
           ----------------------------------------------------------------------------- */
   }
   .form-control-group.form-control .form-control-group-add-on:first-child {
-    padding-right: 0.55rem;
+    padding-right: 1.1;
   }
   .form-control-group.form-control .form-control-group-add-on:last-child {
-    padding-left: 0.55rem;
+    padding-left: 1.1;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20743,14 +20765,14 @@ textarea.form-control,
   .form-control {
     font-size: 17.6px;
     line-height: 24.64px;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    height: 45.6px;
+    padding-left: 1.2;
+    padding-right: 1.2;
+    height: 1.2;
     /* -----------------------------------------------------------------------------
         Block Form Control (.form-control-block)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Rounded Form Control (.form-control-rounded)
+          Rounded Form Control (.form-control-block)
           ----------------------------------------------------------------------------- */
   }
   .form-control.form-control-block.form-control-block-below-screen-large {
@@ -20760,13 +20782,13 @@ textarea.form-control,
     display: inline-flex;
   }
   .form-control.form-control-rounded {
-    padding-left: 1.44rem;
-    padding-right: 1.44rem;
+    padding-left: 1.44;
+    padding-right: 1.44;
   }
   textarea.form-control,
   .form-control select[multiple] {
-    padding-top: 10.48px;
-    padding-bottom: 10.48px;
+    padding-top: -11.72px;
+    padding-bottom: -11.72px;
   }
   /* -----------------------------------------------------------------------------
       Form Control Select (.form-control-select)
@@ -20779,24 +20801,24 @@ textarea.form-control,
   .form-control.form-control-select select {
     font-size: 17.6px;
     line-height: 24.64px;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    height: 45.6px;
+    padding-left: 1.2;
+    padding-right: 1.2;
+    height: 1.2;
   }
   .form-control.form-control-select:after {
+    margin-left: 1.2;
+    margin-right: 1.2;
     border-right-width: 5.4px;
     border-left-width: 5.4px;
     border-top-width: 6px;
     border-bottom-width: 0px;
-    margin-left: 0.45rem;
-    margin-right: 1.2rem;
   }
   .form-control.form-control-select.form-control-rounded select {
-    padding-left: 1.44rem;
-    padding-right: 1.44rem;
+    padding-left: 1.44;
+    padding-right: 1.44;
   }
   .form-control.form-control-select.form-control-rounded:after {
-    margin-right: 1.44rem;
+    margin-right: 1.44;
   }
   /* -----------------------------------------------------------------------------
         Form Control Group
@@ -20807,10 +20829,10 @@ textarea.form-control,
           ----------------------------------------------------------------------------- */
   }
   .form-control-group.form-control .form-control-group-add-on:first-child {
-    padding-right: 0.6rem;
+    padding-right: 1.2;
   }
   .form-control-group.form-control .form-control-group-add-on:last-child {
-    padding-left: 0.6rem;
+    padding-left: 1.2;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -20825,7 +20847,7 @@ textarea.form-control,
         Block Form Control (.form-control-block)
         ----------------------------------------------------------------------------- */
     /* -----------------------------------------------------------------------------
-          Rounded Form Control (.form-control-rounded)
+          Rounded Form Control (.form-control-block)
           ----------------------------------------------------------------------------- */
   }
   .form-control.form-control-block.form-control-block-below-screen-jumbo {
@@ -20916,13 +20938,11 @@ form-control-mini/styles.less
   height: 24px;
 }
 .form-control-select.form-control-mini:after {
+  margin-right: 0.5rem;
   border-right-width: 2.84210526px;
   border-left-width: 2.84210526px;
   border-top-width: 3.15789474px;
   border-bottom-width: 0px;
-  margin-left: 0.125rem;
-  margin-top: 2px;
-  margin-right: 0.5rem;
 }
 .form-control-select.form-control-mini.form-control-rounded select {
   padding-left: 0.6rem;
@@ -20978,7 +20998,7 @@ form-control-mini/styles.less
     padding-right: 0.55rem;
     height: 26.4px;
     /* -----------------------------------------------------------------------------
-          .form-control-rounded
+          Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
   }
   .form-control-mini.form-control-rounded {
@@ -20999,12 +21019,11 @@ form-control-mini/styles.less
     height: 26.4px;
   }
   .form-control-select.form-control-mini:after {
-    border-right-width: 3.12631579px;
-    border-left-width: 3.12631579px;
-    border-top-width: 3.47368421px;
-    border-bottom-width: 0px;
     margin-left: 0.1375rem;
-    margin-right: 0.55rem;
+    border-right-width: 17.77063712px;
+    border-left-width: 17.77063712px;
+    border-top-width: 10.96952909px;
+    border-bottom-width: 0px;
   }
   .form-control-select.form-control-mini.form-control-rounded select {
     padding-left: 0.66rem;
@@ -21061,12 +21080,11 @@ form-control-mini/styles.less
     height: 28.8px;
   }
   .form-control-select.form-control-mini:after {
-    border-right-width: 3.41052632px;
-    border-left-width: 3.41052632px;
-    border-top-width: 3.78947368px;
-    border-bottom-width: 0px;
     margin-left: 0.15rem;
-    margin-right: 0.6rem;
+    border-right-width: 19.38614958px;
+    border-left-width: 19.38614958px;
+    border-top-width: 11.966759px;
+    border-bottom-width: 0px;
   }
   .form-control-select.form-control-mini.form-control-rounded select {
     padding-left: 0.72rem;
@@ -21091,7 +21109,7 @@ form-control-mini/styles.less
   }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
@@ -21145,59 +21163,57 @@ Rounded form-control
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-form-control-small/styles.less
+form-control-mini/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-  Form Control (.form-control-small)
+  Form Control (.form-control-mini)
   ----------------------------------------------------------------------------- */
-.form-control-small {
-  font-size: 0.9rem;
-  line-height: 0.9rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  height: 32px;
-  border-radius: 4px;
+.form-control-mini {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  height: 24px;
+  border-radius: 3px;
   /* -----------------------------------------------------------------------------
     Form Control Rounded (.form-control-rounded)
     ----------------------------------------------------------------------------- */
 }
-.form-control-small.form-control-rounded {
+.form-control-mini.form-control-rounded {
   border-radius: 1000px;
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
 }
 /* -----------------------------------------------------------------------------
   Form Control Select (.form-control-select)
   ----------------------------------------------------------------------------- */
-.form-control-select.form-control-small {
+.form-control-select.form-control-mini {
   /* -----------------------------------------------------------------------------
     Form Control Rounded (.form-control-rounded)
     ----------------------------------------------------------------------------- */
 }
-.form-control-select.form-control-small select {
-  font-size: 0.9rem;
-  line-height: 0.9rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  height: 32px;
+.form-control-select.form-control-mini select {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  height: 24px;
 }
-.form-control-select.form-control-small:after {
-  border-right-width: 3.78947368px;
-  border-left-width: 3.78947368px;
-  border-top-width: 4.21052632px;
+.form-control-select.form-control-mini:after {
+  margin-right: 0.5rem;
+  border-right-width: 2.84210526px;
+  border-left-width: 2.84210526px;
+  border-top-width: 3.15789474px;
   border-bottom-width: 0px;
-  margin-left: 0.1875rem;
-  margin-top: 2px;
-  margin-right: 0.75rem;
 }
-.form-control-select.form-control-small.form-control-rounded select {
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
+.form-control-select.form-control-mini.form-control-rounded select {
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
 }
-.form-control-select.form-control-small.form-control-rounded:after {
-  margin-right: 0.9rem;
+.form-control-select.form-control-mini.form-control-rounded:after {
+  margin-right: 0.6rem;
 }
 /* -----------------------------------------------------------------------------
     Form Control Group
@@ -21207,20 +21223,20 @@ form-control-small/styles.less
       Nested Form Control
       ----------------------------------------------------------------------------- */
 }
-.form-control-group.form-control-small .form-control-group-add-on:first-child {
-  padding-right: 0.375rem;
+.form-control-group.form-control-mini .form-control-group-add-on:first-child {
+  padding-right: 0.25rem;
 }
-.form-control-group.form-control-small .form-control-group-add-on:last-child {
-  padding-left: 0.375rem;
+.form-control-group.form-control-mini .form-control-group-add-on:last-child {
+  padding-left: 0.25rem;
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Small (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 480px) {
   /* -----------------------------------------------------------------------------
-      Form Control (.form-control-small)
+      Form Control (.form-control-mini)
       ----------------------------------------------------------------------------- */
-  .form-control-small {
+  .form-control-mini {
     /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
@@ -21228,7 +21244,7 @@ form-control-small/styles.less
   /* -----------------------------------------------------------------------------
       Form Control Select (.form-control-select)
       ----------------------------------------------------------------------------- */
-  .form-control-select.form-control-small {
+  .form-control-select.form-control-mini {
     /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
@@ -21239,47 +21255,46 @@ form-control-small/styles.less
   ----------------------------------------------------------------------------- */
 @media (min-width: 768px) {
   /* -----------------------------------------------------------------------------
-      Form Control (.form-control-small)
+      Form Control (.form-control-mini)
       ----------------------------------------------------------------------------- */
-  .form-control-small {
-    padding-left: 0.825rem;
-    padding-right: 0.825rem;
-    height: 35.2px;
-    /* -----------------------------------------------------------------------------
-          .form-control-rounded
-          ----------------------------------------------------------------------------- */
-  }
-  .form-control-small.form-control-rounded {
-    padding-left: 0.99rem;
-    padding-right: 0.99rem;
-  }
-  /* -----------------------------------------------------------------------------
-      Form Control Select (.form-control-select)
-      ----------------------------------------------------------------------------- */
-  .form-control-select.form-control-small {
+  .form-control-mini {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+    height: 26.4px;
     /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
   }
-  .form-control-select.form-control-small select {
-    padding-left: 0.825rem;
-    padding-right: 0.825rem;
-    height: 35.2px;
+  .form-control-mini.form-control-rounded {
+    padding-left: 0.66rem;
+    padding-right: 0.66rem;
   }
-  .form-control-select.form-control-small:after {
-    border-right-width: 4.16842105px;
-    border-left-width: 4.16842105px;
-    border-top-width: 4.63157895px;
+  /* -----------------------------------------------------------------------------
+      Form Control Select (.form-control-select)
+      ----------------------------------------------------------------------------- */
+  .form-control-select.form-control-mini {
+    /* -----------------------------------------------------------------------------
+          Form Control Rounded (.form-control-rounded)
+          ----------------------------------------------------------------------------- */
+  }
+  .form-control-select.form-control-mini select {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+    height: 26.4px;
+  }
+  .form-control-select.form-control-mini:after {
+    margin-left: 0.1375rem;
+    border-right-width: 17.77063712px;
+    border-left-width: 17.77063712px;
+    border-top-width: 10.96952909px;
     border-bottom-width: 0px;
-    margin-left: 0.20625rem;
-    margin-right: 0.825rem;
   }
-  .form-control-select.form-control-small.form-control-rounded select {
-    padding-left: 0.99rem;
-    padding-right: 0.99rem;
+  .form-control-select.form-control-mini.form-control-rounded select {
+    padding-left: 0.66rem;
+    padding-right: 0.66rem;
   }
-  .form-control-select.form-control-small.form-control-rounded:after {
-    margin-right: 0.99rem;
+  .form-control-select.form-control-mini.form-control-rounded:after {
+    margin-right: 0.66rem;
   }
   /* -----------------------------------------------------------------------------
         Form Control Group
@@ -21289,11 +21304,11 @@ form-control-small/styles.less
           Nested Form Control
           ----------------------------------------------------------------------------- */
   }
-  .form-control-group.form-control-small .form-control-group-add-on:first-child {
-    padding-right: 0.4125rem;
+  .form-control-group.form-control-mini .form-control-group-add-on:first-child {
+    padding-right: 0.275rem;
   }
-  .form-control-group.form-control-small .form-control-group-add-on:last-child {
-    padding-left: 0.4125rem;
+  .form-control-group.form-control-mini .form-control-group-add-on:last-child {
+    padding-left: 0.275rem;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -21301,47 +21316,46 @@ form-control-small/styles.less
   ----------------------------------------------------------------------------- */
 @media (min-width: 992px) {
   /* -----------------------------------------------------------------------------
-      Form Control (.form-control-small)
+      Form Control (.form-control-mini)
       ----------------------------------------------------------------------------- */
-  .form-control-small {
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
-    height: 38.4px;
+  .form-control-mini {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    height: 28.8px;
     /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
   }
-  .form-control-small.form-control-rounded {
-    padding-left: 1.08rem;
-    padding-right: 1.08rem;
+  .form-control-mini.form-control-rounded {
+    padding-left: 0.72rem;
+    padding-right: 0.72rem;
   }
   /* -----------------------------------------------------------------------------
       Form Control Select (.form-control-select)
       ----------------------------------------------------------------------------- */
-  .form-control-select.form-control-small {
+  .form-control-select.form-control-mini {
     /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
   }
-  .form-control-select.form-control-small select {
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
-    height: 38.4px;
+  .form-control-select.form-control-mini select {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    height: 28.8px;
   }
-  .form-control-select.form-control-small:after {
-    border-right-width: 4.54736842px;
-    border-left-width: 4.54736842px;
-    border-top-width: 5.05263158px;
+  .form-control-select.form-control-mini:after {
+    margin-left: 0.15rem;
+    border-right-width: 19.38614958px;
+    border-left-width: 19.38614958px;
+    border-top-width: 11.966759px;
     border-bottom-width: 0px;
-    margin-left: 0.225rem;
-    margin-right: 0.9rem;
   }
-  .form-control-select.form-control-small.form-control-rounded select {
-    padding-left: 1.08rem;
-    padding-right: 1.08rem;
+  .form-control-select.form-control-mini.form-control-rounded select {
+    padding-left: 0.72rem;
+    padding-right: 0.72rem;
   }
-  .form-control-select.form-control-small.form-control-rounded:after {
-    margin-right: 1.08rem;
+  .form-control-select.form-control-mini.form-control-rounded:after {
+    margin-right: 0.72rem;
   }
   /* -----------------------------------------------------------------------------
         Form Control Group
@@ -21351,21 +21365,21 @@ form-control-small/styles.less
           Nested Form Control
           ----------------------------------------------------------------------------- */
   }
-  .form-control-group.form-control-small .form-control-group-add-on:first-child {
-    padding-right: 0.45rem;
+  .form-control-group.form-control-mini .form-control-group-add-on:first-child {
+    padding-right: 0.3rem;
   }
-  .form-control-group.form-control-small .form-control-group-add-on:last-child {
-    padding-left: 0.45rem;
+  .form-control-group.form-control-mini .form-control-group-add-on:last-child {
+    padding-left: 0.3rem;
   }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
-      Form Control (.form-control-small)
+      Form Control (.form-control-mini)
       ----------------------------------------------------------------------------- */
-  .form-control-small {
+  .form-control-mini {
     /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
@@ -21373,7 +21387,7 @@ form-control-small/styles.less
   /* -----------------------------------------------------------------------------
       Form Control Select (.form-control-select)
       ----------------------------------------------------------------------------- */
-  .form-control-select.form-control-small {
+  .form-control-select.form-control-mini {
     /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
@@ -21452,13 +21466,11 @@ form-control-large/styles.less
   height: 46px;
 }
 .form-control-select.form-control-large:after {
+  margin-right: 1.25rem;
   border-right-width: 5.44736842px;
   border-left-width: 5.44736842px;
   border-top-width: 6.05263158px;
   border-bottom-width: 0px;
-  margin-left: 0.3125rem;
-  margin-top: 2px;
-  margin-right: 1.25rem;
 }
 .form-control-select.form-control-large.form-control-rounded select {
   padding-left: 1.5rem;
@@ -21514,7 +21526,7 @@ form-control-large/styles.less
     padding-right: 1.375rem;
     height: 50.6px;
     /* -----------------------------------------------------------------------------
-          .form-control-rounded
+          Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
   }
   .form-control-large.form-control-rounded {
@@ -21535,12 +21547,11 @@ form-control-large/styles.less
     height: 50.6px;
   }
   .form-control-select.form-control-large:after {
-    border-right-width: 5.99210526px;
-    border-left-width: 5.99210526px;
-    border-top-width: 6.65789474px;
-    border-bottom-width: 0px;
     margin-left: 0.34375rem;
-    margin-right: 1.375rem;
+    border-right-width: 65.28240997px;
+    border-left-width: 65.28240997px;
+    border-top-width: 40.29778393px;
+    border-bottom-width: 0px;
   }
   .form-control-select.form-control-large.form-control-rounded select {
     padding-left: 1.65rem;
@@ -21597,12 +21608,11 @@ form-control-large/styles.less
     height: 55.2px;
   }
   .form-control-select.form-control-large:after {
-    border-right-width: 6.53684211px;
-    border-left-width: 6.53684211px;
-    border-top-width: 7.26315789px;
-    border-bottom-width: 0px;
     margin-left: 0.375rem;
-    margin-right: 1.5rem;
+    border-right-width: 71.21717452px;
+    border-left-width: 71.21717452px;
+    border-top-width: 43.96121884px;
+    border-bottom-width: 0px;
   }
   .form-control-select.form-control-large.form-control-rounded select {
     padding-left: 1.8rem;
@@ -21627,7 +21637,7 @@ form-control-large/styles.less
   }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
@@ -21720,13 +21730,11 @@ form-control-jumbo/styles.less
   height: 56px;
 }
 .form-control-select.form-control-jumbo:after {
+  margin-right: 1.5rem;
   border-right-width: 6.63157895px;
   border-left-width: 6.63157895px;
   border-top-width: 7.36842105px;
   border-bottom-width: 0px;
-  margin-left: 0.375rem;
-  margin-top: 2px;
-  margin-right: 1.5rem;
 }
 .form-control-select.form-control-jumbo.form-control-rounded select {
   padding-left: 1.8rem;
@@ -21782,7 +21790,7 @@ form-control-jumbo/styles.less
     padding-right: 1.65rem;
     height: 61.6px;
     /* -----------------------------------------------------------------------------
-          .form-control-rounded
+          Form Control Rounded (.form-control-rounded)
           ----------------------------------------------------------------------------- */
   }
   .form-control-jumbo.form-control-rounded {
@@ -21803,12 +21811,11 @@ form-control-jumbo/styles.less
     height: 61.6px;
   }
   .form-control-select.form-control-jumbo:after {
-    border-right-width: 7.29473684px;
-    border-left-width: 7.29473684px;
-    border-top-width: 8.10526316px;
-    border-bottom-width: 0px;
     margin-left: 0.4125rem;
-    margin-right: 1.65rem;
+    border-right-width: 96.75124654px;
+    border-left-width: 96.75124654px;
+    border-top-width: 59.72299169px;
+    border-bottom-width: 0px;
   }
   .form-control-select.form-control-jumbo.form-control-rounded select {
     padding-left: 1.98rem;
@@ -21865,12 +21872,11 @@ form-control-jumbo/styles.less
     height: 67.2px;
   }
   .form-control-select.form-control-jumbo:after {
-    border-right-width: 7.95789474px;
-    border-left-width: 7.95789474px;
-    border-top-width: 8.84210526px;
-    border-bottom-width: 0px;
     margin-left: 0.45rem;
-    margin-right: 1.8rem;
+    border-right-width: 105.5468144px;
+    border-left-width: 105.5468144px;
+    border-top-width: 65.15235457px;
+    border-bottom-width: 0px;
   }
   .form-control-select.form-control-jumbo.form-control-rounded select {
     padding-left: 2.16rem;
@@ -21895,7 +21901,7 @@ form-control-jumbo/styles.less
   }
 }
 /* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  Screen Size: Small (@layout-screen-jumbo-min-width) and wider
   ----------------------------------------------------------------------------- */
 @media (min-width: 1400px) {
   /* -----------------------------------------------------------------------------
@@ -22438,6 +22444,9 @@ form-group/styles.less
   *zoom: 1;
   display: block;
   margin-bottom: 12px;
+  /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
 }
 .form-group:before,
 .form-group:after {
@@ -22448,16 +22457,18 @@ form-group/styles.less
 .form-group:after {
   clear: both;
 }
-.form-group.form-group-short {
+.form-group.short {
   margin-bottom: 6px;
 }
-.form-group.form-group-short-bottom {
+.form-group.short-bottom,
+.form-group.short-bottom {
   margin-bottom: 6px;
 }
-.form-group.form-group-tall {
+.form-group.tall {
   margin-bottom: 24px;
 }
-.form-group.form-group-tall-bottom {
+.form-group.tall-bottom,
+.form-group.tall-bottom {
   margin-bottom: 24px;
 }
 /* -----------------------------------------------------------------------------
@@ -22469,17 +22480,22 @@ form-group/styles.less
       ----------------------------------------------------------------------------- */
   .form-group {
     margin-bottom: 12px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  .form-group.form-group-short {
+  .form-group.short {
     margin-bottom: 6px;
   }
-  .form-group.form-group-short-bottom {
+  .form-group.short-bottom,
+  .form-group.short-bottom-screen-small {
     margin-bottom: 6px;
   }
-  .form-group.form-group-tall {
+  .form-group.tall {
     margin-bottom: 24px;
   }
-  .form-group.form-group-tall-bottom {
+  .form-group.tall-bottom,
+  .form-group.tall-bottom-screen-small {
     margin-bottom: 24px;
   }
 }
@@ -22492,17 +22508,22 @@ form-group/styles.less
       ----------------------------------------------------------------------------- */
   .form-group {
     margin-bottom: 16px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  .form-group.form-group-short {
+  .form-group.short {
     margin-bottom: 8px;
   }
-  .form-group.form-group-short-bottom {
+  .form-group.short-bottom,
+  .form-group.short-bottom-screen-medium {
     margin-bottom: 8px;
   }
-  .form-group.form-group-tall {
+  .form-group.tall {
     margin-bottom: 32px;
   }
-  .form-group.form-group-tall-bottom {
+  .form-group.tall-bottom,
+  .form-group.tall-bottom-screen-medium {
     margin-bottom: 32px;
   }
 }
@@ -22515,17 +22536,22 @@ form-group/styles.less
       ----------------------------------------------------------------------------- */
   .form-group {
     margin-bottom: 18px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  .form-group.form-group-short {
+  .form-group.short {
     margin-bottom: 9px;
   }
-  .form-group.form-group-short-bottom {
+  .form-group.short-bottom,
+  .form-group.short-bottom-screen-large {
     margin-bottom: 9px;
   }
-  .form-group.form-group-tall {
+  .form-group.tall {
     margin-bottom: 36px;
   }
-  .form-group.form-group-tall-bottom {
+  .form-group.tall-bottom,
+  .form-group.tall-bottom-screen-large {
     margin-bottom: 36px;
   }
 }
@@ -22538,17 +22564,22 @@ form-group/styles.less
       ----------------------------------------------------------------------------- */
   .form-group {
     margin-bottom: 24px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
   }
-  .form-group.form-group-short {
+  .form-group.short {
     margin-bottom: 12px;
   }
-  .form-group.form-group-short-bottom {
+  .form-group.short-bottom,
+  .form-group.short-bottom-screen-jumbo {
     margin-bottom: 12px;
   }
-  .form-group.form-group-tall {
+  .form-group.tall {
     margin-bottom: 48px;
   }
-  .form-group.form-group-tall-bottom {
+  .form-group.tall-bottom,
+  .form-group.tall-bottom-screen-jumbo {
     margin-bottom: 48px;
   }
 }
@@ -22656,644 +22687,8 @@ form-control-group/styles.less
 Form Label
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-label/variables.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Responsive Scaling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text Styling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text Size
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Layout
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Margin
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Padding
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Layout Variants
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-label/styles.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-  Label
-  ----------------------------------------------------------------------------- */
-label:not(.button),
-.label:not(.button) {
-  display: block;
-  color: #5b6171;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-rendering: geometricPrecision;
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  margin-top: 0px;
-  margin-bottom: 0.5rem;
-}
-label:not(.button).label-short,
-.label:not(.button).label-short {
-  margin-top: 0px;
-  margin-bottom: 0.25rem;
-}
-label:not(.button).label-short-top,
-.label:not(.button).label-short-top {
-  margin-top: 0px;
-}
-label:not(.button).label-short-bottom,
-.label:not(.button).label-short-bottom {
-  margin-bottom: 0.25rem;
-}
-label:not(.button).label-tall,
-.label:not(.button).label-tall {
-  margin-top: 0px;
-  margin-bottom: 1rem;
-}
-label:not(.button).label-tall-top,
-.label:not(.button).label-tall-top {
-  margin-top: 0px;
-}
-label:not(.button).label-tall-bottom,
-.label:not(.button).label-tall-bottom {
-  margin-bottom: 1rem;
-}
-label:not(.button).emphasis,
-.label:not(.button).emphasis,
-label:not(.button) .emphasis,
-.label:not(.button) .emphasis {
-  color: #282e3e;
-  font-weight: 800;
-}
-label:not(.button).muted,
-.label:not(.button).muted,
-label:not(.button) .muted,
-.label:not(.button) .muted {
-  color: #adb0b8;
-}
-label:not(.button).inverse,
-.label:not(.button).inverse {
-  color: #c2c4ca;
-}
-label:not(.button).inverse.emphasis,
-.label:not(.button).inverse.emphasis,
-label:not(.button).inverse .emphasis,
-.label:not(.button).inverse .emphasis {
-  color: #ffffff;
-}
-label:not(.button).inverse.muted,
-.label:not(.button).inverse.muted,
-label:not(.button).inverse .muted,
-.label:not(.button).inverse .muted {
-  color: #999da7;
-}
-/* -----------------------------------------------------------------------------
-  --------------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
-  --------------------------------------------------------------------------------
-  ----------------------------------------------------------------------------- */
-@media (min-width: 480px) {
-  /* -----------------------------------------------------------------------------
-      Label
-      ----------------------------------------------------------------------------- */
-}
-/* -----------------------------------------------------------------------------
-  --------------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
-  --------------------------------------------------------------------------------
-  ----------------------------------------------------------------------------- */
-@media (min-width: 768px) {
-  /* -----------------------------------------------------------------------------
-      Label
-      ----------------------------------------------------------------------------- */
-  label:not(.button),
-  .label:not(.button) {
-    font-size: 0.84rem;
-    line-height: 0.84rem;
-    margin-bottom: 0.55rem;
-  }
-  label:not(.button).label-short,
-  .label:not(.button).label-short {
-    margin-bottom: 0.275rem;
-  }
-  label:not(.button).label-short-bottom,
-  .label:not(.button).label-short-bottom {
-    margin-bottom: 0.275rem;
-  }
-  label:not(.button).label-tall,
-  .label:not(.button).label-tall {
-    margin-bottom: 1.1rem;
-  }
-  label:not(.button).label-tall-bottom,
-  .label:not(.button).label-tall-bottom {
-    margin-bottom: 1.1rem;
-  }
-}
-/* -----------------------------------------------------------------------------
-  --------------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
-  --------------------------------------------------------------------------------
-  ----------------------------------------------------------------------------- */
-@media (min-width: 992px) {
-  /* -----------------------------------------------------------------------------
-      Label
-      ----------------------------------------------------------------------------- */
-  label:not(.button),
-  .label:not(.button) {
-    font-size: 0.88rem;
-    line-height: 0.88rem;
-    margin-bottom: 0.6rem;
-  }
-  label:not(.button).label-short,
-  .label:not(.button).label-short {
-    margin-bottom: 0.3rem;
-  }
-  label:not(.button).label-short-bottom,
-  .label:not(.button).label-short-bottom {
-    margin-bottom: 0.3rem;
-  }
-  label:not(.button).label-tall,
-  .label:not(.button).label-tall {
-    margin-bottom: 1.2rem;
-  }
-  label:not(.button).label-tall-bottom,
-  .label:not(.button).label-tall-bottom {
-    margin-bottom: 1.2rem;
-  }
-}
-/* -----------------------------------------------------------------------------
-  --------------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-  --------------------------------------------------------------------------------
-  ----------------------------------------------------------------------------- */
-@media (min-width: 1400px) {
-  /* -----------------------------------------------------------------------------
-      Label
-      ----------------------------------------------------------------------------- */
-}
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-label-success/variables.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Responsive Scaling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text Styling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-label-success/styles.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-  Label success (.label-success)
-  ----------------------------------------------------------------------------- */
-label:not(.button).label-success,
-.label:not(.button).label-success,
-.form-group.form-group-success label:not(.button),
-.form-group.form-group-success .label:not(.button) {
-  color: #27c97b;
-  /* -----------------------------------------------------------------------------
-    Label success Inverse (.label-success.inverse)
-    ----------------------------------------------------------------------------- */
-}
-label:not(.button).label-success.emphasis,
-.label:not(.button).label-success.emphasis,
-.form-group.form-group-success label:not(.button).emphasis,
-.form-group.form-group-success .label:not(.button).emphasis,
-label:not(.button).label-success .emphasis,
-.label:not(.button).label-success .emphasis,
-.form-group.form-group-success label:not(.button) .emphasis,
-.form-group.form-group-success .label:not(.button) .emphasis {
-  color: #27c97b;
-}
-label:not(.button).label-success.muted,
-.label:not(.button).label-success.muted,
-.form-group.form-group-success label:not(.button).muted,
-.form-group.form-group-success .label:not(.button).muted,
-label:not(.button).label-success .muted,
-.label:not(.button).label-success .muted,
-.form-group.form-group-success label:not(.button) .muted,
-.form-group.form-group-success .label:not(.button) .muted {
-  color: #52d495;
-}
-label:not(.button).label-success.inverse,
-.label:not(.button).label-success.inverse,
-.form-group.form-group-success label:not(.button).inverse,
-.form-group.form-group-success .label:not(.button).inverse {
-  color: #27c97b;
-}
-label:not(.button).label-success.inverse.emphasis,
-.label:not(.button).label-success.inverse.emphasis,
-.form-group.form-group-success label:not(.button).inverse.emphasis,
-.form-group.form-group-success .label:not(.button).inverse.emphasis,
-label:not(.button).label-success.inverse .emphasis,
-.label:not(.button).label-success.inverse .emphasis,
-.form-group.form-group-success label:not(.button).inverse .emphasis,
-.form-group.form-group-success .label:not(.button).inverse .emphasis {
-  color: #27c97b;
-}
-label:not(.button).label-success.inverse.muted,
-.label:not(.button).label-success.inverse.muted,
-.form-group.form-group-success label:not(.button).inverse.muted,
-.form-group.form-group-success .label:not(.button).inverse.muted,
-label:not(.button).label-success.inverse .muted,
-.label:not(.button).label-success.inverse .muted,
-.form-group.form-group-success label:not(.button).inverse .muted,
-.form-group.form-group-success .label:not(.button).inverse .muted {
-  color: #52d495;
-}
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-label-error/variables.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Responsive Scaling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text Styling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-label-error/styles.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-  Label Error (.label-error)
-  ----------------------------------------------------------------------------- */
-label:not(.button).label-error,
-.label:not(.button).label-error,
-.form-group.form-group-error label:not(.button),
-.form-group.form-group-error .label:not(.button) {
-  color: #f33745;
-  /* -----------------------------------------------------------------------------
-    Label Error Inverse (.label-error.inverse)
-    ----------------------------------------------------------------------------- */
-}
-label:not(.button).label-error.emphasis,
-.label:not(.button).label-error.emphasis,
-.form-group.form-group-error label:not(.button).emphasis,
-.form-group.form-group-error .label:not(.button).emphasis,
-label:not(.button).label-error .emphasis,
-.label:not(.button).label-error .emphasis,
-.form-group.form-group-error label:not(.button) .emphasis,
-.form-group.form-group-error .label:not(.button) .emphasis {
-  color: #f33745;
-}
-label:not(.button).label-error.muted,
-.label:not(.button).label-error.muted,
-.form-group.form-group-error label:not(.button).muted,
-.form-group.form-group-error .label:not(.button).muted,
-label:not(.button).label-error .muted,
-.label:not(.button).label-error .muted,
-.form-group.form-group-error label:not(.button) .muted,
-.form-group.form-group-error .label:not(.button) .muted {
-  color: #f55f6a;
-}
-label:not(.button).label-error.inverse,
-.label:not(.button).label-error.inverse,
-.form-group.form-group-error label:not(.button).inverse,
-.form-group.form-group-error .label:not(.button).inverse {
-  color: #f33745;
-}
-label:not(.button).label-error.inverse.emphasis,
-.label:not(.button).label-error.inverse.emphasis,
-.form-group.form-group-error label:not(.button).inverse.emphasis,
-.form-group.form-group-error .label:not(.button).inverse.emphasis,
-label:not(.button).label-error.inverse .emphasis,
-.label:not(.button).label-error.inverse .emphasis,
-.form-group.form-group-error label:not(.button).inverse .emphasis,
-.form-group.form-group-error .label:not(.button).inverse .emphasis {
-  color: #f33745;
-}
-label:not(.button).label-error.inverse.muted,
-.label:not(.button).label-error.inverse.muted,
-.form-group.form-group-error label:not(.button).inverse.muted,
-.form-group.form-group-error .label:not(.button).inverse.muted,
-label:not(.button).label-error.inverse .muted,
-.label:not(.button).label-error.inverse .muted,
-.form-group.form-group-error label:not(.button).inverse .muted,
-.form-group.form-group-error .label:not(.button).inverse .muted {
-  color: #f55f6a;
-}
-/* -----------------------------------------------------------------------------
 Toggle
 ----------------------------------------------------------------------------- */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-toggle/variables.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Responsive Scaling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Layout
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Margin
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Padding
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Layout Variants
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Inline Label
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Label Text Styling
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Label Text Size
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Label Layout
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Margin
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-Padding
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-toggle/styles.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-  Toggle
-  ----------------------------------------------------------------------------- */
-.checkbox,
-.radio {
-  *zoom: 1;
-  display: block;
-  margin-bottom: 0.5rem;
-  /* -----------------------------------------------------------------------------
-    Inline Toggle
-    ----------------------------------------------------------------------------- */
-}
-.checkbox:before,
-.radio:before,
-.checkbox:after,
-.radio:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.checkbox:after,
-.radio:after {
-  clear: both;
-}
-.checkbox.toggle-short,
-.radio.toggle-short {
-  margin-bottom: 0.25rem;
-}
-.checkbox.toggle-short-bottom,
-.radio.toggle-short-bottom {
-  margin-bottom: 0.25rem;
-}
-.checkbox.toggle-tall,
-.radio.toggle-tall {
-  margin-bottom: 1rem;
-}
-.checkbox.toggle-tall-bottom,
-.radio.toggle-tall-bottom {
-  margin-bottom: 1rem;
-}
-.checkbox input[type="checkbox"],
-.radio input[type="checkbox"],
-.checkbox input[type="radio"],
-.radio input[type="radio"] {
-  width: 16px;
-  height: 16px;
-}
-.checkbox label,
-.radio label {
-  margin: 0px;
-  position: relative;
-  color: #5b6171;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-rendering: geometricPrecision;
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  padding-left: 1.2rem;
-}
-.checkbox label input[type="checkbox"],
-.radio label input[type="checkbox"],
-.checkbox label input[type="radio"],
-.radio label input[type="radio"] {
-  position: absolute;
-  left: 0px;
-}
-.checkbox label.emphasis,
-.radio label.emphasis,
-.checkbox label .emphasis,
-.radio label .emphasis {
-  color: #282e3e;
-  font-weight: 800;
-}
-.checkbox label.muted,
-.radio label.muted,
-.checkbox label .muted,
-.radio label .muted {
-  color: #adb0b8;
-}
-.checkbox label.inverse,
-.radio label.inverse {
-  color: #c2c4ca;
-}
-.checkbox label.inverse.emphasis,
-.radio label.inverse.emphasis,
-.checkbox label.inverse .emphasis,
-.radio label.inverse .emphasis {
-  color: #ffffff;
-}
-.checkbox label.inverse.muted,
-.radio label.inverse.muted,
-.checkbox label.inverse .muted,
-.radio label.inverse .muted {
-  color: #999da7;
-}
-.checkbox:last-child,
-.radio:last-child {
-  margin-bottom: 0px;
-}
-.checkbox.checkbox-inline,
-.radio.checkbox-inline,
-.checkbox.radio-inline,
-.radio.radio-inline {
-  float: left;
-  margin-left: 0.8rem;
-}
-.checkbox.checkbox-inline:first-child,
-.radio.checkbox-inline:first-child,
-.checkbox.radio-inline:first-child,
-.radio.radio-inline:first-child {
-  margin-left: 0px;
-}
-/* -----------------------------------------------------------------------------
-  Screen Size: Small (@layout-screen-small-min-width) and wider
-  ----------------------------------------------------------------------------- */
-@media (min-width: 480px) {
-  .checkbox,
-  .radio {
-    /* -----------------------------------------------------------------------------
-        Inline
-        ----------------------------------------------------------------------------- */
-  }
-}
-/* -----------------------------------------------------------------------------
-  Screen Size: Medium (@layout-screen-medium-min-width) and wider
-  ----------------------------------------------------------------------------- */
-@media (min-width: 768px) {
-  .checkbox,
-  .radio {
-    margin-bottom: 0.55rem;
-    /* -----------------------------------------------------------------------------
-        Inline
-        ----------------------------------------------------------------------------- */
-  }
-  .checkbox.toggle-short,
-  .radio.toggle-short {
-    margin-bottom: 0.275rem;
-  }
-  .checkbox.toggle-short-bottom,
-  .radio.toggle-short-bottom {
-    margin-bottom: 0.275rem;
-  }
-  .checkbox.toggle-tall,
-  .radio.toggle-tall {
-    margin-bottom: 1.1rem;
-  }
-  .checkbox.toggle-tall-bottom,
-  .radio.toggle-tall-bottom {
-    margin-bottom: 1.1rem;
-  }
-  .checkbox label,
-  .radio label {
-    font-size: 0.84rem;
-    line-height: 0.84rem;
-    padding-left: 1.32rem;
-  }
-  .checkbox.checkbox-inline,
-  .radio.checkbox-inline,
-  .checkbox.radio-inline,
-  .radio.radio-inline {
-    margin-left: 0.88rem;
-  }
-}
-/* -----------------------------------------------------------------------------
-  Screen Size: Large (@layout-screen-large-min-width) and wider
-  ----------------------------------------------------------------------------- */
-@media (min-width: 992px) {
-  .checkbox,
-  .radio {
-    margin-bottom: 0.6rem;
-    /* -----------------------------------------------------------------------------
-        Inline
-        ----------------------------------------------------------------------------- */
-  }
-  .checkbox.toggle-short,
-  .radio.toggle-short {
-    margin-bottom: 0.3rem;
-  }
-  .checkbox.toggle-short-bottom,
-  .radio.toggle-short-bottom {
-    margin-bottom: 0.3rem;
-  }
-  .checkbox.toggle-tall,
-  .radio.toggle-tall {
-    margin-bottom: 1.2rem;
-  }
-  .checkbox.toggle-tall-bottom,
-  .radio.toggle-tall-bottom {
-    margin-bottom: 1.2rem;
-  }
-  .checkbox label,
-  .radio label {
-    font-size: 0.88rem;
-    line-height: 0.88rem;
-    padding-left: 1.44rem;
-  }
-  .checkbox.checkbox-inline,
-  .radio.checkbox-inline,
-  .checkbox.radio-inline,
-  .radio.radio-inline {
-    margin-left: 0.96rem;
-  }
-}
-/* -----------------------------------------------------------------------------
-  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-  ----------------------------------------------------------------------------- */
-@media (min-width: 1400px) {
-  .checkbox,
-  .radio {
-    /* -----------------------------------------------------------------------------
-        Inline
-        ----------------------------------------------------------------------------- */
-  }
-}
 /* -----------------------------------------------------------------------------
 Dropdown
 ----------------------------------------------------------------------------- */
