@@ -17,24 +17,24 @@ typography/styles.less
   a {
 
     outline: 0;
-    .text-style-variant('link');
+    .element-text-style('link');
 
     &:hover {
 
-      .text-style-variant('link-hover');
+      .element-text-style('link-hover');
 
     }
 
     &:active {
 
-      .text-style-variant('link-active');
+      .element-text-style('link-active');
 
     }
 
     &:disabled,
     &.disabled {
 
-      .text-style-variant('link-disabled');
+      .element-text-style('link-disabled');
       cursor: default;
 
     }
@@ -47,9 +47,9 @@ typography/styles.less
 
   ::selection {
 
-    & when not (@link-text-color = null) {
+    & when not (@link-color = null) {
 
-      background: @link-text-color;
+      background: @link-color;
       color: @white;
 
     }

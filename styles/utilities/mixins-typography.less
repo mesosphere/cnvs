@@ -19,8 +19,6 @@ Text Size Variant
 
 }
 
-
-
 /* -----------------------------------------------------------------------------
 Text Style Variant
 ----------------------------------------------------------------------------- */
@@ -38,204 +36,8 @@ Text Style Variant
 
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text Style Variant
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.text-style-variant (@element: '') {
-
-  @element-text-color: "@{element}-text-color";
-  @element-text-font-family: "@{element}-text-font-family";
-  @element-text-font-style: "@{element}-text-font-style";
-  @element-text-font-weight: "@{element}-text-font-weight";
-  @element-text-transform: "@{element}-text-transform";
-  @element-text-shadow: "@{element}-text-shadow";
-  @element-text-decoration: "@{element}-text-decoration";
-  @element-text-rendering: "@{element}-text-rendering";
-
-  & when not (@@element-text-color = null) {
-
-    color: @@element-text-color;
-
-  }
-
-  & when not (@@element-text-font-family = null) {
-
-    font-family: @@element-text-font-family;
-
-  }
-
-  & when not (@@element-text-font-style = null) {
-
-    font-style: @@element-text-font-style;
-
-  }
-
-  & when not (@@element-text-font-weight = null) {
-
-    font-weight: @@element-text-font-weight;
-
-  }
-
-  & when not (@@element-text-transform = null) {
-
-    text-transform: @@element-text-transform;
-
-  }
-
-  & when not (@@element-text-shadow = null) {
-
-    text-shadow: @@element-text-shadow;
-
-  }
-
-  & when not (@@element-text-decoration = null) {
-
-    text-decoration: @@element-text-decoration;
-
-  }
-
-  & when not (@@element-text-rendering = null) {
-
-    text-rendering: @@element-text-rendering;
-
-  }
-
-};
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Text Size Variant
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.text-size-variant (@element: '', @size) when (@size = null) {
-
-  @element-text-font-size: "@{element}-text-font-size";
-  @element-text-font-size-scale: 1.0;
-
-  @element-text-line-height: "@{element}-text-line-height";
-  @element-text-line-height-scale: 1.0;
-
-  .text-size-variant-helper (
-
-    @@element-text-font-size,
-    @element-text-font-size-scale,
-    @@element-text-line-height,
-    @element-text-line-height-scale
-
-  );
-
-}
-
-.text-size-variant (@element: '', @size) when not (@size = null) {
-
-  @element-text-font-size: "@{element}-text-font-size";
-  @element-text-font-size-scale: "@{element}-text-font-size-@{size}";
-
-  @element-text-line-height: "@{element}-text-line-height";
-  @element-text-line-height-scale: "@{element}-text-line-height-@{size}";
-
-  .text-size-variant-helper (
-
-    @@element-text-font-size,
-    @@element-text-font-size-scale,
-    @@element-text-line-height,
-    @@element-text-line-height-scale
-
-  );
-
-}
-
-.text-size-variant-helper (
-
-    @element-text-font-size,
-    @element-text-font-size-scale,
-    @element-text-line-height,
-    @element-text-line-height-scale
-
-  ) {
-
-  // Font Size
-
-  & when not (@element-text-font-size = null) and not (@element-text-font-size-scale = null) {
-
-    font-size: @element-text-font-size * @element-text-font-size-scale;
-
-  }
-
-  // Line Height
-
-  & when not (@element-text-line-height = null) and not (@element-text-line-height-scale = null) {
-
-    line-height: @element-text-line-height * @element-text-line-height-scale;
-
-  }
-
-}
-
-
-
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-Test Styling (REMOVE)
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.text-styling (
-
-  @text-color,
-  @text-font-family,
-  @text-font-size,
-  @text-font-style,
-  @text-font-weight,
-  @text-line-height,
-  @text-transform,
-  @text-shadow
-
-  ) {
-
-  color: @text-color;
-  font-family: @text-font-family;
-  font-size: @text-font-size;
-  font-style: @text-font-style;
-  font-weight: @text-font-weight;
-  line-height: @text-line-height;
-  text-transform: @text-transform;
-  text-shadow: @text-shadow;
-
-}
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
 Text Overflow
---------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
 .text-overflow () {
@@ -246,12 +48,8 @@ Text Overflow
 
 }
 
-
-
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
 Hide Text
---------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
 .text-hide () {
@@ -264,12 +62,8 @@ Hide Text
 
 }
 
-
-
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
 Placeholder Text
---------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
 .placeholder (@color) {

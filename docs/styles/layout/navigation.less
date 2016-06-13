@@ -17,7 +17,7 @@ sidebar.less
   ul.sidebar-menu {
 
     .clearfix();
-    .shape-style-variant(sidebar-menu);
+    .element-shape-style(sidebar-menu);
     margin-bottom: 0px;
 
     li {
@@ -25,8 +25,8 @@ sidebar.less
       display: block;
       .element-text-size(sidebar-menu-item, null);
       .element-spacing(sidebar-menu-item, null, null);
-      .text-style-variant(sidebar-menu-item);
-      .shape-style-variant(sidebar-menu-item);
+      .element-text-style(sidebar-menu-item);
+      .element-shape-style(sidebar-menu-item);
 
       &:first-child {
 
@@ -39,20 +39,20 @@ sidebar.less
         display: block;
         text-decoration: none !important;
         .element-spacing(sidebar-menu-item-link, null, null);
-        .text-style-variant(sidebar-menu-item-link);
-        .shape-style-variant(sidebar-menu-item-link);
+        .element-text-style(sidebar-menu-item-link);
+        .element-shape-style(sidebar-menu-item-link);
 
         &:hover {
 
-          .text-style-variant(sidebar-menu-item-link-hover);
-          .shape-style-variant(sidebar-menu-item-link-hover);
+          .element-text-style(sidebar-menu-item-link-hover);
+          .element-shape-style(sidebar-menu-item-link-hover);
 
         }
 
         &:active {
 
-          .text-style-variant(sidebar-menu-item-link-active);
-          .shape-style-variant(sidebar-menu-item-link-active);
+          .element-text-style(sidebar-menu-item-link-active);
+          .element-shape-style(sidebar-menu-item-link-active);
 
         }
 
@@ -60,21 +60,21 @@ sidebar.less
 
       &.selected:not(.open) {
 
-        .shape-style-variant(sidebar-menu-item-selected);
+        .element-shape-style(sidebar-menu-item-selected);
 
       }
 
       &.selected,
       &.selected.open {
 
-        .text-style-variant(sidebar-menu-item-selected);
+        .element-text-style(sidebar-menu-item-selected);
 
         > a,
         > a:hover,
         > a:active {
 
-          .text-style-variant(sidebar-menu-item-link-selected);
-          .shape-style-variant(sidebar-menu-item-link-selected);
+          .element-text-style(sidebar-menu-item-link-selected);
+          .element-shape-style(sidebar-menu-item-link-selected);
 
         }
 
@@ -82,13 +82,13 @@ sidebar.less
 
       &.open {
 
-        .shape-style-variant(sidebar-submenu);
-        .text-style-variant(sidebar-menu-item-open);
+        .element-shape-style(sidebar-submenu);
+        .element-text-style(sidebar-menu-item-open);
 
         > a {
 
-          .text-style-variant(sidebar-menu-item-open);
-          .shape-style-variant(sidebar-menu-item-open);
+          .element-text-style(sidebar-menu-item-open);
+          .element-shape-style(sidebar-menu-item-open);
 
         }
 
@@ -101,8 +101,8 @@ sidebar.less
             display: block;
             .element-text-size(sidebar-submenu-item, null);
             .element-spacing(sidebar-submenu-item, null, null);
-            .text-style-variant(sidebar-submenu-item);
-            .shape-style-variant(sidebar-submenu-item);
+            .element-text-style(sidebar-submenu-item);
+            .element-shape-style(sidebar-submenu-item);
 
             &.selected {
 
@@ -110,8 +110,8 @@ sidebar.less
               > a:hover,
               > a:active {
 
-                .text-style-variant(sidebar-submenu-item-link-selected);
-                .shape-style-variant(sidebar-submenu-item-link-selected);
+                .element-text-style(sidebar-submenu-item-link-selected);
+                .element-shape-style(sidebar-submenu-item-link-selected);
 
               }
 
@@ -122,20 +122,20 @@ sidebar.less
               display: block;
               text-decoration: none !important;
               .element-spacing(sidebar-submenu-item-link, null, null);
-              .text-style-variant(sidebar-submenu-item-link);
-              .shape-style-variant(sidebar-submenu-item-link);
+              .element-text-style(sidebar-submenu-item-link);
+              .element-shape-style(sidebar-submenu-item-link);
 
               &:hover {
 
-                .text-style-variant(sidebar-submenu-item-link-hover);
-                .shape-style-variant(sidebar-submenu-item-link-hover);
+                .element-text-style(sidebar-submenu-item-link-hover);
+                .element-shape-style(sidebar-submenu-item-link-hover);
 
               }
 
               &:active {
 
-                .text-style-variant(sidebar-submenu-item-link-active);
-                .shape-style-variant(sidebar-submenu-item-link-active);
+                .element-text-style(sidebar-submenu-item-link-active);
+                .element-shape-style(sidebar-submenu-item-link-active);
 
               }
 
@@ -460,10 +460,10 @@ Styling
 
 // Default
 
-@sidebar-menu-item-text-color:                                                  color-lighten(@neutral, 80);
-@sidebar-menu-item-text-font-family:                                            null;
-@sidebar-menu-item-text-font-style:                                             null;
-@sidebar-menu-item-text-font-weight:                                            600;
+@sidebar-menu-item-color:                                                       color-lighten(@neutral, 80);
+@sidebar-menu-item-font-family:                                                 null;
+@sidebar-menu-item-font-style:                                                  null;
+@sidebar-menu-item-font-weight:                                                 600;
 @sidebar-menu-item-text-transform:                                              null;
 @sidebar-menu-item-text-shadow:                                                 null;
 @sidebar-menu-item-text-decoration:                                             null;
@@ -490,10 +490,10 @@ Styling
 
 // Selected
 
-@sidebar-menu-item-selected-text-color:                                         @white;
-@sidebar-menu-item-selected-text-font-family:                                   null;
-@sidebar-menu-item-selected-text-font-style:                                    null;
-@sidebar-menu-item-selected-text-font-weight:                                   null;
+@sidebar-menu-item-selected-color:                                              @white;
+@sidebar-menu-item-selected-font-family:                                        null;
+@sidebar-menu-item-selected-font-style:                                         null;
+@sidebar-menu-item-selected-font-weight:                                        null;
 @sidebar-menu-item-selected-text-transform:                                     null;
 @sidebar-menu-item-selected-text-shadow:                                        null;
 @sidebar-menu-item-selected-text-decoration:                                    null;
@@ -520,10 +520,10 @@ Styling
 
 // Open
 
-@sidebar-menu-item-open-text-color:                                             @white;
-@sidebar-menu-item-open-text-font-family:                                       null;
-@sidebar-menu-item-open-text-font-style:                                        null;
-@sidebar-menu-item-open-text-font-weight:                                       null;
+@sidebar-menu-item-open-color:                                                  @white;
+@sidebar-menu-item-open-font-family:                                            null;
+@sidebar-menu-item-open-font-style:                                             null;
+@sidebar-menu-item-open-font-weight:                                            null;
 @sidebar-menu-item-open-text-transform:                                         null;
 @sidebar-menu-item-open-text-shadow:                                            null;
 @sidebar-menu-item-open-text-decoration:                                        null;
@@ -650,10 +650,10 @@ Styling
 
 // Default
 
-@sidebar-menu-item-link-text-color:                                             color-lighten(@neutral, 80);
-@sidebar-menu-item-link-text-font-family:                                       null;
-@sidebar-menu-item-link-text-font-style:                                        null;
-@sidebar-menu-item-link-text-font-weight:                                       null;
+@sidebar-menu-item-link-color:                                                  color-lighten(@neutral, 80);
+@sidebar-menu-item-link-font-family:                                            null;
+@sidebar-menu-item-link-font-style:                                             null;
+@sidebar-menu-item-link-font-weight:                                            null;
 @sidebar-menu-item-link-text-transform:                                         null;
 @sidebar-menu-item-link-text-shadow:                                            null;
 @sidebar-menu-item-link-text-decoration:                                        null;
@@ -680,10 +680,10 @@ Styling
 
 // Hover
 
-@sidebar-menu-item-link-hover-text-color:                                       @white;
-@sidebar-menu-item-link-hover-text-font-family:                                 null;
-@sidebar-menu-item-link-hover-text-font-style:                                  null;
-@sidebar-menu-item-link-hover-text-font-weight:                                 null;
+@sidebar-menu-item-link-hover-color:                                            @white;
+@sidebar-menu-item-link-hover-font-family:                                      null;
+@sidebar-menu-item-link-hover-font-style:                                       null;
+@sidebar-menu-item-link-hover-font-weight:                                      null;
 @sidebar-menu-item-link-hover-text-transform:                                   null;
 @sidebar-menu-item-link-hover-text-shadow:                                      null;
 @sidebar-menu-item-link-hover-text-decoration:                                  null;
@@ -710,10 +710,10 @@ Styling
 
 // Active
 
-@sidebar-menu-item-link-active-text-color:                                      color-lighten(@neutral, 70);
-@sidebar-menu-item-link-active-text-font-family:                                null;
-@sidebar-menu-item-link-active-text-font-style:                                 null;
-@sidebar-menu-item-link-active-text-font-weight:                                null;
+@sidebar-menu-item-link-active-color:                                           color-lighten(@neutral, 70);
+@sidebar-menu-item-link-active-font-family:                                     null;
+@sidebar-menu-item-link-active-font-style:                                      null;
+@sidebar-menu-item-link-active-font-weight:                                     null;
 @sidebar-menu-item-link-active-text-transform:                                  null;
 @sidebar-menu-item-link-active-text-shadow:                                     null;
 @sidebar-menu-item-link-active-text-decoration:                                 null;
@@ -740,10 +740,10 @@ Styling
 
 // Selected
 
-@sidebar-menu-item-link-selected-text-color:                                    @white;
-@sidebar-menu-item-link-selected-text-font-family:                              null;
-@sidebar-menu-item-link-selected-text-font-style:                               null;
-@sidebar-menu-item-link-selected-text-font-weight:                              null;
+@sidebar-menu-item-link-selected-color:                                         @white;
+@sidebar-menu-item-link-selected-font-family:                                   null;
+@sidebar-menu-item-link-selected-font-style:                                    null;
+@sidebar-menu-item-link-selected-font-weight:                                   null;
 @sidebar-menu-item-link-selected-text-transform:                                null;
 @sidebar-menu-item-link-selected-text-shadow:                                   null;
 @sidebar-menu-item-link-selected-text-decoration:                               null;
@@ -950,10 +950,10 @@ Styling
 
 // Default
 
-@sidebar-submenu-item-text-color:                                               color-lighten(@neutral, 60);
-@sidebar-submenu-item-text-font-family:                                         null;
-@sidebar-submenu-item-text-font-style:                                          null;
-@sidebar-submenu-item-text-font-weight:                                         500;
+@sidebar-submenu-item-color:                                                    color-lighten(@neutral, 60);
+@sidebar-submenu-item-font-family:                                              null;
+@sidebar-submenu-item-font-style:                                               null;
+@sidebar-submenu-item-font-weight:                                              500;
 @sidebar-submenu-item-text-transform:                                           none;
 @sidebar-submenu-item-text-shadow:                                              null;
 @sidebar-submenu-item-text-decoration:                                          null;
@@ -980,10 +980,10 @@ Styling
 
 // Selected
 
-@sidebar-submenu-item-selected-text-color:                                      null;
-@sidebar-submenu-item-selected-text-font-family:                                null;
-@sidebar-submenu-item-selected-text-font-style:                                 null;
-@sidebar-submenu-item-selected-text-font-weight:                                null;
+@sidebar-submenu-item-selected-color:                                           null;
+@sidebar-submenu-item-selected-font-family:                                     null;
+@sidebar-submenu-item-selected-font-style:                                      null;
+@sidebar-submenu-item-selected-font-weight:                                     null;
 @sidebar-submenu-item-selected-text-transform:                                  null;
 @sidebar-submenu-item-selected-text-shadow:                                     null;
 @sidebar-submenu-item-selected-text-decoration:                                 null;
@@ -1010,10 +1010,10 @@ Styling
 
 // Open
 
-@sidebar-submenu-item-open-text-color:                                          null;
-@sidebar-submenu-item-open-text-font-family:                                    null;
-@sidebar-submenu-item-open-text-font-style:                                     null;
-@sidebar-submenu-item-open-text-font-weight:                                    null;
+@sidebar-submenu-item-open-color:                                               null;
+@sidebar-submenu-item-open-font-family:                                         null;
+@sidebar-submenu-item-open-font-style:                                          null;
+@sidebar-submenu-item-open-font-weight:                                         null;
 @sidebar-submenu-item-open-text-transform:                                      null;
 @sidebar-submenu-item-open-text-shadow:                                         null;
 @sidebar-submenu-item-open-text-decoration:                                     null;
@@ -1140,10 +1140,10 @@ Styling
 
 // Default
 
-@sidebar-submenu-item-link-text-color:                                          color-lighten(@neutral, 60);
-@sidebar-submenu-item-link-text-font-family:                                    null;
-@sidebar-submenu-item-link-text-font-style:                                     null;
-@sidebar-submenu-item-link-text-font-weight:                                    null;
+@sidebar-submenu-item-link-color:                                               color-lighten(@neutral, 60);
+@sidebar-submenu-item-link-font-family:                                         null;
+@sidebar-submenu-item-link-font-style:                                          null;
+@sidebar-submenu-item-link-font-weight:                                         null;
 @sidebar-submenu-item-link-text-transform:                                      null;
 @sidebar-submenu-item-link-text-shadow:                                         null;
 @sidebar-submenu-item-link-text-decoration:                                     null;
@@ -1170,10 +1170,10 @@ Styling
 
 // Hover
 
-@sidebar-submenu-item-link-hover-text-color:                                    color-lighten(@neutral, 80);
-@sidebar-submenu-item-link-hover-text-font-family:                              null;
-@sidebar-submenu-item-link-hover-text-font-style:                               null;
-@sidebar-submenu-item-link-hover-text-font-weight:                              null;
+@sidebar-submenu-item-link-hover-color:                                         color-lighten(@neutral, 80);
+@sidebar-submenu-item-link-hover-font-family:                                   null;
+@sidebar-submenu-item-link-hover-font-style:                                    null;
+@sidebar-submenu-item-link-hover-font-weight:                                   null;
 @sidebar-submenu-item-link-hover-text-transform:                                null;
 @sidebar-submenu-item-link-hover-text-shadow:                                   null;
 @sidebar-submenu-item-link-hover-text-decoration:                               null;
@@ -1200,10 +1200,10 @@ Styling
 
 // Active
 
-@sidebar-submenu-item-link-active-text-color:                                   color-lighten(@neutral, 60);
-@sidebar-submenu-item-link-active-text-font-family:                             null;
-@sidebar-submenu-item-link-active-text-font-style:                              null;
-@sidebar-submenu-item-link-active-text-font-weight:                             null;
+@sidebar-submenu-item-link-active-color:                                        color-lighten(@neutral, 60);
+@sidebar-submenu-item-link-active-font-family:                                  null;
+@sidebar-submenu-item-link-active-font-style:                                   null;
+@sidebar-submenu-item-link-active-font-weight:                                  null;
 @sidebar-submenu-item-link-active-text-transform:                               null;
 @sidebar-submenu-item-link-active-text-shadow:                                  null;
 @sidebar-submenu-item-link-active-text-decoration:                              null;
@@ -1230,10 +1230,10 @@ Styling
 
 // Selected
 
-@sidebar-submenu-item-link-selected-text-color:                                 @white;
-@sidebar-submenu-item-link-selected-text-font-family:                           null;
-@sidebar-submenu-item-link-selected-text-font-style:                            null;
-@sidebar-submenu-item-link-selected-text-font-weight:                           null;
+@sidebar-submenu-item-link-selected-color:                                      @white;
+@sidebar-submenu-item-link-selected-font-family:                                null;
+@sidebar-submenu-item-link-selected-font-style:                                 null;
+@sidebar-submenu-item-link-selected-font-weight:                                null;
 @sidebar-submenu-item-link-selected-text-transform:                             null;
 @sidebar-submenu-item-link-selected-text-shadow:                                null;
 @sidebar-submenu-item-link-selected-text-decoration:                            null;

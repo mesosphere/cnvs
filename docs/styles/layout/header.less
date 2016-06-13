@@ -8,6 +8,8 @@ header.less
 
 
 
+@z-index-header:                                                                1000;
+
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Header Logo
@@ -18,10 +20,10 @@ Header Logo
 Styling
 ----------------------------------------------------------------------------- */
 
-@header-logo-text-color:                                                        @white;
-@header-logo-text-font-family:                                                  null;
-@header-logo-text-font-style:                                                   null;
-@header-logo-text-font-weight:                                                  500;
+@header-logo-color:                                                             @white;
+@header-logo-font-family:                                                       null;
+@header-logo-font-style:                                                        null;
+@header-logo-font-weight:                                                       500;
 @header-logo-text-transform:                                                    uppercase;
 @header-logo-text-shadow:                                                       null;
 @header-logo-text-decoration:                                                   none;
@@ -33,19 +35,19 @@ Text Size
 
 // Font Size
 
-@header-logo-text-font-size:                                                    2.0rem;
-@header-logo-text-font-size-scale-screen-small:                                 null;
-@header-logo-text-font-size-scale-screen-medium:                                null;
-@header-logo-text-font-size-scale-screen-large:                                 null;
-@header-logo-text-font-size-scale-screen-jumbo:                                 null;
+@header-logo-font-size:                                                         2.0rem;
+@header-logo-font-size-scale-screen-small:                                      null;
+@header-logo-font-size-scale-screen-medium:                                     null;
+@header-logo-font-size-scale-screen-large:                                      null;
+@header-logo-font-size-scale-screen-jumbo:                                      null;
 
 // Line Height
 
-@header-logo-text-line-height:                                                  2.0rem;
-@header-logo-text-line-height-scale-screen-small:                               @header-logo-text-font-size-scale-screen-small;
-@header-logo-text-line-height-scale-screen-medium:                              @header-logo-text-font-size-scale-screen-medium;
-@header-logo-text-line-height-scale-screen-large:                               @header-logo-text-font-size-scale-screen-large;
-@header-logo-text-line-height-scale-screen-jumbo:                               @header-logo-text-font-size-scale-screen-jumbo;
+@header-logo-line-height:                                                       2.0rem;
+@header-logo-line-height-scale-screen-small:                                    null;
+@header-logo-line-height-scale-screen-medium:                                   null;
+@header-logo-line-height-scale-screen-large:                                    null;
+@header-logo-line-height-scale-screen-jumbo:                                    null;
 
 /* -----------------------------------------------------------------------------
 Header Logo Image
@@ -104,8 +106,8 @@ Header
     height: @header-logo-height;
     background-image: url("@{path-images}layout/header/header-logo.png?cache=@{cache-clear}");
     .background-size(100% 100%);
-    .text-style-variant(header-logo);
-    .text-size-variant(header-logo, null);
+    .element-text-style(header-logo);
+    .element-text-size(header-logo, null);
     text-align: center;
     margin: 0 auto;
 
@@ -115,7 +117,7 @@ Header
       width: auto;
       width: 100%;
       height: 100%;
-      .text-style-variant(header-logo);
+      .element-text-style(header-logo);
 
       span {
 
@@ -143,7 +145,7 @@ Header
 
         width: @header-logo-width-screen-small;
         height: @header-logo-height-screen-small;
-        .text-size-variant(header-logo, scale-screen-small);
+        .element-text-size(header-logo, scale-screen-small);
 
       }
 
@@ -169,7 +171,7 @@ Header
 
         width: @header-logo-width-screen-medium;
         height: @header-logo-height-screen-medium;
-        .text-size-variant(header-logo, scale-screen-medium);
+        .element-text-size(header-logo, scale-screen-medium);
 
       }
 
@@ -195,7 +197,7 @@ Header
 
         width: @header-logo-width-screen-large;
         height: @header-logo-height-screen-large;
-        .text-size-variant(header-logo, scale-screen-large);
+        .element-text-size(header-logo, scale-screen-large);
 
       }
 
@@ -221,7 +223,7 @@ Header
 
         width: @header-logo-width-screen-jumbo;
         height: @header-logo-height-screen-jumbo;
-        .text-size-variant(header-logo, scale-screen-jumbo);
+        .element-text-size(header-logo, scale-screen-jumbo);
 
       }
 

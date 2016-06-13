@@ -72,12 +72,12 @@ lists/styles.less
         content: '';
         position: absolute;
         display: block;
-        .set-if-exists(width, floor(@list-item-bullet-width));
-        .set-if-exists(height, floor(@list-item-bullet-height));
-        .set-if-exists(border-radius, @list-item-bullet-border-radius);
-        .set-if-exists(background-color, @list-item-bullet-color);
-        .set-if-exists(shadow, @list-item-bullet-shadow);
-        .set-if-exists(opacity, @list-item-bullet-opacity);
+        .property-variant(list-item-bullet, width);
+        .property-variant(list-item-bullet, height);
+        .property-variant(list-item-bullet, border-radius);
+        .property-variant(list-item-bullet, background-color, color, null, null);
+        .property-variant(list-item-bullet, box-shadow, shadow, null, null);
+        .property-variant(list-item-bullet, opacity);
         left: 0px;
 
         & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-height = null) {
@@ -101,7 +101,7 @@ lists/styles.less
       > ul,
       > ol {
 
-        .set-if-exists(margin-bottom, @list-item-margin-bottom);
+        .property-variant(list-item, margin-bottom);
         margin-bottom: 0px;
 
       }
@@ -197,7 +197,7 @@ lists/styles.less
         background: none;
         top: 0px;
         border-radius: 0px;
-        .set-if-exists(color, @list-item-bullet-color);
+        .property-variant(list-item-bullet, color);
 
         & when not (@list-item-bullet-line-height-screen-large = null) {
 
@@ -341,7 +341,7 @@ lists/styles.less
 
           &:before {
 
-            .set-if-exists(color, @list-item-inverse-bullet-color);
+            .property-variant(list-item-inverse-bullet, color);
             background: none;
             width: auto;
 
