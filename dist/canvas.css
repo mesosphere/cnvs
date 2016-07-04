@@ -14384,6 +14384,7 @@ pre,
   white-space: pre;
   font-size: 0.8rem;
   line-height: 1.04rem;
+  margin-top: 0px;
   margin-bottom: 12px;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -14395,45 +14396,66 @@ pre,
   text-decoration: none;
   text-rendering: optimizelegibility;
   background-color: #f9f9fa;
-  margin-bottom: 6px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-top: 0px;
-  margin-bottom: 24px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   border-radius: 3px;
+  /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    Style Variants
+    ----------------------------------------------------------------------------- */
   /* -----------------------------------------------------------------------------
     Code Block Inverse (.code-block-inverse)
     ----------------------------------------------------------------------------- */
 }
-pre-top,
-.code-block-top,
-pre-top,
-.code-block-top {
+pre.short,
+.code-block.short {
+  margin-top: 0px;
+  margin-bottom: 6px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+pre.short-top,
+.code-block.short-top,
+pre.short-top,
+.code-block.short-top {
   margin-top: 0px;
   padding-top: 0.5rem;
 }
-pre-bottom,
-.code-block-bottom,
-pre-bottom,
-.code-block-bottom {
+pre.short-bottom,
+.code-block.short-bottom,
+pre.short-bottom,
+.code-block.short-bottom {
   margin-bottom: 6px;
   padding-bottom: 0.5rem;
 }
-pre-top,
-.code-block-top,
-pre-top,
-.code-block-top {
+pre.tall,
+.code-block.tall {
+  margin-top: 0px;
+  margin-bottom: 24px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+pre.tall-top,
+.code-block.tall-top,
+pre.tall-top,
+.code-block.tall-top {
   margin-top: 0px;
   padding-top: 2rem;
 }
-pre-bottom,
-.code-block-bottom,
-pre-bottom,
-.code-block-bottom {
+pre.tall-bottom,
+.code-block.tall-bottom,
+pre.tall-bottom,
+.code-block.tall-bottom {
   margin-bottom: 24px;
   padding-bottom: 2rem;
+}
+pre.flush,
+.code-block.flush {
+  padding: 0px !important;
+}
+pre.transparent,
+.code-block.transparent {
+  background: none !important;
 }
 pre.code-block-inverse,
 .code-block.code-block-inverse {
@@ -14450,19 +14472,28 @@ pre.code-block-inverse,
   pre,
   .code-block {
     margin-bottom: 12px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  pre.short,
+  .code-block.short {
     margin-bottom: 6px;
+  }
+  pre.short-bottom,
+  .code-block.short-bottom,
+  pre.short-bottom-screen-small,
+  .code-block.short-bottom-screen-small {
+    margin-bottom: 6px;
+  }
+  pre.tall,
+  .code-block.tall {
     margin-bottom: 24px;
   }
-  pre-bottom,
-  .code-block-bottom,
-  pre-bottom-screen-small,
-  .code-block-bottom-screen-small {
-    margin-bottom: 6px;
-  }
-  pre-bottom,
-  .code-block-bottom,
-  pre-bottom-screen-small,
-  .code-block-bottom-screen-small {
+  pre.tall-bottom,
+  .code-block.tall-bottom,
+  pre.tall-bottom-screen-small,
+  .code-block.tall-bottom-screen-small {
     margin-bottom: 24px;
   }
 }
@@ -14480,36 +14511,45 @@ pre.code-block-inverse,
     padding-bottom: 1.1rem;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  pre.short,
+  .code-block.short {
     margin-bottom: 8px;
     padding-top: 0.55rem;
     padding-bottom: 0.55rem;
+  }
+  pre.short-top,
+  .code-block.short-top,
+  pre.short-top-screen-medium,
+  .code-block.short-top-screen-medium {
+    padding-top: 0.55rem;
+  }
+  pre.short-bottom,
+  .code-block.short-bottom,
+  pre.short-bottom-screen-medium,
+  .code-block.short-bottom-screen-medium {
+    margin-bottom: 8px;
+    padding-bottom: 0.55rem;
+  }
+  pre.tall,
+  .code-block.tall {
     margin-bottom: 32px;
     padding-top: 2.2rem;
     padding-bottom: 2.2rem;
   }
-  pre-top,
-  .code-block-top,
-  pre-top-screen-medium,
-  .code-block-top-screen-medium {
-    padding-top: 0.55rem;
-  }
-  pre-bottom,
-  .code-block-bottom,
-  pre-bottom-screen-medium,
-  .code-block-bottom-screen-medium {
-    margin-bottom: 8px;
-    padding-bottom: 0.55rem;
-  }
-  pre-top,
-  .code-block-top,
-  pre-top-screen-medium,
-  .code-block-top-screen-medium {
+  pre.tall-top,
+  .code-block.tall-top,
+  pre.tall-top-screen-medium,
+  .code-block.tall-top-screen-medium {
     padding-top: 2.2rem;
   }
-  pre-bottom,
-  .code-block-bottom,
-  pre-bottom-screen-medium,
-  .code-block-bottom-screen-medium {
+  pre.tall-bottom,
+  .code-block.tall-bottom,
+  pre.tall-bottom-screen-medium,
+  .code-block.tall-bottom-screen-medium {
     margin-bottom: 32px;
     padding-bottom: 2.2rem;
   }
@@ -14528,36 +14568,45 @@ pre.code-block-inverse,
     padding-bottom: 1.2rem;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  pre.short,
+  .code-block.short {
     margin-bottom: 9px;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
+  }
+  pre.short-top,
+  .code-block.short-top,
+  pre.short-top-screen-large,
+  .code-block.short-top-screen-large {
+    padding-top: 0.6rem;
+  }
+  pre.short-bottom,
+  .code-block.short-bottom,
+  pre.short-bottom-screen-large,
+  .code-block.short-bottom-screen-large {
+    margin-bottom: 9px;
+    padding-bottom: 0.6rem;
+  }
+  pre.tall,
+  .code-block.tall {
     margin-bottom: 36px;
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
   }
-  pre-top,
-  .code-block-top,
-  pre-top-screen-large,
-  .code-block-top-screen-large {
-    padding-top: 0.6rem;
-  }
-  pre-bottom,
-  .code-block-bottom,
-  pre-bottom-screen-large,
-  .code-block-bottom-screen-large {
-    margin-bottom: 9px;
-    padding-bottom: 0.6rem;
-  }
-  pre-top,
-  .code-block-top,
-  pre-top-screen-large,
-  .code-block-top-screen-large {
+  pre.tall-top,
+  .code-block.tall-top,
+  pre.tall-top-screen-large,
+  .code-block.tall-top-screen-large {
     padding-top: 2.4rem;
   }
-  pre-bottom,
-  .code-block-bottom,
-  pre-bottom-screen-large,
-  .code-block-bottom-screen-large {
+  pre.tall-bottom,
+  .code-block.tall-bottom,
+  pre.tall-bottom-screen-large,
+  .code-block.tall-bottom-screen-large {
     margin-bottom: 36px;
     padding-bottom: 2.4rem;
   }
@@ -14572,19 +14621,28 @@ pre.code-block-inverse,
   pre,
   .code-block {
     margin-bottom: 24px;
+    /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+  }
+  pre.short,
+  .code-block.short {
     margin-bottom: 12px;
+  }
+  pre.short-bottom,
+  .code-block.short-bottom,
+  pre.short-bottom-screen-jumbo,
+  .code-block.short-bottom-screen-jumbo {
+    margin-bottom: 12px;
+  }
+  pre.tall,
+  .code-block.tall {
     margin-bottom: 48px;
   }
-  pre-bottom,
-  .code-block-bottom,
-  pre-bottom-screen-jumbo,
-  .code-block-bottom-screen-jumbo {
-    margin-bottom: 12px;
-  }
-  pre-bottom,
-  .code-block-bottom,
-  pre-bottom-screen-jumbo,
-  .code-block-bottom-screen-jumbo {
+  pre.tall-bottom,
+  .code-block.tall-bottom,
+  pre.tall-bottom-screen-jumbo,
+  .code-block.tall-bottom-screen-jumbo {
     margin-bottom: 48px;
   }
 }
@@ -17218,7 +17276,7 @@ button-outline/styles.less
 .button-outline,
 .button.button-stroke {
   color: #5b6171;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #e0e1e4;
   border-style: solid;
@@ -17283,7 +17341,7 @@ button-outline/styles.less
 .button-outline.button-inverse,
 .button.button-stroke.button-inverse {
   color: #ffffff;
-  background-color: none;
+  background-color: transparent;
   border-color: #474e60;
 }
 .button-outline.button-inverse.button-dropdown:after,
@@ -17401,7 +17459,7 @@ button-link/styles.less
   ----------------------------------------------------------------------------- */
 .button-link {
   color: #5b6171;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0);
   border-style: solid;
@@ -17417,7 +17475,7 @@ button-link/styles.less
 .button-link:hover {
   color: #282e3e;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(0, 0, 0, 0);
 }
 .button-link:hover.button-dropdown:after,
@@ -17427,7 +17485,7 @@ button-link/styles.less
 }
 .button-link:active {
   color: #5b6171;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(0, 0, 0, 0);
 }
 .button-link:active.button-dropdown:after,
@@ -17438,7 +17496,7 @@ button-link/styles.less
 .button-link.selected,
 .button-link.active {
   color: #5b6171;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(0, 0, 0, 0);
 }
 .button-link.selected.button-dropdown:after,
@@ -17450,7 +17508,7 @@ button-link/styles.less
 }
 .button-link.button-inverse {
   color: #e0e1e4;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0);
   border-style: solid;
@@ -17463,7 +17521,7 @@ button-link/styles.less
 .button-link.button-inverse:hover {
   color: #ffffff;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(0, 0, 0, 0);
 }
 .button-link.button-inverse:hover.button-dropdown:after,
@@ -17473,7 +17531,7 @@ button-link/styles.less
 }
 .button-link.button-inverse:active {
   color: #b7bac1;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(0, 0, 0, 0);
 }
 .button-link.button-inverse:active.button-dropdown:after,
@@ -17484,7 +17542,7 @@ button-link/styles.less
 .button-link.button-inverse.selected,
 .button-link.button-inverse.active {
   color: #b7bac1;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(0, 0, 0, 0);
 }
 .button-link.button-inverse.selected.button-dropdown:after,
@@ -17499,7 +17557,7 @@ button-link/styles.less
     ----------------------------------------------------------------------------- */
 .button-group.open > .button-link {
   color: #5b6171;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(0, 0, 0, 0);
 }
 .button-group.open > .button-link.button-dropdown:after,
@@ -17509,7 +17567,7 @@ button-link/styles.less
 }
 .button-group.open > .button-link.button-inverse {
   color: #b7bac1;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(0, 0, 0, 0);
 }
 .button-group.open > .button-link.button-inverse.button-dropdown:after,
@@ -17688,7 +17746,7 @@ button-primary-outline/styles.less
 .button-primary-outline,
 .button-primary.button-stroke {
   color: #9351e5;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #9351e5;
   border-style: solid;
@@ -17751,7 +17809,7 @@ button-primary-outline/styles.less
 .button-primary-outline.button-inverse,
 .button-primary.button-stroke.button-inverse {
   color: #ffffff;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #9351e5;
   border-style: solid;
@@ -17868,7 +17926,7 @@ button-primary-link/styles.less
 .button-primary-link,
 .button-primary.button-link {
   color: #9351e5;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(147, 81, 229, 0);
   border-style: solid;
@@ -17887,7 +17945,7 @@ button-primary-link/styles.less
 .button-primary.button-link:hover {
   color: #7641b7;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(118, 65, 183, 0);
 }
 .button-primary-link:hover.button-dropdown:after,
@@ -17900,7 +17958,7 @@ button-primary-link/styles.less
 .button-primary-link:active,
 .button-primary.button-link:active {
   color: #583189;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(88, 49, 137, 0);
 }
 .button-primary-link:active.button-dropdown:after,
@@ -17915,7 +17973,7 @@ button-primary-link/styles.less
 .button-primary-link.active,
 .button-primary.button-link.active {
   color: #583189;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(88, 49, 137, 0);
 }
 .button-primary-link.selected.button-dropdown:after,
@@ -17932,7 +17990,7 @@ button-primary-link/styles.less
 .button-primary-link.button-inverse,
 .button-primary.button-link.button-inverse {
   color: #9351e5;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(147, 81, 229, 0);
   border-style: solid;
@@ -17948,7 +18006,7 @@ button-primary-link/styles.less
 .button-primary.button-link.button-inverse:hover {
   color: #a974ea;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(169, 116, 234, 0);
 }
 .button-primary-link.button-inverse:hover.button-dropdown:after,
@@ -17961,7 +18019,7 @@ button-primary-link/styles.less
 .button-primary-link.button-inverse:active,
 .button-primary.button-link.button-inverse:active {
   color: #7641b7;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(118, 65, 183, 0);
 }
 .button-primary-link.button-inverse:active.button-dropdown:after,
@@ -17976,7 +18034,7 @@ button-primary-link/styles.less
 .button-primary-link.button-inverse.active,
 .button-primary.button-link.button-inverse.active {
   color: #7641b7;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(118, 65, 183, 0);
 }
 .button-primary-link.button-inverse.selected.button-dropdown:after,
@@ -17996,7 +18054,7 @@ button-primary-link/styles.less
 .button-group.open > .button-primary-link,
 .button-group.open > .button-primary.button-link {
   color: #583189;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(88, 49, 137, 0);
 }
 .button-group.open > .button-primary-link.button-dropdown:after,
@@ -18009,7 +18067,7 @@ button-primary-link/styles.less
 .button-group.open > .button-primary-link.button-inverse,
 .button-group.open > .button-primary.button-link.button-inverse {
   color: #7641b7;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(118, 65, 183, 0);
 }
 .button-group.open > .button-primary-link.button-inverse.button-dropdown:after,
@@ -18190,7 +18248,7 @@ button-success-outline/styles.less
 .button-success-outline,
 .button-success.button-stroke {
   color: #27c97b;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #27c97b;
   border-style: solid;
@@ -18253,7 +18311,7 @@ button-success-outline/styles.less
 .button-success-outline.button-inverse,
 .button-success.button-stroke.button-inverse {
   color: #ffffff;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #27c97b;
   border-style: solid;
@@ -18370,7 +18428,7 @@ button-success-link/styles.less
 .button-success-link,
 .button-success.button-link {
   color: #27c97b;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(39, 201, 123, 0);
   border-style: solid;
@@ -18389,7 +18447,7 @@ button-success-link/styles.less
 .button-success.button-link:hover {
   color: #1fa162;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(31, 161, 98, 0);
 }
 .button-success-link:hover.button-dropdown:after,
@@ -18402,7 +18460,7 @@ button-success-link/styles.less
 .button-success-link:active,
 .button-success.button-link:active {
   color: #17794a;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(23, 121, 74, 0);
 }
 .button-success-link:active.button-dropdown:after,
@@ -18417,7 +18475,7 @@ button-success-link/styles.less
 .button-success-link.active,
 .button-success.button-link.active {
   color: #17794a;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(23, 121, 74, 0);
 }
 .button-success-link.selected.button-dropdown:after,
@@ -18434,7 +18492,7 @@ button-success-link/styles.less
 .button-success-link.button-inverse,
 .button-success.button-link.button-inverse {
   color: #27c97b;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(39, 201, 123, 0);
   border-style: solid;
@@ -18450,7 +18508,7 @@ button-success-link/styles.less
 .button-success.button-link.button-inverse:hover {
   color: #52d495;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(82, 212, 149, 0);
 }
 .button-success-link.button-inverse:hover.button-dropdown:after,
@@ -18463,7 +18521,7 @@ button-success-link/styles.less
 .button-success-link.button-inverse:active,
 .button-success.button-link.button-inverse:active {
   color: #1fa162;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(31, 161, 98, 0);
 }
 .button-success-link.button-inverse:active.button-dropdown:after,
@@ -18478,7 +18536,7 @@ button-success-link/styles.less
 .button-success-link.button-inverse.active,
 .button-success.button-link.button-inverse.active {
   color: #1fa162;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(31, 161, 98, 0);
 }
 .button-success-link.button-inverse.selected.button-dropdown:after,
@@ -18498,7 +18556,7 @@ button-success-link/styles.less
 .button-group.open > .button-success-link,
 .button-group.open > .button-success.button-link {
   color: #17794a;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(23, 121, 74, 0);
 }
 .button-group.open > .button-success-link.button-dropdown:after,
@@ -18511,7 +18569,7 @@ button-success-link/styles.less
 .button-group.open > .button-success-link.button-inverse,
 .button-group.open > .button-success.button-link.button-inverse {
   color: #1fa162;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(31, 161, 98, 0);
 }
 .button-group.open > .button-success-link.button-inverse.button-dropdown:after,
@@ -18692,7 +18750,7 @@ button-warning-outline/styles.less
 .button-warning-outline,
 .button-warning.button-stroke {
   color: #f6c846;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #f6c846;
   border-style: solid;
@@ -18755,7 +18813,7 @@ button-warning-outline/styles.less
 .button-warning-outline.button-inverse,
 .button-warning.button-stroke.button-inverse {
   color: #ffffff;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #f6c846;
   border-style: solid;
@@ -18872,7 +18930,7 @@ button-warning-link/styles.less
 .button-warning-link,
 .button-warning.button-link {
   color: #f6c846;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(246, 200, 70, 0);
   border-style: solid;
@@ -18891,7 +18949,7 @@ button-warning-link/styles.less
 .button-warning.button-link:hover {
   color: #c5a038;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(197, 160, 56, 0);
 }
 .button-warning-link:hover.button-dropdown:after,
@@ -18904,7 +18962,7 @@ button-warning-link/styles.less
 .button-warning-link:active,
 .button-warning.button-link:active {
   color: #94782a;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(148, 120, 42, 0);
 }
 .button-warning-link:active.button-dropdown:after,
@@ -18919,7 +18977,7 @@ button-warning-link/styles.less
 .button-warning-link.active,
 .button-warning.button-link.active {
   color: #94782a;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(148, 120, 42, 0);
 }
 .button-warning-link.selected.button-dropdown:after,
@@ -18936,7 +18994,7 @@ button-warning-link/styles.less
 .button-warning-link.button-inverse,
 .button-warning.button-link.button-inverse {
   color: #f6c846;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(246, 200, 70, 0);
   border-style: solid;
@@ -18952,7 +19010,7 @@ button-warning-link/styles.less
 .button-warning.button-link.button-inverse:hover {
   color: #f8d36b;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(248, 211, 107, 0);
 }
 .button-warning-link.button-inverse:hover.button-dropdown:after,
@@ -18965,7 +19023,7 @@ button-warning-link/styles.less
 .button-warning-link.button-inverse:active,
 .button-warning.button-link.button-inverse:active {
   color: #c5a038;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(197, 160, 56, 0);
 }
 .button-warning-link.button-inverse:active.button-dropdown:after,
@@ -18980,7 +19038,7 @@ button-warning-link/styles.less
 .button-warning-link.button-inverse.active,
 .button-warning.button-link.button-inverse.active {
   color: #c5a038;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(197, 160, 56, 0);
 }
 .button-warning-link.button-inverse.selected.button-dropdown:after,
@@ -19000,7 +19058,7 @@ button-warning-link/styles.less
 .button-group.open > .button-warning-link,
 .button-group.open > .button-warning.button-link {
   color: #94782a;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(148, 120, 42, 0);
 }
 .button-group.open > .button-warning-link.button-dropdown:after,
@@ -19013,7 +19071,7 @@ button-warning-link/styles.less
 .button-group.open > .button-warning-link.button-inverse,
 .button-group.open > .button-warning.button-link.button-inverse {
   color: #c5a038;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(197, 160, 56, 0);
 }
 .button-group.open > .button-warning-link.button-inverse.button-dropdown:after,
@@ -19194,7 +19252,7 @@ button-danger-outline/styles.less
 .button-danger-outline,
 .button-danger.button-stroke {
   color: #f33745;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #f33745;
   border-style: solid;
@@ -19257,7 +19315,7 @@ button-danger-outline/styles.less
 .button-danger-outline.button-inverse,
 .button-danger.button-stroke.button-inverse {
   color: #ffffff;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: #f33745;
   border-style: solid;
@@ -19374,7 +19432,7 @@ button-danger-link/styles.less
 .button-danger-link,
 .button-danger.button-link {
   color: #f33745;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(243, 55, 69, 0);
   border-style: solid;
@@ -19393,7 +19451,7 @@ button-danger-link/styles.less
 .button-danger.button-link:hover {
   color: #c22c37;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(194, 44, 55, 0);
 }
 .button-danger-link:hover.button-dropdown:after,
@@ -19406,7 +19464,7 @@ button-danger-link/styles.less
 .button-danger-link:active,
 .button-danger.button-link:active {
   color: #922129;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(146, 33, 41, 0);
 }
 .button-danger-link:active.button-dropdown:after,
@@ -19421,7 +19479,7 @@ button-danger-link/styles.less
 .button-danger-link.active,
 .button-danger.button-link.active {
   color: #922129;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(146, 33, 41, 0);
 }
 .button-danger-link.selected.button-dropdown:after,
@@ -19438,7 +19496,7 @@ button-danger-link/styles.less
 .button-danger-link.button-inverse,
 .button-danger.button-link.button-inverse {
   color: #f33745;
-  background-color: none;
+  background-color: transparent;
   border-width: 1px;
   border-color: rgba(243, 55, 69, 0);
   border-style: solid;
@@ -19454,7 +19512,7 @@ button-danger-link/styles.less
 .button-danger.button-link.button-inverse:hover {
   color: #f55f6a;
   text-decoration: underline;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(245, 95, 106, 0);
 }
 .button-danger-link.button-inverse:hover.button-dropdown:after,
@@ -19467,7 +19525,7 @@ button-danger-link/styles.less
 .button-danger-link.button-inverse:active,
 .button-danger.button-link.button-inverse:active {
   color: #c22c37;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(194, 44, 55, 0);
 }
 .button-danger-link.button-inverse:active.button-dropdown:after,
@@ -19482,7 +19540,7 @@ button-danger-link/styles.less
 .button-danger-link.button-inverse.active,
 .button-danger.button-link.button-inverse.active {
   color: #c22c37;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(194, 44, 55, 0);
 }
 .button-danger-link.button-inverse.selected.button-dropdown:after,
@@ -19502,7 +19560,7 @@ button-danger-link/styles.less
 .button-group.open > .button-danger-link,
 .button-group.open > .button-danger.button-link {
   color: #922129;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(146, 33, 41, 0);
 }
 .button-group.open > .button-danger-link.button-dropdown:after,
@@ -19515,7 +19573,7 @@ button-danger-link/styles.less
 .button-group.open > .button-danger-link.button-inverse,
 .button-group.open > .button-danger.button-link.button-inverse {
   color: #c22c37;
-  background-color: none;
+  background-color: transparent;
   border-color: rgba(194, 44, 55, 0);
 }
 .button-group.open > .button-danger-link.button-inverse.button-dropdown:after,
@@ -25355,7 +25413,7 @@ panel/styles.less
     ----------------------------------------------------------------------------- */
 }
 .panel.panel-inverse {
-  background-color: #474e60;
+  background-color: #2d3446;
   box-shadow: none;
 }
 /* -----------------------------------------------------------------------------
@@ -25430,7 +25488,6 @@ panel-cell/styles.less
   ----------------------------------------------------------------------------- */
 .panel-cell {
   display: block;
-  position: relative;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -25458,6 +25515,7 @@ panel-cell/styles.less
   border: none;
 }
 .panel-cell.panel-cell-inverse {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: none;
 }
 .panel-cell-shorter {
