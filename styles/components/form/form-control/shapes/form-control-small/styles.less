@@ -1,25 +1,25 @@
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-form-control-mini/styles.less
+form-control-small/styles.less
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
 
 
-& when (@form-control-mini-enabled) {
+& when (@form-control-small-enabled) {
 
   /* -----------------------------------------------------------------------------
-  Form Control (.form-control-mini)
+  Form Control (.form-control-small)
   ----------------------------------------------------------------------------- */
 
-  .form-control-mini {
+  .form-control-small {
 
-    .element-text-size(form-control-mini, null);
-    .element-spacing(form-control-mini, null, null);
-    .property-variant(form-control-mini, height, null);
-    .property-variant(form-control-mini, border-radius, null);
+    .element-text-size(form-control-small, null);
+    .element-spacing(form-control-small, null, null);
+    .property-variant(form-control-small, height, null);
+    .property-variant(form-control-small, border-radius, null);
 
     /* -----------------------------------------------------------------------------
     Form Control Rounded (.form-control-rounded)
@@ -29,17 +29,17 @@ form-control-mini/styles.less
 
       border-radius: 1000px;
 
-      & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+      & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
-        & when not (@form-control-mini-padding-left = null) {
+        & when not (@form-control-small-padding-left = null) {
 
-          padding-left: @form-control-mini-padding-left * @form-control-mini-rounded-padding-horizontal-scale;
+          padding-left: @form-control-small-padding-left * @form-control-small-rounded-padding-horizontal-scale;
 
         }
 
-        & when not (@form-control-mini-padding-right = null) {
+        & when not (@form-control-small-padding-right = null) {
 
-          padding-right: @form-control-mini-padding-right * @form-control-mini-rounded-padding-horizontal-scale;
+          padding-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale;
 
         }
 
@@ -53,13 +53,13 @@ form-control-mini/styles.less
   Form Control Select (.form-control-select)
   ----------------------------------------------------------------------------- */
 
-  .form-control-select.form-control-mini {
+  .form-control-select.form-control-small {
 
     select {
 
-      .element-text-size(form-control-mini, null);
-      .element-spacing(form-control-mini, null, null);
-      .property-variant(form-control-mini, height, null);
+      .element-text-size(form-control-small, null);
+      .element-spacing(form-control-small, null, null);
+      .property-variant(form-control-small, height, null);
 
     }
 
@@ -67,19 +67,19 @@ form-control-mini/styles.less
 
     &:after {
 
-      .property-variant(form-control-mini, margin-left, null);
-      .property-variant(form-control-mini, margin-top, null);
-      .property-variant(form-control-mini, margin-right, padding-right, null, null);
+      .property-variant(form-control-small, margin-left, null);
+      .property-variant(form-control-small, margin-top, null);
+      .property-variant(form-control-small, margin-right, padding-right, null, null);
 
-      & when not (@form-control-mini-caret-width = null) {
+      & when not (@form-control-small-caret-width = null) {
 
-        .triangle-size-width("down", @form-control-mini-caret-width);
+        .triangle-size-width("down", @form-control-small-caret-width);
 
       }
 
-      & when not (@form-control-mini-caret-height = null) {
+      & when not (@form-control-small-caret-height = null) {
 
-        .triangle-size-height("down", @form-control-mini-caret-height);
+        .triangle-size-height("down", @form-control-small-caret-height);
 
       }
 
@@ -93,17 +93,17 @@ form-control-mini/styles.less
 
       select {
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
-          & when not (@form-control-mini-padding-left = null) {
+          & when not (@form-control-small-padding-left = null) {
 
-            padding-left: @form-control-mini-padding-left * @form-control-mini-rounded-padding-horizontal-scale;
+            padding-left: @form-control-small-padding-left * @form-control-small-rounded-padding-horizontal-scale;
 
           }
 
-          & when not (@form-control-mini-padding-right = null) {
+          & when not (@form-control-small-padding-right = null) {
 
-            padding-right: @form-control-mini-padding-right * @form-control-mini-rounded-padding-horizontal-scale;
+            padding-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale;
 
           }
 
@@ -115,9 +115,9 @@ form-control-mini/styles.less
 
       &:after {
 
-        & when not (@form-control-mini-padding-right = null) {
+        & when not (@form-control-small-padding-right = null) {
 
-          margin-right: @form-control-mini-padding-right * @form-control-mini-rounded-padding-horizontal-scale;
+          margin-right: @form-control-small-padding-right * @form-control-small-rounded-padding-horizontal-scale;
 
         }
 
@@ -127,7 +127,7 @@ form-control-mini/styles.less
 
   }
 
-  & when (@form-control-group-enabled) and not (@form-control-mini-add-on-padding-horizontal = null) {
+  & when (@form-control-group-enabled) and not (@form-control-small-add-on-padding-horizontal = null) {
 
     /* -----------------------------------------------------------------------------
     Form Control Group
@@ -139,18 +139,18 @@ form-control-mini/styles.less
       Nested Form Control
       ----------------------------------------------------------------------------- */
 
-      &.form-control-mini {
+      &.form-control-small {
 
         .form-control-group-add-on {
 
           &:first-child {
 
-            .property-variant(form-control-mini-add-on, padding-right, padding-horizontal, null, null);
+            .property-variant(form-control-small-add-on, padding-right, padding-horizontal, null, null);
           }
 
           &:last-child {
 
-            .property-variant(form-control-mini-add-on, padding-left, padding-horizontal, null, null);
+            .property-variant(form-control-small-add-on, padding-left, padding-horizontal, null, null);
 
           }
 
@@ -174,20 +174,20 @@ form-control-mini/styles.less
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@form-control-mini-enabled) and (@form-control-mini-screen-small-enabled) {
+    & when (@form-control-small-enabled) and (@form-control-small-screen-small-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Form Control (.form-control-mini)
+      Form Control (.form-control-small)
       ----------------------------------------------------------------------------- */
 
-      .form-control-mini {
+      .form-control-small {
 
-        .element-text-size(form-control-mini, screen-small);
-        .element-spacing(form-control-mini, null, screen-small);
-        .property-variant(form-control-mini, height, screen-small);
-        .property-variant(form-control-mini, border-radius, screen-small);
+        .element-text-size(form-control-small, screen-small);
+        .element-spacing(form-control-small, null, screen-small);
+        .property-variant(form-control-small, height, screen-small);
+        .property-variant(form-control-small, border-radius, screen-small);
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
@@ -195,15 +195,15 @@ form-control-mini/styles.less
 
           &.form-control-rounded {
 
-            & when not (@form-control-mini-padding-left-screen-small = null) {
+            & when not (@form-control-small-padding-left-screen-small = null) {
 
-              padding-left: @form-control-mini-padding-left-screen-small * @form-control-mini-rounded-padding-horizontal-scale;
+              padding-left: @form-control-small-padding-left-screen-small * @form-control-small-rounded-padding-horizontal-scale;
 
             }
 
-            & when not (@form-control-mini-padding-right-screen-small = null) {
+            & when not (@form-control-small-padding-right-screen-small = null) {
 
-              padding-right: @form-control-mini-padding-right-screen-small * @form-control-mini-rounded-padding-horizontal-scale;
+              padding-right: @form-control-small-padding-right-screen-small * @form-control-small-rounded-padding-horizontal-scale;
 
             }
 
@@ -217,13 +217,13 @@ form-control-mini/styles.less
       Form Control Select (.form-control-select)
       ----------------------------------------------------------------------------- */
 
-      .form-control-select.form-control-mini {
+      .form-control-select.form-control-small {
 
         select {
 
-          .element-text-size(form-control-mini, screen-small);
-          .element-spacing(form-control-mini, null, screen-small);
-          .property-variant(form-control-mini, height, screen-small);
+          .element-text-size(form-control-small, screen-small);
+          .element-spacing(form-control-small, null, screen-small);
+          .property-variant(form-control-small, height, screen-small);
 
         }
 
@@ -231,25 +231,25 @@ form-control-mini/styles.less
 
         &:after {
 
-          .property-variant(form-control-mini-caret, margin-left, screen-small);
-          .property-variant(form-control-mini-caret, margin-top, screen-small);
-          .property-variant(form-control-mini, margin-right, padding-right, screen-small);
+          .property-variant(form-control-small-caret, margin-left, screen-small);
+          .property-variant(form-control-small-caret, margin-top, screen-small);
+          .property-variant(form-control-small, margin-right, padding-right, screen-small);
 
-          & when not (@form-control-mini-caret-width = null) and not (@form-control-mini-caret-width-screen-small = null) {
+          & when not (@form-control-small-caret-width = null) and not (@form-control-small-caret-width-screen-small = null) {
 
-            .triangle-size-width("down", (@form-control-mini-caret-width * @form-control-mini-caret-width-screen-small));
+            .triangle-size-width("down", (@form-control-small-caret-width-screen-small));
 
           }
 
-          & when not (@form-control-mini-caret-height = null) and not (@form-control-mini-caret-height-screen-small = null) {
+          & when not (@form-control-small-caret-height = null) and not (@form-control-small-caret-height-screen-small = null) {
 
-            .triangle-size-height("down", (@form-control-mini-caret-height * @form-control-mini-caret-height-screen-small));
+            .triangle-size-height("down", (@form-control-small-caret-height-screen-small));
 
           }
 
         }
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
@@ -259,15 +259,15 @@ form-control-mini/styles.less
 
             select {
 
-              & when not (@form-control-mini-padding-left-screen-small = null) {
+              & when not (@form-control-small-padding-left-screen-small = null) {
 
-                padding-left: @form-control-mini-padding-left-screen-small * @form-control-mini-rounded-padding-horizontal-scale;
+                padding-left: @form-control-small-padding-left-screen-small * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
-              & when not (@form-control-mini-padding-right-screen-small = null) {
+              & when not (@form-control-small-padding-right-screen-small = null) {
 
-                padding-right: @form-control-mini-padding-right-screen-small * @form-control-mini-rounded-padding-horizontal-scale;
+                padding-right: @form-control-small-padding-right-screen-small * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
@@ -277,9 +277,9 @@ form-control-mini/styles.less
 
             &:after {
 
-              & when not (@form-control-mini-padding-right-screen-small = null) {
+              & when not (@form-control-small-padding-right-screen-small = null) {
 
-                margin-right: @form-control-mini-padding-right-screen-small * @form-control-mini-rounded-padding-horizontal-scale;
+                margin-right: @form-control-small-padding-right-screen-small * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
@@ -291,7 +291,7 @@ form-control-mini/styles.less
 
       }
 
-      & when (@form-control-group-enabled) and not (@form-control-mini-add-on-padding-horizontal = null) and not (@form-control-mini-add-on-padding-horizontal-screen-small = null) {
+      & when (@form-control-group-enabled) and not (@form-control-small-add-on-padding-horizontal = null) and not (@form-control-small-add-on-padding-horizontal-screen-small = null) {
 
         /* -----------------------------------------------------------------------------
         Form Control Group
@@ -303,19 +303,19 @@ form-control-mini/styles.less
           Nested Form Control
           ----------------------------------------------------------------------------- */
 
-          &.form-control-mini {
+          &.form-control-small {
 
             .form-control-group-add-on {
 
               &:first-child {
 
-                padding-right: @form-control-mini-add-on-padding-horizontal-screen-small;
+                padding-right: @form-control-small-add-on-padding-horizontal-screen-small;
 
               }
 
               &:last-child {
 
-                padding-left: @form-control-mini-add-on-padding-horizontal-screen-small;
+                padding-left: @form-control-small-add-on-padding-horizontal-screen-small;
 
               }
 
@@ -343,20 +343,20 @@ form-control-mini/styles.less
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@form-control-mini-enabled) and (@form-control-mini-screen-medium-enabled) {
+    & when (@form-control-small-enabled) and (@form-control-small-screen-medium-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Form Control (.form-control-mini)
+      Form Control (.form-control-small)
       ----------------------------------------------------------------------------- */
 
-      .form-control-mini {
+      .form-control-small {
 
-        .element-text-size(form-control-mini, screen-medium);
-        .element-spacing(form-control-mini, null, screen-medium);
-        .property-variant(form-control-mini, height, screen-medium);
-        .property-variant(form-control-mini, border-radius, screen-medium);
+        .element-text-size(form-control-small, screen-medium);
+        .element-spacing(form-control-small, null, screen-medium);
+        .property-variant(form-control-small, height, screen-medium);
+        .property-variant(form-control-small, border-radius, screen-medium);
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
@@ -364,15 +364,15 @@ form-control-mini/styles.less
 
           &.form-control-rounded {
 
-            & when not (@form-control-mini-padding-left-screen-medium = null) {
+            & when not (@form-control-small-padding-left-screen-medium = null) {
 
-              padding-left: @form-control-mini-padding-left-screen-medium * @form-control-mini-rounded-padding-horizontal-scale;
+              padding-left: @form-control-small-padding-left-screen-medium * @form-control-small-rounded-padding-horizontal-scale;
 
             }
 
-            & when not (@form-control-mini-padding-right-screen-medium = null) {
+            & when not (@form-control-small-padding-right-screen-medium = null) {
 
-              padding-right: @form-control-mini-padding-right-screen-medium * @form-control-mini-rounded-padding-horizontal-scale;
+              padding-right: @form-control-small-padding-right-screen-medium * @form-control-small-rounded-padding-horizontal-scale;
 
             }
 
@@ -386,13 +386,13 @@ form-control-mini/styles.less
       Form Control Select (.form-control-select)
       ----------------------------------------------------------------------------- */
 
-      .form-control-select.form-control-mini {
+      .form-control-select.form-control-small {
 
         select {
 
-          .element-text-size(form-control-mini, screen-medium);
-          .element-spacing(form-control-mini, null, screen-medium);
-          .property-variant(form-control-mini, height, screen-medium);
+          .element-text-size(form-control-small, screen-medium);
+          .element-spacing(form-control-small, null, screen-medium);
+          .property-variant(form-control-small, height, screen-medium);
 
         }
 
@@ -400,25 +400,25 @@ form-control-mini/styles.less
 
         &:after {
 
-          .property-variant(form-control-mini-caret, margin-left, screen-medium);
-          .property-variant(form-control-mini-caret, margin-top, screen-medium);
-          .property-variant(form-control-mini, margin-right, padding-right, screen-medium);
+          .property-variant(form-control-small-caret, margin-left, screen-medium);
+          .property-variant(form-control-small-caret, margin-top, screen-medium);
+          .property-variant(form-control-small, margin-right, padding-right, screen-medium);
 
-          & when not (@form-control-mini-caret-width = null) and not (@form-control-mini-caret-width-screen-medium = null) {
+          & when not (@form-control-small-caret-width = null) and not (@form-control-small-caret-width-screen-medium = null) {
 
-            .triangle-size-width("down", (@form-control-mini-caret-width * @form-control-mini-caret-width-screen-medium));
+            .triangle-size-width("down", (@form-control-small-caret-width-screen-medium));
 
           }
 
-          & when not (@form-control-mini-caret-height = null) and not (@form-control-mini-caret-height-screen-medium = null) {
+          & when not (@form-control-small-caret-height = null) and not (@form-control-small-caret-height-screen-medium = null) {
 
-            .triangle-size-height("down", (@form-control-mini-caret-height * @form-control-mini-caret-height-screen-medium));
+            .triangle-size-height("down", (@form-control-small-caret-height-screen-medium));
 
           }
 
         }
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
@@ -428,15 +428,15 @@ form-control-mini/styles.less
 
             select {
 
-              & when not (@form-control-mini-padding-left-screen-medium = null) {
+              & when not (@form-control-small-padding-left-screen-medium = null) {
 
-                padding-left: @form-control-mini-padding-left-screen-medium * @form-control-mini-rounded-padding-horizontal-scale;
+                padding-left: @form-control-small-padding-left-screen-medium * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
-              & when not (@form-control-mini-padding-right-screen-medium = null) {
+              & when not (@form-control-small-padding-right-screen-medium = null) {
 
-                padding-right: @form-control-mini-padding-right-screen-medium * @form-control-mini-rounded-padding-horizontal-scale;
+                padding-right: @form-control-small-padding-right-screen-medium * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
@@ -446,9 +446,9 @@ form-control-mini/styles.less
 
             &:after {
 
-              & when not (@form-control-mini-padding-right-screen-medium = null) {
+              & when not (@form-control-small-padding-right-screen-medium = null) {
 
-                margin-right: @form-control-mini-padding-right-screen-medium * @form-control-mini-rounded-padding-horizontal-scale;
+                margin-right: @form-control-small-padding-right-screen-medium * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
@@ -460,7 +460,7 @@ form-control-mini/styles.less
 
       }
 
-      & when (@form-control-group-enabled) and not (@form-control-mini-add-on-padding-horizontal = null) and not (@form-control-mini-add-on-padding-horizontal-screen-medium = null) {
+      & when (@form-control-group-enabled) and not (@form-control-small-add-on-padding-horizontal = null) and not (@form-control-small-add-on-padding-horizontal-screen-medium = null) {
 
         /* -----------------------------------------------------------------------------
         Form Control Group
@@ -472,19 +472,19 @@ form-control-mini/styles.less
           Nested Form Control
           ----------------------------------------------------------------------------- */
 
-          &.form-control-mini {
+          &.form-control-small {
 
             .form-control-group-add-on {
 
               &:first-child {
 
-                padding-right: @form-control-mini-add-on-padding-horizontal-screen-medium;
+                padding-right: @form-control-small-add-on-padding-horizontal-screen-medium;
 
               }
 
               &:last-child {
 
-                padding-left: @form-control-mini-add-on-padding-horizontal-screen-medium;
+                padding-left: @form-control-small-add-on-padding-horizontal-screen-medium;
 
               }
 
@@ -512,20 +512,20 @@ form-control-mini/styles.less
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@form-control-mini-enabled) and (@form-control-mini-screen-large-enabled) {
+    & when (@form-control-small-enabled) and (@form-control-small-screen-large-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Form Control (.form-control-mini)
+      Form Control (.form-control-small)
       ----------------------------------------------------------------------------- */
 
-      .form-control-mini {
+      .form-control-small {
 
-        .element-text-size(form-control-mini, screen-large);
-        .element-spacing(form-control-mini, null, screen-large);
-        .property-variant(form-control-mini, height, screen-large);
-        .property-variant(form-control-mini, border-radius, screen-large);
+        .element-text-size(form-control-small, screen-large);
+        .element-spacing(form-control-small, null, screen-large);
+        .property-variant(form-control-small, height, screen-large);
+        .property-variant(form-control-small, border-radius, screen-large);
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
@@ -533,15 +533,15 @@ form-control-mini/styles.less
 
           &.form-control-rounded {
 
-            & when not (@form-control-mini-padding-left-screen-large = null) {
+            & when not (@form-control-small-padding-left-screen-large = null) {
 
-              padding-left: @form-control-mini-padding-left-screen-large * @form-control-mini-rounded-padding-horizontal-scale;
+              padding-left: @form-control-small-padding-left-screen-large * @form-control-small-rounded-padding-horizontal-scale;
 
             }
 
-            & when not (@form-control-mini-padding-right-screen-large = null) {
+            & when not (@form-control-small-padding-right-screen-large = null) {
 
-              padding-right: @form-control-mini-padding-right-screen-large * @form-control-mini-rounded-padding-horizontal-scale;
+              padding-right: @form-control-small-padding-right-screen-large * @form-control-small-rounded-padding-horizontal-scale;
 
             }
 
@@ -555,13 +555,13 @@ form-control-mini/styles.less
       Form Control Select (.form-control-select)
       ----------------------------------------------------------------------------- */
 
-      .form-control-select.form-control-mini {
+      .form-control-select.form-control-small {
 
         select {
 
-          .element-text-size(form-control-mini, screen-large);
-          .element-spacing(form-control-mini, null, screen-large);
-          .property-variant(form-control-mini, height, screen-large);
+          .element-text-size(form-control-small, screen-large);
+          .element-spacing(form-control-small, null, screen-large);
+          .property-variant(form-control-small, height, screen-large);
 
         }
 
@@ -569,25 +569,25 @@ form-control-mini/styles.less
 
         &:after {
 
-          .property-variant(form-control-mini-caret, margin-left, screen-large);
-          .property-variant(form-control-mini-caret, margin-top, screen-large);
-          .property-variant(form-control-mini, margin-right, padding-right, screen-large);
+          .property-variant(form-control-small-caret, margin-left, screen-large);
+          .property-variant(form-control-small-caret, margin-top, screen-large);
+          .property-variant(form-control-small, margin-right, padding-right, screen-large);
 
-          & when not (@form-control-mini-caret-width = null) and not (@form-control-mini-caret-width-screen-large = null) {
+          & when not (@form-control-small-caret-width = null) and not (@form-control-small-caret-width-screen-large = null) {
 
-            .triangle-size-width("down", (@form-control-mini-caret-width * @form-control-mini-caret-width-screen-large));
+            .triangle-size-width("down", (@form-control-small-caret-width-screen-large));
 
           }
 
-          & when not (@form-control-mini-caret-height = null) and not (@form-control-mini-caret-height-screen-large = null) {
+          & when not (@form-control-small-caret-height = null) and not (@form-control-small-caret-height-screen-large = null) {
 
-            .triangle-size-height("down", (@form-control-mini-caret-height * @form-control-mini-caret-height-screen-large));
+            .triangle-size-height("down", (@form-control-small-caret-height-screen-large));
 
           }
 
         }
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
@@ -597,15 +597,15 @@ form-control-mini/styles.less
 
             select {
 
-              & when not (@form-control-mini-padding-left-screen-large = null) {
+              & when not (@form-control-small-padding-left-screen-large = null) {
 
-                padding-left: @form-control-mini-padding-left-screen-large * @form-control-mini-rounded-padding-horizontal-scale;
+                padding-left: @form-control-small-padding-left-screen-large * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
-              & when not (@form-control-mini-padding-right-screen-large = null) {
+              & when not (@form-control-small-padding-right-screen-large = null) {
 
-                padding-right: @form-control-mini-padding-right-screen-large * @form-control-mini-rounded-padding-horizontal-scale;
+                padding-right: @form-control-small-padding-right-screen-large * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
@@ -615,9 +615,9 @@ form-control-mini/styles.less
 
             &:after {
 
-              & when not (@form-control-mini-padding-right-screen-large = null) {
+              & when not (@form-control-small-padding-right-screen-large = null) {
 
-                margin-right: @form-control-mini-padding-right-screen-large * @form-control-mini-rounded-padding-horizontal-scale;
+                margin-right: @form-control-small-padding-right-screen-large * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
@@ -629,7 +629,7 @@ form-control-mini/styles.less
 
       }
 
-      & when (@form-control-group-enabled) and not (@form-control-mini-add-on-padding-horizontal = null) and not (@form-control-mini-add-on-padding-horizontal-screen-large = null) {
+      & when (@form-control-group-enabled) and not (@form-control-small-add-on-padding-horizontal = null) and not (@form-control-small-add-on-padding-horizontal-screen-large = null) {
 
         /* -----------------------------------------------------------------------------
         Form Control Group
@@ -641,19 +641,19 @@ form-control-mini/styles.less
           Nested Form Control
           ----------------------------------------------------------------------------- */
 
-          &.form-control-mini {
+          &.form-control-small {
 
             .form-control-group-add-on {
 
               &:first-child {
 
-                padding-right: @form-control-mini-add-on-padding-horizontal-screen-large;
+                padding-right: @form-control-small-add-on-padding-horizontal-screen-large;
 
               }
 
               &:last-child {
 
-                padding-left: @form-control-mini-add-on-padding-horizontal-screen-large;
+                padding-left: @form-control-small-add-on-padding-horizontal-screen-large;
 
               }
 
@@ -681,20 +681,20 @@ form-control-mini/styles.less
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@form-control-mini-enabled) and (@form-control-mini-screen-jumbo-enabled) {
+    & when (@form-control-small-enabled) and (@form-control-small-screen-jumbo-enabled) {
 
       /* -----------------------------------------------------------------------------
-      Form Control (.form-control-mini)
+      Form Control (.form-control-small)
       ----------------------------------------------------------------------------- */
 
-      .form-control-mini {
+      .form-control-small {
 
-        .element-text-size(form-control-mini, screen-jumbo);
-        .element-spacing(form-control-mini, null, screen-jumbo);
-        .property-variant(form-control-mini, height, screen-jumbo);
-        .property-variant(form-control-mini, border-radius, screen-jumbo);
+        .element-text-size(form-control-small, screen-jumbo);
+        .element-spacing(form-control-small, null, screen-jumbo);
+        .property-variant(form-control-small, height, screen-jumbo);
+        .property-variant(form-control-small, border-radius, screen-jumbo);
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
@@ -702,15 +702,15 @@ form-control-mini/styles.less
 
           &.form-control-rounded {
 
-            & when not (@form-control-mini-padding-left-screen-jumbo = null) {
+            & when not (@form-control-small-padding-left-screen-jumbo = null) {
 
-              padding-left: @form-control-mini-padding-left-screen-jumbo * @form-control-mini-rounded-padding-horizontal-scale;
+              padding-left: @form-control-small-padding-left-screen-jumbo * @form-control-small-rounded-padding-horizontal-scale;
 
             }
 
-            & when not (@form-control-mini-padding-right-screen-jumbo = null) {
+            & when not (@form-control-small-padding-right-screen-jumbo = null) {
 
-              padding-right: @form-control-mini-padding-right-screen-jumbo * @form-control-mini-rounded-padding-horizontal-scale;
+              padding-right: @form-control-small-padding-right-screen-jumbo * @form-control-small-rounded-padding-horizontal-scale;
 
             }
 
@@ -724,13 +724,13 @@ form-control-mini/styles.less
       Form Control Select (.form-control-select)
       ----------------------------------------------------------------------------- */
 
-      .form-control-select.form-control-mini {
+      .form-control-select.form-control-small {
 
         select {
 
-          .element-text-size(form-control-mini, screen-jumbo);
-          .element-spacing(form-control-mini, null, screen-jumbo);
-          .property-variant(form-control-mini, height, screen-jumbo);
+          .element-text-size(form-control-small, screen-jumbo);
+          .element-spacing(form-control-small, null, screen-jumbo);
+          .property-variant(form-control-small, height, screen-jumbo);
 
         }
 
@@ -738,25 +738,25 @@ form-control-mini/styles.less
 
         &:after {
 
-          .property-variant(form-control-mini-caret, margin-left, screen-jumbo);
-          .property-variant(form-control-mini-caret, margin-top, screen-jumbo);
-          .property-variant(form-control-mini, margin-right, padding-right, screen-jumbo);
+          .property-variant(form-control-small-caret, margin-left, screen-jumbo);
+          .property-variant(form-control-small-caret, margin-top, screen-jumbo);
+          .property-variant(form-control-small, margin-right, padding-right, screen-jumbo);
 
-          & when not (@form-control-mini-caret-width = null) and not (@form-control-mini-caret-width-screen-jumbo = null) {
+          & when not (@form-control-small-caret-width = null) and not (@form-control-small-caret-width-screen-jumbo = null) {
 
-            .triangle-size-width("down", (@form-control-mini-caret-width * @form-control-mini-caret-width-screen-jumbo));
+            .triangle-size-width("down", (@form-control-small-caret-width-screen-jumbo));
 
           }
 
-          & when not (@form-control-mini-caret-height = null) and not (@form-control-mini-caret-height-screen-jumbo = null) {
+          & when not (@form-control-small-caret-height = null) and not (@form-control-small-caret-height-screen-jumbo = null) {
 
-            .triangle-size-height("down", (@form-control-mini-caret-height * @form-control-mini-caret-height-screen-jumbo));
+            .triangle-size-height("down", (@form-control-small-caret-height-screen-jumbo));
 
           }
 
         }
 
-        & when not (@form-control-mini-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-small-rounded-padding-horizontal-scale = null) {
 
           /* -----------------------------------------------------------------------------
           Form Control Rounded (.form-control-rounded)
@@ -766,15 +766,15 @@ form-control-mini/styles.less
 
             select {
 
-              & when not (@form-control-mini-padding-left-screen-jumbo = null) {
+              & when not (@form-control-small-padding-left-screen-jumbo = null) {
 
-                padding-left: @form-control-mini-padding-left-screen-jumbo * @form-control-mini-rounded-padding-horizontal-scale;
+                padding-left: @form-control-small-padding-left-screen-jumbo * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
-              & when not (@form-control-mini-padding-right-screen-jumbo = null) {
+              & when not (@form-control-small-padding-right-screen-jumbo = null) {
 
-                padding-right: @form-control-mini-padding-right-screen-jumbo * @form-control-mini-rounded-padding-horizontal-scale;
+                padding-right: @form-control-small-padding-right-screen-jumbo * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
@@ -784,9 +784,9 @@ form-control-mini/styles.less
 
             &:after {
 
-              & when not (@form-control-mini-padding-right-screen-jumbo = null) {
+              & when not (@form-control-small-padding-right-screen-jumbo = null) {
 
-                margin-right: @form-control-mini-padding-right-screen-jumbo * @form-control-mini-rounded-padding-horizontal-scale;
+                margin-right: @form-control-small-padding-right-screen-jumbo * @form-control-small-rounded-padding-horizontal-scale;
 
               }
 
@@ -798,7 +798,7 @@ form-control-mini/styles.less
 
       }
 
-      & when (@form-control-group-enabled) and not (@form-control-mini-add-on-padding-horizontal = null) and not (@form-control-mini-add-on-padding-horizontal-screen-jumbo = null) {
+      & when (@form-control-group-enabled) and not (@form-control-small-add-on-padding-horizontal = null) and not (@form-control-small-add-on-padding-horizontal-screen-jumbo = null) {
 
         /* -----------------------------------------------------------------------------
         Form Control Group
@@ -810,19 +810,19 @@ form-control-mini/styles.less
           Nested Form Control
           ----------------------------------------------------------------------------- */
 
-          &.form-control-mini {
+          &.form-control-small {
 
             .form-control-group-add-on {
 
               &:first-child {
 
-                padding-right: @form-control-mini-add-on-padding-horizontal-screen-jumbo;
+                padding-right: @form-control-small-add-on-padding-horizontal-screen-jumbo;
 
               }
 
               &:last-child {
 
-                padding-left: @form-control-mini-add-on-padding-horizontal-screen-jumbo;
+                padding-left: @form-control-small-add-on-padding-horizontal-screen-jumbo;
 
               }
 
