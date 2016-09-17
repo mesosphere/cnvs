@@ -19,7 +19,10 @@ toggle/styles.less
 
     .clearfix();
     display: block;
+    position: relative;
     .element-spacing(toggle, null,  null);
+    .element-text-style(toggle);
+    .element-text-size(toggle, null);
 
     /* -----------------------------------------------------------------------------
     Layout Variants
@@ -42,72 +45,60 @@ toggle/styles.less
 
       width: @toggle-system-width;
       height: @toggle-system-height;
+      position: absolute;
+      left: 0px;
 
     }
 
-    label {
+    /* -----------------------------------------------------------------------------
+    Style Variants
+    ----------------------------------------------------------------------------- */
 
-      margin: 0px;
-      position: relative;
-      .element-text-style(toggle-label);
-      .element-text-size(toggle-label, null);
-      .element-spacing(toggle-label, null, null);
+    & when (@label-emphasis-enabled) {
 
-      input[type="checkbox"],
-      input[type="radio"] {
+      &.emphasis,
+      .emphasis {
 
-        position: absolute;
-        left: 0px;
+        .element-text-style(toggle-emphasis);
 
       }
 
-      & when (@label-emphasis-enabled) {
+    }
 
-        &.emphasis,
-        .emphasis {
+    & when (@label-muted-enabled) {
 
-          .element-text-style(toggle-label-emphasis);
+      &.muted,
+      .muted {
 
-        }
-
-      }
-
-      & when (@label-muted-enabled) {
-
-        &.muted,
-        .muted {
-
-          .element-text-style(toggle-label-muted);
-
-        }
+        .element-text-style(toggle-muted);
 
       }
 
-      & when (@label-inverse-enabled) {
+    }
 
-        &.inverse {
+    & when (@label-inverse-enabled) {
 
-          .element-text-style(toggle-label-inverse);
+      &.inverse {
 
-          & when (@label-inverse-emphasis-enabled) {
+        .element-text-style(toggle-inverse);
 
-            &.emphasis,
-            .emphasis {
+        & when (@label-inverse-emphasis-enabled) {
 
-              .element-text-style(toggle-label-inverse-emphasis);
+          &.emphasis,
+          .emphasis {
 
-            }
+            .element-text-style(toggle-inverse-emphasis);
 
           }
 
-          & when (@label-inverse-muted-enabled) {
+        }
 
-            &.muted,
-            .muted {
+        & when (@label-inverse-muted-enabled) {
 
-              .element-text-style(toggle-label-inverse-muted);
+          &.muted,
+          .muted {
 
-            }
+            .element-text-style(toggle-inverse-muted);
 
           }
 
@@ -161,6 +152,7 @@ toggle/styles.less
       .radio {
 
         .element-spacing(toggle, null, screen-small);
+        .element-text-size(toggle, screen-small);
 
         /* -----------------------------------------------------------------------------
         Layout Variants
@@ -175,13 +167,6 @@ toggle/styles.less
         &.tall {
 
           .element-spacing(toggle, tall, screen-small);
-
-        }
-
-        label {
-
-          .element-text-size(toggle-label, screen-small);
-          .element-spacing(toggle-label, null, screen-small);
 
         }
 
@@ -221,6 +206,7 @@ toggle/styles.less
       .radio {
 
         .element-spacing(toggle, null, screen-medium);
+        .element-text-size(toggle, screen-medium);
 
         /* -----------------------------------------------------------------------------
         Layout Variants
@@ -235,13 +221,6 @@ toggle/styles.less
         &.tall {
 
           .element-spacing(toggle, tall, screen-medium);
-
-        }
-
-        label {
-
-          .element-text-size(toggle-label, screen-medium);
-          .element-spacing(toggle-label, null, screen-medium);
 
         }
 
@@ -281,6 +260,7 @@ toggle/styles.less
       .radio {
 
         .element-spacing(toggle, null, screen-large);
+        .element-text-size(toggle, screen-large);
 
         /* -----------------------------------------------------------------------------
         Layout Variants
@@ -295,13 +275,6 @@ toggle/styles.less
         &.tall {
 
           .element-spacing(toggle, tall, screen-large);
-
-        }
-
-        label {
-
-          .element-text-size(toggle-label, screen-large);
-          .element-spacing(toggle-label, null, screen-large);
 
         }
 
@@ -341,6 +314,7 @@ toggle/styles.less
       .radio {
 
         .element-spacing(toggle, null, screen-jumbo);
+        .element-text-size(toggle, screen-jumbo);
 
         /* -----------------------------------------------------------------------------
         Layout Variants
@@ -355,13 +329,6 @@ toggle/styles.less
         &.tall {
 
           .element-spacing(toggle, tall, screen-jumbo);
-
-        }
-
-        label {
-
-          .element-text-size(toggle-label, screen-jumbo);
-          .element-spacing(toggle-label, null, screen-jumbo);
 
         }
 
