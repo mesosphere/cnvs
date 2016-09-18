@@ -21649,6 +21649,23 @@ Text Size
 ----------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Custom Toggles
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Layout
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling (Default)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling (Selected)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Styling (Inverse)
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 toggle/styles.less
 --------------------------------------------------------------------------------
@@ -21680,6 +21697,9 @@ toggle/styles.less
   /* -----------------------------------------------------------------------------
     Inline Toggle
     ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+      Custom Toggles
+      ----------------------------------------------------------------------------- */
 }
 .checkbox:before,
 .radio:before,
@@ -21717,10 +21737,10 @@ toggle/styles.less
 .radio input[type="checkbox"],
 .checkbox input[type="radio"],
 .radio input[type="radio"] {
-  width: 16px;
-  height: 16px;
   position: absolute;
   left: 0px;
+  width: 16px;
+  height: 16px;
 }
 .checkbox.emphasis,
 .radio.emphasis,
@@ -21768,6 +21788,203 @@ toggle/styles.less
 .radio.radio-inline:first-child {
   margin-left: 0px;
 }
+.checkbox.form-control-toggle,
+.radio.form-control-toggle {
+  /* -----------------------------------------------------------------------------
+        Disabled
+        ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+        Selected
+        ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+        Checkbox
+        ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+        Radio
+        ----------------------------------------------------------------------------- */
+}
+.checkbox.form-control-toggle input[type="checkbox"],
+.radio.form-control-toggle input[type="checkbox"],
+.checkbox.form-control-toggle input[type="radio"],
+.radio.form-control-toggle input[type="radio"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.checkbox.form-control-toggle .form-control-toggle-indicator,
+.radio.form-control-toggle .form-control-toggle-indicator {
+  display: block;
+  position: absolute;
+  left: 0px;
+  background-color: none;
+  border-width: 1px;
+  border-color: #e0e1e4;
+  border-style: solid;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 3px;
+}
+.checkbox.form-control-toggle:hover .form-control-toggle-indicator,
+.radio.form-control-toggle:hover .form-control-toggle-indicator {
+  border-color: #c2c4ca;
+}
+.checkbox.form-control-toggle:active .form-control-toggle-indicator,
+.radio.form-control-toggle:active .form-control-toggle-indicator {
+  border-color: #9351e5;
+}
+.checkbox.form-control-toggle input:disabled ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:disabled ~ .form-control-toggle-indicator {
+  border-color: #e0e1e4;
+  opacity: 0.5;
+}
+.checkbox.form-control-toggle input:checked,
+.radio.form-control-toggle input:checked,
+.checkbox.form-control-toggle input:indeterminate,
+.radio.form-control-toggle input:indeterminate,
+.checkbox.form-control-toggle input.indeterminate,
+.radio.form-control-toggle input.indeterminate {
+  /* -----------------------------------------------------------------------------
+          Disabled
+          ----------------------------------------------------------------------------- */
+}
+.checkbox.form-control-toggle input:checked ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:checked ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input:indeterminate ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:indeterminate ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input.indeterminate ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input.indeterminate ~ .form-control-toggle-indicator {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #9351e5;
+  border-width: 1px;
+  border-color: #9351e5;
+  border-style: solid;
+}
+.checkbox.form-control-toggle input:checked:hover ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:checked:hover ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input:indeterminate:hover ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:indeterminate:hover ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input.indeterminate:hover ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input.indeterminate:hover ~ .form-control-toggle-indicator {
+  background-color: #8449ce;
+  border-color: #8449ce;
+}
+.checkbox.form-control-toggle input:checked:active ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:checked:active ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input:indeterminate:active ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:indeterminate:active ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input.indeterminate:active ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input.indeterminate:active ~ .form-control-toggle-indicator {
+  background-color: #6e3dac;
+  border-color: #6e3dac;
+}
+.checkbox.form-control-toggle input:checked:disabled ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:checked:disabled ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input:indeterminate:disabled ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input:indeterminate:disabled ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input.indeterminate:disabled ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input.indeterminate:disabled ~ .form-control-toggle-indicator {
+  background-color: #9351e5;
+  border-width: 1px;
+  border-color: #9351e5;
+  border-style: solid;
+  opacity: 0.5;
+}
+.checkbox.form-control-toggle input[type="checkbox"],
+.radio.form-control-toggle input[type="checkbox"] {
+  /* -----------------------------------------------------------------------------
+          Selected
+          ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+          Indeterminate
+          ----------------------------------------------------------------------------- */
+}
+.checkbox.form-control-toggle input[type="checkbox"]:checked,
+.radio.form-control-toggle input[type="checkbox"]:checked {
+  /* -----------------------------------------------------------------------------
+            Disabled
+            ----------------------------------------------------------------------------- */
+}
+.checkbox.form-control-toggle input[type="checkbox"]:checked ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"]:checked ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='#ffffff' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+}
+.checkbox.form-control-toggle input[type="checkbox"]:checked:hover ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"]:checked:hover ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='#ffffff' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+}
+.checkbox.form-control-toggle input[type="checkbox"]:checked:active ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"]:checked:active ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='#dfcbf7' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+}
+.checkbox.form-control-toggle input[type="checkbox"]:checked:disabled ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"]:checked:disabled ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='#e9dcfa' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+}
+.checkbox.form-control-toggle input[type="checkbox"]:indeterminate,
+.radio.form-control-toggle input[type="checkbox"]:indeterminate,
+.checkbox.form-control-toggle input[type="checkbox"].indeterminate,
+.radio.form-control-toggle input[type="checkbox"].indeterminate {
+  /* -----------------------------------------------------------------------------
+            Disabled
+            ----------------------------------------------------------------------------- */
+}
+.checkbox.form-control-toggle input[type="checkbox"]:indeterminate ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"]:indeterminate ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input[type="checkbox"].indeterminate ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"].indeterminate ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='#ffffff' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+}
+.checkbox.form-control-toggle input[type="checkbox"]:indeterminate:hover ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"]:indeterminate:hover ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input[type="checkbox"].indeterminate:hover ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"].indeterminate:hover ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='#ffffff' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+}
+.checkbox.form-control-toggle input[type="checkbox"]:indeterminate:active ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"]:indeterminate:active ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input[type="checkbox"].indeterminate:active ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"].indeterminate:active ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='#dfcbf7' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+}
+.checkbox.form-control-toggle input[type="checkbox"]:indeterminate:disabled ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"]:indeterminate:disabled ~ .form-control-toggle-indicator,
+.checkbox.form-control-toggle input[type="checkbox"].indeterminate:disabled ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="checkbox"].indeterminate:disabled ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='#e9dcfa' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+}
+.checkbox.form-control-toggle input[type="radio"],
+.radio.form-control-toggle input[type="radio"] {
+  /* -----------------------------------------------------------------------------
+          Selected
+          ----------------------------------------------------------------------------- */
+}
+.checkbox.form-control-toggle input[type="radio"] ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="radio"] ~ .form-control-toggle-indicator {
+  border-radius: 500px;
+}
+.checkbox.form-control-toggle input[type="radio"]:checked,
+.radio.form-control-toggle input[type="radio"]:checked {
+  /* -----------------------------------------------------------------------------
+            Disabled
+            ----------------------------------------------------------------------------- */
+}
+.checkbox.form-control-toggle input[type="radio"]:checked ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="radio"]:checked ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='#ffffff' cx='8' cy='8' r='4'></circle></svg>");
+}
+.checkbox.form-control-toggle input[type="radio"]:checked:hover ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="radio"]:checked:hover ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='#ffffff' cx='8' cy='8' r='4'></circle></svg>");
+}
+.checkbox.form-control-toggle input[type="radio"]:checked:active ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="radio"]:checked:active ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='#dfcbf7' cx='8' cy='8' r='4'></circle></svg>");
+}
+.checkbox.form-control-toggle input[type="radio"]:checked:disabled ~ .form-control-toggle-indicator,
+.radio.form-control-toggle input[type="radio"]:checked:disabled ~ .form-control-toggle-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='#e9dcfa' cx='8' cy='8' r='4'></circle></svg>");
+}
 /* -----------------------------------------------------------------------------
   Screen Size: Small (@layout-screen-small-min-width) and wider
   ----------------------------------------------------------------------------- */
@@ -21780,6 +21997,9 @@ toggle/styles.less
     /* -----------------------------------------------------------------------------
         Inline
         ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Custom Toggles
+          ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
@@ -21798,6 +22018,9 @@ toggle/styles.less
     /* -----------------------------------------------------------------------------
         Inline
         ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Custom Toggles
+          ----------------------------------------------------------------------------- */
   }
   .checkbox.short,
   .radio.short {
@@ -21825,6 +22048,11 @@ toggle/styles.less
   .radio.radio-inline {
     margin-left: 0.88rem;
   }
+  .checkbox.form-control-toggle .form-control-toggle-indicator,
+  .radio.form-control-toggle .form-control-toggle-indicator {
+    width: 0.84rem;
+    height: 0.84rem;
+  }
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Large (@layout-screen-large-min-width) and wider
@@ -21842,6 +22070,9 @@ toggle/styles.less
     /* -----------------------------------------------------------------------------
         Inline
         ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Custom Toggles
+          ----------------------------------------------------------------------------- */
   }
   .checkbox.short,
   .radio.short {
@@ -21869,6 +22100,11 @@ toggle/styles.less
   .radio.radio-inline {
     margin-left: 0.96rem;
   }
+  .checkbox.form-control-toggle .form-control-toggle-indicator,
+  .radio.form-control-toggle .form-control-toggle-indicator {
+    width: 0.88rem;
+    height: 0.88rem;
+  }
 }
 /* -----------------------------------------------------------------------------
   Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
@@ -21882,6 +22118,9 @@ toggle/styles.less
     /* -----------------------------------------------------------------------------
         Inline
         ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+          Custom Toggles
+          ----------------------------------------------------------------------------- */
   }
 }
 /* -----------------------------------------------------------------------------
