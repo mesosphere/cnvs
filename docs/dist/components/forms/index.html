@@ -1194,7 +1194,7 @@ BEGIN: Form Controls
 
     <p>
 
-      Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
+      Checkboxes and radios, both staple toggles of the traditional HTML form, share a single class in CNVS, <code>.form-control-toggle</code>, to governs layout and basic styling.  Wrap a checkbox or radio in the class <code>.form-control-toggle</code>, preferrably using a <code>&lt;label&gt;</code> for added context and accessibility.
 
     </p>
 
@@ -1310,7 +1310,13 @@ BEGIN: Form Controls
 
       <p>
 
-        Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
+        Looking to take your checkbox or radio toggle to the next level? Add the class <code>.form-control-toggle-custom</code> to your exisiting <code>.form-control-toggle</code> wrapped checkbox or radio input.  The <code>&lt;input&gt;</code> is hidden from view, but still available in the DOM for use in your form.  In order to replace the hidden checkbox or radio component with a styled alternate, you must also inject a new element with the class <code>.form-control-toggle-indicator</code>. We recommend a simple <code>&lt;span&gt;</code> for this.
+
+      </p>
+
+      <p>
+
+        For the checkmark icon, as well as the circle icon for radios, we use base64 embedded SVG icons and adjust the color.
 
       </p>
 
@@ -1321,12 +1327,6 @@ BEGIN: Form Controls
           Checkboxes
 
         </h5>
-
-        <p>
-
-          Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
-
-        </p>
 
         <!-- =================================================
         BEGIN: Example
@@ -1384,7 +1384,7 @@ BEGIN: Form Controls
 
         <p>
 
-          Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
+          For indetermindate checkboxes, one whose state is neither true nor false, you may leverage the <code>:indeterminate</code> pseudo class.  However, you must use Javascript magic to manually set this property.  Something like this should work: <code>$(element).prop('indeterminate', true)</code>.
 
         </p>
 
@@ -1439,12 +1439,6 @@ BEGIN: Form Controls
           Radios
 
         </h5>
-
-        <p>
-
-          Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
-
-        </p>
 
         <!-- =================================================
         BEGIN: Example
@@ -1533,7 +1527,7 @@ BEGIN: Form Controls
 
         <p>
 
-          Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
+          Using the <code>disabled</code> attribute, placed inline on the checkbox or radio HTML element, will not only make the toggle un-clickable, but also adjusts the appearance to reflect it's inaccessibility.
 
         </p>
 
