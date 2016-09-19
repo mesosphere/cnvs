@@ -1,0 +1,1069 @@
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+toggle/styles.less
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+& when (@toggle-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Toggle
+  ----------------------------------------------------------------------------- */
+
+  .form-control-toggle {
+
+    .clearfix();
+    display: block;
+    position: relative;
+    .element-spacing(toggle, null,  null);
+    .element-text-style(toggle);
+    .element-text-size(toggle, null);
+
+    /* -----------------------------------------------------------------------------
+    Layout Variants
+    ----------------------------------------------------------------------------- */
+
+    &.short {
+
+      .element-spacing(toggle, short, null);
+
+    }
+
+    &.tall {
+
+      .element-spacing(toggle, tall, null);
+
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+
+      position: absolute;
+      left: 0px;
+      .property-variant(toggle, width, null);
+      .property-variant(toggle, height, null);
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Style Variants
+    ----------------------------------------------------------------------------- */
+
+    & when (@label-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+
+        .element-text-style(toggle-emphasis);
+
+      }
+
+    }
+
+    & when (@label-muted-enabled) {
+
+      &.muted,
+      .muted {
+
+        .element-text-style(toggle-muted);
+
+      }
+
+    }
+
+    & when (@label-inverse-enabled) {
+
+      &.inverse {
+
+        .element-text-style(toggle-inverse);
+
+        & when (@label-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+
+            .element-text-style(toggle-inverse-emphasis);
+
+          }
+
+        }
+
+        & when (@label-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+
+            .element-text-style(toggle-inverse-muted);
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &:last-child {
+
+      margin-bottom: 0px;
+
+    }
+
+    /* -----------------------------------------------------------------------------
+    Inline Toggle
+    ----------------------------------------------------------------------------- */
+
+    &.form-control-toggle-inline {
+
+      float: left;
+      .property-variant(toggle-inline, margin-left, margin-horizontal, null, null);
+
+      &:first-child {
+
+        margin-left: 0px;
+
+      }
+
+    }
+
+    & when (@toggle-custom-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      Custom Toggles
+      ----------------------------------------------------------------------------- */
+
+      &.form-control-toggle-custom {
+
+        input[type="checkbox"],
+        input[type="radio"] {
+
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+
+        }
+
+        .form-control-toggle-indicator {
+
+          display: block;
+          position: absolute;
+          left: 0px;
+          .element-shape-style(toggle-custom);
+          .property-variant(toggle-custom, width, null);
+          .property-variant(toggle-custom, height, null);
+          .property-variant(toggle-custom, border-radius, null);
+
+        }
+
+        &:hover {
+
+          .form-control-toggle-indicator {
+
+            .element-shape-style(toggle-custom-hover);
+
+          }
+
+        }
+
+        &:active {
+
+          .form-control-toggle-indicator {
+
+            .element-shape-style(toggle-custom-active);
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Disabled
+        ----------------------------------------------------------------------------- */
+
+        input:disabled {
+
+          ~.form-control-toggle-indicator {
+
+            .element-shape-style(toggle-custom-disabled);
+            .property-variant(toggle-custom-disabled, opacity, null);
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Selected
+        ----------------------------------------------------------------------------- */
+
+        input:checked,
+        input:indeterminate,
+        input.indeterminate {
+
+          ~.form-control-toggle-indicator {
+
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .element-shape-style(toggle-custom-selected);
+
+          }
+
+          &:hover {
+
+            ~.form-control-toggle-indicator {
+
+              .element-shape-style(toggle-custom-selected-hover);
+
+            }
+
+          }
+
+          &:active {
+
+            ~.form-control-toggle-indicator {
+
+              .element-shape-style(toggle-custom-selected-active);
+
+            }
+
+          }
+
+          /* -----------------------------------------------------------------------------
+          Disabled
+          ----------------------------------------------------------------------------- */
+
+          &:disabled {
+
+            ~.form-control-toggle-indicator {
+
+              .element-shape-style(toggle-custom-selected-disabled);
+              .property-variant(toggle-custom-selected-disabled, opacity, null);
+
+            }
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Checkbox
+        ----------------------------------------------------------------------------- */
+
+        input[type="checkbox"] {
+
+          /* -----------------------------------------------------------------------------
+          Selected
+          ----------------------------------------------------------------------------- */
+
+          &:checked {
+
+            ~.form-control-toggle-indicator {
+
+              & when not (@toggle-custom-selected-color = null) {
+
+                background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='@{toggle-custom-selected-color}' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+
+              }
+
+            }
+
+            &:hover {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-hover-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='@{toggle-custom-selected-hover-color}' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+
+                }
+
+              }
+
+            }
+
+            &:active {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-active-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='@{toggle-custom-selected-active-color}' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+
+                }
+
+              }
+
+            }
+
+            /* -----------------------------------------------------------------------------
+            Disabled
+            ----------------------------------------------------------------------------- */
+
+            &:disabled {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-disabled-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='@{toggle-custom-selected-disabled-color}' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+
+                }
+
+              }
+
+            }
+
+          }
+
+          /* -----------------------------------------------------------------------------
+          Indeterminate
+          ----------------------------------------------------------------------------- */
+
+          &:indeterminate,
+          &.indeterminate {
+
+            ~.form-control-toggle-indicator {
+
+              & when not (@toggle-custom-selected-color = null) {
+
+                background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='@{toggle-custom-selected-color}' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+
+              }
+
+            }
+
+            &:hover {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-hover-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='@{toggle-custom-selected-hover-color}' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+
+                }
+
+              }
+
+            }
+
+            &:active {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-active-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='@{toggle-custom-selected-active-color}' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+
+                }
+
+              }
+
+            }
+
+            /* -----------------------------------------------------------------------------
+            Disabled
+            ----------------------------------------------------------------------------- */
+
+            &:disabled {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-disabled-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='@{toggle-custom-selected-disabled-color}' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Radio
+        ----------------------------------------------------------------------------- */
+
+        input[type="radio"] {
+
+          ~.form-control-toggle-indicator {
+
+            border-radius: 500px;
+
+          }
+
+          /* -----------------------------------------------------------------------------
+          Selected
+          ----------------------------------------------------------------------------- */
+
+          &:checked {
+
+            ~.form-control-toggle-indicator {
+
+              & when not (@toggle-custom-selected-color = null) {
+
+                background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='@{toggle-custom-selected-color}' cx='8' cy='8' r='4'></circle></svg>");
+
+              }
+
+            }
+
+            &:hover {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-hover-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='@{toggle-custom-selected-hover-color}' cx='8' cy='8' r='4'></circle></svg>");
+
+                }
+
+              }
+
+            }
+
+            &:active {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-active-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='@{toggle-custom-selected-active-color}' cx='8' cy='8' r='4'></circle></svg>");
+
+                }
+
+              }
+
+            }
+
+            /* -----------------------------------------------------------------------------
+            Disabled
+            ----------------------------------------------------------------------------- */
+
+            &:disabled {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-disabled-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='@{toggle-custom-selected-disabled-color}' cx='8' cy='8' r='4'></circle></svg>");
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Inverse
+        ----------------------------------------------------------------------------- */
+
+        &.inverse {
+
+          .form-control-toggle-indicator {
+
+            .element-shape-style(toggle-custom-inverse);
+
+          }
+
+          &:hover {
+
+            .form-control-toggle-indicator {
+
+              .element-shape-style(toggle-custom-inverse-hover);
+
+            }
+
+          }
+
+          &:active {
+
+            .form-control-toggle-indicator {
+
+              .element-shape-style(toggle-custom-inverse-active);
+
+            }
+
+          }
+
+          /* -----------------------------------------------------------------------------
+          Disabled
+          ----------------------------------------------------------------------------- */
+
+          input:disabled {
+
+            ~.form-control-toggle-indicator {
+
+              .element-shape-style(toggle-custom-inverse-disabled);
+              .property-variant(toggle-custom-inverse-disabled, opacity, null);
+
+            }
+
+          }
+
+          /* -----------------------------------------------------------------------------
+          Selected
+          ----------------------------------------------------------------------------- */
+
+          input:checked,
+          input:indeterminate,
+          input.indeterminate {
+
+            ~.form-control-toggle-indicator {
+
+              .element-shape-style(toggle-custom-inverse-selected);
+
+            }
+
+            &:hover {
+
+              ~.form-control-toggle-indicator {
+
+                .element-shape-style(toggle-custom-inverse-selected-hover);
+
+              }
+
+            }
+
+            &:active {
+
+              ~.form-control-toggle-indicator {
+
+                .element-shape-style(toggle-custom-inverse-selected-active);
+
+              }
+
+            }
+
+            /* -----------------------------------------------------------------------------
+            Disabled
+            ----------------------------------------------------------------------------- */
+
+            &:disabled {
+
+              ~.form-control-toggle-indicator {
+
+                .element-shape-style(toggle-custom-inverse-selected-disabled);
+                .property-variant(toggle-custom-inverse-selected-disabled, opacity, null);
+
+              }
+
+            }
+
+          }
+
+          /* -----------------------------------------------------------------------------
+          Checkbox
+          ----------------------------------------------------------------------------- */
+
+          input[type="checkbox"] {
+
+            /* -----------------------------------------------------------------------------
+            Selected
+            ----------------------------------------------------------------------------- */
+
+            &:checked {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-inverse-selected-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='@{toggle-custom-inverse-selected-color}' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+
+                }
+
+              }
+
+              &:hover {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='@{toggle-custom-inverse-selected-hover-color}' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+
+                  }
+
+                }
+
+              }
+
+              &:active {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-active-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='@{toggle-custom-inverse-selected-active-color}' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+
+                  }
+
+                }
+
+              }
+
+              /* -----------------------------------------------------------------------------
+              Disabled
+              ----------------------------------------------------------------------------- */
+
+              &:disabled {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><polygon fill='@{toggle-custom-inverse-selected-disabled-color}' points='6 12.4142136 13.7071068 4.70710678 12.2928932 3.29289322 6 9.59986954 3.70710678 7.29289322 2.29289322 8.70710678'></polygon></svg>");
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            /* -----------------------------------------------------------------------------
+            Indeterminate
+            ----------------------------------------------------------------------------- */
+
+            &:indeterminate,
+            &.indeterminate {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-inverse-selected-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='@{toggle-custom-inverse-selected-color}' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+
+                }
+
+              }
+
+              &:hover {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='@{toggle-custom-inverse-selected-hover-color}' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+
+                  }
+
+                }
+
+              }
+
+              &:active {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-active-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='@{toggle-custom-inverse-selected-active-color}' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+
+                  }
+
+                }
+
+              }
+
+              /* -----------------------------------------------------------------------------
+              Disabled
+              ----------------------------------------------------------------------------- */
+
+              &:disabled {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='@{toggle-custom-inverse-selected-disabled-color}' id='Rectangle' x='3' y='7' width='10' height='2'></rect></svg>");
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+          /* -----------------------------------------------------------------------------
+          Radio
+          ----------------------------------------------------------------------------- */
+
+          input[type="radio"] {
+
+            /* -----------------------------------------------------------------------------
+            Selected
+            ----------------------------------------------------------------------------- */
+
+            &:checked {
+
+              ~.form-control-toggle-indicator {
+
+                & when not (@toggle-custom-inverse-selected-color = null) {
+
+                  background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='@{toggle-custom-inverse-selected-color}' cx='8' cy='8' r='4'></circle></svg>");
+
+                }
+
+              }
+
+              &:hover {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='@{toggle-custom-inverse-selected-hover-color}' cx='8' cy='8' r='4'></circle></svg>");
+
+                  }
+
+                }
+
+              }
+
+              &:active {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-active-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='@{toggle-custom-inverse-selected-active-color}' cx='8' cy='8' r='4'></circle></svg>");
+
+                  }
+
+                }
+
+              }
+
+              /* -----------------------------------------------------------------------------
+              Disabled
+              ----------------------------------------------------------------------------- */
+
+              &:disabled {
+
+                ~.form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
+
+                    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle fill='@{toggle-custom-inverse-selected-disabled-color}' cx='8' cy='8' r='4'></circle></svg>");
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-screen-small-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Small (@layout-screen-small-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@toggle-enabled) and (@toggle-screen-small-enabled) {
+
+      .form-control-toggle {
+
+        .element-spacing(toggle, null, screen-small);
+        .element-text-size(toggle, screen-small);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(toggle, short, screen-small);
+
+        }
+
+        &.tall {
+
+          .element-spacing(toggle, tall, screen-small);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+
+        &.form-control-toggle-inline {
+
+          .property-variant(toggle-inline, margin-left, margin-horizontal, null, screen-small);
+
+
+        }
+
+        & when (@toggle-custom-enabled) {
+
+          /* -----------------------------------------------------------------------------
+          Custom Toggles
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-toggle-custom {
+
+            .form-control-toggle-indicator {
+
+              .property-variant(toggle-custom, width, screen-small);
+              .property-variant(toggle-custom, height, screen-small);
+              .property-variant(toggle-custom, border-radius, screen-small);
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-screen-medium-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Medium (@layout-screen-medium-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@toggle-enabled) and (@toggle-screen-medium-enabled) {
+
+      .form-control-toggle {
+
+        .element-spacing(toggle, null, screen-medium);
+        .element-text-size(toggle, screen-medium);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(toggle, short, screen-medium);
+
+        }
+
+        &.tall {
+
+          .element-spacing(toggle, tall, screen-medium);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+
+        &.form-control-toggle-inline {
+
+          .property-variant(toggle-inline, margin-left, margin-horizontal, null, screen-medium);
+
+
+        }
+
+        & when (@toggle-custom-enabled) {
+
+          /* -----------------------------------------------------------------------------
+          Custom Toggles
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-toggle-custom {
+
+            .form-control-toggle-indicator {
+
+              .property-variant(toggle-custom, width, screen-medium);
+              .property-variant(toggle-custom, height, screen-medium);
+              .property-variant(toggle-custom, border-radius, screen-medium);
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-screen-large-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Large (@layout-screen-large-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@toggle-enabled) and (@toggle-screen-large-enabled) {
+
+      .form-control-toggle {
+
+        .element-spacing(toggle, null, screen-large);
+        .element-text-size(toggle, screen-large);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(toggle, short, screen-large);
+
+        }
+
+        &.tall {
+
+          .element-spacing(toggle, tall, screen-large);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+
+        &.form-control-toggle-inline {
+
+          .property-variant(toggle-inline, margin-left, margin-horizontal, null, screen-large);
+
+
+        }
+
+        & when (@toggle-custom-enabled) {
+
+          /* -----------------------------------------------------------------------------
+          Custom Toggles
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-toggle-custom {
+
+            .form-control-toggle-indicator {
+
+              .property-variant(toggle-custom, width, screen-large);
+              .property-variant(toggle-custom, height, screen-large);
+              .property-variant(toggle-custom, border-radius, screen-large);
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-screen-jumbo-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
+  ----------------------------------------------------------------------------- */
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@toggle-enabled) and (@toggle-screen-jumbo-enabled) {
+
+      .form-control-toggle {
+
+        .element-spacing(toggle, null, screen-jumbo);
+        .element-text-size(toggle, screen-jumbo);
+
+        /* -----------------------------------------------------------------------------
+        Layout Variants
+        ----------------------------------------------------------------------------- */
+
+        &.short {
+
+          .element-spacing(toggle, short, screen-jumbo);
+
+        }
+
+        &.tall {
+
+          .element-spacing(toggle, tall, screen-jumbo);
+
+        }
+
+        /* -----------------------------------------------------------------------------
+        Inline
+        ----------------------------------------------------------------------------- */
+
+        &.form-control-toggle-inline {
+
+          .property-variant(toggle-inline, margin-left, margin-horizontal, null, screen-jumbo);
+
+
+        }
+
+        & when (@toggle-custom-enabled) {
+
+          /* -----------------------------------------------------------------------------
+          Custom Toggles
+          ----------------------------------------------------------------------------- */
+
+          &.form-control-toggle-custom {
+
+            .form-control-toggle-indicator {
+
+              .property-variant(toggle-custom, width, screen-jumbo);
+              .property-variant(toggle-custom, height, screen-jumbo);
+              .property-variant(toggle-custom, border-radius, screen-jumbo);
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

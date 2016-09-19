@@ -130,7 +130,7 @@ BEGIN: Form Controls
 
   </section>
 
-  <section id="forms-controls-checkboxes-and-radios">
+  <section id="forms-controls-toggles">
 
     <h3>
 
@@ -140,7 +140,7 @@ BEGIN: Form Controls
 
     <p>
 
-      Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
+      Checkboxes and radios, both staple toggles of the traditional HTML form, share a single class in CNVS, <code>.form-control-toggle</code>, to governs layout and basic styling.  Wrap a checkbox or radio in the class <code>.form-control-toggle</code>, preferrably using a <code>&lt;label&gt;</code> for added context and accessibility.
 
     </p>
 
@@ -160,81 +160,57 @@ BEGIN: Form Controls
 
               <div class="form-group">
 
-                <div class="checkbox">
+                <label class="form-control-toggle">
 
-                  <label>
+                  <input type="checkbox">
 
-                    <input type="checkbox">
+                  First Option
 
-                    First Option
+                </label>
 
-                  </label>
+                <label class="form-control-toggle">
 
-                </div>
+                  <input type="checkbox">
 
-                <div class="checkbox">
+                  Second Option
 
-                  <label>
+                </label>
 
-                    <input type="checkbox">
+                <label class="form-control-toggle disabled">
 
-                    Second Option
+                  <input type="checkbox" disabled="">
 
-                  </label>
+                  Third Option (Disabled)
 
-                </div>
-
-                <div class="checkbox disabled">
-
-                  <label>
-
-                    <input type="checkbox" disabled="">
-
-                    Third Option (Disabled)
-
-                  </label>
-
-                </div>
+                </label>
 
               </div>
 
               <div class="form-group flush-bottom">
 
-                <div class="radio">
+                <label class="form-control-toggle">
 
-                  <label>
+                  <input type="radio" name="sample-radio-group" checked="">
 
-                    <input type="radio" name="sample-radio-group" checked="">
+                  First Option
 
-                    First Option
+                </label>
 
-                  </label>
+                <label class="form-control-toggle">
 
-                </div>
+                  <input type="radio" name="sample-radio-group">
 
-                <div class="radio">
+                  Second Option
 
-                  <label>
+                </label>
 
-                    <input type="radio" name="sample-radio-group">
+                <label class="form-control-toggle disabled">
 
-                    Second Option
+                  <input type="radio" name="sample-radio-group" disabled="">
 
-                  </label>
+                  Third Option (Disabled)
 
-                </div>
-
-                <div class="radio disabled">
-
-                  <label>
-
-                    <input type="radio" name="sample-radio-group" disabled="">
-
-                    Third Option (Disabled)
-
-                  </label>
-
-                </div>
+                </label>
 
               </div>
 
@@ -250,18 +226,14 @@ BEGIN: Form Controls
 
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="form-group"&gt;
-  &lt;div class="checkbox"&gt;
-    &lt;label&gt;
-      &lt;input type="checkbox"&gt;
-      First Option
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="checkbox"&gt;
-    &lt;label&gt;
-      &lt;input type="checkbox"&gt;
-      Second Option
-    &lt;/label&gt;
-  &lt;/div&gt;
+  &lt;label class="form-control-toggle"&gt;
+    &lt;input type="checkbox"&gt;
+    First Option
+  &lt;/label&gt;
+  &lt;label class="form-control-toggle"&gt;
+    &lt;input type="checkbox"&gt;
+    Second Option
+  &lt;/label&gt;
   &hellip;
 &lt;/div&gt;
 </pre>
@@ -273,6 +245,339 @@ BEGIN: Form Controls
     <!-- =================================================
     END: Example
     ================================================== -->
+
+    <section id="forms-controls-toggles-custom">
+
+      <h4>
+
+        Custom Checkboxes &amp; Radios
+
+      </h4>
+
+      <p>
+
+        Looking to take your checkbox or radio toggle to the next level? Add the class <code>.form-control-toggle-custom</code> to your exisiting <code>.form-control-toggle</code> wrapped checkbox or radio input.  The <code>&lt;input&gt;</code> is hidden from view, but still available in the DOM for use in your form.  In order to replace the hidden checkbox or radio component with a styled alternate, you must also inject a new element with the class <code>.form-control-toggle-indicator</code>. We recommend a simple <code>&lt;span&gt;</code> for this.
+
+      </p>
+
+      <p>
+
+        For the checkmark icon, as well as the circle icon for radios, we use base64 embedded SVG icons and adjust the color.
+
+      </p>
+
+      <section id="forms-controls-toggles-custom-checkboxes">
+
+        <h5>
+
+          Checkboxes
+
+        </h5>
+
+        <!-- =================================================
+        BEGIN: Example
+        ================================================== -->
+
+        <div class="panel pod flush-top flush-horizontal pod-short-bottom">
+
+          <div class="panel-cell">
+
+            <form class="form flush-bottom">
+
+              <div class="row">
+
+                <div class="column-small-12">
+
+                  <div class="form-group flush-bottom">
+
+                    <label class="form-control-toggle form-control-toggle-custom">
+
+                      <input type="checkbox" checked />
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      First Option
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+<pre class="prettyprint transparent flush lang-html">
+&lt;label class="form-control-toggle form-control-toggle"&gt;
+  &lt;input type="checkbox" checked /&gt;
+  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
+  First Option
+&lt;/label&gt;
+</pre>
+
+          </div>
+
+        </div>
+
+        <!-- =================================================
+        END: Example
+        ================================================== -->
+
+        <p>
+
+          For indetermindate checkboxes, one whose state is neither true nor false, you may leverage the <code>:indeterminate</code> pseudo class.  However, you must use Javascript magic to manually set this property.  Something like this should work: <code>$(element).prop('indeterminate', true)</code>.
+
+        </p>
+
+        <!-- =================================================
+        BEGIN: Example
+        ================================================== -->
+
+        <div class="panel flush-bottom">
+
+          <div class="panel-cell">
+
+            <form class="form flush-bottom">
+
+              <div class="row">
+
+                <div class="column-small-12">
+
+                  <div class="form-group flush-bottom">
+
+                    <label class="form-control-toggle form-control-toggle-custom">
+
+                      <input type="checkbox" class="indeterminate" />
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      First Option
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- =================================================
+        END: Example
+        ================================================== -->
+
+      </section>
+
+      <section id="forms-controls-toggles-custom-radios">
+
+        <h5>
+
+          Radios
+
+        </h5>
+
+        <!-- =================================================
+        BEGIN: Example
+        ================================================== -->
+
+        <div class="panel flush-bottom">
+
+          <div class="panel-cell">
+
+            <form class="form flush-bottom">
+
+              <div class="row">
+
+                <div class="column-small-12">
+
+                  <div class="form-group flush-bottom">
+
+                    <label class="form-control-toggle form-control-toggle-custom">
+
+                      <input type="radio" name="sample-radio-group" checked="">
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      First Option
+
+                    </label>
+
+                    <label class="form-control-toggle form-control-toggle-custom">
+
+                      <input type="radio" name="sample-radio-group">
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      Second Option
+
+                    </label>
+
+                    <label class="form-control-toggle form-control-toggle-custom">
+
+                      <input type="radio" name="sample-radio-group">
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      Third Option
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+<pre class="prettyprint transparent flush lang-html">
+&lt;label class="form-control-toggle form-control-toggle"&gt;
+  &lt;input type="radio" /&gt;
+  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
+  First Option
+&lt;/label&gt;
+&hellip;
+</pre>
+
+          </div>
+
+        </div>
+
+        <!-- =================================================
+        END: Example
+        ================================================== -->
+
+      </section>
+
+      <section id="forms-controls-toggles-custom-disabled">
+
+        <h5>
+
+          Disabled
+
+        </h5>
+
+        <p>
+
+          Using the <code>disabled</code> attribute, placed inline on the checkbox or radio HTML element, will not only make the toggle un-clickable, but also adjusts the appearance to reflect it's inaccessibility.
+
+        </p>
+
+        <!-- =================================================
+        BEGIN: Example
+        ================================================== -->
+
+        <div class="panel">
+
+          <div class="panel-cell">
+
+            <form class="form flush-bottom">
+
+              <div class="row">
+
+                <div class="column-small-12">
+
+                  <div class="form-group">
+
+                    <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
+
+                      <input type="checkbox" disabled checked/>
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      First Option
+
+                    </label>
+
+                    <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
+
+                      <input type="checkbox" disabled />
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      Second Option
+
+                    </label>
+
+                  </div>
+
+                  <div class="form-group flush-bottom">
+
+                    <label class="form-control-toggle form-control-toggle-custom">
+
+                      <input type="radio" name="sample-radio-group" checked="" disabled>
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      First Option
+
+                    </label>
+
+                    <label class="form-control-toggle form-control-toggle-custom">
+
+                      <input type="radio" name="sample-radio-group" disabled>
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      Second Option
+
+                    </label>
+
+                    <label class="form-control-toggle form-control-toggle-custom disabled">
+
+                      <input type="radio" name="sample-radio-group" disabled>
+
+                      <span class="form-control-toggle-indicator"></span>
+
+                      Third Option
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+<pre class="prettyprint transparent flush lang-html">
+&lt;label class="form-control-toggle form-control-toggle"&gt;
+  &lt;input type="checkbox" disabled /&gt;
+  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
+  First Option
+&lt;/label&gt;
+</pre>
+
+          </div>
+
+        </div>
+
+        <!-- =================================================
+        END: Example
+        ================================================== -->
+
+      </section>
+
+    </section>
 
   </section>
 
