@@ -1,18 +1,6 @@
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-responsive-utilities/styles.less
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-
-
 & when (@responsive-utilities-enabled) {
 
-  /* -----------------------------------------------------------------------------
-  Visiblity Utilities
-  ----------------------------------------------------------------------------- */
+  /* Visiblity Utilities */
 
   .invisible {
 
@@ -42,9 +30,7 @@ responsive-utilities/styles.less
 
 
 
-  /* -----------------------------------------------------------------------------
-  Print Utilities
-  ----------------------------------------------------------------------------- */
+  /* Print Utilities */
 
   .visible-print-block {
 
@@ -68,9 +54,7 @@ responsive-utilities/styles.less
 
 
 
-/* -----------------------------------------------------------------------------
-Print Utilities
------------------------------------------------------------------------------ */
+/* Print Utilities */
 
 @media print {
 
@@ -106,10 +90,6 @@ Print Utilities
 
   & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-small-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Small (@layout-screen-small-min-width) and narrower
-    ----------------------------------------------------------------------------- */
-
     @media (max-width: @layout-screen-small-min-width - 1) {
 
       .hidden-tiny-down {
@@ -120,10 +100,6 @@ Print Utilities
 
     }
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Small (@layout-screen-small-min-width) and wider
-    ----------------------------------------------------------------------------- */
-
     @media (min-width: @layout-screen-small-min-width) {
 
       .hidden-mini-up {
@@ -133,10 +109,6 @@ Print Utilities
       }
 
     }
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: Small (@layout-screen-small-max-width) and narrower
-    ----------------------------------------------------------------------------- */
 
     @media (max-width: @layout-screen-small-max-width) {
 
@@ -158,10 +130,6 @@ Print Utilities
 
   & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-medium-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@layout-screen-medium-min-width) and wider
-    ----------------------------------------------------------------------------- */
-
     @media (min-width: @layout-screen-medium-min-width) {
 
       .hidden-small-up {
@@ -171,10 +139,6 @@ Print Utilities
       }
 
     }
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: Medium (@layout-screen-medium-max-width) and narrower
-    ----------------------------------------------------------------------------- */
 
     @media (max-width: @layout-screen-medium-max-width) {
 
@@ -196,10 +160,6 @@ Print Utilities
 
   & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-large-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Large (@layout-screen-large-min-width) and wider
-    ----------------------------------------------------------------------------- */
-
     @media (min-width: @layout-screen-large-min-width) {
 
       .hidden-medium-up {
@@ -209,10 +169,6 @@ Print Utilities
       }
 
     }
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: Large (@layout-screen-large-max-width) and narrower
-    ----------------------------------------------------------------------------- */
 
     @media (max-width: @layout-screen-large-max-width) {
 
@@ -234,10 +190,6 @@ Print Utilities
 
   & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-jumbo-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Screen Size: Jumbo (@layout-screen-jumbo-min-width) and wider
-    ----------------------------------------------------------------------------- */
-
     @media (min-width: @layout-screen-jumbo-min-width) {
 
       .hidden-large-up {
@@ -247,10 +199,6 @@ Print Utilities
       }
 
     }
-
-    /* -----------------------------------------------------------------------------
-    Screen Size: Jumbo (@layout-screen-jumbo-max-width) and narrower
-    ----------------------------------------------------------------------------- */
 
     @media (max-width: @layout-screen-jumbo-max-width) {
 
