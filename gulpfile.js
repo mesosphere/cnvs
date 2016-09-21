@@ -17,6 +17,7 @@ var argv          = require('yargs').argv,
     plumber       = require("gulp-plumber"),
     rename        = require("gulp-rename"),
     sourcemaps    = require("gulp-sourcemaps"),
+    stylelint     = require('gulp-stylelint'),
     uglify        = require("gulp-uglify"),
     util          = require("gulp-util");
     watchLess     = require('gulp-watch-less');
@@ -179,7 +180,7 @@ gulp.task("docs:move", function () {
 
 // Compile and Process Canvas Styles
 
-gulp.task("canvas:styles", function () {
+gulp.task("canvas:styles", ["canvas:stylelint"], function () {
 
   return gulp.src(dirs.canvas.styles + "/" + files.canvas.styles + ".less")
     .pipe(plumber())
@@ -218,9 +219,20 @@ gulp.task("canvas:styles", function () {
 
 });
 
+// Lint Canvas Styles
+
+gulp.task("canvas:stylelint", function () {
+
+  return gulp.src(dirs.canvas.styles + '/**/*.less')
+    .pipe(stylelint({
+      reporters: [{formatter: 'string', console: true}]
+    }));
+
+});
+
 // Compile and Process Documentation Styles
 
-gulp.task("docs:styles", function () {
+gulp.task("docs:styles", ["docs:stylelint"], function () {
 
   return gulp.src(dirs.docs.styles + "/" + files.docs.styles + ".less")
     .pipe(plumber())
@@ -256,6 +268,17 @@ gulp.task("docs:styles", function () {
       sourceRoot: dirs.docs.styles
     }))
     .pipe(gulp.dest(dirs.docs.dist.styles));
+
+});
+
+// Lint Documentation Styles
+
+gulp.task("docs:stylelint", function () {
+
+  return gulp.src(dirs.docs.styles + '/**/*.less')
+    .pipe(stylelint({
+      reporters: [{formatter: 'string', console: true}]
+    }));
 
 });
 
