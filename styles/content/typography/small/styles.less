@@ -1,10 +1,8 @@
 & when (@small-enabled) {
-
   /* small */
 
   small,
   .small {
-
     display: block;
     .element-text-style(small);
     .element-text-size(small, null);
@@ -13,15 +11,11 @@
     /* Layout Variants */
 
     &.short {
-
       .element-spacing(small, short, null);
-
     }
 
     &.tall {
-
       .element-spacing(small, tall, null);
-
     }
 
     /* Styling Variants */
@@ -30,208 +24,143 @@
 
       &.emphasis,
       .emphasis {
-
         .element-text-style(small-emphasis);
-
       }
-
     }
 
     & when (@small-muted-enabled) {
 
       &.muted,
       .muted {
-
         .element-text-style(small-muted);
-
       }
-
     }
 
     & when (@small-inverse-enabled) {
 
       &.inverse {
-
         .element-text-style(small-inverse);
 
         & when (@small-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
-
             .element-text-style(small-inverse-emphasis);
-
           }
-
         }
 
         & when (@small-inverse-muted-enabled) {
 
           &.muted,
           .muted {
-
             .element-text-style(small-inverse-muted);
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@small-enabled) and (@small-screen-small-enabled) {
-
       /* small */
 
       small,
       .small {
-
         .element-text-size(small, screen-small);
         .element-spacing(small, null, screen-small);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(small, short, screen-small);
-
         }
 
         &.tall {
-
           .element-spacing(small, tall, screen-small);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@small-enabled) and (@small-screen-medium-enabled) {
-
       /* small */
 
       small,
       .small {
-
         .element-text-size(small, screen-medium);
         .element-spacing(small, null, screen-medium);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(small, short, screen-medium);
-
         }
 
         &.tall {
-
           .element-spacing(small, tall, screen-medium);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@small-enabled) and (@small-screen-large-enabled) {
-
       /* small */
 
       small,
       .small {
-
         .element-text-size(small, screen-large);
         .element-spacing(small, null, screen-large);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(small, short, screen-large);
-
         }
 
         &.tall {
-
           .element-spacing(small, tall, screen-large);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@small-enabled) and (@small-screen-jumbo-enabled) {
-
       /* small */
 
       small,
       .small {
-
         .element-text-size(small, screen-jumbo);
         .element-spacing(small, null, screen-jumbo);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(small, short, screen-jumbo);
-
         }
 
         &.tall {
-
           .element-spacing(small, tall, screen-jumbo);
-
         }
-
       }
-
     }
-
   }
-
 }

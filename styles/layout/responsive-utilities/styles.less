@@ -1,103 +1,69 @@
 & when (@responsive-utilities-enabled) {
-
   /* Visiblity Utilities */
 
   .invisible {
-
-    visibility: hidden;
-    position: absolute !important;
     left: -9999px !important;
-
+    position: absolute !important;
+    visibility: hidden;
   }
 
   .hide {
-
     display: none !important;
-
   }
 
   .show {
-
     display: block !important;
-
   }
 
   .hidden-tiny-up {
-
     display: none !important;
-
   }
-
-
 
   /* Print Utilities */
 
   .visible-print-block {
-
     display: none !important;
-
   }
 
   .visible-print-inline {
-
     display: none !important;
-
   }
 
   .visible-print-inline-block {
-
     display: none !important;
-
   }
-
 }
-
-
 
 /* Print Utilities */
 
 @media print {
 
   .visible-print-block {
-
     display: block !important;
-
   }
 
   .visible-print-inline {
-
     display: inline !important;
-
   }
 
   .visible-print-inline-block {
-
     display: inline-block !important;
-
   }
 
   .hidden-print {
-
     display: none !important;
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   & when (@responsive-utilities-enabled) and (@responsive-utilities-scale-screen-small-enabled) {
 
-    @media (max-width: @layout-screen-small-min-width - 1) {
+    @media (max-width: (@layout-screen-small-min-width - 1)) {
 
       .hidden-tiny-down {
-
         display: none !important;
-
       }
-
     }
 
     @media (min-width: @layout-screen-small-min-width) and (max-width: @layout-screen-small-max-width) {
@@ -113,28 +79,18 @@
     @media (min-width: @layout-screen-small-min-width) {
 
       .hidden-small-up {
-
         display: none !important;
-
       }
-
     }
 
     @media (max-width: @layout-screen-small-max-width) {
 
       .hidden-small-down {
-
         display: none !important;
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
@@ -143,38 +99,25 @@
     @media (min-width: @layout-screen-medium-min-width) {
 
       .hidden-medium-up {
-
         display: none !important;
-
       }
-
     }
 
     @media (min-width: @layout-screen-medium-min-width) and (max-width: @layout-screen-medium-max-width) {
 
       .hidden-medium {
-
         display: none !important;
-
       }
-
     }
 
     @media (max-width: @layout-screen-medium-max-width) {
 
       .hidden-medium-down {
-
         display: none !important;
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
@@ -183,38 +126,25 @@
     @media (min-width: @layout-screen-large-min-width) {
 
       .hidden-large-up {
-
         display: none !important;
-
       }
-
     }
 
     @media (min-width: @layout-screen-large-min-width) and (max-width: @layout-screen-large-max-width) {
 
       .hidden-large {
-
         display: none !important;
-
       }
-
     }
 
     @media (max-width: @layout-screen-large-max-width) {
 
       .hidden-large-down {
-
         display: none !important;
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
@@ -223,33 +153,22 @@
     @media (min-width: @layout-screen-jumbo-min-width) {
 
       .hidden-jumbo-up {
-
         display: none !important;
-
       }
-
     }
 
     @media (min-width: @layout-screen-jumbo-min-width) and (max-width: @layout-screen-jumbo-max-width) {
 
       .hidden-jumbo {
-
         display: none !important;
-
       }
-
     }
 
     @media (max-width: @layout-screen-jumbo-max-width) {
 
       .hidden-jumbo-down {
-
         display: none !important;
-
       }
-
     }
-
   }
-
 }

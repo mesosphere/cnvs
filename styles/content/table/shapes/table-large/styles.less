@@ -1,9 +1,7 @@
 & when (@table-large-enabled) {
-
   /* Table */
 
   .table.table-large {
-
     .element-text-size(table-large, null);
     .element-spacing(table-large, null, null);
     .property-variant(table-large, border-collapse, null);
@@ -11,21 +9,15 @@
     /* Layout Variants */
 
     &.short {
-
       .element-spacing(table-large, short, null);
-
     }
 
     &.tall {
-
       .element-spacing(table-large, tall, null);
-
     }
 
     & when not (@table-large-border-radius = null) {
-
       /* Table Border Radius */
-
       border-radius: @table-large-border-radius;
 
       tbody {
@@ -38,19 +30,13 @@
             th {
 
               &:first-child {
-
                 .border-top-left-radius(@table-large-border-radius);
-
               }
 
               &:last-child {
-
                 .border-top-right-radius(@table-large-border-radius);
-
               }
-
             }
-
           }
 
           &:last-child {
@@ -59,23 +45,15 @@
             th {
 
               &:first-child {
-
                 .border-bottom-left-radius(@table-large-border-radius);
-
               }
 
               &:last-child {
-
                 .border-bottom-right-radius(@table-large-border-radius);
-
               }
-
             }
-
           }
-
         }
-
       }
 
       > thead {
@@ -87,21 +65,14 @@
             th {
 
               &:first-child {
-
                 .border-top-left-radius(@table-large-border-radius);
-
               }
 
               &:last-child {
-
                 .border-top-right-radius(@table-large-border-radius);
-
               }
-
             }
-
           }
-
         }
 
         + tbody {
@@ -112,35 +83,23 @@
 
               th,
               td {
-
-                border-radius: 0px !important;
-
+                border-radius: 0 !important;
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
 
     th,
     td {
-
       .element-text-size(table-large-cell, null);
       .element-spacing(table-large-cell, null, null);
       .property-variant(table-large, border-collapse, null);
 
       &:before {
-
         .property-variant(table-large-cell, height, line-height, null, null);
-
       }
-
     }
 
     // Table Head
@@ -148,224 +107,153 @@
     thead {
 
       th {
-
         .element-text-size(table-large-header, null);
         .element-spacing(table-large-header, null, null);
 
         &:before {
-
           .property-variant(table-large-header, height, line-height, null, null);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@table-large-enabled) and (@table-large-screen-small-enabled) {
-
       /* Table */
 
       .table.table-large {
-
         .element-text-size(table-large, screen-small);
         .element-spacing(table-large, null, screen-small);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(table-large, short, screen-small);
-
         }
 
         &.tall {
-
           .element-spacing(table-large, tall, screen-small);
-
         }
 
         th,
         td {
-
           .element-text-size(table-large-cell, screen-small);
           .element-spacing(table-large-cell, null, screen-small);
 
           &:before {
-
             .property-variant(table-large-cell, height, line-height, null, screen-small);
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@table-large-enabled) and (@table-large-screen-medium-enabled) {
-
       /* Table */
 
       .table.table-large {
-
         .element-text-size(table-large, screen-medium);
         .element-spacing(table-large, null, screen-medium);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(table-large, short, screen-medium);
-
         }
 
         &.tall {
-
           .element-spacing(table-large, tall, screen-medium);
-
         }
 
         th,
         td {
-
           .element-text-size(table-large-cell, screen-medium);
           .element-spacing(table-large-cell, null, screen-medium);
 
           &:before {
-
             .property-variant(table-large-cell, height, line-height, null, screen-medium);
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@table-large-enabled) and (@table-large-screen-large-enabled) {
-
       /* Table */
 
       .table.table-large {
-
         .element-text-size(table-large, screen-large);
         .element-spacing(table-large, null, screen-large);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(table-large, short, screen-large);
-
         }
 
         &.tall {
-
           .element-spacing(table-large, tall, screen-large);
-
         }
 
         th,
         td {
-
           .element-text-size(table-large-cell, screen-large);
           .element-spacing(table-large-cell, null, screen-large);
 
           &:before {
-
             .property-variant(table-large-cell, height, line-height, null, screen-large);
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@table-large-enabled) and (@table-large-screen-jumbo-enabled) {
-
       /* Table */
 
       .table.table-large {
-
         .element-text-size(table-large, screen-jumbo);
         .element-spacing(table-large, null, screen-jumbo);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(table-large, short, screen-jumbo);
-
         }
 
         &.tall {
-
           .element-spacing(table-large, tall, screen-jumbo);
-
         }
 
         th,
         td {
-
           .element-text-size(table-large-cell, screen-jumbo);
           .element-spacing(table-large-cell, null, screen-jumbo);
 
           &:before {
-
             .property-variant(table-large-cell, height, line-height, null, screen-jumbo);
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }

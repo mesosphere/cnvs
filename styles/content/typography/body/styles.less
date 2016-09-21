@@ -1,275 +1,194 @@
 & when (@body-enabled) {
-
   /* body */
 
   html,
   body,
   p {
-
-    display: block;
-    .element-text-style(body);
     .element-text-size(body, null);
+    .element-text-style(body);
+    display: block;
 
     & when (@body-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
-
         .element-text-style(body-emphasis);
-
       }
-
     }
 
     & when (@body-muted-enabled) {
 
       &.muted,
       .muted {
-
         .element-text-style(body-muted);
-
       }
-
     }
 
     & when (@body-inverse-enabled) {
 
       &.inverse {
-
         .element-text-style(body-inverse);
 
         & when (@body-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
-
             .element-text-style(body-inverse-emphasis);
-
           }
-
         }
 
         & when (@body-inverse-muted-enabled) {
 
           &.muted,
           .muted {
-
             .element-text-style(body-inverse-muted);
-
           }
-
         }
-
       }
-
     }
-
   }
 
   /* Paragraph */
 
   p {
-
     .element-spacing(body, null, null);
 
     /* Layout Variants */
 
     &.short {
-
       .element-spacing(body, short, null);
-
     }
 
     &.tall {
-
       .element-spacing(body, tall, null);
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@body-enabled) and (@body-screen-small-enabled) {
-
       /* Body */
 
       html,
       body,
       p {
-
         .element-text-size(body, screen-small);
-
       }
 
       /* Paragraph */
 
       p {
-
         .element-spacing(body, null, screen-small);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(body, short, screen-small);
-
         }
 
         &.tall {
-
           .element-spacing(body, tall, screen-small);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@body-enabled) and (@body-screen-medium-enabled) {
-
       /* Body */
 
       html,
       body,
       p {
-
         .element-text-size(body, screen-medium);
-
       }
 
       /* Paragraph */
 
       p {
-
         .element-spacing(body, null, screen-medium);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(body, short, screen-medium);
-
         }
 
         &.tall {
-
           .element-spacing(body, tall, screen-medium);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@body-enabled) and (@body-screen-large-enabled) {
-
       /* body */
 
       html,
       body,
       p {
-
         .element-text-size(body, screen-large);
-
       }
 
       /* Paragraph */
 
       p {
-
         .element-spacing(body, null, screen-large);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(body, short, screen-large);
-
         }
 
         &.tall {
-
           .element-spacing(body, tall, screen-large);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@body-enabled) and (@body-screen-jumbo-enabled) {
-
       /* body */
 
       html,
       body,
       p {
-
         .element-text-size(body, screen-jumbo);
-
       }
 
       /* Paragraph */
 
       p {
-
         .element-spacing(body, null, screen-jumbo);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(body, short, screen-jumbo);
-
         }
 
         &.tall {
-
           .element-spacing(body, tall, screen-jumbo);
-
         }
-
       }
-
     }
-
   }
-
 }

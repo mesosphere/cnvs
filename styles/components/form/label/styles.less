@@ -1,237 +1,164 @@
 & when (@label-enabled) {
-
   /* Label */
 
   label:not(.button),
   .label:not(.button) {
-
-    display: block;
-    .element-text-style(label);
-    .element-text-size(label, null);
     .element-spacing(label, null, null);
+    .element-text-size(label, null);
+    .element-text-style(label);
+    display: block;
 
     /* Layout Variants */
 
     &.short {
-
       .element-spacing(label, short, null);
-
     }
 
     &.tall {
-
       .element-spacing(label, tall, null);
-
     }
 
     & when (@label-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
-
         .element-text-style(label-emphasis);
-
       }
-
     }
 
     & when (@label-muted-enabled) {
 
       &.muted,
       .muted {
-
         .element-text-style(label-muted);
-
       }
-
     }
-
-
 
     & when (@label-inverse-enabled) {
 
       &.inverse {
-
         .element-text-style(label-inverse);
 
         & when (@label-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
-
             .element-text-style(label-inverse-emphasis);
-
           }
-
         }
 
         & when (@label-inverse-muted-enabled) {
 
           &.muted,
           .muted {
-
             .element-text-style(label-inverse-muted);
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@label-enabled) and (@label-screen-small-enabled) {
-
       /* Label */
 
       label:not(.button),
       .label:not(.button) {
-
         .element-text-size(label, screen-small);
         .element-spacing(label, null, screen-small);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(label, short, screen-small);
-
         }
 
         &.tall {
-
           .element-spacing(label, tall, screen-small);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@label-enabled) and (@label-screen-medium-enabled) {
-
       /* Label */
 
       label:not(.button),
       .label:not(.button) {
-
         .element-text-size(label, screen-medium);
         .element-spacing(label, null, screen-medium);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(label, short, screen-medium);
-
         }
 
         &.tall {
-
           .element-spacing(label, tall, screen-medium);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@label-enabled) and (@label-screen-large-enabled) {
-
       /* Label */
 
       label:not(.button),
       .label:not(.button) {
-
         .element-text-size(label, screen-large);
         .element-spacing(label, null, screen-large);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(label, short, screen-large);
-
         }
 
         &.tall {
-
           .element-spacing(label, tall, screen-large);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@label-enabled) and (@label-screen-jumbo-enabled) {
-
       /* Label */
 
       label:not(.button),
       .label:not(.button) {
-
         .element-text-size(label, screen-jumbo);
         .element-spacing(label, null, screen-jumbo);
 
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(label, short, screen-jumbo);
-
         }
 
         &.tall {
-
           .element-spacing(label, tall, screen-jumbo);
-
         }
-
       }
-
     }
-
   }
-
 }

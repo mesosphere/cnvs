@@ -1,27 +1,23 @@
 & when (@button-group-enabled) {
 
   .button-group {
-
-    display: inline-flex;
-    align-items: center;
-    position: relative;
     .clearfix();
+    align-items: center;
+    display: inline-flex;
+    position: relative;
 
     /* Button */
 
     > .button {
-
-      position: relative;
       float: left;
+      position: relative;
       z-index: 0;
 
       &:hover,
       &:active,
       &.active,
       &.selected {
-
         z-index: 1;
-
       }
 
       &:not(:first-child) {
@@ -29,41 +25,28 @@
         &:not(:last-child) {
 
           &:not(.dropdown-toggle) {
-
-            border-radius: 0px !important;
-
+            border-radius: 0 !important;
           }
-
         }
-
       }
 
       &:first-child {
-
-        margin-left: 0px;
+        margin-left: 0;
 
         &:not(:last-child) {
 
           &:not(.dropdown-toggle) {
-
-            .border-right-radius(0px) !important;
-
+            .border-right-radius(0) !important;
           }
-
         }
-
       }
 
       &:last-child {
 
-          &:not(:first-child) {
-
-              .border-left-radius(0px) !important;
-
-          }
-
+        &:not(:first-child) {
+          .border-left-radius(0) !important;
+        }
       }
-
     }
 
     /* Button */
@@ -75,47 +58,33 @@
       + .button-group {
 
         & when not (@button-group-button-offset-horizontal = null) {
-
           margin-left: @button-group-button-offset-horizontal;
-
         }
-
       }
-
     }
-
   }
 
   /* Button Controls */
 
-  [data-toggle=buttons] {
+  [data-toggle='buttons'] {
 
     > .button {
 
-      input[type=checkbox],
-      input[type=radio] {
-
+      input[type='checkbox'],
+      input[type='radio'] {
         .invisible();
-
       }
-
     }
 
     > .button-group {
 
       > .button {
 
-        input[type=checkbox],
-        input[type=radio] {
-
+        input[type='checkbox'],
+        input[type='radio'] {
           .invisible();
-
         }
-
       }
-
     }
-
   }
-
 }

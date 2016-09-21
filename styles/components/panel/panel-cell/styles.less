@@ -1,426 +1,286 @@
 & when (@panel-cell-enabled) {
-
   /* Panel Cell */
 
   .panel-cell {
-
-    display: block;
-    //position: relative;
-    flex: 1;
-    flex-shrink: 0;
     .element-shape-style(panel-cell);
     .element-spacing(panel-cell, null, null);
+    //position: relative;
+    display: block;
+    flex: 1;
+    flex-shrink: 0;
 
     &:last-child {
-
       border-bottom: none;
-
     }
 
     &.panel-cell-borderless {
-
       border: none;
-
     }
 
     /* Panel Cell Inverse (.panel-cell-inverse) */
 
     &.panel-cell-inverse {
-
       .element-shape-style(panel-cell-inverse);
-
     }
 
     /* Panel Cell Layout Variants */
 
     &-shorter {
-
       .element-spacing(panel-cell, shorter, null);
-
     }
 
     &-short {
-
       .element-spacing(panel-cell, short, null);
-
     }
 
     &-tall {
-
       .element-spacing(panel-cell, tall, null);
-
     }
 
     &-taller {
-
       .element-spacing(panel-cell, taller, null);
-
     }
 
     &-narrower {
-
       .element-spacing(panel-cell, narrower, null);
-
     }
 
     &-narrow {
-
       .element-spacing(panel-cell, narrow, null);
-
     }
 
     &-wide {
-
       .element-spacing(panel-cell, wide, null);
-
     }
 
     &-wider {
-
       .element-spacing(panel-cell, wider, null);
-
     }
-
   }
 
-  [class^="panel-cell"],
-  [class*=" panel-cell"] {
+  [class^='panel-cell'],
+  [class*=' panel-cell'] {
 
     &.flush {
-
-      padding-top: 0px;
-      padding-bottom: 0px;
-      padding-left: 0px;
-      padding-right: 0px;
-
+      padding: 0;
     }
 
     &.flush-vertical {
-
-      padding-top: 0px;
-      padding-bottom: 0px;
-
+      padding-bottom: 0;
+      padding-top: 0;
     }
 
     &.flush-horizontal {
-
-      padding-left: 0px;
-      padding-right: 0px;
-
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &.flush-top {
-
-      padding-top: 0px;
-
+      padding-top: 0;
     }
 
     &.flush-bottom {
-
-      padding-bottom: 0px;
-
+      padding-bottom: 0;
     }
 
     &.flush-left {
-
-      padding-left: 0px;
-
+      padding-left: 0;
     }
 
     &.flush-right {
-
-      padding-right: 0px;
-
+      padding-right: 0;
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@panel-cell-enabled) and (@panel-cell-screen-small-enabled) {
-
       /* Panel Cell */
 
       .panel-cell {
-
         .element-spacing(panel-cell, null, screen-small);
 
         /* Panel Cell Layout Variants */
 
         &-shorter {
-
           .element-spacing(panel-cell, shorter, screen-small);
-
         }
 
         &-short {
-
           .element-spacing(panel-cell, short, screen-small);
-
         }
 
         &-tall {
-
           .element-spacing(panel-cell, tall, screen-small);
-
         }
 
         &-taller {
-
           .element-spacing(panel-cell, taller, screen-small);
-
         }
 
         &-narrower {
-
           .element-spacing(panel-cell, narrower, screen-small);
-
         }
 
         &-narrow {
-
           .element-spacing(panel-cell, narrow, screen-small);
-
         }
 
         &-wide {
-
           .element-spacing(panel-cell, wide, screen-small);
-
         }
 
         &-wider {
-
           .element-spacing(panel-cell, wider, screen-small);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@panel-cell-enabled) and (@panel-cell-screen-medium-enabled) {
-
       /* Panel Cell */
 
       .panel-cell {
-
         .element-spacing(panel-cell, null, screen-medium);
 
         /* Panel Cell Layout Variants */
 
         &-shorter {
-
           .element-spacing(panel-cell, shorter, screen-medium);
-
         }
 
         &-short {
-
           .element-spacing(panel-cell, short, screen-medium);
-
         }
 
         &-tall {
-
           .element-spacing(panel-cell, tall, screen-medium);
-
         }
 
         &-taller {
-
           .element-spacing(panel-cell, taller, screen-medium);
-
         }
 
         &-narrower {
-
           .element-spacing(panel-cell, narrower, screen-medium);
-
         }
 
         &-narrow {
-
           .element-spacing(panel-cell, narrow, screen-medium);
-
         }
 
         &-wide {
-
           .element-spacing(panel-cell, wide, screen-medium);
-
         }
 
         &-wider {
-
           .element-spacing(panel-cell, wider, screen-medium);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@panel-cell-enabled) and (@panel-cell-screen-large-enabled) {
-
       /* Panel Cell */
 
       .panel-cell {
-
         .element-spacing(panel-cell, null, screen-large);
 
         /* Panel Cell Layout Variants */
 
         &-shorter {
-
           .element-spacing(panel-cell, shorter, screen-large);
-
         }
 
         &-short {
-
           .element-spacing(panel-cell, short, screen-large);
-
         }
 
         &-tall {
-
           .element-spacing(panel-cell, tall, screen-large);
-
         }
 
         &-taller {
-
           .element-spacing(panel-cell, taller, screen-large);
-
         }
 
         &-narrower {
-
           .element-spacing(panel-cell, narrower, screen-large);
-
         }
 
         &-narrow {
-
           .element-spacing(panel-cell, narrow, screen-large);
-
         }
 
         &-wide {
-
           .element-spacing(panel-cell, wide, screen-large);
-
         }
 
         &-wider {
-
           .element-spacing(panel-cell, wider, screen-large);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@panel-cell-enabled) and (@panel-cell-screen-jumbo-enabled) {
-
       /* Panel Cell */
 
       .panel-cell {
-
         .element-spacing(panel-cell, null, screen-jumbo);
 
         /* Panel Cell Layout Variants */
 
         &-shorter {
-
           .element-spacing(panel-cell, shorter, screen-jumbo);
-
         }
 
         &-short {
-
           .element-spacing(panel-cell, short, screen-jumbo);
-
         }
 
         &-tall {
-
           .element-spacing(panel-cell, tall, screen-jumbo);
-
         }
 
         &-taller {
-
           .element-spacing(panel-cell, taller, screen-jumbo);
-
         }
 
         &-narrower {
-
           .element-spacing(panel-cell, narrower, screen-jumbo);
-
         }
 
         &-narrow {
-
           .element-spacing(panel-cell, narrow, screen-jumbo);
-
         }
 
         &-wide {
-
           .element-spacing(panel-cell, wide, screen-jumbo);
-
         }
 
         &-wider {
-
           .element-spacing(panel-cell, wider, screen-jumbo);
-
         }
-
       }
-
     }
-
   }
-
 }

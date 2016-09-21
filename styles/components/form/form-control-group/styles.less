@@ -1,38 +1,29 @@
 & when (@form-control-group-enabled) {
-
   /* Form Control Group */
 
   .form-control-group {
-
-    display: flex;
-    align-items: center;
-    position: relative;
     .clearfix();
+    align-items: center;
+    display: flex;
+    position: relative;
 
     /* Form Control */
 
     .form-control {
-
       flex-grow: 1;
 
       &:not(:first-child) {
-
         .border-left-radius(0px) !important;
-
       }
 
       &:not(:last-child) {
-
         .border-right-radius(0px) !important;
-
       }
-
     }
 
     /* Add-On */
 
     .form-control-group-add-on {
-
       flex-grow: 0;
 
       > .button {
@@ -41,11 +32,8 @@
         &:active,
         &.active,
         &.selected {
-
           z-index: 1;
-
         }
-
       }
 
       &:first-child {
@@ -53,13 +41,9 @@
         > .button {
 
           &:last-child {
-
             .border-right-radius(0px) !important;
-
           }
-
         }
-
       }
 
       &:last-child {
@@ -67,15 +51,10 @@
         > .button {
 
           &:first-child {
-
             .border-left-radius(0px) !important;
-
           }
-
         }
-
       }
-
     }
 
     /* Nested Form Control */
@@ -83,56 +62,11 @@
     &.form-control {
 
       .form-control {
-
-        padding: 0;
-        border: 0px;
         background: none;
+        border: 0;
         box-shadow: none;
-
+        padding: 0;
       }
-
     }
-
   }
-
-}
-
-
-
-& when (@layout-screen-small-enabled) {
-
-  @media (min-width: @layout-screen-small-min-width) {
-
-  }
-
-}
-
-
-
-& when (@layout-screen-medium-enabled) {
-
-  @media (min-width: @layout-screen-medium-min-width) {
-
-  }
-
-}
-
-
-
-& when (@layout-screen-large-enabled) {
-
-  @media (min-width: @layout-screen-large-min-width) {
-
-  }
-
-}
-
-
-
-& when (@layout-screen-jumbo-enabled) {
-
-  @media (min-width: @layout-screen-jumbo-min-width) {
-
-  }
-
 }

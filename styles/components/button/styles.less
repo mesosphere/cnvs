@@ -1,20 +1,18 @@
 & when (@button-enabled) {
-
   /* Button */
 
   button,
   .button {
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    //transition: all 0.05s ease;
-    .element-text-size(button, null);
-    .element-text-style(button);
     .element-shape-style(button);
     .element-spacing(button, null, null);
-    .property-variant(button, height, null, null);
+    .element-text-size(button, null);
+    .element-text-style(button);
     .property-variant(button, border-radius, null, null);
+    .property-variant(button, height, null, null);
+    //transition: all 0.05s ease;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
 
     /* Layout Variants */
 
@@ -25,21 +23,15 @@
     }
 
     &.button-narrow {
-
       .element-spacing(button, narrow, null);
-
     }
 
     &.button-wide {
-
       .element-spacing(button, wide, null);
-
     }
 
     & > * {
-
       display: inline-flex !important;
-
     }
 
     /* Button Dropdown (.button-dropdown) */
@@ -48,35 +40,27 @@
     &.dropdown-toggle {
 
       &:after {
-
+        .property-variant(button-dropdown-caret, margin-left, null, null);
+        .property-variant(button-dropdown-caret, margin-top, null, null);
+        .triangle-base();
+        .triangle-color('down', @button-color);
         content: '';
         display: inline-block;
         vertical-align: middle;
-        .triangle-base();
-        .triangle-color("down", @button-color);
-        .property-variant(button-dropdown-caret, margin-left, null, null);
-        .property-variant(button-dropdown-caret, margin-top, null, null);
 
         & when not (@button-dropdown-caret-width = null) {
-
-          .triangle-size-width("down", @button-dropdown-caret-width);
-
+          .triangle-size-width('down', @button-dropdown-caret-width);
         }
 
         & when not (@button-dropdown-caret-height = null) {
-
-          .triangle-size-height("down", @button-dropdown-caret-height);
-
+          .triangle-size-height('down', @button-dropdown-caret-height);
         }
-
       }
-
     }
 
     &:hover {
-
-      .element-text-style(button-hover);
       .element-shape-style(button-hover);
+      .element-text-style(button-hover);
       cursor: pointer;
 
       // Button Dropdown (.button-dropdown)
@@ -85,19 +69,14 @@
       &.dropdown-toggle {
 
         &:after {
-
-          .triangle-color("down", @button-hover-color);
-
+          .triangle-color('down', @button-hover-color);
         }
-
       }
-
     }
 
     &:active {
-
-      .element-text-style(button-active);
       .element-shape-style(button-active);
+      .element-text-style(button-active);
 
       // Button Dropdown (.button-dropdown)
 
@@ -105,20 +84,15 @@
       &.dropdown-toggle {
 
         &:after {
-
-          .triangle-color("down", @button-active-color);
-
+          .triangle-color('down', @button-active-color);
         }
-
       }
-
     }
 
     &.selected,
     &.active {
-
-      .element-text-style(button-selected);
       .element-shape-style(button-selected);
+      .element-text-style(button-selected);
 
       // Button Dropdown (.button-dropdown)
 
@@ -126,27 +100,19 @@
       &.dropdown-toggle {
 
         &:after {
-
-          .triangle-color("down", @button-selected-color);
-
+          .triangle-color('down', @button-selected-color);
         }
-
       }
-
     }
 
     &:disabled,
     &.disabled {
-
+      .element-shape-style(button-disabled);
+      .element-text-style(button-disabled);
       cursor: default;
 
-      .element-text-style(button-disabled);
-      .element-shape-style(button-disabled);
-
       & when not (@button-disabled-opacity = null) {
-
         opacity: @button-disabled-opacity;
-
       }
 
       // Button Dropdown (.button-dropdown)
@@ -155,21 +121,16 @@
       &.dropdown-toggle {
 
         &:after {
-
-          .triangle-color("down", @button-disabled-color);
-
+          .triangle-color('down', @button-disabled-color);
         }
-
       }
-
     }
 
     /* Button Inverse (.button-inverse) */
 
     &.button-inverse {
-
-      .element-text-style(button-inverse);
       .element-shape-style(button-inverse);
+      .element-text-style(button-inverse);
 
       // Button Dropdown (.button-dropdown)
 
@@ -177,17 +138,13 @@
       &.dropdown-toggle {
 
         &:after {
-
-          .triangle-color("down", @button-inverse-color);
-
+          .triangle-color('down', @button-inverse-color);
         }
-
       }
 
       &:hover {
-
-        .element-text-style(button-inverse-hover);
         .element-shape-style(button-inverse-hover);
+        .element-text-style(button-inverse-hover);
 
         // Button Dropdown (.button-dropdown)
 
@@ -195,19 +152,14 @@
         &.dropdown-toggle {
 
           &:after {
-
-            .triangle-color("down", @button-inverse-hover-color);
-
+            .triangle-color('down', @button-inverse-hover-color);
           }
-
         }
-
       }
 
       &:active {
-
-        .element-text-style(button-inverse-active);
         .element-shape-style(button-inverse-active);
+        .element-text-style(button-inverse-active);
 
         // Button Dropdown (.button-dropdown)
 
@@ -215,20 +167,15 @@
         &.dropdown-toggle {
 
           &:after {
-
-            .triangle-color("down", @button-inverse-active-color);
-
+            .triangle-color('down', @button-inverse-active-color);
           }
-
         }
-
       }
 
       &.selected,
       &.active {
-
-        .element-text-style(button-inverse-selected);
         .element-shape-style(button-inverse-selected);
+        .element-text-style(button-inverse-selected);
 
         // Button Dropdown (.button-dropdown)
 
@@ -236,25 +183,18 @@
         &.dropdown-toggle {
 
           &:after {
-
-            .triangle-color("down", @button-inverse-selected-color);
-
+            .triangle-color('down', @button-inverse-selected-color);
           }
-
         }
-
       }
 
       &:disabled,
       &.disabled {
-
-        .element-text-style(button-inverse-disabled);
         .element-shape-style(button-inverse-disabled);
+        .element-text-style(button-inverse-disabled);
 
         & when not (@button-inverse-disabled-opacity = null) {
-
           opacity: @button-inverse-disabled-opacity;
-
         }
 
         // Button Dropdown (.button-dropdown)
@@ -263,115 +203,81 @@
         &.dropdown-toggle {
 
           &:after {
-
-            .triangle-color("down", @button-inverse-disabled-color);
-
+            .triangle-color('down', @button-inverse-disabled-color);
           }
-
         }
-
       }
-
     }
 
     /* Block Button (.button-block) */
 
     &.button-block {
-
       display: flex;
+      margin-left: 0;
+      margin-right: 0;
       width: 100%;
-      margin-left: 0px;
-      margin-right: 0px;
-
     }
 
     /* Rounded Button (.button-rounded) */
 
     &.button-rounded {
-
       border-radius: 1000px;
 
       & when not (@button-rounded-padding-horizontal-scale = null) {
 
         & when not (@button-padding-left = null) {
-
           padding-left: @button-padding-left * @button-rounded-padding-horizontal-scale;
 
           & when not (@button-narrow-padding-left-scale = null) {
 
             &.button-narrow {
-
               padding-left: @button-padding-left * @button-narrow-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
             }
-
           }
 
           & when not (@button-wide-padding-left-scale = null) {
 
             &.button-wide {
-
               padding-left: @button-padding-left * @button-wide-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
             }
-
           }
-
         }
 
         & when not (@button-padding-right = null) {
-
           padding-right: @button-padding-right * @button-rounded-padding-horizontal-scale;
 
           & when not (@button-narrow-padding-right-scale = null) {
 
             &.button-narrow {
-
               padding-right: @button-padding-right * @button-narrow-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
             }
-
           }
 
           & when not (@button-wide-padding-right-scale = null) {
 
             &.button-wide {
-
               padding-right: @button-padding-right * @button-wide-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
             }
-
           }
-
         }
-
       }
-
     }
 
     & when not (@button-content-padding-horizontal = null) {
-
       /* Button Content */
 
       & > * {
-
         box-sizing: content-box;
         padding-right: @button-content-padding-horizontal;
 
         &:last-child {
-
-          padding-right: 0px;
-
+          padding-right: 0;
         }
-
       }
-
     }
-
   }
 
   & when (@button-group-enabled) {
-
     /* Button Group (.button-group) */
 
     .button-group {
@@ -380,9 +286,8 @@
 
         > button,
         > .button {
-
-          .element-text-style(button-selected);
           .element-shape-style(button-selected);
+          .element-text-style(button-selected);
 
           // Button Dropdown (.button-dropdown)
 
@@ -390,17 +295,13 @@
           &.dropdown-toggle {
 
             &:after {
-
-              .triangle-color("down", @button-selected-color);
-
+              .triangle-color('down', @button-selected-color);
             }
-
           }
 
           &.button-inverse {
-
-            .element-text-style(button-inverse-selected);
             .element-shape-style(button-inverse-selected);
+            .element-text-style(button-inverse-selected);
 
             // Button Dropdown (.button-dropdown)
 
@@ -408,28 +309,18 @@
             &.dropdown-toggle {
 
               &:after {
-
-                .triangle-color("down", @button-inverse-selected-color);
-
+                .triangle-color('down', @button-inverse-selected-color);
               }
-
             }
-
           }
-
         }
-
       }
 
-
-
       & when not (@button-rounded-padding-horizontal-scale = null) {
-
         /* Button */
 
         button,
         .button {
-
           /* Button Rounded (.button-rounded) */
 
           &.button-rounded {
@@ -437,117 +328,81 @@
             & when not (@button-padding-right = null) {
 
               &:not(:first-of-type):not(:last-of-type) {
-
                 padding-right: @button-padding-right;
-
               }
 
               &:first-of-type {
-
                 padding-right: @button-padding-right;
 
                 & when not (@button-narrow-padding-right-scale = null) {
 
                   &.button-narrow {
-
                     padding-right: @button-padding-right * @button-narrow-padding-right-scale;
-
                   }
-
                 }
 
                 & when not (@button-wide-padding-right-scale = null) {
 
                   &.button-wide {
-
                     padding-right: @button-padding-right * @button-wide-padding-right-scale;
-
                   }
-
                 }
-
               }
-
             }
 
             & when not (@button-padding-left = null) {
 
               &:not(:first-of-type):not(:last-of-type) {
-
                 padding-left: @button-padding-left;
-
               }
 
               &:last-of-type {
-
                 padding-left: @button-padding-left;
 
                 & when not (@button-narrow-padding-left-scale = null) {
 
                   &.button-narrow {
-
                     padding-left: @button-padding-left * @button-narrow-padding-left-scale;
-
                   }
-
                 }
 
                 & when not (@button-wide-padding-left-scale = null) {
 
                   &.button-wide {
-
                     padding-left: @button-padding-left * @button-wide-padding-left-scale;
-
                   }
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@button-enabled) and (@button-screen-small-enabled) {
-
       /* Button */
 
       button,
       .button {
-
-        .element-text-size(button, screen-small);
         .element-spacing(button, null, screen-small);
-        .property-variant(button, height, null, screen-small);
+        .element-text-size(button, screen-small);
         .property-variant(button, border-radius, null, screen-small);
+        .property-variant(button, height, null, screen-small);
 
         /* Layout Variants */
 
         &.button-narrow {
-
           .element-spacing(button, narrow, screen-small);
-
         }
 
         &.button-wide {
-
           .element-spacing(button, wide, screen-small);
-
         }
 
         /* Button Dropdown (.button-dropdown) */
@@ -556,24 +411,17 @@
         &.dropdown-toggle {
 
           &:after {
-
             .property-variant(button-dropdown-caret, margin-left, null, screen-small);
             .property-variant(button-dropdown-caret, margin-top, null, screen-small);
 
             & when not (@button-dropdown-caret-width-screen-small = null) {
-
-              .triangle-size-width("down", @button-dropdown-caret-width-screen-small);
-
+              .triangle-size-width('down', @button-dropdown-caret-width-screen-small);
             }
 
             & when not (@button-dropdown-caret-height-screen-small = null) {
-
-              .triangle-size-height("down", @button-dropdown-caret-height-screen-small);
-
+              .triangle-size-height('down', @button-dropdown-caret-height-screen-small);
             }
-
           }
-
         }
 
         /* Block Button (.button-block) */
@@ -581,103 +429,73 @@
         &.button-block {
 
           &.button-block-below-screen-small {
-
-            width: auto;
             display: inline-flex;
-
+            width: auto;
           }
-
         }
 
         & when not (@button-rounded-padding-horizontal-scale = null) {
-
           /* Button Rounded (.button-rounded) */
 
           &.button-rounded {
 
             & when not (@button-padding-left-screen-small = null) {
-
               padding-left: @button-padding-left-screen-small * @button-rounded-padding-horizontal-scale;
 
               & when not (@button-narrow-padding-left-scale = null) {
 
                 &.button-narrow {
-
                   padding-left: @button-padding-left-screen-small * @button-narrow-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
 
               & when not (@button-wide-padding-left-scale = null) {
 
                 &.button-wide {
-
                   padding-left: @button-padding-left-screen-small * @button-wide-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
-
             }
 
             & when not (@button-padding-right-screen-small = null) {
-
               padding-right: @button-padding-right-screen-small * @button-rounded-padding-horizontal-scale;
 
               & when not (@button-narrow-padding-right-scale = null) {
 
                 &.button-narrow {
-
                   padding-right: @button-padding-right-screen-small * @button-narrow-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
 
               & when not (@button-wide-padding-right-scale = null) {
 
                 &.button-wide {
-
                   padding-right: @button-padding-right-screen-small * @button-wide-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
-
             }
-
           }
-
         }
 
         & when not (@button-content-padding-horizontal-screen-small = null) {
-
           /* Button Content */
 
           & > * {
-
             padding-right: @button-content-padding-horizontal-screen-small;
-
           }
-
         }
-
       }
 
       & when (@button-group-enabled) {
-
         /* Button Group (.button-group) */
 
         .button-group {
 
           & when not (@button-rounded-padding-horizontal-scale = null) {
-
             /* Button */
 
             button,
             .button {
-
               /* Button Rounded (.button-rouded) */
 
               &.button-rounded {
@@ -685,121 +503,82 @@
                 & when not (@button-padding-left-screen-small = null) {
 
                   &:not(:first-of-type):not(:last-of-type) {
-
                     padding-left: @button-padding-left-screen-small;
-
                   }
 
                   &:first-of-type {
-
                     padding-left: @button-padding-left-screen-small;
 
                     & when not (@button-narrow-padding-left-scale = null) {
 
                       &.button-narrow {
-
                         padding-left: @button-padding-left-screen-small * @button-narrow-padding-left-scale;
-
                       }
-
                     }
 
                     & when not (@button-wide-padding-left-scale = null) {
 
                       &.button-wide {
-
                         padding-left: @button-padding-left-screen-small * @button-wide-padding-left-scale;
-
                       }
-
                     }
-
                   }
-
                 }
-
                 & when not (@button-padding-right-screen-small = null) {
 
                   &:not(:first-of-type):not(:last-of-type) {
-
                     padding-right: @button-padding-right-screen-small;
-
                   }
 
                   &:first-of-type {
-
                     padding-right: @button-padding-right-screen-small;
 
                     & when not (@button-narrow-padding-right-scale = null) {
 
                       &.button-narrow {
-
                         padding-right: @button-padding-right-screen-small * @button-narrow-padding-right-scale;
-
                       }
-
                     }
 
                     & when not (@button-wide-padding-right-scale = null) {
 
                       &.button-wide {
-
                         padding-right: @button-padding-right-screen-small * @button-wide-padding-right-scale;
-
                       }
-
                     }
-
                   }
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@button-enabled) and (@button-screen-medium-enabled) {
-
       /* Button */
 
       button,
       .button {
-
-        .element-text-size(button, screen-medium);
         .element-spacing(button, null, screen-medium);
-        .property-variant(button, height, null, screen-medium);
+        .element-text-size(button, screen-medium);
         .property-variant(button, border-radius, null, screen-medium);
+        .property-variant(button, height, null, screen-medium);
 
         /* Layout Variants */
 
         &.button-narrow {
-
           .element-spacing(button, narrow, screen-medium);
-
         }
 
         &.button-wide {
-
           .element-spacing(button, wide, screen-medium);
-
         }
 
         /* Button Dropdown (.button-dropdown) */
@@ -808,24 +587,17 @@
         &.dropdown-toggle {
 
           &:after {
-
             .property-variant(button-dropdown-caret, margin-left, null, screen-medium);
             .property-variant(button-dropdown-caret, margin-top, null, screen-medium);
 
             & when not (@button-dropdown-caret-width-screen-medium = null) {
-
-              .triangle-size-width("down", @button-dropdown-caret-width-screen-medium);
-
+              .triangle-size-width('down', @button-dropdown-caret-width-screen-medium);
             }
 
             & when not (@button-dropdown-caret-height-screen-medium = null) {
-
-              .triangle-size-height("down", @button-dropdown-caret-height-screen-medium);
-
+              .triangle-size-height('down', @button-dropdown-caret-height-screen-medium);
             }
-
           }
-
         }
 
         /* Block Button (.button-block) */
@@ -833,103 +605,73 @@
         &.button-block {
 
           &.button-block-below-screen-medium {
-
-            width: auto;
             display: inline-flex;
-
+            width: auto;
           }
-
         }
 
         & when not (@button-rounded-padding-horizontal-scale = null) {
-
           /* Button Rounded (.button-rounded) */
 
           &.button-rounded {
 
             & when not (@button-padding-left-screen-medium = null) {
-
               padding-left: @button-padding-left-screen-medium * @button-rounded-padding-horizontal-scale;
 
               & when not (@button-narrow-padding-left-scale = null) {
 
                 &.button-narrow {
-
                   padding-left: @button-padding-left-screen-medium * @button-narrow-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
 
               & when not (@button-wide-padding-left-scale = null) {
 
                 &.button-wide {
-
                   padding-left: @button-padding-left-screen-medium * @button-wide-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
-
             }
 
             & when not (@button-padding-right-screen-medium = null) {
-
               padding-right: @button-padding-right-screen-medium * @button-rounded-padding-horizontal-scale;
 
               & when not (@button-narrow-padding-right-scale = null) {
 
                 &.button-narrow {
-
                   padding-right: @button-padding-right-screen-medium * @button-narrow-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
 
               & when not (@button-wide-padding-right-scale = null) {
 
                 &.button-wide {
-
                   padding-right: @button-padding-right-screen-medium * @button-wide-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
-
             }
-
           }
-
         }
 
         & when not (@button-content-padding-horizontal-screen-medium = null) {
-
           /* Button Content */
 
           & > * {
-
             padding-right: @button-content-padding-horizontal-screen-medium;
-
           }
-
         }
-
       }
 
       & when (@button-group-enabled) {
-
         /* Button Group (.button-group) */
 
         .button-group {
 
           & when not (@button-rounded-padding-horizontal-scale = null) {
-
             /* Button */
 
             button,
             .button {
-
               /* Button Rounded (.button-rouded) */
 
               &.button-rounded {
@@ -937,121 +679,83 @@
                 & when not (@button-padding-left-screen-medium = null) {
 
                   &:not(:first-of-type):not(:last-of-type) {
-
                     padding-left: @button-padding-left-screen-medium;
-
                   }
 
                   &:first-of-type {
-
                     padding-left: @button-padding-left-screen-medium;
 
                     & when not (@button-narrow-padding-left-scale = null) {
 
                       &.button-narrow {
-
                         padding-left: @button-padding-left-screen-medium * @button-narrow-padding-left-scale;
-
                       }
-
                     }
 
                     & when not (@button-wide-padding-left-scale = null) {
 
                       &.button-wide {
-
                         padding-left: @button-padding-left-screen-medium * @button-wide-padding-left-scale;
-
                       }
-
                     }
-
                   }
-
                 }
 
                 & when not (@button-padding-right-screen-medium = null) {
 
                   &:not(:first-of-type):not(:last-of-type) {
-
                     padding-right: @button-padding-right-screen-medium;
-
                   }
 
                   &:first-of-type {
-
                     padding-right: @button-padding-right-screen-medium;
 
                     & when not (@button-narrow-padding-right-scale = null) {
 
                       &.button-narrow {
-
                         padding-right: @button-padding-right-screen-medium * @button-narrow-padding-right-scale;
-
                       }
-
                     }
 
                     & when not (@button-wide-padding-right-scale = null) {
 
                       &.button-wide {
-
                         padding-right: @button-padding-right-screen-medium * @button-wide-padding-right-scale;
-
                       }
-
                     }
-
                   }
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@button-enabled) and (@button-screen-large-enabled) {
-
       /* Button */
 
       button,
       .button {
-
-        .element-text-size(button, screen-large);
         .element-spacing(button, null, screen-large);
-        .property-variant(button, height, null, screen-large);
+        .element-text-size(button, screen-large);
         .property-variant(button, border-radius, null, screen-large);
+        .property-variant(button, height, null, screen-large);
 
         /* Layout Variants */
 
         &.button-narrow {
-
           .element-spacing(button, narrow, screen-large);
-
         }
 
         &.button-wide {
-
           .element-spacing(button, wide, screen-large);
-
         }
 
         /* Button Dropdown (.button-dropdown) */
@@ -1060,24 +764,17 @@
         &.dropdown-toggle {
 
           &:after {
-
             .property-variant(button-dropdown-caret, margin-left, null, screen-large);
             .property-variant(button-dropdown-caret, margin-top, null, screen-large);
 
             & when not (@button-dropdown-caret-width-screen-large = null) {
-
-              .triangle-size-width("down", @button-dropdown-caret-width-screen-large);
-
+              .triangle-size-width('down', @button-dropdown-caret-width-screen-large);
             }
 
             & when not (@button-dropdown-caret-height-screen-large = null) {
-
-              .triangle-size-height("down", @button-dropdown-caret-height-screen-large);
-
+              .triangle-size-height('down', @button-dropdown-caret-height-screen-large);
             }
-
           }
-
         }
 
         /* Block Button (.button-block) */
@@ -1085,103 +782,73 @@
         &.button-block {
 
           &.button-block-below-screen-large {
-
-            width: auto;
             display: inline-flex;
-
+            width: auto;
           }
-
         }
 
         & when not (@button-rounded-padding-horizontal-scale = null) {
-
           /* Button Rounded (.button-rounded) */
 
           &.button-rounded {
 
             & when not (@button-padding-left-screen-large = null) {
-
               padding-left: @button-padding-left-screen-large * @button-rounded-padding-horizontal-scale;
 
               & when not (@button-narrow-padding-left-scale = null) {
 
                 &.button-narrow {
-
                   padding-left: @button-padding-left-screen-large * @button-narrow-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
 
               & when not (@button-wide-padding-left-scale = null) {
 
                 &.button-wide {
-
                   padding-left: @button-padding-left-screen-large * @button-wide-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
-
             }
 
             & when not (@button-padding-right-screen-large = null) {
-
               padding-right: @button-padding-right-screen-large * @button-rounded-padding-horizontal-scale;
 
               & when not (@button-narrow-padding-right-scale = null) {
 
                 &.button-narrow {
-
                   padding-right: @button-padding-right-screen-large * @button-narrow-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
 
               & when not (@button-wide-padding-right-scale = null) {
 
                 &.button-wide {
-
                   padding-right: @button-padding-right-screen-large * @button-wide-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
-
             }
-
           }
-
         }
 
         & when not (@button-content-padding-horizontal-screen-large = null) {
-
           /* Button Content */
 
           & > * {
-
             padding-right: @button-content-padding-horizontal-screen-large;
-
           }
-
         }
-
       }
 
       & when (@button-group-enabled) {
-
         /* Button Group (.button-group) */
 
         .button-group {
 
           & when not (@button-rounded-padding-horizontal-scale = null) {
-
             /* Button */
 
             button,
             .button {
-
               /* Button Rounded (.button-rouded) */
 
               &.button-rounded {
@@ -1189,121 +856,83 @@
                 & when not (@button-padding-left-screen-large = null) {
 
                   &:not(:first-of-type):not(:last-of-type) {
-
                     padding-left: @button-padding-left-screen-large;
-
                   }
 
                   &:first-of-type {
-
                     padding-left: @button-padding-left-screen-large;
 
                     & when not (@button-narrow-padding-left-scale = null) {
 
                       &.button-narrow {
-
                         padding-left: @button-padding-left-screen-large * @button-narrow-padding-left-scale;
-
                       }
-
                     }
 
                     & when not (@button-wide-padding-left-scale = null) {
 
                       &.button-wide {
-
                         padding-left: @button-padding-left-screen-large * @button-wide-padding-left-scale;
-
                       }
-
                     }
-
                   }
-
                 }
 
                 & when not (@button-padding-right-screen-large = null) {
 
                   &:not(:first-of-type):not(:last-of-type) {
-
                     padding-right: @button-padding-right-screen-large;
-
                   }
 
                   &:first-of-type {
-
                     padding-right: @button-padding-right-screen-large;
 
                     & when not (@button-narrow-padding-right-scale = null) {
 
                       &.button-narrow {
-
                         padding-right: @button-padding-right-screen-large * @button-narrow-padding-right-scale;
-
                       }
-
                     }
 
                     & when not (@button-wide-padding-right-scale = null) {
 
                       &.button-wide {
-
                         padding-right: @button-padding-right-screen-large * @button-wide-padding-right-scale;
-
                       }
-
                     }
-
                   }
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@button-enabled) and (@button-screen-jumbo-enabled) {
-
       /* Button */
 
       button,
       .button {
-
-        .element-text-size(button, screen-jumbo);
         .element-spacing(button, null, screen-jumbo);
-        .property-variant(button, height, null, screen-jumbo);
+        .element-text-size(button, screen-jumbo);
         .property-variant(button, border-radius, null, screen-jumbo);
+        .property-variant(button, height, null, screen-jumbo);
 
         /* Layout Variants */
 
         &.button-narrow {
-
           .element-spacing(button, narrow, screen-jumbo);
-
         }
 
         &.button-wide {
-
           .element-spacing(button, wide, screen-jumbo);
-
         }
 
         /* Button Dropdown (.button-dropdown) */
@@ -1312,24 +941,17 @@
         &.dropdown-toggle {
 
           &:after {
-
             .property-variant(button-dropdown-caret, margin-left, null, screen-jumbo);
             .property-variant(button-dropdown-caret, margin-top, null, screen-jumbo);
 
             & when not (@button-dropdown-caret-width-screen-jumbo = null) {
-
-              .triangle-size-width("down", @button-dropdown-caret-width-screen-jumbo);
-
+              .triangle-size-width('down', @button-dropdown-caret-width-screen-jumbo);
             }
 
             & when not (@button-dropdown-caret-height-screen-jumbo = null) {
-
-              .triangle-size-height("down", @button-dropdown-caret-height-screen-jumbo);
-
+              .triangle-size-height('down', @button-dropdown-caret-height-screen-jumbo);
             }
-
           }
-
         }
 
         /* Block Button (.button-block) */
@@ -1337,103 +959,73 @@
         &.button-block {
 
           &.button-block-below-screen-jumbo {
-
-            width: auto;
             display: inline-flex;
-
+            width: auto;
           }
-
         }
 
         & when not (@button-rounded-padding-horizontal-scale = null) {
-
           /* Button Rounded (.button-rounded) */
 
           &.button-rounded {
 
             & when not (@button-padding-left-screen-jumbo = null) {
-
               padding-left: @button-padding-left-screen-jumbo * @button-rounded-padding-horizontal-scale;
 
               & when not (@button-narrow-padding-left-scale = null) {
 
                 &.button-narrow {
-
                   padding-left: @button-padding-left-screen-jumbo * @button-narrow-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
 
               & when not (@button-wide-padding-left-scale = null) {
 
                 &.button-wide {
-
                   padding-left: @button-padding-left-screen-jumbo * @button-wide-padding-left-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
-
             }
 
             & when not (@button-padding-right-screen-jumbo = null) {
-
               padding-right: @button-padding-right-screen-jumbo * @button-rounded-padding-horizontal-scale;
 
               & when not (@button-narrow-padding-right-scale = null) {
 
                 &.button-narrow {
-
                   padding-right: @button-padding-right-screen-jumbo * @button-narrow-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
 
               & when not (@button-wide-padding-right-scale = null) {
 
                 &.button-wide {
-
                   padding-right: @button-padding-right-screen-jumbo * @button-wide-padding-right-scale * @button-rounded-padding-horizontal-scale;
-
                 }
-
               }
-
             }
-
           }
-
         }
 
         & when not (@button-content-padding-horizontal-screen-jumbo = null) {
-
           /* Button Content */
 
           & > * {
-
             padding-right: @button-content-padding-horizontal-screen-jumbo;
-
           }
-
         }
-
       }
 
       & when (@button-group-enabled) {
-
         /* Button Group (.button-group) */
 
         .button-group {
 
           & when not (@button-rounded-padding-horizontal-scale = null) {
-
             /* Button */
 
             button,
             .button {
-
               /* Button Rounded (.button-rouded) */
 
               &.button-rounded {
@@ -1441,87 +1033,57 @@
                 & when not (@button-padding-left-screen-jumbo = null) {
 
                   &:not(:first-of-type):not(:last-of-type) {
-
                     padding-left: @button-padding-left-screen-jumbo;
-
                   }
 
                   &:first-of-type {
-
                     padding-left: @button-padding-left-screen-jumbo;
 
                     & when not (@button-narrow-padding-left-scale = null) {
 
                       &.button-narrow {
-
                         padding-left: @button-padding-left-screen-jumbo * @button-narrow-padding-left-scale;
-
                       }
-
                     }
 
                     & when not (@button-wide-padding-left-scale = null) {
 
                       &.button-wide {
-
                         padding-left: @button-padding-left-screen-jumbo * @button-wide-padding-left-scale;
-
                       }
-
                     }
-
                   }
-
                 }
 
                 & when not (@button-padding-right-screen-jumbo = null) {
 
                   &:not(:first-of-type):not(:last-of-type) {
-
                     padding-right: @button-padding-right-screen-jumbo;
-
                   }
 
                   &:first-of-type {
-
                     padding-right: @button-padding-right-screen-jumbo;
 
                     & when not (@button-narrow-padding-right-scale = null) {
 
                       &.button-narrow {
-
                         padding-right: @button-padding-right-screen-jumbo * @button-narrow-padding-right-scale;
-
                       }
-
                     }
 
                     & when not (@button-wide-padding-right-scale = null) {
 
                       &.button-wide {
-
                         padding-right: @button-padding-right-screen-jumbo * @button-wide-padding-right-scale;
-
                       }
-
                     }
-
                   }
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }

@@ -1,73 +1,55 @@
 & when (@code-block-enabled) {
-
   /* Code Block */
 
   pre,
   .code-block {
-
-    display: block;
-    word-break: break-all;
-    white-space: pre;
-    .element-text-size(code-block, null);
-    .element-spacing(code-block, null, null);
-    .element-text-style(code-block);
     .element-shape-style(code-block);
+    .element-spacing(code-block, null, null);
+    .element-text-size(code-block, null);
+    .element-text-style(code-block);
     .property-variant(code, border-radius, null, null);
+    display: block;
+    white-space: pre;
+    word-break: break-all;
 
     /* Layout Variants */
 
     &.short {
-
       .element-spacing(code-block, short, null);
-
     }
 
     &.tall {
-
       .element-spacing(code-block, tall, null);
-
     }
 
     &.flush {
-
-      padding: 0px !important;
-
+      padding: 0 !important;
     }
 
     /* Style Variants */
 
     &.transparent {
-
       background: none !important;
-
     }
 
     /* Code Block Inverse (.code-block-inverse) */
 
     &.code-block-inverse {
-
       .element-text-style(code-block-inverse);
       .element-shape-style(code-block-inverse);
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@code-block-enabled) and (@code-block-screen-small-enabled) {
-
       /* Code Block */
 
       pre,
       .code-block {
-
         .element-text-size(code-block, screen-small);
         .element-spacing(code-block, null, screen-small);
         .property-variant(code, border-radius, null, screen-small);
@@ -75,38 +57,26 @@
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(code-block, short, screen-small);
-
         }
 
         &.tall {
-
           .element-spacing(code-block, tall, screen-small);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@code-block-enabled) and (@code-block-screen-medium-enabled) {
-
       /* Code Block */
 
       pre,
       .code-block {
-
         .element-text-size(code-block, screen-medium);
         .element-spacing(code-block, null, screen-medium);
         .property-variant(code, border-radius, null, screen-medium);
@@ -114,38 +84,26 @@
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(code-block, short, screen-medium);
-
         }
 
         &.tall {
-
           .element-spacing(code-block, tall, screen-medium);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@code-block-enabled) and (@code-block-screen-large-enabled) {
-
       /* Code Block */
 
       pre,
       .code-block {
-
         .element-text-size(code-block, screen-large);
         .element-spacing(code-block, null, screen-large);
         .property-variant(code, border-radius, null, screen-large);
@@ -153,38 +111,26 @@
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(code-block, short, screen-large);
-
         }
 
         &.tall {
-
           .element-spacing(code-block, tall, screen-large);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@code-block-enabled) and (@code-block-screen-jumbo-enabled) {
-
       /* Code Block */
 
       pre,
       .code-block {
-
         .element-text-size(code-block, screen-jumbo);
         .element-spacing(code-block, null, screen-jumbo);
         .property-variant(code, border-radius, null, screen-jumbo);
@@ -192,21 +138,13 @@
         /* Layout Variants */
 
         &.short {
-
           .element-spacing(code-block, short, screen-jumbo);
-
         }
 
         &.tall {
-
           .element-spacing(code-block, tall, screen-jumbo);
-
         }
-
       }
-
     }
-
   }
-
 }

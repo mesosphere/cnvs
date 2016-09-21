@@ -1,16 +1,13 @@
 /* Text Size Variant */
 
 .element-text-size (@class, @screen-size) {
-
   .property-variant(@class, font-size, null, @screen-size);
   .property-variant(@class, line-height, null, @screen-size);
-
 }
 
 /* Text Style Variant */
 
 .element-text-style (@class) {
-
   .property-variant(@class, color, null, null);
   .property-variant(@class, font-family, null, null);
   .property-variant(@class, font-style, null, null);
@@ -19,39 +16,34 @@
   .property-variant(@class, text-shadow, null, null);
   .property-variant(@class, text-decoration, null, null);
   .property-variant(@class, text-rendering, null, null);
-
-};
+}
 
 /* Text Overflow */
 
 .text-overflow () {
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Hide Text */
 
 .text-hide () {
-
-    font: ~"0/0" a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
-
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  // Stylelint interprets the escaped 0/0 as a font family declaration.
+  /* stylelint-disable font-family-name-quotes */
+  font: ~'0/0' a;
+  /* stylelint-enable */
+  text-shadow: none;
 }
 
 /* Placeholder Text */
 
 .placeholder (@color) {
 
-    &::placeholder {
-
-      color: @color;
-
-    }
-
+  &::placeholder {
+    color: @color;
+  }
 }
