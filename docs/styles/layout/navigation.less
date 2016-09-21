@@ -1,93 +1,71 @@
 .navigation {
-
-  position: fixed;
   left: -100%;
+  position: fixed;
   width: 100%;
 
   ul.sidebar-menu {
-
     .clearfix();
     .element-shape-style(sidebar-menu);
-    margin-bottom: 0px;
+    margin-bottom: 0;
 
     li {
-
-      display: block;
-      .element-text-size(sidebar-menu-item, null);
-      .element-spacing(sidebar-menu-item, null, null);
-      .element-text-style(sidebar-menu-item);
       .element-shape-style(sidebar-menu-item);
+      .element-spacing(sidebar-menu-item, null, null);
+      .element-text-size(sidebar-menu-item, null);
+      .element-text-style(sidebar-menu-item);
+      display: block;
 
       &:first-child {
-
-        margin-top: 0px;
-
+        margin-top: 0;
       }
 
       a {
-
-        display: block;
-        text-decoration: none !important;
+        .element-shape-style(sidebar-menu-item-link);
         .element-spacing(sidebar-menu-item-link, null, null);
         .element-text-style(sidebar-menu-item-link);
-        .element-shape-style(sidebar-menu-item-link);
+        display: block;
+        text-decoration: none !important;
 
         &:hover {
-
           .element-text-style(sidebar-menu-item-link-hover);
           .element-shape-style(sidebar-menu-item-link-hover);
-
         }
 
         &:active {
-
           .element-text-style(sidebar-menu-item-link-active);
           .element-shape-style(sidebar-menu-item-link-active);
-
         }
-
       }
 
       &.selected:not(.open) {
-
         .element-shape-style(sidebar-menu-item-selected);
-
       }
 
       &.selected,
       &.selected.open {
-
         .element-text-style(sidebar-menu-item-selected);
 
         > a,
         > a:hover,
         > a:active {
-
           .element-text-style(sidebar-menu-item-link-selected);
           .element-shape-style(sidebar-menu-item-link-selected);
-
         }
-
       }
 
       &.open {
-
         .element-shape-style(sidebar-submenu);
         .element-text-style(sidebar-menu-item-open);
 
         > a {
-
           .element-text-style(sidebar-menu-item-open);
           .element-shape-style(sidebar-menu-item-open);
-
         }
 
         > ul {
-
           .element-spacing(sidebar-submenu, null, null);
 
           li {
-
             display: block;
             .element-text-size(sidebar-submenu-item, null);
             .element-spacing(sidebar-submenu-item, null, null);
@@ -99,16 +77,12 @@
               > a,
               > a:hover,
               > a:active {
-
                 .element-text-style(sidebar-submenu-item-link-selected);
                 .element-shape-style(sidebar-submenu-item-link-selected);
-
               }
-
             }
 
             > a {
-
               display: block;
               text-decoration: none !important;
               .element-spacing(sidebar-submenu-item-link, null, null);
@@ -116,34 +90,21 @@
               .element-shape-style(sidebar-submenu-item-link);
 
               &:hover {
-
                 .element-text-style(sidebar-submenu-item-link-hover);
                 .element-shape-style(sidebar-submenu-item-link-hover);
-
               }
 
               &:active {
-
                 .element-text-style(sidebar-submenu-item-link-active);
                 .element-shape-style(sidebar-submenu-item-link-active);
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
@@ -156,114 +117,77 @@
         ul.sidebar-menu {
 
           li {
-
             .element-text-size(sidebar-submenu-item, screen-small);
             .element-spacing(sidebar-menu-item, null, screen-small);
 
             a {
-
               .element-spacing(sidebar-menu-item-link, null, screen-small);
-
             }
-
           }
 
           > li.open {
 
             > ul {
-
               .element-spacing(sidebar-submenu, null, screen-small);
 
               li {
-
                 .element-text-size(sidebar-submenu-item, screen-small);
                 .element-spacing(sidebar-submenu-item, null, screen-small);
 
                 a {
-
                   .element-spacing(sidebar-submenu-item-link, null, screen-small);
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     .navigation {
-
+      left: auto;
       position: relative;
       width: auto;
-      left: auto;
 
       & when (@sidebar-menu-screen-medium-enabled) {
 
         ul.sidebar-menu {
 
           li {
-
             .element-text-size(sidebar-submenu-item, screen-medium);
             .element-spacing(sidebar-menu-item, null, screen-medium);
 
             a {
-
               .element-spacing(sidebar-menu-item-link, null, screen-medium);
-
             }
-
           }
 
           > li.open {
 
             > ul {
-
               .element-spacing(sidebar-submenu, null, screen-medium);
 
               li {
-
                 .element-text-size(sidebar-submenu-item, screen-medium);
                 .element-spacing(sidebar-submenu-item, null, screen-medium);
 
                 a {
-
                   .element-spacing(sidebar-submenu-item-link, null, screen-medium);
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
@@ -276,52 +200,34 @@
         ul.sidebar-menu {
 
           li {
-
             .element-text-size(sidebar-menu-item, screen-large);
             .element-spacing(sidebar-menu-item, null, screen-large);
 
             a {
-
               .element-spacing(sidebar-menu-item-link, null, screen-large);
-
             }
-
           }
 
           > li.open {
 
             > ul {
-
               .element-spacing(sidebar-submenu, null, screen-large);
 
               li {
-
                 .element-text-size(sidebar-submenu-item, screen-large);
                 .element-spacing(sidebar-submenu-item, null, screen-large);
 
                 a {
-
                   .element-spacing(sidebar-submenu-item-link, null, screen-large);
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
@@ -334,52 +240,34 @@
         ul.sidebar-menu {
 
           li {
-
             .element-text-size(sidebar-menu-item, screen-jumbo);
             .element-spacing(sidebar-menu-item, null, screen-jumbo);
 
             a {
-
               .element-spacing(sidebar-menu-item-link, null, screen-jumbo);
-
             }
-
           }
 
           > li.open {
 
             > ul {
-
               .element-spacing(sidebar-submenu, null, screen-jumbo);
 
               li {
-
                 .element-text-size(sidebar-submenu-item, screen-jumbo);
                 .element-spacing(sidebar-submenu-item, null, screen-jumbo);
 
                 a {
-
                   .element-spacing(sidebar-submenu-item-link, null, screen-jumbo);
-
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 /*
  * Sidebar Menu
@@ -413,8 +301,6 @@
 @sidebar-menu-screen-medium-enabled:                                            @layout-screen-medium-enabled;
 @sidebar-menu-screen-large-enabled:                                             @layout-screen-large-enabled;
 @sidebar-menu-screen-jumbo-enabled:                                             @layout-screen-jumbo-enabled;
-
-
 
 /*
  * Sidebar Menu Item
@@ -516,7 +402,7 @@
 
 // Font Size
 
-@sidebar-menu-item-font-size:                                                   1.0rem;
+@sidebar-menu-item-font-size:                                                   1rem;
 @sidebar-menu-item-font-size-screen-small:                                      null;
 @sidebar-menu-item-font-size-screen-medium:                                     null;
 @sidebar-menu-item-font-size-screen-large:                                      null;
@@ -524,7 +410,7 @@
 
 // Line Height
 
-@sidebar-menu-item-line-height:                                                 1.0rem;
+@sidebar-menu-item-line-height:                                                 1rem;
 @sidebar-menu-item-line-height-screen-small:                                    @sidebar-menu-item-font-size-screen-small;
 @sidebar-menu-item-line-height-screen-medium:                                   @sidebar-menu-item-font-size-screen-medium;
 @sidebar-menu-item-line-height-screen-large:                                    @sidebar-menu-item-font-size-screen-large;
@@ -534,7 +420,7 @@
 
 // Margin Top
 
-@sidebar-menu-item-margin-top:                                                  0px;
+@sidebar-menu-item-margin-top:                                                  0;
 @sidebar-menu-item-margin-top-screen-small:                                     null;
 @sidebar-menu-item-margin-top-screen-medium:                                    null;
 @sidebar-menu-item-margin-top-screen-large:                                     null;
@@ -542,7 +428,7 @@
 
 // Margin Bottom
 
-@sidebar-menu-item-margin-bottom:                                               0px;
+@sidebar-menu-item-margin-bottom:                                               0;
 @sidebar-menu-item-margin-bottom-screen-small:                                  null;
 @sidebar-menu-item-margin-bottom-screen-medium:                                 null;
 @sidebar-menu-item-margin-bottom-screen-large:                                  null;
@@ -595,8 +481,6 @@
 @sidebar-menu-item-padding-right-screen-medium:                                 -@sidebar-menu-item-margin-right-screen-medium;
 @sidebar-menu-item-padding-right-screen-large:                                  -@sidebar-menu-item-margin-right-screen-large;
 @sidebar-menu-item-padding-right-screen-jumbo:                                  -@sidebar-menu-item-margin-right-screen-jumbo;
-
-
 
 /*
  * Sidebar Menu Item Link
@@ -790,8 +674,6 @@
 @sidebar-menu-item-link-padding-right-screen-large:                             -@sidebar-menu-item-link-margin-right-screen-large;
 @sidebar-menu-item-link-padding-right-screen-jumbo:                             -@sidebar-menu-item-link-margin-right-screen-jumbo;
 
-
-
 /*
  * Sidebar Submenu
  */
@@ -883,8 +765,6 @@
 @sidebar-submenu-padding-right-screen-medium:                                   null;
 @sidebar-submenu-padding-right-screen-large:                                    null;
 @sidebar-submenu-padding-right-screen-jumbo:                                    null;
-
-
 
 /*
  * Sidebar Submenu Item
@@ -994,7 +874,7 @@
 
 // Line Height
 
-@sidebar-submenu-item-line-height:                                              1.0rem;
+@sidebar-submenu-item-line-height:                                              1rem;
 @sidebar-submenu-item-line-height-screen-small:                                 @sidebar-submenu-item-font-size-screen-small;
 @sidebar-submenu-item-line-height-screen-medium:                                @sidebar-submenu-item-font-size-screen-medium;
 @sidebar-submenu-item-line-height-screen-large:                                 @sidebar-submenu-item-font-size-screen-large;
@@ -1004,7 +884,7 @@
 
 // Margin Top
 
-@sidebar-submenu-item-margin-top:                                               0px;
+@sidebar-submenu-item-margin-top:                                               0;
 @sidebar-submenu-item-margin-top-screen-small:                                  null;
 @sidebar-submenu-item-margin-top-screen-medium:                                 null;
 @sidebar-submenu-item-margin-top-screen-large:                                  null;
@@ -1012,7 +892,7 @@
 
 // Margin Bottom
 
-@sidebar-submenu-item-margin-bottom:                                            0px;
+@sidebar-submenu-item-margin-bottom:                                            0;
 @sidebar-submenu-item-margin-bottom-screen-small:                               null;
 @sidebar-submenu-item-margin-bottom-screen-medium:                              null;
 @sidebar-submenu-item-margin-bottom-screen-large:                               null;
@@ -1065,8 +945,6 @@
 @sidebar-submenu-item-padding-right-screen-medium:                              -@sidebar-submenu-item-margin-right-screen-medium;
 @sidebar-submenu-item-padding-right-screen-large:                               -@sidebar-submenu-item-margin-right-screen-large;
 @sidebar-submenu-item-padding-right-screen-jumbo:                               -@sidebar-submenu-item-margin-right-screen-jumbo;
-
-
 
 /*
  * Sidebar Submenu Link

@@ -19,7 +19,7 @@
 
 // Font Size
 
-@header-logo-font-size:                                                         2.0rem;
+@header-logo-font-size:                                                         2rem;
 @header-logo-font-size-scale-screen-small:                                      null;
 @header-logo-font-size-scale-screen-medium:                                     null;
 @header-logo-font-size-scale-screen-large:                                      null;
@@ -27,7 +27,7 @@
 
 // Line Height
 
-@header-logo-line-height:                                                       2.0rem;
+@header-logo-line-height:                                                       2rem;
 @header-logo-line-height-scale-screen-small:                                    null;
 @header-logo-line-height-scale-screen-medium:                                   null;
 @header-logo-line-height-scale-screen-large:                                    null;
@@ -60,15 +60,9 @@
 @header-logo-width-screen-jumbo:                                                @header-logo-scale-screen-jumbo * @header-logo-image-width;
 @header-logo-height-screen-jumbo:                                               @header-logo-scale-screen-jumbo * @header-logo-image-height;
 
-
-
-
-
-
 /* Header */
 
 .header {
-
   .clearfix();
   position: relative;
   width: 100%;
@@ -77,130 +71,88 @@
   // Header Logo
 
   .header-logo {
-
-    display: block;
-    width: auto;
-    width: @header-logo-width;
-    height: @header-logo-height;
-    background-image: url("@{path-images}layout/header/header-logo.png?cache=@{cache-clear}");
     .background-size(100% 100%);
-    .element-text-style(header-logo);
     .element-text-size(header-logo, null);
-    text-align: center;
+    .element-text-style(header-logo);
+    background-image: url('@{path-images}layout/header/header-logo.png?cache=@{cache-clear}');
+    display: block;
+    height: @header-logo-height;
     margin: 0 auto;
+    text-align: center;
+    width: auto;
 
     a {
-
-      display: block;
-      width: auto;
-      width: 100%;
-      height: 100%;
       .element-text-style(header-logo);
+      display: block;
+      height: 100%;
+      width: auto;
 
       span {
-
         display: none;
-
       }
-
     }
-
   }
 
   & when (@layout-screen-small-enabled) {
 
     @media (min-width: @layout-screen-small-min-width) {
-
       // Header Logo
 
       .header-logo {
-
-        width: @header-logo-width-screen-small;
-        height: @header-logo-height-screen-small;
         .element-text-size(header-logo, scale-screen-small);
-
+        height: @header-logo-height-screen-small;
+        width: @header-logo-width-screen-small;
       }
-
     }
-
   }
-
-
 
   & when (@layout-screen-medium-enabled) {
 
     @media (min-width: @layout-screen-medium-min-width) {
-
       // Header Logo
 
       .header-logo {
-
-        width: @header-logo-width-screen-medium;
-        height: @header-logo-height-screen-medium;
         .element-text-size(header-logo, scale-screen-medium);
-
+        height: @header-logo-height-screen-medium;
+        width: @header-logo-width-screen-medium;
       }
-
     }
-
   }
-
-
 
   & when (@layout-screen-large-enabled) {
 
     @media (min-width: @layout-screen-large-min-width) {
-
       // Header Logo
 
       .header-logo {
-
-        width: @header-logo-width-screen-large;
-        height: @header-logo-height-screen-large;
         .element-text-size(header-logo, scale-screen-large);
-
+        height: @header-logo-height-screen-large;
+        width: @header-logo-width-screen-large;
       }
-
     }
-
   }
-
-
 
   & when (@layout-screen-jumbo-enabled) {
 
     @media (min-width: @layout-screen-jumbo-min-width) {
-
       // Header Logo
 
       .header-logo {
-
-        width: @header-logo-width-screen-jumbo;
-        height: @header-logo-height-screen-jumbo;
         .element-text-size(header-logo, scale-screen-jumbo);
-
+        height: @header-logo-height-screen-jumbo;
+        width: @header-logo-width-screen-jumbo;
       }
-
     }
-
   }
-
-
 
   & when (@screen-resolution-2x-enabled) {
 
-    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-
+    @media only screen and (min-resolution: 192dpi) {
       // Header Logo
 
       .header-logo {
-
-        background-image: url("@{path-images}layout/header/header-logo@2x.png?cache=@{cache-clear}");
-
+        background-image: url('@{path-images}layout/header/header-logo@2x.png?cache=@{cache-clear}');
       }
-
     }
-
   }
-
 }
