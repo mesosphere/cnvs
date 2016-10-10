@@ -1,0 +1,639 @@
+& when (@badge-enabled) {
+
+  /* Badge */
+
+  .badge {
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    .element-text-size(badge, null);
+    .element-text-style(badge);
+    .element-shape-style(badge);
+    .element-spacing(badge, null, null);
+    .property-variant(badge, border-radius, null, null);
+
+    /* Layout Variants */
+
+    &.badge-narrow {
+
+      .element-spacing(badge, narrow, null);
+
+    }
+
+    &.badge-wide {
+
+      .element-spacing(badge, wide, null);
+
+    }
+
+    & > * {
+
+      display: inline-flex !important;
+
+    }
+
+    /* Badge Inverse (.badge-inverse) */
+
+    &.badge-inverse {
+
+      .element-text-style(badge-inverse);
+      .element-shape-style(badge-inverse);
+
+    }
+
+    /* Block badge (.badge-block) */
+
+    &.badge-block {
+
+      display: flex;
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+
+    }
+
+    /* Rounded badge (.badge-rounded) */
+
+    &.badge-rounded {
+
+      border-radius: 1000px;
+
+      & when not (@badge-rounded-padding-horizontal-scale = null) {
+
+        & when not (@badge-padding-left = null) {
+
+          padding-left: @badge-padding-left * @badge-rounded-padding-horizontal-scale;
+
+          & when not (@badge-narrow-padding-left-scale = null) {
+
+            &.badge-narrow {
+
+              padding-left: @badge-padding-left * @badge-narrow-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+            }
+
+          }
+
+          & when not (@badge-wide-padding-left-scale = null) {
+
+            &.badge-wide {
+
+              padding-left: @badge-padding-left * @badge-wide-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+            }
+
+          }
+
+        }
+
+        & when not (@badge-padding-right = null) {
+
+          padding-right: @badge-padding-right * @badge-rounded-padding-horizontal-scale;
+
+          & when not (@badge-narrow-padding-right-scale = null) {
+
+            &.badge-narrow {
+
+              padding-right: @badge-padding-right * @badge-narrow-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+            }
+
+          }
+
+          & when not (@badge-wide-padding-right-scale = null) {
+
+            &.badge-wide {
+
+              padding-right: @badge-padding-right * @badge-wide-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    & when not (@badge-content-padding-horizontal = null) {
+
+      /* badge Content */
+
+      & > * {
+
+        box-sizing: content-box;
+        padding-right: @badge-content-padding-horizontal;
+
+        &:last-child {
+
+          padding-right: 0px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@badge-enabled) and (@badge-screen-small-enabled) {
+
+      /* Badge */
+
+      badge,
+      .badge {
+
+        .element-text-size(badge, screen-small);
+        .element-spacing(badge, null, screen-small);
+        .property-variant(badge, border-radius, null, screen-small);
+
+        /* Layout Variants */
+
+        &.badge-narrow {
+
+          .element-spacing(badge, narrow, screen-small);
+
+        }
+
+        &.badge-wide {
+
+          .element-spacing(badge, wide, screen-small);
+
+        }
+
+        /* Block badge (.badge-block) */
+
+        &.badge-block {
+
+          &.badge-block-below-screen-small {
+
+            width: auto;
+            display: inline-flex;
+
+          }
+
+        }
+
+        & when not (@badge-rounded-padding-horizontal-scale = null) {
+
+          /* badge Rounded (.badge-rounded) */
+
+          &.badge-rounded {
+
+            & when not (@badge-padding-left-screen-small = null) {
+
+              padding-left: @badge-padding-left-screen-small * @badge-rounded-padding-horizontal-scale;
+
+              & when not (@badge-narrow-padding-left-scale = null) {
+
+                &.badge-narrow {
+
+                  padding-left: @badge-padding-left-screen-small * @badge-narrow-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+              & when not (@badge-wide-padding-left-scale = null) {
+
+                &.badge-wide {
+
+                  padding-left: @badge-padding-left-screen-small * @badge-wide-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+            }
+
+            & when not (@badge-padding-right-screen-small = null) {
+
+              padding-right: @badge-padding-right-screen-small * @badge-rounded-padding-horizontal-scale;
+
+              & when not (@badge-narrow-padding-right-scale = null) {
+
+                &.badge-narrow {
+
+                  padding-right: @badge-padding-right-screen-small * @badge-narrow-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+              & when not (@badge-wide-padding-right-scale = null) {
+
+                &.badge-wide {
+
+                  padding-right: @badge-padding-right-screen-small * @badge-wide-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        & when not (@badge-content-padding-horizontal-screen-small = null) {
+
+          /* badge Content */
+
+          & > * {
+
+            padding-right: @badge-content-padding-horizontal-screen-small;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@badge-enabled) and (@badge-screen-medium-enabled) {
+
+      /* Badge */
+
+      badge,
+      .badge {
+
+        .element-text-size(badge, screen-medium);
+        .element-spacing(badge, null, screen-medium);
+        .property-variant(badge, border-radius, null, screen-medium);
+
+        /* Layout Variants */
+
+        &.badge-narrow {
+
+          .element-spacing(badge, narrow, screen-medium);
+
+        }
+
+        &.badge-wide {
+
+          .element-spacing(badge, wide, screen-medium);
+
+        }
+
+        /* Block badge (.badge-block) */
+
+        &.badge-block {
+
+          &.badge-block-below-screen-medium {
+
+            width: auto;
+            display: inline-flex;
+
+          }
+
+        }
+
+        & when not (@badge-rounded-padding-horizontal-scale = null) {
+
+          /* badge Rounded (.badge-rounded) */
+
+          &.badge-rounded {
+
+            & when not (@badge-padding-left-screen-medium = null) {
+
+              padding-left: @badge-padding-left-screen-medium * @badge-rounded-padding-horizontal-scale;
+
+              & when not (@badge-narrow-padding-left-scale = null) {
+
+                &.badge-narrow {
+
+                  padding-left: @badge-padding-left-screen-medium * @badge-narrow-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+              & when not (@badge-wide-padding-left-scale = null) {
+
+                &.badge-wide {
+
+                  padding-left: @badge-padding-left-screen-medium * @badge-wide-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+            }
+
+            & when not (@badge-padding-right-screen-medium = null) {
+
+              padding-right: @badge-padding-right-screen-medium * @badge-rounded-padding-horizontal-scale;
+
+              & when not (@badge-narrow-padding-right-scale = null) {
+
+                &.badge-narrow {
+
+                  padding-right: @badge-padding-right-screen-medium * @badge-narrow-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+              & when not (@badge-wide-padding-right-scale = null) {
+
+                &.badge-wide {
+
+                  padding-right: @badge-padding-right-screen-medium * @badge-wide-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        & when not (@badge-content-padding-horizontal-screen-medium = null) {
+
+          /* badge Content */
+
+          & > * {
+
+            padding-right: @badge-content-padding-horizontal-screen-medium;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@badge-enabled) and (@badge-screen-large-enabled) {
+
+      /* Badge */
+
+      badge,
+      .badge {
+
+        .element-text-size(badge, screen-large);
+        .element-spacing(badge, null, screen-large);
+        .property-variant(badge, border-radius, null, screen-large);
+
+        /* Layout Variants */
+
+        &.badge-narrow {
+
+          .element-spacing(badge, narrow, screen-large);
+
+        }
+
+        &.badge-wide {
+
+          .element-spacing(badge, wide, screen-large);
+
+        }
+
+        /* Block badge (.badge-block) */
+
+        &.badge-block {
+
+          &.badge-block-below-screen-large {
+
+            width: auto;
+            display: inline-flex;
+
+          }
+
+        }
+
+        & when not (@badge-rounded-padding-horizontal-scale = null) {
+
+          /* badge Rounded (.badge-rounded) */
+
+          &.badge-rounded {
+
+            & when not (@badge-padding-left-screen-large = null) {
+
+              padding-left: @badge-padding-left-screen-large * @badge-rounded-padding-horizontal-scale;
+
+              & when not (@badge-narrow-padding-left-scale = null) {
+
+                &.badge-narrow {
+
+                  padding-left: @badge-padding-left-screen-large * @badge-narrow-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+              & when not (@badge-wide-padding-left-scale = null) {
+
+                &.badge-wide {
+
+                  padding-left: @badge-padding-left-screen-large * @badge-wide-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+            }
+
+            & when not (@badge-padding-right-screen-large = null) {
+
+              padding-right: @badge-padding-right-screen-large * @badge-rounded-padding-horizontal-scale;
+
+              & when not (@badge-narrow-padding-right-scale = null) {
+
+                &.badge-narrow {
+
+                  padding-right: @badge-padding-right-screen-large * @badge-narrow-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+              & when not (@badge-wide-padding-right-scale = null) {
+
+                &.badge-wide {
+
+                  padding-right: @badge-padding-right-screen-large * @badge-wide-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        & when not (@badge-content-padding-horizontal-screen-large = null) {
+
+          /* badge Content */
+
+          & > * {
+
+            padding-right: @badge-content-padding-horizontal-screen-large;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@badge-enabled) and (@badge-screen-jumbo-enabled) {
+
+      /* Badge */
+
+      badge,
+      .badge {
+
+        .element-text-size(badge, screen-jumbo);
+        .element-spacing(badge, null, screen-jumbo);
+        .property-variant(badge, border-radius, null, screen-jumbo);
+
+        /* Layout Variants */
+
+        &.badge-narrow {
+
+          .element-spacing(badge, narrow, screen-jumbo);
+
+        }
+
+        &.badge-wide {
+
+          .element-spacing(badge, wide, screen-jumbo);
+
+        }
+
+        /* Block badge (.badge-block) */
+
+        &.badge-block {
+
+          &.badge-block-below-screen-jumbo {
+
+            width: auto;
+            display: inline-flex;
+
+          }
+
+        }
+
+        & when not (@badge-rounded-padding-horizontal-scale = null) {
+
+          /* badge Rounded (.badge-rounded) */
+
+          &.badge-rounded {
+
+            & when not (@badge-padding-left-screen-jumbo = null) {
+
+              padding-left: @badge-padding-left-screen-jumbo * @badge-rounded-padding-horizontal-scale;
+
+              & when not (@badge-narrow-padding-left-scale = null) {
+
+                &.badge-narrow {
+
+                  padding-left: @badge-padding-left-screen-jumbo * @badge-narrow-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+              & when not (@badge-wide-padding-left-scale = null) {
+
+                &.badge-wide {
+
+                  padding-left: @badge-padding-left-screen-jumbo * @badge-wide-padding-left-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+            }
+
+            & when not (@badge-padding-right-screen-jumbo = null) {
+
+              padding-right: @badge-padding-right-screen-jumbo * @badge-rounded-padding-horizontal-scale;
+
+              & when not (@badge-narrow-padding-right-scale = null) {
+
+                &.badge-narrow {
+
+                  padding-right: @badge-padding-right-screen-jumbo * @badge-narrow-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+              & when not (@badge-wide-padding-right-scale = null) {
+
+                &.badge-wide {
+
+                  padding-right: @badge-padding-right-screen-jumbo * @badge-wide-padding-right-scale * @badge-rounded-padding-horizontal-scale;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        & when not (@badge-content-padding-horizontal-screen-jumbo = null) {
+
+          /* badge Content */
+
+          & > * {
+
+            padding-right: @badge-content-padding-horizontal-screen-jumbo;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
