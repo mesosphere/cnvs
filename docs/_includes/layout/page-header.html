@@ -25,11 +25,11 @@
 
 {% if (page.page-header.size == 'tall') %}
 
-  {% assign page-header-container-class = 'pod-tall' %}
+  {% assign page-header-container-class = 'pod' %}
 
 {% else %}
 
-  {% assign page-header-container-class = 'pod' %}
+  {% assign page-header-container-class = 'pod-short' %}
 
 {% endif %}
 
@@ -102,7 +102,7 @@ BEGIN: Page Header
 
                 {% if (page.page-header.parent.label != null) and (page.page-header.parent.label != empty) %}
 
-                  <p class="h6 page-header-subheadline flush text-uppercase {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %}">
+                  <p class="h6 page-header-subheadline flush {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %}">
 
                     {% if (page.page-header.parent.url != null) and (page.page-header.parent.url != empty) %}
 
