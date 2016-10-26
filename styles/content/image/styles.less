@@ -1,0 +1,75 @@
+& when (@image-enabled) {
+
+  /* Responsive Image */
+
+  .image-fluid[style] {
+
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  .image-fill[style] {
+
+    width: 100%;
+    height: auto;
+
+  }
+
+}
+
+
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@image-enabled) and (@image-screen-small-enabled) {
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@image-enabled) and (@image-screen-medium-enabled) {
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@image-enabled) and (@image-screen-large-enabled) {
+
+    }
+
+  }
+
+}
+
+
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@image-enabled) and (@image-screen-jumbo-enabled) {
+
+    }
+
+  }
+
+}
