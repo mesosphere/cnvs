@@ -223,11 +223,10 @@ gulp.task("canvas:styles", ["canvas:stylelint"], function () {
 
 gulp.task("canvas:stylelint", function () {
 
-  // return gulp.src(dirs.canvas.styles + '/**/*.less')
-  //   .pipe(stylelint({
-  //     reporters: [{formatter: 'string', console: true}]
-  //   }));
-  return true;
+  return gulp.src(dirs.canvas.styles + '/**/*.less')
+    .pipe(stylelint({
+      reporters: [{formatter: 'string', console: true}]
+    }));
 
 });
 
@@ -276,11 +275,10 @@ gulp.task("docs:styles", ["docs:stylelint"], function () {
 
 gulp.task("docs:stylelint", function () {
 
-  // return gulp.src(dirs.docs.styles + '/**/*.less')
-  //   .pipe(stylelint({
-  //     reporters: [{formatter: 'string', console: true}]
-  //   }));
-  return true;
+  return gulp.src(dirs.docs.styles + '/**/*.less')
+    .pipe(stylelint({
+      reporters: [{formatter: 'string', console: true}]
+    }));
 
 });
 
