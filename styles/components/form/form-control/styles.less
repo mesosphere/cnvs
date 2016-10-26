@@ -268,9 +268,9 @@
       vertical-align: middle;
       .triangle-base();
       .triangle-color("down", @form-control-color);
-      .property-variant(form-control, margin-top, null);
-      .property-variant(form-control, margin-right, null);
-      .property-variant(form-control, margin-left, null);
+      .property-variant(form-control, margin-right, padding-right, null, null);
+      .property-variant(form-control-caret, margin-top, null);
+      .property-variant(form-control-caret, margin-left, null);
 
       & when not (@form-control-caret-width = null) {
 
@@ -621,9 +621,9 @@
 
         &:after {
 
+          .property-variant(form-control, margin-right, padding-right, null, screen-small);
           .property-variant(form-control-caret, margin-top, screen-small);
           .property-variant(form-control-caret, margin-left, screen-small);
-          .property-variant(form-control, margin-right, padding-right, null, screen-small);
 
           & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-small = null) {
 
@@ -789,9 +789,9 @@
 
         select {
 
-          .element-text-size(form-control, screen-medium);
-          .element-spacing(form-control, null, screen-medium);
-          .property-variant(form-control, height, screen-medium);
+          .property-variant(form-control, margin-right, padding-right, null, screen-medium);
+          .property-variant(form-control-caret, margin-top, screen-medium);
+          .property-variant(form-control-caret, margin-left, screen-medium);
 
         }
 
@@ -977,9 +977,9 @@
 
         &:after {
 
+          .property-variant(form-control, margin-right, padding-right, null, screen-large);
           .property-variant(form-control-caret, margin-top, screen-large);
           .property-variant(form-control-caret, margin-left, screen-large);
-          .property-variant(form-control, margin-right, padding-right, null, screen-large);
 
           & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-large = null) {
 
@@ -1155,9 +1155,9 @@
 
         &:after {
 
+          .property-variant(form-control, margin-right, padding-right, null, screen-jumbo);
           .property-variant(form-control-caret, margin-top, screen-jumbo);
           .property-variant(form-control-caret, margin-left, screen-jumbo);
-          .property-variant(form-control, margin-right, padding-right, null, screen-jumbo);
 
           & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-jumbo = null) {
 

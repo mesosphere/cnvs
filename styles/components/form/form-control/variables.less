@@ -32,9 +32,9 @@
 @form-control-background-color:                                                 color-lighten(@neutral, 96);
 @form-control-background-gradient-color-top:                                    null;
 @form-control-background-gradient-color-bottom:                                 null;
-@form-control-border-width:                                                     0px;
-@form-control-border-color:                                                     null;
-@form-control-border-style:                                                     null;
+@form-control-border-width:                                                     1px;
+@form-control-border-color:                                                     color-lighten(@neutral, 96);
+@form-control-border-style:                                                     solid;
 @form-control-border-top-width:                                                 null;
 @form-control-border-top-color:                                                 null;
 @form-control-border-top-style:                                                 null;
@@ -95,7 +95,7 @@
 @form-control-active-background-gradient-color-top:                             null;
 @form-control-active-background-gradient-color-bottom:                          null;
 @form-control-active-border-width:                                              null;
-@form-control-active-border-color:                                              null;
+@form-control-active-border-color:                                              color-lighten(@neutral, 92);
 @form-control-active-border-style:                                              null;
 @form-control-active-border-top-width:                                          null;
 @form-control-active-border-top-color:                                          null;
@@ -191,7 +191,7 @@
 @form-control-inverse-background-gradient-color-top:                            null;
 @form-control-inverse-background-gradient-color-bottom:                         null;
 @form-control-inverse-border-width:                                             null;
-@form-control-inverse-border-color:                                             null;
+@form-control-inverse-border-color:                                             color-lighten(@neutral, 5);
 @form-control-inverse-border-style:                                             null;
 @form-control-inverse-border-top-width:                                         null;
 @form-control-inverse-border-top-color:                                         null;
@@ -253,7 +253,7 @@
 @form-control-inverse-active-background-gradient-color-top:                     null;
 @form-control-inverse-active-background-gradient-color-bottom:                  null;
 @form-control-inverse-active-border-width:                                      null;
-@form-control-inverse-active-border-color:                                      null;
+@form-control-inverse-active-border-color:                                      color-lighten(@neutral, 15);
 @form-control-inverse-active-border-style:                                      null;
 @form-control-inverse-active-border-top-width:                                  null;
 @form-control-inverse-active-border-top-color:                                  null;
@@ -341,10 +341,10 @@
 
 // Font Size
 
-@form-control-font-size:                                                        1.0rem;
+@form-control-font-size:                                                        14px;
 @form-control-font-size-screen-small:                                           null;
 @form-control-font-size-screen-medium:                                          null;
-@form-control-font-size-screen-large:                                           null;
+@form-control-font-size-screen-large:                                           15px;
 @form-control-font-size-screen-jumbo:                                           null;
 
 // Line Height
@@ -363,15 +363,15 @@
 
 // Height
 
-@form-control-height:                                                           38px;
+@form-control-height:                                                           36px;
 @form-control-height-screen-small:                                              null;
-@form-control-height-screen-medium:                                             1.1 * @form-control-height;
-@form-control-height-screen-large:                                              1.2 * @form-control-height;
+@form-control-height-screen-medium:                                             null;
+@form-control-height-screen-large:                                              38px;
 @form-control-height-screen-jumbo:                                              null;
 
 // Border Radius
 
-@form-control-border-radius:                                                    5px;
+@form-control-border-radius:                                                    4px;
 @form-control-border-radius-screen-small:                                       null;
 @form-control-border-radius-screen-medium:                                      null;
 @form-control-border-radius-screen-large:                                       null;
@@ -381,16 +381,16 @@
 
 @form-control-caret-width:                                                      9px;
 @form-control-caret-width-screen-small:                                         null;
-@form-control-caret-width-screen-medium:                                        1.1 * @form-control-caret-width;
-@form-control-caret-width-screen-large:                                         1.2 * @form-control-caret-width;
+@form-control-caret-width-screen-medium:                                        null;
+@form-control-caret-width-screen-large:                                         1.1 * @form-control-caret-width;
 @form-control-caret-width-screen-jumbo:                                         null;
 
 // Dropdown Caret Height
 
 @form-control-caret-height:                                                     5px;
 @form-control-caret-height-screen-small:                                        null;
-@form-control-caret-height-screen-medium:                                       1.1 * @form-control-caret-height;
-@form-control-caret-height-screen-large:                                        1.2 * @form-control-caret-height;
+@form-control-caret-height-screen-medium:                                       null;
+@form-control-caret-height-screen-large:                                        1.1 * @form-control-caret-height;
 @form-control-caret-height-screen-jumbo:                                        null;
 
 // Dropdown Caret Margin Top
@@ -403,18 +403,18 @@
 
 // Dropdown Caret Margin Left
 
-@form-control-caret-margin-left:                                                1.5rem * 0.25;
+@form-control-caret-margin-left:                                                1.0rem * 0.25;
 @form-control-caret-margin-left-screen-small:                                   null;
-@form-control-caret-margin-left-screen-medium:                                  1.1 * @form-control-caret-margin-left;
-@form-control-caret-margin-left-screen-large:                                   1.2 * @form-control-caret-margin-left;
+@form-control-caret-margin-left-screen-medium:                                  null;
+@form-control-caret-margin-left-screen-large:                                   null;
 @form-control-caret-margin-left-screen-jumbo:                                   null;
 
 // Form Control Group Add On Padding Horizontal
 
 @form-control-add-on-padding-horizontal:                                        1.0rem * 0.5;
 @form-control-add-on-padding-horizontal-screen-small:                           null;
-@form-control-add-on-padding-horizontal-screen-medium:                          1.1 * @form-control-add-on-padding-horizontal;
-@form-control-add-on-padding-horizontal-screen-large:                           1.2 * @form-control-add-on-padding-horizontal;
+@form-control-add-on-padding-horizontal-screen-medium:                          null;
+@form-control-add-on-padding-horizontal-screen-large:                           null;
 @form-control-add-on-padding-horizontal-screen-jumbo:                           null;
 
 /* Margin */
@@ -473,16 +473,16 @@
 
 @form-control-padding-left:                                                     1.0rem;
 @form-control-padding-left-screen-small:                                        null;
-@form-control-padding-left-screen-medium:                                       1.1 * @form-control-padding-left;
-@form-control-padding-left-screen-large:                                        1.2 * @form-control-padding-left;
+@form-control-padding-left-screen-medium:                                       null;
+@form-control-padding-left-screen-large:                                        null;
 @form-control-padding-left-screen-jumbo:                                        null;
 
 // Padding Right
 
 @form-control-padding-right:                                                    1.0rem;
 @form-control-padding-right-screen-small:                                       null;
-@form-control-padding-right-screen-medium:                                      1.1 * @form-control-padding-right;
-@form-control-padding-right-screen-large:                                       1.2 * @form-control-padding-right;
+@form-control-padding-right-screen-medium:                                      null;
+@form-control-padding-right-screen-large:                                       null;
 @form-control-padding-right-screen-jumbo:                                       null;
 
 /* Rounded form-control */
