@@ -1,123 +1,81 @@
 & when (@image-enabled) {
-
   /* Responsive Image */
 
   .image-fill {
-
     display: block;
     height: auto;
     width: 100%;
-
   }
 
   .image-fluid {
-
     display: block;
     height: auto;
     max-width: 100%;
-
   }
 
   /* Image Shape */
 
   .image-rounded {
-
     .property-variant(image-rounded, border-radius, null, null);
-
   }
 
   .image-circle {
-
     border-radius: 10000px;
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@image-enabled) and (@image-screen-small-enabled) {
-
       /* Image Shape */
 
       .image-rounded {
-
         .property-variant(image-rounded, border-radius, null, screen-small);
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@image-enabled) and (@image-screen-medium-enabled) {
-
       /* Image Shape */
 
       .image-rounded {
-
         .property-variant(image-rounded, border-radius, null, screen-medium);
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@image-enabled) and (@image-screen-large-enabled) {
-
       /* Image Shape */
 
       .image-rounded {
-
         .property-variant(image-rounded, border-radius, null, screen-large);
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@image-enabled) and (@image-screen-jumbo-enabled) {
-
       /* Image Shape */
 
       .image-rounded {
-
         .property-variant(image-rounded, border-radius, null, screen-jumbo);
-
       }
-
     }
-
   }
-
 }
