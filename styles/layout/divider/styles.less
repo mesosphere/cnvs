@@ -1,309 +1,211 @@
 & when (@divider-enabled) {
-
   /* Divider */
 
   hr,
   .divider {
-
-    display: block;
     .element-shape-style(divider);
     .element-spacing(divider, null, null);
-    .property-variant(divider, height, null, null);
     .property-variant(divider, border-radius, null, null);
+    .property-variant(divider, height, null, null);
+    display: block;
 
     /* Divider Inverse (.divider-inverse) */
 
     &.divider-inverse {
-
       .element-shape-style(divider-inverse);
-
     }
 
     /* Divider Layout Variants */
 
     &-shorter {
-
       .element-spacing(divider, shorter, null);
-
     }
 
     &-short {
-
       .element-spacing(divider, short, null);
-
     }
 
     &-tall {
-
       .element-spacing(divider, tall, null);
-
     }
 
     &-taller {
-
       .element-spacing(divider, taller, null);
-
     }
-
   }
 
   hr,
-  [class^="divider"],
-  [class*=" divider"] {
+  [class^='divider'],
+  [class*=' divider'] {
 
     &.flush {
-
-      padding-top: 0px;
-      padding-bottom: 0px;
-      padding-left: 0px;
-      padding-right: 0px;
-
+      padding: 0;
     }
 
     &.flush-vertical {
-
-      padding-top: 0px;
-      padding-bottom: 0px;
-
+      padding-bottom: 0;
+      padding-top: 0;
     }
 
     &.flush-horizontal {
-
-      padding-left: 0px;
-      padding-right: 0px;
-
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &.flush-top {
-
-      padding-top: 0px;
-
+      padding-top: 0;
     }
 
     &.flush-bottom {
-
-      padding-bottom: 0px;
-
+      padding-bottom: 0;
     }
 
     &.flush-left {
-
-      padding-left: 0px;
-
+      padding-left: 0;
     }
 
     &.flush-right {
-
-      padding-right: 0px;
-
+      padding-right: 0;
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@divider-enabled) and (@divider-screen-small-enabled) {
-
       /* Divider */
 
       hr,
       .divider {
-
         .element-spacing(divider, null, screen-small);
-        .property-variant(divider, height, null, screen-small);
         .property-variant(divider, border-radius, null, screen-small);
+        .property-variant(divider, height, null, screen-small);
 
         /* Divider Layout Variants */
 
         &-shorter {
-
           .element-spacing(divider, shorter, screen-small);
-
         }
 
         &-short {
-
           .element-spacing(divider, short, screen-small);
-
         }
 
         &-tall {
-
           .element-spacing(divider, tall, screen-small);
-
         }
 
         &-taller {
-
           .element-spacing(divider, taller, screen-small);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) and (@divider-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@divider-enabled) and (@divider-screen-medium-enabled) {
-
       /* Divider */
 
       hr,
       .divider {
-
         .element-spacing(divider, null, screen-medium);
-        .property-variant(divider, height, null, screen-medium);
         .property-variant(divider, border-radius, null, screen-medium);
+        .property-variant(divider, height, null, screen-medium);
 
         /* Divider Layout Variants */
 
         &-shorter {
-
           .element-spacing(divider, shorter, screen-medium);
-
         }
 
         &-short {
-
           .element-spacing(divider, short, screen-medium);
-
         }
 
         &-tall {
-
           .element-spacing(divider, tall, screen-medium);
-
         }
 
         &-taller {
-
           .element-spacing(divider, taller, screen-medium);
-
         }
-
       }
-
-
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) and (@divider-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@divider-enabled) and (@divider-screen-large-enabled) {
-
       /* Divider */
 
       hr,
       .divider {
-
         .element-spacing(divider, null, screen-large);
-        .property-variant(divider, height, null, screen-large);
         .property-variant(divider, border-radius, null, screen-large);
+        .property-variant(divider, height, null, screen-large);
 
         /* Divider Layout Variants */
 
         &-shorter {
-
           .element-spacing(divider, shorter, screen-large);
-
         }
 
         &-short {
-
           .element-spacing(divider, short, screen-large);
-
         }
 
         &-tall {
-
           .element-spacing(divider, tall, screen-large);
-
         }
 
         &-taller {
-
           .element-spacing(divider, taller, screen-large);
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) and (@divider-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@divider-enabled) and (@divider-screen-jumbo-enabled) {
-
       /* Divider */
 
       hr,
       .divider {
-
         .element-spacing(divider, null, screen-jumbo);
-        .property-variant(divider, height, null, screen-jumbo);
         .property-variant(divider, border-radius, null, screen-jumbo);
+        .property-variant(divider, height, null, screen-jumbo);
 
         /* Divider Layout Variants */
 
         &-shorter {
-
           .element-spacing(divider, shorter, screen-jumbo);
-
         }
 
         &-short {
-
           .element-spacing(divider, short, screen-jumbo);
-
         }
 
         &-tall {
-
           .element-spacing(divider, tall, screen-jumbo);
-
         }
 
         &-taller {
-
           .element-spacing(divider, taller, screen-jumbo);
-
         }
-
       }
-
     }
-
   }
-
 }

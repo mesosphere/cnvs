@@ -1,22 +1,17 @@
 .page-navigation {
-
   position: relative;
 
   .page-navigation-sticky {
-
-    height: 100%;
     display: block;
-
+    height: 100%;
   }
 
   ul.page-navigation-menu {
-
     .clearfix();
     .element-shape-style(page-navigation-menu);
-    margin-bottom: 0px;
+    margin-bottom: 0;
 
     li {
-
       display: block;
       .element-text-size(page-navigation-menu-item, null);
       .element-spacing(page-navigation-menu-item, null, null);
@@ -24,19 +19,10 @@
       .element-shape-style(page-navigation-menu-item);
 
       &:first-child {
-
-        margin-top: 0px;
-
-      }
-
-      > ul {
-
-        display: none;
-
+        margin-top: 0;
       }
 
       a {
-
         display: block;
         text-decoration: none !important;
         .element-spacing(page-navigation-menu-item-link, null, null);
@@ -44,64 +30,47 @@
         .element-shape-style(page-navigation-menu-item-link);
 
         &:hover {
-
           .element-text-style(page-navigation-menu-item-link-hover);
           .element-shape-style(page-navigation-menu-item-link-hover);
-
         }
 
         &:active {
-
           .element-text-style(page-navigation-menu-item-link-active);
           .element-shape-style(page-navigation-menu-item-link-active);
-
         }
-
       }
 
       &.selected:not(.open) {
-
         .element-shape-style(page-navigation-menu-item-selected);
-
       }
 
       &.selected,
       &.selected.open {
-
         .element-text-style(page-navigation-menu-item-selected);
 
         > a,
         > a:hover,
         > a:active {
-
           .element-text-style(page-navigation-menu-item-link-selected);
           .element-shape-style(page-navigation-menu-item-link-selected);
-
         }
-
       }
 
       &.open {
-
         .element-shape-style(page-navigation-submenu);
         .element-text-style(page-navigation-menu-item-open);
 
         > a {
-
           .element-text-style(page-navigation-menu-item-open);
           .element-shape-style(page-navigation-menu-item-open);
-
         }
-
       }
 
       > ul {
-
         display: block;
         .element-spacing(page-navigation-submenu, null, null);
 
         li {
-
           display: block;
           .element-text-size(page-navigation-submenu-item, null);
           .element-spacing(page-navigation-submenu-item, null, null);
@@ -113,16 +82,12 @@
             > a,
             > a:hover,
             > a:active {
-
               .element-text-style(page-navigation-submenu-item-link-selected);
               .element-shape-style(page-navigation-submenu-item-link-selected);
-
             }
-
           }
 
           > a {
-
             display: block;
             text-decoration: none !important;
             .element-spacing(page-navigation-submenu-item-link, null, null);
@@ -130,32 +95,20 @@
             .element-shape-style(page-navigation-submenu-item-link);
 
             &:hover {
-
               .element-text-style(page-navigation-submenu-item-link-hover);
               .element-shape-style(page-navigation-submenu-item-link-hover);
-
             }
 
             &:active {
-
               .element-text-style(page-navigation-submenu-item-link-active);
               .element-shape-style(page-navigation-submenu-item-link-active);
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
@@ -168,48 +121,31 @@
         ul.page-navigation-menu {
 
           li {
-
             .element-text-size(page-navigation-submenu-item, screen-small);
             .element-spacing(page-navigation-menu-item, null, screen-small);
 
             a {
-
               .element-spacing(page-navigation-menu-item-link, null, screen-small);
-
             }
-
           }
 
           > ul {
-
             .element-spacing(page-navigation-submenu, null, screen-small);
 
             li {
-
               .element-text-size(page-navigation-submenu-item, screen-small);
               .element-spacing(page-navigation-submenu-item, null, screen-small);
 
               a {
-
                 .element-spacing(page-navigation-submenu-item-link, null, screen-small);
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
@@ -222,105 +158,70 @@
         ul.page-navigation-menu {
 
           li {
-
             .element-text-size(page-navigation-submenu-item, screen-medium);
             .element-spacing(page-navigation-menu-item, null, screen-medium);
 
             a {
-
               .element-spacing(page-navigation-menu-item-link, null, screen-medium);
-
             }
-
           }
 
           > ul {
-
             .element-spacing(page-navigation-submenu, null, screen-medium);
 
             li {
-
               .element-text-size(page-navigation-submenu-item, screen-medium);
               .element-spacing(page-navigation-submenu-item, null, screen-medium);
 
               a {
-
                 .element-spacing(page-navigation-submenu-item-link, null, screen-medium);
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     .page-navigation {
-
+      box-shadow: -1px 0 0 0 fade(@neutral, 10%);
       flex-basis: 250px;
-      box-shadow: -1px 0px 0px 0px hsla(hue(@neutral), saturation(@neutral), lightness(@neutral), 0.1);
 
       & when (@page-navigation-menu-screen-large-enabled) {
 
         ul.page-navigation-menu {
 
           li {
-
             .element-text-size(page-navigation-menu-item, screen-large);
             .element-spacing(page-navigation-menu-item, null, screen-large);
 
             a {
-
               .element-spacing(page-navigation-menu-item-link, null, screen-large);
-
             }
-
           }
 
           > ul {
-
             .element-spacing(page-navigation-submenu, null, screen-large);
 
             li {
-
               .element-text-size(page-navigation-submenu-item, screen-large);
               .element-spacing(page-navigation-submenu-item, null, screen-large);
 
               a {
-
                 .element-spacing(page-navigation-submenu-item-link, null, screen-large);
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
@@ -329,54 +230,36 @@
     .page-navigation {
 
       & when (@page-navigation-menu-screen-jumbo-enabled) {
-
         flex-basis: 300px;
 
         ul.page-navigation-menu {
 
           li {
-
             .element-text-size(page-navigation-menu-item, screen-jumbo);
             .element-spacing(page-navigation-menu-item, null, screen-jumbo);
 
             a {
-
               .element-spacing(page-navigation-menu-item-link, null, screen-jumbo);
-
             }
-
           }
 
           > ul {
-
             .element-spacing(page-navigation-submenu, null, screen-jumbo);
 
             li {
-
               .element-text-size(page-navigation-submenu-item, screen-jumbo);
               .element-spacing(page-navigation-submenu-item, null, screen-jumbo);
 
               a {
-
                 .element-spacing(page-navigation-submenu-item-link, null, screen-jumbo);
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 /*
  * page-navigation Menu
@@ -410,8 +293,6 @@
 @page-navigation-menu-screen-medium-enabled:                                    @layout-screen-medium-enabled;
 @page-navigation-menu-screen-large-enabled:                                     @layout-screen-large-enabled;
 @page-navigation-menu-screen-jumbo-enabled:                                     @layout-screen-jumbo-enabled;
-
-
 
 /*
  * page-navigation Menu Item
@@ -593,8 +474,6 @@
 @page-navigation-menu-item-padding-right-screen-large:                          null;//@container-fluid-gutter-width-screen-large / @container-fluid-gutter-width;
 @page-navigation-menu-item-padding-right-screen-jumbo:                          null;//@container-fluid-gutter-width-screen-jumbo / @container-fluid-gutter-width;
 
-
-
 /*
  * page-navigation Menu Item Link
  */
@@ -721,8 +600,6 @@
 @page-navigation-menu-item-link-selected-border-left-style:                     null;
 @page-navigation-menu-item-link-selected-shadow:                                null;
 
-
-
 /* Layout */
 
 // Margin Top
@@ -788,8 +665,6 @@
 @page-navigation-menu-item-link-padding-right-screen-medium:                    null;//@container-fluid-gutter-width-screen-medium / @container-fluid-gutter-width;
 @page-navigation-menu-item-link-padding-right-screen-large:                     null;//@container-fluid-gutter-width-screen-large / @container-fluid-gutter-width;
 @page-navigation-menu-item-link-padding-right-screen-jumbo:                     null;//@container-fluid-gutter-width-screen-jumbo / @container-fluid-gutter-width;
-
-
 
 /*
  * page-navigation Submenu
@@ -882,8 +757,6 @@
 @page-navigation-submenu-padding-right-screen-medium:                           null;
 @page-navigation-submenu-padding-right-screen-large:                            null;
 @page-navigation-submenu-padding-right-screen-jumbo:                            null;
-
-
 
 /*
  * page-navigation Submenu Item
@@ -993,7 +866,7 @@
 
 // Line Height
 
-@page-navigation-submenu-item-line-height:                                      1.0rem;
+@page-navigation-submenu-item-line-height:                                      1rem;
 @page-navigation-submenu-item-line-height-screen-small:                         null;
 @page-navigation-submenu-item-line-height-screen-medium:                        null;
 @page-navigation-submenu-item-line-height-screen-large:                         null;
@@ -1064,8 +937,6 @@
 @page-navigation-submenu-item-padding-right-screen-medium:                      null;//@container-fluid-gutter-width-screen-medium / @container-fluid-gutter-width;
 @page-navigation-submenu-item-padding-right-screen-large:                       null;//@container-fluid-gutter-width-screen-large / @container-fluid-gutter-width;
 @page-navigation-submenu-item-padding-right-screen-jumbo:                       null;//@container-fluid-gutter-width-screen-jumbo / @container-fluid-gutter-width;
-
-
 
 /*
  * page-navigation Submenu Link

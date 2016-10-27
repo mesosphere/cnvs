@@ -1,101 +1,69 @@
 /* Triangle */
 
 .triangle-base() {
-
+  border-style: solid;
   content: '';
   display: inline-block;
-  width: 0;
   height: 0;
-  border-style: solid;
-  line-height: 0px;
-
+  line-height: 0;
+  width: 0;
 }
 
 .triangle(@direction, @size, @color) {
-
   .triangle(@direction, @size * 2, @size, @color);
-
 }
 
 .triangle(@direction, @width, @height, @color) when (@direction = 'up') {
-
   .triangle-base();
-  border-width: 0 (@width / 2) @height (@width / 2);
   border-color: transparent transparent @color transparent;
-  _border-color: #000000 #000000 @color #000000;
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-
+  border-width: 0 (@width / 2) @height (@width / 2);
 }
 
 .triangle(@direction, @width, @height, @color) when (@direction = 'down') {
-
   .triangle-base();
-  border-width: @height (@width / 2) 0 (@width / 2);
   border-color: @color transparent transparent transparent;
-  _border-color: @color #000000 #000000 #000000;
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-
+  border-width: @height (@width / 2) 0 (@width / 2);
 }
 
 .triangle(@direction, @width, @height, @color) when (@direction = 'left') {
-
   .triangle-base();
-  border-width: (@height / 2) @width (@height / 2) 0;
   border-color: transparent @color transparent transparent;
-  _border-color: #000000 @color #000000 #000000;
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-
+  border-width: (@height / 2) @width (@height / 2) 0;
 }
 
 .triangle(@direction, @width, @height, @color) when (@direction = 'right') {
-
   .triangle-base();
-  border-width: (@height / 2) 0 (@height / 2) @width;
   border-color: transparent transparent transparent @color;
-  _border-color: #000000 #000000 #000000 @color;
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-
+  border-width: (@height / 2) 0 (@height / 2) @width;
 }
 
 /* Triangle Size */
 
 .triangle-size (@direction, @width, @height) when (@direction = 'up') {
-
   border-width: 0 (@width / 2) @height (@width / 2);
-
 }
 
 .triangle-size (@direction, @width, @height) when (@direction = 'down') {
-
   border-width: @height (@width / 2) 0 (@width / 2);
-
 }
 
 .triangle-size (@direction, @width, @height) when (@direction = 'left') {
-
   border-width: (@height / 2) @width (@height / 2) 0;
-
 }
 
 .triangle-size (@direction, @width, @height) when (@direction = 'right') {
-
   border-width: (@height / 2) 0 (@height / 2) @width;
-
 }
 
 .triangle-size-width (@direction, @width) when (@direction = 'down') {
-
-  border-right-width: @width / 2;
+  border-bottom-width: 0;
   border-left-width: @width / 2;
-  border-bottom-width: 0px;
-
+  border-right-width: @width / 2;
 }
 
 .triangle-size-height (@direction, @height) when (@direction = 'down') {
-
+  border-bottom-width: 0;
   border-top-width: @height;
-  border-bottom-width: 0px;
-
 }
 
 /* Triangle Color */
@@ -103,43 +71,27 @@
 .triangle-color(@direction, @color) when (@direction = 'up') {
 
   & when not (@color = null) {
-
     border-color: transparent transparent @color transparent;
-    _border-color: #000000 #000000 @color #000000;
-
   }
-
 }
 
 .triangle-color(@direction, @color) when (@direction = 'down') {
 
   & when not (@color = null) {
-
     border-color: @color transparent transparent transparent;
-    _border-color: @color #000000 #000000 #000000;
-
   }
-
 }
 
 .triangle-color(@direction, @color) when (@direction = 'left') {
 
   & when not (@color = null) {
-
     border-color: transparent @color transparent transparent;
-    _border-color: #000000 @color #000000 #000000;
-
   }
-
 }
 
 .triangle-color(@direction, @color) when (@direction = 'right') {
 
   & when not (@color = null) {
-
     border-color: transparent transparent transparent @color;
-    _border-color: #000000 #000000 #000000 @color;
-
   }
-
 }

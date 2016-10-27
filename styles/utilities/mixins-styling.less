@@ -1,7 +1,6 @@
 /* Shape Style Variant */
 
 .element-shape-style (@element: '') {
-
   .property-variant(@element, background-color);
   .property-variant(@element, border-width);
   .property-variant(@element, border-color);
@@ -20,13 +19,10 @@
   .property-variant(@element, border-left-style);
   .property-variant(@element, box-shadow, shadow, null, null);
 
-  @element-background-gradient-color-top: "@{element}-background-gradient-color-top";
-  @element-background-gradient-color-bottom: "@{element}-background-gradient-color-bottom";
+  @element-background-gradient-color-top: '@{element}-background-gradient-color-top';
+  @element-background-gradient-color-bottom: '@{element}-background-gradient-color-bottom';
 
   & when not (@@element-background-gradient-color-top = null) and not (@@element-background-gradient-color-bottom = null) {
-
     #gradient > .vertical(@@element-background-gradient-color-top, @@element-background-gradient-color-bottom);
-
   }
-
-};
+}

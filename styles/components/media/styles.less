@@ -1,72 +1,24 @@
 & when (@media-enabled) {
-
   /* Image */
 
   .image-responsive {
-
     display: block;
-    width: 100%;
     height: auto;
-
+    width: 100%;
   }
 
   .image-border {
-
     position: relative;
 
     &:after {
-
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
       content: '';
       display: block;
-      width: 100%;
       height: 100%;
+      left: 0;
       position: absolute;
-      top: 0px;
-      left: 0px;
-      box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-
+      top: 0;
+      width: 100%;
     }
-
   }
-
-}
-
-
-
-& when (@layout-screen-small-enabled) {
-
-  @media (min-width: @layout-screen-small-min-width) {
-
-  }
-
-}
-
-
-
-& when (@layout-screen-medium-enabled) {
-
-  @media (min-width: @layout-screen-medium-min-width) {
-
-  }
-
-}
-
-
-
-& when (@layout-screen-large-enabled) {
-
-  @media (min-width: @layout-screen-large-min-width) {
-
-  }
-
-}
-
-
-
-& when (@layout-screen-jumbo-enabled) {
-
-  @media (min-width: @layout-screen-jumbo-min-width) {
-
-  }
-
 }

@@ -1,315 +1,225 @@
 & when (@dropdown-menu-list-enabled) {
-
   /* Dropdown Menu List (.dropdown-menu-list) */
 
   .dropdown-menu-list {
-
-    .element-text-size(dropdown-menu-list, null);
-    .element-spacing(dropdown-menu-list, null, null);
-    .element-text-style(dropdown-menu-list);
     .element-shape-style(dropdown-menu-list);
+    .element-spacing(dropdown-menu-list, null, null);
+    .element-text-size(dropdown-menu-list, null);
+    .element-text-style(dropdown-menu-list);
 
     &:last-child {
-
-      margin-bottom: 0px;
-
+      margin-bottom: 0;
     }
 
     li {
-
-      .element-text-size(dropdown-menu-list-item, null);
-      .element-spacing(dropdown-menu-list-item, null, null);
-      .element-text-style(dropdown-menu-list-item);
       .element-shape-style(dropdown-menu-list-item);
+      .element-spacing(dropdown-menu-list-item, null, null);
+      .element-text-size(dropdown-menu-list-item, null);
+      .element-text-style(dropdown-menu-list-item);
       .property-variant(dropdown-menu-list-item, border-radius, null);
 
       &:before {
-
         display: none;
-
       }
 
       a {
-
-        display: block;
-        .element-text-size(dropdown-menu-list-item-link, null);
-        .element-spacing(dropdown-menu-list-item-link, null, null);
-        .element-text-style(dropdown-menu-list-item-link);
         .element-shape-style(dropdown-menu-list-item-link);
-
+        .element-spacing(dropdown-menu-list-item-link, null, null);
+        .element-text-size(dropdown-menu-list-item-link, null);
+        .element-text-style(dropdown-menu-list-item-link);
+        display: block;
       }
 
       &:hover {
 
         a {
-
-          .element-text-style(dropdown-menu-list-item-link-hover);
           .element-shape-style(dropdown-menu-list-item-link-hover);
-
+          .element-text-style(dropdown-menu-list-item-link-hover);
         }
-
       }
 
       &:active,
       &.active {
 
         a {
-
-          .element-text-style(dropdown-menu-list-item-link-active);
           .element-shape-style(dropdown-menu-list-item-link-active);
-
+          .element-text-style(dropdown-menu-list-item-link-active);
         }
-
       }
 
       &.selected {
 
         a {
-
           .element-text-style(dropdown-menu-list-item-link-selected);
           .element-shape-style(dropdown-menu-list-item-link-selected);
-
         }
-
       }
 
       &:disabled,
       &.disabled {
 
         a {
-
-          cursor: default;
-          .element-text-style(dropdown-menu-list-item-link-disabled);
           .element-shape-style(dropdown-menu-list-item-link-disabled);
-
+          .element-text-style(dropdown-menu-list-item-link-disabled);
+          cursor: default;
         }
-
       }
-
     }
-
   }
 
   /* Dropdown Menu List Inverse (.dropdown-menu-list-inverse) */
 
   .dropdown-menu-list-inverse,
   .dropdown-menu-inverse .dropdown-menu-list {
-
-    .element-text-style(dropdown-menu-list-inverse);
     .element-shape-style(dropdown-menu-list-inverse);
+    .element-text-style(dropdown-menu-list-inverse);
 
     li {
-
-      .element-text-style(dropdown-menu-list-item-inverse);
       .element-shape-style(dropdown-menu-list-item-inverse);
+      .element-text-style(dropdown-menu-list-item-inverse);
 
       a {
-
-        .element-text-style(dropdown-menu-list-item-link-inverse);
         .element-shape-style(dropdown-menu-list-item-link-inverse);
-
+        .element-text-style(dropdown-menu-list-item-link-inverse);
       }
 
       &:hover {
 
         a {
-
-          .element-text-style(dropdown-menu-list-item-link-inverse-hover);
           .element-shape-style(dropdown-menu-list-item-link-inverse-hover);
-
+          .element-text-style(dropdown-menu-list-item-link-inverse-hover);
         }
-
       }
 
       &:active,
       &.active {
 
         a {
-
-          .element-text-style(dropdown-menu-list-item-link-inverse-active);
           .element-shape-style(dropdown-menu-list-item-link-inverse-active);
-
+          .element-text-style(dropdown-menu-list-item-link-inverse-active);
         }
-
       }
 
       &.selected {
 
         a {
-
-          .element-text-style(dropdown-menu-list-item-link-inverse-selected);
           .element-shape-style(dropdown-menu-list-item-link-inverse-selected);
-
+          .element-text-style(dropdown-menu-list-item-link-inverse-selected);
         }
-
       }
 
       &:disabled,
       &.disabled {
 
         a {
-
-          .element-text-style(dropdown-menu-list-item-link-inverse-disabled);
           .element-shape-style(dropdown-menu-list-item-link-inverse-disabled);
-
+          .element-text-style(dropdown-menu-list-item-link-inverse-disabled);
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-small-enabled){
-
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-small-enabled) {
       /* Dropdown Menu List (.dropdown-menu-list) */
 
       .dropdown-menu-list {
-
-        .element-text-size(dropdown-menu-list, screen-small);
         .element-spacing(dropdown-menu-list, null, screen-small);
+        .element-text-size(dropdown-menu-list, screen-small);
 
         li {
-
-          .element-text-size(dropdown-menu-list-item, screen-small);
           .element-spacing(dropdown-menu-list-item, null, screen-small);
+          .element-text-size(dropdown-menu-list-item, screen-small);
           .property-variant(dropdown-menu-list-item, border-radius, screen-small);
 
           a {
-
-            .element-text-size(dropdown-menu-list-item-link, screen-small);
             .element-spacing(dropdown-menu-list-item-link, null, screen-small);
-
+            .element-text-size(dropdown-menu-list-item-link, screen-small);
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-medium-enabled){
-
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-medium-enabled) {
       /* Dropdown Menu List (.dropdown-menu-list) */
 
       .dropdown-menu-list {
-
-        .element-text-size(dropdown-menu-list, screen-medium);
         .element-spacing(dropdown-menu-list, null, screen-medium);
+        .element-text-size(dropdown-menu-list, screen-medium);
 
         li {
-
-          .element-text-size(dropdown-menu-list-item, screen-medium);
           .element-spacing(dropdown-menu-list-item, null, screen-medium);
+          .element-text-size(dropdown-menu-list-item, screen-medium);
           .property-variant(dropdown-menu-list-item, border-radius, screen-medium);
 
           a {
-
-            .element-text-size(dropdown-menu-list-item-link, screen-medium);
             .element-spacing(dropdown-menu-list-item-link, null, screen-medium);
-
+            .element-text-size(dropdown-menu-list-item-link, screen-medium);
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-large-enabled){
-
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-large-enabled) {
       /* Dropdown Menu List (.dropdown-menu-list) */
 
       .dropdown-menu-list {
-
-        .element-text-size(dropdown-menu-list, screen-large);
         .element-spacing(dropdown-menu-list, null, screen-large);
+        .element-text-size(dropdown-menu-list, screen-large);
 
         li {
-
-          .element-text-size(dropdown-menu-list-item, screen-large);
           .element-spacing(dropdown-menu-list-item, null, screen-large);
+          .element-text-size(dropdown-menu-list-item, screen-large);
           .property-variant(dropdown-menu-list-item, border-radius, screen-large);
 
           a {
-
-            .element-text-size(dropdown-menu-list-item-link, screen-large);
             .element-spacing(dropdown-menu-list-item-link, null, screen-large);
-
+            .element-text-size(dropdown-menu-list-item-link, screen-large);
           }
-
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
-    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-jumbo-enabled){
-
+    & when (@dropdown-menu-list-enabled) and (@dropdown-menu-list-screen-jumbo-enabled) {
       /* Dropdown Menu List (.dropdown-menu-list) */
 
       .dropdown-menu-list {
-
-        .element-text-size(dropdown-menu-list, screen-jumbo);
         .element-spacing(dropdown-menu-list, null, screen-jumbo);
+        .element-text-size(dropdown-menu-list, screen-jumbo);
 
         li {
-
-          .element-text-size(dropdown-menu-list-item, screen-jumbo);
           .element-spacing(dropdown-menu-list-item, null, screen-jumbo);
+          .element-text-size(dropdown-menu-list-item, screen-jumbo);
           .property-variant(dropdown-menu-list-item, border-radius, screen-jumbo);
 
           a {
-
-            .element-text-size(dropdown-menu-list-item-link, screen-jumbo);
             .element-spacing(dropdown-menu-list-item-link, null, screen-jumbo);
-
+            .element-text-size(dropdown-menu-list-item-link, screen-jumbo);
           }
-
         }
-
       }
-
     }
-
   }
-
 }

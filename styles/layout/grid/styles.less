@@ -1,5 +1,4 @@
 & when (@grid-enabled) {
-
   /* Grid */
 
   .grid(null, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
@@ -7,17 +6,13 @@
   /* Row */
 
   .row(null);
-
 }
-
-
 
 & when (@layout-screen-small-enabled) {
 
   @media (min-width: @layout-screen-small-min-width) {
 
     & when not (@grid-enabled = null) and not (@grid-screen-small-enabled = null) {
-
       /* Grid */
 
       .grid(screen-small, @grid-columns-count, @grid-gutter-width-screen-small, @grid-gutter-height-screen-small);
@@ -30,28 +25,19 @@
 
       .column-overflow {
 
-        &[class*="column-small-"] {
-
-          margin-top: 0px;
-
+        &[class*='column-small-'] {
+          margin-top: 0;
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-medium-enabled) {
 
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when not (@grid-enabled = null) and not (@grid-screen-medium-enabled = null) {
-
       /* Grid */
 
       .grid(screen-medium, @grid-columns-count, @grid-gutter-width-screen-medium, @grid-gutter-height-screen-medium);
@@ -64,28 +50,19 @@
 
       .column-overflow {
 
-        &[class*="column-medium-"] {
-
-          margin-top: 0px;
-
+        &[class*='column-medium-'] {
+          margin-top: 0;
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-large-enabled) {
 
   @media (min-width: @layout-screen-large-min-width) {
 
     & when not (@grid-enabled = null) and not (@grid-screen-large-enabled = null) {
-
       /* Grid */
 
       .grid(screen-large, @grid-columns-count, @grid-gutter-width-screen-large, @grid-gutter-height-screen-large);
@@ -98,28 +75,19 @@
 
       .column-overflow {
 
-        &[class*="column-large-"] {
-
-          margin-top: 0px;
-
+        &[class*='column-large-'] {
+          margin-top: 0;
         }
-
       }
-
     }
-
   }
-
 }
-
-
 
 & when (@layout-screen-jumbo-enabled) {
 
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when not (@grid-enabled = null) and not (@grid-screen-jumbo-enabled = null) {
-
       /* Grid */
 
       .grid(screen-jumbo, @grid-columns-count, @grid-gutter-width-screen-jumbo, @grid-gutter-height-screen-jumbo);
@@ -132,16 +100,10 @@
 
       .column-overflow {
 
-        &[class*="column-jumbo-"] {
-
-          margin-top: 0px;
-
+        &[class*='column-jumbo-'] {
+          margin-top: 0;
         }
-
       }
-
     }
-
   }
-
 }

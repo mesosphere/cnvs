@@ -26,58 +26,42 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
 
     &-top,
     &-top@{class-suffix} {
-
       .property-variant(@class, margin-top, @modifier, @screen-size);
       .property-variant(@class, padding-top, @modifier, @screen-size);
-
     }
 
     &-bottom,
     &-bottom@{class-suffix} {
-
       .property-variant(@class, margin-bottom, @modifier, @screen-size);
       .property-variant(@class, padding-bottom, @modifier, @screen-size);
-
     }
 
     &-left,
     &-left@{class-suffix} {
-
       .property-variant(@class, margin-left, @modifier, @screen-size);
       .property-variant(@class, padding-left, @modifier, @screen-size);
-
     }
 
     &-right,
     &-right@{class-suffix} {
-
       .property-variant(@class, margin-right, @modifier, @screen-size);
       .property-variant(@class, padding-right, @modifier, @screen-size);
-
     }
-
   }
-
 }
 
 /* Property Variant */
 
 .property-variant (@class, @property) {
-
   .property-variant (@class, @property, @property, null, null);
-
 }
 
 .property-variant (@class, @property, @screen-size) {
-
   .property-variant (@class, @property, @property, null, @screen-size);
-
 }
 
 .property-variant (@class, @property, @modifier, @screen-size) {
-
   .property-variant (@class, @property, @property, @modifier, @screen-size);
-
 }
 
 .property-variant (@class, @property, @variable, @modifier, @screen-size) {
@@ -91,21 +75,15 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
     & when (@screen-size = null) {
 
       & when (@modifier = null) {
-
         @{property}: @@element-property;
-
       }
 
       & when not (@modifier = null) {
 
         & when not (@@element-modifier-property-scale = null) {
-
           @{property}: @@element-property * @@element-modifier-property-scale;
-
         }
-
       }
-
     }
 
     & when not (@screen-size = null) {
@@ -113,213 +91,149 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
       & when not (@@element-property-screen-size = null) {
 
         & when (@modifier = null) {
-
           @{property}: @@element-property-screen-size;
-
         }
 
         & when not (@modifier = null) {
 
           & when not (@@element-modifier-property-scale = null) {
-
             @{property}: @@element-property-screen-size * @@element-modifier-property-scale;
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
 
 /* Clearfix */
 
 .clearfix {
+  zoom: 1;
 
-    *zoom: 1;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    line-height: 0;
+  }
 
-    &:before,
-    &:after {
-
-        display: table;
-        content: "";
-        line-height: 0;
-
-    }
-
-    &:after {
-
-        clear: both;
-
-    }
-
+  &:after {
+    clear: both;
+  }
 }
 
 /* IE7 Fixes */
 
 .ie7-inline-block() {
-
-    *display: inline;
-    *zoom: 1;
-
+  display: inline;
+  zoom: 1;
 }
 
 .ie7-restore-left-whitespace() {
+  margin-left: 0.3em;
 
-    *margin-left: .3em;
-
-    &:first-child {
-
-        *margin-left: 0;
-
-    }
-
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .ie7-restore-right-whitespace() {
-
-    *margin-right: .3em;
-
+  margin-right: 0.3em;
 }
 
 /* Focus */
 
 .tab-focus() {
-
-    outline: thin dotted #333;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-
+  outline: thin dotted #333;
+  outline-offset: -2px;
 }
 
 /* Center Block Elements */
 
 .center-block() {
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Sizing */
 
 .size(@width; @height) {
-
-    width: @width;
-    height: @height;
-
+  height: @height;
+  width: @width;
 }
 
 .square(@size) {
-
-    .size(@size; @size);
-
+  .size(@size; @size);
 }
 
-.backface-visibility(@visibility){
-
+.backface-visibility(@visibility) {
   backface-visibility: @visibility;
-
 }
 
 .background-clip(@clip) {
-
   background-clip: @clip;
-
 }
 
 .background-size(@size) {
-
   background-size: @size;
-
 }
 
 .box-sizing-padding-vertical(@height, @content-height) when (@height > @content-height) {
-
-  padding-top: ((@height - @content-height) / 2);
   padding-bottom: ((@height - @content-height) / 2);
-
+  padding-top: ((@height - @content-height) / 2);
 }
 
 .box-sizing-padding-vertical(@height, @content-height) when (@height <= @content-height) {
-
-  padding-top: 0px;
-  padding-bottom: 0px;
-
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 /* Transformations */
 
 .transform(@transform) {
-
   transform: @transform;
-
 }
 
 .rotate(@degrees) {
-
   transform: rotate(@degrees);
-
 }
 
 .scale(@ratio) {
-
   transform: scale(@ratio);
-
 }
 
 .scale(@ratio-x, @ratio-y) {
-
   transform: scale(@ratio-x, @ratio-y);
-
 }
 
 .scale3d(@ratio-x, @ratio-y, @ratio-z) {
-
   transform: scale3d(@ratio-x, @ratio-y, @ratio-z);
-
 }
 
 .translate(@x, @y) {
-
   transform: translate(@x, @y);
-
 }
 
 .translateX(@x) {
-
   transform: translateX(@x);
-
 }
 
 .translateY(@y) {
-
   transform: translateY(@y);
-
 }
 
 .translateZ(@z) {
-
   transform: translateZ(@z);
-
 }
 
 .skew(@x, @y) {
-
-  transform: skew(@x, @y);
   backface-visibility: hidden;
-
+  transform: skew(@x, @y);
 }
 
 .translate3d(@x, @y, @z) {
-
   transform: translate3d(@x, @y, @z);
-
 }
 
 /* Generate Index Suffixed Properties for Flex Items */
@@ -329,16 +243,10 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
   @class-name: replace(e('@{class}-@{index}-@{screen}'), '-null', '');
 
   .@{class-name} {
-
     @{property}: @index;
-
   }
 
   .flex-item-property-loop(@class, @property, @screen, @index - 1, @end);
-}
-
-.flex-item-property-loop (@class, @property, @screen, @index, @end) when (@index < @end) {
-
 }
 
 /* Row */
@@ -349,39 +257,31 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
 
     @screen: replace(replace(@screen-size, 'screen-', '-screen-'), 'null', '');
 
-    @gutter-width: "grid-gutter-width@{screen}";
-    @gutter-height: "grid-gutter-height@{screen}";
+    @gutter-width: 'grid-gutter-width@{screen}';
+    @gutter-height: 'grid-gutter-height@{screen}';
 
     & when not (@@gutter-width = null) {
-
       margin-left: @@gutter-width * -0.5;
       margin-right: @@gutter-width * -0.5;
-
     }
 
     & when not (@@gutter-height = null) {
-
       //margin-top: @@gutter-height * -0.5;
       //margin-bottom: @@gutter-height * -0.5;
-
     }
 
     &:extend(.clearfix all);
-
   }
-
 }
 
 /* Grid */
 
 .grid (@screen-size, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) {
-
   .calculate-grid-columns-padding(@screen-size, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, width);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, push);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, pull);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, offset);
-
 }
 
 /* Column Padding */
@@ -390,59 +290,48 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
 
   .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) when (@index = 1) {
 
-    @item: ~".column-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}, .column-jumbo-@{index}";
+    @item: ~'.column-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}, .column-jumbo-@{index}';
 
     .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @item);
-
   }
 
   .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index =< @grid-columns-count) {
 
-    @item: ~".column-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}, .column-jumbo-@{index}";
+    @item: ~'.column-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}, .column-jumbo-@{index}';
 
-    .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, ~"@{list}, @{item}");
-
+    .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, ~'@{list}, @{item}');
   }
 
   .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index > @grid-columns-count) and (@screen-size = null) {
 
     @{list} {
-
-      position: relative;
       min-height: 1px;
-      padding-left:  (@grid-gutter-width / 2);
+      padding-left: (@grid-gutter-width / 2);
       padding-right: (@grid-gutter-width / 2);
+      position: relative;
       //margin-top:  (@grid-gutter-width / 2);
       //margin-bottom: (@grid-gutter-width / 2);
-
     }
-
   }
 
   .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index > @grid-columns-count) {
 
     @{list} {
-
-      padding-left:  (@grid-gutter-width / 2);
+      padding-left: (@grid-gutter-width / 2);
       padding-right: (@grid-gutter-width / 2);
       //margin-top:  (@grid-gutter-width / 2);
       //margin-bottom: (@grid-gutter-width / 2);
-
     }
-
   }
 
   .column(@screen-size, 1, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
-
 }
 
 /* Calculate Grid Columns */
 
 .calculate-grid-columns(@screen-size, @column-index, @grid-columns-count, @attribute) when (@column-index >= 0) {
-
   .calculate-grid-column(@screen-size, @column-index, @grid-columns-count, @attribute);
   .calculate-grid-columns(@screen-size, (@column-index - 1), @grid-columns-count, @attribute);
-
 }
 
 /* Calculate Grid Column Width */
@@ -452,12 +341,9 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
   @screen: replace(replace(@screen-size, 'screen-', '-'), 'null', '');
 
   .column@{screen}-@{column-index} {
-
     float: left;
     width: percentage((@column-index / @grid-columns-count));
-
   }
-
 }
 
 /* Calculate Grid Column Push */
@@ -469,23 +355,16 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
   & when (@column-index = 0) {
 
     .column@{screen}-push-@{column-index} {
-
       left: auto;
-
     }
-
   }
 
   & when (@column-index > 0) {
 
     .column@{screen}-push-@{column-index} {
-
       left: percentage((@column-index / @grid-columns-count));
-
     }
-
   }
-
 }
 
 /* Calculate Grid Column Pull */
@@ -497,23 +376,16 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
   & when (@column-index = 0) {
 
     .column@{screen}-pull-@{column-index} {
-
       right: auto;
-
     }
-
   }
 
   & when (@column-index > 0) {
 
     .column@{screen}-pull-@{column-index} {
-
       right: -1 * percentage((@column-index / @grid-columns-count));
-
     }
-
   }
-
 }
 
 /* Calculate Grid Column Push */
@@ -525,75 +397,47 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
   & when (@column-index > 0) {
 
     .column@{screen}-offset-@{column-index} {
-
       margin-left: percentage((@column-index / @grid-columns-count));
-
     }
-
   }
-
 }
 
 /* Single Corner Border Radius */
 
 .border-top-left-radius(@radius) {
-
-  -webkit-border-top-left-radius: @radius;
-  -moz-border-radius-topleft: @radius;
   border-top-left-radius: @radius;
-
 }
 
 .border-top-right-radius(@radius) {
-
-  -webkit-border-top-right-radius: @radius;
-  -moz-border-radius-topright: @radius;
   border-top-right-radius: @radius;
-
 }
 
 .border-bottom-right-radius(@radius) {
-
-  -webkit-border-bottom-right-radius: @radius;
-  -moz-border-radius-bottomright: @radius;
   border-bottom-right-radius: @radius;
-
 }
 
 .border-bottom-left-radius(@radius) {
-
-  -webkit-border-bottom-left-radius: @radius;
-  -moz-border-radius-bottomleft: @radius;
   border-bottom-left-radius: @radius;
-
 }
 
 /* Single Side Border Radius */
 
 .border-top-radius(@radius) {
-
   .border-top-right-radius(@radius);
   .border-top-left-radius(@radius);
-
 }
 
 .border-right-radius(@radius) {
-
   .border-top-right-radius(@radius);
   .border-bottom-right-radius(@radius);
-
 }
 
 .border-bottom-radius(@radius) {
-
   .border-bottom-right-radius(@radius);
   .border-bottom-left-radius(@radius);
-
 }
 
 .border-left-radius(@radius) {
-
   .border-top-left-radius(@radius);
   .border-bottom-left-radius(@radius);
-
 }

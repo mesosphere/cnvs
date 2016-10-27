@@ -1,182 +1,131 @@
 & when (@form-control-error-enabled) {
-
   /* Form Control Error (.form-control-error) */
 
   .form-control-error,
   .form-group.form-group-error .form-control {
-
     .element-text-style(form-control-error);
     .element-shape-style(form-control-error);
 
     & when not (@form-control-error-placeholder-color = null) {
 
       &::placeholder {
-
         color: @form-control-error-placeholder-color;
-
       }
-
     }
 
     &:hover {
-
       .element-text-style(form-control-error-hover);
       .element-shape-style(form-control-error-hover);
 
       & when not (@form-control-error-hover-placeholder-color = null) {
 
         &::placeholder {
-
           color: @form-control-error-hover-placeholder-color;
-
         }
-
       }
-
     }
 
     &:active {
-
       .element-text-style(form-control-error-active);
       .element-shape-style(form-control-error-active);
 
       & when not (@form-control-error-active-placeholder-color = null) {
 
         &::placeholder {
-
           color: @form-control-error-active-placeholder-color;
-
         }
-
       }
-
     }
 
     &:focus,
     &.focus {
-
       .element-text-style(form-control-error-focus);
       .element-shape-style(form-control-error-focus);
 
       & when not (@form-control-error-focus-placeholder-color = null) {
 
         &::placeholder {
-
           color: @form-control-error-focus-placeholder-color;
-
         }
-
       }
-
     }
 
     &:disabled,
     &.disabled {
-
       .element-text-style(form-control-error-disabled);
       .element-shape-style(form-control-error-disabled);
 
       & when not (@form-control-error-disabled-placeholder-color = null) {
 
         &::placeholder {
-
           color: @form-control-error-disabled-placeholder-color;
-
         }
-
       }
-
     }
 
     /* Form Control Error Inverse (.form-control-error-inverse) */
 
     &.form-control-inverse {
-
       .element-text-style(form-control-error-inverse);
       .element-shape-style(form-control-error-inverse);
 
       & when not (@form-control-error-inverse-placeholder-color = null) {
 
         &::placeholder {
-
           color: @form-control-error-inverse-placeholder-color;
-
         }
-
       }
 
       &:hover {
-
         .element-text-style(form-control-error-inverse-hover);
         .element-shape-style(form-control-error-inverse-hover);
 
         & when not (@form-control-error-inverse-hover-placeholder-color = null) {
 
           &::placeholder {
-
             color: @form-control-error-inverse-hover-placeholder-color;
-
           }
-
         }
-
       }
 
       &:active {
-
         .element-text-style(form-control-error-inverse-active);
         .element-shape-style(form-control-error-inverse-active);
 
         & when not (@form-control-error-inverse-active-placeholder-color = null) {
 
           &::placeholder {
-
             color: @form-control-error-inverse-active-placeholder-color;
-
           }
-
         }
-
       }
 
       &:focus,
       &.focus {
-
         .element-text-style(form-control-error-inverse-focus);
         .element-shape-style(form-control-error-inverse-focus);
 
         & when not (@form-control-error-inverse-focus-placeholder-color = null) {
 
           &::placeholder {
-
             color: @form-control-error-inverse-focus-placeholder-color;
-
           }
-
         }
-
       }
 
       &:disabled,
       &.disabled {
-
         .element-text-style(form-control-error-inverse-disabled);
         .element-shape-style(form-control-error-inverse-disabled);
 
         & when not (@form-control-error-inverse-disabled-placeholder-color = null) {
 
           &::placeholder {
-
             color: @form-control-error-inverse-disabled-placeholder-color;
-
           }
-
         }
-
       }
-
     }
-
   }
 
   /* Form Control Select (.form-control-select) */
@@ -185,91 +134,67 @@
   .form-group.form-group-error .form-control.form-control-select {
 
     select {
-
       .element-text-style(form-control-error);
-
     }
 
     // Caret
 
     &:after {
-
-      .triangle-color("down", @form-control-error-color);
-
+      .triangle-color('down', @form-control-error-color);
     }
 
     &:hover {
 
       select {
-
         .element-text-style(form-control-error-hover);
-
       }
 
       // Caret
 
       &:after {
-
-        .triangle-color("down", @form-control-error-color);
-
+        .triangle-color('down', @form-control-error-color);
       }
-
     }
 
     &:active {
 
       select {
-
         .element-text-style(form-control-error-active);
-
       }
 
       // Caret
 
       &:after {
-
-        .triangle-color("down", @form-control-error-active-color);
-
+        .triangle-color('down', @form-control-error-active-color);
       }
-
     }
 
     &:focus,
     &.focus {
 
       select {
-
         .element-text-style(form-control-error-focus);
-
       }
 
       // Caret
 
       &:after {
-
-        .triangle-color("down", @form-control-error-focus-color);
-
+        .triangle-color('down', @form-control-error-focus-color);
       }
-
     }
 
     &:disabled,
     &.disabled {
 
       select {
-
         .element-text-style(form-control-error-disabled);
-
       }
 
       // Caret
 
       &:after {
-
-        .triangle-color("down", @form-control-error-disabled-color);
-
+        .triangle-color('down', @form-control-error-disabled-color);
       }
-
     }
 
     /* Form Control Select Inverse (.form-control-inverse) */
@@ -277,95 +202,68 @@
     &.form-control-inverse {
 
       select {
-
         .element-text-style(form-control-error-inverse);
-
       }
 
       // Caret
 
       &:after {
-
-        .triangle-color("down", @form-control-error-inverse-color);
-
+        .triangle-color('down', @form-control-error-inverse-color);
       }
 
       &:hover {
 
         select {
-
           .element-text-style(form-control-error-inverse-hover);
-
         }
 
         // Caret
 
         &:after {
-
-          .triangle-color("down", @form-control-error-inverse-hover-color);
-
+          .triangle-color('down', @form-control-error-inverse-hover-color);
         }
-
       }
 
       &:active {
 
         select {
-
           .element-text-style(form-control-error-inverse-active);
-
         }
 
         // Caret
 
         &:after {
-
-          .triangle-color("down", @form-control-error-inverse-active-color);
-
+          .triangle-color('down', @form-control-error-inverse-active-color);
         }
-
       }
 
       &:focus,
       &.focus {
 
         select {
-
           .element-text-style(form-control-error-inverse-focus);
-
         }
 
         // Caret
 
         &:after {
-
-          .triangle-color("down", @form-control-error-inverse-focus-color);
-
+          .triangle-color('down', @form-control-error-inverse-focus-color);
         }
-
       }
 
       &:disabled,
       &.disabled {
 
         select {
-
           .element-text-style(form-control-error-inverse-disabled);
-
         }
 
         // Caret
 
         &:after {
-
-          .triangle-color("down", @form-control-error-inverse-disabled-color);
-
+          .triangle-color('down', @form-control-error-inverse-disabled-color);
         }
-
       }
-
     }
-
   }
-
 }

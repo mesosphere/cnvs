@@ -1,32 +1,23 @@
 & when (@typography-enabled) {
-
   /* Link */
 
   a {
-
-    outline: 0;
     .element-text-style('link');
+    outline: 0;
 
     &:hover {
-
       .element-text-style('link-hover');
-
     }
 
     &:active {
-
       .element-text-style('link-active');
-
     }
 
     &:disabled,
     &.disabled {
-
       .element-text-style('link-disabled');
       cursor: default;
-
     }
-
   }
 
   /* Selection */
@@ -34,65 +25,44 @@
   ::selection {
 
     & when not (@link-color = null) {
-
       background: @link-color;
       color: @white;
-
     }
-
   }
 
   /* Text Alignment */
 
   .text-align-left {
-
     text-align: left !important;
-
   }
 
   .text-align-right {
-
     text-align: right !important;
-
   }
 
   .text-align-center {
-
     text-align: center !important;
-
   }
 
   .text-align-justify {
-
     text-align: justify !important;
-
   }
 
   .text-nowrap {
-
     white-space: nowrap !important;
-
   }
 
   /* Text Transformation */
 
   .text-lowercase {
-
     text-transform: lowercase !important;
-
   }
 
   .text-uppercase {
-
     text-transform: uppercase !important;
-
   }
 
   .text-capitalize {
-
     text-transform: capitalize !important;
-
   }
-
-
 }
