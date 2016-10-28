@@ -7,20 +7,45 @@ page-header:
   parent:
     label: "Content"
     url: "/content"
+page-navigation:
+- label: "Responsive Images"
+  link: "#image-responsive"
+  navigation:
+  - label: "Fill Image"
+    link: "#image-responsive-fill"
+  - label: "Fluid Image"
+    link: "#image-responsive-fluid"
+- label: "Image Shapes"
+  link: "#image-shape"
 ---
 
-<!-- =================================================
-BEGIN: Images
-================================================== -->
+<div class="container-fluid pod">
 
-<section class="fill" id="images">
+  <!-- =================================================
+  BEGIN: Container
+  ================================================== -->
 
-  <div class="container-fluid pod">
+  <section id="images">
 
-  </div>
+    <p class="lead">
 
-</section>
+      Use one of the built-in CNVS classes to support responsive behavior for your images.
 
-<!-- =================================================
-END: Images
-================================================== -->
+    </p>
+
+    <p>
+
+      Images, denoted by the all-enduring <code>&lt;img&gt;</code> tag, have been a starter in the markup playbook since the early days of the internet.  However, they offer very little in form of responsive sizing or styling.  CNVS attempts to solve this.
+
+    </p>
+
+  </section>
+
+  <!-- =================================================
+  END: Container
+  ================================================== -->
+
+  {% include content/images/images-responsive.html %}
+  {% include content/images/images-shape.html %}
+
+</div>
