@@ -108,13 +108,12 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
 /* Clearfix */
 
 .clearfix {
-  zoom: 1;
+  *zoom: 1;
 
   &:before,
   &:after {
-    content: '';
+    content: ' ';
     display: table;
-    line-height: 0;
   }
 
   &:after {
