@@ -5,18 +5,66 @@
   background: #facd9a;
   display: block;
 
+  .layout-box {
+    background: color-lighten(#facd9a, -15);
+
+    .layout-box {
+      background: color-lighten(#facd9a, -30);
+
+      .layout-box {
+        background: color-lighten(#facd9a, -45);
+
+        .layout-box {
+          background: color-lighten(#facd9a, -60);
+        }
+      }
+    }
+  }
+
   .layout-box-item {
     display: block;
 
     &.layout-box-item-padding {
       background: #c2dfb6;
+
+      .layout-box-item.layout-box-item-padding {
+        background: color-lighten(#c2dfb6, -15);
+
+        .layout-box-item.layout-box-item-padding {
+          background: color-lighten(#c2dfb6, -30);
+
+          .layout-box-item.layout-box-item-padding {
+            background: color-lighten(#c2dfb6, -45);
+
+            .layout-box-item.layout-box-item-padding {
+              background: color-lighten(#c2dfb6, -60);
+            }
+          }
+        }
+      }
     }
 
     &.layout-box-item-content {
       background: #9fc4ea;
 
       &.layout-box-item-content-fixed-height {
-        height: 100px;
+        min-height: 100px;
+      }
+
+      .layout-box-item.layout-box-item-content {
+        background: color-lighten(#9fc4ea, -15);
+
+        .layout-box-item.layout-box-item-content {
+          background: color-lighten(#9fc4ea, -30);
+
+          .layout-box-item.layout-box-item-content {
+            background: color-lighten(#9fc4ea, -45);
+
+            .layout-box-item.layout-box-item-content {
+              background: color-lighten(#9fc4ea, -60);
+            }
+          }
+        }
       }
     }
   }
