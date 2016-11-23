@@ -193,14 +193,16 @@
     // Caret
 
     &:after {
-      .property-variant(form-control, margin-right, padding-right, null, null);
-      .property-variant(form-control-caret, margin-left, null);
-      .property-variant(form-control-caret, margin-top, null);
+      .property-variant(form-control, right, padding-right, null, null);
+      //.property-variant(form-control-caret, margin-left, null);
+      //.property-variant(form-control-caret, margin-top, null);
       .triangle-base();
       .triangle-color('down', @form-control-color);
       content: '';
-      display: inline-block;
+      display: block;
+      position: absolute;
       vertical-align: middle;
+      z-index: 0;
 
       & when not (@form-control-caret-width = null) {
         .triangle-size-width('down', @form-control-caret-width);
@@ -222,8 +224,8 @@
       box-shadow: none;
       display: block;
       margin: 0;
-      padding-right: 0 !important;
       width: 100%;
+      z-index: 1;
     }
 
     &.form-control-select-multiple {
@@ -452,9 +454,9 @@
         // Caret
 
         &:after {
-          .property-variant(form-control, margin-right, padding-right, null, screen-small);
-          .property-variant(form-control-caret, margin-left, screen-small);
-          .property-variant(form-control-caret, margin-top, screen-small);
+          //.property-variant(form-control, margin-right, padding-right, null, screen-small);
+          //.property-variant(form-control-caret, margin-left, screen-small);
+          //.property-variant(form-control-caret, margin-top, screen-small);
 
           & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-small = null) {
             .triangle-size-width('down', (@form-control-caret-width-screen-small));
@@ -579,9 +581,9 @@
         // Caret
 
         &:after {
-          .property-variant(form-control-caret, margin-top, screen-medium);
-          .property-variant(form-control-caret, margin-left, screen-medium);
-          .property-variant(form-control, margin-right, padding-right, null, screen-medium);
+          //.property-variant(form-control-caret, margin-top, screen-medium);
+          //.property-variant(form-control-caret, margin-left, screen-medium);
+          //.property-variant(form-control, margin-right, padding-right, null, screen-medium);
 
           & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-medium = null) {
             .triangle-size-width('down', (@form-control-caret-width-screen-medium));
@@ -706,9 +708,9 @@
         // Caret
 
         &:after {
-          .property-variant(form-control, margin-right, padding-right, null, screen-large);
-          .property-variant(form-control-caret, margin-left, screen-large);
-          .property-variant(form-control-caret, margin-top, screen-large);
+          //.property-variant(form-control, margin-right, padding-right, null, screen-large);
+          //.property-variant(form-control-caret, margin-left, screen-large);
+          //.property-variant(form-control-caret, margin-top, screen-large);
 
           & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-large = null) {
             .triangle-size-width('down', (@form-control-caret-width-screen-large));
@@ -828,14 +830,29 @@
           .element-spacing(form-control, null, screen-jumbo);
           .element-text-size(form-control, screen-jumbo);
           .property-variant(form-control, height, screen-jumbo);
+
+          // if padding
+            // if caret width change
+            // if
+          // if not padding
+
+
+          & when not (@form-control-caret-margin-left-screen-jumbo = null) {
+            & when not (@form-control-caret-width = null) and (@form-control-caret-width-screen-jumbo = null) {
+              padding-right: @form-control-caret-margin-left-screen-jumbo;
+            }
+            & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-jumbo = null) {
+              padding-right: @form-control-caret-margin-left-screen-jumbo + (@form-control-caret-width * @form-control-caret-width-screen-jumbo);
+            }
+          }
         }
 
         // Caret
 
         &:after {
-          .property-variant(form-control, margin-right, padding-right, null, screen-jumbo);
-          .property-variant(form-control-caret, margin-left, screen-jumbo);
-          .property-variant(form-control-caret, margin-top, screen-jumbo);
+          .property-variant(form-control, right, padding-right, null, screen-jumbo);
+          //.property-variant(form-control-caret, margin-left, screen-jumbo);
+          //.property-variant(form-control-caret, margin-top, screen-jumbo);
 
           & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-jumbo = null) {
             .triangle-size-width('down', (@form-control-caret-width-screen-jumbo));
