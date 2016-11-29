@@ -132,7 +132,7 @@ A Gulp file containing a number of useful functions is available at the root of 
 
 1. Open your terminal and navigate to the root directory of your checkout or download.
 2. Install the required npm modules: `npm install` (**NOTE:** If you do not already have npm installed, follow [these installation instructions](https://docs.npmjs.com/getting-started/installing-node))
-3. Run `gulp`
+3. Run `gulp` (**NOTE:** If you do not already have Jekyll installed, follow [these installation instructions](https://jekyllrb.com/))
 
 ### Publishing Documentation
 
