@@ -1,196 +1,114 @@
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-utilities/mixins-animation.less
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Animation
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
+/* Animation */
 
 .animation(@animation) {
-
   animation: @animation;
-
 }
 
 .animation-name(@animation-name) {
-
   animation-name: @animation-name;
-
 }
 
 .animation-duration(@animation-duration) {
-
   animation-duration: @animation-duration;
-
 }
 
 .animation-timing-function(@animation-timing-function) {
-
   animation-timing-function: @animation-timing-function;
-
 }
 
 .animation-iteration-count(@animation-iteration-count) {
-
   animation-iteration-count: @animation-iteration-count;
-
 }
 
 .animation-direction(@animation-direction) {
-
   animation-direction: @animation-direction;
-
 }
 
 .animation-delay(@animation-delay) {
-
   animation-delay: @animation-delay;
-
 }
 
 .animation-play-state(@animation-play-state) {
-
   animation-play-state: @animation-play-state;
-
 }
 
 .animation-fill-mode(@animation-fill-mode) {
-
   animation-fill-mode: @animation-fill-mode;
-
 }
 
+/* Animation Keyframes: Fade In */
 
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Animation Keyframes
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-
-
-/* -----------------------------------------------------------------------------
-Fade In
------------------------------------------------------------------------------ */
-
-@keyframes fade-in { .fade-in(); }
+@keyframes fade-in {
+  .fade-in();
+}
 
 .fade-in() {
 
   0% {
-
-    opacity: 0.0;
-
+    opacity: 0;
   }
 
   100% {
-
-    opacity: 1.0;
-
+    opacity: 1;
   }
-
 }
 
+/* Animation Keyframes: Fade Out */
 
-
-/* -----------------------------------------------------------------------------
-Fade Out
------------------------------------------------------------------------------ */
-
-@keyframes fade-out { .fade-out(); }
+@keyframes fade-out {
+  .fade-out();
+}
 
 .fade-out() {
 
   0% {
-
-    opacity: 1.0;
-
+    opacity: 1;
   }
 
   100% {
-
-    opacity: 0.0;
-
+    opacity: 0;
   }
-
 }
 
+/* Animation Keyframes: Zoom In */
 
-
-/* -----------------------------------------------------------------------------
-Zoom In
------------------------------------------------------------------------------ */
-
-@keyframes zoom-in { .zoom-in(); }
+@keyframes zoom-in {
+  .zoom-in();
+}
 
 .zoom-in() {
 
   0% {
-
-    opacity: 0;
     .scale3d(0.5, 0.5, 0.5);
-
+    opacity: 0;
   }
 
   50% {
-
-    opacity: 1.0;
-    .scale3d(1.0, 1.0, 1.0);
-
+    .scale3d(1, 1, 1);
+    opacity: 1;
   }
-
 }
 
+/* Animation Keyframes: Zoom Out */
 
-
-/* -----------------------------------------------------------------------------
-Zoom Out
------------------------------------------------------------------------------ */
-
-@keyframes zoom-out { .zoom-out(); }
+@keyframes zoom-out {
+  .zoom-out();
+}
 
 .zoom-out() {
 
   0% {
-
-    opacity: 1.0;
-    .scale3d(1.0, 1.0, 1.0);
-
+    .scale3d(1, 1, 1);
+    opacity: 1;
   }
 
   50% {
-
-    opacity: 0;
     .scale3d(0.5, 0.5, 0.5);
-
+    opacity: 0;
   }
 
   100% {
-
-    opacity: 0;
     .scale3d(0.5, 0.5, 0.5);
-
+    opacity: 0;
   }
-
 }

@@ -1,0 +1,78 @@
+& when (@icon-large-enabled) {
+  /* Icon large (.icon-large) */
+
+  .icon-large {
+    .element-spacing(icon-large, null, null);
+    .property-variant(icon-large, width, null, null);
+    .property-variant(icon-large, height, null, null);
+    .property-variant(icon-large, border-radius, null, null);
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@icon-large-enabled) and (@icon-large-screen-small-enabled) {
+      /* Icon large (.icon-large) */
+
+      .icon-large {
+        .element-spacing(icon-large, null, screen-small);
+        .property-variant(icon-large, width, null, screen-small);
+        .property-variant(icon-large, height, null, screen-small);
+        .property-variant(icon-large, border-radius, null, screen-small);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@icon-large-enabled) and (@icon-large-screen-medium-enabled) {
+      /* Icon large (.icon-large) */
+
+      .icon-large {
+        .element-spacing(icon-large, null, screen-medium);
+        .property-variant(icon-large, width, null, screen-medium);
+        .property-variant(icon-large, height, null, screen-medium);
+        .property-variant(icon-large, border-radius, null, screen-medium);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@icon-large-enabled) and (@icon-large-screen-large-enabled) {
+      /* Icon large (.icon-large) */
+
+      .icon-large {
+        .element-spacing(icon-large, null, screen-large);
+        .property-variant(icon-large, width, null, screen-large);
+        .property-variant(icon-large, height, null, screen-large);
+        .property-variant(icon-large, border-radius, null, screen-large);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@icon-large-enabled) and (@icon-large-screen-jumbo-enabled) {
+      /* Icon large (.icon-large) */
+
+      .icon-large {
+        .element-spacing(icon-large, null, screen-jumbo);
+        .property-variant(icon-large, width, null, screen-jumbo);
+        .property-variant(icon-large, height, null, screen-jumbo);
+        .property-variant(icon-large, border-radius, null, screen-jumbo);
+      }
+    }
+  }
+}

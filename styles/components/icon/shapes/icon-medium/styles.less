@@ -1,0 +1,78 @@
+& when (@icon-medium-enabled) {
+  /* Icon medium (.icon-medium) */
+
+  .icon-medium {
+    .element-spacing(icon-medium, null, null);
+    .property-variant(icon-medium, width, null, null);
+    .property-variant(icon-medium, height, null, null);
+    .property-variant(icon-medium, border-radius, null, null);
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@icon-medium-enabled) and (@icon-medium-screen-small-enabled) {
+      /* Icon medium (.icon-medium) */
+
+      .icon-medium {
+        .element-spacing(icon-medium, null, screen-small);
+        .property-variant(icon-medium, width, null, screen-small);
+        .property-variant(icon-medium, height, null, screen-small);
+        .property-variant(icon-medium, border-radius, null, screen-small);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@icon-medium-enabled) and (@icon-medium-screen-medium-enabled) {
+      /* Icon medium (.icon-medium) */
+
+      .icon-medium {
+        .element-spacing(icon-medium, null, screen-medium);
+        .property-variant(icon-medium, width, null, screen-medium);
+        .property-variant(icon-medium, height, null, screen-medium);
+        .property-variant(icon-medium, border-radius, null, screen-medium);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@icon-medium-enabled) and (@icon-medium-screen-large-enabled) {
+      /* Icon medium (.icon-medium) */
+
+      .icon-medium {
+        .element-spacing(icon-medium, null, screen-large);
+        .property-variant(icon-medium, width, null, screen-large);
+        .property-variant(icon-medium, height, null, screen-large);
+        .property-variant(icon-medium, border-radius, null, screen-large);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@icon-medium-enabled) and (@icon-medium-screen-jumbo-enabled) {
+      /* Icon medium (.icon-medium) */
+
+      .icon-medium {
+        .element-spacing(icon-medium, null, screen-jumbo);
+        .property-variant(icon-medium, width, null, screen-jumbo);
+        .property-variant(icon-medium, height, null, screen-jumbo);
+        .property-variant(icon-medium, border-radius, null, screen-jumbo);
+      }
+    }
+  }
+}

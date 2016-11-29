@@ -1,0 +1,301 @@
+& when (@table-small-enabled) {
+  /* Table */
+
+  .table.table-small {
+    .element-text-size(table-small, null);
+    .element-spacing(table-small, null, null);
+    .property-variant(table-small, border-collapse, null);
+
+    /* Layout Variants */
+
+    &.short {
+      .element-spacing(table-small, short, null);
+    }
+
+    &.tall {
+      .element-spacing(table-small, tall, null);
+    }
+
+    & when not (@table-small-border-radius = null) {
+      /* Table Border Radius */
+      border-radius: @table-small-border-radius;
+
+      tbody {
+
+        tr {
+
+          &:first-child {
+
+            td,
+            th {
+
+              &:first-child {
+                .border-top-left-radius(@table-small-border-radius);
+              }
+
+              &:last-child {
+                .border-top-right-radius(@table-small-border-radius);
+              }
+            }
+          }
+
+          &:last-child {
+
+            td,
+            th {
+
+              &:first-child {
+                .border-bottom-left-radius(@table-small-border-radius);
+              }
+
+              &:last-child {
+                .border-bottom-right-radius(@table-small-border-radius);
+              }
+            }
+          }
+        }
+      }
+
+      & > thead {
+
+        tr {
+
+          &:first-child {
+
+            th {
+
+              &:first-child {
+                .border-top-left-radius(@table-small-border-radius);
+              }
+
+              &:last-child {
+                .border-top-right-radius(@table-small-border-radius);
+              }
+            }
+          }
+        }
+
+        & + tbody {
+
+          tr {
+
+            &:first-child {
+
+              th,
+              td {
+                border-radius: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    th,
+    td {
+
+      .element-text-size(table-small-cell, null);
+      .element-spacing(table-small-cell, null, null);
+      .property-variant(table-small, border-collapse, null);
+
+      &:before {
+        .property-variant(table-small-cell, height, line-height, null, null);
+      }
+    }
+
+    // Table Head
+
+    th {
+      .element-text-size(table-small-header, null);
+      .element-spacing(table-small-header, null, null);
+
+      &:before {
+        .property-variant(table-small-header, height, line-height, null, null);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@table-small-enabled) and (@table-small-screen-small-enabled) {
+      /* Table */
+
+      .table.table-small {
+        .element-text-size(table-small, screen-small);
+        .element-spacing(table-small, null, screen-small);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(table-small, short, screen-small);
+        }
+
+        &.tall {
+          .element-spacing(table-small, tall, screen-small);
+        }
+
+        th,
+        td {
+          .element-text-size(table-small-cell, screen-small);
+          .element-spacing(table-small-cell, null, screen-small);
+
+          &:before {
+            .property-variant(table-small-cell, height, line-height, null, screen-small);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-small-header, screen-small);
+          .element-spacing(table-small-header, null, screen-small);
+
+          &:before {
+            .property-variant(table-small-header, height, line-height, null, screen-small);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@table-small-enabled) and (@table-small-screen-medium-enabled) {
+      /* Table */
+
+      .table.table-small {
+        .element-text-size(table-small, screen-medium);
+        .element-spacing(table-small, null, screen-medium);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(table-small, short, screen-medium);
+        }
+
+        &.tall {
+          .element-spacing(table-small, tall, screen-medium);
+        }
+
+        th,
+        td {
+          .element-text-size(table-small-cell, screen-medium);
+          .element-spacing(table-small-cell, null, screen-medium);
+
+          &:before {
+            .property-variant(table-small-cell, height, line-height, null, screen-medium);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-small-header, screen-medium);
+          .element-spacing(table-small-header, null, screen-medium);
+
+          &:before {
+            .property-variant(table-small-header, height, line-height, null, screen-medium);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@table-small-enabled) and (@table-small-screen-large-enabled) {
+      /* Table */
+
+      .table.table-small {
+        .element-text-size(table-small, screen-large);
+        .element-spacing(table-small, null, screen-large);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(table-small, short, screen-large);
+        }
+
+        &.tall {
+          .element-spacing(table-small, tall, screen-large);
+        }
+
+        th,
+        td {
+          .element-text-size(table-small-cell, screen-large);
+          .element-spacing(table-small-cell, null, screen-large);
+
+          &:before {
+            .property-variant(table-small-cell, height, line-height, null, screen-large);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-small-header, screen-large);
+          .element-spacing(table-small-header, null, screen-large);
+
+          &:before {
+            .property-variant(table-small-header, height, line-height, null, screen-large);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@table-small-enabled) and (@table-small-screen-jumbo-enabled) {
+      /* Table */
+
+      .table.table-small {
+        .element-text-size(table-small, screen-jumbo);
+        .element-spacing(table-small, null, screen-jumbo);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(table-small, short, screen-jumbo);
+        }
+
+        &.tall {
+          .element-spacing(table-small, tall, screen-jumbo);
+        }
+
+        th,
+        td {
+          .element-text-size(table-small-cell, screen-jumbo);
+          .element-spacing(table-small-cell, null, screen-jumbo);
+
+          &:before {
+            .property-variant(table-small-cell, height, line-height, null, screen-jumbo);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-small-header, screen-jumbo);
+          .element-spacing(table-small-header, null, screen-jumbo);
+
+          &:before {
+            .property-variant(table-small-header, height, line-height, null, screen-jumbo);
+          }
+        }
+      }
+    }
+  }
+}

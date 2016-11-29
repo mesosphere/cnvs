@@ -1,0 +1,105 @@
+& when (@code-enabled) {
+  /* Code */
+
+  code,
+  .code {
+    .element-shape-style(code);
+    .element-spacing(code, null, null);
+    .element-text-size(code, null);
+    .element-text-style(code);
+    display: inline-block;
+    vertical-align: initial;
+    white-space: nowrap;
+
+    & when not (@code-border-radius = null) {
+      border-radius: @code-border-radius;
+    }
+
+    /* Code Inverse (.code-inverse) */
+
+    &.code-inverse {
+      .element-shape-style(code-inverse);
+      .element-text-style(code-inverse);
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@code-enabled) and (@code-screen-small-enabled) {
+      /* Code */
+
+      code,
+      .code {
+        .element-spacing(code, null, screen-small);
+        .element-text-size(code, screen-small);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-screen-small = null) {
+          border-radius: @code-border-radius * @code-border-radius-screen-small;
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@code-enabled) and (@code-screen-medium-enabled) {
+      /* Code */
+
+      code,
+      .code {
+        .element-spacing(code, null, screen-medium);
+        .element-text-size(code, screen-medium);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-screen-medium = null) {
+          border-radius: @code-border-radius * @code-border-radius-screen-medium;
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@code-enabled) and (@code-screen-large-enabled) {
+      /* Code */
+
+      code,
+      .code {
+        .element-spacing(code, null, screen-large);
+        .element-text-size(code, screen-large);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-screen-large = null) {
+          border-radius: @code-border-radius * @code-border-radius-screen-large;
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@code-enabled) and (@code-screen-jumbo-enabled) {
+      /* Code */
+
+      code,
+      .code {
+        .element-spacing(code, null, screen-jumbo);
+        .element-text-size(code, screen-jumbo);
+
+        & when not (@code-border-radius = null) and not (@code-border-radius-screen-jumbo = null) {
+          border-radius: @code-border-radius * @code-border-radius-screen-jumbo;
+        }
+      }
+    }
+  }
+}

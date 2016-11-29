@@ -1,0 +1,818 @@
+@panel-enabled: true;
+
+/*
+ * Responsive Scaling
+ */
+
+@panel-screen-small-enabled: true;
+@panel-screen-medium-enabled: true;
+@panel-screen-large-enabled: true;
+@panel-screen-jumbo-enabled: true;
+
+/*
+ * Panel
+ */
+
+/* Layout */
+
+// Border Radius
+
+@panel-border-radius: 3px;
+@panel-border-radius-screen-small: null;
+@panel-border-radius-screen-medium: null;
+@panel-border-radius-screen-large: null;
+@panel-border-radius-screen-jumbo: null;
+
+/* Styling */
+
+// Normal
+
+@panel-background-color: @white;
+@panel-background-gradient-color-top: null;
+@panel-background-gradient-color-bottom: null;
+@panel-border-width: null;
+@panel-border-color: null;
+@panel-border-style: null;
+@panel-border-top-width: null;
+@panel-border-top-color: null;
+@panel-border-top-style: null;
+@panel-border-right-width: null;
+@panel-border-right-color: null;
+@panel-border-right-style: null;
+@panel-border-bottom-width: null;
+@panel-border-bottom-color: null;
+@panel-border-bottom-style: null;
+@panel-border-left-width: null;
+@panel-border-left-color: null;
+@panel-border-left-style: null;
+@panel-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+// Inverse
+
+@panel-inverse-background-color: color-lighten(@neutral, -10);
+@panel-inverse-background-gradient-color-top: null;
+@panel-inverse-background-gradient-color-bottom: null;
+@panel-inverse-border-width: null;
+@panel-inverse-border-color: null;
+@panel-inverse-border-style: null;
+@panel-inverse-border-top-width: null;
+@panel-inverse-border-top-color: null;
+@panel-inverse-border-top-style: null;
+@panel-inverse-border-right-width: null;
+@panel-inverse-border-right-color: null;
+@panel-inverse-border-right-style: null;
+@panel-inverse-border-bottom-width: null;
+@panel-inverse-border-bottom-color: null;
+@panel-inverse-border-bottom-style: null;
+@panel-inverse-border-left-width: null;
+@panel-inverse-border-left-color: null;
+@panel-inverse-border-left-style: null;
+@panel-inverse-shadow: none;
+
+/*
+ * Panel Header
+ */
+
+/* Styling */
+
+// Normal
+
+@panel-header-background-color: null;
+@panel-header-background-gradient-color-top: null;
+@panel-header-background-gradient-color-bottom: null;
+@panel-header-border-width: null;
+@panel-header-border-color: null;
+@panel-header-border-style: null;
+@panel-header-border-top-width: null;
+@panel-header-border-top-color: null;
+@panel-header-border-top-style: null;
+@panel-header-border-right-width: null;
+@panel-header-border-right-color: null;
+@panel-header-border-right-style: null;
+@panel-header-border-bottom-width: 1px;
+@panel-header-border-bottom-color: rgba(0, 0, 0, 0.1);
+@panel-header-border-bottom-style: solid;
+@panel-header-border-left-width: null;
+@panel-header-border-left-color: null;
+@panel-header-border-left-style: null;
+@panel-header-shadow: null;
+
+// Inverse
+
+@panel-header-inverse-background-color: null;
+@panel-header-inverse-background-gradient-color-top: null;
+@panel-header-inverse-background-gradient-color-bottom: null;
+@panel-header-inverse-border-width: null;
+@panel-header-inverse-border-color: null;
+@panel-header-inverse-border-style: null;
+@panel-header-inverse-border-top-width: null;
+@panel-header-inverse-border-top-color: null;
+@panel-header-inverse-border-top-style: null;
+@panel-header-inverse-border-right-width: null;
+@panel-header-inverse-border-right-color: null;
+@panel-header-inverse-border-right-style: null;
+@panel-header-inverse-border-bottom-width: null;
+@panel-header-inverse-border-bottom-color: null;
+@panel-header-inverse-border-bottom-style: null;
+@panel-header-inverse-border-left-width: null;
+@panel-header-inverse-border-left-color: null;
+@panel-header-inverse-border-left-style: null;
+@panel-header-inverse-shadow: none;
+
+/*
+ * Panel Body
+ */
+
+/* Styling */
+
+// Normal
+
+@panel-body-background-color: null;
+@panel-body-background-gradient-color-top: null;
+@panel-body-background-gradient-color-bottom: null;
+@panel-body-border-width: null;
+@panel-body-border-color: null;
+@panel-body-border-style: null;
+@panel-body-border-top-width: null;
+@panel-body-border-top-color: null;
+@panel-body-border-top-style: null;
+@panel-body-border-right-width: null;
+@panel-body-border-right-color: null;
+@panel-body-border-right-style: null;
+@panel-body-border-bottom-width: 1px;
+@panel-body-border-bottom-color: rgba(0, 0, 0, 0.1);
+@panel-body-border-bottom-style: solid;
+@panel-body-border-left-width: null;
+@panel-body-border-left-color: null;
+@panel-body-border-left-style: null;
+@panel-body-shadow: null;
+
+// Inverse
+
+@panel-body-inverse-background-color: null;
+@panel-body-inverse-background-gradient-color-top: null;
+@panel-body-inverse-background-gradient-color-bottom: null;
+@panel-body-inverse-border-width: null;
+@panel-body-inverse-border-color: null;
+@panel-body-inverse-border-style: null;
+@panel-body-inverse-border-top-width: null;
+@panel-body-inverse-border-top-color: null;
+@panel-body-inverse-border-top-style: null;
+@panel-body-inverse-border-right-width: null;
+@panel-body-inverse-border-right-color: null;
+@panel-body-inverse-border-right-style: null;
+@panel-body-inverse-border-bottom-width: null;
+@panel-body-inverse-border-bottom-color: null;
+@panel-body-inverse-border-bottom-style: null;
+@panel-body-inverse-border-left-width: null;
+@panel-body-inverse-border-left-color: null;
+@panel-body-inverse-border-left-style: null;
+@panel-body-inverse-shadow: none;
+
+/*
+ * Panel Footer
+ */
+
+/* Styling */
+
+// Normal
+
+@panel-footer-background-color: null;
+@panel-footer-background-gradient-color-top: null;
+@panel-footer-background-gradient-color-bottom: null;
+@panel-footer-border-width: null;
+@panel-footer-border-color: null;
+@panel-footer-border-style: null;
+@panel-footer-border-top-width: null;
+@panel-footer-border-top-color: null;
+@panel-footer-border-top-style: null;
+@panel-footer-border-right-width: null;
+@panel-footer-border-right-color: null;
+@panel-footer-border-right-style: null;
+@panel-footer-border-bottom-width: 1px;
+@panel-footer-border-bottom-color: rgba(0, 0, 0, 0.1);
+@panel-footer-border-bottom-style: solid;
+@panel-footer-border-left-width: null;
+@panel-footer-border-left-color: null;
+@panel-footer-border-left-style: null;
+@panel-footer-shadow: null;
+
+// Inverse
+
+@panel-footer-inverse-background-color: null;
+@panel-footer-inverse-background-gradient-color-top: null;
+@panel-footer-inverse-background-gradient-color-bottom: null;
+@panel-footer-inverse-border-width: null;
+@panel-footer-inverse-border-color: null;
+@panel-footer-inverse-border-style: null;
+@panel-footer-inverse-border-top-width: null;
+@panel-footer-inverse-border-top-color: null;
+@panel-footer-inverse-border-top-style: null;
+@panel-footer-inverse-border-right-width: null;
+@panel-footer-inverse-border-right-color: null;
+@panel-footer-inverse-border-right-style: null;
+@panel-footer-inverse-border-bottom-width: null;
+@panel-footer-inverse-border-bottom-color: null;
+@panel-footer-inverse-border-bottom-style: null;
+@panel-footer-inverse-border-left-width: null;
+@panel-footer-inverse-border-left-color: null;
+@panel-footer-inverse-border-left-style: null;
+@panel-footer-inverse-shadow: none;
+
+/*
+ * Panel Cell
+ */
+
+/* Layout (Default) */
+
+// Margin Top
+
+@panel-cell-margin-top: null;
+@panel-cell-margin-top-screen-small: null;
+@panel-cell-margin-top-screen-medium: null;
+@panel-cell-margin-top-screen-large: null;
+@panel-cell-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-margin-bottom: null;
+@panel-cell-margin-bottom-screen-small: null;
+@panel-cell-margin-bottom-screen-medium: null;
+@panel-cell-margin-bottom-screen-large: null;
+@panel-cell-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-margin-left: null;
+@panel-cell-margin-left-screen-small: null;
+@panel-cell-margin-left-screen-medium: null;
+@panel-cell-margin-left-screen-large: null;
+@panel-cell-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-margin-right: null;
+@panel-cell-margin-right-screen-small: null;
+@panel-cell-margin-right-screen-medium: null;
+@panel-cell-margin-right-screen-large: null;
+@panel-cell-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-padding-top: 1 * @base-spacing-unit;
+@panel-cell-padding-top-screen-small: 1 * @base-spacing-unit-screen-small;
+@panel-cell-padding-top-screen-medium: 1 * @base-spacing-unit-screen-medium;
+@panel-cell-padding-top-screen-large: 1 * @base-spacing-unit-screen-large;
+@panel-cell-padding-top-screen-jumbo: 0.75 * @base-spacing-unit-screen-jumbo;
+
+// Padding Bottom
+
+@panel-cell-padding-bottom: @panel-cell-padding-top;
+@panel-cell-padding-bottom-screen-small: @panel-cell-padding-top-screen-small;
+@panel-cell-padding-bottom-screen-medium: @panel-cell-padding-top-screen-medium;
+@panel-cell-padding-bottom-screen-large: @panel-cell-padding-top-screen-large;
+@panel-cell-padding-bottom-screen-jumbo: @panel-cell-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-padding-left: 1 * @base-spacing-unit;
+@panel-cell-padding-left-screen-small: 1 * @base-spacing-unit-screen-small;
+@panel-cell-padding-left-screen-medium: 1 * @base-spacing-unit-screen-medium;
+@panel-cell-padding-left-screen-large: 1 * @base-spacing-unit-screen-large;
+@panel-cell-padding-left-screen-jumbo: 0.75 * @base-spacing-unit-screen-jumbo;
+
+// Padding Right
+
+@panel-cell-padding-right: @panel-cell-padding-left;
+@panel-cell-padding-right-screen-small: @panel-cell-padding-left-screen-small;
+@panel-cell-padding-right-screen-medium: @panel-cell-padding-left-screen-medium;
+@panel-cell-padding-right-screen-large: @panel-cell-padding-left-screen-large;
+@panel-cell-padding-right-screen-jumbo: @panel-cell-padding-left-screen-jumbo;
+
+/* Layout (Short) */
+
+// Margin Top
+
+@panel-cell-short-margin-top: null;
+@panel-cell-short-margin-top-screen-small: null;
+@panel-cell-short-margin-top-screen-medium: null;
+@panel-cell-short-margin-top-screen-large: null;
+@panel-cell-short-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-short-margin-bottom: null;
+@panel-cell-short-margin-bottom-screen-small: null;
+@panel-cell-short-margin-bottom-screen-medium: null;
+@panel-cell-short-margin-bottom-screen-large: null;
+@panel-cell-short-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-short-margin-left: null;
+@panel-cell-short-margin-left-screen-small: null;
+@panel-cell-short-margin-left-screen-medium: null;
+@panel-cell-short-margin-left-screen-large: null;
+@panel-cell-short-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-short-margin-right: null;
+@panel-cell-short-margin-right-screen-small: null;
+@panel-cell-short-margin-right-screen-medium: null;
+@panel-cell-short-margin-right-screen-large: null;
+@panel-cell-short-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-short-padding-top: 0.5 * @panel-cell-padding-top;
+@panel-cell-short-padding-top-screen-small: 0.5 * @panel-cell-padding-top-screen-small;
+@panel-cell-short-padding-top-screen-medium: 0.5 * @panel-cell-padding-top-screen-medium;
+@panel-cell-short-padding-top-screen-large: 0.5 * @panel-cell-padding-top-screen-large;
+@panel-cell-short-padding-top-screen-jumbo: 0.5 * @panel-cell-padding-top-screen-jumbo;
+
+// Padding Bottom
+
+@panel-cell-short-padding-bottom: @panel-cell-short-padding-top;
+@panel-cell-short-padding-bottom-screen-small: @panel-cell-short-padding-top-screen-small;
+@panel-cell-short-padding-bottom-screen-medium: @panel-cell-short-padding-top-screen-medium;
+@panel-cell-short-padding-bottom-screen-large: @panel-cell-short-padding-top-screen-large;
+@panel-cell-short-padding-bottom-screen-jumbo: @panel-cell-short-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-short-padding-left: null;
+@panel-cell-short-padding-left-screen-small: null;
+@panel-cell-short-padding-left-screen-medium: null;
+@panel-cell-short-padding-left-screen-large: null;
+@panel-cell-short-padding-left-screen-jumbo: null;
+
+// Padding Right
+
+@panel-cell-short-padding-right: @panel-cell-short-padding-left;
+@panel-cell-short-padding-right-screen-small: @panel-cell-short-padding-left-screen-small;
+@panel-cell-short-padding-right-screen-medium: @panel-cell-short-padding-left-screen-medium;
+@panel-cell-short-padding-right-screen-large: @panel-cell-short-padding-left-screen-large;
+@panel-cell-short-padding-right-screen-jumbo: @panel-cell-short-padding-left-screen-jumbo;
+
+/* Layout (Shorter) */
+
+// Margin Top
+
+@panel-cell-shorter-margin-top: null;
+@panel-cell-shorter-margin-top-screen-small: null;
+@panel-cell-shorter-margin-top-screen-medium: null;
+@panel-cell-shorter-margin-top-screen-large: null;
+@panel-cell-shorter-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-shorter-margin-bottom: null;
+@panel-cell-shorter-margin-bottom-screen-small: null;
+@panel-cell-shorter-margin-bottom-screen-medium: null;
+@panel-cell-shorter-margin-bottom-screen-large: null;
+@panel-cell-shorter-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-shorter-margin-left: null;
+@panel-cell-shorter-margin-left-screen-small: null;
+@panel-cell-shorter-margin-left-screen-medium: null;
+@panel-cell-shorter-margin-left-screen-large: null;
+@panel-cell-shorter-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-shorter-margin-right: null;
+@panel-cell-shorter-margin-right-screen-small: null;
+@panel-cell-shorter-margin-right-screen-medium: null;
+@panel-cell-shorter-margin-right-screen-large: null;
+@panel-cell-shorter-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-shorter-padding-top: 0.25 * @panel-cell-padding-top;
+@panel-cell-shorter-padding-top-screen-small: 0.25 * @panel-cell-padding-top-screen-small;
+@panel-cell-shorter-padding-top-screen-medium: 0.25 * @panel-cell-padding-top-screen-medium;
+@panel-cell-shorter-padding-top-screen-large: 0.25 * @panel-cell-padding-top-screen-large;
+@panel-cell-shorter-padding-top-screen-jumbo: 0.25 * @panel-cell-padding-top-screen-jumbo;
+
+// Padding Bottom
+
+@panel-cell-shorter-padding-bottom: @panel-cell-shorter-padding-top;
+@panel-cell-shorter-padding-bottom-screen-small: @panel-cell-shorter-padding-top-screen-small;
+@panel-cell-shorter-padding-bottom-screen-medium: @panel-cell-shorter-padding-top-screen-medium;
+@panel-cell-shorter-padding-bottom-screen-large: @panel-cell-shorter-padding-top-screen-large;
+@panel-cell-shorter-padding-bottom-screen-jumbo: @panel-cell-shorter-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-shorter-padding-left: null;
+@panel-cell-shorter-padding-left-screen-small: null;
+@panel-cell-shorter-padding-left-screen-medium: null;
+@panel-cell-shorter-padding-left-screen-large: null;
+@panel-cell-shorter-padding-left-screen-jumbo: null;
+
+// Padding Right
+
+@panel-cell-shorter-padding-right: @panel-cell-shorter-padding-left;
+@panel-cell-shorter-padding-right-screen-small: @panel-cell-shorter-padding-left-screen-small;
+@panel-cell-shorter-padding-right-screen-medium: @panel-cell-shorter-padding-left-screen-medium;
+@panel-cell-shorter-padding-right-screen-large: @panel-cell-shorter-padding-left-screen-large;
+@panel-cell-shorter-padding-right-screen-jumbo: @panel-cell-shorter-padding-left-screen-jumbo;
+
+/* Layout (Tall) */
+
+// Margin Top
+
+@panel-cell-tall-margin-top: null;
+@panel-cell-tall-margin-top-screen-small: null;
+@panel-cell-tall-margin-top-screen-medium: null;
+@panel-cell-tall-margin-top-screen-large: null;
+@panel-cell-tall-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-tall-margin-bottom: null;
+@panel-cell-tall-margin-bottom-screen-small: null;
+@panel-cell-tall-margin-bottom-screen-medium: null;
+@panel-cell-tall-margin-bottom-screen-large: null;
+@panel-cell-tall-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-tall-margin-left: null;
+@panel-cell-tall-margin-left-screen-small: null;
+@panel-cell-tall-margin-left-screen-medium: null;
+@panel-cell-tall-margin-left-screen-large: null;
+@panel-cell-tall-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-tall-margin-right: null;
+@panel-cell-tall-margin-right-screen-small: null;
+@panel-cell-tall-margin-right-screen-medium: null;
+@panel-cell-tall-margin-right-screen-large: null;
+@panel-cell-tall-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-tall-padding-top: 1.5 * @panel-cell-padding-top;
+@panel-cell-tall-padding-top-screen-small: 1.5 * @panel-cell-padding-top-screen-small;
+@panel-cell-tall-padding-top-screen-medium: 1.5 * @panel-cell-padding-top-screen-medium;
+@panel-cell-tall-padding-top-screen-large: 1.5 * @panel-cell-padding-top-screen-large;
+@panel-cell-tall-padding-top-screen-jumbo: 1.5 * @panel-cell-padding-top-screen-jumbo;
+
+// Padding Bottom
+
+@panel-cell-tall-padding-bottom: @panel-cell-tall-padding-top;
+@panel-cell-tall-padding-bottom-screen-small: @panel-cell-tall-padding-top-screen-small;
+@panel-cell-tall-padding-bottom-screen-medium: @panel-cell-tall-padding-top-screen-medium;
+@panel-cell-tall-padding-bottom-screen-large: @panel-cell-tall-padding-top-screen-large;
+@panel-cell-tall-padding-bottom-screen-jumbo: @panel-cell-tall-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-tall-padding-left: null;
+@panel-cell-tall-padding-left-screen-small: null;
+@panel-cell-tall-padding-left-screen-medium: null;
+@panel-cell-tall-padding-left-screen-large: null;
+@panel-cell-tall-padding-left-screen-jumbo: null;
+
+// Padding Right
+
+@panel-cell-tall-padding-right: @panel-cell-tall-padding-left;
+@panel-cell-tall-padding-right-screen-small: @panel-cell-tall-padding-left-screen-small;
+@panel-cell-tall-padding-right-screen-medium: @panel-cell-tall-padding-left-screen-medium;
+@panel-cell-tall-padding-right-screen-large: @panel-cell-tall-padding-left-screen-large;
+@panel-cell-tall-padding-right-screen-jumbo: @panel-cell-tall-padding-left-screen-jumbo;
+
+/* Layout (Taller) */
+
+// Margin Top
+
+@panel-cell-taller-margin-top: null;
+@panel-cell-taller-margin-top-screen-small: null;
+@panel-cell-taller-margin-top-screen-medium: null;
+@panel-cell-taller-margin-top-screen-large: null;
+@panel-cell-taller-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-taller-margin-bottom: null;
+@panel-cell-taller-margin-bottom-screen-small: null;
+@panel-cell-taller-margin-bottom-screen-medium: null;
+@panel-cell-taller-margin-bottom-screen-large: null;
+@panel-cell-taller-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-taller-margin-left: null;
+@panel-cell-taller-margin-left-screen-small: null;
+@panel-cell-taller-margin-left-screen-medium: null;
+@panel-cell-taller-margin-left-screen-large: null;
+@panel-cell-taller-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-taller-margin-right: null;
+@panel-cell-taller-margin-right-screen-small: null;
+@panel-cell-taller-margin-right-screen-medium: null;
+@panel-cell-taller-margin-right-screen-large: null;
+@panel-cell-taller-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-taller-padding-top: 2 * @panel-cell-padding-top;
+@panel-cell-taller-padding-top-screen-small: 2 * @panel-cell-padding-top-screen-small;
+@panel-cell-taller-padding-top-screen-medium: 2 * @panel-cell-padding-top-screen-medium;
+@panel-cell-taller-padding-top-screen-large: 2 * @panel-cell-padding-top-screen-large;
+@panel-cell-taller-padding-top-screen-jumbo: 2 * @panel-cell-padding-top-screen-jumbo;
+
+// Padding Bottom
+
+@panel-cell-taller-padding-bottom: @panel-cell-taller-padding-top;
+@panel-cell-taller-padding-bottom-screen-small: @panel-cell-taller-padding-top-screen-small;
+@panel-cell-taller-padding-bottom-screen-medium: @panel-cell-taller-padding-top-screen-medium;
+@panel-cell-taller-padding-bottom-screen-large: @panel-cell-taller-padding-top-screen-large;
+@panel-cell-taller-padding-bottom-screen-jumbo: @panel-cell-taller-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-taller-padding-left: null;
+@panel-cell-taller-padding-left-screen-small: null;
+@panel-cell-taller-padding-left-screen-medium: null;
+@panel-cell-taller-padding-left-screen-large: null;
+@panel-cell-taller-padding-left-screen-jumbo: null;
+
+// Padding Right
+
+@panel-cell-taller-padding-right: @panel-cell-taller-padding-left;
+@panel-cell-taller-padding-right-screen-small: @panel-cell-taller-padding-left-screen-small;
+@panel-cell-taller-padding-right-screen-medium: @panel-cell-taller-padding-left-screen-medium;
+@panel-cell-taller-padding-right-screen-large: @panel-cell-taller-padding-left-screen-large;
+@panel-cell-taller-padding-right-screen-jumbo: @panel-cell-taller-padding-left-screen-jumbo;
+
+/* Layout (Narrow) */
+
+// Margin Top
+
+@panel-cell-narrow-margin-top: null;
+@panel-cell-narrow-margin-top-screen-small: null;
+@panel-cell-narrow-margin-top-screen-medium: null;
+@panel-cell-narrow-margin-top-screen-large: null;
+@panel-cell-narrow-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-narrow-margin-bottom: null;
+@panel-cell-narrow-margin-bottom-screen-small: null;
+@panel-cell-narrow-margin-bottom-screen-medium: null;
+@panel-cell-narrow-margin-bottom-screen-large: null;
+@panel-cell-narrow-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-narrow-margin-left: null;
+@panel-cell-narrow-margin-left-screen-small: null;
+@panel-cell-narrow-margin-left-screen-medium: null;
+@panel-cell-narrow-margin-left-screen-large: null;
+@panel-cell-narrow-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-narrow-margin-right: null;
+@panel-cell-narrow-margin-right-screen-small: null;
+@panel-cell-narrow-margin-right-screen-medium: null;
+@panel-cell-narrow-margin-right-screen-large: null;
+@panel-cell-narrow-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-narrow-padding-top: null;
+@panel-cell-narrow-padding-top-screen-small: null;
+@panel-cell-narrow-padding-top-screen-medium: null;
+@panel-cell-narrow-padding-top-screen-large: null;
+@panel-cell-narrow-padding-top-screen-jumbo: null;
+
+// Padding Bottom
+
+@panel-cell-narrow-padding-bottom: @panel-cell-narrow-padding-top;
+@panel-cell-narrow-padding-bottom-screen-small: @panel-cell-narrow-padding-top-screen-small;
+@panel-cell-narrow-padding-bottom-screen-medium: @panel-cell-narrow-padding-top-screen-medium;
+@panel-cell-narrow-padding-bottom-screen-large: @panel-cell-narrow-padding-top-screen-large;
+@panel-cell-narrow-padding-bottom-screen-jumbo: @panel-cell-narrow-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-narrow-padding-left: 0.5 * @panel-cell-padding-left;
+@panel-cell-narrow-padding-left-screen-small: 0.5 * @panel-cell-padding-left-screen-small;
+@panel-cell-narrow-padding-left-screen-medium: 0.5 * @panel-cell-padding-left-screen-medium;
+@panel-cell-narrow-padding-left-screen-large: 0.5 * @panel-cell-padding-left-screen-large;
+@panel-cell-narrow-padding-left-screen-jumbo: 0.5 * @panel-cell-padding-left-screen-jumbo;
+
+// Padding Right
+
+@panel-cell-narrow-padding-right: @panel-cell-narrow-padding-left;
+@panel-cell-narrow-padding-right-screen-small: @panel-cell-narrow-padding-left-screen-small;
+@panel-cell-narrow-padding-right-screen-medium: @panel-cell-narrow-padding-left-screen-medium;
+@panel-cell-narrow-padding-right-screen-large: @panel-cell-narrow-padding-left-screen-large;
+@panel-cell-narrow-padding-right-screen-jumbo: @panel-cell-narrow-padding-left-screen-jumbo;
+
+/* Layout (Narrower) */
+
+// Margin Top
+
+@panel-cell-narrower-margin-top: null;
+@panel-cell-narrower-margin-top-screen-small: null;
+@panel-cell-narrower-margin-top-screen-medium: null;
+@panel-cell-narrower-margin-top-screen-large: null;
+@panel-cell-narrower-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-narrower-margin-bottom: null;
+@panel-cell-narrower-margin-bottom-screen-small: null;
+@panel-cell-narrower-margin-bottom-screen-medium: null;
+@panel-cell-narrower-margin-bottom-screen-large: null;
+@panel-cell-narrower-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-narrower-margin-left: null;
+@panel-cell-narrower-margin-left-screen-small: null;
+@panel-cell-narrower-margin-left-screen-medium: null;
+@panel-cell-narrower-margin-left-screen-large: null;
+@panel-cell-narrower-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-narrower-margin-right: null;
+@panel-cell-narrower-margin-right-screen-small: null;
+@panel-cell-narrower-margin-right-screen-medium: null;
+@panel-cell-narrower-margin-right-screen-large: null;
+@panel-cell-narrower-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-narrower-padding-top: null;
+@panel-cell-narrower-padding-top-screen-small: null;
+@panel-cell-narrower-padding-top-screen-medium: null;
+@panel-cell-narrower-padding-top-screen-large: null;
+@panel-cell-narrower-padding-top-screen-jumbo: null;
+
+// Padding Bottom
+
+@panel-cell-narrower-padding-bottom: @panel-cell-narrower-padding-top;
+@panel-cell-narrower-padding-bottom-screen-small: @panel-cell-narrower-padding-top-screen-small;
+@panel-cell-narrower-padding-bottom-screen-medium: @panel-cell-narrower-padding-top-screen-medium;
+@panel-cell-narrower-padding-bottom-screen-large: @panel-cell-narrower-padding-top-screen-large;
+@panel-cell-narrower-padding-bottom-screen-jumbo: @panel-cell-narrower-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-narrower-padding-left: 0.25 * @panel-cell-padding-left;
+@panel-cell-narrower-padding-left-screen-small: 0.25 * @panel-cell-padding-left-screen-small;
+@panel-cell-narrower-padding-left-screen-medium: 0.25 * @panel-cell-padding-left-screen-medium;
+@panel-cell-narrower-padding-left-screen-large: 0.25 * @panel-cell-padding-left-screen-large;
+@panel-cell-narrower-padding-left-screen-jumbo: 0.25 * @panel-cell-padding-left-screen-jumbo;
+
+// Padding Right
+
+@panel-cell-narrower-padding-right: @panel-cell-narrower-padding-left;
+@panel-cell-narrower-padding-right-screen-small: @panel-cell-narrower-padding-left-screen-small;
+@panel-cell-narrower-padding-right-screen-medium: @panel-cell-narrower-padding-left-screen-medium;
+@panel-cell-narrower-padding-right-screen-large: @panel-cell-narrower-padding-left-screen-large;
+@panel-cell-narrower-padding-right-screen-jumbo: @panel-cell-narrower-padding-left-screen-jumbo;
+
+/* Layout (Wide) */
+
+// Margin Top
+
+@panel-cell-wide-margin-top: null;
+@panel-cell-wide-margin-top-screen-small: null;
+@panel-cell-wide-margin-top-screen-medium: null;
+@panel-cell-wide-margin-top-screen-large: null;
+@panel-cell-wide-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-wide-margin-bottom: null;
+@panel-cell-wide-margin-bottom-screen-small: null;
+@panel-cell-wide-margin-bottom-screen-medium: null;
+@panel-cell-wide-margin-bottom-screen-large: null;
+@panel-cell-wide-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-wide-margin-left: null;
+@panel-cell-wide-margin-left-screen-small: null;
+@panel-cell-wide-margin-left-screen-medium: null;
+@panel-cell-wide-margin-left-screen-large: null;
+@panel-cell-wide-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-wide-margin-right: null;
+@panel-cell-wide-margin-right-screen-small: null;
+@panel-cell-wide-margin-right-screen-medium: null;
+@panel-cell-wide-margin-right-screen-large: null;
+@panel-cell-wide-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-wide-padding-top: null;
+@panel-cell-wide-padding-top-screen-small: null;
+@panel-cell-wide-padding-top-screen-medium: null;
+@panel-cell-wide-padding-top-screen-large: null;
+@panel-cell-wide-padding-top-screen-jumbo: null;
+
+// Padding Bottom
+
+@panel-cell-wide-padding-bottom: @panel-cell-wide-padding-top;
+@panel-cell-wide-padding-bottom-screen-small: @panel-cell-wide-padding-top-screen-small;
+@panel-cell-wide-padding-bottom-screen-medium: @panel-cell-wide-padding-top-screen-medium;
+@panel-cell-wide-padding-bottom-screen-large: @panel-cell-wide-padding-top-screen-large;
+@panel-cell-wide-padding-bottom-screen-jumbo: @panel-cell-wide-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-wide-padding-left: 1.5 * @panel-cell-padding-left;
+@panel-cell-wide-padding-left-screen-small: 1.5 * @panel-cell-padding-left-screen-small;
+@panel-cell-wide-padding-left-screen-medium: 1.5 * @panel-cell-padding-left-screen-medium;
+@panel-cell-wide-padding-left-screen-large: 1.5 * @panel-cell-padding-left-screen-large;
+@panel-cell-wide-padding-left-screen-jumbo: 1.5 * @panel-cell-padding-left-screen-jumbo;
+
+// Padding Right
+
+@panel-cell-wide-padding-right: @panel-cell-wide-padding-left;
+@panel-cell-wide-padding-right-screen-small: @panel-cell-wide-padding-left-screen-small;
+@panel-cell-wide-padding-right-screen-medium: @panel-cell-wide-padding-left-screen-medium;
+@panel-cell-wide-padding-right-screen-large: @panel-cell-wide-padding-left-screen-large;
+@panel-cell-wide-padding-right-screen-jumbo: @panel-cell-wide-padding-left-screen-jumbo;
+
+/* Layout (Wider) */
+
+// Margin Top
+
+@panel-cell-wider-margin-top: null;
+@panel-cell-wider-margin-top-screen-small: null;
+@panel-cell-wider-margin-top-screen-medium: null;
+@panel-cell-wider-margin-top-screen-large: null;
+@panel-cell-wider-margin-top-screen-jumbo: null;
+
+// Margin Bottom
+
+@panel-cell-wider-margin-bottom: null;
+@panel-cell-wider-margin-bottom-screen-small: null;
+@panel-cell-wider-margin-bottom-screen-medium: null;
+@panel-cell-wider-margin-bottom-screen-large: null;
+@panel-cell-wider-margin-bottom-screen-jumbo: null;
+
+// Margin Left
+
+@panel-cell-wider-margin-left: null;
+@panel-cell-wider-margin-left-screen-small: null;
+@panel-cell-wider-margin-left-screen-medium: null;
+@panel-cell-wider-margin-left-screen-large: null;
+@panel-cell-wider-margin-left-screen-jumbo: null;
+
+// Margin Right
+
+@panel-cell-wider-margin-right: null;
+@panel-cell-wider-margin-right-screen-small: null;
+@panel-cell-wider-margin-right-screen-medium: null;
+@panel-cell-wider-margin-right-screen-large: null;
+@panel-cell-wider-margin-right-screen-jumbo: null;
+
+// Padding Top
+
+@panel-cell-wider-padding-top: null;
+@panel-cell-wider-padding-top-screen-small: null;
+@panel-cell-wider-padding-top-screen-medium: null;
+@panel-cell-wider-padding-top-screen-large: null;
+@panel-cell-wider-padding-top-screen-jumbo: null;
+
+// Padding Bottom
+
+@panel-cell-wider-padding-bottom: @panel-cell-wider-padding-top;
+@panel-cell-wider-padding-bottom-screen-small: @panel-cell-wider-padding-top-screen-small;
+@panel-cell-wider-padding-bottom-screen-medium: @panel-cell-wider-padding-top-screen-medium;
+@panel-cell-wider-padding-bottom-screen-large: @panel-cell-wider-padding-top-screen-large;
+@panel-cell-wider-padding-bottom-screen-jumbo: @panel-cell-wider-padding-top-screen-jumbo;
+
+// Padding Left
+
+@panel-cell-wider-padding-left: 2 * @panel-cell-padding-left;
+@panel-cell-wider-padding-left-screen-small: 2 * @panel-cell-padding-left-screen-small;
+@panel-cell-wider-padding-left-screen-medium: 2 * @panel-cell-padding-left-screen-medium;
+@panel-cell-wider-padding-left-screen-large: 2 * @panel-cell-padding-left-screen-large;
+@panel-cell-wider-padding-left-screen-jumbo: 2 * @panel-cell-padding-left-screen-jumbo;
+
+// Padding Right
+
+@panel-cell-wider-padding-right: @panel-cell-wider-padding-left;
+@panel-cell-wider-padding-right-screen-small: @panel-cell-wider-padding-left-screen-small;
+@panel-cell-wider-padding-right-screen-medium: @panel-cell-wider-padding-left-screen-medium;
+@panel-cell-wider-padding-right-screen-large: @panel-cell-wider-padding-left-screen-large;
+@panel-cell-wider-padding-right-screen-jumbo: @panel-cell-wider-padding-left-screen-jumbo;

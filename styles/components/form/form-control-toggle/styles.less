@@ -1,0 +1,698 @@
+& when (@toggle-enabled) {
+  /* Toggle */
+
+  .form-control-toggle {
+    .clearfix();
+    .element-spacing(toggle, null,  null);
+    .element-text-size(toggle, null);
+    .element-text-style(toggle);
+    display: block;
+    position: relative;
+
+    /* Layout Variants */
+
+    &.short {
+      .element-spacing(toggle, short, null);
+    }
+
+    &.tall {
+      .element-spacing(toggle, tall, null);
+    }
+
+    input[type='checkbox'],
+    input[type='radio'] {
+      .property-variant(toggle, height, null);
+      .property-variant(toggle, width, null);
+      left: 0;
+      position: absolute;
+    }
+
+    /* Style Variants */
+
+    & when (@label-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+        .element-text-style(toggle-emphasis);
+      }
+    }
+
+    & when (@label-muted-enabled) {
+
+      &.muted,
+      .muted {
+        .element-text-style(toggle-muted);
+      }
+    }
+
+    & when (@label-inverse-enabled) {
+
+      &.inverse {
+        .element-text-style(toggle-inverse);
+
+        & when (@label-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+            .element-text-style(toggle-inverse-emphasis);
+          }
+        }
+
+        & when (@label-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+            .element-text-style(toggle-inverse-muted);
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Inline Toggle */
+
+    &.form-control-toggle-inline {
+      .property-variant(toggle-inline, margin-left, margin-horizontal, null, null);
+      float: left;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    & when (@toggle-custom-enabled) {
+      /* Custom Toggles */
+
+      &.form-control-toggle-custom {
+
+        input[type='checkbox'],
+        input[type='radio'] {
+          opacity: 0;
+          position: absolute;
+          z-index: -1;
+        }
+
+        .form-control-toggle-indicator {
+          .element-shape-style(toggle-custom);
+          .property-variant(toggle-custom, border-radius, null);
+          .property-variant(toggle-custom, height, null);
+          .property-variant(toggle-custom, width, null);
+          display: block;
+          left: 0;
+          position: absolute;
+        }
+
+        &:hover {
+
+          .form-control-toggle-indicator {
+            .element-shape-style(toggle-custom-hover);
+          }
+        }
+
+        &:active {
+
+          .form-control-toggle-indicator {
+            .element-shape-style(toggle-custom-active);
+          }
+        }
+
+        /* Disabled */
+
+        input:disabled {
+
+          ~ .form-control-toggle-indicator {
+            .element-shape-style(toggle-custom-disabled);
+            .property-variant(toggle-custom-disabled, opacity, null);
+          }
+        }
+
+        /* Selected */
+
+        input:checked,
+        input[type='checkbox']:indeterminate,
+        input[type='checkbox'].indeterminate {
+
+          ~ .form-control-toggle-indicator {
+            .element-shape-style(toggle-custom-selected);
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          &:hover {
+
+            ~ .form-control-toggle-indicator {
+              .element-shape-style(toggle-custom-selected-hover);
+            }
+          }
+
+          &:active {
+
+            ~ .form-control-toggle-indicator {
+              .element-shape-style(toggle-custom-selected-active);
+            }
+          }
+
+          /* Disabled */
+
+          &:disabled {
+
+            ~ .form-control-toggle-indicator {
+              .element-shape-style(toggle-custom-selected-disabled);
+              .property-variant(toggle-custom-selected-disabled, opacity, null);
+            }
+          }
+        }
+
+        /* Checkbox */
+
+        input[type='checkbox'] {
+          /* Selected */
+
+          &:checked {
+
+            ~ .form-control-toggle-indicator {
+
+              & when not (@toggle-custom-selected-color = null) {
+                background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-selected-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
+              }
+            }
+
+            &:hover {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-hover-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-selected-hover-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
+                }
+              }
+            }
+
+            &:active {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-active-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-selected-active-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
+                }
+              }
+            }
+
+            /* Disabled */
+
+            &:disabled {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-disabled-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-selected-disabled-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
+                }
+              }
+            }
+          }
+
+          /* Indeterminate */
+
+          &:indeterminate,
+          &.indeterminate {
+
+            ~ .form-control-toggle-indicator {
+
+              & when not (@toggle-custom-selected-color = null) {
+                background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-selected-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
+              }
+            }
+
+            &:hover {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-hover-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-selected-hover-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
+                }
+              }
+            }
+
+            &:active {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-active-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-selected-active-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
+                }
+              }
+            }
+
+            /* Disabled */
+
+            &:disabled {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-disabled-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-selected-disabled-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
+                }
+              }
+            }
+          }
+        }
+
+        /* Radio */
+
+        input[type='radio'] {
+
+          ~ .form-control-toggle-indicator {
+            border-radius: 500px;
+          }
+
+          /* Selected */
+
+          &:checked {
+
+            ~ .form-control-toggle-indicator {
+
+              & when not (@toggle-custom-selected-color = null) {
+                background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-selected-color}" cx="8" cy="8" r="4"></circle></svg>');
+              }
+            }
+
+            &:hover {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-hover-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-selected-hover-color}" cx="8" cy="8" r="4"></circle></svg>');
+                }
+              }
+            }
+
+            &:active {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-active-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-selected-active-color}" cx="8" cy="8" r="4"></circle></svg>');
+                }
+              }
+            }
+
+            /* Disabled */
+
+            &:disabled {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-selected-disabled-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-selected-disabled-color}" cx="8" cy="8" r="4"></circle></svg>');
+                }
+              }
+            }
+          }
+        }
+
+        /* Inverse */
+
+        &.inverse {
+
+          .form-control-toggle-indicator {
+            .element-shape-style(toggle-custom-inverse);
+          }
+
+          &:hover {
+
+            .form-control-toggle-indicator {
+              .element-shape-style(toggle-custom-inverse-hover);
+            }
+          }
+
+          &:active {
+
+            .form-control-toggle-indicator {
+              .element-shape-style(toggle-custom-inverse-active);
+            }
+          }
+
+          /* Disabled */
+
+          input:disabled {
+
+            ~ .form-control-toggle-indicator {
+              .element-shape-style(toggle-custom-inverse-disabled);
+              .property-variant(toggle-custom-inverse-disabled, opacity, null);
+            }
+          }
+
+          /* Selected */
+
+          input:checked,
+          input[type='checkbox']:indeterminate,
+          input[type='checkbox'].indeterminate {
+
+            ~ .form-control-toggle-indicator {
+              .element-shape-style(toggle-custom-inverse-selected);
+            }
+
+            &:hover {
+
+              ~ .form-control-toggle-indicator {
+                .element-shape-style(toggle-custom-inverse-selected-hover);
+              }
+            }
+
+            &:active {
+
+              ~ .form-control-toggle-indicator {
+                .element-shape-style(toggle-custom-inverse-selected-active);
+              }
+            }
+
+            /* Disabled */
+
+            &:disabled {
+
+              ~ .form-control-toggle-indicator {
+                .element-shape-style(toggle-custom-inverse-selected-disabled);
+                .property-variant(toggle-custom-inverse-selected-disabled, opacity, null);
+              }
+            }
+          }
+
+          /* Checkbox */
+
+          input[type='checkbox'] {
+            /* Selected */
+
+            &:checked {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-inverse-selected-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-inverse-selected-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
+                }
+              }
+
+              &:hover {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-inverse-selected-hover-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
+                  }
+                }
+              }
+
+              &:active {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-active-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-inverse-selected-active-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
+                  }
+                }
+              }
+
+              /* Disabled */
+
+              &:disabled {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-inverse-selected-disabled-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
+                  }
+                }
+              }
+            }
+
+            /* Indeterminate */
+
+            &:indeterminate,
+            &.indeterminate {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-inverse-selected-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-inverse-selected-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
+                }
+              }
+
+              &:hover {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-inverse-selected-hover-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
+                  }
+                }
+              }
+
+              &:active {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-active-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-inverse-selected-active-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
+                  }
+                }
+              }
+
+              /* Disabled */
+
+              &:disabled {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-inverse-selected-disabled-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
+                  }
+                }
+              }
+            }
+          }
+
+          /* Radio */
+
+          input[type='radio'] {
+            /* Selected */
+
+            &:checked {
+
+              ~ .form-control-toggle-indicator {
+
+                & when not (@toggle-custom-inverse-selected-color = null) {
+                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-inverse-selected-color}" cx="8" cy="8" r="4"></circle></svg>');
+                }
+              }
+
+              &:hover {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-inverse-selected-hover-color}" cx="8" cy="8" r="4"></circle></svg>');
+                  }
+                }
+              }
+
+              &:active {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-active-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-inverse-selected-active-color}" cx="8" cy="8" r="4"></circle></svg>');
+                  }
+                }
+              }
+
+              /* Disabled */
+
+              &:disabled {
+
+                ~ .form-control-toggle-indicator {
+
+                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
+                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-inverse-selected-disabled-color}" cx="8" cy="8" r="4"></circle></svg>');
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@toggle-enabled) and (@toggle-screen-small-enabled) {
+
+      .form-control-toggle {
+        .element-spacing(toggle, null, screen-small);
+        .element-text-size(toggle, screen-small);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(toggle, short, screen-small);
+        }
+
+        &.tall {
+          .element-spacing(toggle, tall, screen-small);
+        }
+
+        /* Inline */
+
+        &.form-control-toggle-inline {
+          .property-variant(toggle-inline, margin-left, margin-horizontal, null, screen-small);
+        }
+
+        & when (@toggle-custom-enabled) {
+          /* Custom Toggles */
+
+          &.form-control-toggle-custom {
+
+            .form-control-toggle-indicator {
+              .property-variant(toggle-custom, width, screen-small);
+              .property-variant(toggle-custom, height, screen-small);
+              .property-variant(toggle-custom, border-radius, screen-small);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@toggle-enabled) and (@toggle-screen-medium-enabled) {
+
+      .form-control-toggle {
+        .element-spacing(toggle, null, screen-medium);
+        .element-text-size(toggle, screen-medium);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(toggle, short, screen-medium);
+        }
+
+        &.tall {
+          .element-spacing(toggle, tall, screen-medium);
+        }
+
+        /* Inline */
+
+        &.form-control-toggle-inline {
+          .property-variant(toggle-inline, margin-left, margin-horizontal, null, screen-medium);
+        }
+
+        & when (@toggle-custom-enabled) {
+          /* Custom Toggles */
+
+          &.form-control-toggle-custom {
+
+            .form-control-toggle-indicator {
+              .property-variant(toggle-custom, width, screen-medium);
+              .property-variant(toggle-custom, height, screen-medium);
+              .property-variant(toggle-custom, border-radius, screen-medium);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@toggle-enabled) and (@toggle-screen-large-enabled) {
+
+      .form-control-toggle {
+        .element-spacing(toggle, null, screen-large);
+        .element-text-size(toggle, screen-large);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(toggle, short, screen-large);
+        }
+
+        &.tall {
+          .element-spacing(toggle, tall, screen-large);
+        }
+
+        /* Inline */
+
+        &.form-control-toggle-inline {
+          .property-variant(toggle-inline, margin-left, margin-horizontal, null, screen-large);
+        }
+
+        & when (@toggle-custom-enabled) {
+          /* Custom Toggles */
+
+          &.form-control-toggle-custom {
+
+            .form-control-toggle-indicator {
+              .property-variant(toggle-custom, width, screen-large);
+              .property-variant(toggle-custom, height, screen-large);
+              .property-variant(toggle-custom, border-radius, screen-large);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@toggle-enabled) and (@toggle-screen-jumbo-enabled) {
+
+      .form-control-toggle {
+        .element-spacing(toggle, null, screen-jumbo);
+        .element-text-size(toggle, screen-jumbo);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(toggle, short, screen-jumbo);
+        }
+
+        &.tall {
+          .element-spacing(toggle, tall, screen-jumbo);
+        }
+
+        /* Inline */
+
+        &.form-control-toggle-inline {
+          .property-variant(toggle-inline, margin-left, margin-horizontal, null, screen-jumbo);
+        }
+
+        & when (@toggle-custom-enabled) {
+          /* Custom Toggles */
+
+          &.form-control-toggle-custom {
+
+            .form-control-toggle-indicator {
+              .property-variant(toggle-custom, width, screen-jumbo);
+              .property-variant(toggle-custom, height, screen-jumbo);
+              .property-variant(toggle-custom, border-radius, screen-jumbo);
+            }
+          }
+        }
+      }
+    }
+  }
+}

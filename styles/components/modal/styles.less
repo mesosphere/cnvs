@@ -1,0 +1,338 @@
+& when (@modal-enabled) {
+  /* Modal */
+
+  .modal {
+    .element-shape-style(modal);
+    .property-variant(modal, border-radius, null, null);
+    .property-variant(modal, width, null, null);
+    backface-visibility: hidden;
+    display: flex;
+    filter: blur(0);
+    flex-direction: column;
+    left: 50%;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1, 1);
+    z-index: 10001;
+
+    & when not (@modal-margin-vertical = null) {
+      // Allow duplicate properties for calc fallback.
+      /* stylelint-disable declaration-block-no-duplicate-properties */
+      max-height: 95%;
+      max-height: calc(e('100% - (2 * @{modal-margin-vertical})'));
+      /* stylelint-enable */
+    }
+
+    & when not (@modal-margin-horizontal-screen-small = null) {
+      // Allow duplicate properties for calc fallback.
+      /* stylelint-disable declaration-block-no-duplicate-properties */
+      max-width: 95%;
+      max-width: calc(e('100% - (2 * @{modal-margin-horizontal})'));
+      /* stylelint-enable */
+    }
+
+    /* Inline Modal */
+
+    &.fade {
+      margin-top: -50px;
+      opacity: 0;
+      transition: e('opacity 0.25s ease, margin-top 0.25s ease');
+
+      &.in {
+        margin-top: 0;
+        opacity: 1;
+      }
+    }
+
+    /* Inline Modal */
+
+    &.modal-inline {
+      bottom: auto;
+      left: auto;
+      margin: 0 auto;
+      position: relative;
+      right: auto;
+      top: auto;
+      transform: none;
+      z-index: auto;
+    }
+
+    /* Modal Header */
+
+    .modal-header {
+      .element-shape-style(modal-header);
+      .element-spacing(modal-header, null, null);
+      display: block;
+      flex: 1;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    /* Modal Body */
+
+    .modal-body {
+      .element-shape-style(modal-body);
+      .element-spacing(modal-body, null, null);
+      display: block;
+      flex: 1;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    /* Modal Footer */
+
+    .modal-footer {
+      .element-shape-style(modal-footer);
+      .element-spacing(modal-footer, null, null);
+      display: block;
+      flex: 1;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    /* Modal Inverse (.modal-inverse) */
+
+    &.modal-inverse {
+      .element-shape-style(modal-inverse);
+
+      /* Modal Header */
+
+      .modal-header {
+        .element-shape-style(modal-header-inverse);
+      }
+
+      /* Modal Body */
+
+      .modal-body {
+        .element-shape-style(modal-body-inverse);
+      }
+
+      /* Modal Footer */
+
+      .modal-footer {
+        .element-shape-style(modal-footer-inverse);
+      }
+    }
+  }
+
+  /* Modal Backdrop */
+
+  .modal-backdrop {
+    .element-shape-style(modal-backdrop);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+
+    /* Fade */
+
+    &.fade {
+      opacity: 0;
+      transition: opacity 0.25s ease;
+
+      &.in {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@modal-enabled) and (@modal-screen-small-enabled) {
+      /* Modal */
+
+      .modal {
+        .property-variant(modal, width, null, screen-small);
+        .property-variant(modal, border-radius, null, screen-small);
+
+        & when not (@modal-margin-vertical-screen-small = null) {
+          // Allow duplicate properties for calc fallback.
+          /* stylelint-disable declaration-block-no-duplicate-properties */
+          max-height: 95%;
+          max-height: calc(e('100% - (2 * @{modal-margin-vertical-screen-small})'));
+          /* stylelint-enable */
+        }
+
+        & when not (@modal-margin-horizontal-screen-small = null) {
+          // Allow duplicate properties for calc fallback.
+          /* stylelint-disable declaration-block-no-duplicate-properties */
+          max-width: 95%;
+          max-width: calc(e('100% - (2 * @{modal-margin-horizontal-screen-small})'));
+          /* stylelint-enable */
+        }
+
+        /* Modal Header */
+
+        .modal-header {
+          .element-spacing(modal-header, null, screen-small);
+        }
+
+        /* Modal Body */
+
+        .modal-body {
+          .element-spacing(modal-body, null, screen-small);
+        }
+
+        /* Modal Footer */
+
+        .modal-footer {
+          .element-spacing(modal-footer, null, screen-small);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@modal-enabled) and (@modal-screen-medium-enabled) {
+      /* Modal */
+
+      .modal {
+        .property-variant(modal, width, null, screen-medium);
+        .property-variant(modal, border-radius, null, screen-medium);
+
+        & when not (@modal-margin-vertical-screen-medium = null) {
+          // Allow duplicate properties for calc fallback.
+          /* stylelint-disable declaration-block-no-duplicate-properties */
+          max-height: 95%;
+          max-height: calc(e('100% - (2 * @{modal-margin-vertical-screen-medium})'));
+          /* stylelint-enable */
+        }
+
+        & when not (@modal-margin-horizontal-screen-medium = null) {
+          // Allow duplicate properties for calc fallback.
+          /* stylelint-disable declaration-block-no-duplicate-properties */
+          max-width: 95%;
+          max-width: calc(e('100% - (2 * @{modal-margin-horizontal-screen-medium})'));
+          /* stylelint-enable */
+        }
+
+        /* Modal Header */
+
+        .modal-header {
+          .element-spacing(modal-header, null, screen-medium);
+        }
+
+        /* Modal Body */
+
+        .modal-body {
+          .element-spacing(modal-body, null, screen-medium);
+        }
+
+        /* Modal Footer */
+
+        .modal-footer {
+          .element-spacing(modal-footer, null, screen-medium);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@modal-enabled) and (@modal-screen-large-enabled) {
+      /* Modal */
+
+      .modal {
+        .property-variant(modal, width, null, screen-large);
+        .property-variant(modal, border-radius, null, screen-large);
+
+        & when not (@modal-margin-vertical-screen-large = null) {
+          // Allow duplicate properties for calc fallback.
+          /* stylelint-disable declaration-block-no-duplicate-properties */
+          max-height: 95%;
+          max-height: calc(e('100% - (2 * @{modal-margin-vertical-screen-large})'));
+          /* stylelint-enable */
+        }
+
+        & when not (@modal-margin-horizontal-screen-large = null) {
+          // Allow duplicate properties for calc fallback.
+          /* stylelint-disable declaration-block-no-duplicate-properties */
+          max-width: 95%;
+          max-width: calc(e('100% - (2 * @{modal-margin-horizontal-screen-large})'));
+          /* stylelint-enable */
+        }
+
+        /* Modal Header */
+
+        .modal-header {
+          .element-spacing(modal-header, null, screen-large);
+        }
+
+        /* Modal Body */
+
+        .modal-body {
+          .element-spacing(modal-body, null, screen-large);
+        }
+
+        /* Modal Footer */
+
+        .modal-footer {
+          .element-spacing(modal-footer, null, screen-large);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@modal-enabled) and (@modal-screen-jumbo-enabled) {
+      /* Modal */
+
+      .modal {
+        .property-variant(modal, width, null, screen-jumbo);
+        .property-variant(modal, border-radius, null, screen-jumbo);
+
+        & when not (@modal-margin-vertical-screen-jumbo = null) {
+          // Allow duplicate properties for calc fallback.
+          /* stylelint-disable declaration-block-no-duplicate-properties */
+          max-height: 95%;
+          max-height: calc(e('100% - (2 * @{modal-margin-vertical-screen-jumbo})'));
+          /* stylelint-enable */
+        }
+
+        & when not (@modal-margin-horizontal-screen-jumbo = null) {
+          // Allow duplicate properties for calc fallback.
+          /* stylelint-disable declaration-block-no-duplicate-properties */
+          max-width: 95%;
+          max-width: calc(e('100% - (2 * @{modal-margin-horizontal-screen-jumbo})'));
+          /* stylelint-enable */
+        }
+
+        /* Modal Header */
+
+        .modal-header {
+          .element-spacing(modal-header, null, screen-jumbo);
+        }
+
+        /* Modal Body */
+
+        .modal-body {
+          .element-spacing(modal-body, null, screen-jumbo);
+        }
+
+        /* Modal Footer */
+
+        .modal-footer {
+          .element-spacing(modal-footer, null, screen-jumbo);
+        }
+      }
+    }
+  }
+}

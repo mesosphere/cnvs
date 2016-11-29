@@ -1,0 +1,216 @@
+& when (@button-collection-enabled) {
+  /* Button Collection (.button-collection) */
+
+  .button-collection {
+    .clearfix();
+    .element-spacing(button-collection, null, null);
+    display: block;
+    font-size: 0;
+
+    & when not (@button-collection-margin-vertical = null) {
+      margin-top: -@button-collection-margin-vertical;
+    }
+
+    & when not (@button-collection-margin-horizontal = null) {
+      margin-left: -@button-collection-margin-horizontal;
+    }
+
+    > .button,
+    > .button-group {
+      margin-bottom: 0;
+      vertical-align: middle;
+
+      & when not (@button-collection-margin-vertical = null) {
+        margin-top: @button-collection-margin-vertical;
+      }
+
+      & when not (@button-collection-margin-horizontal = null) {
+        margin-left: @button-collection-margin-horizontal;
+      }
+    }
+
+    /* Button Collection Align (Center) */
+
+    &.button-collection-align-horizontal-center {
+      text-align: center;
+    }
+
+    /* Button Collection Align (Left) */
+
+    &.button-collection-align-horizontal-left {
+      text-align: left;
+    }
+
+    /* Button Collection Align (Right) */
+
+    &.button-collection-align-horizontal-right {
+      text-align: right;
+    }
+
+    /* Button Collection Align (Top) */
+
+    &.button-collection-align-vertical-top {
+
+      > .button,
+      > .button-group {
+        vertical-align: top;
+      }
+    }
+
+    /* Button Collection Align (Center) */
+
+    &.button-collection-align-vertical-center {
+
+      > .button,
+      > .button-group {
+        vertical-align: middle;
+      }
+    }
+
+    /* Button Collection Align (Bottom) */
+
+    &.button-collection-align-vertical-bottom {
+
+      > .button,
+      > .button-group {
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@button-collection-enabled) and (@button-collection-screen-small-enabled) {
+      /* Button Collection (.button-collection) */
+
+      .button-collection {
+        .element-spacing(button-collection, null, screen-small);
+
+        & when not (@button-collection-margin-vertical-screen-small = null) {
+          margin-top: -@button-collection-margin-vertical-screen-small;
+        }
+
+        & when not (@button-collection-margin-horizontal-screen-small = null) {
+          margin-left: -@button-collection-margin-horizontal-screen-small;
+        }
+
+        > .button,
+        > .button-group {
+
+          & when not (@button-collection-margin-vertical-screen-small = null) {
+            margin-top: @button-collection-margin-vertical-screen-small;
+          }
+
+          & when not (@button-collection-margin-horizontal-screen-small = null) {
+            margin-left: @button-collection-margin-horizontal-screen-small;
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@button-collection-enabled) and (@button-collection-screen-medium-enabled) {
+      /* Button Collection (.button-collection) */
+
+      .button-collection {
+        .element-spacing(button-collection, null, screen-medium);
+
+        & when not (@button-collection-margin-vertical-screen-medium = null) {
+          margin-top: -@button-collection-margin-vertical-screen-medium;
+        }
+
+        & when not (@button-collection-margin-horizontal-screen-medium = null) {
+          margin-left: -@button-collection-margin-horizontal-screen-medium;
+        }
+
+        > .button,
+        > .button-group {
+
+          & when not (@button-collection-margin-vertical-screen-medium = null) {
+            margin-top: @button-collection-margin-vertical-screen-medium;
+          }
+
+          & when not (@button-collection-margin-horizontal-screen-medium = null) {
+            margin-left: @button-collection-margin-horizontal-screen-medium;
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@button-collection-enabled) and (@button-collection-screen-large-enabled) {
+      /* Button Collection (.button-collection) */
+
+      .button-collection {
+        .element-spacing(button-collection, null, screen-large);
+
+        & when not (@button-collection-margin-vertical-screen-large = null) {
+          margin-top: -@button-collection-margin-vertical-screen-large;
+        }
+
+        & when not (@button-collection-margin-horizontal-screen-large = null) {
+          margin-left: -@button-collection-margin-horizontal-screen-large;
+        }
+
+        > .button,
+        > .button-group {
+
+          & when not (@button-collection-margin-vertical-screen-large = null) {
+            margin-top: @button-collection-margin-vertical-screen-large;
+          }
+
+          & when not (@button-collection-margin-horizontal-screen-large = null) {
+            margin-left: @button-collection-margin-horizontal-screen-large;
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@button-collection-enabled) and (@button-collection-screen-jumbo-enabled) {
+      /* Button Collection (.button-collection) */
+
+      .button-collection {
+        .element-spacing(button-collection, null, screen-jumbo);
+
+        & when not (@button-collection-margin-vertical-screen-jumbo = null) {
+          margin-top: -@button-collection-margin-vertical-screen-jumbo;
+        }
+
+        & when not (@button-collection-margin-horizontal-screen-jumbo = null) {
+          margin-left: -@button-collection-margin-horizontal-screen-jumbo;
+        }
+
+        > .button,
+        > .button-group {
+
+          & when not (@button-collection-margin-vertical-screen-jumbo = null) {
+            margin-top: @button-collection-margin-vertical-screen-jumbo;
+          }
+
+          & when not (@button-collection-margin-horizontal-screen-jumbo = null) {
+            margin-left: @button-collection-margin-horizontal-screen-jumbo;
+          }
+        }
+      }
+    }
+  }
+}

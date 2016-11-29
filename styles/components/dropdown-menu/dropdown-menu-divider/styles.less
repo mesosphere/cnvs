@@ -1,0 +1,75 @@
+& when (@dropdown-menu-divider-enabled) {
+  /* Dropdown Menu Divider (.dropdown-menu-divider) */
+
+  .dropdown-menu-divider {
+    .element-shape-style(dropdown-menu-divider);
+    .element-spacing(dropdown-menu-divider, null, null);
+    .property-variant(dropdown-menu-divider, border-radius, null);
+    .property-variant(dropdown-menu-divider, height, null);
+    display: block;
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-screen-small-enabled) {
+      /* Dropdown Menu Divider (.dropdown-menu-divider) */
+
+      .dropdown-menu-divider {
+        .element-spacing(dropdown-menu-divider, null, screen-small);
+        .property-variant(dropdown-menu-divider, border-radius, screen-small);
+        .property-variant(dropdown-menu-divider, height, screen-small);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-screen-medium-enabled) {
+      /* Dropdown Menu Divider (.dropdown-menu-divider) */
+
+      .dropdown-menu-divider {
+        .element-spacing(dropdown-menu-divider, null, screen-medium);
+        .property-variant(dropdown-menu-divider, border-radius, screen-medium);
+        .property-variant(dropdown-menu-divider, height, screen-medium);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-screen-large-enabled) {
+      /* Dropdown Menu Divider (.dropdown-menu-divider) */
+
+      .dropdown-menu-divider {
+        .element-spacing(dropdown-menu-divider, null, screen-large);
+        .property-variant(dropdown-menu-divider, border-radius, screen-large);
+        .property-variant(dropdown-menu-divider, height, screen-large);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@dropdown-menu-divider-enabled) and (@dropdown-menu-divider-screen-jumbo-enabled) {
+      /* Dropdown Menu Divider (.dropdown-menu-divider) */
+
+      .dropdown-menu-divider {
+        .element-spacing(dropdown-menu-divider, null, screen-jumbo);
+        .property-variant(dropdown-menu-divider, border-radius, screen-jumbo);
+        .property-variant(dropdown-menu-divider, height, screen-jumbo);
+      }
+    }
+  }
+}

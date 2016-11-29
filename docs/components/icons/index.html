@@ -1,0 +1,86 @@
+---
+layout: default
+title: Icons
+page-header:
+  headline: "Icons"
+  alignment: left
+  parent:
+    label: "Components"
+    url: "/components/"
+page-navigation:
+- label: "Icon Sizes"
+  link: "#icons-sizes"
+- label: "Icon Styles"
+  link: "#icons-styles"
+---
+
+<!-- =================================================
+BEGIN: Icons
+================================================== -->
+
+<section class="fill" id="icons">
+
+  <div class="fill">
+
+    <div class="container-fluid pod">
+
+      <p>
+
+        A simple and easy to use icon class is available in Canvas.  The icon class <code>.icon</code> assumes very little about the actual icon itself, but instead serves as an easily modifiable container in which you can define or place your icon -- whether that icon is an SVG, font, or bitmap.  Canvas does not include icon glyphs or fonts by default, relying on the user to specify how these should be configured.
+
+      </p>
+
+      <!-- =================================================
+      BEGIN: Icon SVG Definitions
+      ================================================== -->
+
+      <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <symbol id="icons-square" viewBox="0 0 16 16">
+          <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+        </symbol>
+
+      </svg>
+
+      <!-- =================================================
+      BEGIN: Example
+      ================================================== -->
+
+      <div class="panel flush-bottom">
+
+        <div class="panel-cell">
+
+          <i class="icon icon-medium icon-black">
+            <svg class="">
+              <use xlink:href="#icons-square"></use>
+            </svg>
+          </i>
+
+        </div>
+
+        <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+<pre class="prettyprint transparent flush lang-html">
+&lt;i class='icon icon-medium'&gt&lt;i&gt;
+</pre>
+
+        </div>
+
+      </div>
+
+      <!-- =================================================
+      END: Example
+      ================================================== -->
+
+      {% include components/icons/icons-sizes.html %}
+      {% include components/icons/icons-styles.html %}
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =================================================
+END: Icons
+================================================== -->

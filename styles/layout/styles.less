@@ -1,0 +1,245 @@
+/* Foundation */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+
+  & when not (@body-background-color = null) {
+    background-color: @body-background-color;
+  }
+}
+
+/* Canvas */
+
+.canvas {
+  position: relative;
+
+  & when not (@canvas-background-color = null) {
+    background-color: @canvas-background-color;
+  }
+}
+
+/* Canvas Pod */
+
+.fill {
+  position: relative;
+  width: 100%;
+}
+
+/* Visibility */
+
+.invisible {
+  left: -9999px !important;
+  position: absolute !important;
+  visibility: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+/* Flush Margins */
+
+.flush {
+  margin: 0 !important;
+}
+
+.flush-vertical {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.flush-horizontal {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.flush-top {
+  margin-top: 0 !important;
+}
+
+.flush-bottom {
+  margin-bottom: 0 !important;
+}
+
+.flush-left {
+  margin-left: 0 !important;
+}
+
+.flush-right {
+  margin-right: 0 !important;
+}
+
+/* Positioning */
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+    /* Flush Margins */
+
+    .flush-screen-small {
+      margin: 0 !important;
+    }
+
+    .flush-vertical-screen-small {
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .flush-horizontal-screen-small {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .flush-top-screen-small {
+      margin-top: 0 !important;
+    }
+
+    .flush-bottom-screen-small {
+      margin-bottom: 0 !important;
+    }
+
+    .flush-left-screen-small {
+      margin-left: 0 !important;
+    }
+
+    .flush-right-screen-small {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+    /* Flush Margins */
+
+    .flush-screen-medium {
+      margin: 0 !important;
+    }
+
+    .flush-vertical-screen-medium {
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .flush-horizontal-screen-medium {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .flush-top-screen-medium {
+      margin-top: 0 !important;
+    }
+
+    .flush-bottom-screen-medium {
+      margin-bottom: 0 !important;
+    }
+
+    .flush-left-screen-medium {
+      margin-left: 0 !important;
+    }
+
+    .flush-right-screen-medium {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+    /* Flush Margins */
+
+    .flush-screen-large {
+      margin: 0 !important;
+    }
+
+    .flush-vertical-screen-large {
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .flush-horizontal-screen-large {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .flush-top-screen-large {
+      margin-top: 0 !important;
+    }
+
+    .flush-bottom-screen-large {
+      margin-bottom: 0 !important;
+    }
+
+    .flush-left-screen-large {
+      margin-left: 0 !important;
+    }
+
+    .flush-right-screen-large {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+    /* Flush Margins */
+
+    .flush-screen-jumbo {
+      margin: 0 !important;
+    }
+
+    .flush-vertical-screen-jumbo {
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .flush-horizontal-screen-jumbo {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .flush-top-screen-jumbo {
+      margin-top: 0 !important;
+    }
+
+    .flush-bottom-screen-jumbo {
+      margin-bottom: 0 !important;
+    }
+
+    .flush-left-screen-jumbo {
+      margin-left: 0 !important;
+    }
+
+    .flush-right-screen-jumbo {
+      margin-right: 0 !important;
+    }
+  }
+}

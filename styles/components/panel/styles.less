@@ -1,0 +1,74 @@
+& when (@panel-enabled) {
+  /* Panel */
+
+  .panel {
+    .element-shape-style(panel);
+    .property-variant(panel, border-radius, null, null);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
+    /* Panel Inverse (.panel-inverse) */
+
+    &.panel-inverse {
+      .element-shape-style(panel-inverse);
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@panel-enabled) and (@panel-screen-small-enabled) {
+      /* Panel */
+
+      .panel {
+        .property-variant(panel, border-radius, null, screen-small);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@panel-enabled) and (@panel-screen-medium-enabled) {
+      /* Panel */
+
+      .panel {
+        .property-variant(panel, border-radius, null, screen-medium);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@panel-enabled) and (@panel-screen-large-enabled) {
+      /* Panel */
+
+      .panel {
+        .property-variant(panel, border-radius, null, screen-large);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@panel-enabled) and (@panel-screen-jumbo-enabled) {
+      /* Panel */
+
+      .panel {
+        .property-variant(panel, border-radius, null, screen-jumbo);
+      }
+    }
+  }
+}

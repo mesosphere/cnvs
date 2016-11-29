@@ -1,0 +1,131 @@
+& when (@table-cell-danger-enabled) {
+  /* Table */
+
+  .table {
+
+    tr.danger td,
+    td.danger {
+      .element-text-style(table-cell-danger);
+      .element-shape-style(table-cell-danger);
+
+      &.selectable {
+
+        &:hover {
+          .element-text-style(table-cell-danger-hover);
+          .element-shape-style(table-cell-danger-hover);
+        }
+      }
+
+      &.disabled {
+        .element-text-style(table-cell-danger-disabled);
+        .element-shape-style(table-cell-danger-disabled);
+      }
+
+      // Cell active
+
+      &.active,
+      &.highlight {
+        .element-text-style(table-cell-danger-active);
+        .element-shape-style(table-cell-danger-active);
+
+        &.selectable {
+
+          &:hover {
+            .element-text-style(table-cell-danger-active-hover);
+            .element-shape-style(table-cell-danger-active-hover);
+          }
+        }
+
+        &.disabled {
+          .element-text-style(table-cell-danger-active-disabled);
+          .element-shape-style(table-cell-danger-active-disabled);
+        }
+      }
+    }
+
+    // Table Hover
+
+    &.table-hover {
+
+      tr.danger:hover td,
+      tr:hover td.danger {
+        .element-text-style(table-cell-danger-hover);
+        .element-shape-style(table-cell-danger-hover);
+
+        // Cell Active
+
+        &.active,
+        &.highlight {
+          .element-text-style(table-cell-danger-active-hover);
+          .element-shape-style(table-cell-danger-active-hover);
+        }
+      }
+    }
+  }
+
+  & when (@table-inverse-enabled) {
+    /* Inverse Table (.table-inverse) */
+
+    .table.table-inverse {
+
+      tr.danger td,
+      td.danger {
+        .element-text-style(table-cell-danger-inverse);
+        .element-shape-style(table-cell-danger-inverse);
+
+        &.selectable {
+
+          &:hover {
+            .element-text-style(table-cell-danger-inverse-hover);
+            .element-shape-style(table-cell-danger-inverse-hover);
+          }
+        }
+
+        &.disabled {
+          .element-text-style(table-cell-danger-inverse-disabled);
+          .element-shape-style(table-cell-danger-inverse-disabled);
+        }
+
+        // Cell Active
+
+        &.active,
+        &.highlight {
+          .element-text-style(table-cell-danger-inverse-active);
+          .element-shape-style(table-cell-danger-inverse-active);
+
+          &.selectable {
+
+            &:hover {
+              .element-text-style(table-cell-danger-inverse-active-hover);
+              .element-shape-style(table-cell-danger-inverse-active-hover);
+            }
+          }
+
+          &.disabled {
+            .element-text-style(table-cell-danger-inverse-active-disabled);
+            .element-shape-style(table-cell-danger-inverse-active-disabled);
+          }
+        }
+      }
+
+      // Table Hover
+
+      &.table-hover {
+
+        tr.danger:hover td,
+        tr:hover td.danger {
+          .element-text-style(table-cell-danger-inverse-hover);
+          .element-shape-style(table-cell-danger-inverse-hover);
+
+          // Cell Active
+
+          &.active,
+          &.highlight {
+            .element-text-style(table-cell-danger-inverse-active-hover);
+            .element-shape-style(table-cell-danger-inverse-active-hover);
+          }
+        }
+      }
+    }
+  }
+}

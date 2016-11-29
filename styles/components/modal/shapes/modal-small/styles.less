@@ -1,0 +1,198 @@
+& when (@modal-small-enabled) {
+  /* Modal */
+
+  .modal.modal-small {
+    .property-variant(modal-small, width, null, null);
+    .property-variant(modal-small, border-radius, null, null);
+
+    & when not (@modal-small-margin-vertical = null) {
+      max-height: calc(e('100% - (2 * @{modal-small-margin-vertical})'));
+    }
+
+    & when not (@modal-small-margin-horizontal-screen-small = null) {
+      max-width: calc(e('100% - (2 * @{modal-small-margin-horizontal})'));
+    }
+
+    /* Modal Header */
+
+    .modal-small-header {
+      .element-spacing(modal-small-header, null, null);
+    }
+
+    /* Modal Body */
+
+    .modal-small-body {
+      .element-spacing(modal-small-body, null, null);
+    }
+
+    /* Modal Footer */
+
+    .modal-small-footer {
+      .element-spacing(modal-small-footer, null, null);
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@modal-small-enabled) and (@modal-small-screen-small-enabled) {
+      /* Modal */
+
+      .modal.modal-small {
+        .property-variant(modal-small, width, null, screen-small);
+        .property-variant(modal-small, border-radius, null, screen-small);
+
+        & when not (@modal-small-margin-vertical-screen-small = null) {
+          max-height: calc(e('100% - (2 * @{modal-small-margin-vertical-screen-small})'));
+        }
+
+        & when not (@modal-small-margin-horizontal-screen-small = null) {
+          max-width: calc(e('100% - (2 * @{modal-small-margin-horizontal-screen-small})'));
+        }
+
+        /* Modal Header */
+
+        .modal-small-header {
+          .element-spacing(modal-small-header, null, screen-small);
+        }
+
+        /* Modal Body */
+
+        .modal-small-body {
+          .element-spacing(modal-small-body, null, screen-small);
+        }
+
+        /* Modal Footer */
+
+        .modal-small-footer {
+          .element-spacing(modal-small-footer, null, screen-small);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@modal-small-enabled) and (@modal-small-screen-medium-enabled) {
+      /* Modal */
+
+      .modal.modal-small {
+        .property-variant(modal-small, width, null, screen-medium);
+        .property-variant(modal-small, border-radius, null, screen-medium);
+
+        & when not (@modal-small-margin-vertical-screen-medium = null) {
+          max-height: calc(e('100% - (2 * @{modal-small-margin-vertical-screen-medium})'));
+        }
+
+        & when not (@modal-small-margin-horizontal-screen-medium = null) {
+          max-width: calc(e('100% - (2 * @{modal-small-margin-horizontal-screen-medium})'));
+        }
+
+        /* Modal Header */
+
+        .modal-small-header {
+          .element-spacing(modal-small-header, null, screen-medium);
+        }
+
+        /* Modal Body */
+
+        .modal-small-body {
+          .element-spacing(modal-small-body, null, screen-medium);
+        }
+
+        /* Modal Footer */
+
+        .modal-small-footer {
+          .element-spacing(modal-small-footer, null, screen-medium);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@modal-small-enabled) and (@modal-small-screen-large-enabled) {
+      /* Modal */
+
+      .modal.modal-small {
+        .property-variant(modal-small, width, null, screen-large);
+        .property-variant(modal-small, border-radius, null, screen-large);
+
+        & when not (@modal-small-margin-vertical-screen-large = null) {
+          max-height: calc(e('100% - (2 * @{modal-small-margin-vertical-screen-large})'));
+        }
+
+        & when not (@modal-small-margin-horizontal-screen-large = null) {
+          max-width: calc(e('100% - (2 * @{modal-small-margin-horizontal-screen-large})'));
+        }
+
+        /* Modal Header */
+
+        .modal-small-header {
+          .element-spacing(modal-small-header, null, screen-large);
+        }
+
+        /* Modal Body */
+
+        .modal-small-body {
+          .element-spacing(modal-small-body, null, screen-large);
+        }
+
+        /* Modal Footer */
+
+        .modal-small-footer {
+          .element-spacing(modal-small-footer, null, screen-large);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@modal-small-enabled) and (@modal-small-screen-jumbo-enabled) {
+      /* Modal */
+
+      .modal.modal-small {
+        .property-variant(modal-small, width, null, screen-jumbo);
+        .property-variant(modal-small, border-radius, null, screen-jumbo);
+
+        & when not (@modal-small-margin-vertical-screen-jumbo = null) {
+          max-height: calc(e('100% - (2 * @{modal-small-margin-vertical-screen-jumbo})'));
+        }
+
+        & when not (@modal-small-margin-horizontal-screen-jumbo = null) {
+          max-width: calc(e('100% - (2 * @{modal-small-margin-horizontal-screen-jumbo})'));
+        }
+
+        /* Modal Header */
+
+        .modal-small-header {
+          .element-spacing(modal-small-header, null, screen-jumbo);
+        }
+
+        /* Modal Body */
+
+        .modal-small-body {
+          .element-spacing(modal-small-body, null, screen-jumbo);
+        }
+
+        /* Modal Footer */
+
+        .modal-small-footer {
+          .element-spacing(modal-small-footer, null, screen-jumbo);
+        }
+      }
+    }
+  }
+}

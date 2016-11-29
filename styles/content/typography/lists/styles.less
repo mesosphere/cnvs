@@ -1,0 +1,698 @@
+& when (@list-enabled) {
+  /* Lists */
+
+  ul,
+  ol,
+  dl {
+    .element-spacing(list, null, null);
+    list-style: none;
+    padding: 0;
+    position: relative;
+
+    /* Layout Variants */
+
+    &.short {
+      .element-spacing(list, short, null);
+    }
+
+    &.tall {
+      .element-spacing(list, tall, null);
+    }
+
+    /* List Item */
+
+    li,
+    dt,
+    dd {
+      .element-spacing(list-item, null, null);
+      .element-text-style(list-item);
+      position: relative;
+
+      /* Layout Variants */
+
+      &.short {
+        .element-spacing(list-item, short, null);
+      }
+
+      &.tall {
+        .element-spacing(list-item, tall, null);
+      }
+
+      &:before {
+        .property-variant(list-item-bullet, background-color, color, null, null);
+        .property-variant(list-item-bullet, border-radius);
+        .property-variant(list-item-bullet, box-shadow, shadow, null, null);
+        .property-variant(list-item-bullet, height);
+        .property-variant(list-item-bullet, opacity);
+        .property-variant(list-item-bullet, width);
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+
+        & when not (@list-item-bullet-line-height = null) and not (@list-item-bullet-height = null) {
+          top: floor((@list-item-bullet-line-height - @list-item-bullet-height) / 2);
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Nested List */
+
+      > ul,
+      > ol {
+        .property-variant(list-item, margin-bottom);
+        margin-bottom: 0;
+      }
+    }
+
+    /* Unstyled List */
+
+    &.list-unstyled {
+
+      > li {
+        padding-left: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    /* Inline List */
+
+    &.list-inline {
+      .clearfix();
+
+      & when not (@list-inline-margin-vertical = null) {
+        margin-top: -@list-inline-margin-vertical;
+      }
+
+      & when not (@list-inline-margin-horizontal = null) {
+        margin-left: -@list-inline-margin-horizontal;
+      }
+
+      > li {
+        display: block;
+        float: left;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        & when not (@list-inline-margin-vertical = null) {
+          margin-top: @list-inline-margin-vertical;
+        }
+
+        & when not (@list-inline-margin-horizontal = null) {
+          margin-left: @list-inline-margin-horizontal;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* Ordered Lists */
+
+  ol {
+    counter-reset: li;
+
+    > li {
+
+      &:before {
+        .property-variant(list-item-bullet, color);
+        background: none;
+        border-radius: 0;
+        content: counter(li) + '.';
+        counter-increment: li;
+        text-align: left;
+        top: 0;
+
+        & when not (@list-item-bullet-line-height-screen-large = null) {
+          height: @list-item-bullet-line-height-screen-large;
+        }
+      }
+
+      > ol {
+
+        &.a {
+
+          li {
+
+            &:before {
+              content: counter(li, lower-alpha) + '.';
+            }
+          }
+        }
+
+        &.A {
+
+          li {
+
+            &:before {
+              content: counter(li, upper-alpha) + '.';
+            }
+          }
+        }
+
+        &.i {
+
+          li {
+
+            &:before {
+              content: counter(li, lower-roman) + '.';
+            }
+          }
+        }
+
+        &.I {
+
+          li {
+
+            &:before {
+              content: counter(li, upper-roman) + '.';
+            }
+          }
+        }
+      }
+    }
+
+    &.a {
+
+      li {
+
+        &:before {
+          content: counter(li, lower-alpha) + '.';
+        }
+      }
+    }
+
+    &.A {
+
+      li {
+
+        &:before {
+          content: counter(li, upper-alpha) + '.';
+        }
+      }
+    }
+
+    &.i {
+
+      li {
+
+        &:before {
+          content: counter(li, lower-roman) + '.';
+        }
+      }
+    }
+
+    &.I {
+
+      li {
+
+        &:before {
+          content: counter(li, upper-roman) + '.';
+        }
+      }
+    }
+
+    & when (@body-inverse-enabled) {
+      /* Inverse */
+
+      &.inverse {
+        /* List Item */
+
+        li {
+
+          &:before {
+            .property-variant(list-item-inverse-bullet, color);
+            background: none;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  /* Definition List */
+
+  dl {
+
+    dt,
+    dd {
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    dt {
+      .element-text-style(definition-list-item-title);
+    }
+
+    dl {
+      .element-text-style(definition-list-item);
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@list-enabled) and (@list-screen-small-enabled) {
+      /* Lists */
+
+      ul,
+      ol,
+      dl {
+        .element-spacing(list, null, screen-small);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(list, short, screen-small);
+        }
+
+        &.tall {
+          .element-spacing(list, tall, screen-small);
+        }
+
+        /* List Item */
+
+        li,
+        dt,
+        dd {
+          .element-spacing(list-item, null, screen-small);
+
+          /* Layout Variants */
+
+          &.short {
+            .element-spacing(list-item, short, screen-small);
+          }
+
+          &.tall {
+            .element-spacing(list-item, tall, screen-small);
+          }
+
+          &:before {
+
+            & when not (@list-item-bullet-width-screen-small = null) {
+              width: @list-item-bullet-width-screen-small;
+            }
+
+            & when not (@list-item-bullet-height-screen-small = null) {
+              height: @list-item-bullet-height-screen-small;
+            }
+
+            & when not (@list-item-bullet-height-screen-small = null) and not (@list-item-bullet-line-height-screen-small = null) {
+              top: 0.5 * (@list-item-bullet-line-height-screen-small - @list-item-bullet-height-screen-small);
+            }
+          }
+
+          /* Nested List */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-screen-small = null) {
+              margin-top: @list-item-margin-bottom-screen-small;
+            }
+          }
+        }
+
+        /* Inline List */
+
+        &.list-inline {
+
+          & when not (@list-inline-margin-vertical-screen-small = null) {
+            margin-top: -(@list-inline-margin-vertical-screen-small);
+          }
+
+          & when not (@list-inline-margin-horizontal-screen-small = null) {
+            margin-left: -(@list-inline-margin-horizontal-screen-small);
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical-screen-small = null) {
+              margin-top: (@list-inline-margin-vertical-screen-small);
+            }
+
+            & when not (@list-inline-margin-horizontal-screen-small = null) {
+              margin-left: (@list-inline-margin-horizontal-screen-small);
+            }
+          }
+        }
+      }
+
+      /* Ordered Lists */
+
+      ol {
+
+        > li {
+
+          &:before {
+            top: 0;
+
+            & when not (@list-item-bullet-line-height-screen-small = null) {
+              height: @list-item-bullet-line-height-screen-small;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@list-enabled) and (@list-screen-medium-enabled) {
+      /* Lists */
+
+      ul,
+      ol,
+      dl {
+        .element-spacing(list, null, screen-medium);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(list, short, screen-medium);
+        }
+
+        &.tall {
+          .element-spacing(list, tall, screen-medium);
+        }
+
+        /* List Item */
+
+        li,
+        dt,
+        dd {
+          .element-spacing(list-item, null, screen-medium);
+
+          /* Layout Variants */
+
+          &.short {
+            .element-spacing(list-item, short, screen-medium);
+          }
+
+          &.tall {
+            .element-spacing(list-item, tall, screen-medium);
+          }
+
+          &:before {
+
+            & when not (@list-item-bullet-width-screen-medium = null) {
+              width: @list-item-bullet-width-screen-medium;
+            }
+
+            & when not (@list-item-bullet-height-screen-medium = null) {
+              height: @list-item-bullet-height-screen-medium;
+            }
+
+            & when not (@list-item-bullet-height-screen-medium = null) and not (@list-item-bullet-line-height-screen-medium = null) {
+              top: 0.5 * (@list-item-bullet-line-height-screen-medium - @list-item-bullet-height-screen-medium);
+            }
+          }
+
+          /* Nested List */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-screen-medium = null) {
+              margin-top: @list-item-margin-bottom-screen-medium;
+            }
+          }
+        }
+
+        /* Inline List */
+
+        &.list-inline {
+
+          & when not (@list-inline-margin-vertical-screen-medium = null) {
+            margin-top: -(@list-inline-margin-vertical-screen-medium);
+          }
+
+          & when not (@list-inline-margin-horizontal-screen-medium = null) {
+            margin-left: -(@list-inline-margin-horizontal-screen-medium);
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical-screen-medium = null) {
+              margin-top: (@list-inline-margin-vertical-screen-medium);
+            }
+
+            & when not (@list-inline-margin-horizontal-screen-medium = null) {
+              margin-left: (@list-inline-margin-horizontal-screen-medium);
+            }
+          }
+        }
+      }
+
+      /* Ordered Lists */
+
+      ol {
+
+        > li {
+
+          &:before {
+            top: 0;
+
+            & when not (@list-item-bullet-line-height-screen-medium = null) {
+              height: @list-item-bullet-line-height-screen-medium;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@list-enabled) and (@list-screen-large-enabled) {
+      /* Lists */
+
+      ul,
+      ol,
+      dl {
+        .element-spacing(list, null, screen-large);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(list, short, screen-large);
+        }
+
+        &.tall {
+          .element-spacing(list, tall, screen-large);
+        }
+
+        /* List Item */
+
+        li,
+        dt,
+        dd {
+          .element-spacing(list-item, null, screen-large);
+
+          /* Layout Variants */
+
+          &.short {
+            .element-spacing(list-item, short, screen-large);
+          }
+
+          &.tall {
+            .element-spacing(list-item, tall, screen-large);
+          }
+
+          &:before {
+
+            & when not (@list-item-bullet-width-screen-large = null) {
+              width: @list-item-bullet-width-screen-large;
+            }
+
+            & when not (@list-item-bullet-height-screen-large = null) {
+              height: @list-item-bullet-height-screen-large;
+            }
+
+            & when not (@list-item-bullet-height-screen-large = null) and not (@list-item-bullet-line-height-screen-large = null) {
+              top: 0.5 * (@list-item-bullet-line-height-screen-large - @list-item-bullet-height-screen-large);
+            }
+          }
+
+          /* Nested List */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-screen-large = null) {
+              margin-top: @list-item-margin-bottom-screen-large;
+            }
+          }
+        }
+
+        /* Inline List */
+
+        &.list-inline {
+
+          & when not (@list-inline-margin-vertical-screen-large = null) {
+            margin-top: -(@list-inline-margin-vertical-screen-large);
+          }
+
+          & when not (@list-inline-margin-horizontal-screen-large = null) {
+            margin-left: -(@list-inline-margin-horizontal-screen-large);
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical-screen-large = null) {
+              margin-top: (@list-inline-margin-vertical-screen-large);
+            }
+
+            & when not (@list-inline-margin-horizontal-screen-large = null) {
+              margin-left: (@list-inline-margin-horizontal-screen-large);
+            }
+          }
+        }
+      }
+
+      /* Ordered Lists */
+
+      ol {
+
+        > li {
+
+          &:before {
+            top: 0;
+
+            & when not (@list-item-bullet-line-height-screen-large = null) {
+              height: @list-item-bullet-line-height-screen-large;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@list-enabled) and (@list-screen-jumbo-enabled) {
+      /* Lists */
+
+      ul,
+      ol,
+      dl {
+        .element-spacing(list, null, screen-jumbo);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(list, short, screen-jumbo);
+        }
+
+        &.tall {
+          .element-spacing(list, tall, screen-jumbo);
+        }
+
+        /* List Item */
+
+        li,
+        dt,
+        dd {
+          .element-spacing(list-item, null, screen-jumbo);
+
+          /* Layout Variants */
+
+          &.short {
+            .element-spacing(list-item, short, screen-jumbo);
+          }
+
+          &.tall {
+            .element-spacing(list-item, tall, screen-jumbo);
+          }
+
+          &:before {
+
+            & when not (@list-item-bullet-width-screen-jumbo = null) {
+              width: @list-item-bullet-width-screen-jumbo;
+            }
+
+            & when not (@list-item-bullet-height-screen-jumbo = null) {
+              height: @list-item-bullet-height-screen-jumbo;
+            }
+
+            & when not (@list-item-bullet-height-screen-jumbo = null) and not (@list-item-bullet-line-height-screen-jumbo = null) {
+              top: 0.5 * (@list-item-bullet-line-height-screen-jumbo - @list-item-bullet-height-screen-jumbo);
+            }
+          }
+
+          /* Nested List */
+
+          > ul,
+          > ol {
+
+            & when not (@list-item-margin-bottom-screen-jumbo = null) {
+              margin-top: @list-item-margin-bottom-screen-jumbo;
+            }
+          }
+        }
+
+        /* Inline List */
+
+        &.list-inline {
+
+          & when not (@list-inline-margin-vertical-screen-jumbo = null) {
+            margin-top: -(@list-inline-margin-vertical-screen-jumbo);
+          }
+
+          & when not (@list-inline-margin-horizontal-screen-jumbo = null) {
+            margin-left: -(@list-inline-margin-horizontal-screen-jumbo);
+          }
+
+          > li {
+
+            & when not (@list-inline-margin-vertical-screen-jumbo = null) {
+              margin-top: (@list-inline-margin-vertical-screen-jumbo);
+            }
+
+            & when not (@list-inline-margin-horizontal-screen-jumbo = null) {
+              margin-left: (@list-inline-margin-horizontal-screen-jumbo);
+            }
+          }
+        }
+      }
+
+      /* Ordered Lists */
+
+      ol {
+
+        > li {
+
+          &:before {
+            top: 0;
+
+            & when not (@list-item-bullet-line-height-screen-jumbo = null) {
+              height: @list-item-bullet-line-height-screen-jumbo;
+            }
+          }
+        }
+      }
+    }
+  }
+}

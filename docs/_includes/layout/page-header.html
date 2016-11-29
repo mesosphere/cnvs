@@ -1,6 +1,6 @@
 {% if (page.page-header.theme == 'inverse') %}
 
-  {% assign page-header-class = 'canvas-pod-dark page-header-inverse' %}
+  {% assign page-header-class = 'fill-dark page-header-inverse' %}
   {% assign page-header-title-class = 'inverse' %}
   {% assign page-header-headline-class = 'inverse' %}
   {% assign page-header-description-class = 'inverse' %}
@@ -14,7 +14,7 @@
 
 {% else %}
 
-  {% assign page-header-class = 'canvas-pod-light' %}
+  {% assign page-header-class = 'fill-light' %}
   {% assign page-header-title-class = '' %}
   {% assign page-header-headline-class = '' %}
   {% assign page-header-description-class = '' %}
@@ -25,11 +25,11 @@
 
 {% if (page.page-header.size == 'tall') %}
 
-  {% assign page-header-container-class = 'container-pod-tall' %}
+  {% assign page-header-container-class = 'pod' %}
 
 {% else %}
 
-  {% assign page-header-container-class = '' %}
+  {% assign page-header-container-class = 'pod-short' %}
 
 {% endif %}
 
@@ -37,22 +37,22 @@
 
 {% if (page.page-header.alignment == 'left') %}
 
-  {% assign page-header-alignment-class = 'column-mini-8 column-small-6 column-medium-8' %}
-  {% assign page-header-headline-alignment-class = 'column-mini-12 column-large-10' %}
+  {% assign page-header-alignment-class = 'column-small-8 column-medium-8 column-large-10' %}
+  {% assign page-header-headline-alignment-class = 'column-small-12 column-jumbo-10' %}
   {% assign page-header-text-alignment-class = 'text-align-left' %}
   {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-left' %}
 
 {% elsif (page.page-header.alignment == 'right') %}
 
-  {% assign page-header-alignment-class = 'column-mini-8 column-mini-offset-4 column-small-7 column-small-offset-5 column-medium-8 column-medium-offset-4' %}
-  {% assign page-header-headline-alignment-class = 'column-mini-12column-large-10 column-large-offset-2' %}
+  {% assign page-header-alignment-class = 'column-small-8 column-small-offset-4 column-medium-7 column-medium-offset-5 column-large-8 column-large-offset-4' %}
+  {% assign page-header-headline-alignment-class = 'column-small-12column-jumbo-10 column-jumbo-offset-2' %}
   {% assign page-header-text-alignment-class = 'text-align-right' %}
   {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-right' %}
 
 {% else %}
 
-  {% assign page-header-alignment-class = 'column-small-10 column-small-offset-1 column-medium-8 column-medium-offset-2' %}
-  {% assign page-header-headline-alignment-class = 'column-mini-8 column-mini-offset-2 column-small-10 column-small-offset-1' %}
+  {% assign page-header-alignment-class = 'column-medium-10 column-medium-offset-1 column-large-10 column-large-offset-1' %}
+  {% assign page-header-headline-alignment-class = 'column-small-8 column-small-offset-2 column-medium-10 column-medium-offset-1' %}
   {% assign page-header-text-alignment-class = 'text-align-center' %}
   {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-center' %}
 
@@ -62,17 +62,17 @@
 BEGIN: Page Header
 ================================================== -->
 
-<div id="page-header" class="canvas-pod {{ page-header-class }} {{ page.page-header.alignment }}">
+<div class="page-header fill {{ page-header-class }} {{ page.page-header.alignment }}">
 
   {% if (page.page-header.background.image != null) and (page.page-header.background.image != empty) %}
 
-    <div class="canvas-pod-background backstretch" data-backstretch-image="/images/{{ page.page-header.background.image }} %}" data-no-retina></div>
+    <div class="fill-background backstretch" data-backstretch-image="/images/{{ page.page-header.background.image }} %}" data-no-retina></div>
 
   {% endif %}
 
-  <div id="page-header-inner">
+  <div class="page-header-inner">
 
-    <div class="container container-pod container-pod-short-top {{ page-header-container-class }}">
+    <div class="container-fluid pod {{ page-header-container-class }}">
 
       <div class="row">
 
@@ -100,11 +100,33 @@ BEGIN: Page Header
 
               <div class="{{ page-header-headline-alignment-class }}">
 
-                <h1 class="page-header-headline flush-top {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
+                {% if (page.page-header.parent.label != null) and (page.page-header.parent.label != empty) %}
+
+                  <p class="h6 page-header-subheadline flush {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %}">
+
+                    {% if (page.page-header.parent.url != null) and (page.page-header.parent.url != empty) %}
+
+                      <a href="{{ page.page-header.parent.url }}">
+
+                    {% endif %}
+
+                    {{ page.page-header.parent.label }}
+
+                    {% if (page.page-header.parent.url != null) and (page.page-header.parent.url != empty) %}
+
+                      </a>
+
+                    {% endif %}
+
+                  </p>
+
+                {% endif %}
+
+                <p class="h1 page-header-headline flush-top {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
 
                   {{ page.page-header.headline }}
 
-                </h1>
+                </p>
 
               </div>
 
@@ -136,7 +158,7 @@ BEGIN: Page Header
 
               {% for item in page.page-header.actions %}
 
-                <a href="{{ item.link }}" class="button button-large button-wide button-wide-below-screen-mini {{ item.class }}" id="{% if (item.id != null) and (item.id != empty) %}{{ item.id }}{% endif %}" {% if (item.modal != null) and (item.modal != empty) %}data-toggle="modal" data-target="{{ item.modal }}"{% endif %}>
+                <a href="{{ item.link }}" class="button button-large button-wide button-wide-below-screen-small {{ item.class }}" id="{% if (item.id != null) and (item.id != empty) %}{{ item.id }}{% endif %}" {% if (item.modal != null) and (item.modal != empty) %}data-toggle="modal" data-target="{{ item.modal }}"{% endif %}>
 
                   {{ item.label }}
 

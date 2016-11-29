@@ -1,0 +1,23 @@
+<ul class="page-navigation-menu list-unstyled">
+
+  {% for item in include.navigation %}
+
+    <li class="">
+
+      <a href="{{ item.link }}" class="">
+
+        {{ item.label }}
+
+      </a>
+
+      {% if item.navigation %}
+
+        {% include layout/page-navigation-menu.html navigation=item.navigation %}
+
+      {% endif %}
+
+    </li>
+
+  {% endfor %}
+
+</ul>

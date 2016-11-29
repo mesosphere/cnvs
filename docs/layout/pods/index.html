@@ -1,0 +1,98 @@
+---
+layout: default
+title: Pods
+page-header:
+  headline: "Pods"
+  alignment: left
+  parent:
+    label: "Layout"
+    url: "/layout"
+page-navigation:
+- label: "Pod Options"
+  link: "#pods-options"
+  navigation:
+  - label: "Size Modifiers"
+    link: "#pods-options-size-modifier"
+  - label: "Size Direction Modifiers"
+    link: "#pods-options-size-direction-modifier"
+- label: "Responsive Pods"
+  link: "#pods-responsive"
+---
+
+<!-- =================================================
+BEGIN: Pods
+================================================== -->
+
+<section class="fill" id="pods">
+
+  <div class="container-fluid pod">
+
+    <!-- =================================================
+    BEGIN: Pods Overview
+    ================================================== -->
+
+    <section id="pods-overview">
+
+      <p class="lead">
+
+        Pods are simple and convient way to adding space around your content.  With provided classes, you can quickly define layout rules that fit the requirements of your project.
+
+      </p>
+
+      <p>
+
+        Use the class <code>.pod</code> to apply vertical and horizontal margin to any component. By default, margin is applied evenly to all sides of the pod. However, with the provided classes you can override this to behave differently &mdash; taller, shorter, narower, wider, or no padding at all.
+
+      </p>
+
+      <!-- =================================================
+      BEGIN: Example
+      ================================================== -->
+
+      <div class="panel">
+
+        <div class="panel-cell">
+
+          <div class="layout-box pods-overview">
+            <div class="layout-box-item layout-box-item-margin pod">
+              <div class="layout-box-item layout-box-item-padding">
+                <div class="layout-box-item layout-box-item-content layout-box-item-content-fixed-height">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+<pre class="prettyprint transparent flush lang-html">
+&lt;div class="pod"&gt;
+  &hellip;
+&lt;/div&gt;
+</pre>
+
+        </div>
+
+      </div>
+
+      <!-- =================================================
+      END: Example
+      ================================================== -->
+
+    </section>
+
+    <!-- =================================================
+    END: Pods Overview
+    ================================================== -->
+
+    {% include layout/pods/pods-options.html %}
+    {% include layout/pods/pods-responsive.html %}
+
+  </div>
+
+</section>
+
+<!-- =================================================
+END: Pods
+================================================== -->

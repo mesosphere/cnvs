@@ -1,0 +1,131 @@
+& when (@table-cell-warning-enabled) {
+  /* Table */
+
+  .table {
+
+    tr.warning td,
+    td.warning {
+      .element-text-style(table-cell-warning);
+      .element-shape-style(table-cell-warning);
+
+      &.selectable {
+
+        &:hover {
+          .element-text-style(table-cell-warning-hover);
+          .element-shape-style(table-cell-warning-hover);
+        }
+      }
+
+      &.disabled {
+        .element-text-style(table-cell-warning-disabled);
+        .element-shape-style(table-cell-warning-disabled);
+      }
+
+      // Cell active
+
+      &.active,
+      &.highlight {
+        .element-text-style(table-cell-warning-active);
+        .element-shape-style(table-cell-warning-active);
+
+        &.selectable {
+
+          &:hover {
+            .element-text-style(table-cell-warning-active-hover);
+            .element-shape-style(table-cell-warning-active-hover);
+          }
+        }
+
+        &.disabled {
+          .element-text-style(table-cell-warning-active-disabled);
+          .element-shape-style(table-cell-warning-active-disabled);
+        }
+      }
+    }
+
+    // Table Hover
+
+    &.table-hover {
+
+      tr.warning:hover td,
+      tr:hover td.warning {
+        .element-text-style(table-cell-warning-hover);
+        .element-shape-style(table-cell-warning-hover);
+
+        // Cell Active
+
+        &.active,
+        &.highlight {
+          .element-text-style(table-cell-warning-active-hover);
+          .element-shape-style(table-cell-warning-active-hover);
+        }
+      }
+    }
+  }
+
+  & when (@table-inverse-enabled) {
+    /* Inverse Table (.table-inverse) */
+
+    .table.table-inverse {
+
+      tr.warning td,
+      td.warning {
+        .element-text-style(table-cell-warning-inverse);
+        .element-shape-style(table-cell-warning-inverse);
+
+        &.selectable {
+
+          &:hover {
+            .element-text-style(table-cell-warning-inverse-hover);
+            .element-shape-style(table-cell-warning-inverse-hover);
+          }
+        }
+
+        &.disabled {
+          .element-text-style(table-cell-warning-inverse-disabled);
+          .element-shape-style(table-cell-warning-inverse-disabled);
+        }
+
+        // Cell Active
+
+        &.active,
+        &.highlight {
+          .element-text-style(table-cell-warning-inverse-active);
+          .element-shape-style(table-cell-warning-inverse-active);
+
+          &.selectable {
+
+            &:hover {
+              .element-text-style(table-cell-warning-inverse-active-hover);
+              .element-shape-style(table-cell-warning-inverse-active-hover);
+            }
+          }
+
+          &.disabled {
+            .element-text-style(table-cell-warning-inverse-active-disabled);
+            .element-shape-style(table-cell-warning-inverse-active-disabled);
+          }
+        }
+      }
+
+      // Table Hover
+
+      &.table-hover {
+
+        tr.warning:hover td,
+        tr:hover td.warning {
+          .element-text-style(table-cell-warning-inverse-hover);
+          .element-shape-style(table-cell-warning-inverse-hover);
+
+          // Cell Active
+
+          &.active,
+          &.highlight {
+            .element-text-style(table-cell-warning-inverse-active-hover);
+            .element-shape-style(table-cell-warning-inverse-active-hover);
+          }
+        }
+      }
+    }
+  }
+}

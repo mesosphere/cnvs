@@ -1,0 +1,943 @@
+& when (@form-control-enabled) {
+  /* Form Control (.form-control) */
+
+  .form-control {
+    .element-shape-style(form-control);
+    .element-spacing(form-control, null, null);
+    .element-text-size(form-control, null);
+    .element-text-style(form-control);
+    .property-variant(form-control, border-radius, null);
+    align-items: center;
+    display: flex;
+    height: @form-control-height;
+    justify-content: center;
+    transition: all 0.05s ease;
+    width: 100%;
+
+    &::placeholder[style] {
+      align-items: center !important;
+      display: inline-flex !important;
+      opacity: 1;
+    }
+
+    & when not (@form-control-placeholder-color = null) {
+
+      &::placeholder {
+        color: @form-control-placeholder-color;
+      }
+    }
+
+    &:hover {
+      .element-text-style(form-control-hover);
+      .element-shape-style(form-control-hover);
+
+      & when not (@form-control-hover-placeholder-color = null) {
+
+        &::placeholder {
+          color: @form-control-hover-placeholder-color;
+        }
+      }
+    }
+
+    &:active {
+      .element-text-style(form-control-active);
+      .element-shape-style(form-control-active);
+
+      & when not (@form-control-active-placeholder-color = null) {
+
+        &::placeholder {
+          color: @form-control-active-placeholder-color;
+        }
+      }
+    }
+
+    &:focus,
+    &.focus {
+      .element-text-style(form-control-focus);
+      .element-shape-style(form-control-focus);
+
+      & when not (@form-control-focus-placeholder-color = null) {
+
+        &::placeholder {
+          color: @form-control-focus-placeholder-color;
+        }
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      .element-text-style(form-control-disabled);
+      .element-shape-style(form-control-disabled);
+      .property-variant(form-control-disabled, opacity, null);
+
+      & when not (@form-control-disabled-placeholder-color = null) {
+
+        &::placeholder {
+          color: @form-control-disabled-placeholder-color;
+        }
+      }
+    }
+
+    /* Form Control Inverse (.form-control-inverse) */
+
+    &.form-control-inverse {
+      .element-text-style(form-control-inverse);
+      .element-shape-style(form-control-inverse);
+
+      & when not (@form-control-inverse-placeholder-color = null) {
+
+        &::placeholder {
+          color: @form-control-inverse-placeholder-color;
+        }
+      }
+
+      &:hover {
+        .element-text-style(form-control-inverse-hover);
+        .element-shape-style(form-control-inverse-hover);
+
+        & when not (@form-control-inverse-hover-placeholder-color = null) {
+
+          &::placeholder {
+            color: @form-control-inverse-hover-placeholder-color;
+          }
+        }
+      }
+
+      &:active {
+        .element-text-style(form-control-inverse-active);
+        .element-shape-style(form-control-inverse-active);
+
+        & when not (@form-control-inverse-active-placeholder-color = null) {
+
+          &::placeholder {
+            color: @form-control-inverse-active-placeholder-color;
+          }
+        }
+      }
+
+      &:focus,
+      &.focus {
+        .element-text-style(form-control-inverse-focus);
+        .element-shape-style(form-control-inverse-focus);
+
+        & when not (@form-control-inverse-focus-placeholder-color = null) {
+
+          &::placeholder {
+            color: @form-control-inverse-focus-placeholder-color;
+          }
+        }
+      }
+
+      &:disabled,
+      &.disabled {
+        .element-text-style(form-control-inverse-disabled);
+        .element-shape-style(form-control-inverse-disabled);
+        .property-variant(form-control-inverse-disabled, opacity, null);
+
+        & when not (@form-control-inverse-disabled-placeholder-color = null) {
+
+          &::placeholder {
+            color: @form-control-inverse-disabled-placeholder-color;
+          }
+        }
+      }
+    }
+
+    /* Block Form Control (.form-control-block) */
+
+    &.form-control-block {
+      display: flex;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    /* Rounded Form Control (.form-control-rounded) */
+
+    &.form-control-rounded {
+      border-radius: 1000px;
+
+      & when not (@form-control-rounded-padding-horizontal-scale = null) {
+
+        & when not (@form-control-padding-left = null) {
+          padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale;
+        }
+
+        & when not (@form-control-padding-right = null) {
+          padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale;
+        }
+      }
+    }
+  }
+
+  textarea.form-control,
+  .form-control select[multiple] {
+    height: auto !important;
+
+    & when not (@form-control-height = null) and not (@form-control-line-height = null) {
+      padding-bottom: (@form-control-height - @form-control-line-height) / 2;
+      padding-top: (@form-control-height - @form-control-line-height) / 2;
+    }
+  }
+
+  /* Form Control Select (.form-control-select) */
+
+  .form-control.form-control-select-multiple {
+    height: auto;
+  }
+
+  .form-control.form-control-select {
+    padding: 0 !important;
+    position: relative;
+
+    // Caret
+
+    &:after {
+      .property-variant(form-control, right, padding-right, null, null);
+      .triangle-base();
+      .triangle-color('down', @form-control-color);
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 0;
+
+      & when not (@form-control-caret-width = null) {
+        .triangle-size-width('down', @form-control-caret-width);
+      }
+
+      & when not (@form-control-caret-height = null) {
+        .triangle-size-height('down', @form-control-caret-height);
+      }
+    }
+
+    select {
+      .element-spacing(form-control, null, null);
+      .element-text-size(form-control, null);
+      .element-text-style(form-control);
+      .property-variant(form-control, height, null);
+      appearance: none;
+      background: none;
+      border: none;
+      box-shadow: none;
+      display: block;
+      margin: 0;
+      width: 100%;
+      z-index: 1;
+
+      & when not (@form-control-padding-right = null) and not (@form-control-caret-padding-right-offset = null) {
+        padding-right: @form-control-padding-right + @form-control-caret-padding-right-offset;
+      }
+    }
+
+    &.form-control-select-multiple {
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:hover {
+
+      select {
+        .element-text-style(form-control-hover);
+      }
+
+      &:after {
+        .triangle-color('down', @form-control-hover-color);
+      }
+    }
+
+    &:active {
+
+      select {
+        .element-text-style(form-control-active);
+      }
+
+      &:after {
+        .triangle-color('down', @form-control-active-color);
+      }
+    }
+
+    &:focus,
+    &.focus {
+
+      select {
+        outline: 0;
+        .element-text-style(form-control-focus);
+      }
+
+      &:after {
+        .triangle-color('down', @form-control-focus-color);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+
+      select {
+        .element-text-style(form-control-disabled);
+      }
+
+      &:after {
+        .triangle-color('down', @form-control-disabled-color);
+      }
+    }
+
+    /* Form Control Inverse (.form-control-inverse) */
+
+    &.form-control-inverse {
+
+      select {
+        .element-text-style(form-control-inverse);
+      }
+
+      &:after {
+        .triangle-color('down', @form-control-inverse-color);
+      }
+
+      &:hover {
+
+        select {
+          .element-text-style(form-control-inverse-hover);
+        }
+
+        &:after {
+          .triangle-color('down', @form-control-inverse-hover-color);
+        }
+      }
+
+      &:active {
+
+        select {
+          .element-text-style(form-control-inverse-active);
+        }
+
+        &:after {
+          .triangle-color('down', @form-control-inverse-active-color);
+        }
+      }
+
+      &:focus,
+      &.focus {
+
+        select {
+          .element-text-style(form-control-inverse-focus);
+        }
+
+        &:after {
+          .triangle-color('down', @form-control-inverse-focus-color);
+        }
+      }
+
+      &:disabled,
+      &.disabled {
+
+        select {
+          .element-text-style(form-control-inverse-disabled);
+        }
+
+        &:after {
+          .triangle-color('down', @form-control-inverse-disabled-color);
+        }
+      }
+    }
+
+    /* Rounded Form Control (.form-control-rounded) */
+
+    &.form-control-rounded {
+
+      select {
+
+        & when not (@form-control-padding-left = null) {
+          padding-left: @form-control-padding-left * @form-control-rounded-padding-horizontal-scale;
+        }
+
+        & when not (@form-control-padding-right = null) {
+
+          & when (@form-control-caret-padding-right-offset = null) {
+            padding-right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale;
+          }
+
+          & when not (@form-control-caret-padding-right-offset = null) {
+            padding-right: (@form-control-padding-right * @form-control-rounded-padding-horizontal-scale) + @form-control-caret-padding-right-offset;
+          }
+        }
+      }
+
+      // Caret
+
+      &:after {
+
+        & when not (@form-control-padding-right = null) {
+          right: @form-control-padding-right * @form-control-rounded-padding-horizontal-scale;
+        }
+      }
+    }
+  }
+
+  & when (@form-control-group-enabled) and not (@form-control-add-on-padding-horizontal = null) {
+    /* Form Control Group */
+
+    .form-control-group {
+      /* Nested Form Control */
+
+      &.form-control {
+
+        .form-control-group-add-on {
+
+          &:first-child {
+            .property-variant(form-control-add-on, padding-right, padding-horizontal, null, null);
+          }
+
+          &:last-child {
+            .property-variant(form-control-add-on, padding-left, padding-horizontal, null, null);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@form-control-enabled) and (@form-control-screen-small-enabled) {
+      /* Form Control (.form-control) */
+
+      .form-control {
+        .element-spacing(form-control, null, screen-small);
+        .element-text-size(form-control, screen-small);
+        .property-variant(form-control, border-radius, screen-small);
+        .property-variant(form-control, height, screen-small);
+
+        /* Block Form Control (.form-control-block) */
+
+        &.form-control-block {
+
+          &.form-control-block-below-screen-small {
+            display: inline-flex;
+            width: auto;
+          }
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+          /* Rounded Form Control (.form-control-block) */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-padding-left-screen-small = null) {
+              padding-left: @form-control-padding-left-screen-small * @form-control-rounded-padding-horizontal-scale;
+            }
+
+            & when not (@form-control-padding-right-screen-small = null) {
+              padding-right: @form-control-padding-right-screen-small * @form-control-rounded-padding-horizontal-scale;
+            }
+          }
+        }
+      }
+
+      textarea.form-control,
+      .form-control select[multiple] {
+
+        & when not (@form-control-height-screen-small = null) and not (@form-control-line-height-screen-small = null) {
+          padding-bottom: ((@form-control-height-screen-small) - (@form-control-line-height-screen-small)) / 2;
+          padding-top: ((@form-control-height-screen-small) - (@form-control-line-height-screen-small)) / 2;
+        }
+      }
+
+      /* Form Control Select (.form-control-select) */
+
+      .form-control.form-control-select {
+
+        select {
+          .element-spacing(form-control, null, screen-small);
+          .element-text-size(form-control, screen-small);
+          .property-variant(form-control, height, screen-small);
+
+          & when not (@form-control-padding-right-screen-small = null) and not (@form-control-caret-padding-right-offset-screen-small = null) {
+            padding-right: @form-control-padding-right-screen-small + @form-control-caret-padding-right-offset-screen-small;
+          }
+        }
+
+        // Caret
+
+        &:after {
+          .property-variant(form-control, right, padding-right, null, screen-small);
+
+          & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-small = null) {
+            .triangle-size-width('down', (@form-control-caret-width-screen-small));
+          }
+
+          & when not (@form-control-caret-height = null) and not (@form-control-caret-height-screen-small = null) {
+            .triangle-size-height('down', (@form-control-caret-height-screen-small));
+          }
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+          /* Rounded Form Control (.form-control-rounded) */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-padding-left-screen-small = null) {
+                padding-left: @form-control-padding-left-screen-small * @form-control-rounded-padding-horizontal-scale;
+              }
+
+              & when not (@form-control-padding-right-screen-small = null) {
+
+                & when (@form-control-caret-padding-right-offset-screen-small = null) {
+                  padding-right: @form-control-padding-right-screen-small * @form-control-rounded-padding-horizontal-scale;
+                }
+
+                & when not (@form-control-caret-padding-right-offset-screen-small = null) {
+                  padding-right: (@form-control-padding-right-screen-small * @form-control-rounded-padding-horizontal-scale) + @form-control-caret-padding-right-offset-screen-small;
+                }
+              }
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-padding-right-screen-small = null) {
+                right: @form-control-padding-right-screen-small * @form-control-rounded-padding-horizontal-scale;
+              }
+            }
+          }
+        }
+      }
+
+      & when (@form-control-group-enabled) and not (@form-control-add-on-padding-horizontal = null) and not (@form-control-add-on-padding-horizontal-screen-small = null) {
+        /* Form Control Group */
+
+        .form-control-group {
+          /* Nested Form Control */
+
+          &.form-control {
+
+            .form-control-group-add-on {
+
+              &:first-child {
+                .property-variant(form-control-add-on, padding-right, padding-horizontal, null, screen-small);
+              }
+
+              &:last-child {
+                .property-variant(form-control-add-on, padding-left, padding-horizontal, null, screen-small);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@form-control-enabled) and (@form-control-screen-medium-enabled) {
+      /* Form Control (.form-control) */
+
+      .form-control {
+        .element-spacing(form-control, null, screen-medium);
+        .element-text-size(form-control, screen-medium);
+        .property-variant(form-control, border-radius, screen-medium);
+        .property-variant(form-control, height, screen-medium);
+
+        /* Block Form Control (.form-control-block) */
+
+        &.form-control-block {
+
+          &.form-control-block-below-screen-medium {
+            display: inline-flex;
+            width: auto;
+          }
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+          /* Rounded Form Control (.form-control-block) */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-padding-left-screen-medium = null) {
+              padding-left: @form-control-padding-left-screen-medium * @form-control-rounded-padding-horizontal-scale;
+            }
+
+            & when not (@form-control-padding-right-screen-medium = null) {
+              padding-right: @form-control-padding-right-screen-medium * @form-control-rounded-padding-horizontal-scale;
+            }
+          }
+        }
+      }
+
+      textarea.form-control,
+      .form-control select[multiple] {
+
+        & when not (@form-control-height-screen-medium = null) and not (@form-control-line-height-screen-medium = null) {
+          padding-bottom: ((@form-control-height-screen-medium) - (@form-control-line-height-screen-medium)) / 2;
+          padding-top: ((@form-control-height-screen-medium) - (@form-control-line-height-screen-medium)) / 2;
+        }
+      }
+
+      /* Form Control Select (.form-control-select) */
+
+      .form-control.form-control-select {
+
+        select {
+          .element-spacing(form-control, null, screen-medium);
+          .element-text-size(form-control, screen-medium);
+          .property-variant(form-control, height, screen-medium);
+
+          & when not (@form-control-padding-right-screen-medium = null) and not (@form-control-caret-padding-right-offset-screen-medium = null) {
+            padding-right: @form-control-padding-right-screen-medium + @form-control-caret-padding-right-offset-screen-medium;
+          }
+        }
+
+        // Caret
+
+        &:after {
+          .property-variant(form-control, right, padding-right, null, screen-medium);
+
+          & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-medium = null) {
+            .triangle-size-width('down', (@form-control-caret-width-screen-medium));
+          }
+
+          & when not (@form-control-caret-height = null) and not (@form-control-caret-height-screen-medium = null) {
+            .triangle-size-height('down', (@form-control-caret-height-screen-medium));
+          }
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+          /* Rounded Form Control (.form-control-rounded) */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-padding-left-screen-medium = null) {
+                padding-left: @form-control-padding-left-screen-medium * @form-control-rounded-padding-horizontal-scale;
+              }
+
+              & when not (@form-control-padding-right-screen-medium = null) {
+
+                & when (@form-control-caret-padding-right-offset-screen-medium = null) {
+                  padding-right: @form-control-padding-right-screen-medium * @form-control-rounded-padding-horizontal-scale;
+                }
+
+                & when not (@form-control-caret-padding-right-offset-screen-medium = null) {
+                  padding-right: (@form-control-padding-right-screen-medium * @form-control-rounded-padding-horizontal-scale) + @form-control-caret-padding-right-offset-screen-medium;
+                }
+              }
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-padding-right-screen-medium = null) {
+                right: @form-control-padding-right-screen-medium * @form-control-rounded-padding-horizontal-scale;
+              }
+            }
+          }
+        }
+      }
+
+      & when (@form-control-group-enabled) and not (@form-control-add-on-padding-horizontal = null) and not (@form-control-add-on-padding-horizontal-screen-medium = null) {
+        /* Form Control Group */
+
+        .form-control-group {
+          /* Nested Form Control */
+
+          &.form-control {
+
+            .form-control-group-add-on {
+
+              &:first-child {
+                .property-variant(form-control-add-on, padding-right, padding-horizontal, null, screen-medium);
+              }
+
+              &:last-child {
+                .property-variant(form-control-add-on, padding-left, padding-horizontal, null, screen-medium);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@form-control-enabled) and (@form-control-screen-large-enabled) {
+      /* Form Control (.form-control) */
+
+      .form-control {
+        .element-text-size(form-control, screen-large);
+        .element-spacing(form-control, null, screen-large);
+        .property-variant(form-control, height, screen-large);
+        .property-variant(form-control, border-radius, screen-large);
+
+        /* Block Form Control (.form-control-block) */
+
+        &.form-control-block {
+
+          &.form-control-block-below-screen-large {
+            display: inline-flex;
+            width: auto;
+          }
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+          /* Rounded Form Control (.form-control-block) */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-padding-left-screen-large = null) {
+              padding-left: @form-control-padding-left-screen-large * @form-control-rounded-padding-horizontal-scale;
+            }
+
+            & when not (@form-control-padding-right-screen-large = null) {
+              padding-right: @form-control-padding-right-screen-large * @form-control-rounded-padding-horizontal-scale;
+            }
+          }
+        }
+      }
+
+      textarea.form-control,
+      .form-control select[multiple] {
+
+        & when not (@form-control-height-screen-large = null) and not (@form-control-line-height-screen-large = null) {
+          padding-bottom: ((@form-control-height-screen-large) - (@form-control-line-height-screen-large)) / 2;
+          padding-top: ((@form-control-height-screen-large) - (@form-control-line-height-screen-large)) / 2;
+        }
+      }
+
+      /* Form Control Select (.form-control-select) */
+
+      .form-control.form-control-select {
+
+        select {
+          .element-spacing(form-control, null, screen-large);
+          .element-text-size(form-control, screen-large);
+          .property-variant(form-control, height, screen-large);
+
+          & when not (@form-control-padding-right-screen-large = null) and not (@form-control-caret-padding-right-offset-screen-large = null) {
+            padding-right: @form-control-padding-right-screen-large + @form-control-caret-padding-right-offset-screen-large;
+          }
+        }
+
+        // Caret
+
+        &:after {
+          .property-variant(form-control, right, padding-right, null, screen-large);
+
+          & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-large = null) {
+            .triangle-size-width('down', (@form-control-caret-width-screen-large));
+          }
+
+          & when not (@form-control-caret-height = null) and not (@form-control-caret-height-screen-large = null) {
+            .triangle-size-height('down', (@form-control-caret-height-screen-large));
+          }
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+          /* Rounded Form Control (.form-control-rounded) */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-padding-left-screen-large = null) {
+                padding-left: @form-control-padding-left-screen-large * @form-control-rounded-padding-horizontal-scale;
+              }
+
+              & when not (@form-control-padding-right-screen-large = null) {
+
+                & when (@form-control-caret-padding-right-offset-screen-large = null) {
+                  padding-right: @form-control-padding-right-screen-large * @form-control-rounded-padding-horizontal-scale;
+                }
+
+                & when not (@form-control-caret-padding-right-offset-screen-large = null) {
+                  padding-right: (@form-control-padding-right-screen-large * @form-control-rounded-padding-horizontal-scale) + @form-control-caret-padding-right-offset-screen-large;
+                }
+              }
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-padding-right-screen-large = null) {
+                right: @form-control-padding-right-screen-large * @form-control-rounded-padding-horizontal-scale;
+              }
+            }
+          }
+        }
+      }
+
+      & when (@form-control-group-enabled) and not (@form-control-add-on-padding-horizontal = null) and not (@form-control-add-on-padding-horizontal-screen-large = null) {
+        /* Form Control Group */
+
+        .form-control-group {
+          /* Nested Form Control */
+
+          &.form-control {
+
+            .form-control-group-add-on {
+
+              &:first-child {
+                .property-variant(form-control-add-on, padding-right, padding-horizontal, null, screen-large);
+              }
+
+              &:last-child {
+                .property-variant(form-control-add-on, padding-left, padding-horizontal, null, screen-large);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@form-control-enabled) and (@form-control-screen-jumbo-enabled) {
+      /* Form Control (.form-control) */
+
+      .form-control {
+        .element-spacing(form-control, null, screen-jumbo);
+        .element-text-size(form-control, screen-jumbo);
+        .property-variant(form-control, border-radius, screen-jumbo);
+        .property-variant(form-control, height, screen-jumbo);
+
+        /* Block Form Control (.form-control-block) */
+
+        &.form-control-block {
+
+          &.form-control-block-below-screen-jumbo {
+            display: inline-flex;
+            width: auto;
+          }
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+          /* Rounded Form Control (.form-control-block) */
+
+          &.form-control-rounded {
+
+            & when not (@form-control-padding-left-screen-jumbo = null) {
+              padding-left: @form-control-padding-left-screen-jumbo * @form-control-rounded-padding-horizontal-scale;
+            }
+
+            & when not (@form-control-padding-right-screen-jumbo = null) {
+              padding-right: @form-control-padding-right-screen-jumbo * @form-control-rounded-padding-horizontal-scale;
+            }
+          }
+        }
+      }
+
+      textarea.form-control,
+      .form-control select[multiple] {
+
+        & when not (@form-control-height-screen-jumbo = null) and not (@form-control-line-height-screen-jumbo = null) {
+          padding-bottom: ((@form-control-height-screen-jumbo) - (@form-control-line-height-screen-jumbo)) / 2;
+          padding-top: ((@form-control-height-screen-jumbo) - (@form-control-line-height-screen-jumbo)) / 2;
+        }
+      }
+
+      /* Form Control Select (.form-control-select) */
+
+      .form-control.form-control-select {
+
+        select {
+          .element-spacing(form-control, null, screen-jumbo);
+          .element-text-size(form-control, screen-jumbo);
+          .property-variant(form-control, height, screen-jumbo);
+
+          & when not (@form-control-padding-right-screen-jumbo = null) and not (@form-control-caret-padding-right-offset-screen-jumbo = null) {
+            padding-right: @form-control-padding-right-screen-jumbo + @form-control-caret-padding-right-offset-screen-jumbo;
+          }
+        }
+
+        // Caret
+
+        &:after {
+          .property-variant(form-control, right, padding-right, null, screen-jumbo);
+
+          & when not (@form-control-caret-width = null) and not (@form-control-caret-width-screen-jumbo = null) {
+            .triangle-size-width('down', (@form-control-caret-width-screen-jumbo));
+          }
+
+          & when not (@form-control-caret-height = null) and not (@form-control-caret-height-screen-jumbo = null) {
+            .triangle-size-height('down', (@form-control-caret-height-screen-jumbo));
+          }
+        }
+
+        & when not (@form-control-rounded-padding-horizontal-scale = null) {
+          /* Rounded Form Control (.form-control-rounded) */
+
+          &.form-control-rounded {
+
+            select {
+
+              & when not (@form-control-padding-left-screen-jumbo = null) {
+                padding-left: @form-control-padding-left-screen-jumbo * @form-control-rounded-padding-horizontal-scale;
+              }
+
+              & when not (@form-control-padding-right-screen-jumbo = null) {
+
+                & when (@form-control-caret-padding-right-offset-screen-jumbo = null) {
+                  padding-right: @form-control-padding-right-screen-jumbo * @form-control-rounded-padding-horizontal-scale;
+                }
+
+                & when not (@form-control-caret-padding-right-offset-screen-jumbo = null) {
+                  padding-right: (@form-control-padding-right-screen-jumbo * @form-control-rounded-padding-horizontal-scale) + @form-control-caret-padding-right-offset-screen-jumbo;
+                }
+              }
+            }
+
+            // Caret
+
+            &:after {
+
+              & when not (@form-control-padding-right-screen-jumbo = null) {
+                right: @form-control-padding-right-screen-jumbo * @form-control-rounded-padding-horizontal-scale;
+              }
+            }
+          }
+        }
+      }
+
+      & when (@form-control-group-enabled) and not (@form-control-add-on-padding-horizontal = null) and not (@form-control-add-on-padding-horizontal-screen-jumbo = null) {
+        /* Form Control Group */
+
+        .form-control-group {
+          /* Nested Form Control */
+
+          &.form-control {
+
+            .form-control-group-add-on {
+
+              &:first-child {
+                .property-variant(form-control-add-on, padding-right, padding-horizontal, null, screen-jumbo);
+              }
+
+              &:last-child {
+                .property-variant(form-control-add-on, padding-left, padding-horizontal, null, screen-jumbo);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

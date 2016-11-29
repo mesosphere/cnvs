@@ -1,47 +1,28 @@
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
+/* Shape Style Variant */
 
-utilities/mixins-styling.less
+.element-shape-style (@element: '') {
+  .property-variant(@element, background-color);
+  .property-variant(@element, border-width);
+  .property-variant(@element, border-color);
+  .property-variant(@element, border-style);
+  .property-variant(@element, border-top-width);
+  .property-variant(@element, border-top-color);
+  .property-variant(@element, border-top-style);
+  .property-variant(@element, border-right-width);
+  .property-variant(@element, border-right-color);
+  .property-variant(@element, border-right-style);
+  .property-variant(@element, border-bottom-width);
+  .property-variant(@element, border-bottom-color);
+  .property-variant(@element, border-bottom-style);
+  .property-variant(@element, border-left-width);
+  .property-variant(@element, border-left-color);
+  .property-variant(@element, border-left-style);
+  .property-variant(@element, box-shadow, shadow, null, null);
 
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
+  @element-background-gradient-color-top: '@{element}-background-gradient-color-top';
+  @element-background-gradient-color-bottom: '@{element}-background-gradient-color-bottom';
 
-
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Shadow
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.box-shadow(@shadow) {
-
-  box-shadow: @shadow;
-  
-}
-
-
-
-
-
-
-/* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Appearance
-
---------------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-
-.appearance(@appearance) {
-  
-  appearance: @appearance;
-  
+  & when not (@@element-background-gradient-color-top = null) and not (@@element-background-gradient-color-bottom = null) {
+    #gradient > .vertical(@@element-background-gradient-color-top, @@element-background-gradient-color-bottom);
+  }
 }

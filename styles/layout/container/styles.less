@@ -1,0 +1,68 @@
+& when (@container-enabled) {
+  /* Container */
+
+  .container {
+    .element-spacing(container, null, null);
+    .property-variant(container, width);
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when not (@container-enabled = null) and not (@container-screen-small-enabled = null) {
+      /* Container */
+
+      .container {
+        .element-spacing(container, null, screen-small);
+        .property-variant(container, width, null, screen-small);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when not (@container-enabled = null) and not (@container-screen-medium-enabled = null) {
+      /* Container */
+
+      .container {
+        .element-spacing(container, null, screen-medium);
+        .property-variant(container, width, null, screen-medium);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when not (@container-enabled = null) and not (@container-screen-large-enabled = null) {
+      /* Container */
+
+      .container {
+        .element-spacing(container, null, screen-large);
+        .property-variant(container, width, null, screen-large);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when not (@container-enabled = null) and not (@container-screen-jumbo-enabled = null) {
+      /* Container */
+
+      .container {
+        .element-spacing(container, null, screen-jumbo);
+        .property-variant(container, width, null, screen-jumbo);
+      }
+    }
+  }
+}
