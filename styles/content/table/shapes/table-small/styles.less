@@ -105,15 +105,12 @@
 
     // Table Head
 
-    thead {
+    th {
+      .element-text-size(table-small-header, null);
+      .element-spacing(table-small-header, null, null);
 
-      th {
-        .element-text-size(table-small-header, null);
-        .element-spacing(table-small-header, null, null);
-
-        &:before {
-          .property-variant(table-small-header, height, line-height, null, null);
-        }
+      &:before {
+        .property-variant(table-small-header, height, line-height, null, null);
       }
     }
   }
@@ -147,6 +144,17 @@
 
           &:before {
             .property-variant(table-small-cell, height, line-height, null, screen-small);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-small-header, screen-small);
+          .element-spacing(table-small-header, null, screen-small);
+
+          &:before {
+            .property-variant(table-small-header, height, line-height, null, screen-small);
           }
         }
       }
@@ -184,6 +192,17 @@
             .property-variant(table-small-cell, height, line-height, null, screen-medium);
           }
         }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-small-header, screen-medium);
+          .element-spacing(table-small-header, null, screen-medium);
+
+          &:before {
+            .property-variant(table-small-header, height, line-height, null, screen-medium);
+          }
+        }
       }
     }
   }
@@ -219,6 +238,17 @@
             .property-variant(table-small-cell, height, line-height, null, screen-large);
           }
         }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-small-header, screen-large);
+          .element-spacing(table-small-header, null, screen-large);
+
+          &:before {
+            .property-variant(table-small-header, height, line-height, null, screen-large);
+          }
+        }
       }
     }
   }
@@ -252,6 +282,17 @@
 
           &:before {
             .property-variant(table-small-cell, height, line-height, null, screen-jumbo);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-small-header, screen-jumbo);
+          .element-spacing(table-small-header, null, screen-jumbo);
+
+          &:before {
+            .property-variant(table-small-header, height, line-height, null, screen-jumbo);
           }
         }
       }
