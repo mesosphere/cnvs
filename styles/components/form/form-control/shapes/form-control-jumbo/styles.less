@@ -33,14 +33,16 @@
       .element-text-size(form-control-jumbo, null);
       .element-spacing(form-control-jumbo, null, null);
       .property-variant(form-control-jumbo, height, null);
+
+      & when not (@form-control-jumbo-padding-right = null) and not (@form-control-jumbo-caret-padding-right-offset = null) {
+        padding-right: @form-control-jumbo-padding-right + @form-control-jumbo-caret-padding-right-offset;
+      }
     }
 
     // Caret
 
     &:after {
-      .property-variant(form-control-jumbo-caret, margin-left, null);
-      .property-variant(form-control-jumbo-caret, margin-top, null);
-      .property-variant(form-control-jumbo, margin-right, padding-right, null, null);
+      .property-variant(form-control-jumbo, right, padding-right, null, null);
 
       & when not (@form-control-jumbo-caret-width = null) {
         .triangle-size-width('down', @form-control-jumbo-caret-width);
@@ -53,18 +55,22 @@
 
     /* Form Control Rounded (.form-control-rounded) */
 
-    &.form-control-rounded {
+    &.form-control-jumbo-rounded {
 
       select {
 
-        & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
+        & when not (@form-control-jumbo-padding-left = null) {
+          padding-left: @form-control-jumbo-padding-left * @form-control-jumbo-rounded-padding-horizontal-scale;
+        }
 
-          & when not (@form-control-jumbo-padding-left = null) {
-            padding-left: @form-control-jumbo-padding-left * @form-control-jumbo-rounded-padding-horizontal-scale;
+        & when not (@form-control-jumbo-padding-right = null) {
+
+          & when (@form-control-jumbo-caret-padding-right-offset = null) {
+            padding-right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale;
           }
 
-          & when not (@form-control-jumbo-padding-right = null) {
-            padding-right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale;
+          & when not (@form-control-jumbo-caret-padding-right-offset = null) {
+            padding-right: (@form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale) + @form-control-jumbo-caret-padding-right-offset;
           }
         }
       }
@@ -74,7 +80,7 @@
       &:after {
 
         & when not (@form-control-jumbo-padding-right = null) {
-          margin-right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale;
+          right: @form-control-jumbo-padding-right * @form-control-jumbo-rounded-padding-horizontal-scale;
         }
       }
     }
@@ -137,17 +143,19 @@
       .form-control-select.form-control-jumbo {
 
         select {
-          .element-text-size(form-control-jumbo, screen-small);
           .element-spacing(form-control-jumbo, null, screen-small);
+          .element-text-size(form-control-jumbo, screen-small);
           .property-variant(form-control-jumbo, height, screen-small);
+
+          & when not (@form-control-jumbo-padding-right-screen-small = null) and not (@form-control-jumbo-caret-padding-right-offset-screen-small = null) {
+            padding-right: @form-control-jumbo-padding-right-screen-small + @form-control-jumbo-caret-padding-right-offset-screen-small;
+          }
         }
 
         // Caret
 
         &:after {
-          .property-variant(form-control-jumbo-caret, margin-left, screen-small);
-          .property-variant(form-control-jumbo-caret, margin-top, screen-small);
-          .property-variant(form-control-jumbo, margin-right, padding-right, screen-small);
+          .property-variant(form-control-jumbo, right, padding-right, null, screen-small);
 
           & when not (@form-control-jumbo-caret-width = null) and not (@form-control-jumbo-caret-width-screen-small = null) {
             .triangle-size-width('down', (@form-control-jumbo-caret-width-screen-small));
@@ -161,7 +169,7 @@
         & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
           /* Form Control Rounded (.form-control-rounded) */
 
-          &.form-control-rounded {
+          &.form-control-jumbo-rounded {
 
             select {
 
@@ -170,7 +178,14 @@
               }
 
               & when not (@form-control-jumbo-padding-right-screen-small = null) {
-                padding-right: @form-control-jumbo-padding-right-screen-small * @form-control-jumbo-rounded-padding-horizontal-scale;
+
+                & when (@form-control-jumbo-caret-padding-right-offset-screen-small = null) {
+                  padding-right: @form-control-jumbo-padding-right-screen-small * @form-control-jumbo-rounded-padding-horizontal-scale;
+                }
+
+                & when not (@form-control-jumbo-caret-padding-right-offset-screen-small = null) {
+                  padding-right: (@form-control-jumbo-padding-right-screen-small * @form-control-jumbo-rounded-padding-horizontal-scale) + @form-control-jumbo-caret-padding-right-offset-screen-small;
+                }
               }
             }
 
@@ -179,7 +194,7 @@
             &:after {
 
               & when not (@form-control-jumbo-padding-right-screen-small = null) {
-                margin-right: @form-control-jumbo-padding-right-screen-small * @form-control-jumbo-rounded-padding-horizontal-scale;
+                right: @form-control-jumbo-padding-right-screen-small * @form-control-jumbo-rounded-padding-horizontal-scale;
               }
             }
           }
@@ -245,17 +260,19 @@
       .form-control-select.form-control-jumbo {
 
         select {
-          .element-text-size(form-control-jumbo, screen-medium);
           .element-spacing(form-control-jumbo, null, screen-medium);
+          .element-text-size(form-control-jumbo, screen-medium);
           .property-variant(form-control-jumbo, height, screen-medium);
+
+          & when not (@form-control-jumbo-padding-right-screen-medium = null) and not (@form-control-jumbo-caret-padding-right-offset-screen-medium = null) {
+            padding-right: @form-control-jumbo-padding-right-screen-medium + @form-control-jumbo-caret-padding-right-offset-screen-medium;
+          }
         }
 
         // Caret
 
         &:after {
-          .property-variant(form-control-jumbo-caret, margin-left, screen-medium);
-          .property-variant(form-control-jumbo-caret, margin-top, screen-medium);
-          .property-variant(form-control-jumbo, margin-right, padding-right, screen-medium);
+          .property-variant(form-control-jumbo, right, padding-right, null, screen-medium);
 
           & when not (@form-control-jumbo-caret-width = null) and not (@form-control-jumbo-caret-width-screen-medium = null) {
             .triangle-size-width('down', (@form-control-jumbo-caret-width-screen-medium));
@@ -269,7 +286,7 @@
         & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
           /* Form Control Rounded (.form-control-rounded) */
 
-          &.form-control-rounded {
+          &.form-control-jumbo-rounded {
 
             select {
 
@@ -278,7 +295,14 @@
               }
 
               & when not (@form-control-jumbo-padding-right-screen-medium = null) {
-                padding-right: @form-control-jumbo-padding-right-screen-medium * @form-control-jumbo-rounded-padding-horizontal-scale;
+
+                & when (@form-control-jumbo-caret-padding-right-offset-screen-medium = null) {
+                  padding-right: @form-control-jumbo-padding-right-screen-medium * @form-control-jumbo-rounded-padding-horizontal-scale;
+                }
+
+                & when not (@form-control-jumbo-caret-padding-right-offset-screen-medium = null) {
+                  padding-right: (@form-control-jumbo-padding-right-screen-medium * @form-control-jumbo-rounded-padding-horizontal-scale) + @form-control-jumbo-caret-padding-right-offset-screen-medium;
+                }
               }
             }
 
@@ -287,7 +311,7 @@
             &:after {
 
               & when not (@form-control-jumbo-padding-right-screen-medium = null) {
-                margin-right: @form-control-jumbo-padding-right-screen-medium * @form-control-jumbo-rounded-padding-horizontal-scale;
+                right: @form-control-jumbo-padding-right-screen-medium * @form-control-jumbo-rounded-padding-horizontal-scale;
               }
             }
           }
@@ -353,17 +377,19 @@
       .form-control-select.form-control-jumbo {
 
         select {
-          .element-text-size(form-control-jumbo, screen-large);
           .element-spacing(form-control-jumbo, null, screen-large);
+          .element-text-size(form-control-jumbo, screen-large);
           .property-variant(form-control-jumbo, height, screen-large);
+
+          & when not (@form-control-jumbo-padding-right-screen-large = null) and not (@form-control-jumbo-caret-padding-right-offset-screen-large = null) {
+            padding-right: @form-control-jumbo-padding-right-screen-large + @form-control-jumbo-caret-padding-right-offset-screen-large;
+          }
         }
 
         // Caret
 
         &:after {
-          .property-variant(form-control-jumbo-caret, margin-left, screen-large);
-          .property-variant(form-control-jumbo-caret, margin-top, screen-large);
-          .property-variant(form-control-jumbo, margin-right, padding-right, screen-large);
+          .property-variant(form-control-jumbo, right, padding-right, null, screen-large);
 
           & when not (@form-control-jumbo-caret-width = null) and not (@form-control-jumbo-caret-width-screen-large = null) {
             .triangle-size-width('down', (@form-control-jumbo-caret-width-screen-large));
@@ -377,7 +403,7 @@
         & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
           /* Form Control Rounded (.form-control-rounded) */
 
-          &.form-control-rounded {
+          &.form-control-jumbo-rounded {
 
             select {
 
@@ -386,7 +412,14 @@
               }
 
               & when not (@form-control-jumbo-padding-right-screen-large = null) {
-                padding-right: @form-control-jumbo-padding-right-screen-large * @form-control-jumbo-rounded-padding-horizontal-scale;
+
+                & when (@form-control-jumbo-caret-padding-right-offset-screen-large = null) {
+                  padding-right: @form-control-jumbo-padding-right-screen-large * @form-control-jumbo-rounded-padding-horizontal-scale;
+                }
+
+                & when not (@form-control-jumbo-caret-padding-right-offset-screen-large = null) {
+                  padding-right: (@form-control-jumbo-padding-right-screen-large * @form-control-jumbo-rounded-padding-horizontal-scale) + @form-control-jumbo-caret-padding-right-offset-screen-large;
+                }
               }
             }
 
@@ -395,7 +428,7 @@
             &:after {
 
               & when not (@form-control-jumbo-padding-right-screen-large = null) {
-                margin-right: @form-control-jumbo-padding-right-screen-large * @form-control-jumbo-rounded-padding-horizontal-scale;
+                right: @form-control-jumbo-padding-right-screen-large * @form-control-jumbo-rounded-padding-horizontal-scale;
               }
             }
           }
@@ -461,17 +494,19 @@
       .form-control-select.form-control-jumbo {
 
         select {
-          .element-text-size(form-control-jumbo, screen-jumbo);
           .element-spacing(form-control-jumbo, null, screen-jumbo);
+          .element-text-size(form-control-jumbo, screen-jumbo);
           .property-variant(form-control-jumbo, height, screen-jumbo);
+
+          & when not (@form-control-jumbo-padding-right-screen-jumbo = null) and not (@form-control-jumbo-caret-padding-right-offset-screen-jumbo = null) {
+            padding-right: @form-control-jumbo-padding-right-screen-jumbo + @form-control-jumbo-caret-padding-right-offset-screen-jumbo;
+          }
         }
 
         // Caret
 
         &:after {
-          .property-variant(form-control-jumbo-caret, margin-left, screen-jumbo);
-          .property-variant(form-control-jumbo-caret, margin-top, screen-jumbo);
-          .property-variant(form-control-jumbo, margin-right, padding-right, screen-jumbo);
+          .property-variant(form-control-jumbo, right, padding-right, null, screen-jumbo);
 
           & when not (@form-control-jumbo-caret-width = null) and not (@form-control-jumbo-caret-width-screen-jumbo = null) {
             .triangle-size-width('down', (@form-control-jumbo-caret-width-screen-jumbo));
@@ -485,7 +520,7 @@
         & when not (@form-control-jumbo-rounded-padding-horizontal-scale = null) {
           /* Form Control Rounded (.form-control-rounded) */
 
-          &.form-control-rounded {
+          &.form-control-jumbo-rounded {
 
             select {
 
@@ -494,7 +529,14 @@
               }
 
               & when not (@form-control-jumbo-padding-right-screen-jumbo = null) {
-                padding-right: @form-control-jumbo-padding-right-screen-jumbo * @form-control-jumbo-rounded-padding-horizontal-scale;
+
+                & when (@form-control-jumbo-caret-padding-right-offset-screen-jumbo = null) {
+                  padding-right: @form-control-jumbo-padding-right-screen-jumbo * @form-control-jumbo-rounded-padding-horizontal-scale;
+                }
+
+                & when not (@form-control-jumbo-caret-padding-right-offset-screen-jumbo = null) {
+                  padding-right: (@form-control-jumbo-padding-right-screen-jumbo * @form-control-jumbo-rounded-padding-horizontal-scale) + @form-control-jumbo-caret-padding-right-offset-screen-jumbo;
+                }
               }
             }
 
@@ -503,7 +545,7 @@
             &:after {
 
               & when not (@form-control-jumbo-padding-right-screen-jumbo = null) {
-                margin-right: @form-control-jumbo-padding-right-screen-jumbo * @form-control-jumbo-rounded-padding-horizontal-scale;
+                right: @form-control-jumbo-padding-right-screen-jumbo * @form-control-jumbo-rounded-padding-horizontal-scale;
               }
             }
           }
