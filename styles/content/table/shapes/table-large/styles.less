@@ -56,7 +56,7 @@
         }
       }
 
-      > thead {
+      & > thead {
 
         tr {
 
@@ -75,7 +75,7 @@
           }
         }
 
-        + tbody {
+        & + tbody {
 
           tr {
 
@@ -104,15 +104,12 @@
 
     // Table Head
 
-    thead {
+    th {
+      .element-text-size(table-large-header, null);
+      .element-spacing(table-large-header, null, null);
 
-      th {
-        .element-text-size(table-large-header, null);
-        .element-spacing(table-large-header, null, null);
-
-        &:before {
-          .property-variant(table-large-header, height, line-height, null, null);
-        }
+      &:before {
+        .property-variant(table-large-header, height, line-height, null, null);
       }
     }
   }
@@ -146,6 +143,17 @@
 
           &:before {
             .property-variant(table-large-cell, height, line-height, null, screen-small);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-large-header, screen-small);
+          .element-spacing(table-large-header, null, screen-small);
+
+          &:before {
+            .property-variant(table-large-header, height, line-height, null, screen-small);
           }
         }
       }
@@ -183,6 +191,17 @@
             .property-variant(table-large-cell, height, line-height, null, screen-medium);
           }
         }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-large-header, screen-medium);
+          .element-spacing(table-large-header, null, screen-medium);
+
+          &:before {
+            .property-variant(table-large-header, height, line-height, null, screen-medium);
+          }
+        }
       }
     }
   }
@@ -218,6 +237,17 @@
             .property-variant(table-large-cell, height, line-height, null, screen-large);
           }
         }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-large-header, screen-large);
+          .element-spacing(table-large-header, null, screen-large);
+
+          &:before {
+            .property-variant(table-large-header, height, line-height, null, screen-large);
+          }
+        }
       }
     }
   }
@@ -251,6 +281,17 @@
 
           &:before {
             .property-variant(table-large-cell, height, line-height, null, screen-jumbo);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-text-size(table-large-header, screen-jumbo);
+          .element-spacing(table-large-header, null, screen-jumbo);
+
+          &:before {
+            .property-variant(table-large-header, height, line-height, null, screen-jumbo);
           }
         }
       }

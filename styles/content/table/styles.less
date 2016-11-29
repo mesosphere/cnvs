@@ -59,7 +59,7 @@
         }
       }
 
-      > thead {
+      & > thead {
 
         tr {
 
@@ -78,7 +78,7 @@
           }
         }
 
-        + tbody {
+        & + tbody {
 
           tr {
 
@@ -148,50 +148,47 @@
 
     // Table Head
 
-    thead {
+    th {
+      .element-shape-style(table-header);
+      .element-spacing(table-header, null, null);
+      .element-text-size(table-header, null);
+      .element-text-style(table-header);
 
-      th {
-        .element-shape-style(table-header);
-        .element-spacing(table-header, null, null);
-        .element-text-size(table-header, null);
-        .element-text-style(table-header);
+      &:before {
+        .property-variant(table-header, height, line-height, null, null);
+      }
 
-        &:before {
-          .property-variant(table-header, height, line-height, null, null);
+      &.selectable {
+
+        &:hover {
+          .element-shape-style(table-header-hover);
+          .element-text-style(table-header-hover);
         }
+      }
+
+      &.disabled {
+        .element-shape-style(table-header-disabled);
+        .element-text-style(table-header-disabled);
+      }
+
+      // Cell Active
+
+      &.active,
+      &.highlight {
+        .element-shape-style(table-header-active);
+        .element-text-style(table-header-active);
 
         &.selectable {
 
           &:hover {
-            .element-shape-style(table-header-hover);
-            .element-text-style(table-header-hover);
+            .element-shape-style(table-header-active-hover);
+            .element-text-style(table-header-active-hover);
           }
         }
 
         &.disabled {
-          .element-shape-style(table-header-disabled);
-          .element-text-style(table-header-disabled);
-        }
-
-        // Cell Active
-
-        &.active,
-        &.highlight {
-          .element-shape-style(table-header-active);
-          .element-text-style(table-header-active);
-
-          &.selectable {
-
-            &:hover {
-              .element-shape-style(table-header-active-hover);
-              .element-text-style(table-header-active-hover);
-            }
-          }
-
-          &.disabled {
-            .element-shape-style(table-header-active-disabled);
-            .element-text-style(table-header-active-disabled);
-          }
+          .element-shape-style(table-header-active-disabled);
+          .element-text-style(table-header-active-disabled);
         }
       }
     }
@@ -269,44 +266,41 @@
 
       // Table Head
 
-      thead {
+      th {
+        .element-shape-style(table-header-inverse);
+        .element-text-style(table-header-inverse);
 
-        th {
-          .element-shape-style(table-header-inverse);
-          .element-text-style(table-header-inverse);
+        &.selectable {
+
+          &:hover {
+            .element-shape-style(table-header-inverse-hover);
+            .element-text-style(table-header-inverse-hover);
+          }
+        }
+
+        &.disabled {
+          .element-shape-style(table-header-inverse-disabled);
+          .element-text-style(table-header-inverse-disabled);
+        }
+
+        // Cell Active
+
+        &.active,
+        &.highlight {
+          .element-shape-style(table-header-inverse-active);
+          .element-text-style(table-header-inverse-active);
 
           &.selectable {
 
             &:hover {
-              .element-shape-style(table-header-inverse-hover);
-              .element-text-style(table-header-inverse-hover);
+              .element-text-style(table-header-inverse-active-hover);
+              .element-shape-style(table-header-inverse-active-hover);
             }
           }
 
           &.disabled {
-            .element-shape-style(table-header-inverse-disabled);
-            .element-text-style(table-header-inverse-disabled);
-          }
-
-          // Cell Active
-
-          &.active,
-          &.highlight {
-            .element-shape-style(table-header-inverse-active);
-            .element-text-style(table-header-inverse-active);
-
-            &.selectable {
-
-              &:hover {
-                .element-text-style(table-header-inverse-active-hover);
-                .element-shape-style(table-header-inverse-active-hover);
-              }
-            }
-
-            &.disabled {
-              .element-text-style(table-header-inverse-active-disabled);
-              .element-shape-style(table-header-inverse-active-disabled);
-            }
+            .element-text-style(table-header-inverse-active-disabled);
+            .element-shape-style(table-header-inverse-active-disabled);
           }
         }
       }
@@ -346,11 +340,31 @@
     width: 100%;
   }
 
+  /* Table Flush */
+
+  &.table-flush {
+
+    tr {
+
+      td,
+      th {
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
   /* Table Borderless */
 
   &.table-borderless {
 
-    > thead {
+    & > thead {
 
       tr {
 
@@ -360,8 +374,8 @@
       }
     }
 
-    > tbody,
-    > tfoot {
+    & > tbody,
+    & > tfoot {
 
       tr {
 
@@ -377,7 +391,7 @@
 
   &.table-borderless-outer {
 
-    > thead {
+    & > thead {
 
       tr {
 
@@ -391,7 +405,7 @@
         &:last-child {
 
           th {
-            border-bottom: 0;
+            //border-bottom: 0;
           }
         }
 
@@ -408,8 +422,8 @@
       }
     }
 
-    > tbody,
-    > tfoot {
+    & > tbody,
+    & > tfoot {
 
       tr {
 
@@ -448,7 +462,7 @@
 
   &.table-borderless-outer-rows {
 
-    > thead {
+    & > thead {
 
       tr {
 
@@ -468,8 +482,8 @@
       }
     }
 
-    > tbody,
-    > tfoot {
+    & > tbody,
+    & > tfoot {
 
       tr {
 
@@ -496,7 +510,7 @@
 
   &.table-borderless-outer-columns {
 
-    > thead {
+    & > thead {
 
       tr {
 
@@ -513,8 +527,8 @@
       }
     }
 
-    > tbody,
-    > tfoot {
+    & > tbody,
+    & > tfoot {
 
       tr {
 
@@ -537,9 +551,9 @@
 
   &.table-borderless-inner {
 
-    > thead,
-    > tbody,
-    > tfoot {
+    & > thead,
+    & > tbody,
+    & > tfoot {
 
       tr {
 
@@ -573,7 +587,7 @@
       }
     }
 
-    > thead + tbody {
+    & > thead + tbody {
 
       tr {
 
@@ -592,9 +606,9 @@
 
   &.table-borderless-inner-rows {
 
-    > thead,
-    > tbody,
-    > tfoot {
+    & > thead,
+    & > tbody,
+    & > tfoot {
 
       tr {
 
@@ -617,7 +631,7 @@
     }
   }
 
-  > thead + tbody {
+  & > thead + tbody {
 
     tr {
 
@@ -635,9 +649,9 @@
 
   &.table-borderless-inner-columns {
 
-    > thead,
-    > tbody,
-    > tfoot {
+    & > thead,
+    & > tbody,
+    & > tfoot {
 
       tr {
 
@@ -687,6 +701,17 @@
             .property-variant(table-cell, height, line-height, null, screen-small);
           }
         }
+
+        // Table Head
+
+        th {
+          .element-spacing(table-header, null, screen-small);
+          .element-text-size(table-header, screen-small);
+
+          &:before {
+            .property-variant(table-header, height, line-height, null, screen-small);
+          }
+        }
       }
     }
   }
@@ -720,6 +745,17 @@
 
           &:before {
             .property-variant(table-cell, height, line-height, null, screen-medium);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-spacing(table-header, null, screen-medium);
+          .element-text-size(table-header, screen-medium);
+
+          &:before {
+            .property-variant(table-header, height, line-height, null, screen-medium);
           }
         }
       }
@@ -757,6 +793,17 @@
             .property-variant(table-cell, height, line-height, null, screen-large);
           }
         }
+
+        // Table Head
+
+        th {
+          .element-spacing(table-header, null, screen-large);
+          .element-text-size(table-header, screen-large);
+
+          &:before {
+            .property-variant(table-header, height, line-height, null, screen-large);
+          }
+        }
       }
     }
   }
@@ -790,6 +837,17 @@
 
           &:before {
             .property-variant(table-cell, height, line-height, null, screen-jumbo);
+          }
+        }
+
+        // Table Head
+
+        th {
+          .element-spacing(table-header, null, screen-jumbo);
+          .element-text-size(table-header, screen-jumbo);
+
+          &:before {
+            .property-variant(table-header, height, line-height, null, screen-jumbo);
           }
         }
       }
