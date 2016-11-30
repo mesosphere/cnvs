@@ -6,7 +6,7 @@
 
     <li class="{% if item.subitems and navurl contains item.url %}open{% endif %} {% if item.url == navurl %}selected{% endif %}">
 
-      <a href="{{ item.url }}" class="">
+      <a href="{{ item.url | prepend: site.baseurl }}" class="">
 
         {{ item.text }}
 
