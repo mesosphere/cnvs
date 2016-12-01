@@ -44,7 +44,7 @@ var config_vars   = {
 };
 
 var dirs = {
-  canvas: {
+  cnvs: {
     path: "./",
     styles: "./styles",
     dist: {
@@ -68,11 +68,11 @@ var dirs = {
 };
 
 var files = {
-  canvas: {
-    styles: "canvas",
+  cnvs: {
+    styles: "cnvs",
     dist: {
       styles: {
-        filename: "canvas",
+        filename: "cnvs",
         suffix: ".min"
       }
     }
@@ -116,13 +116,13 @@ gulp.task('serve', ['build'], function() {
 
 });
 
-// Build Canvas and Documentation
+// Build cnvs and Documentation
 
-gulp.task('build', ['canvas:build', 'docs:build']);
+gulp.task('build', ['cnvs:build', 'docs:build']);
 
-// Build Canvas Styles
+// Build cnvs Styles
 
-gulp.task("canvas:build", ["canvas:styles"]);
+gulp.task("cnvs:build", ["cnvs:styles"]);
 
 // Build Documentation Styles, Javascript, and Move Assets
 
@@ -132,12 +132,12 @@ gulp.task("docs:build", ["docs:move", "docs:styles", "docs:javascripts"]);
 
 gulp.task("docs:serve", ["browser-sync", "watch"]);
 
-// Clean Canvas and Documentation Distribution  Directories
+// Clean cnvs and Documentation Distribution  Directories
 
 gulp.task('clean', function() {
 
   return gulp.src([
-      dirs.canvas.dist.path,
+      dirs.cnvs.dist.path,
       dirs.docs.dist.path
     ], {
       read: false
@@ -152,7 +152,7 @@ gulp.task("watch", function () {
 
   gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
   gulp.watch([dirs.docs.javascripts + "/**/*.js"], ["docs:javascripts"]);
-  gulp.watch([dirs.canvas.styles + "/**/*.less"], ["canvas:styles", "docs:styles"]);
+  gulp.watch([dirs.cnvs.styles + "/**/*.less"], ["cnvs:styles", "docs:styles"]);
   gulp.watch([dirs.docs.path + '/images/**/*'], ["docs:move"]);
   gulp.watch([
     dirs.docs.path + '/**/*.html',
@@ -178,15 +178,15 @@ gulp.task("docs:move", function () {
 
 });
 
-// Compile and Process Canvas Styles
+// Compile and Process cnvs Styles
 
-gulp.task("canvas:styles", ["canvas:stylelint"], function () {
+gulp.task("cnvs:styles", ["cnvs:stylelint"], function () {
 
-  return gulp.src(dirs.canvas.styles + "/" + files.canvas.styles + ".less")
+  return gulp.src(dirs.cnvs.styles + "/" + files.cnvs.styles + ".less")
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less({
-      paths: [dirs.canvas.styles],
+      paths: [dirs.cnvs.styles],
       plugins: [colorLighten]
     }))
     .on("error", function (err) {
@@ -197,33 +197,33 @@ gulp.task("canvas:styles", ["canvas:stylelint"], function () {
       browsers: ["last 2 versions"]
     }))
     .pipe(rename({
-      basename: files.canvas.dist.styles.filename,
+      basename: files.cnvs.dist.styles.filename,
       extname: ".css"
     }))
     .pipe(sourcemaps.write('./', {
       includeContent: false,
-      sourceRoot: dirs.canvas.styles
+      sourceRoot: dirs.cnvs.styles
     }))
-    .pipe(gulp.dest(dirs.canvas.dist.styles))
+    .pipe(gulp.dest(dirs.cnvs.dist.styles))
     .pipe(minifyCSS())
     .pipe(rename({
-      basename: files.canvas.dist.styles.filename,
-      suffix: files.canvas.dist.styles.suffix,
+      basename: files.cnvs.dist.styles.filename,
+      suffix: files.cnvs.dist.styles.suffix,
       extname: ".css"
     }))
     .pipe(sourcemaps.write('./', {
       includeContent: false,
-      sourceRoot: dirs.canvas.styles
+      sourceRoot: dirs.cnvs.styles
     }))
-    .pipe(gulp.dest(dirs.canvas.dist.styles));
+    .pipe(gulp.dest(dirs.cnvs.dist.styles));
 
 });
 
-// Lint Canvas Styles
+// Lint cnvs Styles
 
-gulp.task("canvas:stylelint", function () {
+gulp.task("cnvs:stylelint", function () {
 
-  return gulp.src(dirs.canvas.styles + '/**/*.less')
+  return gulp.src(dirs.cnvs.styles + '/**/*.less')
     .pipe(stylelint({
       reporters: [{formatter: 'string', console: true}]
     }));
