@@ -1,13 +1,12 @@
-# Canvas
+# CNVS
 
-Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/cnvs](http://mesosphere.github.io/cnvs/).
+CNVS (pronounced "cnvs") is a system of user interface elements and components built for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/cnvs](http://mesosphere.github.io/cnvs/).
 ## Getting Started
 
-Canvas is available both as a standalone directory and as a [Node Module](https://www.npmjs.com/package/canvas-ui).  There are a couple ways to get started:
+CNVS is available both as a standalone directory and as a [Node Module](https://www.npmjs.com/package/cnvs).  There are a couple ways to get started:
 
-* Download the latest release: [Canvas (0.2.1)](https://github.com/mesosphere/canvas/archive/0.2.1.zip)
-* Clone the repository: `git clone https://github.com/mesosphere/canvas.git`
-* Install with [npm](https://www.npmjs.com/): `npm install canvas-ui`
+* Clone the repository: `git clone https://github.com/mesosphere/cnvs.git`
+* Install with [npm](https://www.npmjs.com/): `npm install cnvs`
 
 ## Project Structure
 
@@ -19,19 +18,19 @@ docs/
 styles/
 ```
 
-The `dist/` directory contains both compiled and minified variations of the canvas stylesheet.  CSS source maps (canvas.*.map) are available for both both the compiled and minified stylesheets and can with certain browsers' developer tools.
+The `dist/` directory contains both compiled and minified variations of the CNVS stylesheet.  CSS source maps (cnvs.*.map) are available for both both the compiled and minified stylesheets and can with certain browsers' developer tools.
 
 ```
 dist/
-├──  canvas.css
-├──  canvas.css.map
-├──  canvas.min.css
-├──  canvas.min.css.map
+├──  cnvs.css
+├──  cnvs.css.map
+├──  cnvs.min.css
+├──  cnvs.min.css.map
 ```
 
-### Canvas Styles Structure
+### CNVS Styles Structure
 
-The Canvas project structure is fairly simple, but it requires a basic understanding of how things are work together to provide value to your project.  Within the `/styles` directory you'll find a handful of top-level directories.  The basic structure looks like this:
+The CNVS project structure is fairly simple, but it requires a basic understanding of how things are work together to provide value to your project.  Within the `/styles` directory you'll find a handful of top-level directories.  The basic structure looks like this:
 
 ```
 components/
@@ -50,23 +49,23 @@ variables/
 ├── variables-buttons.less
 ├── variables-carousel.less
 ├── ...
-canvas.less
+cnvs.less
 ```
 
-The `canvas.less` file sitting in the root directory is your main project file in which all project `.less` files are imported.  When including in your project and compiling, the `canvas.less` file is what you should point your LESS compiler at.
+The `cnvs.less` file sitting in the root directory is your main project file in which all project `.less` files are imported.  When including in your project and compiling, the `cnvs.less` file is what you should point your LESS compiler at.
 
 **TIP:** For more info on LESS css pre-processor, including Getting Started and Compilation Guides, check out: [lesscss.org](http://lesscss.org/)
 
-The contents of all 4 top-level directories are all included by default, but certain components can be enabled or disabled using Canvas-defined variables (see: "Variables"  below).  Whenever possible, avoid modifying `canvas.less` or any of it's files/directories directly.  Instead create overrides in your specific project as needed.  The content of the 4 top-level directories is defined as follows:
+The contents of all 4 top-level directories are all included by default, but certain components can be enabled or disabled using cnvs-defined variables (see: "Variables"  below).  Whenever possible, avoid modifying `cnvs.less` or any of it's files/directories directly.  Instead create overrides in your specific project as needed.  The content of the 4 top-level directories is defined as follows:
 
 * `components/`: style definitions for unique and reusable components such as buttons, tables, and typography.  It is assumed that most if not all of these components could be easily enabled/disabled as desired by the user.
 * `layout/`: style definitions for layout, particularly as it relates to margins, sections, grid system, and responsive layout changes.
-* `utilities/`: mixins and other practical tools for use in Canvas and your project. `normalize.less` is the only file that directly generates styles.  All mixins generate styles only when invoked directly by another stylesheet.
+* `utilities/`: mixins and other practical tools for use in CNVS and your project. `normalize.less` is the only file that directly generates styles.  All mixins generate styles only when invoked directly by another stylesheet.
 * `variables/`: variable definitions used broadly throughout `components/` and `layout/`.  The file `variables-config.less` is unique in that it serves as a top-level configuration to enable and disabled components.
 
 ## Variables
 
-Like many LESS or SASS projects, Canvas relies on variables to drive style definitions.  Canvas is unique though in that it takes an opinionated view that whenever possible, styles should be derived from variables, rather than using any statically defined styles.  The benefit of such a convention is that you can further separate you style definitions in a way that makes them easily referencable and modifiable by anyone on your team.  You do not need to know how to build elaborate stylesheets to create a custom UI kit for your project.  Furthermore, by relying on variables to define styles, definitions as it relates to metric based styling (i.e. font-sizes, margins, padding, etc...) can be derived mathemitcally as proportional changes to globally accessible variables.  For example, consider the two scenarios:
+Like many LESS or SASS projects, CNVS relies on variables to drive style definitions.  CNVS is unique though in that it takes an opinionated view that whenever possible, styles should be derived from variables, rather than using any statically defined styles.  The benefit of such a convention is that you can further separate you style definitions in a way that makes them easily referencable and modifiable by anyone on your team.  You do not need to know how to build elaborate stylesheets to create a custom UI kit for your project.  Furthermore, by relying on variables to define styles, definitions as it relates to metric based styling (i.e. font-sizes, margins, padding, etc...) can be derived mathemitcally as proportional changes to globally accessible variables.  For example, consider the two scenarios:
 
 #### Scenario #1 (Statically-Defined Styles)
 
@@ -120,23 +119,23 @@ You can see that the code required in Scenerio #2 (Variable-Driven Styles) is mu
 
 ## Dependencies
 
-With one exception, Canvas is self-contained.  It will compile stand-alone.  Throughout Canvas we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package called [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).  The include Gulp file requires `less-color-lighten`.
+With one exception, CNVS is self-contained.  It will compile stand-alone.  Throughout CNVS we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package called [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).  The include Gulp file requires `less-color-lighten`.
 
 ## Documentation
 
-Documentation for Canvas can be found in the `docs/` directory.  The Documentation is built with Jekyll and hosted on GitHub Pages at http://mesosphere.github.com/canvas. The docs may also be run locally.
+Documentation for CNVS can be found in the `docs/` directory.  The Documentation is built with Jekyll and hosted on GitHub Pages at http://mesosphere.github.com/cnvs. The docs may also be run locally.
 
 ### Running Documentation Locally
 
-A Gulp file containing a number of useful functions is available at the root of the project.  There are a number of helpful commands that make building Canvas and Canvas Documentation simple.  The easiest way to build Canvas and serve the supporting Documentation locally is to follow these steps:
+A Gulp file containing a number of useful functions is available at the root of the project.  There are a number of helpful commands that make building CNVS and CNVS Documentation simple.  The easiest way to build CNVS and serve the supporting Documentation locally is to follow these steps:
 
 1. Open your terminal and navigate to the root directory of your checkout or download.
 2. Install the required npm modules: `npm install` (**NOTE:** If you do not already have npm installed, follow [these installation instructions](https://docs.npmjs.com/getting-started/installing-node))
-3. Run `gulp` (**NOTE:** If you do not already have Jekyll installed, follow [these installation instructions](https://jekyllrb.com/))
+3. Run `npm start` (**NOTE:** If you do not already have Jekyll installed, follow [these installation instructions](https://jekyllrb.com/))
 
 ### Publishing Documentation
 
-Canvas Documentation is hosted on GitHub Pages at http://mesosphere.github.com/canvas.  The branch `gh-pages` houses the compiled Documentation site files and assets.  Once you have made needed changes/contributions to the Documentation and are ready to publish, follow these simple steps.
+CNVS Documentation is hosted on GitHub Pages at http://mesosphere.github.com/cnvs.  The branch `gh-pages` houses the compiled Documentation site files and assets.  Once you have made needed changes/contributions to the Documentation and are ready to publish, follow these simple steps.
 
 1. Make sure you have the necessary permissions to push to `gh-pages`.  If you do not, please submit a pull request or contact an administrator.
 2. Run `gulp build --production`.  This will compile/process everything and place production ready files in `docs/dist`.
