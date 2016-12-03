@@ -88,6 +88,10 @@
 
       &.form-control-toggle-custom {
 
+        & when not (@toggle-custom-height = null) {
+          min-height: @toggle-custom-height;
+        }
+
         input[type='checkbox'],
         input[type='radio'] {
           opacity: 0;
@@ -556,6 +560,10 @@
 
           &.form-control-toggle-custom {
 
+            & when not (@toggle-custom-height-screen-small = null) {
+              min-height: @toggle-custom-height-screen-small;
+            }
+
             .form-control-toggle-indicator {
               .property-variant(toggle-custom, width, screen-small);
               .property-variant(toggle-custom, height, screen-small);
@@ -598,6 +606,10 @@
           /* Custom Toggles */
 
           &.form-control-toggle-custom {
+
+            & when not (@toggle-custom-height-screen-medium = null) {
+              min-height: @toggle-custom-height-screen-medium;
+            }
 
             .form-control-toggle-indicator {
               .property-variant(toggle-custom, width, screen-medium);
@@ -642,6 +654,10 @@
 
           &.form-control-toggle-custom {
 
+            & when not (@toggle-custom-height-screen-large = null) {
+              min-height: @toggle-custom-height-screen-large;
+            }
+
             .form-control-toggle-indicator {
               .property-variant(toggle-custom, width, screen-large);
               .property-variant(toggle-custom, height, screen-large);
@@ -684,6 +700,10 @@
           /* Custom Toggles */
 
           &.form-control-toggle-custom {
+
+            & when not (@toggle-custom-height-screen-jumbo = null) {
+              min-height: @toggle-custom-height-screen-jumbo;
+            }
 
             .form-control-toggle-indicator {
               .property-variant(toggle-custom, width, screen-jumbo);
