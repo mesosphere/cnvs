@@ -1,6 +1,6 @@
 # CNVS
 
-CNVS (pronounced "cnvs") is a system of user interface elements and components built for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/cnvs](http://mesosphere.github.io/cnvs/).
+CNVS (pronounced "Canvas") is a system of user interface elements and components built for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction. For reference and user guidelines, check out [mesosphere.github.io/cnvs](http://mesosphere.github.io/cnvs/).
 ## Getting Started
 
 CNVS is available both as a standalone directory and as a [Node Module](https://www.npmjs.com/package/cnvs).  There are a couple ways to get started:
