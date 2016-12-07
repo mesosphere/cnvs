@@ -1,8 +1,14 @@
-/* Feedback Success (.form-group-success .form-control-feedback) */
+& when (@form-control-feedback-success-enabled) {
+  /* Form Control Feedback success (.form-control-feedback-success) */
 
-.form-group-success {
+  .form-control-feedback-success,
+  .form-group.form-group-success .form-control-feedback {
+    .element-text-style(form-control-feedback-success);
 
-  .form-control-feedback {
-    color: @form-control-success-feedback-color;
+    /* Form Control Feedback success Inverse (.form-control-feedback-success-inverse) */
+
+    &.form-control-feedback-inverse {
+      .element-text-style(form-control-feedback-success-inverse);
+    }
   }
 }

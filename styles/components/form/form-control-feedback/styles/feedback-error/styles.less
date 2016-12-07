@@ -1,8 +1,14 @@
-/* Feedback Error (.form-group-error .form-control-feedback) */
+& when (@form-control-feedback-error-enabled) {
+  /* Form Control Feedback Error (.form-control-feedback-error) */
 
-.form-group-error {
+  .form-control-feedback-error,
+  .form-group.form-group-error .form-control-feedback {
+    .element-text-style(form-control-feedback-error);
 
-  .form-control-feedback {
-    color: @form-control-error-feedback-color;
+    /* Form Control Feedback Error Inverse (.form-control-feedback-error-inverse) */
+
+    &.form-control-feedback-inverse {
+      .element-text-style(form-control-feedback-error-inverse);
+    }
   }
 }
