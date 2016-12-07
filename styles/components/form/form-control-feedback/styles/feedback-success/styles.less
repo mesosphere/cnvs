@@ -1,164 +1,47 @@
 & when (@form-control-feedback-success-enabled) {
-  /* form-control-feedback */
+  /* form-control-feedback-success */
 
   .form-control-feedback-success,
   .form-group.form-group-success .form-control-feedback {
-    .element-spacing(form-control-feedback, null, null);
-    .element-text-size(form-control-feedback, null);
-    .element-text-style(form-control-feedback);
-    display: block;
-
-    /* Layout Variants */
-
-    &.short {
-      .element-spacing(form-control-feedback, short, null);
-    }
-
-    &.tall {
-      .element-spacing(form-control-feedback, tall, null);
-    }
+    .element-text-style(form-control-feedback-success);
 
     /* Styling Variants */
 
-    & when (@form-control-feedback-emphasis-enabled) {
+    & when (@form-control-feedback-success-emphasis-enabled) {
 
       &.emphasis,
       .emphasis {
-        .element-text-style(form-control-feedback-emphasis);
+        .element-text-style(form-control-feedback-success-emphasis);
       }
     }
 
-    & when (@form-control-feedback-muted-enabled) {
+    & when (@form-control-feedback-success-muted-enabled) {
 
       &.muted,
       .muted {
-        .element-text-style(form-control-feedback-muted);
+        .element-text-style(form-control-feedback-success-muted);
       }
     }
 
-    & when (@form-control-feedback-inverse-enabled) {
+    & when (@form-control-feedback-success-inverse-enabled) {
 
       &.inverse {
-        .element-text-style(form-control-feedback-inverse);
+        .element-text-style(form-control-feedback-success-inverse);
 
-        & when (@form-control-feedback-inverse-emphasis-enabled) {
+        & when (@form-control-feedback-success-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
-            .element-text-style(form-control-feedback-inverse-emphasis);
+            .element-text-style(form-control-feedback-success-inverse-emphasis);
           }
         }
 
-        & when (@form-control-feedback-inverse-muted-enabled) {
+        & when (@form-control-feedback-success-inverse-muted-enabled) {
 
           &.muted,
           .muted {
-            .element-text-style(form-control-feedback-inverse-muted);
+            .element-text-style(form-control-feedback-success-inverse-muted);
           }
-        }
-      }
-    }
-  }
-}
-
-& when (@layout-screen-small-enabled) {
-
-  @media (min-width: @layout-screen-small-min-width) {
-
-    & when (@form-control-feedback-success-enabled) and (@form-control-feedback-screen-small-enabled) {
-      /* form-control-feedback */
-
-      .form-control-feedback-success,
-      .form-group.form-group-success .form-control-feedback {
-        .element-text-size(form-control-feedback, screen-small);
-        .element-spacing(form-control-feedback, null, screen-small);
-
-        /* Layout Variants */
-
-        &.short {
-          .element-spacing(form-control-feedback, short, screen-small);
-        }
-
-        &.tall {
-          .element-spacing(form-control-feedback, tall, screen-small);
-        }
-      }
-    }
-  }
-}
-
-& when (@layout-screen-medium-enabled) {
-
-  @media (min-width: @layout-screen-medium-min-width) {
-
-    & when (@form-control-feedback-success-enabled) and (@form-control-feedback-screen-medium-enabled) {
-      /* form-control-feedback */
-
-      .form-control-feedback-success,
-      .form-group.form-group-success .form-control-feedback {
-        .element-text-size(form-control-feedback, screen-medium);
-        .element-spacing(form-control-feedback, null, screen-medium);
-
-        /* Layout Variants */
-
-        &.short {
-          .element-spacing(form-control-feedback, short, screen-medium);
-        }
-
-        &.tall {
-          .element-spacing(form-control-feedback, tall, screen-medium);
-        }
-      }
-    }
-  }
-}
-
-& when (@layout-screen-large-enabled) {
-
-  @media (min-width: @layout-screen-large-min-width) {
-
-    & when (@form-control-feedback-success-enabled) and (@form-control-feedback-screen-large-enabled) {
-      /* form-control-feedback */
-
-      .form-control-feedback-success,
-      .form-group.form-group-success .form-control-feedback {
-        .element-text-size(form-control-feedback, screen-large);
-        .element-spacing(form-control-feedback, null, screen-large);
-
-        /* Layout Variants */
-
-        &.short {
-          .element-spacing(form-control-feedback, short, screen-large);
-        }
-
-        &.tall {
-          .element-spacing(form-control-feedback, tall, screen-large);
-        }
-      }
-    }
-  }
-}
-
-& when (@layout-screen-jumbo-enabled) {
-
-  @media (min-width: @layout-screen-jumbo-min-width) {
-
-    & when (@form-control-feedback-success-enabled) and (@form-control-feedback-screen-jumbo-enabled) {
-      /* form-control-feedback */
-
-      .form-control-feedback-success,
-      .form-group.form-group-success .form-control-feedback {
-        .element-text-size(form-control-feedback, screen-jumbo);
-        .element-spacing(form-control-feedback, null, screen-jumbo);
-
-        /* Layout Variants */
-
-        &.short {
-          .element-spacing(form-control-feedback, short, screen-jumbo);
-        }
-
-        &.tall {
-          .element-spacing(form-control-feedback, tall, screen-jumbo);
         }
       }
     }
