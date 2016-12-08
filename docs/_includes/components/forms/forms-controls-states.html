@@ -120,7 +120,7 @@ BEGIN: Form Control States
 
     <p>
 
-      Canvas includes validation states for success and error states for all form elements including <code>.form-control</code>, <code>checkbox</code>, and <code>label</code>.  Simply add class <code>.form-group-success</code> or <code>.form-group-error</code> to any <code>.form-group</code> and all components inside will reflect the appropriate state styling.
+      Canvas includes validation states for success and error states for all form elements including <code>.form-control</code>, <code>checkbox</code>, and <code>label</code>.  Simply add class <code>.form-group-success</code> or <code>.form-group-danger</code> to any <code>.form-group</code> and all components inside will reflect the appropriate state styling.
 
     </p>
 
@@ -148,7 +148,7 @@ BEGIN: Form Control States
 
                 <input type="text" class="form-control" placeholder="Placeholder">
 
-                <p class="small flush-bottom">
+                <p class="form-control-feedback">
 
                   Example block-level help text here.
 
@@ -202,9 +202,9 @@ BEGIN: Form Control States
 
                 <input type="text" class="form-control form-control-success" placeholder="Placeholder">
 
-                <p class="small flush-bottom">
+                <p class="form-control-feedback">
 
-                  Example block-level help text here.
+                  Everything checks out here. Nice job!
 
                 </p>
 
@@ -246,7 +246,7 @@ BEGIN: Form Control States
 
             <div class="column-small-6">
 
-              <div class="form-group form-group-error">
+              <div class="form-group form-group-danger">
 
                 <label>
 
@@ -256,9 +256,9 @@ BEGIN: Form Control States
 
                 <input type="text" class="form-control form-control-error" placeholder="Input (Error)">
 
-                <p class="small flush-bottom">
+                <p class="form-control-feedback">
 
-                  Example block-level help text here.
+                  Sorry this ID already exists. Try another.
 
                 </p>
 
@@ -268,7 +268,7 @@ BEGIN: Form Control States
 
             <div class="column-small-6">
 
-              <div class="form-group form-group-error">
+              <div class="form-group form-group-danger">
 
                 <label>
 
@@ -318,6 +318,9 @@ BEGIN: Form Control States
     Success Input
   &lt;/label&gt;
   &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
+  &lt;p class="form-control-feedback"&gt;
+    Looks good.
+  &lt;/p&gt;
   &lt;p class="small flush-bottom"&gt;
     Example block-level help text here.
   &lt;/p&gt;
@@ -328,6 +331,9 @@ BEGIN: Form Control States
     Danger Input
   &lt;/label&gt;
   &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
+  &lt;p class="form-control-feedback"&gt;
+    Sorry this ID already exists. Try another.
+  &lt;/p&gt;
   &lt;p class="small flush-bottom"&gt;
     Example block-level help text here.
   &lt;/p&gt;

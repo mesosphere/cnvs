@@ -1,0 +1,49 @@
+& when (@form-control-feedback-success-enabled) {
+  /* form-control-feedback-success */
+
+  .form-control-feedback-success,
+  .form-group.form-group-success .form-control-feedback {
+    .element-text-style(form-control-feedback-success);
+
+    /* Styling Variants */
+
+    & when (@form-control-feedback-success-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+        .element-text-style(form-control-feedback-success-emphasis);
+      }
+    }
+
+    & when (@form-control-feedback-success-muted-enabled) {
+
+      &.muted,
+      .muted {
+        .element-text-style(form-control-feedback-success-muted);
+      }
+    }
+
+    & when (@form-control-feedback-success-inverse-enabled) {
+
+      &.inverse {
+        .element-text-style(form-control-feedback-success-inverse);
+
+        & when (@form-control-feedback-success-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+            .element-text-style(form-control-feedback-success-inverse-emphasis);
+          }
+        }
+
+        & when (@form-control-feedback-success-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+            .element-text-style(form-control-feedback-success-inverse-muted);
+          }
+        }
+      }
+    }
+  }
+}

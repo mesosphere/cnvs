@@ -1,0 +1,161 @@
+& when (@form-control-feedback-enabled) {
+  /* form-control-feedback */
+
+  .form-control-feedback {
+    .element-spacing(form-control-feedback, null, null);
+    .element-text-size(form-control-feedback, null);
+    .element-text-style(form-control-feedback);
+    display: block;
+
+    /* Layout Variants */
+
+    &.short {
+      .element-spacing(form-control-feedback, short, null);
+    }
+
+    &.tall {
+      .element-spacing(form-control-feedback, tall, null);
+    }
+
+    /* Styling Variants */
+
+    & when (@form-control-feedback-emphasis-enabled) {
+
+      &.emphasis,
+      .emphasis {
+        .element-text-style(form-control-feedback-emphasis);
+      }
+    }
+
+    & when (@form-control-feedback-muted-enabled) {
+
+      &.muted,
+      .muted {
+        .element-text-style(form-control-feedback-muted);
+      }
+    }
+
+    & when (@form-control-feedback-inverse-enabled) {
+
+      &.inverse {
+        .element-text-style(form-control-feedback-inverse);
+
+        & when (@form-control-feedback-inverse-emphasis-enabled) {
+
+          &.emphasis,
+          .emphasis {
+            .element-text-style(form-control-feedback-inverse-emphasis);
+          }
+        }
+
+        & when (@form-control-feedback-inverse-muted-enabled) {
+
+          &.muted,
+          .muted {
+            .element-text-style(form-control-feedback-inverse-muted);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@form-control-feedback-enabled) and (@form-control-feedback-screen-small-enabled) {
+      /* form-control-feedback */
+
+      .form-control-feedback {
+        .element-text-size(form-control-feedback, screen-small);
+        .element-spacing(form-control-feedback, null, screen-small);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(form-control-feedback, short, screen-small);
+        }
+
+        &.tall {
+          .element-spacing(form-control-feedback, tall, screen-small);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@form-control-feedback-enabled) and (@form-control-feedback-screen-medium-enabled) {
+      /* form-control-feedback */
+
+      .form-control-feedback {
+        .element-text-size(form-control-feedback, screen-medium);
+        .element-spacing(form-control-feedback, null, screen-medium);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(form-control-feedback, short, screen-medium);
+        }
+
+        &.tall {
+          .element-spacing(form-control-feedback, tall, screen-medium);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@form-control-feedback-enabled) and (@form-control-feedback-screen-large-enabled) {
+      /* form-control-feedback */
+
+      .form-control-feedback {
+        .element-text-size(form-control-feedback, screen-large);
+        .element-spacing(form-control-feedback, null, screen-large);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(form-control-feedback, short, screen-large);
+        }
+
+        &.tall {
+          .element-spacing(form-control-feedback, tall, screen-large);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@form-control-feedback-enabled) and (@form-control-feedback-screen-jumbo-enabled) {
+      /* form-control-feedback */
+
+      .form-control-feedback {
+        .element-text-size(form-control-feedback, screen-jumbo);
+        .element-spacing(form-control-feedback, null, screen-jumbo);
+
+        /* Layout Variants */
+
+        &.short {
+          .element-spacing(form-control-feedback, short, screen-jumbo);
+        }
+
+        &.tall {
+          .element-spacing(form-control-feedback, tall, screen-jumbo);
+        }
+      }
+    }
+  }
+}
