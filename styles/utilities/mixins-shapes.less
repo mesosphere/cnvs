@@ -95,3 +95,30 @@
     border-color: transparent transparent transparent @color;
   }
 }
+
+/* Inline SVG Icons */
+
+.inline-svg-background-image(@svgURI) {
+  background-image: url(~'data:image/svg+xml;charset=utf8,@{svgURI}');
+}
+
+.custom-toggle-indicator-checkbox(@fill) {
+
+  & when not (@fill = null) {
+    .inline-svg-background-image(escape(~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{fill}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>'));
+  }
+}
+
+.custom-toggle-indicator-checkbox-indeterminate(@fill) {
+
+  & when not (@fill = null) {
+    .inline-svg-background-image(escape(~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{fill}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>'));
+  }
+}
+
+.custom-toggle-indicator-radio-button(@fill) {
+
+  & when not (@fill = null) {
+    .inline-svg-background-image(escape(~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{fill}" cx="8" cy="8" r="4"></circle></svg>'));
+  }
+}

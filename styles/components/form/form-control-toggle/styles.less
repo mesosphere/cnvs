@@ -175,29 +175,20 @@
           &:checked {
 
             ~ .form-control-toggle-indicator {
-
-              & when not (@toggle-custom-selected-color = null) {
-                background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-selected-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
-              }
+              .custom-toggle-indicator-checkbox(@toggle-custom-selected-color);
             }
 
             &:hover {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-hover-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-selected-hover-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
-                }
+                .custom-toggle-indicator-checkbox(@toggle-custom-selected-hover-color);
               }
             }
 
             &:active {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-active-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-selected-active-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
-                }
+                .custom-toggle-indicator-checkbox(@toggle-custom-selected-active-color);
               }
             }
 
@@ -206,10 +197,7 @@
             &:disabled {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-disabled-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-selected-disabled-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
-                }
+                .custom-toggle-indicator-checkbox(@toggle-custom-selected-disabled-color);
               }
             }
           }
@@ -220,29 +208,20 @@
           &.indeterminate {
 
             ~ .form-control-toggle-indicator {
-
-              & when not (@toggle-custom-selected-color = null) {
-                background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-selected-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
-              }
+              .custom-toggle-indicator-checkbox-indeterminate(@toggle-custom-selected-color);
             }
 
             &:hover {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-hover-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-selected-hover-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
-                }
+                .custom-toggle-indicator-checkbox-indeterminate(@toggle-custom-selected-hover-color);
               }
             }
 
             &:active {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-active-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-selected-active-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
-                }
+                .custom-toggle-indicator-checkbox-indeterminate(@toggle-custom-selected-active-color);
               }
             }
 
@@ -251,10 +230,7 @@
             &:disabled {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-disabled-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-selected-disabled-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
-                }
+                .custom-toggle-indicator-checkbox-indeterminate(@toggle-custom-selected-disabled-color);
               }
             }
           }
@@ -273,29 +249,20 @@
           &:checked {
 
             ~ .form-control-toggle-indicator {
-
-              & when not (@toggle-custom-selected-color = null) {
-                background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-selected-color}" cx="8" cy="8" r="4"></circle></svg>');
-              }
+              .custom-toggle-indicator-radio-button(@toggle-custom-selected-color);
             }
 
             &:hover {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-hover-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-selected-hover-color}" cx="8" cy="8" r="4"></circle></svg>');
-                }
+                .custom-toggle-indicator-radio-button(@toggle-custom-selected-hover-color);
               }
             }
 
             &:active {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-active-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-selected-active-color}" cx="8" cy="8" r="4"></circle></svg>');
-                }
+                .custom-toggle-indicator-radio-button(@toggle-custom-selected-active-color);
               }
             }
 
@@ -304,10 +271,7 @@
             &:disabled {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-selected-disabled-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-selected-disabled-color}" cx="8" cy="8" r="4"></circle></svg>');
-                }
+                .custom-toggle-indicator-radio-button(@toggle-custom-selected-disabled-color);
               }
             }
           }
@@ -388,29 +352,20 @@
             &:checked {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-inverse-selected-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-inverse-selected-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
-                }
+                .custom-toggle-indicator-checkbox(@toggle-custom-inverse-selected-color);
               }
 
               &:hover {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-inverse-selected-hover-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
-                  }
+                  .custom-toggle-indicator-checkbox(@toggle-custom-inverse-selected-hover-color);
                 }
               }
 
               &:active {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-active-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-inverse-selected-active-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
-                  }
+                  .custom-toggle-indicator-checkbox(@toggle-custom-inverse-selected-active-color);
                 }
               }
 
@@ -419,10 +374,7 @@
               &:disabled {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{toggle-custom-inverse-selected-disabled-color}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>');
-                  }
+                  .custom-toggle-indicator-checkbox(@toggle-custom-inverse-selected-disabled-color);
                 }
               }
             }
@@ -433,29 +385,20 @@
             &.indeterminate {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-inverse-selected-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-inverse-selected-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
-                }
+                .custom-toggle-indicator-checkbox-indeterminate(@toggle-custom-inverse-selected-color);
               }
 
               &:hover {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-inverse-selected-hover-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
-                  }
+                  .custom-toggle-indicator-checkbox-indeterminate(@toggle-custom-inverse-selected-hover-color);
                 }
               }
 
               &:active {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-active-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-inverse-selected-active-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
-                  }
+                  .custom-toggle-indicator-checkbox-indeterminate(@toggle-custom-inverse-selected-active-color);
                 }
               }
 
@@ -464,10 +407,7 @@
               &:disabled {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect fill="@{toggle-custom-inverse-selected-disabled-color}" id="Rectangle" x="3" y="7" width="10" height="2"></rect></svg>');
-                  }
+                  .custom-toggle-indicator-checkbox-indeterminate(@toggle-custom-inverse-selected-disabled-color);
                 }
               }
             }
@@ -481,29 +421,20 @@
             &:checked {
 
               ~ .form-control-toggle-indicator {
-
-                & when not (@toggle-custom-inverse-selected-color = null) {
-                  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-inverse-selected-color}" cx="8" cy="8" r="4"></circle></svg>');
-                }
+                .custom-toggle-indicator-radio-button(@toggle-custom-inverse-selected-color);
               }
 
               &:hover {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-hover-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-inverse-selected-hover-color}" cx="8" cy="8" r="4"></circle></svg>');
-                  }
+                  .custom-toggle-indicator-radio-button(@toggle-custom-inverse-selected-hover-color);
                 }
               }
 
               &:active {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-active-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-inverse-selected-active-color}" cx="8" cy="8" r="4"></circle></svg>');
-                  }
+                  .custom-toggle-indicator-radio-button(@toggle-custom-inverse-selected-active-color);
                 }
               }
 
@@ -512,10 +443,7 @@
               &:disabled {
 
                 ~ .form-control-toggle-indicator {
-
-                  & when not (@toggle-custom-inverse-selected-disabled-color = null) {
-                    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{toggle-custom-inverse-selected-disabled-color}" cx="8" cy="8" r="4"></circle></svg>');
-                  }
+                  .custom-toggle-indicator-radio-button(@toggle-custom-inverse-selected-disabled-color);
                 }
               }
             }
