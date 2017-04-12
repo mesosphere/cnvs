@@ -12,6 +12,7 @@
     align-items: center;
     display: inline-flex;
     justify-content: center;
+    text-align: center;
 
     /* Layout Variants */
 
@@ -59,12 +60,14 @@
 
     &.button-dropdown,
     &.dropdown-toggle {
+      display: inline-block;
 
       &:after {
         .property-variant(button-dropdown-caret, margin-left, null, null);
         .property-variant(button-dropdown-caret, margin-top, null, null);
         .triangle-base();
         .triangle-color('down', @button-color);
+        align-self: center;
         content: '';
         display: inline-block;
         vertical-align: middle;
