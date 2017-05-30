@@ -1,0 +1,38 @@
+& when (@message-enabled) {
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@message-enabled) and (@message-screen-small-enabled) {
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@message-enabled) and (@message-screen-medium-enabled) {
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@message-enabled) and (@message-screen-large-enabled) {
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@message-enabled) and (@message-screen-jumbo-enabled) {
+    }
+  }
+}
