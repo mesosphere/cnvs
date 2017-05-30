@@ -12,7 +12,7 @@ BEGIN: Dismissable Messages
 
   <p>
 
-    You may wish to display more than the default message type, either to create separation in the importance of various messages or to communicate the state of an action or condition. Message states make this super easy. Append the appropriate state name to the class <code>.message-*</code> prefix.
+    If you wish to give users the ability to dismiss a message, add the class <code>.message-dismissable</code> as well as include an element of class <code>.message-dismissable-indicator</code> inside your message. 
 
   </p>
 
@@ -24,7 +24,17 @@ BEGIN: Dismissable Messages
 
     <div class="panel-cell">
 
-      <div class="message message-dismissable flush-bottom">
+      <div class="message message-dismissable">
+
+        <a class="message-dismissable-indicator" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+
+        <strong>Message:</strong> Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+      </div>
+
+      <div class="message message-success message-dismissable flush-bottom">
 
         <a class="message-dismissable-indicator" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -40,6 +50,9 @@ BEGIN: Dismissable Messages
 
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="message message-dismissable"&gt;
+  &lt;a class="message-dismissable-indicator" data-dismiss="alert" aria-label="Close"&gt;
+    &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+  &lt;/a&gt;
   &lt;strong&gt;Message:&lt;/strong&gt; This is a relevant message you should read.
 &lt;/div&gt;
 </pre>

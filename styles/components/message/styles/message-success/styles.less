@@ -5,11 +5,33 @@
     .element-shape-style(message-success);
     .element-text-style(message-success);
 
+    /* Dismissable Message (.message-dismissable) */
+
+    &.message-dismissable {
+
+      .message-dismissable-indicator {
+
+        & when not (@message-success-color = null) {
+          .custom-toggle-indicator-close(@message-success-color);
+        }
+      }
+    }
+
     /* Message Inverse (.message-inverse) */
 
     &.message-inverse {
       .element-shape-style(message-success-inverse);
       .element-text-style(message-success-inverse);
+
+      &.message-dismissable {
+
+        .message-dismissable-indicator {
+
+          & when not (@message-success-inverse-color = null) {
+            .custom-toggle-indicator-close(@message-success-inverse-color);
+          }
+        }
+      }
     }
   }
 }
