@@ -122,3 +122,10 @@
     .inline-svg-background-image(escape(~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle fill="@{fill}" cx="8" cy="8" r="4"></circle></svg>'));
   }
 }
+
+.custom-toggle-indicator-close(@fill) {
+
+  & when not (@fill = null) {
+    .inline-svg-background-image(escape(~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="@{fill}" points="6 12.414 13.707 4.707 12.293 3.293 6 9.600 3.707 7.294 2.294 8.707"></polygon></svg>'));
+  }
+}
