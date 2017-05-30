@@ -1,4 +1,14 @@
 & when (@message-enabled) {
+
+  /* Badge */
+
+  .message {
+    .element-shape-style(message);
+    .element-spacing(message, null, null);
+    .element-text-style(message);
+    .property-variant(message, border-radius, null, null);
+    position: relative;
+  }
 }
 
 & when (@layout-screen-small-enabled) {
@@ -6,6 +16,14 @@
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@message-enabled) and (@message-screen-small-enabled) {
+
+      /* Badge */
+
+      badge,
+      .badge {
+        .element-spacing(badge, null, screen-small);
+        .property-variant(badge, border-radius, null, screen-small);
+      }
     }
   }
 }
@@ -15,6 +33,14 @@
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@message-enabled) and (@message-screen-medium-enabled) {
+
+      /* Badge */
+
+      badge,
+      .badge {
+        .element-spacing(badge, null, screen-medium);
+        .property-variant(badge, border-radius, null, screen-medium);
+      }
     }
   }
 }
@@ -24,6 +50,14 @@
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@message-enabled) and (@message-screen-large-enabled) {
+
+      /* Badge */
+
+      badge,
+      .badge {
+        .element-spacing(badge, null, screen-large);
+        .property-variant(badge, border-radius, null, screen-large);
+      }
     }
   }
 }
@@ -33,6 +67,14 @@
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@message-enabled) and (@message-screen-jumbo-enabled) {
+
+      /* Badge */
+
+      badge,
+      .badge {
+        .element-spacing(badge, null, screen-jumbo);
+        .property-variant(badge, border-radius, null, screen-jumbo);
+      }
     }
   }
 }
