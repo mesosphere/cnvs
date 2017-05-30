@@ -8,10 +8,10 @@ page-header:
     label: "Components"
     url: "/components/"
 page-navigation:
-- label: "Badge States"
-  link: "#badges-states"
-- label: "Rounded Badge"
-  link: "#badges-rounded"
+- label: "Message States"
+  link: "#messages-states"
+- label: "Dismissable Messages"
+  link: "#messages-dismissable"
 ---
 
 <!-- =================================================
@@ -24,9 +24,15 @@ BEGIN: Badges
 
     <div class="container-fluid pod">
 
+      <p class="lead">
+
+        Messages are an easy way to provide contextual messages or feedback related to a specific event, condition, or user action.
+
+      </p>
+
       <p>
 
-        Badges are a lightweight method of annotating or labeling content. Wrap content in the <code>.badge</code> class to add an inline badge. The font-size and line-height of a badge inherit from that of it's parent's properties.
+        Use messages in your project to convey information, provide tips, communicate success, or even flag and notify the user of errors. Wrap your message in an element with the class <code>.message</code> to apply the default message appearance. Any HTML can live inside a message, though content is typically limited to text and simple actions.
 
       </p>
 
@@ -38,9 +44,9 @@ BEGIN: Badges
 
         <div class="panel-cell">
 
-          <span class="badge">
+          <span class="message">
 
-            Badge
+            <strong>Information:</strong> This is a relevant message you should read.
 
           </span>
 
@@ -49,8 +55,8 @@ BEGIN: Badges
         <div class="panel-cell panel-cell-light panel-cell-code-block">
 
 <pre class="prettyprint transparent flush lang-html">
-&lt;span class="badge"&gt;
-  Badge
+&lt;span class="message"&gt;
+  &lt;strong&gt;Information:&lt;/strong&gt; This is a relevant message you should read.
 &lt;/span&gt;
 </pre>
 
