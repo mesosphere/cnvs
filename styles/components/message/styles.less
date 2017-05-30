@@ -13,11 +13,51 @@
       color: inherit;
     }
 
+    /* Dismissable Message (.message-dismissable) */
+
+    &.message-dismissable {
+
+      .message-dismissable-indicator {
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 16px;
+        width: 16px;
+
+        & when (@message-color = null) {
+          .custom-toggle-indicator-close(@body-color);
+        }
+
+        & when not (@message-color = null) {
+          .custom-toggle-indicator-close(@message-color);
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
     /* Message Inverse (.message-inverse) */
 
     &.message-inverse {
       .element-shape-style(message-inverse);
       .element-text-style(message-inverse);
+
+      /* Dismissable Message (.message-dismissable) */
+
+      &.message-dismissable {
+
+        .message-dismissable-indicator {
+          & when (@message-inverse-color = null) {
+            .custom-toggle-indicator-close(@body-inverse-color);
+          }
+
+          & when not (@message-inverse-color = null) {
+            .custom-toggle-indicator-close(@message-inverse-color);
+          }
+        }
+      }
     }
   }
 }
