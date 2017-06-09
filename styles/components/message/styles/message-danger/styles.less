@@ -17,6 +17,20 @@
       }
     }
 
+    /* Message Link */
+
+    .message-link {
+      .element-text-style(message-danger-link);
+
+      &:hover {
+        .element-text-style(message-danger-link-hover);
+      }
+
+      &:active {
+        .element-text-style(message-danger-link-active);
+      }
+    }
+
     /* Message Inverse (.message-inverse) */
 
     &.message-inverse {
@@ -30,6 +44,20 @@
           & when not (@message-danger-inverse-color = null) {
             .custom-toggle-indicator-close(@message-danger-inverse-color);
           }
+        }
+      }
+
+      /* Message Link */
+
+      .message-link {
+        .element-text-style(message-danger-inverse-link);
+
+        &:hover {
+          .element-text-style(message-danger-inverse-link-hover);
+        }
+
+        &:active {
+          .element-text-style(message-danger-inverse-link-active);
         }
       }
     }

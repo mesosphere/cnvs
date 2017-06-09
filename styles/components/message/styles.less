@@ -9,10 +9,6 @@
     display: block;
     position: relative;
 
-    .message-type-style {
-      color: inherit;
-    }
-
     /* Dismissible Message (.message-dismissible) */
 
     &.message-dismissible {
@@ -39,6 +35,24 @@
       }
     }
 
+    .message-type-style {
+      color: inherit;
+    }
+
+    /* Message Link */
+
+    .message-link {
+      .element-text-style(message-link);
+
+      &:hover {
+        .element-text-style(message-link-hover);
+      }
+
+      &:active {
+        .element-text-style(message-link-active);
+      }
+    }
+
     /* Message Inverse (.message-inverse) */
 
     &.message-inverse {
@@ -55,6 +69,20 @@
           & when not (@message-inverse-color = null) {
             .custom-toggle-indicator-close(@message-inverse-color);
           }
+        }
+      }
+
+      /* Message Link */
+
+      .message-link {
+        .element-text-style(message-inverse-link);
+
+        &:hover {
+          .element-text-style(message-inverse-link-hover);
+        }
+
+        &:active {
+          .element-text-style(message-inverse-link-active);
         }
       }
     }

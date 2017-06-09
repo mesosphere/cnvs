@@ -17,6 +17,20 @@
       }
     }
 
+    /* Message Link */
+
+    .message-link {
+      .element-text-style(message-information-link);
+
+      &:hover {
+        .element-text-style(message-information-link-hover);
+      }
+
+      &:active {
+        .element-text-style(message-information-link-active);
+      }
+    }
+
     /* Message Inverse (.message-inverse) */
 
     &.message-inverse {
@@ -30,6 +44,20 @@
           & when not (@message-information-inverse-color = null) {
             .custom-toggle-indicator-close(@message-information-inverse-color);
           }
+        }
+      }
+
+      /* Message Link */
+
+      .message-link {
+        .element-text-style(message-information-inverse-link);
+
+        &:hover {
+          .element-text-style(message-information-inverse-link-hover);
+        }
+
+        &:active {
+          .element-text-style(message-information-inverse-link-active);
         }
       }
     }
