@@ -39,12 +39,12 @@
 
     .message-type-style {
       color: inherit;
-    }
 
-    ul.message-type-style {
+      li {
 
-      &:before {
-        .property-variant(message, background-color, color, null, null);
+        &:before {
+          .property-variant(message, background-color, color, null, null);
+        }
       }
     }
 
@@ -83,10 +83,14 @@
 
       /* Message Type Style */
 
-      ul.message-type-style {
+      .message-type-style {
 
-        &:before {
-          .property-variant(message-inverse, background-color, color, null, null);
+        li {
+
+          &:before {
+
+            .property-variant(message-inverse, background-color, color, null, null);
+          }
         }
       }
 
