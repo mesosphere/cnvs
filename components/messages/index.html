@@ -38,7 +38,7 @@ BEGIN: Head
 
     
 
-      CNVS &bull; Icons
+      CNVS &bull; Messages
 
     
 
@@ -49,11 +49,11 @@ BEGIN: Head
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
-  <meta name="title" content ="Icons &bull; CNVS">
+  <meta name="title" content ="Messages &bull; CNVS">
   <meta name="description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
   <meta name="keywords" content="">
   <meta name="googlebot" content="all">
-  <link rel="canonical" href="http://yourdomain.com/cnvs/components/icons/">
+  <link rel="canonical" href="http://yourdomain.com/cnvs/components/messages/">
   <link rel="alternate" type="application/rss+xml" title="CNVS" href="http://yourdomain.com/cnvs/feed.xml" />
 
   <!--[if lt IE 9]>
@@ -104,10 +104,10 @@ BEGIN: Head
 
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Icons &bull; CNVS">
+  <meta property="og:title" content="Messages &bull; CNVS">
   <meta property="og:description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
   <meta property="og:url" content="ashenden.github.com/canvas">
-  <meta property="og:site_name" content="Icons &bull; CNVS">
+  <meta property="og:site_name" content="Messages &bull; CNVS">
   <meta property="og:image" content="">
 
   <meta name="twitter:card" content="site">
@@ -201,6 +201,10 @@ BEGIN: Canvas Sidebar
 <div class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
 
   
+
+  
+
+
 
 <!-- =================================================
 BEGIN: Header
@@ -395,7 +399,7 @@ BEGIN: Navigation
 
   
 
-    <li class=" selected">
+    <li class=" ">
 
       <a href="/cnvs/components/icons/" class="">
 
@@ -423,7 +427,7 @@ BEGIN: Navigation
 
   
 
-    <li class=" ">
+    <li class=" selected">
 
       <a href="/cnvs/components/messages/" class="">
 
@@ -503,11 +507,29 @@ BEGIN: Canvas Sidebar
 
         
 
+  
+  
+  
+  
 
 
 
 
 
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
 
 
 
@@ -573,7 +595,7 @@ BEGIN: Page Header
 
                 <p class="h1 page-header-headline flush-top  text-align-left  flush-bottom">
 
-                  Icons
+                  Messages
 
                 </p>
 
@@ -628,9 +650,9 @@ BEGIN: Page Navigation
 
     <li class="">
 
-      <a href="#icons-sizes" class="">
+      <a href="#messages-states" class="">
 
-        Icon Sizes
+        Message States
 
       </a>
 
@@ -642,9 +664,37 @@ BEGIN: Page Navigation
 
     <li class="">
 
-      <a href="#icons-styles" class="">
+      <a href="#messages-inverse-styling" class="">
 
-        Icon Styles
+        Inverse Styling
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+    <li class="">
+
+      <a href="#messages-content" class="">
+
+        Message Content
+
+      </a>
+
+      
+
+    </li>
+
+  
+
+    <li class="">
+
+      <a href="#messages-dismissible" class="">
+
+        Dismissible Messages
 
       </a>
 
@@ -677,32 +727,26 @@ END: Page Navigation
           <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
 
             <!-- =================================================
-BEGIN: Icons
+BEGIN: Badges
 ================================================== -->
 
-<section class="fill" id="icons">
+<section class="fill" id="messages">
 
   <div class="fill">
 
     <div class="container-fluid pod">
 
-      <p>
+      <p class="lead">
 
-        A simple and easy to use icon class is available in Canvas.  The icon class <code>.icon</code> assumes very little about the actual icon itself, but instead serves as an easily modifiable container in which you can define or place your icon -- whether that icon is an SVG, font, or bitmap.  Canvas does not include icon glyphs or fonts by default, relying on the user to specify how these should be configured.
+        Messages are an easy way to provide contextual messages or feedback related to a specific event, condition, or user action.
 
       </p>
 
-      <!-- =================================================
-      BEGIN: Icon SVG Definitions
-      ================================================== -->
+      <p>
 
-      <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        Use messages in your project to convey information, provide tips, communicate success, or even flag and notify the user of errors. Wrap your message in an element with the class <code>.message</code> to apply the default message appearance. Any HTML can live inside a message, though content is typically limited to text and simple actions.
 
-        <symbol id="icons-square" viewBox="0 0 16 16">
-          <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
-        </symbol>
-
-      </svg>
+      </p>
 
       <!-- =================================================
       BEGIN: Example
@@ -712,18 +756,20 @@ BEGIN: Icons
 
         <div class="panel-cell">
 
-          <i class="icon icon-medium icon-black">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
+          <div class="message flush-bottom">
+
+            <strong>Message:</strong> This is a relevant message you should read.
+
+          </div>
 
         </div>
 
         <div class="panel-cell panel-cell-light panel-cell-code-block">
 
 <pre class="prettyprint transparent flush lang-html">
-&lt;i class='icon icon-medium'&gt&lt;i&gt;
+&lt;div class="message"&gt;
+  &lt;strong&gt;Information:&lt;/strong&gt; This is a relevant message you should read.
+&lt;/div&gt;
 </pre>
 
         </div>
@@ -735,569 +781,306 @@ BEGIN: Icons
       ================================================== -->
 
       <!-- =================================================
-BEGIN: Icon Sizes
+BEGIN: Message States
 ================================================== -->
 
-<section id="icons-sizes">
+<section id="messages-states">
 
-  <h2>
+  <h1>
 
-    Icon Sizes
+    Message States
 
-  </h2>
+  </h1>
 
   <p>
 
-    Thinks of the <code>icon</code> elements as a bounding box in which you can place &mdash; either inside or directly as a background &mdash; any image, SVG, or font.  The bounding box is rectangular, but by default, they are defined as square (1:1).  Canvas provides 5 unique icon sizes (defined below).  The sizes can be easily changed.  Furthermore, these sizes are consider responsive, with the dimensions changing as defined by the user, with changes in screen size.
+    You may wish to display more than the default message type, either to create separation in the importance of various messages or to communicate the state of an action or condition. Message states make this super easy. Append the appropriate state name to the class <code>.message-*</code> prefix.
 
   </p>
 
-  <table class="table short">
+  <!-- =================================================
+  BEGIN: Example
+  ================================================== -->
 
-    <thead>
+  <div class="panel flush-bottom">
 
-      <tr>
+    <div class="panel-cell">
 
-        <th>
+      <div class="message">
 
-          Class
+        <strong>Message:</strong> This is a relevant message you should read.
 
-        </th>
+      </div>
 
-        <th>
+      <div class="message message-information">
 
-          Base Size
+        <strong>Information:</strong> This is a message that is more colorful than others.
 
-        </th>
+      </div>
 
-        <th>
+      <div class="message message-success">
 
-          Example
+        <strong>Success:</strong> You have done some action successfully and should be proud!
 
-        </th>
+      </div>
 
-      </tr>
+      <div class="message message-warning">
 
-    </thead>
+        <strong>Warning:</strong> Before going further, you may want to stop and read this.
 
-    <tbody>
+      </div>
 
-      <tr>
+      <div class="message message-danger flush-bottom">
 
-        <td>
+        <strong>Danger:</strong> Something is wrong or potentially problematic, please read.
 
-          <code>
+      </div>
 
-            .icon-mini
+    </div>
 
-          </code>
+    <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-        </td>
+<pre class="prettyprint transparent flush lang-html">
+&lt;div class="message message-information"&gt;
+  &lt;strong&gt;Information:&lt;/strong&gt; This is a message that is more colorful than others.
+&lt;/div&gt;
 
-        <td>
+&lt;div class="message message-success"&gt;
+  &lt;strong&gt;Success:&lt;/strong&gt; You have done some action successfully and should be proud!
+&lt;/div&gt;
 
-          16x16
+&lt;div class="message message-warning"&gt;
+  &lt;strong&gt;Warning:&lt;/strong&gt; Before going further, you may want to stop and read this.
+&lt;/div&gt;
 
-        </td>
+&lt;div class="message message-danger"&gt;
+  &lt;strong&gt;Danger:&lt;/strong&gt; Something is wrong or potentially problematic, please read.
+&lt;/div&gt;
+</pre>
 
-        <td>
+    </div>
 
-          <i class="icon icon-mini icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-small
-
-          </code>
-
-        </td>
-
-        <td>
-
-          24x24
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-small icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-medium
-
-          </code>
-
-        </td>
-
-        <td>
-
-          32x32
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-medium icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-large
-
-          </code>
-
-        </td>
-
-        <td>
-
-          48x48
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-large icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-jumbo
-
-          </code>
-
-        </td>
-
-        <td>
-
-          64x64
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-jumbo icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-huge
-
-          </code>
-
-        </td>
-
-        <td>
-
-          96x96
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-huge icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
+  </div>
 
 </section>
 
 <!-- =================================================
-END: Icon Sizes
+END: Icons
 ================================================== -->
 
       <!-- =================================================
-BEGIN: Icon Styles
+BEGIN: Message States
 ================================================== -->
 
-<section id="icons-styles">
+<section id="messages-inverse-styling">
 
-  <h2>
+  <h1>
 
-    Icon Styles
+    Inverse Styling
 
-  </h2>
-  
+  </h1>
+
   <p>
 
-    Like with sizes, Canvas also provides a number of built in styles to apply to your icons.  These styles modify only the <code>color</code> and <code>fill</code> properties, which means they work with SVG and Font defined icons, not bitmap icons.  For bitmap images, you will need to introdue an alternate means (e.g. sprite sheet) for dynamically switching between image styles.
+    Add the class <code>.message-inverse</code> to any <code>.message</code> element to leverage inverse styling.
 
   </p>
 
-  <table class="table short">
+  <!-- =================================================
+  BEGIN: Example
+  ================================================== -->
 
-    <thead>
+  <div class="panel panel-inverse flush-bottom">
 
-      <tr>
+    <div class="panel-cell panel-cell-inverse">
 
-        <th>
+      <div class="message message-inverse">
 
-          Class
+        <strong>Message:</strong> This is a relevant message you should read.
 
-        </th>
+      </div>
 
-        <th>
+      <div class="message message-information message-inverse">
 
-          Example
+        <strong>Information:</strong> This is a message that is more colorful than others.
 
-        </th>
+      </div>
 
-        <th>
+      <div class="message message-success message-inverse">
 
-          Class
+        <strong>Success:</strong> You have done some action successfully and should be proud!
 
-        </th>
+      </div>
 
-        <th>
+      <div class="message message-warning message-inverse">
 
-          Example
+        <strong>Warning:</strong> Before going further, you may want to stop and read this.
 
-        </th>
+      </div>
 
-      </tr>
+      <div class="message message-danger message-inverse flush-bottom">
 
-    </thead>
+        <strong>Danger:</strong> Something is wrong or potentially problematic, please read.
 
-    <tbody>
+      </div>
 
-      <tr>
+    </div>
 
-        <td>
+    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
 
-          <code>
+<pre class="prettyprint code-block-inverse transparent flush lang-html">
+&lt;div class="message message-inverse"&gt;
+  &lt;strong&gt;Information:&lt;/strong&gt; This is a message that is more colorful than others.
+&lt;/div&gt;
+</pre>
 
-            .icon-black
+    </div>
 
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-black">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-white
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-white">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-blue
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-blue">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-red
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-red">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-orange
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-orange">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-yellow
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-yellow">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-green
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-green">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-purple
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-purple">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-pink
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-pink">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-gold
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-gold">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .icon-cyan
-
-          </code>
-
-        </td>
-
-        <td>
-
-          <i class="icon icon-mini icon-cyan">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-          <td>
-
-            <code>
-
-              .icon-orchid
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-orchid">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
+  </div>
 
 </section>
 
 <!-- =================================================
-END: Icon Styles
+END: Icons
+================================================== -->
+
+      <!-- =================================================
+BEGIN: Message States
+================================================== -->
+
+<section id="messages-content">
+
+  <h1>
+
+    Message Content
+
+  </h1>
+
+  <p>
+
+    You can include more than body text in a message. Messages can support any HTML content. All type styling will be retained. However, if you add the class <code>.message-type-styling</code> to any typographic element, the preferred message type color and styling will be applied. For links, add the class <code>.message-link</code> to any <code>&lt;a&gt;</code>.
+
+  </p>
+
+  <!-- =================================================
+  BEGIN: Example
+  ================================================== -->
+
+  <div class="panel flush-bottom">
+
+    <div class="panel-cell">
+
+      <div class="message message-danger flush-bottom">
+
+        <h4 class="flush-top message-type-style">
+
+          Some Important Headline
+
+        </h4>
+
+        <p>
+
+          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+
+        </p>
+
+        <a href="#" class="message-link">Sure, let's do that thing</a>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+<pre class="prettyprint transparent flush lang-html">
+&lt;div class="message message-danger"&gt;
+  &lt;h4 class="message-type-style"&gt;
+    Some Important Headline
+  &lt;/h4&gt;
+  &lt;p&gt;
+    Cras justo odio &hellip;
+  &lt;/p&gt;
+  &lt;a href="#" class="message-link"&gt;Sure, let's do that thing&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =================================================
+END: Icons
+================================================== -->
+
+      <!-- =================================================
+BEGIN: Dismissible Messages
+================================================== -->
+
+<section id="messages-dismissible">
+
+  <h1>
+
+    Dismissible Messages
+
+  </h1>
+
+  <p>
+
+    If you wish to give users the ability to dismiss a message, add the class <code>.message-dismissible</code> as well as include an element of class <code>.message-dismissible-indicator</code> inside your message. 
+
+  </p>
+
+  <!-- =================================================
+  BEGIN: Example
+  ================================================== -->
+
+  <div class="panel flush-bottom">
+
+    <div class="panel-cell">
+
+      <div class="message message-dismissible">
+
+        <a class="message-dismissible-indicator" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+
+        <strong>Message:</strong> Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+      </div>
+
+      <div class="message message-success message-dismissible flush-bottom">
+
+        <a class="message-dismissible-indicator" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+
+        <strong>Message:</strong> Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+      </div>
+
+    </div>
+
+    <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+<pre class="prettyprint transparent flush lang-html">
+&lt;div class="message message-dismissible"&gt;
+  &lt;a class="message-dismissible-indicator" data-dismiss="alert" aria-label="Close"&gt;
+    &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;strong&gt;Message:&lt;/strong&gt; This is a relevant message you should read.
+&lt;/div&gt;
+</pre>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =================================================
+END: Dismissible Messages
 ================================================== -->
 
 
