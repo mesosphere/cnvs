@@ -35,8 +35,17 @@
       }
     }
 
+    /* Message Type Style */
+
     .message-type-style {
       color: inherit;
+    }
+
+    ul.message-type-style {
+
+      &:before {
+        .property-variant(message, background-color, color, null, null);
+      }
     }
 
     /* Message Link */
@@ -69,6 +78,15 @@
           & when not (@message-inverse-color = null) {
             .custom-toggle-indicator-close(@message-inverse-color);
           }
+        }
+      }
+
+      /* Message Type Style */
+
+      ul.message-type-style {
+
+        &:before {
+          .property-variant(message-inverse, background-color, color, null, null);
         }
       }
 

@@ -17,6 +17,18 @@
       }
     }
 
+    /* Message Type Style */
+
+    ul.message-type-style {
+
+      li {
+
+        &:before {
+          .property-variant(message-success, background-color, color, null, null);
+        }
+      }
+    }
+
     /* Message Link */
 
     .message-link {
@@ -43,6 +55,18 @@
 
           & when not (@message-success-inverse-color = null) {
             .custom-toggle-indicator-close(@message-success-inverse-color);
+          }
+        }
+      }
+
+      /* Message Type Style */
+
+      ul.message-type-style {
+
+        li {
+          
+          &:before {
+            .property-variant(message-success-inverse, background-color, color, null, null);
           }
         }
       }
