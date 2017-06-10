@@ -1,0 +1,208 @@
+& when (@message-enabled) {
+  /* Message */
+
+  .message {
+    .element-shape-style(message);
+    .element-spacing(message, null, null);
+    .element-text-style(message);
+    .property-variant(message, border-radius, null, null);
+    display: block;
+    position: relative;
+
+    /* Dismissible Message (.message-dismissible) */
+
+    &.message-dismissible {
+
+      .message-dismissible-indicator {
+        .element-spacing(message-dismissible-indicator, null, null);
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 16px;
+        width: 16px;
+
+        & when (@message-color = null) {
+          .custom-toggle-indicator-close(@body-color);
+        }
+
+        & when not (@message-color = null) {
+          .custom-toggle-indicator-close(@message-color);
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    /* Message Type Style */
+
+    .message-type-style {
+      color: inherit;
+
+      li {
+
+        &:before {
+          .property-variant(message, background-color, color, null, null);
+        }
+      }
+    }
+
+    /* Message Link */
+
+    .message-link {
+      .element-text-style(message-link);
+
+      &:hover {
+        .element-text-style(message-link-hover);
+      }
+
+      &:active {
+        .element-text-style(message-link-active);
+      }
+    }
+
+    /* Message Inverse (.message-inverse) */
+
+    &.message-inverse {
+      .element-shape-style(message-inverse);
+      .element-text-style(message-inverse);
+
+      &.message-dismissible {
+
+        .message-dismissible-indicator {
+          & when (@message-inverse-color = null) {
+            .custom-toggle-indicator-close(@body-inverse-color);
+          }
+
+          & when not (@message-inverse-color = null) {
+            .custom-toggle-indicator-close(@message-inverse-color);
+          }
+        }
+      }
+
+      /* Message Type Style */
+
+      .message-type-style {
+
+        li {
+
+          &:before {
+
+            .property-variant(message-inverse, background-color, color, null, null);
+          }
+        }
+      }
+
+      /* Message Link */
+
+      .message-link {
+        .element-text-style(message-inverse-link);
+
+        &:hover {
+          .element-text-style(message-inverse-link-hover);
+        }
+
+        &:active {
+          .element-text-style(message-inverse-link-active);
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@message-enabled) and (@message-screen-small-enabled) {
+      /* Message */
+
+      .message {
+        .element-spacing(message, null, screen-small);
+        .property-variant(message, border-radius, null, screen-small);
+
+        /* Dismissible Message (.message-dismissible) */
+
+        &.message-dismissible {
+
+          .message-dismissible-indicator {
+            .element-spacing(message-dismissible-indicator, null, screen-small);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@message-enabled) and (@message-screen-medium-enabled) {
+      /* Message */
+
+      .message {
+        .element-spacing(message, null, screen-medium);
+        .property-variant(message, border-radius, null, screen-medium);
+
+        /* Dismissible Message (.message-dismissible) */
+
+        &.message-dismissible {
+
+          .message-dismissible-indicator {
+            .element-spacing(message-dismissible-indicator, null, screen-medium);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@message-enabled) and (@message-screen-large-enabled) {
+      /* Message */
+
+      .message {
+        .element-spacing(message, null, screen-large);
+        .property-variant(message, border-radius, null, screen-large);
+
+        /* Dismissible Message (.message-dismissible) */
+
+        &.message-dismissible {
+
+          .message-dismissible-indicator {
+            .element-spacing(message-dismissible-indicator, null, screen-large);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@message-enabled) and (@message-screen-jumbo-enabled) {
+      /* Message */
+
+      .message {
+        .element-spacing(message, null, screen-jumbo);
+        .property-variant(message, border-radius, null, screen-jumbo);
+
+        /* Dismissible Message (.message-dismissible) */
+
+        &.message-dismissible {
+
+          .message-dismissible-indicator {
+            .element-spacing(message-dismissible-indicator, null, screen-jumbo);
+          }
+        }
+      }
+    }
+  }
+}

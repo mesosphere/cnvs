@@ -1,0 +1,90 @@
+& when (@message-information-enabled) {
+  /* Message */
+
+  .message-information {
+    .element-shape-style(message-information);
+    .element-text-style(message-information);
+
+    /* Dismissible Message (.message-dismissible) */
+
+    &.message-dismissible {
+
+      .message-dismissible-indicator {
+
+        & when not (@message-information-color = null) {
+          .custom-toggle-indicator-close(@message-information-color);
+        }
+      }
+    }
+
+    /* Message Type Style */
+
+    .message-type-style {
+
+      li {
+
+        &:before {
+          .property-variant(message-information, background-color, color, null, null);
+        }
+      }
+    }
+
+    /* Message Link */
+
+    .message-link {
+      .element-text-style(message-information-link);
+
+      &:hover {
+        .element-text-style(message-information-link-hover);
+      }
+
+      &:active {
+        .element-text-style(message-information-link-active);
+      }
+    }
+
+    /* Message Inverse (.message-inverse) */
+
+    &.message-inverse {
+      .element-shape-style(message-information-inverse);
+      .element-text-style(message-information-inverse);
+
+      &.message-dismissible {
+
+        .message-dismissible-indicator {
+
+          & when not (@message-information-inverse-color = null) {
+            .custom-toggle-indicator-close(@message-information-inverse-color);
+          }
+        }
+      }
+
+      /* Message Type Style */
+
+      .message-type-style {
+
+        li {
+
+          &:before {
+
+            .property-variant(message-information-inverse, background-color, color, null, null);
+          }
+        }
+      }
+
+      /* Message Link */
+
+      .message-link {
+        .element-text-style(message-information-inverse-link);
+
+        &:hover {
+          .element-text-style(message-information-inverse-link-hover);
+        }
+
+        &:active {
+          .element-text-style(message-information-inverse-link-active);
+        }
+      }
+    }
+  }
+}

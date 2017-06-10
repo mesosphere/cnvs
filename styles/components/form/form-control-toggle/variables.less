@@ -269,12 +269,12 @@
 
 // Normal
 
-@toggle-custom-background-color: color-lighten(@neutral, 90);
+@toggle-custom-background-color: @white;
 @toggle-custom-background-gradient-color-top: null;
 @toggle-custom-background-gradient-color-bottom: null;
-@toggle-custom-border-width: null;
-@toggle-custom-border-color: null;
-@toggle-custom-border-style: null;
+@toggle-custom-border-width: 1px;
+@toggle-custom-border-color: color-lighten(@neutral, 80);
+@toggle-custom-border-style: solid;
 @toggle-custom-border-top-width: null;
 @toggle-custom-border-top-color: null;
 @toggle-custom-border-top-style: null;
@@ -313,12 +313,12 @@
 
 // Active
 
-@toggle-custom-active-background-color: color-lighten(@neutral, 80);
+@toggle-custom-active-background-color: @purple;
 @toggle-custom-active-background-gradient-color-top: null;
 @toggle-custom-active-background-gradient-color-bottom: null;
-@toggle-custom-active-border-width: null;
-@toggle-custom-active-border-color: null;
-@toggle-custom-active-border-style: null;
+@toggle-custom-active-border-width: @toggle-custom-border-width;
+@toggle-custom-active-border-color: @purple;
+@toggle-custom-active-border-style: @toggle-custom-border-style;
 @toggle-custom-active-border-top-width: null;
 @toggle-custom-active-border-top-color: null;
 @toggle-custom-active-border-top-style: null;
@@ -336,12 +336,12 @@
 // Disabled
 
 @toggle-custom-disabled-opacity: 0.5;
-@toggle-custom-disabled-background-color: null;
+@toggle-custom-disabled-background-color: @form-control-disabled-background-color;
 @toggle-custom-disabled-background-gradient-color-top: null;
 @toggle-custom-disabled-background-gradient-color-bottom: null;
-@toggle-custom-disabled-border-width: null;
-@toggle-custom-disabled-border-color: null;
-@toggle-custom-disabled-border-style: null;
+@toggle-custom-disabled-border-width: @toggle-custom-border-width;
+@toggle-custom-disabled-border-color: @form-control-disabled-border-color;
+@toggle-custom-disabled-border-style: @toggle-custom-border-style;
 @toggle-custom-disabled-border-top-width: null;
 @toggle-custom-disabled-border-top-color: null;
 @toggle-custom-disabled-border-top-style: null;
@@ -364,9 +364,9 @@
 @toggle-custom-selected-background-color: color-lighten(@purple, 0);
 @toggle-custom-selected-background-gradient-color-top: null;
 @toggle-custom-selected-background-gradient-color-bottom: null;
-@toggle-custom-selected-border-width: null;
-@toggle-custom-selected-border-color: null;
-@toggle-custom-selected-border-style: null;
+@toggle-custom-selected-border-width: @toggle-custom-border-width;
+@toggle-custom-selected-border-color: @purple;
+@toggle-custom-selected-border-style: @toggle-custom-border-style;
 @toggle-custom-selected-border-top-width: null;
 @toggle-custom-selected-border-top-color: null;
 @toggle-custom-selected-border-top-style: null;
@@ -410,9 +410,9 @@
 @toggle-custom-selected-active-background-color: color-lighten(@purple, -25);
 @toggle-custom-selected-active-background-gradient-color-top: null;
 @toggle-custom-selected-active-background-gradient-color-bottom: null;
-@toggle-custom-selected-active-border-width: null;
-@toggle-custom-selected-active-border-color: null;
-@toggle-custom-selected-active-border-style: null;
+@toggle-custom-selected-active-border-width: @toggle-custom-border-width;
+@toggle-custom-selected-active-border-color: @toggle-custom-selected-active-background-color;
+@toggle-custom-selected-active-border-style: @toggle-custom-border-style;
 @toggle-custom-selected-active-border-top-width: null;
 @toggle-custom-selected-active-border-top-color: null;
 @toggle-custom-selected-active-border-top-style: null;
@@ -431,7 +431,7 @@
 
 @toggle-custom-selected-disabled-opacity: 0.5;
 @toggle-custom-selected-disabled-color: null;
-@toggle-custom-selected-disabled-background-color: null;
+@toggle-custom-selected-disabled-background-color: @purple;
 @toggle-custom-selected-disabled-background-gradient-color-top: null;
 @toggle-custom-selected-disabled-background-gradient-color-bottom: null;
 @toggle-custom-selected-disabled-border-width: null;
@@ -456,12 +456,12 @@
 // Normal
 
 @toggle-custom-inverse-color: null;
-@toggle-custom-inverse-background-color: color-lighten(@neutral, 10);
+@toggle-custom-inverse-background-color: transparent;
 @toggle-custom-inverse-background-gradient-color-top: null;
 @toggle-custom-inverse-background-gradient-color-bottom: null;
-@toggle-custom-inverse-border-width: null;
-@toggle-custom-inverse-border-color: null;
-@toggle-custom-inverse-border-style: null;
+@toggle-custom-inverse-border-width: @toggle-custom-border-width;
+@toggle-custom-inverse-border-color: color-lighten(@neutral, 10);
+@toggle-custom-inverse-border-style: @toggle-custom-border-style;
 @toggle-custom-inverse-border-top-width: null;
 @toggle-custom-inverse-border-top-color: null;
 @toggle-custom-inverse-border-top-style: null;
@@ -502,12 +502,12 @@
 // Active
 
 @toggle-custom-inverse-active-color: null;
-@toggle-custom-inverse-active-background-color: color-lighten(@neutral, 20);
+@toggle-custom-inverse-active-background-color: @purple;
 @toggle-custom-inverse-active-background-gradient-color-top: null;
 @toggle-custom-inverse-active-background-gradient-color-bottom: null;
-@toggle-custom-inverse-active-border-width: null;
-@toggle-custom-inverse-active-border-color: null;
-@toggle-custom-inverse-active-border-style: null;
+@toggle-custom-inverse-active-border-width: @toggle-custom-border-width;
+@toggle-custom-inverse-active-border-color: @toggle-custom-inverse-active-background-color;
+@toggle-custom-inverse-active-border-style: @toggle-custom-border-style;
 @toggle-custom-inverse-active-border-top-width: null;
 @toggle-custom-inverse-active-border-top-color: null;
 @toggle-custom-inverse-active-border-top-style: null;
