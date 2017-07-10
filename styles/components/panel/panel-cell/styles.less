@@ -17,12 +17,6 @@
       border: none;
     }
 
-    /* Panel Cell Inverse (.panel-cell-inverse) */
-
-    &.panel-cell-inverse {
-      .element-shape-style(panel-cell-inverse);
-    }
-
     /* Panel Cell Layout Variants */
 
     &-shorter {
@@ -90,6 +84,13 @@
     &.flush-right {
       padding-right: 0;
     }
+  }
+  
+  /* Panel Cell Inverse (.panel-cell-inverse) */
+
+  .panel-cell-inverse,
+  .panel.panel-inverse .panel-cell {
+    .element-shape-style(panel-cell-inverse);
   }
 }
 
