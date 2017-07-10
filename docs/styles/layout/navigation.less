@@ -14,6 +14,7 @@
       .element-text-size(sidebar-menu-item, null);
       .element-text-style(sidebar-menu-item);
       display: block;
+      -webkit-font-smoothing: antialiased;
 
       &:first-child {
         margin-top: 0;
@@ -310,7 +311,7 @@
 
 // Default
 
-@sidebar-menu-item-color: color-lighten(@grey-dark, 80);
+@sidebar-menu-item-color: @white;
 @sidebar-menu-item-font-family: null;
 @sidebar-menu-item-font-style: null;
 @sidebar-menu-item-font-weight: 600;
@@ -318,7 +319,7 @@
 @sidebar-menu-item-text-shadow: null;
 @sidebar-menu-item-text-decoration: null;
 @sidebar-menu-item-text-rendering: null;
-@sidebar-menu-item-background-color: color-lighten(@grey-dark, -50);
+@sidebar-menu-item-background-color: color-lighten(@grey-dark, 0);
 @sidebar-menu-item-background-gradient-color-top: null;
 @sidebar-menu-item-background-gradient-color-bottom: null;
 @sidebar-menu-item-border-width: null;
@@ -348,7 +349,7 @@
 @sidebar-menu-item-selected-text-shadow: null;
 @sidebar-menu-item-selected-text-decoration: null;
 @sidebar-menu-item-selected-text-rendering: null;
-@sidebar-menu-item-selected-background-color: color-lighten(@grey-dark, 0);
+@sidebar-menu-item-selected-background-color: color-lighten(@grey-dark, 5);
 @sidebar-menu-item-selected-background-gradient-color-top: null;
 @sidebar-menu-item-selected-background-gradient-color-bottom: null;
 @sidebar-menu-item-selected-border-width: null;
@@ -378,7 +379,7 @@
 @sidebar-menu-item-open-text-shadow: null;
 @sidebar-menu-item-open-text-decoration: null;
 @sidebar-menu-item-open-text-rendering: null;
-@sidebar-menu-item-open-background-color: color-lighten(@grey-dark, -20);
+@sidebar-menu-item-open-background-color: color-lighten(@grey-dark, 5);
 @sidebar-menu-item-open-background-gradient-color-top: null;
 @sidebar-menu-item-open-background-gradient-color-bottom: null;
 @sidebar-menu-item-open-border-width: null;
@@ -455,8 +456,8 @@
 @sidebar-menu-item-padding-top: 12px;
 @sidebar-menu-item-padding-top-screen-small: 12px;
 @sidebar-menu-item-padding-top-screen-medium: 12px;
-@sidebar-menu-item-padding-top-screen-large: 14px;
-@sidebar-menu-item-padding-top-screen-jumbo: 14px;
+@sidebar-menu-item-padding-top-screen-large: 12px;
+@sidebar-menu-item-padding-top-screen-jumbo: 12px;
 
 // Padding Bottom
 
@@ -490,7 +491,7 @@
 
 // Default
 
-@sidebar-menu-item-link-color: color-lighten(@grey-dark, 80);
+@sidebar-menu-item-link-color: @white;
 @sidebar-menu-item-link-font-family: null;
 @sidebar-menu-item-link-font-style: null;
 @sidebar-menu-item-link-font-weight: null;
@@ -498,7 +499,7 @@
 @sidebar-menu-item-link-text-shadow: null;
 @sidebar-menu-item-link-text-decoration: null;
 @sidebar-menu-item-link-text-rendering: null;
-@sidebar-menu-item-link-background-color: color-lighten(@grey-dark, -50);
+@sidebar-menu-item-link-background-color: color-lighten(@grey-dark, 0);
 @sidebar-menu-item-link-background-gradient-color-top: null;
 @sidebar-menu-item-link-background-gradient-color-bottom: null;
 @sidebar-menu-item-link-border-width: null;
@@ -520,7 +521,7 @@
 
 // Hover
 
-@sidebar-menu-item-link-hover-color: @white;
+@sidebar-menu-item-link-hover-color: null;
 @sidebar-menu-item-link-hover-font-family: null;
 @sidebar-menu-item-link-hover-font-style: null;
 @sidebar-menu-item-link-hover-font-weight: null;
@@ -528,7 +529,7 @@
 @sidebar-menu-item-link-hover-text-shadow: null;
 @sidebar-menu-item-link-hover-text-decoration: null;
 @sidebar-menu-item-link-hover-text-rendering: null;
-@sidebar-menu-item-link-hover-background-color: color-lighten(@grey-dark, -40);
+@sidebar-menu-item-link-hover-background-color: color-lighten(@grey-dark, 2);
 @sidebar-menu-item-link-hover-background-gradient-color-top: null;
 @sidebar-menu-item-link-hover-background-gradient-color-bottom: null;
 @sidebar-menu-item-link-hover-border-width: null;
@@ -550,7 +551,7 @@
 
 // Active
 
-@sidebar-menu-item-link-active-color: color-lighten(@grey-dark, 70);
+@sidebar-menu-item-link-active-color: color-lighten(@grey-light, 80);
 @sidebar-menu-item-link-active-font-family: null;
 @sidebar-menu-item-link-active-font-style: null;
 @sidebar-menu-item-link-active-font-weight: null;
@@ -558,7 +559,7 @@
 @sidebar-menu-item-link-active-text-shadow: null;
 @sidebar-menu-item-link-active-text-decoration: null;
 @sidebar-menu-item-link-active-text-rendering: null;
-@sidebar-menu-item-link-active-background-color: color-lighten(@grey-dark, -45);
+@sidebar-menu-item-link-active-background-color: color-lighten(@grey-dark, 5);
 @sidebar-menu-item-link-active-background-gradient-color-top: null;
 @sidebar-menu-item-link-active-background-gradient-color-bottom: null;
 @sidebar-menu-item-link-active-border-width: null;
@@ -588,7 +589,7 @@
 @sidebar-menu-item-link-selected-text-shadow: null;
 @sidebar-menu-item-link-selected-text-decoration: null;
 @sidebar-menu-item-link-selected-text-rendering: null;
-@sidebar-menu-item-link-selected-background-color: @purple;//color-lighten(@grey-dark, 0);
+@sidebar-menu-item-link-selected-background-color: @purple;
 @sidebar-menu-item-link-selected-background-gradient-color-top: null;
 @sidebar-menu-item-link-selected-background-gradient-color-bottom: null;
 @sidebar-menu-item-link-selected-border-width: null;
@@ -774,10 +775,10 @@
 
 // Default
 
-@sidebar-submenu-item-color: color-lighten(@grey-dark, 60);
+@sidebar-submenu-item-color: color-lighten(@grey-light, 75);
 @sidebar-submenu-item-font-family: null;
 @sidebar-submenu-item-font-style: null;
-@sidebar-submenu-item-font-weight: 500;
+@sidebar-submenu-item-font-weight: 400;
 @sidebar-submenu-item-text-transform: none;
 @sidebar-submenu-item-text-shadow: null;
 @sidebar-submenu-item-text-decoration: null;
@@ -916,19 +917,19 @@
 
 // Padding Top
 
-@sidebar-submenu-item-padding-top: @sidebar-menu-item-padding-top * 0.6;
-@sidebar-submenu-item-padding-top-screen-small: @sidebar-menu-item-padding-top-screen-small * 0.6;
-@sidebar-submenu-item-padding-top-screen-medium: @sidebar-menu-item-padding-top-screen-medium * 0.6;
-@sidebar-submenu-item-padding-top-screen-large: @sidebar-menu-item-padding-top-screen-large * 0.6;
-@sidebar-submenu-item-padding-top-screen-jumbo: @sidebar-menu-item-padding-top-screen-jumbo * 0.6;
+@sidebar-submenu-item-padding-top: 6px;
+@sidebar-submenu-item-padding-top-screen-small: 6px;
+@sidebar-submenu-item-padding-top-screen-medium: 6px;
+@sidebar-submenu-item-padding-top-screen-large: 6px;
+@sidebar-submenu-item-padding-top-screen-jumbo: 6px;
 
 // Padding Bottom
 
-@sidebar-submenu-item-padding-bottom: @sidebar-menu-item-padding-bottom * 0.6;
-@sidebar-submenu-item-padding-bottom-screen-small: @sidebar-menu-item-padding-bottom-screen-small * 0.6;
-@sidebar-submenu-item-padding-bottom-screen-medium: @sidebar-menu-item-padding-bottom-screen-medium * 0.6;
-@sidebar-submenu-item-padding-bottom-screen-large: @sidebar-menu-item-padding-bottom-screen-large * 0.6;
-@sidebar-submenu-item-padding-bottom-screen-jumbo: @sidebar-menu-item-padding-bottom-screen-jumbo * 0.6;
+@sidebar-submenu-item-padding-bottom: 6px;
+@sidebar-submenu-item-padding-bottom-screen-small: 6px;
+@sidebar-submenu-item-padding-bottom-screen-medium: 6px;
+@sidebar-submenu-item-padding-bottom-screen-large: 6px;
+@sidebar-submenu-item-padding-bottom-screen-jumbo: 6px;
 
 // Padding Left
 
@@ -954,7 +955,7 @@
 
 // Default
 
-@sidebar-submenu-item-link-color: color-lighten(@grey-dark, 60);
+@sidebar-submenu-item-link-color: color-lighten(@grey-light, 75);
 @sidebar-submenu-item-link-font-family: null;
 @sidebar-submenu-item-link-font-style: null;
 @sidebar-submenu-item-link-font-weight: null;
@@ -984,7 +985,7 @@
 
 // Hover
 
-@sidebar-submenu-item-link-hover-color: color-lighten(@grey-dark, 80);
+@sidebar-submenu-item-link-hover-color: @white;
 @sidebar-submenu-item-link-hover-font-family: null;
 @sidebar-submenu-item-link-hover-font-style: null;
 @sidebar-submenu-item-link-hover-font-weight: null;
@@ -992,7 +993,7 @@
 @sidebar-submenu-item-link-hover-text-shadow: null;
 @sidebar-submenu-item-link-hover-text-decoration: null;
 @sidebar-submenu-item-link-hover-text-rendering: null;
-@sidebar-submenu-item-link-hover-background-color: color-lighten(@grey-dark, -10);
+@sidebar-submenu-item-link-hover-background-color: color-lighten(@grey-dark, -20);
 @sidebar-submenu-item-link-hover-background-gradient-color-top: null;
 @sidebar-submenu-item-link-hover-background-gradient-color-bottom: null;
 @sidebar-submenu-item-link-hover-border-width: null;
@@ -1014,7 +1015,7 @@
 
 // Active
 
-@sidebar-submenu-item-link-active-color: color-lighten(@grey-dark, 60);
+@sidebar-submenu-item-link-active-color: color-lighten(@grey-light, 75);
 @sidebar-submenu-item-link-active-font-family: null;
 @sidebar-submenu-item-link-active-font-style: null;
 @sidebar-submenu-item-link-active-font-weight: null;
@@ -1052,7 +1053,7 @@
 @sidebar-submenu-item-link-selected-text-shadow: null;
 @sidebar-submenu-item-link-selected-text-decoration: null;
 @sidebar-submenu-item-link-selected-text-rendering: null;
-@sidebar-submenu-item-link-selected-background-color: @purple;//color-lighten(@grey-dark, 0);
+@sidebar-submenu-item-link-selected-background-color: @purple;
 @sidebar-submenu-item-link-selected-background-gradient-color-top: null;
 @sidebar-submenu-item-link-selected-background-gradient-color-bottom: null;
 @sidebar-submenu-item-link-selected-border-width: null;
