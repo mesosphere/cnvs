@@ -252,21 +252,28 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
 
 .row(@screen-size) {
 
-  .row {
+  .row(@screen-size, null);
+}
 
+.row(@screen-size, @variant) {
+
+  @row-class: replace(e('.row-@{variant}'), '-null', '');
+
+  @{row-class} {
     @screen: replace(replace(@screen-size, 'screen-', '-screen-'), 'null', '');
-
-    @gutter-width: 'grid-gutter-width@{screen}';
-    @gutter-height: 'grid-gutter-height@{screen}';
+    @gutter-width: replace(e('grid-@{variant}-gutter-width@{screen}'), '-null', '');
 
     & when not (@@gutter-width = null) {
       margin-left: @@gutter-width * -0.5;
       margin-right: @@gutter-width * -0.5;
     }
 
-    & when not (@@gutter-height = null) {
-      //margin-top: @@gutter-height * -0.5;
-      //margin-bottom: @@gutter-height * -0.5;
+    & when not (@variant = null) {
+
+      & > [class*='column-'] {
+        padding-left: @@gutter-width * 0.5;
+        padding-right: @@gutter-width * 0.5;
+      }
     }
 
     &:extend(.clearfix all);
@@ -275,8 +282,8 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
 
 /* Grid */
 
-.grid (@screen-size, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) {
-  .calculate-grid-columns-padding(@screen-size, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
+.grid (@screen-size, @grid-columns-count, @grid-gutter-width) {
+  .calculate-grid-columns-padding(@screen-size, @grid-gutter-width);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, width);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, push);
   .calculate-grid-columns(@screen-size, @grid-columns-count, @grid-columns-count, pull);
@@ -285,45 +292,25 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
 
 /* Column Padding */
 
-.calculate-grid-columns-padding(@screen-size, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) {
+.calculate-grid-columns-padding(@screen-size, @grid-gutter-width) {
 
-  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height) when (@index = 1) {
+  & when (@screen-size = null) and not (@grid-gutter-width = null) {
 
-    @item: ~'.column-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}, .column-jumbo-@{index}';
-
-    .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @item);
-  }
-
-  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index =< @grid-columns-count) {
-
-    @item: ~'.column-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}, .column-jumbo-@{index}';
-
-    .column(@screen-size, (@index + 1), @grid-columns-count, @grid-gutter-width, @grid-gutter-height, ~'@{list}, @{item}');
-  }
-
-  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index > @grid-columns-count) and (@screen-size = null) {
-
-    @{list} {
+    [class*='column-'] {
       min-height: 1px;
-      padding-left: (@grid-gutter-width / 2);
-      padding-right: (@grid-gutter-width / 2);
+      padding-left: @grid-gutter-width * 0.5;
+      padding-right: @grid-gutter-width * 0.5;
       position: relative;
-      //margin-top: (@grid-gutter-width / 2);
-      //margin-bottom: (@grid-gutter-width / 2);
     }
   }
 
-  .column(@screen-size, @index, @grid-columns-count, @grid-gutter-width, @grid-gutter-height, @list) when (@index > @grid-columns-count) {
+  & when not (@screen-size = null) and not (@grid-gutter-width = null) {
 
-    @{list} {
-      padding-left: (@grid-gutter-width / 2);
-      padding-right: (@grid-gutter-width / 2);
-      //margin-top: (@grid-gutter-width / 2);
-      //margin-bottom: (@grid-gutter-width / 2);
+    [class*='column-'] {
+      padding-left: @grid-gutter-width * 0.5;
+      padding-right: @grid-gutter-width * 0.5;
     }
   }
-
-  .column(@screen-size, 1, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
 }
 
 /* Calculate Grid Columns */

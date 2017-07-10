@@ -1,11 +1,13 @@
 & when (@grid-enabled) {
   /* Grid */
 
-  .grid(null, @grid-columns-count, @grid-gutter-width, @grid-gutter-height);
+  .grid(null, @grid-columns-count, @grid-gutter-width);
 
   /* Row */
 
   .row(null);
+  .row(null, 'narrow');
+  .row(null, 'wide');
 }
 
 & when (@layout-screen-small-enabled) {
@@ -15,11 +17,13 @@
     & when not (@grid-enabled = null) and not (@grid-screen-small-enabled = null) {
       /* Grid */
 
-      .grid(screen-small, @grid-columns-count, @grid-gutter-width-screen-small, @grid-gutter-height-screen-small);
+      .grid(screen-small, @grid-columns-count, @grid-gutter-width-screen-small);
 
       /* Row */
 
       .row(screen-small);
+      .row(screen-small, 'narrow');
+      .row(screen-small, 'wide');
 
       /* Column Overflow */
 
@@ -40,11 +44,13 @@
     & when not (@grid-enabled = null) and not (@grid-screen-medium-enabled = null) {
       /* Grid */
 
-      .grid(screen-medium, @grid-columns-count, @grid-gutter-width-screen-medium, @grid-gutter-height-screen-medium);
+      .grid(screen-medium, @grid-columns-count, @grid-gutter-width-screen-medium);
 
       /* Row */
 
       .row(screen-medium);
+      .row(screen-medium, 'narrow');
+      .row(screen-medium, 'wide');
 
       /* Column Overflow */
 
@@ -65,11 +71,13 @@
     & when not (@grid-enabled = null) and not (@grid-screen-large-enabled = null) {
       /* Grid */
 
-      .grid(screen-large, @grid-columns-count, @grid-gutter-width-screen-large, @grid-gutter-height-screen-large);
+      .grid(screen-large, @grid-columns-count, @grid-gutter-width-screen-large);
 
       /* Row */
 
       .row(screen-large);
+      .row(screen-large, 'narrow');
+      .row(screen-large, 'wide');
 
       /* Column Overflow */
 
@@ -90,11 +98,13 @@
     & when not (@grid-enabled = null) and not (@grid-screen-jumbo-enabled = null) {
       /* Grid */
 
-      .grid(screen-jumbo, @grid-columns-count, @grid-gutter-width-screen-jumbo, @grid-gutter-height-screen-jumbo);
+      .grid(screen-jumbo, @grid-columns-count, @grid-gutter-width-screen-jumbo);
 
       /* Row */
 
       .row(screen-jumbo);
+      .row(screen-jumbo, 'narrow');
+      .row(screen-jumbo, 'wide');
 
       /* Column Overflow */
 
