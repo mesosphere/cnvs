@@ -1,7 +1,7 @@
 & when (@toggle-enabled) {
   /* Toggle */
 
-  .form-control-toggle {
+  .form-control-toggle, label.form-control-toggle, label:not(.button).form-control-toggle {
     .clearfix();
     .element-spacing(toggle, null,  null);
     .element-text-size(toggle, null);
@@ -22,6 +22,7 @@
     input[type='checkbox'],
     input[type='radio'] {
       .property-variant(toggle, height, null);
+      .property-variant(toggle, top, offset-vertical, null, null);
       .property-variant(toggle, width, null);
       left: 0;
       position: absolute;
@@ -100,6 +101,7 @@
           .element-shape-style(toggle-custom);
           .property-variant(toggle-custom, border-radius, null);
           .property-variant(toggle-custom, height, null);
+          .property-variant(toggle-custom, top, offset-vertical, null, null);
           .property-variant(toggle-custom, width, null);
           display: block;
           left: 0;
@@ -461,7 +463,7 @@
 
     & when (@toggle-enabled) and (@toggle-screen-small-enabled) {
 
-      .form-control-toggle {
+      .form-control-toggle, label.form-control-toggle, label:not(.button).form-control-toggle {
         .element-spacing(toggle, null, screen-small);
         .element-text-size(toggle, screen-small);
 
@@ -473,6 +475,11 @@
 
         &.tall {
           .element-spacing(toggle, tall, screen-small);
+        }
+
+        input[type='checkbox'],
+        input[type='radio'] {
+          .property-variant(toggle, top, offset-vertical, null, screen-small);
         }
 
         /* Inline */
@@ -488,9 +495,10 @@
             .property-variant(toggle-custom, min-height, height, null, screen-small);
 
             .form-control-toggle-indicator {
-              .property-variant(toggle-custom, width, screen-small);
-              .property-variant(toggle-custom, height, screen-small);
               .property-variant(toggle-custom, border-radius, screen-small);
+              .property-variant(toggle-custom, height, screen-small);
+              .property-variant(toggle-custom, top, offset-vertical, null, screen-small);
+              .property-variant(toggle-custom, width, screen-small);
             }
           }
         }
@@ -505,7 +513,7 @@
 
     & when (@toggle-enabled) and (@toggle-screen-medium-enabled) {
 
-      .form-control-toggle {
+      .form-control-toggle, label.form-control-toggle, label:not(.button).form-control-toggle {
         .element-spacing(toggle, null, screen-medium);
         .element-text-size(toggle, screen-medium);
 
@@ -517,6 +525,11 @@
 
         &.tall {
           .element-spacing(toggle, tall, screen-medium);
+        }
+
+        input[type='checkbox'],
+        input[type='radio'] {
+          .property-variant(toggle, top, offset-vertical, null, screen-medium);
         }
 
         /* Inline */
@@ -532,9 +545,10 @@
             .property-variant(toggle-custom, min-height, height, null, screen-medium);
 
             .form-control-toggle-indicator {
-              .property-variant(toggle-custom, width, screen-medium);
-              .property-variant(toggle-custom, height, screen-medium);
               .property-variant(toggle-custom, border-radius, screen-medium);
+              .property-variant(toggle-custom, height, screen-medium);
+              .property-variant(toggle-custom, top, offset-vertical, null, screen-medium);
+              .property-variant(toggle-custom, width, screen-medium);
             }
           }
         }
@@ -549,7 +563,7 @@
 
     & when (@toggle-enabled) and (@toggle-screen-large-enabled) {
 
-      .form-control-toggle {
+      .form-control-toggle, label.form-control-toggle, label:not(.button).form-control-toggle {
         .element-spacing(toggle, null, screen-large);
         .element-text-size(toggle, screen-large);
 
@@ -561,6 +575,11 @@
 
         &.tall {
           .element-spacing(toggle, tall, screen-large);
+        }
+
+        input[type='checkbox'],
+        input[type='radio'] {
+          .property-variant(toggle, top, offset-vertical, null, screen-large);
         }
 
         /* Inline */
@@ -576,9 +595,10 @@
             .property-variant(toggle-custom, min-height, height, null, screen-large);
 
             .form-control-toggle-indicator {
-              .property-variant(toggle-custom, width, screen-large);
-              .property-variant(toggle-custom, height, screen-large);
               .property-variant(toggle-custom, border-radius, screen-large);
+              .property-variant(toggle-custom, height, screen-large);
+              .property-variant(toggle-custom, top, offset-vertical, null, screen-large);
+              .property-variant(toggle-custom, width, screen-large);
             }
           }
         }
@@ -593,7 +613,7 @@
 
     & when (@toggle-enabled) and (@toggle-screen-jumbo-enabled) {
 
-      .form-control-toggle {
+      .form-control-toggle, label.form-control-toggle, label:not(.button).form-control-toggle {
         .element-spacing(toggle, null, screen-jumbo);
         .element-text-size(toggle, screen-jumbo);
 
@@ -605,6 +625,11 @@
 
         &.tall {
           .element-spacing(toggle, tall, screen-jumbo);
+        }
+
+        input[type='checkbox'],
+        input[type='radio'] {
+          .property-variant(toggle, top, offset-vertical, null, screen-jumbo);
         }
 
         /* Inline */
@@ -620,9 +645,10 @@
             .property-variant(toggle-custom, min-height, height, null, screen-jumbo);
 
             .form-control-toggle-indicator {
-              .property-variant(toggle-custom, width, screen-jumbo);
-              .property-variant(toggle-custom, height, screen-jumbo);
               .property-variant(toggle-custom, border-radius, screen-jumbo);
+              .property-variant(toggle-custom, height, screen-jumbo);
+              .property-variant(toggle-custom, top, offset-vertical, null, screen-jumbo);
+              .property-variant(toggle-custom, width, screen-jumbo);
             }
           }
         }
