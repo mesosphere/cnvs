@@ -1,0 +1,210 @@
+& when (@dropdown-menu-list-item-enabled) {
+  /* Dropdown Menu List (.dropdown-menu-list) */
+
+  .dropdown-menu-list {
+    /* Dropdown Menu List Item */
+
+    li {
+      .element-shape-style(dropdown-menu-list-item);
+      .element-spacing(dropdown-menu-list-item, null, null);
+      .element-text-size(dropdown-menu-list-item, null);
+      .element-text-style(dropdown-menu-list-item);
+      .property-variant(dropdown-menu-list-item, border-radius, null);
+
+      &:before {
+        display: none;
+      }
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-link);
+        .element-spacing(dropdown-menu-list-item-link, null, null);
+        .element-text-size(dropdown-menu-list-item-link, null);
+        .element-text-style(dropdown-menu-list-item-link);
+        display: block;
+      }
+
+      &:hover {
+
+        a {
+          .element-shape-style(dropdown-menu-list-item-link-hover);
+          .element-text-style(dropdown-menu-list-item-link-hover);
+        }
+      }
+
+      &:active,
+      &.active {
+
+        a {
+          .element-shape-style(dropdown-menu-list-item-link-active);
+          .element-text-style(dropdown-menu-list-item-link-active);
+        }
+      }
+
+      &.selected {
+
+        a {
+          .element-text-style(dropdown-menu-list-item-link-selected);
+          .element-shape-style(dropdown-menu-list-item-link-selected);
+        }
+      }
+
+      &:disabled,
+      &.disabled {
+
+        a {
+          .element-shape-style(dropdown-menu-list-item-link-disabled);
+          .element-text-style(dropdown-menu-list-item-link-disabled);
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  /* Dropdown Menu List Inverse (.dropdown-menu-list-inverse) */
+
+  .dropdown-menu-list-inverse li,
+  .dropdown-menu-inverse .dropdown-menu-list li,
+  .dropdown-menu-list li.inverse {
+    .element-shape-style(dropdown-menu-list-item-inverse);
+    .element-text-style(dropdown-menu-list-item-inverse);
+
+    a {
+      .element-shape-style(dropdown-menu-list-item-link-inverse);
+      .element-text-style(dropdown-menu-list-item-link-inverse);
+    }
+
+    &:hover {
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-link-inverse-hover);
+        .element-text-style(dropdown-menu-list-item-link-inverse-hover);
+      }
+    }
+
+    &:active,
+    &.active {
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-link-inverse-active);
+        .element-text-style(dropdown-menu-list-item-link-inverse-active);
+      }
+    }
+
+    &.selected {
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-link-inverse-selected);
+        .element-text-style(dropdown-menu-list-item-link-inverse-selected);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-link-inverse-disabled);
+        .element-text-style(dropdown-menu-list-item-link-inverse-disabled);
+      }
+    }
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    & when (@dropdown-menu-list-item-enabled) and (@dropdown-menu-list-item-screen-small-enabled) {
+      /* Dropdown Menu List (.dropdown-menu-list) */
+
+      .dropdown-menu-list {
+        /* Dropdown Menu List Item */
+
+        li {
+          .element-spacing(dropdown-menu-list-item, null, screen-small);
+          .element-text-size(dropdown-menu-list-item, screen-small);
+          .property-variant(dropdown-menu-list-item, border-radius, screen-small);
+
+          a {
+            .element-spacing(dropdown-menu-list-item-link, null, screen-small);
+            .element-text-size(dropdown-menu-list-item-link, screen-small);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    & when (@dropdown-menu-list-item-enabled) and (@dropdown-menu-list-item-screen-medium-enabled) {
+      /* Dropdown Menu List (.dropdown-menu-list) */
+
+      .dropdown-menu-list {
+        /* Dropdown Menu List Item */
+
+        li {
+          .element-spacing(dropdown-menu-list-item, null, screen-medium);
+          .element-text-size(dropdown-menu-list-item, screen-medium);
+          .property-variant(dropdown-menu-list-item, border-radius, screen-medium);
+
+          a {
+            .element-spacing(dropdown-menu-list-item-link, null, screen-medium);
+            .element-text-size(dropdown-menu-list-item-link, screen-medium);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    & when (@dropdown-menu-list-item-enabled) and (@dropdown-menu-list-item-screen-large-enabled) {
+      /* Dropdown Menu List (.dropdown-menu-list) */
+
+      .dropdown-menu-list {
+        /* Dropdown Menu List Item */
+
+        li {
+          .element-spacing(dropdown-menu-list-item, null, screen-large);
+          .element-text-size(dropdown-menu-list-item, screen-large);
+          .property-variant(dropdown-menu-list-item, border-radius, screen-large);
+
+          a {
+            .element-spacing(dropdown-menu-list-item-link, null, screen-large);
+            .element-text-size(dropdown-menu-list-item-link, screen-large);
+          }
+        }
+      }
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    & when (@dropdown-menu-list-item-enabled) and (@dropdown-menu-list-item-screen-jumbo-enabled) {
+      /* Dropdown Menu List (.dropdown-menu-list) */
+
+      .dropdown-menu-list {
+        /* Dropdown Menu List Item */
+
+        li {
+          .element-spacing(dropdown-menu-list-item, null, screen-jumbo);
+          .element-text-size(dropdown-menu-list-item, screen-jumbo);
+          .property-variant(dropdown-menu-list-item, border-radius, screen-jumbo);
+
+          a {
+            .element-spacing(dropdown-menu-list-item-link, null, screen-jumbo);
+            .element-text-size(dropdown-menu-list-item-link, screen-jumbo);
+          }
+        }
+      }
+    }
+  }
+}
