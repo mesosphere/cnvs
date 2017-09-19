@@ -4,17 +4,105 @@ BEGIN: Dropdown Menu List States
 
 <section id="dropdowns-menu-list-states">
 
-  <h3>
+  <h2>
 
     Dropdown Menu List States
 
-  </h3>
+  </h2>
 
   <p>
 
-    Add class <code>.danger</code> or <code>.disabled</code> to a <code>&lt;li&gt;</code> in the dropdown menu list to change the implied state of the link.
+    To signal selection or communicate caution in dropdown menu lists, consider taking advantage of the included dropdown menu list item states. Adding the relevant class to any <code>li</code> in a <code>.dropdown-menu-list</code> will adjust the style of the item to best reflect the intended state.
 
   </p>
+
+  <table class="table">
+
+    <thead>
+
+      <tr>
+
+        <th>
+
+          Class
+
+        </th>
+
+        <th>
+
+          Description
+
+        </th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr>
+
+        <td>
+
+          <code>
+
+            .selected
+
+          </code>
+
+        </td>
+
+        <td>
+
+          Indicate a selected state for a dropdown menu list item.
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>
+
+          <code>
+
+            .danger
+
+          </code>
+
+        </td>
+
+        <td>
+
+          Signal danger or caution for a dropdown menu list item.
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>
+
+          <code>
+
+            .disabled
+
+          </code>
+
+        </td>
+
+        <td>
+
+          Disable a dropdown menu list item.
+
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
 
   <!-- =================================================
   BEGIN: Example
@@ -36,23 +124,29 @@ BEGIN: Dropdown Menu List States
 
           <span class="dropdown-menu" role="menu">
 
+            <span class="dropdown-menu-header">
+
+              Make a selection
+
+            </span>
+
             <ul class="dropdown-menu-list">
 
               <li>
 
                 <a href="#">
 
-                  Action
+                  Option A
 
                 </a>
 
               </li>
 
-              <li class="disabled">
+              <li class="selected">
 
                 <a href="#">
 
-                  Another action
+                  Option B
 
                 </a>
 
@@ -62,7 +156,24 @@ BEGIN: Dropdown Menu List States
 
                 <a href="#">
 
-                  Something else here
+                  Option C
+
+                </a>
+
+              </li>
+
+            </ul>
+
+            <span class="dropdown-menu-divider">
+            </span>
+
+            <ul class="dropdown-menu-list">
+
+              <li class="disabled">
+
+                <a href="#">
+
+                  Disabled action
 
                 </a>
 
@@ -79,7 +190,7 @@ BEGIN: Dropdown Menu List States
 
                 <a href="#">
 
-                  Danger Link
+                  Danger action
 
                 </a>
 

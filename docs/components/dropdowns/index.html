@@ -8,16 +8,18 @@ page-header:
     label: "Components"
     url: "/components/"
 page-navigation:
-- label: "Alignment"
-  link: "#dropdowns-alignment"
-- label: "Headers"
+- label: "Dropdown Menu List"
+  link: "#dropdowns-menu-list"
+- label: "Dropdown Headers"
   link: "#dropdowns-headers"
-- label: "Dividers"
+- label: "Menu Dividers"
   link: "#dropdowns-dividers"
 - label: "Dropdown Menu List States"
   link: "#dropdowns-menu-list-states"
-- label: "Dropdown Menu Inverted"
+- label: "Inverse Styling"
   link: "#dropdowns-menu-inverted"
+- label: "Alignment"
+  link: "#dropdowns-alignment"
 ---
 
 <!-- =================================================
@@ -32,19 +34,7 @@ BEGIN: Dropdowns
 
       <p>
 
-        Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href="http://getbootstrap.com/javascript/#dropdowns" target="_blank">Bootstrap JavaScript Plugin</a>.
-
-      </p>
-
-      <h3>
-
-        Example
-
-      </h3>
-
-      <p>
-
-        Wrap the dropdown's trigger and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Then add the menu's HTML.
+        Dropdown menus are toggleable, non-invasive, contextual dialogs for displaying lists of links. In CNVS, we've made dropdown menus interactive with the <a href="http://getbootstrap.com/javascript/#dropdowns" target="_blank">Bootstrap JavaScript Plugin</a>. Use the <code>.dropdown-menu</code> and expected markup to create a dropdown menu. To toggle the display of a dropdown menu, add the class <code>.dropdown-toggle</code> to the triggering element, and wrap both the <code>.dropdown-toggle</code> and the <code>.dropdown-menu</code> in an element of class <code>.dropdown</code>.
 
       </p>
 
@@ -114,23 +104,7 @@ BEGIN: Dropdowns
     Dropdown
   &lt;/button&gt;
   &lt;span class="dropdown-menu" role="menu"&gt;
-    &lt;ul class="dropdown-menu-list"&gt;
-      &lt;li&gt;
-        &lt;a href="#" role="menuitem" tabindex="-1"&gt;
-          Action
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="#" role="menuitem" tabindex="-1"&gt;
-          Another action
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="#" role="menuitem" tabindex="-1"&gt;
-          Something else here
-        &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
+    &hellip;
   &lt;/span&gt;
 &lt;/div&gt;
 </pre>
@@ -143,11 +117,12 @@ BEGIN: Dropdowns
       END: Example
       ================================================== -->
 
-      {% include components/dropdowns/dropdowns-alignment.html %}
+      {% include components/dropdowns/dropdowns-menu-list.html %}
       {% include components/dropdowns/dropdowns-headers.html %}
       {% include components/dropdowns/dropdowns-dividers.html %}
       {% include components/dropdowns/dropdowns-menu-list-states.html %}
       {% include components/dropdowns/dropdowns-menu-inverted.html %}
+      {% include components/dropdowns/dropdowns-alignment.html %}
 
     </div>
 
