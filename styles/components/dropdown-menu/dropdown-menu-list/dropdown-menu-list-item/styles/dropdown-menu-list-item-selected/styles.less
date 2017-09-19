@@ -1,0 +1,83 @@
+& when (@dropdown-menu-list-item-selected-enabled) {
+  /* Dropdown Menu List (.dropdown-menu-list) */
+
+  .dropdown-menu-list {
+    /* Dropdown Menu List Item */
+
+    li.selected {
+      .element-shape-style(dropdown-menu-list-item-selected);
+      .element-text-style(dropdown-menu-list-item-selected);
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-selected-link);
+        .element-text-style(dropdown-menu-list-item-selected-link);
+      }
+
+      &:hover {
+
+        a {
+          .element-shape-style(dropdown-menu-list-item-selected-link-hover);
+          .element-text-style(dropdown-menu-list-item-selected-link-hover);
+        }
+      }
+
+      &:active,
+      &.active {
+
+        a {
+          .element-shape-style(dropdown-menu-list-item-selected-link-active);
+          .element-text-style(dropdown-menu-list-item-selected-link-active);
+        }
+      }
+
+      &:disabled,
+      &.disabled {
+
+        a {
+          .element-shape-style(dropdown-menu-list-item-selected-link-disabled);
+          .element-text-style(dropdown-menu-list-item-selected-link-disabled);
+        }
+      }
+    }
+  }
+
+  /* Dropdown Menu List Inverse (.dropdown-menu-list-inverse) */
+
+  .dropdown-menu-list-inverse li.selected,
+  .dropdown-menu-inverse .dropdown-menu-list li.selected,
+  .dropdown-menu-list li.selected.inverse {
+    .element-shape-style(dropdown-menu-list-item-selected-inverse);
+    .element-text-style(dropdown-menu-list-item-selected-inverse);
+
+    a {
+      .element-shape-style(dropdown-menu-list-item-selected-link-inverse);
+      .element-text-style(dropdown-menu-list-item-selected-link-inverse);
+    }
+
+    &:hover {
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-selected-link-inverse-hover);
+        .element-text-style(dropdown-menu-list-item-selected-link-inverse-hover);
+      }
+    }
+
+    &:active,
+    &.active {
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-selected-link-inverse-active);
+        .element-text-style(dropdown-menu-list-item-selected-link-inverse-active);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+
+      a {
+        .element-shape-style(dropdown-menu-list-item-selected-link-inverse-disabled);
+        .element-text-style(dropdown-menu-list-item-selected-link-inverse-disabled);
+      }
+    }
+  }
+}
