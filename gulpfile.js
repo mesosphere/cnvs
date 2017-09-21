@@ -4,7 +4,6 @@ var argv          = require('yargs').argv,
     autoprefixer  = require("gulp-autoprefixer"),
     browserSync   = require('browser-sync'),
     clean         = require('gulp-clean'),
-    colorLighten  = require("less-color-lighten"),
     concat        = require("gulp-concat"),
     cp            = require('child_process')
     gulp          = require("gulp"),

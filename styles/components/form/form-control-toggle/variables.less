@@ -146,7 +146,7 @@
 
 // Normal
 
-@toggle-color: color-lighten(@grey-dark, 0);
+@toggle-color: @grey-dark;
 @toggle-font-family: null;
 @toggle-font-style: null;
 @toggle-font-weight: 400;
@@ -159,7 +159,7 @@
 // Emphasis (.emphasis)
 
 @toggle-emphasis-enabled: true;
-@toggle-emphasis-color: color-lighten(@grey-dark, -20);
+@toggle-emphasis-color: shade(@grey-dark, 20%);
 @toggle-emphasis-font-family: null;
 @toggle-emphasis-font-style: null;
 @toggle-emphasis-font-weight: 600;
@@ -185,7 +185,7 @@
 // Inverse (.inverse)
 
 @toggle-inverse-enabled: true;
-@toggle-inverse-color: color-lighten(@grey-dark, 70);
+@toggle-inverse-color: tint(@grey-dark, 70%);
 @toggle-inverse-font-family: null;
 @toggle-inverse-font-style: null;
 @toggle-inverse-font-weight: null;
@@ -198,7 +198,7 @@
 // Inverse Emphasis (.inverse.emphasis)
 
 @toggle-inverse-emphasis-enabled: true;
-@toggle-inverse-emphasis-color: color-lighten(@grey-dark, 100);
+@toggle-inverse-emphasis-color: tint(@grey-dark, 100%);
 @toggle-inverse-emphasis-font-family: null;
 @toggle-inverse-emphasis-font-style: null;
 @toggle-inverse-emphasis-font-weight: null;
@@ -211,7 +211,7 @@
 // Inverse Muted (.inverse.muted)
 
 @toggle-inverse-muted-enabled: true;
-@toggle-inverse-muted-color: color-lighten(@grey-dark, 50);
+@toggle-inverse-muted-color: tint(@grey-dark, 50%);
 @toggle-inverse-muted-font-family: null;
 @toggle-inverse-muted-font-style: null;
 @toggle-inverse-muted-font-weight: null;
@@ -289,7 +289,7 @@
 @toggle-custom-background-gradient-color-top: null;
 @toggle-custom-background-gradient-color-bottom: null;
 @toggle-custom-border-width: 1px;
-@toggle-custom-border-color: color-lighten(@grey-dark, 80);
+@toggle-custom-border-color: tint(@grey-dark, 80%);
 @toggle-custom-border-style: solid;
 @toggle-custom-border-top-width: null;
 @toggle-custom-border-top-color: null;
@@ -376,8 +376,8 @@
 
 // Normal
 
-@toggle-custom-selected-color: color-lighten(@white, 0);
-@toggle-custom-selected-background-color: color-lighten(@purple, 0);
+@toggle-custom-selected-color: @white;
+@toggle-custom-selected-background-color: @purple;
 @toggle-custom-selected-background-gradient-color-top: null;
 @toggle-custom-selected-background-gradient-color-bottom: null;
 @toggle-custom-selected-border-width: @toggle-custom-border-width;
@@ -422,8 +422,8 @@
 
 // Active
 
-@toggle-custom-selected-active-color: color-lighten(@purple, 70);
-@toggle-custom-selected-active-background-color: color-lighten(@purple, -25);
+@toggle-custom-selected-active-color: tint(@purple, 70%);
+@toggle-custom-selected-active-background-color: shade(@purple, 25%);
 @toggle-custom-selected-active-background-gradient-color-top: null;
 @toggle-custom-selected-active-background-gradient-color-bottom: null;
 @toggle-custom-selected-active-border-width: @toggle-custom-border-width;
@@ -476,7 +476,7 @@
 @toggle-custom-inverse-background-gradient-color-top: null;
 @toggle-custom-inverse-background-gradient-color-bottom: null;
 @toggle-custom-inverse-border-width: @toggle-custom-border-width;
-@toggle-custom-inverse-border-color: color-lighten(@grey-dark, 10);
+@toggle-custom-inverse-border-color: tint(@grey-dark, 10%);
 @toggle-custom-inverse-border-style: @toggle-custom-border-style;
 @toggle-custom-inverse-border-top-width: null;
 @toggle-custom-inverse-border-top-color: null;
@@ -566,8 +566,8 @@
 
 // Normal
 
-@toggle-custom-inverse-selected-color: color-lighten(@white, 0);
-@toggle-custom-inverse-selected-background-color: color-lighten(@purple, 0);
+@toggle-custom-inverse-selected-color: @white;
+@toggle-custom-inverse-selected-background-color: @purple;
 @toggle-custom-inverse-selected-background-gradient-color-top: null;
 @toggle-custom-inverse-selected-background-gradient-color-bottom: null;
 @toggle-custom-inverse-selected-border-width: null;
@@ -589,7 +589,7 @@
 
 // Hover
 
-@toggle-custom-inverse-selected-hover-color: color-lighten(@white, 0);
+@toggle-custom-inverse-selected-hover-color: @white;
 @toggle-custom-inverse-selected-hover-background-color: null;
 @toggle-custom-inverse-selected-hover-background-gradient-color-top: null;
 @toggle-custom-inverse-selected-hover-background-gradient-color-bottom: null;
@@ -612,7 +612,7 @@
 
 // Active
 
-@toggle-custom-inverse-selected-active-color: color-lighten(@purple, 70);
+@toggle-custom-inverse-selected-active-color: tint(@purple, 70%);
 @toggle-custom-inverse-selected-active-background-color: null;
 @toggle-custom-inverse-selected-active-background-gradient-color-top: null;
 @toggle-custom-inverse-selected-active-background-gradient-color-bottom: null;
@@ -636,7 +636,7 @@
 // Disabled
 
 @toggle-custom-inverse-selected-disabled-opacity: 0.5;
-@toggle-custom-inverse-selected-disabled-color: color-lighten(@purple, 80);
+@toggle-custom-inverse-selected-disabled-color: tint(@purple, 80%);
 @toggle-custom-inverse-selected-disabled-background-color: null;
 @toggle-custom-inverse-selected-disabled-background-gradient-color-top: null;
 @toggle-custom-inverse-selected-disabled-background-gradient-color-bottom: null;
