@@ -185,8 +185,7 @@ gulp.task("cnvs:styles", ["cnvs:stylelint"], function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less({
-      paths: [dirs.cnvs.styles],
-      plugins: [colorLighten]
+      paths: [dirs.cnvs.styles]
     }))
     .on("error", function (err) {
       util.log(err.message);
@@ -237,8 +236,7 @@ gulp.task("docs:styles", ["docs:stylelint"], function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less({
-      paths: [dirs.docs.styles],
-      plugins: [colorLighten]
+      paths: [dirs.docs.styles]
     }))
     .on("error", function (err) {
       util.log(err.message);
