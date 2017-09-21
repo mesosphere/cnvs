@@ -159,7 +159,7 @@
 // Emphasis (.emphasis)
 
 @toggle-emphasis-enabled: true;
-@toggle-emphasis-color: shade(@grey-dark, 20%);
+@toggle-emphasis-color: @grey-dark-darken-2;
 @toggle-emphasis-font-family: null;
 @toggle-emphasis-font-style: null;
 @toggle-emphasis-font-weight: 600;
@@ -185,7 +185,7 @@
 // Inverse (.inverse)
 
 @toggle-inverse-enabled: true;
-@toggle-inverse-color: tint(@grey-dark, 70%);
+@toggle-inverse-color: @grey-light;
 @toggle-inverse-font-family: null;
 @toggle-inverse-font-style: null;
 @toggle-inverse-font-weight: null;
@@ -198,7 +198,7 @@
 // Inverse Emphasis (.inverse.emphasis)
 
 @toggle-inverse-emphasis-enabled: true;
-@toggle-inverse-emphasis-color: tint(@grey-dark, 100%);
+@toggle-inverse-emphasis-color: @white;
 @toggle-inverse-emphasis-font-family: null;
 @toggle-inverse-emphasis-font-style: null;
 @toggle-inverse-emphasis-font-weight: null;
@@ -211,7 +211,7 @@
 // Inverse Muted (.inverse.muted)
 
 @toggle-inverse-muted-enabled: true;
-@toggle-inverse-muted-color: tint(@grey-dark, 50%);
+@toggle-inverse-muted-color: null;
 @toggle-inverse-muted-font-family: null;
 @toggle-inverse-muted-font-style: null;
 @toggle-inverse-muted-font-weight: null;
@@ -289,7 +289,7 @@
 @toggle-custom-background-gradient-color-top: null;
 @toggle-custom-background-gradient-color-bottom: null;
 @toggle-custom-border-width: 1px;
-@toggle-custom-border-color: tint(@grey-dark, 80%);
+@toggle-custom-border-color: @grey-light;
 @toggle-custom-border-style: solid;
 @toggle-custom-border-top-width: null;
 @toggle-custom-border-top-color: null;
@@ -351,12 +351,12 @@
 
 // Disabled
 
-@toggle-custom-disabled-opacity: 0.5;
-@toggle-custom-disabled-background-color: @form-control-disabled-background-color;
+@toggle-custom-disabled-opacity: 1;
+@toggle-custom-disabled-background-color: @grey-light-lighten-3;
 @toggle-custom-disabled-background-gradient-color-top: null;
 @toggle-custom-disabled-background-gradient-color-bottom: null;
 @toggle-custom-disabled-border-width: @toggle-custom-border-width;
-@toggle-custom-disabled-border-color: @form-control-disabled-border-color;
+@toggle-custom-disabled-border-color: @grey-light-lighten-3;
 @toggle-custom-disabled-border-style: @toggle-custom-border-style;
 @toggle-custom-disabled-border-top-width: null;
 @toggle-custom-disabled-border-top-color: null;
@@ -422,8 +422,8 @@
 
 // Active
 
-@toggle-custom-selected-active-color: tint(@purple, 70%);
-@toggle-custom-selected-active-background-color: shade(@purple, 25%);
+@toggle-custom-selected-active-color: @white;
+@toggle-custom-selected-active-background-color: @purple-darken-2;
 @toggle-custom-selected-active-background-gradient-color-top: null;
 @toggle-custom-selected-active-background-gradient-color-bottom: null;
 @toggle-custom-selected-active-border-width: @toggle-custom-border-width;
@@ -445,13 +445,13 @@
 
 // Disabled
 
-@toggle-custom-selected-disabled-opacity: 0.5;
-@toggle-custom-selected-disabled-color: null;
-@toggle-custom-selected-disabled-background-color: @purple;
+@toggle-custom-selected-disabled-opacity: 1.0;
+@toggle-custom-selected-disabled-color: @white;
+@toggle-custom-selected-disabled-background-color: @grey-light-darken-2;
 @toggle-custom-selected-disabled-background-gradient-color-top: null;
 @toggle-custom-selected-disabled-background-gradient-color-bottom: null;
 @toggle-custom-selected-disabled-border-width: null;
-@toggle-custom-selected-disabled-border-color: null;
+@toggle-custom-selected-disabled-border-color: @grey-light-darken-2;
 @toggle-custom-selected-disabled-border-style: null;
 @toggle-custom-selected-disabled-border-top-width: null;
 @toggle-custom-selected-disabled-border-top-color: null;
@@ -476,7 +476,7 @@
 @toggle-custom-inverse-background-gradient-color-top: null;
 @toggle-custom-inverse-background-gradient-color-bottom: null;
 @toggle-custom-inverse-border-width: @toggle-custom-border-width;
-@toggle-custom-inverse-border-color: tint(@grey-dark, 10%);
+@toggle-custom-inverse-border-color: @grey-dark-lighten-2;
 @toggle-custom-inverse-border-style: @toggle-custom-border-style;
 @toggle-custom-inverse-border-top-width: null;
 @toggle-custom-inverse-border-top-color: null;
@@ -522,7 +522,7 @@
 @toggle-custom-inverse-active-background-gradient-color-top: null;
 @toggle-custom-inverse-active-background-gradient-color-bottom: null;
 @toggle-custom-inverse-active-border-width: @toggle-custom-border-width;
-@toggle-custom-inverse-active-border-color: @toggle-custom-inverse-active-background-color;
+@toggle-custom-inverse-active-border-color: @purple;
 @toggle-custom-inverse-active-border-style: @toggle-custom-border-style;
 @toggle-custom-inverse-active-border-top-width: null;
 @toggle-custom-inverse-active-border-top-color: null;
@@ -541,12 +541,12 @@
 // Disabled
 
 @toggle-custom-inverse-disabled-color: null;
-@toggle-custom-inverse-disabled-opacity: 0.5;
-@toggle-custom-inverse-disabled-background-color: null;
+@toggle-custom-inverse-disabled-opacity: null;
+@toggle-custom-inverse-disabled-background-color: @grey-dark-lighten-1;
 @toggle-custom-inverse-disabled-background-gradient-color-top: null;
 @toggle-custom-inverse-disabled-background-gradient-color-bottom: null;
 @toggle-custom-inverse-disabled-border-width: null;
-@toggle-custom-inverse-disabled-border-color: null;
+@toggle-custom-inverse-disabled-border-color: @grey-dark-lighten-1;
 @toggle-custom-inverse-disabled-border-style: null;
 @toggle-custom-inverse-disabled-border-top-width: null;
 @toggle-custom-inverse-disabled-border-top-color: null;
@@ -612,7 +612,7 @@
 
 // Active
 
-@toggle-custom-inverse-selected-active-color: tint(@purple, 70%);
+@toggle-custom-inverse-selected-active-color: @white;
 @toggle-custom-inverse-selected-active-background-color: null;
 @toggle-custom-inverse-selected-active-background-gradient-color-top: null;
 @toggle-custom-inverse-selected-active-background-gradient-color-bottom: null;
@@ -635,13 +635,13 @@
 
 // Disabled
 
-@toggle-custom-inverse-selected-disabled-opacity: 0.5;
-@toggle-custom-inverse-selected-disabled-color: tint(@purple, 80%);
-@toggle-custom-inverse-selected-disabled-background-color: null;
+@toggle-custom-inverse-selected-disabled-opacity: 1.0;
+@toggle-custom-inverse-selected-disabled-color: @white;
+@toggle-custom-inverse-selected-disabled-background-color: @grey-light-darken-2;
 @toggle-custom-inverse-selected-disabled-background-gradient-color-top: null;
 @toggle-custom-inverse-selected-disabled-background-gradient-color-bottom: null;
 @toggle-custom-inverse-selected-disabled-border-width: null;
-@toggle-custom-inverse-selected-disabled-border-color: null;
+@toggle-custom-inverse-selected-disabled-border-color: @grey-light-darken-2;
 @toggle-custom-inverse-selected-disabled-border-style: null;
 @toggle-custom-inverse-selected-disabled-border-top-width: null;
 @toggle-custom-inverse-selected-disabled-border-top-color: null;
