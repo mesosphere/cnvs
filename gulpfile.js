@@ -4,7 +4,6 @@ var argv          = require('yargs').argv,
     autoprefixer  = require("gulp-autoprefixer"),
     browserSync   = require('browser-sync'),
     clean         = require('gulp-clean'),
-    colorLighten  = require("less-color-lighten"),
     concat        = require("gulp-concat"),
     cp            = require('child_process')
     gulp          = require("gulp"),
@@ -186,8 +185,7 @@ gulp.task("cnvs:styles", ["cnvs:stylelint"], function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less({
-      paths: [dirs.cnvs.styles],
-      plugins: [colorLighten]
+      paths: [dirs.cnvs.styles]
     }))
     .on("error", function (err) {
       util.log(err.message);
@@ -238,8 +236,7 @@ gulp.task("docs:styles", ["docs:stylelint"], function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less({
-      paths: [dirs.docs.styles],
-      plugins: [colorLighten]
+      paths: [dirs.docs.styles]
     }))
     .on("error", function (err) {
       util.log(err.message);

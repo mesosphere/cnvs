@@ -5,6 +5,7 @@
     .element-spacing(lead, null, null);
     .element-text-size(lead, null);
     .element-text-style(lead);
+    .property-variant(lead, opacity, null, null);
     display: block;
 
     /* Layout Variants */
@@ -24,6 +25,7 @@
       &.emphasis,
       .emphasis {
         .element-text-style(lead-emphasis);
+        .property-variant(lead-emphasis, opacity, null, null);
       }
     }
 
@@ -32,6 +34,7 @@
       &.muted,
       .muted {
         .element-text-style(lead-muted);
+        .property-variant(lead-muted, opacity, null, null);
       }
     }
 
@@ -39,12 +42,14 @@
 
       &.inverse {
         .element-text-style(lead-inverse);
+        .property-variant(lead-inverse, opacity, null, null);
 
         & when (@lead-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
             .element-text-style(lead-inverse-emphasis);
+            .property-variant(lead-inverse-emphasis, opacity, null, null);
           }
         }
 
@@ -53,6 +58,7 @@
           &.muted,
           .muted {
             .element-text-style(lead-inverse-muted);
+            .property-variant(lead-inverse-muted, opacity, null, null);
           }
         }
       }

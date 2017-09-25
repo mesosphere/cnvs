@@ -3,10 +3,11 @@
 
   small,
   .small {
-    display: block;
-    .element-text-style(small);
-    .element-text-size(small, null);
     .element-spacing(small, null, null);
+    .element-text-size(small, null);
+    .element-text-style(small);
+    .property-variant(small, opacity, null, null);
+    display: block;
 
     /* Layout Variants */
 
@@ -25,6 +26,7 @@
       &.emphasis,
       .emphasis {
         .element-text-style(small-emphasis);
+        .property-variant(small-emphasis, opacity, null, null);
       }
     }
 
@@ -33,6 +35,7 @@
       &.muted,
       .muted {
         .element-text-style(small-muted);
+        .property-variant(small-muted, opacity, null, null);
       }
     }
 
@@ -40,12 +43,14 @@
 
       &.inverse {
         .element-text-style(small-inverse);
+        .property-variant(small-inverse, opacity, null, null);
 
         & when (@small-inverse-emphasis-enabled) {
 
           &.emphasis,
           .emphasis {
             .element-text-style(small-inverse-emphasis);
+            .property-variant(small-inverse-emphasis, opacity, null, null);
           }
         }
 
@@ -54,6 +59,7 @@
           &.muted,
           .muted {
             .element-text-style(small-inverse-muted);
+            .property-variant(small-inverse-muted, opacity, null, null);
           }
         }
       }

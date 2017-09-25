@@ -117,10 +117,6 @@ h1 {
 
 You can see that the code required in Scenerio #2 (Variable-Driven Styles) is much larger than that need for Scenario #1 (Statically-Defined Styles).  However, Scenerio #2 (Variable-Driven Styles) has a huge advantage in that the variables that define the styles are abstracted out, making them easier to change, human-readable in their naming structure, and most importantly ***reusable***.  This is a very simple example, but when you are attempting to develop a rich resource tool-kit, having global access ot variables becomes extremely useful to creating components that are related in both look-and-feel and style metrics.
 
-## Dependencies
-
-With one exception, CNVS is self-contained.  It will compile stand-alone.  Throughout CNVS we make use of a handy function called `color-lighten()`, a LESS plugin that blends a given color with white or black to produce a new color that observes the same general hue as the source color.  This LESS Plugin is available as an NPM Package called [less-color-lighten](https://www.npmjs.com/package/less-color-lighten).  The include Gulp file requires `less-color-lighten`.
-
 ## Documentation
 
 Documentation for CNVS can be found in the `docs/` directory.  The Documentation is built with Jekyll and hosted on GitHub Pages at http://mesosphere.github.com/cnvs. The docs may also be run locally.
