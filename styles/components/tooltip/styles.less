@@ -1,8 +1,115 @@
 & when (@tooltip-enabled) {
-  /* tooltip */
+  /* Tooltip */
 
   .tooltip {
-    display: block;
+    .element-shape-style(tooltip);
+    .element-spacing(tooltip, null, null);
+    .element-text-size(tooltip, null);
+    .element-text-style(tooltip);
+    .property-variant(tooltip, border-radius, null, null);
+    .property-variant(tooltip, min-height, null, null);
+    .property-variant(tooltip-notch, margin-bottom, height, null, null);
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+
+    &:after {
+      .triangle-base();
+      .triangle-color('down', @tooltip-background-color);
+      bottom: 0;
+      content: '';
+      display: inline-block;
+      position: absolute;
+
+      & when not (@tooltip-notch-width = null) {
+        .triangle-size-width('down', @tooltip-notch-width);
+        margin-left: -(@tooltip-notch-width / 2);
+      }
+
+      & when not (@tooltip-notch-height = null) {
+        .triangle-size-height('down', @tooltip-notch-height);
+        bottom: -@tooltip-notch-height;
+      }
+    }
+
+    &.tooltip-bottom {
+      .property-variant(tooltip-notch, margin-top, height, null, null);
+      margin-bottom: 0;
+
+      &:after {
+        .triangle-color('up', @tooltip-background-color);
+        bottom: auto;
+
+        & when not (@tooltip-notch-width = null) {
+          .triangle-size-width('up', @tooltip-notch-width);
+        }
+
+        & when not (@tooltip-notch-height = null) {
+          .triangle-size-height('up', @tooltip-notch-height);
+          bottom: auto;
+          top: -@tooltip-notch-height;
+        }
+      }
+    }
+
+    &.tooltip-right {
+      .property-variant(tooltip-notch, margin-left, height, null, null);
+      margin-bottom: 0;
+
+      &:after {
+        .triangle-color('left', @tooltip-background-color);
+        bottom: auto;
+        margin-left: 0;
+        top: 50%;
+
+        & when not (@tooltip-notch-width = null) {
+          .triangle-size-height('left', @tooltip-notch-width);
+          margin-top: -(@tooltip-notch-width / 2);
+        }
+
+        & when not (@tooltip-notch-height = null) {
+          .triangle-size-width('left', @tooltip-notch-height);
+          left: -@tooltip-notch-height;
+        }
+      }
+    }
+
+    &.tooltip-left {
+      .property-variant(tooltip-notch, margin-right, height, null, null);
+      margin-bottom: 0;
+
+      &:after {
+        .triangle-color('right', @tooltip-background-color);
+        bottom: auto;
+        margin-left: 0;
+        top: 50%;
+
+        & when not (@tooltip-notch-width = null) {
+          .triangle-size-height('right', @tooltip-notch-width);
+          margin-top: -(@tooltip-notch-width / 2);
+        }
+
+        & when not (@tooltip-notch-height = null) {
+          .triangle-size-width('right', @tooltip-notch-height);
+          right: -@tooltip-notch-height;
+        }
+      }
+    }
+
+    & when not (@tooltip-content-padding-horizontal = null) {
+      /* Tooltip Content */
+
+      & > * {
+        box-sizing: content-box;
+        padding-right: @tooltip-content-padding-horizontal;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
   }
 }
 
@@ -11,10 +118,85 @@
   @media (min-width: @layout-screen-small-min-width) {
 
     & when (@tooltip-enabled) and (@tooltip-screen-small-enabled) {
-      /* tooltip */
+      /* Tooltip */
 
       .tooltip {
-        display: block;
+        .element-spacing(tooltip, null, screen-small);
+        .element-text-size(tooltip, screen-small);
+        .property-variant(tooltip, border-radius, null, screen-small);
+        .property-variant(tooltip, min-height, null, screen-small);
+        .property-variant(tooltip-notch, margin-bottom, height, null, screen-small);
+
+        &:after {
+
+          & when not (@tooltip-notch-width-screen-small = null) {
+            .triangle-size-width('down', @tooltip-notch-width-screen-small);
+            margin-left: -(@tooltip-notch-width-screen-small / 2);
+          }
+
+          & when not (@tooltip-notch-height-screen-small = null) {
+            .triangle-size-height('down', @tooltip-notch-height-screen-small);
+            bottom: -@tooltip-notch-height-screen-small;
+          }
+        }
+
+        &.tooltip-bottom {
+          .property-variant(tooltip-notch, margin-top, height, null, screen-small);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-small = null) {
+              .triangle-size-width('up', @tooltip-notch-width-screen-small);
+            }
+
+            & when not (@tooltip-notch-height-screen-small = null) {
+              .triangle-size-height('up', @tooltip-notch-height-screen-small);
+              top: -@tooltip-notch-height-screen-small;
+            }
+          }
+        }
+
+        &.tooltip-right {
+          .property-variant(tooltip-notch, margin-left, height, null, screen-small);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-small = null) {
+              .triangle-size-height('left', @tooltip-notch-width-screen-small);
+              margin-top: -(@tooltip-notch-width-screen-small / 2);
+            }
+
+            & when not (@tooltip-notch-height-screen-small = null) {
+              .triangle-size-width('left', @tooltip-notch-height-screen-small);
+              left: -@tooltip-notch-height-screen-small;
+            }
+          }
+        }
+
+        &.tooltip-left {
+          .property-variant(tooltip-notch, margin-right, height, null, screen-small);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-small = null) {
+              .triangle-size-height('right', @tooltip-notch-width);
+              margin-top: -(@tooltip-notch-width / 2);
+            }
+
+            & when not (@tooltip-notch-height-screen-small = null) {
+              .triangle-size-width('right', @tooltip-notch-height);
+              right: -@tooltip-notch-height;
+            }
+          }
+        }
+
+        & when not (@tooltip-content-padding-horizontal-screen-small = null) {
+          /* Tooltip Content */
+
+          & > * {
+            padding-right: @tooltip-content-padding-horizontal-screen-small;
+          }
+        }
       }
     }
   }
@@ -25,10 +207,85 @@
   @media (min-width: @layout-screen-medium-min-width) {
 
     & when (@tooltip-enabled) and (@tooltip-screen-medium-enabled) {
-      /* tooltip */
+      /* Tooltip */
 
       .tooltip {
-        display: block;
+        .element-spacing(tooltip, null, screen-medium);
+        .element-text-size(tooltip, screen-medium);
+        .property-variant(tooltip, border-radius, null, screen-medium);
+        .property-variant(tooltip, min-height, null, screen-medium);
+        .property-variant(tooltip-notch, margin-bottom, height, null, screen-medium);
+
+        &:after {
+
+          & when not (@tooltip-notch-width-screen-medium = null) {
+            .triangle-size-width('down', @tooltip-notch-width-screen-medium);
+            margin-left: -(@tooltip-notch-width-screen-medium / 2);
+          }
+
+          & when not (@tooltip-notch-height-screen-medium = null) {
+            .triangle-size-height('down', @tooltip-notch-height-screen-medium);
+            bottom: -@tooltip-notch-height-screen-medium;
+          }
+        }
+
+        &.tooltip-bottom {
+          .property-variant(tooltip-notch, margin-top, height, null, screen-medium);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-medium = null) {
+              .triangle-size-width('up', @tooltip-notch-width-screen-medium);
+            }
+
+            & when not (@tooltip-notch-height-screen-medium = null) {
+              .triangle-size-height('up', @tooltip-notch-height-screen-medium);
+              top: -@tooltip-notch-height-screen-medium;
+            }
+          }
+        }
+
+        &.tooltip-right {
+          .property-variant(tooltip-notch, margin-left, height, null, screen-medium);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-medium = null) {
+              .triangle-size-height('left', @tooltip-notch-width-screen-medium);
+              margin-top: -(@tooltip-notch-width-screen-medium / 2);
+            }
+
+            & when not (@tooltip-notch-height-screen-medium = null) {
+              .triangle-size-width('left', @tooltip-notch-height-screen-medium);
+              left: -@tooltip-notch-height-screen-medium;
+            }
+          }
+        }
+
+        &.tooltip-left {
+          .property-variant(tooltip-notch, margin-right, height, null, screen-medium);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-medium = null) {
+              .triangle-size-height('right', @tooltip-notch-width);
+              margin-top: -(@tooltip-notch-width / 2);
+            }
+
+            & when not (@tooltip-notch-height-screen-medium = null) {
+              .triangle-size-width('right', @tooltip-notch-height);
+              right: -@tooltip-notch-height;
+            }
+          }
+        }
+
+        & when not (@tooltip-content-padding-horizontal-screen-medium = null) {
+          /* Tooltip Content */
+
+          & > * {
+            padding-right: @tooltip-content-padding-horizontal-screen-medium;
+          }
+        }
       }
     }
   }
@@ -39,10 +296,85 @@
   @media (min-width: @layout-screen-large-min-width) {
 
     & when (@tooltip-enabled) and (@tooltip-screen-large-enabled) {
-      /* tooltip */
+      /* Tooltip */
 
       .tooltip {
-        display: block;
+        .element-spacing(tooltip, null, screen-large);
+        .element-text-size(tooltip, screen-large);
+        .property-variant(tooltip, border-radius, null, screen-large);
+        .property-variant(tooltip, min-height, null, screen-large);
+        .property-variant(tooltip-notch, margin-bottom, height, null, screen-large);
+
+        &:after {
+
+          & when not (@tooltip-notch-width-screen-large = null) {
+            .triangle-size-width('down', @tooltip-notch-width-screen-large);
+            margin-left: -(@tooltip-notch-width-screen-large / 2);
+          }
+
+          & when not (@tooltip-notch-height-screen-large = null) {
+            .triangle-size-height('down', @tooltip-notch-height-screen-large);
+            bottom: -@tooltip-notch-height-screen-large;
+          }
+        }
+
+        &.tooltip-bottom {
+          .property-variant(tooltip-notch, margin-top, height, null, screen-large);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-large = null) {
+              .triangle-size-width('up', @tooltip-notch-width-screen-large);
+            }
+
+            & when not (@tooltip-notch-height-screen-large = null) {
+              .triangle-size-height('up', @tooltip-notch-height-screen-large);
+              top: -@tooltip-notch-height-screen-large;
+            }
+          }
+        }
+
+        &.tooltip-right {
+          .property-variant(tooltip-notch, margin-left, height, null, screen-large);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-large = null) {
+              .triangle-size-height('left', @tooltip-notch-width-screen-large);
+              margin-top: -(@tooltip-notch-width-screen-large / 2);
+            }
+
+            & when not (@tooltip-notch-height-screen-large = null) {
+              .triangle-size-width('left', @tooltip-notch-height-screen-large);
+              left: -@tooltip-notch-height-screen-large;
+            }
+          }
+        }
+
+        &.tooltip-left {
+          .property-variant(tooltip-notch, margin-right, height, null, screen-large);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-large = null) {
+              .triangle-size-height('right', @tooltip-notch-width);
+              margin-top: -(@tooltip-notch-width / 2);
+            }
+
+            & when not (@tooltip-notch-height-screen-large = null) {
+              .triangle-size-width('right', @tooltip-notch-height);
+              right: -@tooltip-notch-height;
+            }
+          }
+        }
+
+        & when not (@tooltip-content-padding-horizontal-screen-large = null) {
+          /* Tooltip Content */
+
+          & > * {
+            padding-right: @tooltip-content-padding-horizontal-screen-large;
+          }
+        }
       }
     }
   }
@@ -53,10 +385,85 @@
   @media (min-width: @layout-screen-jumbo-min-width) {
 
     & when (@tooltip-enabled) and (@tooltip-screen-jumbo-enabled) {
-      /* tooltip */
+      /* Tooltip */
 
       .tooltip {
-        display: block;
+        .element-spacing(tooltip, null, screen-jumbo);
+        .element-text-size(tooltip, screen-jumbo);
+        .property-variant(tooltip, border-radius, null, screen-jumbo);
+        .property-variant(tooltip, min-height, null, screen-jumbo);
+        .property-variant(tooltip-notch, margin-bottom, height, null, screen-jumbo);
+
+        &:after {
+
+          & when not (@tooltip-notch-width-screen-jumbo = null) {
+            .triangle-size-width('down', @tooltip-notch-width-screen-jumbo);
+            margin-left: -(@tooltip-notch-width-screen-jumbo / 2);
+          }
+
+          & when not (@tooltip-notch-height-screen-jumbo = null) {
+            .triangle-size-height('down', @tooltip-notch-height-screen-jumbo);
+            bottom: -@tooltip-notch-height-screen-jumbo;
+          }
+        }
+
+        &.tooltip-bottom {
+          .property-variant(tooltip-notch, margin-top, height, null, screen-jumbo);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-jumbo = null) {
+              .triangle-size-width('up', @tooltip-notch-width-screen-jumbo);
+            }
+
+            & when not (@tooltip-notch-height-screen-jumbo = null) {
+              .triangle-size-height('up', @tooltip-notch-height-screen-jumbo);
+              top: -@tooltip-notch-height-screen-jumbo;
+            }
+          }
+        }
+
+        &.tooltip-right {
+          .property-variant(tooltip-notch, margin-left, height, null, screen-jumbo);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-jumbo = null) {
+              .triangle-size-height('left', @tooltip-notch-width-screen-jumbo);
+              margin-top: -(@tooltip-notch-width-screen-jumbo / 2);
+            }
+
+            & when not (@tooltip-notch-height-screen-jumbo = null) {
+              .triangle-size-width('left', @tooltip-notch-height-screen-jumbo);
+              left: -@tooltip-notch-height-screen-jumbo;
+            }
+          }
+        }
+
+        &.tooltip-left {
+          .property-variant(tooltip-notch, margin-right, height, null, screen-jumbo);
+
+          &:after {
+
+            & when not (@tooltip-notch-width-screen-jumbo = null) {
+              .triangle-size-height('right', @tooltip-notch-width);
+              margin-top: -(@tooltip-notch-width / 2);
+            }
+
+            & when not (@tooltip-notch-height-screen-jumbo = null) {
+              .triangle-size-width('right', @tooltip-notch-height);
+              right: -@tooltip-notch-height;
+            }
+          }
+        }
+
+        & when not (@tooltip-content-padding-horizontal-screen-jumbo = null) {
+          /* Tooltip Content */
+
+          & > * {
+            padding-right: @tooltip-content-padding-horizontal-screen-jumbo;
+          }
+        }
       }
     }
   }
