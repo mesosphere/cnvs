@@ -57,10 +57,17 @@ $(function() {
     window_scroll();
 
     /* ---------------------------------------------------------------------------
-    Simulate placeholder text
+    Initialize tooltip
     --------------------------------------------------------------------------- */
 
-    //simulate_placeholders();
+    //$('[data-toggle="tooltip"]').tooltip()
+
+    $('[data-toggle="tooltip"]').each(function() {
+      new Tooltip($(this), {
+        placement: 'top',
+        title: "Top"
+      });
+    });
 
     /* ---------------------------------------------------------------------------
     Google Code Pretty Print
