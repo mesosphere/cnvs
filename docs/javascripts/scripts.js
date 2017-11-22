@@ -63,9 +63,27 @@ $(function() {
     //$('[data-toggle="tooltip"]').tooltip()
 
     $('[data-toggle="tooltip"]').each(function() {
+      var placement = 'top';
+
+      switch($(this).data('placement')) {
+        case 'right':
+          placement = 'right';
+          break;
+        case 'bottom':
+          placement = 'bottom';
+          break;
+        case 'left':
+          placement = 'left';
+          break;
+        case 'top':
+        default:
+          placement = 'top';
+          break;
+      }
+
       new Tooltip($(this), {
-        placement: 'top',
-        title: "Top"
+        placement: placement,
+        template: '<div class="tooltip tooltip-' + placement + '" role="tooltip"><div class="tooltip-inner"></div></div>'
       });
     });
 
