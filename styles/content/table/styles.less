@@ -19,6 +19,22 @@
       .element-spacing(table, tall, null);
     }
 
+    /* Positioning */
+
+    &.vertical-align-top td,
+    &.vertical-align-top th,
+    td.vertical-align-top,
+    th.vertical-align-top {
+      vertical-align: top;
+    }
+
+    &.vertical-align-bottom td,
+    &.vertical-align-bottom th,
+    td.vertical-align-bottom,
+    th.vertical-align-bottom {
+      vertical-align: bottom;
+    }
+
     & when not (@table-border-radius = null) {
       /* Table Border Radius */
       border-radius: @table-border-radius;
