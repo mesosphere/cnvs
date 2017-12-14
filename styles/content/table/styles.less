@@ -138,6 +138,7 @@
       &.disabled {
         .element-shape-style(table-cell-disabled);
         .element-text-style(table-cell-disabled);
+        .property-variant(table-cell-disabled, opacity, null, null);
       }
 
       // Cell active
@@ -158,7 +159,24 @@
         &.disabled {
           .element-shape-style(table-cell-active-disabled);
           .element-text-style(table-cell-active-disabled);
+          .property-variant(table-cell-active-disabled, opacity, null, null);
         }
+      }
+    }
+
+    // Disabled Table Row
+
+    tr.disabled th,
+    tr.disabled td {
+      .element-shape-style(table-cell-disabled);
+      .element-text-style(table-cell-disabled);
+      .property-variant(table-cell-disabled, opacity, null, null);
+
+      &.active,
+      &.highlight {
+        .element-shape-style(table-cell-active-disabled);
+        .element-text-style(table-cell-active-disabled);
+        .property-variant(table-cell-active-disabled, opacity, null, null);
       }
     }
 
@@ -256,6 +274,7 @@
         &.disabled {
           .element-shape-style(table-cell-inverse-disabled);
           .element-text-style(table-cell-inverse-disabled);
+          .property-variant(table-cell-inverse-disabled, opacity, null, null);
         }
 
         // Cell Active
@@ -276,7 +295,24 @@
           &.disabled {
             .element-text-style(table-cell-inverse-active-disabled);
             .element-shape-style(table-cell-inverse-active-disabled);
+            .property-variant(table-cell-inverse-active-disabled, opacity, null, null);
           }
+        }
+      }
+
+      // Disabled Table Row
+
+      tr.disabled th,
+      tr.disabled td {
+        .element-shape-style(table-cell-inverse-disabled);
+        .element-text-style(table-cell-inverse-disabled);
+        .property-variant(table-cell-inverse-disabled, opacity, null, null);
+
+        &.active,
+        &.highlight {
+          .element-shape-style(table-cell-inverse-active-disabled);
+          .element-text-style(table-cell-inverse-active-disabled);
+          .property-variant(table-cell-inverse-active-disabled, opacity, null, null);
         }
       }
 

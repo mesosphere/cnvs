@@ -19,6 +19,7 @@
       &.disabled {
         .element-text-style(table-cell-selected-disabled);
         .element-shape-style(table-cell-selected-disabled);
+        .property-variant(table-cell-selected-disabled, opacity, null, null);
       }
 
       // Cell active
@@ -39,7 +40,23 @@
         &.disabled {
           .element-text-style(table-cell-selected-active-disabled);
           .element-shape-style(table-cell-selected-active-disabled);
+          .property-variant(table-cell-selected-active-disabled, opacity, null, null);
         }
+      }
+    }
+
+    // Disabled Table Row
+
+    tr.disabled td {
+      .element-shape-style(table-cell-selected-disabled);
+      .element-text-style(table-cell-selected-disabled);
+      .property-variant(table-cell-selected-disabled, opacity, null, null);
+
+      &.active,
+      &.highlight {
+        .element-shape-style(table-cell-selected-active-disabled);
+        .element-text-style(table-cell-selected-active-disabled);
+        .property-variant(table-cell-selected-active-disabled, opacity, null, null);
       }
     }
 
@@ -84,6 +101,7 @@
         &.disabled {
           .element-text-style(table-cell-selected-inverse-disabled);
           .element-shape-style(table-cell-selected-inverse-disabled);
+          .property-variant(table-cell-selected-inverse-disabled, opacity, null, null);
         }
 
         // Cell Active
@@ -104,7 +122,23 @@
           &.disabled {
             .element-text-style(table-cell-selected-inverse-active-disabled);
             .element-shape-style(table-cell-selected-inverse-active-disabled);
+            .property-variant(table-cell-selected-inverse-active-disabled, opacity, null, null);
           }
+        }
+      }
+
+      // Disabled Table Row
+
+      tr.selected.disabled td {
+        .element-shape-style(table-cell-selected-inverse-disabled);
+        .element-text-style(table-cell-selected-inverse-disabled);
+        .property-variant(table-cell-selected-inverse-disabled, opacity, null, null);
+
+        &.active,
+        &.highlight {
+          .element-shape-style(table-cell-selected-inverse-active-disabled);
+          .element-text-style(table-cell-selected-inverse-active-disabled);
+          .property-variant(table-cell-selected-inverse-active-disabled, opacity, null, null);
         }
       }
 

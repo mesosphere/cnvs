@@ -19,6 +19,7 @@
       &.disabled {
         .element-text-style(table-cell-success-disabled);
         .element-shape-style(table-cell-success-disabled);
+        .property-variant(table-cell-success-disabled, opacity, null, null);
       }
 
       // Cell active
@@ -39,7 +40,23 @@
         &.disabled {
           .element-text-style(table-cell-success-active-disabled);
           .element-shape-style(table-cell-success-active-disabled);
+          .property-variant(table-cell-success-active-disabled, opacity, null, null);
         }
+      }
+    }
+
+    // Disabled Table Row
+
+    tr.disabled td {
+      .element-shape-style(table-cell-success-disabled);
+      .element-text-style(table-cell-success-disabled);
+      .property-variant(table-cell-success-disabled, opacity, null, null);
+
+      &.active,
+      &.highlight {
+        .element-shape-style(table-cell-success-active-disabled);
+        .element-text-style(table-cell-success-active-disabled);
+        .property-variant(table-cell-success-active-disabled, opacity, null, null);
       }
     }
 
@@ -84,6 +101,7 @@
         &.disabled {
           .element-text-style(table-cell-success-inverse-disabled);
           .element-shape-style(table-cell-success-inverse-disabled);
+          .property-variant(table-cell-success-inverse-disabled, opacity, null, null);
         }
 
         // Cell Active
@@ -104,7 +122,23 @@
           &.disabled {
             .element-text-style(table-cell-success-inverse-active-disabled);
             .element-shape-style(table-cell-success-inverse-active-disabled);
+            .property-variant(table-cell-success-inverse-active-disabled, opacity, null, null);
           }
+        }
+      }
+
+      // Disabled Table Row
+
+      tr.success.disabled td {
+        .element-shape-style(table-cell-success-inverse-disabled);
+        .element-text-style(table-cell-success-inverse-disabled);
+        .property-variant(table-cell-success-inverse-disabled, opacity, null, null);
+
+        &.active,
+        &.highlight {
+          .element-shape-style(table-cell-success-inverse-active-disabled);
+          .element-text-style(table-cell-success-inverse-active-disabled);
+          .property-variant(table-cell-success-inverse-active-disabled, opacity, null, null);
         }
       }
 

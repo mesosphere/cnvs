@@ -19,6 +19,7 @@
       &.disabled {
         .element-text-style(table-cell-danger-disabled);
         .element-shape-style(table-cell-danger-disabled);
+        .property-variant(table-cell-danger-disabled, opacity, null, null);
       }
 
       // Cell active
@@ -39,7 +40,23 @@
         &.disabled {
           .element-text-style(table-cell-danger-active-disabled);
           .element-shape-style(table-cell-danger-active-disabled);
+          .property-variant(table-cell-danger-active-disabled, opacity, null, null);
         }
+      }
+    }
+
+    // Disabled Table Row
+
+    tr.disabled td {
+      .element-shape-style(table-cell-danger-disabled);
+      .element-text-style(table-cell-danger-disabled);
+      .property-variant(table-cell-danger-disabled, opacity, null, null);
+
+      &.active,
+      &.highlight {
+        .element-shape-style(table-cell-danger-active-disabled);
+        .element-text-style(table-cell-danger-active-disabled);
+        .property-variant(table-cell-danger-active-disabled, opacity, null, null);
       }
     }
 
@@ -84,6 +101,7 @@
         &.disabled {
           .element-text-style(table-cell-danger-inverse-disabled);
           .element-shape-style(table-cell-danger-inverse-disabled);
+          .property-variant(table-cell-danger-inverse-disabled, opacity, null, null);
         }
 
         // Cell Active
@@ -104,7 +122,23 @@
           &.disabled {
             .element-text-style(table-cell-danger-inverse-active-disabled);
             .element-shape-style(table-cell-danger-inverse-active-disabled);
+            .property-variant(table-cell-danger-inverse-active-disabled, opacity, null, null);
           }
+        }
+      }
+
+      // Disabled Table Row
+
+      tr.danger.disabled td {
+        .element-shape-style(table-cell-danger-inverse-disabled);
+        .element-text-style(table-cell-danger-inverse-disabled);
+        .property-variant(table-cell-danger-inverse-disabled, opacity, null, null);
+
+        &.active,
+        &.highlight {
+          .element-shape-style(table-cell-danger-inverse-active-disabled);
+          .element-text-style(table-cell-danger-inverse-active-disabled);
+          .property-variant(table-cell-danger-inverse-active-disabled, opacity, null, null);
         }
       }
 
