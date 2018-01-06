@@ -26,25 +26,13 @@
 
   {% include layout/head.html %}
 
-  <!-- =================================================
-  BEGIN: Body
-  ================================================== -->
-
   <body>
 
     {% include layout/body-head.html %}
 
-    <!-- =================================================
-    BEGIN: Canvas
-    ================================================== -->
-
-    <div class="flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
+    <div class="app flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
       {% include layout/sidebar.html %}
-
-      <!-- =================================================
-      BEGIN: Page
-      ================================================== -->
 
       <section class="{{ page.id }} page flex-item-grow-1">
 
@@ -52,26 +40,14 @@
 
       </section>
 
-      <!-- =================================================
-      END: Page
-      ================================================== -->
-
       {% include layout/modals.html %}
 
       {% include layout/footer.html %}
 
     </div>
 
-    <!-- =================================================
-    END: Canvas
-    ================================================== -->
-
     {% include layout/body-foot.html %}
 
   </body>
-
-  <!-- =================================================
-  END: Body
-  ================================================== -->
 
 </html>
