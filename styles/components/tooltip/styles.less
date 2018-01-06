@@ -7,6 +7,7 @@
     .element-text-size(tooltip, null);
     .element-text-style(tooltip);
     .property-variant(tooltip, border-radius, null, null);
+    .property-variant(tooltip, max-width, null, null);
     .property-variant(tooltip, min-height, null, null);
     .property-variant(tooltip-notch, margin-bottom, height, null, null);
     align-items: center;
@@ -21,6 +22,7 @@
       bottom: 0;
       content: '';
       display: inline-block;
+      left: 50%;
       position: absolute;
 
       & when not (@tooltip-notch-width = null) {
@@ -61,6 +63,7 @@
       &:after {
         .triangle-color('left', @tooltip-background-color);
         bottom: auto;
+        left: auto;
         margin-left: 0;
         top: 50%;
 
@@ -83,6 +86,7 @@
       &:after {
         .triangle-color('right', @tooltip-background-color);
         bottom: auto;
+        left: auto;
         margin-left: 0;
         top: 50%;
 
@@ -124,6 +128,7 @@
         .element-spacing(tooltip, null, screen-small);
         .element-text-size(tooltip, screen-small);
         .property-variant(tooltip, border-radius, null, screen-small);
+        .property-variant(tooltip, max-width, null, screen-small);
         .property-variant(tooltip, min-height, null, screen-small);
         .property-variant(tooltip-notch, margin-bottom, height, null, screen-small);
 
@@ -213,6 +218,7 @@
         .element-spacing(tooltip, null, screen-medium);
         .element-text-size(tooltip, screen-medium);
         .property-variant(tooltip, border-radius, null, screen-medium);
+        .property-variant(tooltip, max-width, null, screen-medium);
         .property-variant(tooltip, min-height, null, screen-medium);
         .property-variant(tooltip-notch, margin-bottom, height, null, screen-medium);
 
@@ -302,6 +308,7 @@
         .element-spacing(tooltip, null, screen-large);
         .element-text-size(tooltip, screen-large);
         .property-variant(tooltip, border-radius, null, screen-large);
+        .property-variant(tooltip, max-width, null, screen-large);
         .property-variant(tooltip, min-height, null, screen-large);
         .property-variant(tooltip-notch, margin-bottom, height, null, screen-large);
 
@@ -391,6 +398,7 @@
         .element-spacing(tooltip, null, screen-jumbo);
         .element-text-size(tooltip, screen-jumbo);
         .property-variant(tooltip, border-radius, null, screen-jumbo);
+        .property-variant(tooltip, max-width, null, screen-jumbo);
         .property-variant(tooltip, min-height, null, screen-jumbo);
         .property-variant(tooltip-notch, margin-bottom, height, null, screen-jumbo);
 
