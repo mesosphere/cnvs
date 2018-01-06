@@ -1,222 +1,211 @@
 ---
 layout: post
+id: page-forms
 title: Forms
 page-header:
-  headline: "Forms"
-  alignment: left
-  parent:
-    label: "Components"
-    url: "/components/"
+  headline: Forms
 page-navigation:
-- label: "Form Controls"
-  link: "#forms-controls"
+- label: Form Controls
+  link: #forms-controls
   navigation:
-  - label: "Inputs"
-    link: "#forms-controls-inputs"
-  - label: "Text Area"
-    link: "#forms-controls-textarea"
-  - label: "Checkboxes &amp; Radios"
-    link: "#forms-controls-toggles"
-  - label: "Selects"
-    link: "#forms-controls-selects"
-- label: "Control States"
-  link: "#forms-controls-states"
+  - label: Inputs
+    link: #forms-controls-inputs
+  - label: Text Area
+    link: #forms-controls-textarea
+  - label: Checkboxes &amp; Radios
+    link: #forms-controls-toggles
+  - label: Selects
+    link: #forms-controls-selects
+- label: Control States
+  link: #forms-controls-states
   navigation:
-  - label: "Focus"
-    link: "#forms-controls-states-focus"
-  - label: "Disabled"
-    link: "#forms-controls-states-disabled"
-  - label: "Validation"
-    link: "#forms-controls-states-validation"
-- label: "Control Sizes"
-  link: "#forms-controls-sizes"
-- label: "Inverse Styling"
-  link: "#forms-controls-inverse-styling"
-- label: "Form Control Feedback"
-  link: "#forms-controls-feedback"
-- label: "Form Control Groups"
-  link: "#forms-form-control-groups"
+  - label: Focus
+    link: #forms-controls-states-focus
+  - label: Disabled
+    link: #forms-controls-states-disabled
+  - label: Validation
+    link: #forms-controls-states-validation
+- label: Control Sizes
+  link: #forms-controls-sizes
+- label: Inverse Styling
+  link: #forms-controls-inverse-styling
+- label: Form Control Feedback
+  link: #forms-controls-feedback
+- label: Form Control Groups
+  link: #forms-form-control-groups
 ---
 
+<p>
+
+  Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.
+
+</p>
+
 <!-- =================================================
-BEGIN: Forms
+BEGIN: EXAMPLE
 ================================================== -->
 
-<section class="fill" id="forms">
+<div class="panel flush-bottom">
 
-  <div class="container-fluid pod">
+  <div class="panel-cell">
 
-    <p>
+    <form class="form flush-bottom">
 
-      Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.
+      <div class="row">
 
-    </p>
+        <div class="column-small-6">
 
-    <!-- =================================================
-    BEGIN: EXAMPLE
-    ================================================== -->
+          <div class="form-group">
 
-    <div class="panel flush-bottom">
+            <label>
 
-      <div class="panel-cell">
+              First Name
 
-        <form class="form flush-bottom">
+            </label>
 
-          <div class="row">
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  First Name
-
-                </label>
-
-                <input type="text" class="form-control" placeholder="">
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Last Name
-
-                </label>
-
-                <input type="text" class="form-control" placeholder="">
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Email address
-
-                </label>
-
-                <input type="email" class="form-control" placeholder="email@domain.com">
-
-                <p class="form-control-feedback">
-
-                  Please provide a valid email.
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Password
-
-                </label>
-
-                <input type="password" class="form-control" placeholder="">
-
-                <p class="form-control-feedback">
-
-                  Must include at least 1 number and 1 symbol.
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-12">
-
-              <div class="form-group">
-
-                <label>
-
-                  About Me
-
-                </label>
-
-                <textarea class="form-control" rows="3"></textarea>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-12">
-
-              <div class="form-group">
-
-                <label>
-
-                  I am a...
-
-                </label>
-
-                <label class="form-control-toggle form-control-toggle-custom">
-
-                  <input type="radio" name="radio-group-a" checked="checked">
-
-                  <span class="form-control-toggle-indicator"></span>
-
-                  Man
-
-                </label>
-
-                <label class="form-control-toggle form-control-toggle-custom">
-
-                  <input type="radio" name="radio-group-a">
-
-                  <span class="form-control-toggle-indicator"></span>
-
-                  Woman
-
-                </label>
-
-                <label class="form-control-toggle form-control-toggle-custom">
-
-                  <input type="radio" name="radio-group-a">
-
-                  <span class="form-control-toggle-indicator"></span>
-
-                  Unicorn
-
-                </label>
-
-              </div>
-
-            </div>
+            <input type="text" class="form-control" placeholder="">
 
           </div>
 
-          <div class="button-collection flush-bottom">
+        </div>
 
-            <button type="submit" class="button button-primary">
+        <div class="column-small-6">
 
-              Submit
+          <div class="form-group">
 
-            </button>
+            <label>
+
+              Last Name
+
+            </label>
+
+            <input type="text" class="form-control" placeholder="">
 
           </div>
 
-        </form>
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group">
+
+            <label>
+
+              Email address
+
+            </label>
+
+            <input type="email" class="form-control" placeholder="email@domain.com">
+
+            <p class="form-control-feedback">
+
+              Please provide a valid email.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group">
+
+            <label>
+
+              Password
+
+            </label>
+
+            <input type="password" class="form-control" placeholder="">
+
+            <p class="form-control-feedback">
+
+              Must include at least 1 number and 1 symbol.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label>
+
+              About Me
+
+            </label>
+
+            <textarea class="form-control" rows="3"></textarea>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label>
+
+              I am a...
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="radio-group-a" checked="checked">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Man
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="radio-group-a">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Woman
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="radio-group-a">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Unicorn
+
+            </label>
+
+          </div>
+
+        </div>
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+      <div class="button-collection flush-bottom">
+
+        <button type="submit" class="button button-primary">
+
+          Submit
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
 <pre class="prettyprint transparent flush lang-html">
 &lt;form class="form flush-bottom"&gt;
@@ -247,25 +236,13 @@ BEGIN: Forms
 &lt;/form&gt;
 </pre>
 
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-    {% include components/forms/forms-controls.html %}
-    {% include components/forms/forms-controls-sizes.html %}
-    {% include components/forms/forms-controls-states.html %}
-    {% include components/forms/forms-controls-inverse-styling.html %}
-    {% include components/forms/forms-controls-feedback.html %}
-    {% include components/forms/forms-form-control-groups.html %}
-
   </div>
 
-</section>
+</div>
 
-<!-- =================================================
-END: Forms
-================================================== -->
+{% include components/forms/forms-controls.html %}
+{% include components/forms/forms-controls-sizes.html %}
+{% include components/forms/forms-controls-states.html %}
+{% include components/forms/forms-controls-inverse-styling.html %}
+{% include components/forms/forms-controls-feedback.html %}
+{% include components/forms/forms-form-control-groups.html %}

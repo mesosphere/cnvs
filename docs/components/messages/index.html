@@ -1,62 +1,40 @@
 ---
 layout: post
+id: page-messages
 title: Messages
 page-header:
-  headline: "Messages"
-  alignment: left
-  parent:
-    label: "Components"
-    url: "/components/"
+  headline: Messages
+  description: Messages are an easy way to provide contextual messages or feedback related to a specific event, condition, or user action.
 page-navigation:
-- label: "Message States"
-  link: "#messages-states"
-- label: "Inverse Styling"
-  link: "#messages-inverse-styling"
-- label: "Message Content"
-  link: "#messages-content"
-- label: "Dismissible Messages"
-  link: "#messages-dismissible"
+- label: Message States
+  link: #messages-states
+- label: Inverse Styling
+  link: #messages-inverse-styling
+- label: Message Content
+  link: #messages-content
+- label: Dismissible Messages
+  link: #messages-dismissible
 ---
 
-<!-- =================================================
-BEGIN: Badges
-================================================== -->
+<p>
 
-<section class="fill" id="messages">
+  Use messages in your project to convey information, provide tips, communicate success, or even flag and notify the user of errors. Wrap your message in an element with the class <code>.message</code> to apply the default message appearance. Any HTML can live inside a message, though content is typically limited to text and simple actions.
 
-  <div class="fill">
+</p>
 
-    <div class="container-fluid pod">
+<div class="panel flush-bottom">
 
-      <p class="lead">
+  <div class="panel-cell">
 
-        Messages are an easy way to provide contextual messages or feedback related to a specific event, condition, or user action.
+    <div class="message flush-bottom">
 
-      </p>
+      <strong>Message:</strong> This is a relevant message you should read.
 
-      <p>
+    </div>
 
-        Use messages in your project to convey information, provide tips, communicate success, or even flag and notify the user of errors. Wrap your message in an element with the class <code>.message</code> to apply the default message appearance. Any HTML can live inside a message, though content is typically limited to text and simple actions.
+  </div>
 
-      </p>
-
-      <!-- =================================================
-      BEGIN: Example
-      ================================================== -->
-
-      <div class="panel flush-bottom">
-
-        <div class="panel-cell">
-
-          <div class="message flush-bottom">
-
-            <strong>Message:</strong> This is a relevant message you should read.
-
-          </div>
-
-        </div>
-
-        <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="message"&gt;
@@ -64,25 +42,11 @@ BEGIN: Badges
 &lt;/div&gt;
 </pre>
 
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      END: Example
-      ================================================== -->
-
-      {% include components/messages/messages-states.html %}
-      {% include components/messages/messages-inverse-styling.html %}
-      {% include components/messages/messages-content.html %}
-      {% include components/messages/messages-dismissible.html %}
-
-    </div>
-
   </div>
 
-</section>
+</div>
 
-<!-- =================================================
-END: Icons
-================================================== -->
+{% include components/messages/messages-states.html %}
+{% include components/messages/messages-inverse-styling.html %}
+{% include components/messages/messages-content.html %}
+{% include components/messages/messages-dismissible.html %}

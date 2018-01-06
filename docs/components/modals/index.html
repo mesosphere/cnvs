@@ -1,135 +1,83 @@
 ---
 layout: post
+id: page-modals
 title: Modals
 page-header:
-  headline: "Modals"
-  alignment: left
-  parent:
-    label: "Components"
-    url: "/components/"
+  headline: Modals
+  description: Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
 page-navigation:
-- label: "Modal Structure"
-  link: "#modals-structure"
-- label: "Modal Sizes"
-  link: "#modals-sizes"
+- label: Modal Structure
+  link: #modals-structure
+- label: Modal Sizes
+  link: #modals-sizes
   navigation:
-  - label: "Small Modal"
-    link: "#modals-sizes-small"
-  - label: "Large Modal"
-    link: "#modals-sizes-large"
+  - label: Small Modal
+    link: #modals-sizes-small
+  - label: Large Modal
+    link: #modals-sizes-large
 ---
 
-<!-- =================================================
-BEGIN: Modals
-================================================== -->
+<p>
 
-<section class="fill" id="modals">
+  Use the class <code>.modal</code> in combination with one or more nested layout components to quickly create a new modal.  Below is an example of simple modal with a header, body, and footer.
 
-  <div class="container-fluid pod">
+</p>
 
-    <!-- =================================================
-    BEGIN: Modals Overview
-    ================================================== -->
+<div class="panel panel-inverse flush-bottom">
 
-    <section id="modals-overview">
+  <div class="panel-cell panel-cell-inverse">
 
-      <p class="lead">
+    <div class="modal modal-inline">
 
-        Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
+      <div class="modal-header">
 
-      </p>
+        <h5 class="modal-header-title flush">
 
-      <p>
+          Join Our Mailing List
 
-        Use the class <code>.modal</code> in combination with one or more nested layout components to quickly create a new modal.  Below is an example of simple modal with a header, body, and footer.
+        </h5>
 
-      </p>
+      </div>
 
-      <!-- =================================================
-      BEGIN: Example
-      ================================================== -->
+      <div class="modal-body">
 
-      <div class="panel panel-inverse flush-bottom">
+        <p>
 
-        <div class="panel-cell panel-cell-inverse">
+          Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
 
-          <div class="modal modal-inline">
+        </p>
 
-            <div class="modal-header">
+        <div class="form flush-bottom">
 
-              <h5 class="modal-header-title flush">
+          <div class="row">
 
-                Join Our Mailing List
+            <div class="column-small-6">
 
-              </h5>
+              <div class="form-group flush-bottom-screen-small">
 
-            </div>
+                <label>
 
-            <div class="modal-body">
+                  Full Name
 
-              <p>
+                </label>
 
-                Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
-
-              </p>
-
-              <div class="form flush-bottom">
-
-                <div class="row">
-
-                  <div class="column-small-6">
-
-                    <div class="form-group flush-bottom-screen-small">
-
-                      <label>
-
-                        Full Name
-
-                      </label>
-
-                      <input class="form-control" type="text">
-
-                    </div>
-
-                  </div>
-
-                  <div class="column-small-6">
-
-                    <div class="form-group flush-bottom-screen-small">
-
-                      <label>
-
-                        Email
-
-                      </label>
-
-                      <input class="form-control" type="email">
-
-                    </div>
-
-                  </div>
-
-                </div>
+                <input class="form-control" type="text">
 
               </div>
 
             </div>
 
-            <div class="modal-footer">
+            <div class="column-small-6">
 
-              <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
+              <div class="form-group flush-bottom-screen-small">
 
-                <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+                <label>
 
-                  Submit
+                  Email
 
-                </a>
+                </label>
 
-                <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                  Close
-
-                </a>
+                <input class="form-control" type="email">
 
               </div>
 
@@ -141,24 +89,32 @@ BEGIN: Modals
 
       </div>
 
-      <!-- =================================================
-      END: Example
-      ================================================== -->
+      <div class="modal-footer">
 
-    </section>
+        <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
 
-    <!-- =================================================
-    END: Modals Overview
-    ================================================== -->
+          <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
 
-    {% include components/modals/modals-example.html %}
-    {% include components/modals/modals-structure.html %}
-    {% include components/modals/modals-sizes.html %}
+            Submit
+
+          </a>
+
+          <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+
+            Close
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
-</section>
+</div>
 
-<!-- =================================================
-END: Modals
-================================================== -->
+{% include components/modals/modals-example.html %}
+{% include components/modals/modals-structure.html %}
+{% include components/modals/modals-sizes.html %}

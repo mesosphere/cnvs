@@ -1,104 +1,91 @@
 ---
 layout: post
+id: page-dropdowns
 title: Dropdowns
 page-header:
-  headline: "Dropdowns"
-  alignment: left
-  parent:
-    label: "Components"
-    url: "/components/"
+  headline: Dropdowns
 page-navigation:
-- label: "Dropdown Menu List"
-  link: "#dropdowns-menu-list"
-- label: "Dropdown Headers"
-  link: "#dropdowns-headers"
-- label: "Menu Dividers"
-  link: "#dropdowns-dividers"
-- label: "Dropdown Menu List States"
-  link: "#dropdowns-menu-list-states"
-- label: "Inverse Styling"
-  link: "#dropdowns-menu-inverted"
-- label: "Menu List Item Content"
-  link: "#dropdowns-menu-list-item-content"
-- label: "Alignment"
-  link: "#dropdowns-alignment"
+- label: Dropdown Menu List
+  link: #dropdowns-menu-list
+- label: Dropdown Headers
+  link: #dropdowns-headers
+- label: Menu Dividers
+  link: #dropdowns-dividers
+- label: Dropdown Menu List States
+  link: #dropdowns-menu-list-states
+- label: Inverse Styling
+  link: #dropdowns-menu-inverted
+- label: Menu List Item Content
+  link: #dropdowns-menu-list-item-content
+- label: Alignment
+  link: #dropdowns-alignment
 ---
 
+<p>
+
+  Dropdown menus are toggleable, non-invasive, contextual dialogs for displaying lists of links. In CNVS, we've made dropdown menus interactive with the <a href="http://getbootstrap.com/javascript/#dropdowns" target="_blank">Bootstrap JavaScript Plugin</a>. Use the <code>.dropdown-menu</code> and expected markup to create a dropdown menu. To toggle the display of a dropdown menu, add the class <code>.dropdown-toggle</code> to the triggering element, and wrap both the <code>.dropdown-toggle</code> and the <code>.dropdown-menu</code> in an element of class <code>.dropdown</code>.
+
+</p>
+
 <!-- =================================================
-BEGIN: Dropdowns
+BEGIN: Example
 ================================================== -->
 
-<section class="fill" id="dropdowns">
+<div class="panel flush-bottom">
 
-  <div class="fill">
+  <div class="panel-cell">
 
-    <div class="container-fluid pod">
+    <div class="dropdown force-open">
 
-      <p>
+      <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 
-        Dropdown menus are toggleable, non-invasive, contextual dialogs for displaying lists of links. In CNVS, we've made dropdown menus interactive with the <a href="http://getbootstrap.com/javascript/#dropdowns" target="_blank">Bootstrap JavaScript Plugin</a>. Use the <code>.dropdown-menu</code> and expected markup to create a dropdown menu. To toggle the display of a dropdown menu, add the class <code>.dropdown-toggle</code> to the triggering element, and wrap both the <code>.dropdown-toggle</code> and the <code>.dropdown-menu</code> in an element of class <code>.dropdown</code>.
+        Dropdown
 
-      </p>
+      </button>
 
-      <!-- =================================================
-      BEGIN: Example
-      ================================================== -->
+      <span class="dropdown-menu" role="menu">
 
-      <div class="panel flush-bottom">
+        <ul class="dropdown-menu-list">
 
-        <div class="panel-cell">
+          <li>
 
-          <div class="dropdown force-open">
+            <a href="#">
 
-            <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              Action
 
-              Dropdown
+            </a>
 
-            </button>
+          </li>
 
-            <span class="dropdown-menu" role="menu">
+          <li>
 
-              <ul class="dropdown-menu-list">
+            <a href="#">
 
-                <li>
+              Another action
 
-                  <a href="#">
+            </a>
 
-                    Action
+          </li>
 
-                  </a>
+          <li>
 
-                </li>
+            <a href="#">
 
-                <li>
+              Something else here
 
-                  <a href="#">
+            </a>
 
-                    Another action
+          </li>
 
-                  </a>
+        </ul>
 
-                </li>
+      </span>
 
-                <li>
+    </div>
 
-                  <a href="#">
+  </div>
 
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-        </div>
-
-        <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="dropdown"&gt;
@@ -111,28 +98,14 @@ BEGIN: Dropdowns
 &lt;/div&gt;
 </pre>
 
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      END: Example
-      ================================================== -->
-
-      {% include components/dropdowns/dropdowns-menu-list.html %}
-      {% include components/dropdowns/dropdowns-headers.html %}
-      {% include components/dropdowns/dropdowns-dividers.html %}
-      {% include components/dropdowns/dropdowns-menu-list-states.html %}
-      {% include components/dropdowns/dropdowns-menu-inverted.html %}
-      {% include components/dropdowns/dropdowns-menu-list-item-content.html %}
-      {% include components/dropdowns/dropdowns-alignment.html %}
-
-    </div>
-
   </div>
 
-</section>
+</div>
 
-<!-- =================================================
-END: Dropdowns
-================================================== -->
+{% include components/dropdowns/dropdowns-menu-list.html %}
+{% include components/dropdowns/dropdowns-headers.html %}
+{% include components/dropdowns/dropdowns-dividers.html %}
+{% include components/dropdowns/dropdowns-menu-list-states.html %}
+{% include components/dropdowns/dropdowns-menu-inverted.html %}
+{% include components/dropdowns/dropdowns-menu-list-item-content.html %}
+{% include components/dropdowns/dropdowns-alignment.html %}

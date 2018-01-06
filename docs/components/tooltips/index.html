@@ -1,52 +1,30 @@
 ---
 layout: post
+id: page-tooltips
 title: Tooltips
 page-header:
-  headline: "Tooltips"
-  alignment: left
-  parent:
-    label: "Components"
-    url: "/components/"
+  headline: Tooltips
+  description: Tooltips are used to provide added detail to an element.
 page-navigation:
-- label: "Tooltip Positions"
-  link: "#tooltips-positions"
-- label: "Interactive Demo"
-  link: "#tooltips-interactive-demo"
+- label: Tooltip Positions
+  link: #tooltips-positions
+- label: Interactive Demo
+  link: #tooltips-interactive-demo
 ---
 
-<!-- =================================================
-BEGIN: Badges
-================================================== -->
+<div class="panel flush-bottom">
 
-<section class="fill" id="tooltips">
+  <div class="panel-cell">
 
-  <div class="fill">
+    <div class="tooltip">
 
-    <div class="container-fluid pod">
+      This is a simple tooltip
 
-      <p>
+    </div>
 
-        Tooltips are used to provide added detail to an element.
+  </div>
 
-      </p>
-
-      <!-- =================================================
-      BEGIN: Example
-      ================================================== -->
-
-      <div class="panel flush-bottom">
-
-        <div class="panel-cell">
-
-          <div class="tooltip">
-
-            This is a simple tooltip
-
-          </div>
-
-        </div>
-
-        <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="tooltip"&gt;
@@ -54,23 +32,9 @@ BEGIN: Badges
 &lt;/div&gt;
 </pre>
 
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      END: Example
-      ================================================== -->
-
-      {% include components/tooltips/tooltips-positions.html %}
-      {% include components/tooltips/tooltips-interactive-demo.html %}
-
-    </div>
-
   </div>
 
-</section>
+</div>
 
-<!-- =================================================
-END: Icons
-================================================== -->
+{% include components/tooltips/tooltips-positions.html %}
+{% include components/tooltips/tooltips-interactive-demo.html %}
