@@ -102,6 +102,18 @@
       }
     }
 
+    a {
+      .element-text-style(tooltip-link);
+
+      &:hover {
+        .element-text-style(tooltip-link-hover);
+      }
+
+      &:active {
+        .element-text-style(tooltip-link-active);
+      }
+    }
+
     & when not (@tooltip-content-padding-horizontal = null) {
       /* Tooltip Content */
 
