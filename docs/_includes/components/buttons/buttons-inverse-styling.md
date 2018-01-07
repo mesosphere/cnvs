@@ -1,151 +1,123 @@
-<!-- =================================================
-BEGIN: Button States
-================================================== -->
+# Inverse Styling
 
-<section id="buttons-inverse-styling">
+Add the class `.button-inverse` to any `.button` element to leverage inverse styling.
 
-  <h1>
+<div class="panel">
 
-    Inverse Styling
+  <div class="panel-cell panel-cell-dark">
 
-  </h1>
+    <div class="button-collection">
 
-  <p>
+      <a href="#" class="button button-inverse">
 
-    Add the class <code>.button-inverse</code> to any <code>.button</code> element to leverage inverse styling.
+        Default
 
-  </p>
+      </a>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <a href="#" class="button button-primary button-inverse">
 
-  <div class="panel panel-inverse">
+        Primary
 
-    <div class="panel-cell panel-cell-inverse">
+      </a>
 
-      <div class="button-collection">
+      <a href="#" class="button button-success button-inverse">
 
-        <a href="#" class="button button-inverse">
+        Success
 
-          Default
+      </a>
 
-        </a>
+      <a href="#" class="button button-warning button-inverse">
 
-        <a href="#" class="button button-primary button-inverse">
+        Warning
 
-          Primary
+      </a>
 
-        </a>
+      <a href="#" class="button button-danger button-inverse">
 
-        <a href="#" class="button button-success button-inverse">
+        Danger
 
-          Success
-
-        </a>
-
-        <a href="#" class="button button-warning button-inverse">
-
-          Warning
-
-        </a>
-
-        <a href="#" class="button button-danger button-inverse">
-
-          Danger
-
-        </a>
-
-      </div>
-
-      <div class="button-collection">
-
-        <a href="#" class="button button-outline button-inverse">
-
-          Default
-
-        </a>
-
-        <a href="#" class="button button-primary-outline button-inverse">
-
-          Primary
-
-        </a>
-
-        <a href="#" class="button button-success-outline button-inverse">
-
-          Success
-
-        </a>
-
-        <a href="#" class="button button-warning-outline button-inverse">
-
-          Warning
-
-        </a>
-
-        <a href="#" class="button button-danger-outline button-inverse">
-
-          Danger
-
-        </a>
-
-      </div>
-
-      <div class="button-collection flush-bottom">
-
-        <a href="#" class="button button-link button-inverse">
-
-          Default
-
-        </a>
-
-        <a href="#" class="button button-primary-link button-inverse">
-
-          Primary
-
-        </a>
-
-        <a href="#" class="button button-success-link button-inverse">
-
-          Success
-
-        </a>
-
-        <a href="#" class="button button-warning-link button-inverse">
-
-          Warning
-
-        </a>
-
-        <a href="#" class="button button-danger-link button-inverse">
-
-          Danger
-
-        </a>
-
-      </div>
+      </a>
 
     </div>
 
-    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
+    <div class="button-collection">
 
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;a href="#" class="button button-inverse"&gt;
-  Default
-&lt;/a&gt;
-</pre>
+      <a href="#" class="button button-outline button-inverse">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-outline button-inverse">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-outline button-inverse">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-outline button-inverse">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-outline button-inverse">
+
+        Danger
+
+      </a>
+
+    </div>
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-link button-inverse">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-link button-inverse">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-link button-inverse">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-link button-inverse">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-link button-inverse">
+
+        Danger
+
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<a href="#" class="button button-inverse">
+  Default
+</a>
+```
 
-<!-- =================================================
-END: Button States
-================================================== -->
+  </div>
+
+</div>

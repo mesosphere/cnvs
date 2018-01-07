@@ -1,859 +1,755 @@
-<!-- =================================================
-BEGIN: Button Dropdowns
-================================================== -->
+# Button Dropdowns
 
-<section id="buttons-dropdowns">
+Use any button to trigger a dropdown menu by placing it within a `.btn-group` and providing the proper menu markup.
 
-  <h1>
+## Single Button Dropdowns
 
-    Button Dropdowns
+Turn a button into a dropdown toggle with some basic markup changes.
 
-  </h1>
+<div class="panel panel-overflow">
 
-  <p>
+  <div class="panel-cell">
 
-    Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.
+    <div class="button-group">
 
-  </p>
+      <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 
-  <!-- =================================================
-  BEGIN: Single Button Dropdown
-  ================================================== -->
+        Toggle Button
 
-  <section id="buttons-dropdowns-single-button">
+      </button>
 
-    <h2>
+      <span class="dropdown-menu" role="menu">
 
-      Single Button Dropdowns
+        <ul class="dropdown-menu-list">
 
-    </h2>
+          <li>
 
-    <p>
+            <a href="#">
 
-      Turn a button into a dropdown toggle with some basic markup changes.
+              Action
 
-    </p>
+            </a>
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+          </li>
 
-    <div class="panel panel-overflow">
+          <li>
 
-      <div class="panel-cell">
+            <a href="#">
 
-        <div class="button-group">
+              Another action
 
-          <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            </a>
 
-            Toggle Button
+          </li>
 
-          </button>
+          <li>
 
-          <span class="dropdown-menu" role="menu">
+            <a href="#">
 
-            <ul class="dropdown-menu-list">
+              Something else here
 
-              <li>
+            </a>
 
-                <a href="#">
+          </li>
 
-                  Action
+        </ul>
 
-                </a>
+      </span>
 
-              </li>
+    </div>
 
-              <li>
+  </div>
 
-                <a href="#">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-                  Another action
-
-                </a>
-
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Something else here
-
-                </a>
-
-              </li>
-
-            </ul>
-
-          </span>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group"&gt;
-  &lt;button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+```html
+<div class="button-group">
+  <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Toggle Button
-  &lt;/button&gt;
-  &lt;span class="dropdown-menu" role="menu"&gt;
-    &lt;ul class="dropdown-menu-list"&gt;
-      &lt;li&gt;
-        &lt;a href="#"&gt;
+  </button>
+  <span class="dropdown-menu" role="menu">
+    <ul class="dropdown-menu-list">
+      <li>
+        <a href="#">
           Action
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="#"&gt;
+        </a>
+      </li>
+      <li>
+        <a href="#">
           Another action
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="#"&gt;
+        </a>
+      </li>
+      <li>
+        <a href="#">
           Something else here
-        &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-</pre>
+        </a>
+      </li>
+    </ul>
+  </span>
+</div>
+```
+
+  </div>
+
+</div>
+
+## Button Dropdown Sizes
+
+Button dropdowns work with buttons of all sizes.
+
+<div class="panel panel-overflow">
+
+  <div class="panel-cell">
+
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
+
+      <div class="button-group">
+
+        <button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Jumbo
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Large
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Medium
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Small
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Mini
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
 
       </div>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Single Button Dropdowns
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Sizing
-  ================================================== -->
-
-  <section id="buttons-dropdowns-sizing">
-
-    <h2>
-
-      Button Dropdown Sizes
-
-    </h2>
-
-    <p>
-
-      Button dropdowns work with buttons of all sizes.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel panel-overflow">
-
-      <div class="panel-cell">
-
-        <div class="button-collection button-collection-align-vertical-center flush-bottom">
-
-          <div class="button-group">
-
-            <button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Jumbo
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Large
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Medium
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Small
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Mini
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-collection"&gt;
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+```html
+<div class="button-collection">
+  <div class="button-group">
+    <button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Jumbo
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
+    </button>
+    <span class="dropdown-menu" role="menu">
       &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
+    </span>
+  </div>
 
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+  <div class="button-group">
+    <button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Large
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
+    </button>
+    <span class="dropdown-menu" role="menu">
       &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
+    </span>
+  </div>
 
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+  <div class="button-group">
+    <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Medium
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
+    </button>
+    <span class="dropdown-menu" role="menu">
       &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
+    </span>
+  </div>
 
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+  <div class="button-group">
+    <button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Small
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
+    </button>
+    <span class="dropdown-menu" role="menu">
       &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
+    </span>
+  </div>
 
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+  <div class="button-group">
+    <button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Mini
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
+    </button>
+    <span class="dropdown-menu" role="menu">
       &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </span>
+  </div>
+</div>
+```
+
+  </div>
+
+</div>
+
+## Styled Button Dropdown
+
+Button dropdowns work with all supported button styles. Add .button-stroke or any other included button style class to your button dropdown element. You can even combine styles.
+
+<div class="panel panel-overflow">
+
+  <div class="panel-cell">
+
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
+
+      <div class="button-group">
+
+        <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-stroke button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-success button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-danger button-rounded button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
 
       </div>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
-
-  <!-- =================================================
-  END: Sizing
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Styled button dropdowns
-  ================================================== -->
-
-  <section id="buttons-dropdowns-styled">
-
-    <h2>
-
-      Styled Button Dropdown
-
-    </h2>
-
-    <p>
-
-      Button dropdowns work with all supported button styles. Add .button-stroke or any other included button style class to your button dropdown element. You can even combine styles.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel panel-overflow">
-
-      <div class="panel-cell">
-
-        <div class="button-collection button-collection-align-vertical-center flush-bottom">
-
-          <div class="button-group">
-
-            <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-stroke button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-success button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-danger button-rounded button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Styled button dropdowns
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Button Dropdowns
-================================================== -->
+</div>

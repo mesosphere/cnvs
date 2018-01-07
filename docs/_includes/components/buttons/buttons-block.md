@@ -1,159 +1,103 @@
-<!-- =================================================
-BEGIN: Block Buttons
-================================================== -->
+# Block Buttons
 
-<section id="buttons-block">
+Use the class `.button-block` when you need a button to fill the entire width of it's parent container.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Block Buttons
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection button-collection-align-middle flush-bottom">
 
-  <p>
+      <a href="#" class="button button-block">
 
-    Use the class <code>.button-block</code> when you need a button to fill the entire width of it's parent container.
+        Block Button
 
-  </p>
+      </a>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <a href="#" class="button button-primary button-block">
 
-  <div class="panel flush-bottom">
+        Block Button
 
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush-bottom">
-
-        <a href="#" class="button button-block">
-
-          Block Button
-
-        </a>
-
-        <a href="#" class="button button-primary button-block">
-
-          Block Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button button-block"&gt;
-  Block Button
-&lt;/a&gt;
-</pre>
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  BEGIN: Responsive Block Buttons
-  ================================================== -->
+```html
+<a href="#" class="button button-block">
+  Block Button
+</a>
+```
 
-  <section id="buttons-block-responsive">
+  </div>
 
-    <h2>
+</div>
 
-      Responsive Block Buttons
+## Responsive Block Buttons
 
-    </h2>
+Optional classes are available when you need a button to fill it's parent container only below a specific screen size.  Add `.button-block-below-screen-*`, replacing `*` with `-mini`, `-small`, `-medium`, or `-large`.  Try it out.  Resize this browser window and observe when the buttons below switch to their Block view.
 
-    <p>
+<div class="panel flush-bottom">
 
-      Optional classes are available when you need a button to fill it's parent container only below a specific screen size.  Add <code>.button-block-below-screen-*</code>, replacing <code>*</code> with <code>-mini</code>, <code>-small</code>, <code>-medium</code>, or <code>-large</code>.  Try it out.  Resize this browser window and observe when the buttons below switch to their Block view.
+  <div class="panel-cell">
 
-    </p>
+    <div class="button-collection button-collection-align-middle flush-bottom">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+      <a href="#" class="button button-block button-block-below-screen-small">
 
-    <div class="panel flush-bottom">
+        Block Button (Mini)
 
-      <div class="panel-cell">
+      </a>
 
-        <div class="button-collection button-collection-align-middle flush-bottom">
+      <a href="#" class="button button-block button-block-below-screen-medium">
 
-          <a href="#" class="button button-block button-block-below-screen-small">
+        Block Button (Small)
 
-            Block Button (Mini)
+      </a>
 
-          </a>
+      <a href="#" class="button button-block button-block-below-screen-large">
 
-          <a href="#" class="button button-block button-block-below-screen-medium">
+        Block Button (Medium)
 
-            Block Button (Small)
+      </a>
 
-          </a>
+      <a href="#" class="button button-block button-block-below-screen-jumbo">
 
-          <a href="#" class="button button-block button-block-below-screen-large">
+        Block Button (Large)
 
-            Block Button (Medium)
-
-          </a>
-
-          <a href="#" class="button button-block button-block-below-screen-jumbo">
-
-            Block Button (Large)
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Block Button: When Smaller than Screen Mini--&gt;
-&lt;a href="#" class="button button-block button-block-below-screen-small"&gt;
-  Block Button (Mini)
-&lt;/a&gt;
-
-&lt;!-- Block Button: When Smaller than Screen Small--&gt;
-&lt;a href="#" class="button button-block button-block-below-screen-medium"&gt;
-  Block Button (Small)
-&lt;/a&gt;
-
-&lt;!-- Block Button: When Smaller than Screen Medium--&gt;
-&lt;a href="#" class="button button-block button-block-below-screen-large"&gt;
-  Block Button (Medium)
-&lt;/a&gt;
-
-&lt;!-- Block Button: When Smaller than Screen Large--&gt;
-&lt;a href="#" class="button button-block button-block-below-screen-jumbo"&gt;
-  Block Button (Large)
-&lt;/a&gt;
-</pre>
-
-      </div>
+      </a>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Block Buttons
-  ================================================== -->
+```html
+<!-- Block Button: When Smaller than Screen Mini-->
+<a href="#" class="button button-block button-block-below-screen-small">
+  Block Button (Mini)
+</a>
 
-</section>
+<!-- Block Button: When Smaller than Screen Small-->
+<a href="#" class="button button-block button-block-below-screen-medium">
+  Block Button (Small)
+</a>
 
-<!-- =================================================
-END: Block Buttons
-================================================== -->
+<!-- Block Button: When Smaller than Screen Medium-->
+<a href="#" class="button button-block button-block-below-screen-large">
+  Block Button (Medium)
+</a>
+
+<!-- Block Button: When Smaller than Screen Large-->
+<a href="#" class="button button-block button-block-below-screen-jumbo">
+  Block Button (Large)
+</a>
+```
+
+  </div>
+
+</div>

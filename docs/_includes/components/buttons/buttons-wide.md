@@ -1,65 +1,37 @@
-<!-- =================================================
-BEGIN: Wide Buttons
-================================================== -->
+# Wide Buttons
 
-<section id="buttons-wide">
+Use the class `.button-wide` to increase the horizontal padding within a button.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Wide Buttons
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection button-collection-align-middle flush-bottom">
 
-  <p>
+      <a href="#" class="button button-wide">
 
-    Use the class <code>.button-wide</code> to increase the horizontal padding within a button.
+        Wide Button
 
-  </p>
+      </a>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <a href="#" class="button button-primary button-wide">
 
-  <div class="panel flush-bottom">
+        Wide Button
 
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush-bottom">
-
-        <a href="#" class="button button-wide">
-
-          Wide Button
-
-        </a>
-
-        <a href="#" class="button button-primary button-wide">
-
-          Wide Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button button-wide"&gt;
-  Wide Button
-&lt;/a&gt;
-</pre>
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<a href="#" class="button button-wide">
+  Wide Button
+</a>
+```
 
-<!-- =================================================
-END: Wide Buttons
-================================================== -->
+  </div>
+
+</div>

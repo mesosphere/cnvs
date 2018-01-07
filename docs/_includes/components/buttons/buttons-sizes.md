@@ -1,104 +1,76 @@
-<!-- =================================================
-BEGIN: Button Sizes
-================================================== -->
+# Button Sizes
 
-<section id="buttons-sizes">
+By default, buttons display at a standard size, comparable to that of an input field.  Four additional sizes are available: mini, small, large, and jumbo.  Add classes `.button-mini`, `.button-small`, `.button-large`, and `.button-jumbo` respectively to each button to adjust it's size.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Button Sizes
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection button-collection-align-middle flush">
 
-  <p>
+      <a href="#" class="button button-jumbo">
 
-    By default, buttons display at a standard size, comparable to that of an input field.  Four additional sizes are available: mini, small, large, and jumbo.  Add classes <code>.button-mini</code>, <code>.button-small</code>, <code>.button-large</code>, and <code>.button-jumbo</code> respectively to each button to adjust it's size.
+        Jumbo
 
-  </p>
+      </a>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <a href="#" class="button button-large">
 
-  <div class="panel flush-bottom">
+        Large
 
-    <div class="panel-cell">
+      </a>
 
-      <div class="button-collection button-collection-align-middle flush">
+      <a href="#" class="button">
 
-        <a href="#" class="button button-jumbo">
+        Default
 
-          Jumbo
+      </a>
 
-        </a>
+      <a href="#" class="button button-small">
 
-        <a href="#" class="button button-large">
+        Small
 
-          Large
+      </a>
 
-        </a>
+      <a href="#" class="button button-mini">
 
-        <a href="#" class="button">
+        Mini
 
-          Default
-
-        </a>
-
-        <a href="#" class="button button-small">
-
-          Small
-
-        </a>
-
-        <a href="#" class="button button-mini">
-
-          Mini
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Jumbo --&gt;
-&lt;a href="#" class="button button-jumbo"&gt;
-  Jumbo
-&lt;/a&gt;
-
-&lt;!-- Button: Large --&gt;
-&lt;a href="#" class="button button-large"&gt;
-  Large
-&lt;/a&gt;
-
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Small --&gt;
-&lt;a href="#" class="button button-small"&gt;
-  Small
-&lt;/a&gt;
-
-&lt;!-- Button: Mini --&gt;
-&lt;a href="#" class="button button-mini"&gt;
-  Mini
-&lt;/a&gt;
-</pre>
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<!-- Button: Jumbo -->
+<a href="#" class="button button-jumbo">
+  Jumbo
+</a>
 
-<!-- =================================================
-END: Button Sizes
-================================================== -->
+<!-- Button: Large -->
+<a href="#" class="button button-large">
+  Large
+</a>
+
+<!-- Button: Default -->
+<a href="#" class="button">
+  Default
+</a>
+
+<!-- Button: Small -->
+<a href="#" class="button button-small">
+  Small
+</a>
+
+<!-- Button: Mini -->
+<a href="#" class="button button-mini">
+  Mini
+</a>
+```
+
+  </div>
+
+</div>

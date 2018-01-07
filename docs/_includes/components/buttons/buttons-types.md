@@ -1,383 +1,251 @@
-<!-- =================================================
-BEGIN: Button Types
-================================================== -->
+# Button Types
 
-<section id="buttons-types">
+We realize that one button shape and style, even with it's available states, may not be enough for the unique needs of your project.  This is why we've include a number of additional button types: rounded, outlined, link.
 
-  <h1>
+## Rounded Button
 
-    Button Types
+Add the class `.button-rounded` to any `.button` element to display it with rounded caps.
 
-  </h1>
+<div class="panel flush-bottom">
 
-  <p>
+  <div class="panel-cell">
 
-    We realize that one button shape and style, even with it's available states, may not be enough for the unique needs of your project.  This is why we've include a number of additional button types: rounded, outlined, link.
+    <div class="button-collection flush-bottom">
 
-  </p>
+      <a href="#" class="button button-rounded">
 
-  <!-- =================================================
-  BEGIN: Button Type: Rounded
-  ================================================== -->
+        Default
 
-  <section id="buttons-types-rounded">
+      </a>
 
-    <h2>
+      <a href="#" class="button button-rounded button-primary">
 
-      Rounded Button
+        Primary
 
-    </h2>
+      </a>
 
-    <p>
+      <a href="#" class="button button-rounded button-success">
 
-      Add the class <code>.button-rounded</code> to any <code>.button</code> element to display it with rounded caps.
+        Success
 
-    </p>
+      </a>
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+      <a href="#" class="button button-rounded button-warning">
 
-    <div class="panel flush-bottom">
+        Warning
 
-      <div class="panel-cell">
+      </a>
 
-        <div class="button-collection flush-bottom">
+      <a href="#" class="button button-rounded button-danger">
 
-          <a href="#" class="button button-rounded">
+        Danger
 
-            Default
-
-          </a>
-
-          <a href="#" class="button button-rounded button-primary">
-
-            Primary
-
-          </a>
-
-          <a href="#" class="button button-rounded button-success">
-
-            Success
-
-          </a>
-
-          <a href="#" class="button button-rounded button-warning">
-
-            Warning
-
-          </a>
-
-          <a href="#" class="button button-rounded button-danger">
-
-            Danger
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button button-rounded"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-rounded button-primary"&gt;
-  Primary
-&lt;/a&gt;
-</pre>
-
-      </div>
+      </a>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Button Type: Rounded
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Button Type: Outline
-  ================================================== -->
-
-  <section id="buttons-types-outline">
-
-    <h2>
-
-      Outline Button
-
-    </h2>
-
-    <p>
-
-      Add the class <code>.button-*-outline</code> to any <code>.button</code> element to display it with a thin outline.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-collection flush-bottom">
-
-          <a href="#" class="button button-outline">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-primary-outline">
-
-            Primary
-
-          </a>
-
-          <a href="#" class="button button-success-outline">
-
-            Success
-
-          </a>
-
-          <a href="#" class="button button-warning-outline">
-
-            Warning
-
-          </a>
-
-          <a href="#" class="button button-danger-outline">
-
-            Danger
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button button-outline"&gt;
+```html
+<!-- Button: Default -->
+<a href="#" class="button button-rounded">
   Default
-&lt;/a&gt;
+</a>
 
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-primary-outline"&gt;
+<!-- Button: Primary -->
+<a href="#" class="button button-rounded button-primary">
   Primary
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-      </div>
+  </div>
+
+</div>
+
+## Outline Button
+
+Add the class `.button-*-outline` to any `.button` element to display it with a thin outline.
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-outline">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-outline">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-outline">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-outline">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-outline">
+
+        Danger
+
+      </a>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Button Type: Outline
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Button Type: Link
-  ================================================== -->
-
-  <section id="buttons-types-link">
-
-    <h2>
-
-      Link Button
-
-    </h2>
-
-    <p>
-
-      Add the class <code>.button-*-link</code> to any <code>.button</code> element to display it as "text-only", while retaining the exact size attributes of it's normal button counterpart.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-collection flush-bottom">
-
-          <a href="#" class="button button-link">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-primary-link">
-
-            Primary
-
-          </a>
-
-          <a href="#" class="button button-success-link">
-
-            Success
-
-          </a>
-
-          <a href="#" class="button button-warning-link">
-
-            Warning
-
-          </a>
-
-          <a href="#" class="button button-danger-link">
-
-            Danger
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button button-link"&gt;
+```html
+<!-- Button: Default -->
+<a href="#" class="button button-outline">
   Default
-&lt;/a&gt;
+</a>
 
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-primary-link"&gt;
+<!-- Button: Primary -->
+<a href="#" class="button button-primary-outline">
   Primary
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-      </div>
+  </div>
+
+</div>
+
+## Link Button
+
+Add the class `.button-*-link` to any `.button` element to display it as "text-only", while retaining the exact size attributes of it's normal button counterpart.
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-link">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-link">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-link">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-link">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-link">
+
+        Danger
+
+      </a>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Button Type: Link
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Button Type: Combined
-  ================================================== -->
-
-  <section id="buttons-types-combine">
-
-    <h2>
-
-      Combine Button Types
-
-    </h2>
-
-    <p>
-
-      Want an outlined button that has rounded caps?  Go ahead and combine button classes to yield interesting display combinations.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-collection flush-bottom">
-
-          <a href="#" class="button button-outline button-rounded">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-primary-outline button-rounded">
-
-            Primary
-
-          </a>
-
-          <a href="#" class="button button-success-outline button-rounded">
-
-            Success
-
-          </a>
-
-          <a href="#" class="button button-warning-outline button-rounded">
-
-            Warning
-
-          </a>
-
-          <a href="#" class="button button-danger-outline button-rounded">
-
-            Danger
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button button-outline button-rounded"&gt;
+```html
+<!-- Button: Default -->
+<a href="#" class="button button-link">
   Default
-&lt;/a&gt;
+</a>
 
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-primary-outline button-rounded"&gt;
+<!-- Button: Primary -->
+<a href="#" class="button button-primary-link">
   Primary
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-      </div>
+  </div>
+
+</div>
+
+## Combine Button Types
+
+Want an outlined button that has rounded caps?  Go ahead and combine button classes to yield interesting display combinations.
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-outline button-rounded">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-outline button-rounded">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-outline button-rounded">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-outline button-rounded">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-outline button-rounded">
+
+        Danger
+
+      </a>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Button Type: Combined
-  ================================================== -->
+```html
+<!-- Button: Default -->
+<a href="#" class="button button-outline button-rounded">
+  Default
+</a>
 
-</section>
+<!-- Button: Primary -->
+<a href="#" class="button button-primary-outline button-rounded">
+  Primary
+</a>
+```
 
-<!-- =================================================
-END: Button Types
-================================================== -->
+  </div>
+
+</div>

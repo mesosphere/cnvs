@@ -1,227 +1,135 @@
-<!-- =================================================
-BEGIN: Button Controls
-================================================== -->
+# Button Controls
 
-<section id="buttons-controls">
+Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with our buttons plugin.
 
-  <h1>
+## Toggle Buttons
 
-    Button Controls
+Add `data-toggle="button"` to activate toggling on a single button.
 
-  </h1>
+<div class="panel flush-bottom">
 
-  <p>
+  <div class="panel-cell">
 
-    Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with our buttons plugin.
+    <button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
 
-  </p>
+      Toggle Button
 
-  <!-- =================================================
-  BEGIN: Toggle Buttons
-  ================================================== -->
+    </button>
 
-  <section id="buttons-controls-toggle">
+  </div>
 
-    <h2>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      Toggle Buttons
-
-    </h2>
-
-    <p>
-
-      Add <code>data-toggle="button"</code> to activate toggling on a single button.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-
-          Toggle Button
-
-        </button>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off"&gt;
+```html
+<button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
   Toggle Button
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-      </div>
+  </div>
 
-    </div>
+</div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+## Checkbox &amp; Radio Button Groups
 
-  </section>
+Add `data-toggle="buttons"` to a `.btn-group` containing checkbox or radio inputs to enable toggling in their respective styles.
 
-  <!-- =================================================
-  END: Toggle Buttons
-  ================================================== -->
+### Checkbox Button Groups
 
-  <!-- =================================================
-  BEGIN: Checkbox & Radio Button Groups
-  ================================================== -->
+<div class="panel flush-bottom">
 
-  <section id="buttons-controls-button-groups">
+  <div class="panel-cell">
 
-    <h2>
+    <div class="button-group" data-toggle="buttons">
 
-      Checkbox &amp; Radio Button Groups
+      <label class="button button-primary active">
 
-    </h2>
+        <input type="checkbox" autocomplete="off" checked> Checkbox 1
 
-    <p>
+      </label>
 
-      Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing checkbox or radio inputs to enable toggling in their respective styles.
+      <label class="button button-primary">
 
-    </p>
+        <input type="checkbox" autocomplete="off"> Checkbox 2
 
-    <h3>
+      </label>
 
-      Checkbox Button Groups
+      <label class="button button-primary">
 
-    </h3>
+        <input type="checkbox" autocomplete="off"> Checkbox 3
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-group" data-toggle="buttons">
-
-          <label class="button button-primary active">
-
-            <input type="checkbox" autocomplete="off" checked> Checkbox 1
-
-          </label>
-
-          <label class="button button-primary">
-
-            <input type="checkbox" autocomplete="off"> Checkbox 2
-
-          </label>
-
-          <label class="button button-primary">
-
-            <input type="checkbox" autocomplete="off"> Checkbox 3
-
-          </label>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group" data-toggle="buttons"&gt;
-  &lt;label class="button button-primary active"&gt;
-    &lt;input type="checkbox" autocomplete="off" checked&gt; Checkbox 1
-  &lt;/label&gt;
-  &lt;label class="button button-primary"&gt;
-    &lt;input type="checkbox" autocomplete="off"&gt; Checkbox 2
-  &lt;/label&gt;
-  &lt;label class="button button-primary"&gt;
-    &lt;input type="checkbox" autocomplete="off"&gt; Checkbox 3
-  &lt;/label&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
+      </label>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-    <h3>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      Radio Button Groups
+```html
+<div class="button-group" data-toggle="buttons">
+  <label class="button button-primary active">
+    <input type="checkbox" autocomplete="off" checked> Checkbox 1
+  </label>
+  <label class="button button-primary">
+    <input type="checkbox" autocomplete="off"> Checkbox 2
+  </label>
+  <label class="button button-primary">
+    <input type="checkbox" autocomplete="off"> Checkbox 3
+  </label>
+</div>
+```
 
-    </h3>
+  </div>
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+</div>
 
-    <div class="panel flush-bottom">
+### Radio Button Groups
 
-      <div class="panel-cell">
+<div class="panel flush-bottom">
 
-        <div class="button-group" data-toggle="buttons">
+  <div class="panel-cell">
 
-          <label class="button button-primary active">
+    <div class="button-group" data-toggle="buttons">
 
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
+      <label class="button button-primary active">
 
-          </label>
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
 
-          <label class="button button-primary">
+      </label>
 
-            <input type="radio" name="options" id="option1" autocomplete="off"> Radio 2
+      <label class="button button-primary">
 
-          </label>
+        <input type="radio" name="options" id="option1" autocomplete="off"> Radio 2
 
-          <label class="button button-primary">
+      </label>
 
-            <input type="radio" name="options" id="option1" autocomplete="off"> Radio 3
+      <label class="button button-primary">
 
-          </label>
+        <input type="radio" name="options" id="option1" autocomplete="off"> Radio 3
 
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group" data-toggle="buttons"&gt;
-  &lt;label class="button button-primary active"&gt;
-    &lt;input type="radio" name="options" id="option1" autocomplete="off" checked&gt; Radio 1
-  &lt;/label&gt;
-  &lt;label class="button button-primary"&gt;
-    &lt;input type="radio" name="options" id="option1" autocomplete="off"&gt; Radio 2
-  &lt;/label&gt;
-  &lt;label class="button button-primary"&gt;
-    &lt;input type="radio" name="options" id="option1" autocomplete="off"&gt; Radio 3
-  &lt;/label&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
+      </label>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Checkbox & Radio Button Groups
-  ================================================== -->
+```html
+<div class="button-group" data-toggle="buttons">
+  <label class="button button-primary active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
+  </label>
+  <label class="button button-primary">
+    <input type="radio" name="options" id="option1" autocomplete="off"> Radio 2
+  </label>
+  <label class="button button-primary">
+    <input type="radio" name="options" id="option1" autocomplete="off"> Radio 3
+  </label>
+</div>
+```
 
-</section>
+  </div>
 
-<!-- =================================================
-END: Button Controls
-================================================== -->
+</div>

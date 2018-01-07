@@ -1,233 +1,48 @@
-<!-- =================================================
-BEGIN: Narrow Buttons
-================================================== -->
+# Flush Buttons
 
-<section id="buttons-flush">
+Use the class `.button-flush` to remove the padding within a button. This is useful when you want to assume button like behavior, particulary for `.button-link` styling, but do not want the added space created by the padding.
 
-  <h1>
+| Class                      | Description                                   |
+| -------------------------- | --------------------------------------------- |
+| `.button-flush`            | Remove the padding entirely.                  |
+| `.button-flush-horizontal` | Remove the horizontal padding.                |
+| `.button-flush-vertical`   | Remove the vertical padding.                  |
+| `.button-flush-top`        | Remove the top padding inside of a button.    |
+| `.button-flush-right`      | Remove the right padding inside of a button.  |
+| `.button-flush-bottom`     | Remove the bottom padding inside of a button. |
+| `.button-flush-left`       | Remove the left padding inside of a button.   |
+{: .table }
 
-    Flush Buttons
+<div class="panel flush-bottom">
 
-  </h1>
+  <div class="panel-cell">
 
-  <p>
+    <div class="button-collection button-collection-align-middle flush-bottom">
 
-    Use the class <code>.button-flush</code> to remove the padding within a button. This is useful when you want to assume button like behavior, particulary for <code>.button-link</code> styling, but do not want the added space created by the padding.
+      <a href="#" class="button button-flush">
 
-  </p>
+        Flush Button
 
-  <table class="table short">
+      </a>
 
-    <thead>
+      <a href="#" class="button button-primary button-flush">
 
-      <tr>
+        Flush Button
 
-        <th>
-
-          Class
-
-        </th>
-
-        <th>
-
-          Description
-
-        </th>
-
-      </tr>
-
-    </thead>
-
-    <tbody>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the padding entirely.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-horizontal
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the horizontal padding.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-vertical
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the vertical padding.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-top
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the top padding inside of a button.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-right
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the right padding inside of a button.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-bottom
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the bottom padding inside of a button.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-left
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the left padding inside of a button.
-
-        </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush-bottom">
-
-        <a href="#" class="button button-flush">
-
-          Flush Button
-
-        </a>
-
-        <a href="#" class="button button-primary button-flush">
-
-          Flush Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button button-flush"&gt;
-  Flush Button
-&lt;/a&gt;
-</pre>
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<a href="#" class="button button-flush">
+  Flush Button
+</a>
+```
 
-<!-- =================================================
-END: Narrow Buttons
-================================================== -->
+  </div>
+
+</div>

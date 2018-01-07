@@ -7,15 +7,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  Canvas adds support for a range of button states and sizes.  Simply add the <code>.button</code> class to any <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> to get started.
-
-</p>
-
-<!-- =================================================
-BEGIN: Example
-================================================== -->
+Canvas adds support for a range of button states and sizes.  Simply add the `.button` class to any `<a>` or `<button>` to get started.
 
 <div class="panel flush-bottom">
 
@@ -29,13 +21,13 @@ BEGIN: Example
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button"&gt;
+```html
+<a href="#" class="button">
   Simple Button
-&lt;/a&gt;
-</pre>
+</a>
+```
 
   </div>
 

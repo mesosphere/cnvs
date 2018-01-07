@@ -1,104 +1,76 @@
-<!-- =================================================
-BEGIN: Button States
-================================================== -->
+# Button States
 
-<section id="buttons-states">
+You may wish to display more than the single button type, either to create separation in the importance of various actions or to communicate the state of an action or form.  Button states make this super easy.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Button States
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection flush-bottom">
 
-  <p>
+      <a href="#" class="button">
 
-    You may wish to display more than the single button type, either to create separation in the importance of various actions or to communicate the state of an action or form.  Button states make this super easy.
+        Default
 
-  </p>
+      </a>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <a href="#" class="button button-primary">
 
-  <div class="panel flush-bottom">
+        Primary
 
-    <div class="panel-cell">
+      </a>
 
-      <div class="button-collection flush-bottom">
+      <a href="#" class="button button-success">
 
-        <a href="#" class="button">
+        Success
 
-          Default
+      </a>
 
-        </a>
+      <a href="#" class="button button-warning">
 
-        <a href="#" class="button button-primary">
+        Warning
 
-          Primary
+      </a>
 
-        </a>
+      <a href="#" class="button button-danger">
 
-        <a href="#" class="button button-success">
+        Danger
 
-          Success
-
-        </a>
-
-        <a href="#" class="button button-warning">
-
-          Warning
-
-        </a>
-
-        <a href="#" class="button button-danger">
-
-          Danger
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-primary"&gt;
-  Primary
-&lt;/a&gt;
-
-&lt;!-- Button: Success --&gt;
-&lt;a href="#" class="button button-success"&gt;
-  Success
-&lt;/a&gt;
-
-&lt;!-- Button: Warning --&gt;
-&lt;a href="#" class="button button-warning"&gt;
-  Warning
-&lt;/a&gt;
-
-&lt;!-- Button: Danger --&gt;
-&lt;a href="#" class="button button-danger"&gt;
-  Danger
-&lt;/a&gt;
-</pre>
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<!-- Button: Default -->
+<a href="#" class="button">
+  Default
+</a>
 
-<!-- =================================================
-END: Button States
-================================================== -->
+<!-- Button: Primary -->
+<a href="#" class="button button-primary">
+  Primary
+</a>
+
+<!-- Button: Success -->
+<a href="#" class="button button-success">
+  Success
+</a>
+
+<!-- Button: Warning -->
+<a href="#" class="button button-warning">
+  Warning
+</a>
+
+<!-- Button: Danger -->
+<a href="#" class="button button-danger">
+  Danger
+</a>
+```
+
+  </div>
+
+</div>

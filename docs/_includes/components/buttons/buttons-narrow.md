@@ -1,65 +1,37 @@
-<!-- =================================================
-BEGIN: Narrow Buttons
-================================================== -->
+# Narrow Buttons
 
-<section id="buttons-narrow">
+Use the class `.button-narrow` to decrease the horizontal padding within a button.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Narrow Buttons
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection button-collection-align-middle flush-bottom">
 
-  <p>
+      <a href="#" class="button button-narrow">
 
-    Use the class <code>.button-narrow</code> to decrease the horizontal padding within a button.
+        Narrow Button
 
-  </p>
+      </a>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <a href="#" class="button button-primary button-narrow">
 
-  <div class="panel flush-bottom">
+        Narrow Button
 
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush-bottom">
-
-        <a href="#" class="button button-narrow">
-
-          Narrow Button
-
-        </a>
-
-        <a href="#" class="button button-primary button-narrow">
-
-          Narrow Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button button-narrow"&gt;
-  Narrow Button
-&lt;/a&gt;
-</pre>
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<a href="#" class="button button-narrow">
+  Narrow Button
+</a>
+```
 
-<!-- =================================================
-END: Narrow Buttons
-================================================== -->
+  </div>
+
+</div>

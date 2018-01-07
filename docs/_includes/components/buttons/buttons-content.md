@@ -1,87 +1,59 @@
-<!-- =================================================
-BEGIN: Button Content
-================================================== -->
+# Button Content
 
-<section id="buttons-content">
+By default, buttons are defined so that all content will display vertically centered inside the button.  However, it may be necessary to place more than just text inside of a button.  For example, you may want a small icon next to the button label.  Space will be applied between child elements of a button automatically.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Button Content
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection flush-bottom">
 
-  <p>
+      <a href="#" class="button">
 
-    By default, buttons are defined so that all content will display vertically centered inside the button.  However, it may be necessary to place more than just text inside of a button.  For example, you may want a small icon next to the button label.  Space will be applied between child elements of a button automatically.
+        <i class="icon icon-mini">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-  </p>
+        <span>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+          Button
 
-  <div class="panel flush-bottom">
+        </span>
 
-    <div class="panel-cell">
+      </a>
 
-      <div class="button-collection flush-bottom">
+      <a href="#" class="button">
 
-        <a href="#" class="button">
+        <span>
 
-          <i class="icon icon-mini">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
+          Button
 
-          <span>
+        </span>
 
-            Button
+        <i class="icon icon-mini">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-          </span>
-
-        </a>
-
-        <a href="#" class="button">
-
-          <span>
-
-            Button
-
-          </span>
-
-          <i class="icon icon-mini">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button"&gt;
-  &lt;i class="icon icon-mini"&gt;&lt;/i&gt;
-  &lt;span&gt;Button&lt;/span&gt;
-&lt;/a&gt;
-</pre>
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<!-- Button: Default -->
+<a href="#" class="button">
+  <i class="icon icon-mini"></i>
+  <span>Button</span>
+</a>
+```
 
-<!-- =================================================
-END: Button Content
-================================================== -->
+  </div>
+
+</div>

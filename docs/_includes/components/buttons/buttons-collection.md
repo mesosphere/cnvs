@@ -1,234 +1,178 @@
-<!-- =================================================
-BEGIN: Button Collection
-================================================== -->
+# Button Collection
 
-<section id="button-collection">
+Buttons render easily as objects inline with other elements.  When you have a group of buttons, use the `.button-collection` element to wrap a set of buttons.  A button collection defines simple rules governing the space between buttons both horizontally and vertically.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Button Collection
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection flush-bottom">
 
-  <p>
+      <a href="#" class="button button-primary">
 
-    Buttons render easily as objects inline with other elements.  When you have a group of buttons, use the <code>.button-collection</code> element to wrap a set of buttons.  A button collection defines simple rules governing the space between buttons both horizontally and vertically.
+        Primary Button
 
-  </p>
+      </a>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <a href="#" class="button">
 
-  <div class="panel flush-bottom">
+        Button
 
-    <div class="panel-cell">
-
-      <div class="button-collection flush-bottom">
-
-        <a href="#" class="button button-primary">
-
-          Primary Button
-
-        </a>
-
-        <a href="#" class="button">
-
-          Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Collection --&gt;
-&lt;div class="button-collection"&gt;
-  &lt;a href="#" class="button button-primary"&gt;
-    Primary Button
-  &lt;/a&gt;
-  &lt;a href="#" class="button"&gt;
-    Button
-  &lt;/a&gt;
-&lt;/div&gt;
-</pre>
+      </a>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  BEGIN: Button Collection Vertical Alignment
-  ================================================== -->
+```html
+<!-- Button: Collection -->
+<div class="button-collection">
+  <a href="#" class="button button-primary">
+    Primary Button
+  </a>
+  <a href="#" class="button">
+    Button
+  </a>
+</div>
+```
 
-  <section id="button-collection-vertical-alignment">
+  </div>
 
-    <h2>
+</div>
 
-      Button Collection Vertical Alignment
+## Button Collection Vertical Alignment
 
-    </h2>
+When you have buttons of different sizes in the same `.button-collection`, you can use the button alignment properties `.button-collection-align-top`, `.button-collection-align-middle`, and `.button-collection-align-bottom` to position them along the top, middle, or baseline axis.
 
-    <p>
+<div class="panel flush-bottom">
 
-      When you have buttons of different sizes in the same <code>.button-collection</code>, you can use the button alignment properties <code>.button-collection-align-top</code>, <code>.button-collection-align-middle</code>, and <code>.button-collection-align-bottom</code> to position them along the top, middle, or baseline axis.
+  <div class="panel-cell">
 
-    </p>
+    <div class="button-collection button-collection-align-vertical-top">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+      <a href="#" class="button button-jumbo">
 
-    <div class="panel flush-bottom">
+        Jumbo
 
-      <div class="panel-cell">
+      </a>
 
-        <div class="button-collection button-collection-align-vertical-top">
+      <a href="#" class="button button-large">
 
-          <a href="#" class="button button-jumbo">
+        Large
 
-            Jumbo
+      </a>
 
-          </a>
+      <a href="#" class="button">
 
-          <a href="#" class="button button-large">
+        Default
 
-            Large
+      </a>
 
-          </a>
+      <a href="#" class="button button-small">
 
-          <a href="#" class="button">
+        Small
 
-            Default
+      </a>
 
-          </a>
+      <a href="#" class="button button-mini">
 
-          <a href="#" class="button button-small">
+        Mini
 
-            Small
-
-          </a>
-
-          <a href="#" class="button button-mini">
-
-            Mini
-
-          </a>
-
-        </div>
-
-        <div class="button-collection button-collection-align-vertical-middle">
-
-          <a href="#" class="button button-jumbo">
-
-            Jumbo
-
-          </a>
-
-          <a href="#" class="button button-large">
-
-            Large
-
-          </a>
-
-          <a href="#" class="button">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-small">
-
-            Small
-
-          </a>
-
-          <a href="#" class="button button-mini">
-
-            Mini
-
-          </a>
-
-        </div>
-
-        <div class="button-collection button-collection-align-vertical-bottom flush-bottom">
-
-          <a href="#" class="button button-jumbo">
-
-            Jumbo
-
-          </a>
-
-          <a href="#" class="button button-large">
-
-            Large
-
-          </a>
-
-          <a href="#" class="button">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-small">
-
-            Small
-
-          </a>
-
-          <a href="#" class="button button-mini">
-
-            Mini
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button Collection: Align Top--&gt;
-&lt;div class="button-collection button-collection-align-vertical-top"&gt;
-  &hellip;
-&lt;/div&gt;
-
-&lt;!-- Button Collection: Align Middle--&gt;
-&lt;div class="button-collection button-collection-align-vertical-middle"&gt;
-  &hellip;
-&lt;/div&gt;
-
-&lt;!-- Button Collection: Align Bottom--&gt;
-&lt;div class="button-collection button-collection-align-vertical-bottom"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
-      </div>
+      </a>
 
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+    <div class="button-collection button-collection-align-vertical-middle">
 
-  </section>
+      <a href="#" class="button button-jumbo">
 
-  <!-- =================================================
-  END: Button Collection
-  ================================================== -->
+        Jumbo
 
-</section>
+      </a>
 
-<!-- =================================================
-END: Button Collection
-================================================== -->
+      <a href="#" class="button button-large">
+
+        Large
+
+      </a>
+
+      <a href="#" class="button">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-small">
+
+        Small
+
+      </a>
+
+      <a href="#" class="button button-mini">
+
+        Mini
+
+      </a>
+
+    </div>
+
+    <div class="button-collection button-collection-align-vertical-bottom flush-bottom">
+
+      <a href="#" class="button button-jumbo">
+
+        Jumbo
+
+      </a>
+
+      <a href="#" class="button button-large">
+
+        Large
+
+      </a>
+
+      <a href="#" class="button">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-small">
+
+        Small
+
+      </a>
+
+      <a href="#" class="button button-mini">
+
+        Mini
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<!-- Button Collection: Align Top-->
+<div class="button-collection button-collection-align-vertical-top">
+  &hellip;
+</div>
+
+<!-- Button Collection: Align Middle-->
+<div class="button-collection button-collection-align-vertical-middle">
+  &hellip;
+</div>
+
+<!-- Button Collection: Align Bottom-->
+<div class="button-collection button-collection-align-vertical-bottom">
+  &hellip;
+</div>
+```
+
+  </div>
+
+</div>
