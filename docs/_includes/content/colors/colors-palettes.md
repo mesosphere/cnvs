@@ -1,433 +1,291 @@
-<!-- =================================================
-BEGIN: Color Palettes
-================================================== -->
+# Color Palettes
 
-<section id="colors-palettes">
+A neutral palette along with a full color palette offer a wide array of color options for your project. By default, purple `@purple` is used across the Canvas UI kit as the primary color.  You can see this carry across forms, buttons, and other components.
 
-  <h1>
+## Neutral Palette
 
-    Color Palettes
+<div class="row color-swatches">
 
-  </h1>
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch black">
 
-  <p>
-
-    A neutral palette along with a full color palette offer a wide array of color options for your project. By default, purple <code>@purple</code> is used across the Canvas UI kit as the primary color.  You can see this carry across forms, buttons, and other components.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Color Swatches
-  ================================================== -->
-
-  <h2>
-
-    Neutral Palette
-
-  </h2>
-
-  <div class="row color-swatches">
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch black">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Black
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @black
-
-        </code>
-
-      </p>
-
+    <div class="color-swatch-cell">
     </div>
 
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
 
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
+      Black
 
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch white">
+    </h5>
 
-      <div class="color-swatch-cell">
-      </div>
+    <p class="color-swatch-cell-variable flush-bottom">
 
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
+      <code>
 
-        White
+        @black
 
-      </h5>
+      </code>
 
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @white
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch grey-dark">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Dark Grey
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @grey-dark
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch grey-light">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Light Grey
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @grey-light
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
+    </p>
 
   </div>
 
-  <!-- =================================================
-  END: Color Swatches
-  ================================================== -->
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch white">
 
-
-
-  <!-- =================================================
-  BEGIN: Color Swatches
-  ================================================== -->
-
-  <h2>
-
-    Color Palette
-
-  </h2>
-
-  <div class="row color-swatches">
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch purple">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Purple
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @purple
-
-        </code>
-
-      </p>
-
+    <div class="color-swatch-cell">
     </div>
 
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
 
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
+      White
 
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch blue">
+    </h5>
 
-      <div class="color-swatch-cell">
-      </div>
+    <p class="color-swatch-cell-variable flush-bottom">
 
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
+      <code>
 
-        Blue
+        @white
 
-      </h5>
+      </code>
 
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @blue
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch red">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Red
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @red
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch orange">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Orange
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @orange
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch yellow">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Yellow
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @yellow
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch green">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Green
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @green
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch pink">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Pink
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @pink
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch cyan">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h5 class="color-swatch-cell-label short-top flush-bottom">
-
-        Cyan
-
-      </h5>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @cyan
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
+    </p>
 
   </div>
 
-  <!-- =================================================
-  END: Color Swatches
-  ================================================== -->
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch grey-dark">
 
-</section>
+    <div class="color-swatch-cell">
+    </div>
 
-<!-- =================================================
-END: Color Palettes
-================================================== -->
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Dark Grey
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @grey-dark
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch grey-light">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Light Grey
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @grey-light
+
+      </code>
+
+    </p>
+
+  </div>
+
+</div>
+
+## Color Palette
+
+<div class="row color-swatches">
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch purple">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Purple
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @purple
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch blue">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Blue
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @blue
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch red">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Red
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @red
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch orange">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Orange
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @orange
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch yellow">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Yellow
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @yellow
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch green">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Green
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @green
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch pink">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Pink
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @pink
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch cyan">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Cyan
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @cyan
+
+      </code>
+
+    </p>
+
+  </div>
+
+</div>
