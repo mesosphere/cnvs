@@ -1,30 +1,88 @@
----
-layout: post
-id: page-grid
-title: Grid
-page-header:
-  headline: Grid
-  description: Canvas supports a responsive mobile-first grid system.  By default, the grid system is based on a 12 column layout, but can be easily modified to enable any column count.  With simple class name additions, the column count can be changed based on the users viewport.  This allows for rich layouts that adjust to best fit the device.
-page-navigation:
-- label: Grid Options
-  link: #grid-options
-- label: Offset Columns
-  link: #grid-offset-columns
-- label: Nested Grid
-  link: #grid-nested-grid
-- label: Size Modifiers
-  link: #grid-size-modifiers
----
+# Size Modifiers
 
-<!-- =================================================
-BEGIN: Example
-================================================== -->
+Size modifiers are available if you wish to have a grid with narrower or wider gutters. For example, adding the class `.row-narrow` to the `.row` element will decrease the gutter width of applied between columns in the given row. You can even remove the gutters all together with the `.row-flush` class modifier.
+
+<table class="table">
+
+  <thead>
+
+    <tr>
+
+      <th>
+
+        Class
+
+      </th>
+
+      <th>
+
+        Description
+
+      </th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr>
+
+      <td>
+
+        <code>.row-flush</code>
+
+      </td>
+
+      <td>
+
+        Remove the gutters between columns entirely.
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+
+        <code>.row-narrow</code>
+
+      </td>
+
+      <td>
+
+        Decrease the gutter width between columns.
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+
+        <code>.row-wide</code>
+
+      </td>
+
+      <td>
+
+        Increase the gutter width between columns.
+
+      </td>
+
+    </tr>
+
+  </tbody>
+
+</table>
 
 <div class="panel pod pod-short-bottom pod-short-top flush-horizontal">
 
   <div class="panel-cell">
 
-    <div class="row">
+    <div class="row row-narrow">
       <div class="column-1">
         <div class="layout-box">
           <div class="layout-box-item layout-box-item-margin">
@@ -149,83 +207,14 @@ BEGIN: Example
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="row"&gt;
-  &lt;div class="column-*"&gt;
-  &lt;/div&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
+```html
+<div class="row row-narrow">
+  …
+</div>
+```
 
   </div>
 
 </div>
-
-<!-- =================================================
-END: Example
-================================================== -->
-
-<p>
-
-  At first, the grid can seem complicated.  However, when you distill it down to the basic primitives and rules, it becomes quite simple.  Here's a quick overview of what you need to know:
-
-</p>
-
-<ul>
-
-  <li>
-
-    There are two primitives that are required in defining a grid: Rows (<code>.row</code>) and Columns (<code>.column-*</code>).
-
-  </li>
-
-  <li>
-
-    Rows (<code>.row</code>) is a simple wrapping element around columns.  They ensure columns are aligned appropriately.
-
-  </li>
-
-  <li>
-
-    Content should be placed within columns, and only columns may be immediate children of rows.
-
-  </li>
-
-  <li>
-
-    Column classes indicate the number of columns you’d like to use out of the possible <em>n</em> per row (<code>default=12</code>). So, for a 12 column grid, <code>.column-4</code> will consumer the total with of 4 columns.
-
-  </li>
-
-  <li>
-
-    Column widths are set in percentages, so they’re always fluid and sized relative to their parent element.
-
-  </li>
-
-  <li>
-
-    Columns have horizontal padding to create the gutters between individual columns. Gutter width is defined as a fixed pixel width.
-
-  </li>
-
-  <li>
-
-    There are five grid tiers, one for each responsive breakpoint: <code>mini</code> (assumed mobile devices), <code>small</code>, <code>medium</code>, <code>large</code>, and <code>jumbo</code>.
-
-  </li>
-
-  <li>
-
-    Grid tiers are based on minimum widths, meaning they apply to that one tier and all those above it (e.g., <code>.column-large-4</code> applies to medium, and large devices, but not small or smaller devices).
-
-  </li>
-
-</ul>
-
-{% include layout/grid/grid-options.html %}
-{% include layout/grid/grid-offset-columns.html %}
-{% include layout/grid/grid-nested-grid.html %}
-{% include layout/grid/grid-size-modifiers.html %}

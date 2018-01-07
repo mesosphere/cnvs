@@ -1,7 +1,7 @@
 .page-navigation {
   position: relative;
 
-  ul.page-navigation-menu {
+  ul.section-nav {
     .clearfix();
     margin-bottom: 0;
 
@@ -13,6 +13,10 @@
 
       &:first-child {
         margin-top: 0;
+      }
+
+      &:before {
+        display: none;
       }
 
       a {
@@ -109,7 +113,7 @@
 
       & when (@page-navigation-menu-screen-small-enabled) {
 
-        ul.page-navigation-menu {
+        ul.section-nav {
 
           li {
             .element-text-size(page-navigation-submenu-item, screen-small);
@@ -146,7 +150,7 @@
 
       & when (@page-navigation-menu-screen-medium-enabled) {
 
-        ul.page-navigation-menu {
+        ul.section-nav {
 
           li {
             .element-text-size(page-navigation-submenu-item, screen-medium);
@@ -183,7 +187,7 @@
 
       & when (@page-navigation-menu-screen-large-enabled) {
 
-        ul.page-navigation-menu {
+        ul.section-nav {
 
           li {
             .element-text-size(page-navigation-menu-item, screen-large);
@@ -220,7 +224,7 @@
 
       & when (@page-navigation-menu-screen-jumbo-enabled) {
 
-        ul.page-navigation-menu {
+        ul.section-nav {
 
           li {
             .element-text-size(page-navigation-menu-item, screen-jumbo);
@@ -426,7 +430,7 @@
 
 // Padding Left
 
-@page-navigation-menu-item-padding-left: null;
+@page-navigation-menu-item-padding-left: 0;
 @page-navigation-menu-item-padding-left-screen-small: null;
 @page-navigation-menu-item-padding-left-screen-medium: null;
 @page-navigation-menu-item-padding-left-screen-large: null;

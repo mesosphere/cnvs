@@ -46,9 +46,19 @@ layout: default
 
       {% endif %}
 
-      {% if page.page-navigation %}
+      {% if page.toc %}
 
-        {% include layout/page-navigation.html %}
+        <div class="page-navigation pod-tall-top">
+
+          <h6 class="text-uppercase">
+
+            Table of Contents
+
+          </h6>
+
+          {{ content | toc_only }}
+
+        </div>
 
       {% endif %}
 
