@@ -1,66 +1,38 @@
-<!-- =================================================
-BEGIN: Badge Rounded
-================================================== -->
+# Rounded Badge
 
-<section id="badges-rounded">
+Add the class `.badge-rounded` to any `.badge` element to display it with rounded caps.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Rounded Badge
+  <div class="panel-cell">
 
-  </h1>
+    <div class="badge-collection flush-bottom">
 
-  <p>
+      <span class="badge badge-rounded">
 
-    Add the class <code>.badge-rounded</code> to any <code>.badge</code> element to display it with rounded caps.
+        Badge
 
-  </p>
+      </span>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <span class="badge badge-success badge-rounded">
 
-  <div class="panel flush-bottom">
+        Badge
 
-    <div class="panel-cell">
-
-      <div class="badge-collection flush-bottom">
-
-        <span class="badge badge-rounded">
-
-          Badge
-
-        </span>
-
-        <span class="badge badge-success badge-rounded">
-
-          Badge
-
-        </span>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- badge: Default --&gt;
-&lt;span class="badge badge-rounded"&gt;
-  Default
-&lt;/span&gt;
-</pre>
+      </span>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<!-- badge: Default -->
+<span class="badge badge-rounded">
+  Default
+</span>
+```
 
-<!-- =================================================
-END: Badge Rounded
-================================================== -->
+  </div>
+
+</div>

@@ -9,15 +9,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  Badges are a lightweight method of annotating or labeling content. Wrap content in the <code>.badge</code> class to add an inline badge. The font-size and line-height of a badge inherit from that of it's parent's properties.
-
-</p>
-
-<!-- =================================================
-BEGIN: Example
-================================================== -->
+Badges are a lightweight method of annotating or labeling content. Wrap content in the `.badge` class to add an inline badge. The font-size and line-height of a badge inherit from that of it's parent's properties.
 
 <div class="panel flush-bottom">
 
@@ -31,21 +23,17 @@ BEGIN: Example
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;span class="badge"&gt;
+```html
+<span class="badge">
   Badge
-&lt;/span&gt;
-</pre>
+</span>
+```
 
   </div>
 
 </div>
-
-<!-- =================================================
-END: Example
-================================================== -->
 
 {% include components/badges/badges-states.md %}
 {% include components/badges/badges-rounded.md %}

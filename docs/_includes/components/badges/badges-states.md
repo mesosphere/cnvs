@@ -1,104 +1,76 @@
-<!-- =================================================
-BEGIN: Badge States
-================================================== -->
+Badge States
 
-<section id="badges-states">
+You may wish to display more than the single badge type, either to create separation in the importance of various actions or to communicate the state of an action or form.  badge states make this super easy.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Badge States
+  <div class="panel-cell">
 
-  </h1>
+    <div class="badge-collection flush-bottom">
 
-  <p>
+      <span class="badge">
 
-    You may wish to display more than the single badge type, either to create separation in the importance of various actions or to communicate the state of an action or form.  badge states make this super easy.
+        Default
 
-  </p>
+      </span>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <span class="badge badge-success">
 
-  <div class="panel flush-bottom">
+        Success
 
-    <div class="panel-cell">
+      </span>
 
-      <div class="badge-collection flush-bottom">
+      <span class="badge badge-info">
 
-        <span class="badge">
+        Information
 
-          Default
+      </span>
 
-        </span>
+      <span class="badge badge-warning">
 
-        <span class="badge badge-success">
+        Warning
 
-          Success
+      </span>
 
-        </span>
+      <span class="badge badge-danger">
 
-        <span class="badge badge-info">
+        Danger
 
-          Information
-
-        </span>
-
-        <span class="badge badge-warning">
-
-          Warning
-
-        </span>
-
-        <span class="badge badge-danger">
-
-          Danger
-
-        </span>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- badge: Default --&gt;
-&lt;span class="badge"&gt;
-  Default
-&lt;/span&gt;
-
-&lt;!-- badge: Success --&gt;
-&lt;span class="badge badge-success"&gt;
-  Success
-&lt;/span&gt;
-
-&lt;!-- badge: Info --&gt;
-&lt;span class="badge badge-info"&gt;
-  Info
-&lt;/span&gt;
-
-&lt;!-- badge: Warning --&gt;
-&lt;span class="badge badge-warning"&gt;
-  Warning
-&lt;/span&gt;
-
-&lt;!-- badge: Danger --&gt;
-&lt;span class="badge badge-danger"&gt;
-  Danger
-&lt;/span&gt;
-</pre>
+      </span>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<!-- badge: Default -->
+<span class="badge">
+  Default
+</span>
 
-<!-- =================================================
-END: badge States
-================================================== -->
+<!-- badge: Success -->
+<span class="badge badge-success">
+  Success
+</span>
+
+<!-- badge: Info -->
+<span class="badge badge-info">
+  Info
+</span>
+
+<!-- badge: Warning -->
+<span class="badge badge-warning">
+  Warning
+</span>
+
+<!-- badge: Danger -->
+<span class="badge badge-danger">
+  Danger
+</span>
+```
+
+  </div>
+
+</div>
