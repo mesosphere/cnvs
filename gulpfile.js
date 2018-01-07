@@ -53,15 +53,20 @@ var dirs = {
   },
   docs: {
     path: "./docs",
-    styles: "./docs/styles",
-    javascripts: "./docs/javascripts",
-    vendor: "./docs/javascripts/vendor/**/*.*",
-    images: "./docs/images/**/*.*",
-    fonts: "./docs/fonts/**/*.*",
+    assets: "./docs/_assets",
+    styles: "./docs/_assets/styles",
+    javascripts: "./docs/_assets/javascripts",
+    vendor: "./docs/_assets/javascripts/vendor/**/*.*",
+    images: "./docs/_assets/images/**/*.*",
+    fonts: "./docs/_assets/fonts/**/*.*",
     dist: {
       path: "./docs/dist",
-      styles: "./docs/dist/styles",
-      javascripts: "./docs/dist/javascripts"
+      assets: "./docs/dist/assets",
+      styles: "./docs/dist/assets/styles",
+      javascripts: "./docs/dist/assets/javascripts"
+      vendor: "./docs/dist/assets/javascripts/vendor",
+      images: "./docs/dist/assets/images",
+      fonts: "./docs/dist/assets/fonts",
     }
   }
 };
@@ -131,7 +136,7 @@ gulp.task("docs:build", ["docs:move", "docs:styles", "docs:javascripts"]);
 
 gulp.task("docs:serve", ["browser-sync", "watch"]);
 
-// Clean cnvs and Documentation Distribution  Directories
+// Clean CNVS and Documentation Distribution Directories
 
 gulp.task('clean', function() {
 
@@ -171,9 +176,9 @@ gulp.task("docs:move", function () {
       dirs.docs.images,
       dirs.docs.fonts
     ], {
-      base: dirs.docs.path
+      base: dirs.docs.assets
     })
-    .pipe(gulp.dest(dirs.docs.dist.path));
+    .pipe(gulp.dest(dirs.docs.dist.assets));
 
 });
 
