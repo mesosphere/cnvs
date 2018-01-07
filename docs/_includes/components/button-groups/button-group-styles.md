@@ -1,216 +1,30 @@
-<section id="button-group-styles">
+# Styled Button Groups
 
-  <h1>
+Button groups work with all supported button styles.  Add `.button-*-outline` or any other included button style class to your button element.  You can even combine styles.
 
-    Styled Button Groups
+## Outlined Button Groups
 
-  </h1>
+<div class="panel flush-bottom">
 
-  <p>
+  <div class="panel-cell">
 
-    Button groups work with all supported button styles.  Add <code>.button-*-outline</code> or any other included button style class to your button element.  You can even combine styles.
-
-  </p>
-
-  <h2>
-
-    Outlined Button Groups
-
-  </h2>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-outline active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-outline">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-outline">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="button-collection">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-primary-outline active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-primary-outline">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-primary-outline">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="button-collection">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-success-outline active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-success-outline">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-success-outline">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="button-collection">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-warning-outline active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-warning-outline">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-warning-outline">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="button-collection flush-bottom">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-danger-outline active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-danger-outline">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-danger-outline">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group" role="group"&gt;
-  &lt;button type="button" class="button button-outline active"&gt;
-    Left
-  &lt;/button&gt;
-  &lt;button type="button" class="button button-outline"&gt;
-    Middle
-  &lt;/button&gt;
-  &lt;button type="button" class="button button-outline"&gt;
-    Right
-  &lt;/button&gt;
-&lt;/div&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-  <h2>
-
-    Rounded Button Groups
-
-  </h2>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
+    <div class="button-collection">
 
       <div class="button-group" role="group">
 
-        <button type="button" class="button button-rounded active">
+        <button type="button" class="button button-outline active">
 
           Left
 
         </button>
 
-        <button type="button" class="button button-rounded">
+        <button type="button" class="button button-outline">
 
           Middle
 
         </button>
 
-        <button type="button" class="button button-rounded">
+        <button type="button" class="button button-outline">
 
           Right
 
@@ -220,59 +34,23 @@
 
     </div>
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group" role="group"&gt;
-&lt;button type="button" class="button button-rounded active"&gt;
-Left
-&lt;/button&gt;
-&lt;button type="button" class="button button-rounded"&gt;
-Middle
-&lt;/button&gt;
-&lt;button type="button" class="button button-rounded"&gt;
-Right
-&lt;/button&gt;
-&lt;/div&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-  <h2>
-
-    Combined Style Button Groups
-
-  </h2>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
+    <div class="button-collection">
 
       <div class="button-group" role="group">
 
-        <button type="button" class="button button-outline button-rounded active">
+        <button type="button" class="button button-primary-outline active">
 
           Left
 
         </button>
 
-        <button type="button" class="button button-outline button-rounded">
+        <button type="button" class="button button-primary-outline">
 
           Middle
 
         </button>
 
-        <button type="button" class="button button-outline button-rounded">
+        <button type="button" class="button button-primary-outline">
 
           Right
 
@@ -282,198 +60,360 @@ Right
 
     </div>
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
+    <div class="button-collection">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group" role="group"&gt;
-&lt;button type="button" class="button button-outline button-rounded active"&gt;
-Left
-&lt;/button&gt;
-&lt;button type="button" class="button button-outline button-rounded"&gt;
-Middle
-&lt;/button&gt;
-&lt;button type="button" class="button button-outline button-rounded"&gt;
-Right
-&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+      <div class="button-group" role="group">
+
+        <button type="button" class="button button-success-outline active">
+
+          Left
+
+        </button>
+
+        <button type="button" class="button button-success-outline">
+
+          Middle
+
+        </button>
+
+        <button type="button" class="button button-success-outline">
+
+          Right
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="button-collection">
+
+      <div class="button-group" role="group">
+
+        <button type="button" class="button button-warning-outline active">
+
+          Left
+
+        </button>
+
+        <button type="button" class="button button-warning-outline">
+
+          Middle
+
+        </button>
+
+        <button type="button" class="button button-warning-outline">
+
+          Right
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="button-collection flush-bottom">
+
+      <div class="button-group" role="group">
+
+        <button type="button" class="button button-danger-outline active">
+
+          Left
+
+        </button>
+
+        <button type="button" class="button button-danger-outline">
+
+          Middle
+
+        </button>
+
+        <button type="button" class="button button-danger-outline">
+
+          Right
+
+        </button>
+
+      </div>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-  <h2>
-
-    Inverse Styling
-
-  </h2>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel panel-inverse flush-bottom">
-
-    <div class="panel-cell panel-cell-inverse">
-
-      <div class="button-collection">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-outline button-inverse active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-outline button-inverse">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-outline button-inverse">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="button-collection">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-primary-outline button-inverse active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-primary-outline button-inverse">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-primary-outline button-inverse">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="button-collection">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-success-outline button-inverse active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-success-outline button-inverse">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-success-outline button-inverse">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="button-collection">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-warning-outline button-inverse active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-warning-outline button-inverse">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-warning-outline button-inverse">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="button-collection flush-bottom">
-
-        <div class="button-group" role="group">
-
-          <button type="button" class="button button-danger-outline button-inverse active">
-
-            Left
-
-          </button>
-
-          <button type="button" class="button button-danger-outline button-inverse">
-
-            Middle
-
-          </button>
-
-          <button type="button" class="button button-danger-outline button-inverse">
-
-            Right
-
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;div class="button-group" role="group"&gt;
-  &lt;button type="button" class="button button-outline button-inverse"&gt;
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<div class="button-group" role="group">
+  <button type="button" class="button button-outline active">
     Left
-  &lt;/button&gt;
-  &lt;button type="button" class="button button-outline button-inverse"&gt;
+  </button>
+  <button type="button" class="button button-outline">
     Middle
-  &lt;/button&gt;
-  &lt;button type="button" class="button button-outline button-inverse"&gt;
+  </button>
+  <button type="button" class="button button-outline">
     Right
-  &lt;/button&gt;
-&lt;/div&gt;
-</pre>
+  </button>
+</div>
+```
+
+  </div>
+
+</div>
+
+## Rounded Button Groups
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-group" role="group">
+
+      <button type="button" class="button button-rounded active">
+
+        Left
+
+      </button>
+
+      <button type="button" class="button button-rounded">
+
+        Middle
+
+      </button>
+
+      <button type="button" class="button button-rounded">
+
+        Right
+
+      </button>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<div class="button-group" role="group">
+<button type="button" class="button button-rounded active">
+Left
+</button>
+<button type="button" class="button button-rounded">
+Middle
+</button>
+<button type="button" class="button button-rounded">
+Right
+</button>
+</div>
+```
+
+  </div>
+
+</div>
+
+## Combined Style Button Groups
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-group" role="group">
+
+      <button type="button" class="button button-outline button-rounded active">
+
+        Left
+
+      </button>
+
+      <button type="button" class="button button-outline button-rounded">
+
+        Middle
+
+      </button>
+
+      <button type="button" class="button button-outline button-rounded">
+
+        Right
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<div class="button-group" role="group">
+<button type="button" class="button button-outline button-rounded active">
+Left
+</button>
+<button type="button" class="button button-outline button-rounded">
+Middle
+</button>
+<button type="button" class="button button-outline button-rounded">
+Right
+</button>
+</div>
+```
+
+  </div>
+
+</div>
+
+## Inverse Styling
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell panel-cell-dark">
+
+    <div class="button-collection">
+
+      <div class="button-group" role="group">
+
+        <button type="button" class="button button-outline button-inverse active">
+
+          Left
+
+        </button>
+
+        <button type="button" class="button button-outline button-inverse">
+
+          Middle
+
+        </button>
+
+        <button type="button" class="button button-outline button-inverse">
+
+          Right
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="button-collection">
+
+      <div class="button-group" role="group">
+
+        <button type="button" class="button button-primary-outline button-inverse active">
+
+          Left
+
+        </button>
+
+        <button type="button" class="button button-primary-outline button-inverse">
+
+          Middle
+
+        </button>
+
+        <button type="button" class="button button-primary-outline button-inverse">
+
+          Right
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="button-collection">
+
+      <div class="button-group" role="group">
+
+        <button type="button" class="button button-success-outline button-inverse active">
+
+          Left
+
+        </button>
+
+        <button type="button" class="button button-success-outline button-inverse">
+
+          Middle
+
+        </button>
+
+        <button type="button" class="button button-success-outline button-inverse">
+
+          Right
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="button-collection">
+
+      <div class="button-group" role="group">
+
+        <button type="button" class="button button-warning-outline button-inverse active">
+
+          Left
+
+        </button>
+
+        <button type="button" class="button button-warning-outline button-inverse">
+
+          Middle
+
+        </button>
+
+        <button type="button" class="button button-warning-outline button-inverse">
+
+          Right
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="button-collection flush-bottom">
+
+      <div class="button-group" role="group">
+
+        <button type="button" class="button button-danger-outline button-inverse active">
+
+          Left
+
+        </button>
+
+        <button type="button" class="button button-danger-outline button-inverse">
+
+          Middle
+
+        </button>
+
+        <button type="button" class="button button-danger-outline button-inverse">
+
+          Right
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<div class="button-group" role="group">
+  <button type="button" class="button button-outline button-inverse">
+    Left
+  </button>
+  <button type="button" class="button button-outline button-inverse">
+    Middle
+  </button>
+  <button type="button" class="button button-outline button-inverse">
+    Right
+  </button>
+</div>
+```
+
+  </div>
+
+</div>

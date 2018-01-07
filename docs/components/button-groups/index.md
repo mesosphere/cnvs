@@ -144,21 +144,21 @@ toc: true
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group" role="group"&gt;
-  &lt;button type="button" class="button button-default"&gt;
+```html
+<div class="button-group" role="group">
+  <button type="button" class="button button-default">
     Left
-  &lt;/button&gt;
-  &lt;button type="button" class="button button-default"&gt;
+  </button>
+  <button type="button" class="button button-default">
     Middle
-  &lt;/button&gt;
-  &lt;button type="button" class="button button-default"&gt;
+  </button>
+  <button type="button" class="button button-default">
     Right
-  &lt;/button&gt;
-&lt;/div&gt;
-</pre>
+  </button>
+</div>
+```
 
   </div>
 
