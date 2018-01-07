@@ -134,7 +134,7 @@ BEGIN: Form Control Sizes
 
               <label class="inverse">
 
-                I am a&hellip;
+                I am a…
 
               </label>
 
@@ -193,11 +193,11 @@ BEGIN: Form Control Sizes
 <pre class="prettyprint code-block-inverse transparent flush lang-html">
 &lt;div class="form-group"&gt;
   &lt;label class="inverse"&gt;
-    &hellip;
+    …
   &lt;/label&gt;
   &lt;input type="text" class="form-control form-control-inverse"&gt;
   &lt;p class="form-control-feedback inverse"&gt;
-    &hellip;
+    …
   &lt;/p&gt;
 &lt;/div&gt;
 </pre>

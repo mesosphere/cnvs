@@ -118,7 +118,7 @@ BEGIN: Modal Example
 &lt;a href="#" class="button" data-toggle="modal" data-target="#myModal"&gt;Show Modal&lt;/a&gt;
 
 &lt;div class="modal fade" id="myModal"&gt;
-  &hellip;
+  …
 &lt;/div&gt;
 </pre>
 

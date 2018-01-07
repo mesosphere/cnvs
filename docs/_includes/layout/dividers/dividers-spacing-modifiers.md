@@ -32,7 +32,7 @@ To adjust the margin size apply one of the available divider-specific size class
 
 ```html
 <div class="divider divider-short">
-&hellip;
+…
 </div>
 ```
 
@@ -75,7 +75,7 @@ BEGIN: Example
 
 ```html
 <div class="divider divider-short-top divider-taller-bottom">
-  &hellip;
+  …
 </div>
 ```
 

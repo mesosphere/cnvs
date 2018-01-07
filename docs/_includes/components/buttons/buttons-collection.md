@@ -159,17 +159,17 @@ When you have buttons of different sizes in the same `.button-collection`, you c
 ```html
 <!-- Button Collection: Align Top-->
 <div class="button-collection button-collection-align-vertical-top">
-  &hellip;
+  …
 </div>
 
 <!-- Button Collection: Align Middle-->
 <div class="button-collection button-collection-align-vertical-middle">
-  &hellip;
+  …
 </div>
 
 <!-- Button Collection: Align Bottom-->
 <div class="button-collection button-collection-align-vertical-bottom">
-  &hellip;
+  …
 </div>
 ```
 

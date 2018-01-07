@@ -72,7 +72,7 @@ BEGIN: Panel Styling
 
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="panel panel-inverse"&gt;
-  &hellip;
+  …
 &lt;/div&gt;
 </pre>
 
@@ -253,13 +253,13 @@ BEGIN: Panel Styling
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="panel"&gt;
   &lt;div class="panel-cell panel-cell-borderless panel-cell-short-bottom"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
   &lt;div class="panel-cell flush-top"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
   &lt;div class="panel-cell panel-cell-dark panel-cell-short"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>

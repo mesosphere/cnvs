@@ -96,7 +96,7 @@ BEGIN: Modal Sizes
 
 <pre class="prettyprint code-block-inverse transparent flush lang-html">
 &lt;div class="modal modal-small modal-inline"&gt;
-  &hellip;
+  …
 &lt;/div&gt;
 </pre>
 
@@ -194,7 +194,7 @@ BEGIN: Modal Sizes
 
 <pre class="prettyprint code-block-inverse transparent flush lang-html">
 &lt;div class="modal modal-large modal-inline"&gt;
-  &hellip;
+  …
 &lt;/div&gt;
 </pre>
 

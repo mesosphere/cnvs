@@ -52,7 +52,7 @@ BEGIN: Message States
     Some Important Headline
   &lt;/h3&gt;
   &lt;p&gt;
-    Cras justo odio &hellip;
+    Cras justo odio …
   &lt;/p&gt;
   &lt;a href="#" class="message-link"&gt;Sure, let's do that thing&lt;/a&gt;
 &lt;/div&gt;

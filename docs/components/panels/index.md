@@ -44,7 +44,7 @@ BEGIN: Example
 
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="panel"&gt;
-  &hellip;
+  …
 &lt;/div&gt;
 </pre>
 

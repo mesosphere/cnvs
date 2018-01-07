@@ -199,7 +199,7 @@ BEGIN: EXAMPLE
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&hellip;
+…
 &lt;div class="button-collection flush-bottom"&gt;
   &lt;button type="submit" class="button button-primary"&gt;
     Submit

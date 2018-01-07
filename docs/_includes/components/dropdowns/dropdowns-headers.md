@@ -1,132 +1,104 @@
-<!-- =================================================
-BEGIN: Dropdown Headers
-================================================== -->
+# Dropdown Headers
 
-<section id="dropdowns-headers">
+Headers are an effective way to label sections of actions in any dropdown menu and to help separate one dropdown menu list from another. Wrap text in the class `.dropdown-menu-header` to give the appearance of a header.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Dropdown Headers
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
 
-  <p>
+      <div class="dropdown force-open">
 
-    Headers are an effective way to label sections of actions in any dropdown menu and to help separate one dropdown menu list from another. Wrap text in the class <code>.dropdown-menu-header</code> to give the appearance of a header.
+        <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 
-  </p>
+          Dropdown
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+        </button>
 
-  <div class="panel flush-bottom">
+        <span class="dropdown-menu" role="menu">
 
-    <div class="panel-cell">
+          <span class="dropdown-menu-header">
 
-      <div class="button-collection button-collection-align-vertical-center flush-bottom">
-
-        <div class="dropdown force-open">
-
-          <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-            Dropdown
-
-          </button>
-
-          <span class="dropdown-menu" role="menu">
-
-            <span class="dropdown-menu-header">
-
-              Dropdown Header
-
-            </span>
-
-            <ul class="dropdown-menu-list">
-
-              <li>
-
-                <a href="#">
-
-                  Action
-
-                </a>
-
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Another action
-
-                </a>
-
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Something else here
-
-                </a>
-
-              </li>
-
-            </ul>
-
-            <span class="dropdown-menu-header">
-
-              Dropdown Header
-
-            </span>
-
-            <ul class="dropdown-menu-list">
-
-              <li>
-
-                <a href="#">
-
-                  Seperated Link
-
-                </a>
-
-              </li>
-
-            </ul>
+            Dropdown Header
 
           </span>
 
-        </div>
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+          <span class="dropdown-menu-header">
+
+            Dropdown Header
+
+          </span>
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Seperated Link
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
 
       </div>
 
     </div>
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
+  </div>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;span class="dropdown-menu" role="menu"&gt;
-  &lt;span class="dropdown-menu-header"&gt;
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<span class="dropdown-menu" role="menu">
+  <span class="dropdown-menu-header">
     Dropdown Header
-  &lt;/span&gt;
-  &lt;ul class="dropdown-menu-list"&gt;
-    &hellip;
-  &lt;/ul&gt;
-&lt;/span&gt;
-</pre>
-
-    </div>
+  </span>
+  <ul class="dropdown-menu-list">
+    …
+  </ul>
+</span>
+```
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Dropdown Headers
-================================================== -->
+</div>

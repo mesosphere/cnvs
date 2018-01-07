@@ -1,124 +1,96 @@
-<!-- =================================================
-BEGIN: Dropdown Menu Inverted
-================================================== -->
+# Inverse Styling
 
-<section id="dropdowns-menu-inverted">
+Add class `.dropdown-menu-inverse` to a `.dropdown-menu` to inverted it's appearance.
 
-  <h1>
+<div class="panel">
 
-    Inverse Styling
+  <div class="panel-cell panel-cell-dark">
 
-  </h1>
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
 
-  <p>
+      <div class="dropdown force-open">
 
-    Add class <code>.dropdown-menu-inverse</code> to a <code>.dropdown-menu</code> to inverted it's appearance.
+        <button type="button" class="button dropdown-toggle button-inverse" data-toggle="dropdown" aria-expanded="false">
 
-  </p>
+          Dropdown
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+        </button>
 
-  <div class="panel panel-inverse">
+        <span class="dropdown-menu dropdown-menu-inverse" role="menu">
 
-    <div class="panel-cell panel-cell-inverse">
+          <span class="dropdown-menu-header">
 
-      <div class="button-collection button-collection-align-vertical-center flush-bottom">
-
-        <div class="dropdown force-open">
-
-          <button type="button" class="button dropdown-toggle button-inverse" data-toggle="dropdown" aria-expanded="false">
-
-            Dropdown
-
-          </button>
-
-          <span class="dropdown-menu dropdown-menu-inverse" role="menu">
-
-            <span class="dropdown-menu-header">
-
-              Dropdown Header
-
-            </span>
-
-            <ul class="dropdown-menu-list">
-
-              <li>
-
-                <a href="#">
-
-                  Action
-
-                </a>
-
-              </li>
-
-              <li class="disabled">
-
-                <a href="#">
-
-                  Another action
-
-                </a>
-
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Something else here
-
-                </a>
-
-              </li>
-
-            </ul>
-
-            <span class="dropdown-menu-divider">
-            </span>
-
-            <ul class="dropdown-menu-list">
-
-              <li class="danger">
-
-                <a href="#">
-
-                  Danger Link
-
-                </a>
-
-              </li>
-
-            </ul>
+            Dropdown Header
 
           </span>
 
-        </div>
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li class="disabled">
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+          <span class="dropdown-menu-divider">
+          </span>
+
+          <ul class="dropdown-menu-list">
+
+            <li class="danger">
+
+              <a href="#">
+
+                Danger Link
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
 
       </div>
 
     </div>
 
-    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
+  </div>
 
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;span class="dropdown-menu dropdown-menu-inverse" role="menu"&gt;
-  &hellip;
-&lt;/span&gt;
-</pre>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-    </div>
+```html
+<span class="dropdown-menu dropdown-menu-inverse" role="menu">
+  …
+</span>
+```
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Dropdown Menu Inverted
-================================================== -->
+</div>

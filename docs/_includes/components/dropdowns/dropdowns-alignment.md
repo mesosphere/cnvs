@@ -1,101 +1,73 @@
-<!-- =================================================
-BEGIN: Dropdown Alignment
-================================================== -->
+# Alignment
 
-<section id="dropdowns-alignment">
+By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add `.dropdown-menu-right` to a `.dropdown-menu` to right align the dropdown menu.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Alignment
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
 
-  <p>
+      <div class="dropdown force-open">
 
-    By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add <code>.dropdown-menu-right</code> to a <code>.dropdown-menu</code> to right align the dropdown menu.
+        <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 
-  </p>
+          Dropdown
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+        </button>
 
-  <div class="panel flush-bottom">
+        <span class="dropdown-menu dropdown-menu-right" role="menu">
 
-    <div class="panel-cell">
+          <ul class="dropdown-menu-list">
 
-      <div class="button-collection button-collection-align-vertical-center flush-bottom">
+            <li>
 
-        <div class="dropdown force-open">
+              <a href="#">
 
-          <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Action
 
-            Dropdown
+              </a>
 
-          </button>
+            </li>
 
-          <span class="dropdown-menu dropdown-menu-right" role="menu">
+            <li>
 
-            <ul class="dropdown-menu-list">
+              <a href="#">
 
-              <li>
+                Another action
 
-                <a href="#">
+              </a>
 
-                  Action
+            </li>
 
-                </a>
+            <li>
 
-              </li>
+              <a href="#">
 
-              <li>
+                Something else here
 
-                <a href="#">
+              </a>
 
-                  Another action
+            </li>
 
-                </a>
+          </ul>
 
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Something else here
-
-                </a>
-
-              </li>
-
-            </ul>
-
-          </span>
-
-        </div>
+        </span>
 
       </div>
 
     </div>
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
+  </div>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;span class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel"&gt;
-  &hellip;
-&lt;/span&gt;
-</pre>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-    </div>
+```html
+<span class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+  …
+</span>
+```
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Dropdown Alignment
-================================================== -->
+</div>

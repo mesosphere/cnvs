@@ -14,7 +14,7 @@ To invert the styling of a divider use the class `.divider-inverse`.
 
 ```html
 <div class="divider-inverse">
-  &hellip;
+  …
 </div>
 ```
 

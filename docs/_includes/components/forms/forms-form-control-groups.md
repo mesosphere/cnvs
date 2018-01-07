@@ -161,7 +161,7 @@ BEGIN: Form Control Groups
 
 &lt;div class="form-control-group"&gt;
   &lt;div class="form-control-group-add-on"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
   &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
 &lt;/div&gt;
@@ -171,7 +171,7 @@ BEGIN: Form Control Groups
 &lt;div class="form-control-group"&gt;
   &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
   &lt;div class="form-control-group-add-on"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -179,7 +179,7 @@ BEGIN: Form Control Groups
 
 &lt;div class="form-control-group form-control"&gt;
   &lt;span class="form-control-group-add-on form-control-group-add-on-prepend"&gt;
-    &hellip;
+    …
   &lt;/span&gt;
   &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
 &lt;/div&gt;
@@ -189,7 +189,7 @@ BEGIN: Form Control Groups
 &lt;div class="form-control-group form-control"&gt;
   &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
   &lt;span class="form-control-group-add-on form-control-group-add-on-append"&gt;
-    &hellip;
+    …
   &lt;/span&gt;
 &lt;/div&gt;
 
@@ -197,11 +197,11 @@ BEGIN: Form Control Groups
 
 &lt;div class="form-control-group form-control"&gt;
   &lt;span class="form-control-group-add-on form-control-group-add-on-prepend"&gt;
-    &hellip;
+    …
   &lt;/span&gt;
   &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
   &lt;span class="form-control-group-add-on form-control-group-add-on-append"&gt;
-    &hellip;
+    …
   &lt;/span&gt;
 &lt;/div&gt;
 </pre>

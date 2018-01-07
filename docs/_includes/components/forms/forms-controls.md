@@ -234,7 +234,7 @@ BEGIN: Form Controls
     &lt;input type="checkbox"&gt;
     Second Option
   &lt;/label&gt;
-  &hellip;
+  …
 &lt;/div&gt;
 </pre>
 
@@ -450,7 +450,7 @@ BEGIN: Form Controls
   &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
   First Option
 &lt;/label&gt;
-&hellip;
+…
 </pre>
 
           </div>
@@ -661,7 +661,7 @@ BEGIN: Form Controls
     &lt;select&gt;
       &lt;option&gt;1&lt;/option&gt;
       &lt;option&gt;2&lt;/option&gt;
-      &lt;option&gt;&hellip;&lt;/option&gt;
+      &lt;option&gt;…&lt;/option&gt;
     &lt;/select&gt;
   &lt;/span&gt;
 &lt;/div&gt;
@@ -671,7 +671,7 @@ BEGIN: Form Controls
     &lt;select multiple&gt;
       &lt;option&gt;1&lt;/option&gt;
       &lt;option&gt;2&lt;/option&gt;
-      &lt;option&gt;&hellip;&lt;/option&gt;
+      &lt;option&gt;…&lt;/option&gt;
     &lt;/select&gt;
   &lt;/span&gt;
 &lt;/div&gt;

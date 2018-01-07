@@ -356,7 +356,7 @@ Button dropdowns work with buttons of all sizes.
       Jumbo
     </button>
     <span class="dropdown-menu" role="menu">
-      &hellip;
+      …
     </span>
   </div>
 
@@ -365,7 +365,7 @@ Button dropdowns work with buttons of all sizes.
       Large
     </button>
     <span class="dropdown-menu" role="menu">
-      &hellip;
+      …
     </span>
   </div>
 
@@ -374,7 +374,7 @@ Button dropdowns work with buttons of all sizes.
       Medium
     </button>
     <span class="dropdown-menu" role="menu">
-      &hellip;
+      …
     </span>
   </div>
 
@@ -383,7 +383,7 @@ Button dropdowns work with buttons of all sizes.
       Small
     </button>
     <span class="dropdown-menu" role="menu">
-      &hellip;
+      …
     </span>
   </div>
 
@@ -392,7 +392,7 @@ Button dropdowns work with buttons of all sizes.
       Mini
     </button>
     <span class="dropdown-menu" role="menu">
-      &hellip;
+      …
     </span>
   </div>
 </div>

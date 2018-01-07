@@ -53,13 +53,13 @@ BEGIN: Modal Structure
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="modal"&gt;
   &lt;div class="modal-header"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
   &lt;div class="modal-body"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
   &lt;div class="modal-footer"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>

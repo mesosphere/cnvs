@@ -1,108 +1,80 @@
-<!-- =================================================
-BEGIN: Dropdown Headers
-================================================== -->
+# Dropdown Menu List
 
-<section id="dropdowns-menu-list">
+Central to the function of dropdown menu is the dropdown menu list, which, as the name implies, is a collection of related links or actions. A dropdown menu list is create by adding the class `.dropdown-menu-list` to a `ul` or `ol` list element. A dropdown menu may have more than one dropdown menu lists. Headers and dividers are often used to differentiate multiple dropdown menu lists.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Dropdown Menu List
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
 
-  <p>
+      <div class="dropdown force-open">
 
-    Central to the function of dropdown menu is the dropdown menu list, which, as the name implies, is a collection of related links or actions. A dropdown menu list is create by adding the class <code>.dropdown-menu-list</code> to a <code>ul</code> or <code>ol</code> list element. A dropdown menu may have more than one dropdown menu lists. Headers and dividers are often used to differentiate multiple dropdown menu lists.
+        <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 
-  </p>
+          Dropdown
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+        </button>
 
-  <div class="panel flush-bottom">
+        <span class="dropdown-menu" role="menu">
 
-    <div class="panel-cell">
+          <ul class="dropdown-menu-list">
 
-      <div class="button-collection button-collection-align-vertical-center flush-bottom">
+            <li>
 
-        <div class="dropdown force-open">
+              <a href="#">
 
-          <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Action
 
-            Dropdown
+              </a>
 
-          </button>
+            </li>
 
-          <span class="dropdown-menu" role="menu">
+            <li>
 
-            <ul class="dropdown-menu-list">
+              <a href="#">
 
-              <li>
+                Another action
 
-                <a href="#">
+              </a>
 
-                  Action
+            </li>
 
-                </a>
+            <li>
 
-              </li>
+              <a href="#">
 
-              <li>
+                Something else here
 
-                <a href="#">
+              </a>
 
-                  Another action
+            </li>
 
-                </a>
+          </ul>
 
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Something else here
-
-                </a>
-
-              </li>
-
-            </ul>
-
-          </span>
-
-        </div>
+        </span>
 
       </div>
 
     </div>
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
+  </div>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;span class="dropdown-menu" role="menu"&gt;
-  &lt;ul class="dropdown-menu-list"&gt;
-    &lt;li&gt;
-      &lt;a href="#" role="menuitem" tabindex="-1"&gt;
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<span class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu-list">
+    <li>
+      <a href="#" role="menuitem" tabindex="-1">
         Action
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &hellip;
-  &lt;/ul&gt;
-&lt;/span&gt;
-</pre>
-
-    </div>
+      </a>
+    </li>
+    …
+  </ul>
+</span>
+```
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Dropdown Headers
-================================================== -->
+</div>

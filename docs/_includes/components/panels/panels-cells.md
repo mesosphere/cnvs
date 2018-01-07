@@ -53,13 +53,13 @@ BEGIN: Panel Structure
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="panel"&gt;
   &lt;div class="panel-cell"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
   &lt;div class="panel-cell"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
   &lt;div class="panel-cell"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -389,10 +389,10 @@ BEGIN: Panel Structure
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="panel"&gt;
   &lt;div class="panel-cell"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
   &lt;div class="panel-cell panel-cell-short"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -616,7 +616,7 @@ BEGIN: Panel Structure
 <pre class="prettyprint transparent flush lang-html">
 &lt;div class="panel"&gt;
   &lt;div class="panel-cell panel-cell-taller-bottom panel-cell-wider-right"&gt;
-    &hellip;
+    …
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>

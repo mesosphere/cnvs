@@ -1,119 +1,91 @@
-<!-- =================================================
-BEGIN: Dropdown Dividers
-================================================== -->
+# Menu Dividers
 
-<section id="dropdowns-dividers">
+Dividers are a simple and effective way to break up a dropdown menu and create obvious separate between sets of dropdown menu lists.  Adding the class `.dropdown-menu-divider` to an empty `span` element is the fastest way to create a dropdown menu divider.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Menu Dividers
+  <div class="panel-cell">
 
-  </h1>
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
 
-  <p>
+      <div class="dropdown force-open">
 
-    Dividers are a simple and effective way to break up a dropdown menu and create obvious separate between sets of dropdown menu lists.  Adding the class <code>.dropdown-menu-divider</code> to an empty <code>span</code> element is the fastest way to create a dropdown menu divider.
+        <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 
-  </p>
+          Dropdown
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+        </button>
 
-  <div class="panel flush-bottom">
+        <span class="dropdown-menu" role="menu">
 
-    <div class="panel-cell">
+          <ul class="dropdown-menu-list">
 
-      <div class="button-collection button-collection-align-vertical-center flush-bottom">
+            <li>
 
-        <div class="dropdown force-open">
+              <a href="#">
 
-          <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Action
 
-            Dropdown
+              </a>
 
-          </button>
+            </li>
 
-          <span class="dropdown-menu" role="menu">
+            <li>
 
-            <ul class="dropdown-menu-list">
+              <a href="#">
 
-              <li>
+                Another action
 
-                <a href="#">
+              </a>
 
-                  Action
+            </li>
 
-                </a>
+            <li>
 
-              </li>
+              <a href="#">
 
-              <li>
+                Something else here
 
-                <a href="#">
+              </a>
 
-                  Another action
+            </li>
 
-                </a>
+          </ul>
 
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Something else here
-
-                </a>
-
-              </li>
-
-            </ul>
-
-            <span class="dropdown-menu-divider">
-            </span>
-
-            <ul class="dropdown-menu-list">
-
-              <li>
-
-                <a href="#">
-
-                  Seperated Link
-
-                </a>
-
-              </li>
-
-            </ul>
-
+          <span class="dropdown-menu-divider">
           </span>
 
-        </div>
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Seperated Link
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
 
       </div>
 
     </div>
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
+  </div>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;span class="dropdown-menu" role="menu"&gt;
-  &lt;span class="dropdown-menu-divider"&gt;
-  &lt;/span&gt;
-&lt;/span&gt;
-</pre>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-    </div>
+```html
+<span class="dropdown-menu" role="menu">
+  <span class="dropdown-menu-divider">
+  </span>
+</span>
+```
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Dropdown Dividers
-================================================== -->
+</div>
