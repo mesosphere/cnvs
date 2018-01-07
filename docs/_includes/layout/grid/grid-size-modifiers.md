@@ -2,81 +2,12 @@
 
 Size modifiers are available if you wish to have a grid with narrower or wider gutters. For example, adding the class `.row-narrow` to the `.row` element will decrease the gutter width of applied between columns in the given row. You can even remove the gutters all together with the `.row-flush` class modifier.
 
-<table class="table">
-
-  <thead>
-
-    <tr>
-
-      <th>
-
-        Class
-
-      </th>
-
-      <th>
-
-        Description
-
-      </th>
-
-    </tr>
-
-  </thead>
-
-  <tbody>
-
-    <tr>
-
-      <td>
-
-        <code>.row-flush</code>
-
-      </td>
-
-      <td>
-
-        Remove the gutters between columns entirely.
-
-      </td>
-
-    </tr>
-
-    <tr>
-
-      <td>
-
-        <code>.row-narrow</code>
-
-      </td>
-
-      <td>
-
-        Decrease the gutter width between columns.
-
-      </td>
-
-    </tr>
-
-    <tr>
-
-      <td>
-
-        <code>.row-wide</code>
-
-      </td>
-
-      <td>
-
-        Increase the gutter width between columns.
-
-      </td>
-
-    </tr>
-
-  </tbody>
-
-</table>
+| Class         | Description                                  |
+| ------------- | -------------------------------------------- |
+| `.row-flush`  | Remove the gutters between columns entirely. |
+| `.row-narrow` | Decrease the gutter width between columns.   |
+| `.row-wide`   | Increase the gutter width between columns.   |
+{: .table }
 
 <div class="panel pod pod-short-bottom pod-short-top flush-horizontal">
 

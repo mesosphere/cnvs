@@ -2,7 +2,7 @@
 
 The column width and position can change based on both screen resolution and class name.  The column count and gutter width are easily modified using Canvas variables.  The grid itself is size independent, the grid column width is defined based on the element wrapping the row.  The only constant size in a grid is the gutter width &mdash; which itself varies based on the width of the viewport.
 
-<table class="table table-bordered table-striped flush-bottom" markdown="1" >
+<table class="table table-bordered table-striped flush-bottom">
   <thead>
     <tr>
       <th></th>
