@@ -8,16 +8,20 @@ github_username:  jekyll
 
 
 # Build settings
-markdown: kramdown
-exclude: ["styles", "images", "fonts", "javascripts"]
-keep_files: ["styles", "images", "fonts", "javascripts"]
 plugins:
-  - jekyll-redirect-from
-  - jekyll-toc
+- jekyll-redirect-from
+- jekyll-toc
 whitelist:
-  - jekyll-redirect-from
+- jekyll-redirect-from
+markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+exclude: ["styles", "images", "fonts", "javascripts"]
+keep_files: ["styles", "images", "fonts", "javascripts"]
+collections:
+  pages:
+    output: true
+    permalink: /:path
 toc:
   max_level: 2

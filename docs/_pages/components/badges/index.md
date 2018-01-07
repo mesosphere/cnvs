@@ -1,7 +1,5 @@
 ---
 layout: post
-redirect_from:
-  - /components/
 id: page-badges
 title: Badges
 page-header:

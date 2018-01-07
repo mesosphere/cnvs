@@ -1,7 +1,5 @@
 ---
 layout: post
-redirect_from:
-  - /content/
 id: page-typography
 title: Typography
 page-header:

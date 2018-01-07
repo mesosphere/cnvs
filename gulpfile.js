@@ -37,7 +37,7 @@ var config_vars   = {
   },
   prod: {
 
-    jekyllConfig: "_config.prod.yml"
+    jekyllConfig: "_config.yml"
 
   }
 };

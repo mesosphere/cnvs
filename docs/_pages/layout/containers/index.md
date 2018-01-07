@@ -1,7 +1,5 @@
 ---
 layout: post
-redirect_from:
-  - /layout/
 id: page-containers
 title: Containers
 page-header:
