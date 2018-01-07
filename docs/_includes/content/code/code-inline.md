@@ -1,49 +1,21 @@
-<!-- =================================================
-BEGIN: Code (Inline)
-================================================== -->
+# Inline Code
 
-<section id="code-inline">
+For inline code, wrap your code in the `code` tag. Be sure to escape HTML angle brackets.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Inline Code
+  <div class="panel-cell">
 
-  </h1>
-
-  <p>
-
-    For inline code, wrap your code in the <code>code</code> tag. Be sure to escape HTML angle brackets.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      For example, <code>&lt;section&gt;</code> should be wrapped as inline.
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped as inline.
-</pre>
-
-    </div>
+    For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+```
 
-<!-- =================================================
-END: Code (Inline)
-================================================== -->
+  </div>
+
+</div>
