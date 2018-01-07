@@ -1,64 +1,270 @@
-<!-- =================================================
-BEGIN: Tables Inverse
-================================================== -->
+# Inverse Styling
 
-<section id="tables-inverse">
+Add the class `.table-inverse` to any `.table` element to leverage inverse styling.
 
-  <h1>
+<div class="panel">
 
-    Inverse Styling
+  <div class="panel-cell panel-cell-dark">
 
-  </h1>
+    <table class="table table-inverse table-hover table-borderless-outer table-borderless-inner-columns flush-bottom">
 
-  <p>
+      <thead>
 
-    Add the class <code>.table-inverse</code> to any <code>.table</code> element to leverage inverse styling.
+        <tr>
 
-  </p>
+          <th>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+            First Name
 
-  <div class="panel panel-inverse">
+          </th>
 
-    <div class="panel-cell panel-cell-inverse">
+          <th>
 
-      <table class="table table-inverse table-hover table-borderless-outer table-borderless-inner-columns flush-bottom">
+            Last Name
 
-        <thead>
+          </th>
 
-          <tr>
+          <th class="active">
 
-            <th>
+            Email
 
-              First Name
+          </th>
 
-            </th>
+          <th>
 
-            <th>
+            Commits
 
-              Last Name
+          </th>
 
-            </th>
+        </tr>
 
-            <th class="active">
+      </thead>
 
-              Email
+      <tbody>
 
-            </th>
+        <tr>
 
-            <th>
+          <td>
 
-              Commits
+            John
 
-            </th>
+          </td>
 
-          </tr>
+          <td>
 
-        </thead>
+            Ashenden
 
-        <tbody>
+          </td>
+
+          <td class="active">
+
+            john.ashenden@domain.com
+
+          </td>
+
+          <td>
+
+            802
+
+          </td>
+
+        </tr>
+
+        <tr class="selected">
+
+          <td>
+
+            Michael
+
+          </td>
+
+          <td>
+
+            Lunøe
+
+          </td>
+
+          <td class="active">
+
+            michael.lunoe@domain.com
+
+          </td>
+
+          <td>
+
+            2,401
+
+          </td>
+
+        </tr>
+
+        <tr class="">
+
+          <td>
+
+            Rafael
+
+          </td>
+
+          <td>
+
+            Corral
+
+          </td>
+
+          <td class="active">
+
+            rafael.corral@domain.com
+
+          </td>
+
+          <td>
+
+            1,532
+
+          </td>
+
+        </tr>
+
+        <tr class="success">
+
+          <td>
+
+            Jesse
+
+          </td>
+
+          <td>
+
+            Lash
+
+          </td>
+
+          <td class="active">
+
+            jesse.lash@domain.com
+
+          </td>
+
+          <td>
+
+            104
+
+          </td>
+
+        </tr>
+
+        <tr class="">
+
+          <td>
+
+            John
+
+          </td>
+
+          <td>
+
+            Ashenden
+
+          </td>
+
+          <td class="active">
+
+            john.ashenden@domain.com
+
+          </td>
+
+          <td>
+
+            802
+
+          </td>
+
+        </tr>
+
+        <tr class="warning">
+
+          <td>
+
+            Michael
+
+          </td>
+
+          <td>
+
+            Lunøe
+
+          </td>
+
+          <td class="active">
+
+            michael.lunoe@domain.com
+
+          </td>
+
+          <td>
+
+            2,401
+
+          </td>
+
+        </tr>
+
+        <tr class="">
+
+          <td>
+
+            Rafael
+
+          </td>
+
+          <td>
+
+            Corral
+
+          </td>
+
+          <td class="active">
+
+            rafael.corral@domain.com
+
+          </td>
+
+          <td>
+
+            1,532
+
+          </td>
+
+        </tr>
+
+        <tr class="danger">
+
+          <td>
+
+            Jesse
+
+          </td>
+
+          <td>
+
+            Lash
+
+          </td>
+
+          <td class="active">
+
+            jesse.lash@domain.com
+
+          </td>
+
+          <td>
+
+            104
+
+          </td>
+
+        </tr>
 
           <tr>
 
@@ -88,254 +294,20 @@ BEGIN: Tables Inverse
 
           </tr>
 
-          <tr class="selected">
+      </tbody>
 
-            <td>
-
-              Michael
-
-            </td>
-
-            <td>
-
-              Lunøe
-
-            </td>
-
-            <td class="active">
-
-              michael.lunoe@domain.com
-
-            </td>
-
-            <td>
-
-              2,401
-
-            </td>
-
-          </tr>
-
-          <tr class="">
-
-            <td>
-
-              Rafael
-
-            </td>
-
-            <td>
-
-              Corral
-
-            </td>
-
-            <td class="active">
-
-              rafael.corral@domain.com
-
-            </td>
-
-            <td>
-
-              1,532
-
-            </td>
-
-          </tr>
-
-          <tr class="success">
-
-            <td>
-
-              Jesse
-
-            </td>
-
-            <td>
-
-              Lash
-
-            </td>
-
-            <td class="active">
-
-              jesse.lash@domain.com
-
-            </td>
-
-            <td>
-
-              104
-
-            </td>
-
-          </tr>
-
-          <tr class="">
-
-            <td>
-
-              John
-
-            </td>
-
-            <td>
-
-              Ashenden
-
-            </td>
-
-            <td class="active">
-
-              john.ashenden@domain.com
-
-            </td>
-
-            <td>
-
-              802
-
-            </td>
-
-          </tr>
-
-          <tr class="warning">
-
-            <td>
-
-              Michael
-
-            </td>
-
-            <td>
-
-              Lunøe
-
-            </td>
-
-            <td class="active">
-
-              michael.lunoe@domain.com
-
-            </td>
-
-            <td>
-
-              2,401
-
-            </td>
-
-          </tr>
-
-          <tr class="">
-
-            <td>
-
-              Rafael
-
-            </td>
-
-            <td>
-
-              Corral
-
-            </td>
-
-            <td class="active">
-
-              rafael.corral@domain.com
-
-            </td>
-
-            <td>
-
-              1,532
-
-            </td>
-
-          </tr>
-
-          <tr class="danger">
-
-            <td>
-
-              Jesse
-
-            </td>
-
-            <td>
-
-              Lash
-
-            </td>
-
-            <td class="active">
-
-              jesse.lash@domain.com
-
-            </td>
-
-            <td>
-
-              104
-
-            </td>
-
-          </tr>
-
-            <tr>
-
-              <td>
-
-                John
-
-              </td>
-
-              <td>
-
-                Ashenden
-
-              </td>
-
-              <td class="active">
-
-                john.ashenden@domain.com
-
-              </td>
-
-              <td>
-
-                802
-
-              </td>
-
-            </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;table class="table table-inverse table-borderless-outer table-borderless-inner-columns"&gt;
-  &hellip;
-&lt;/table&gt;
-</pre>
-
-    </div>
+    </table>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+&lt;table class="table table-inverse table-borderless-outer table-borderless-inner-columns"&gt;
+  &hellip;
+&lt;/table&gt;
+```
 
-<!-- =================================================
-END: Tables Inverse
-================================================== -->
+  </div>
+
+</div>

@@ -7,15 +7,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  For truly tabular data, use the <code>&lt;table&gt;</code> tag and add the class <code>.table</code>.  The table element applies basic stying propeties and padding to the default <code>&lt;table&gt;</code> element.
-
-</p>
-
-<!-- =================================================
-BEGIN: Example
-================================================== -->
+For truly tabular data, use the <code>&lt;table&gt;</code> tag and add the class <code>.table</code>.  The table element applies basic stying propeties and padding to the default <code>&lt;table&gt;</code> element.
 
 <div class="panel flush-bottom">
 
@@ -175,9 +167,9 @@ BEGIN: Example
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
+```html
 &lt;table class="table"&gt;
 
   &lt;!--Table Head--&gt;
@@ -204,7 +196,7 @@ BEGIN: Example
   &lt;/tbody&gt;
 
 &lt;/table&gt;
-</pre>
+```
 
   </div>
 

@@ -1,207 +1,175 @@
-<!-- =================================================
-BEGIN: Tables Hover Rows
-================================================== -->
+# Hover Rows
 
-<section id="tables-hover-rows">
+Add `.table-hover` to enable a hover state on table rows within a `&lt;tbody&gt;`.
 
-  <h1>
+<div class="panel">
 
-    Hover Rows
+  <div class="panel-cell">
 
-  </h1>
+    <table class="table table-hover flush-bottom">
 
-  <p>
+      <thead>
 
-    Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.
+        <tr>
 
-  </p>
+          <th>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+            First Name
 
-  <div class="panel">
+          </th>
 
-    <div class="panel-cell">
+          <th>
 
-      <table class="table table-hover flush-bottom">
+            Last Name
 
-        <thead>
+          </th>
 
-          <tr>
+          <th class="active">
 
-            <th>
+            Email
 
-              First Name
+          </th>
 
-            </th>
+          <th>
 
-            <th>
+            Commits
 
-              Last Name
+          </th>
 
-            </th>
+        </tr>
 
-            <th class="active">
+      </thead>
 
-              Email
+      <tbody>
 
-            </th>
+        <tr>
 
-            <th>
+          <td>
 
-              Commits
+            John
 
-            </th>
+          </td>
 
-          </tr>
+          <td>
 
-        </thead>
+            Ashenden
 
-        <tbody>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            john.ashenden@domain.com
 
-              John
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            802
 
-              Ashenden
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr class="">
 
-              john.ashenden@domain.com
+          <td>
 
-            </td>
+            Michael
 
-            <td>
+          </td>
 
-              802
+          <td>
 
-            </td>
+            Lunøe
 
-          </tr>
+          </td>
 
-          <tr class="">
+          <td class="active">
 
-            <td>
+            michael.lunoe@domain.com
 
-              Michael
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            2,401
 
-              Lunøe
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr>
 
-              michael.lunoe@domain.com
+          <td>
 
-            </td>
+            Rafael
 
-            <td>
+          </td>
 
-              2,401
+          <td>
 
-            </td>
+            Corral
 
-          </tr>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            rafael.corral@domain.com
 
-              Rafael
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            1,532
 
-              Corral
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr>
 
-              rafael.corral@domain.com
+          <td>
 
-            </td>
+            Jesse
 
-            <td>
+          </td>
 
-              1,532
+          <td>
 
-            </td>
+            Lash
 
-          </tr>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            jesse.lash@domain.com
 
-              Jesse
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            104
 
-              Lash
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+      </tbody>
 
-              jesse.lash@domain.com
-
-            </td>
-
-            <td>
-
-              104
-
-            </td>
-
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;table class="table table-hover"&gt;
-  &hellip;
-&lt;/table&gt;
-</pre>
-
-    </div>
+    </table>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <p>
+```html
+&lt;table class="table table-hover"&gt;
+  &hellip;
+&lt;/table&gt;
+```
 
-    Add <code>.table-row-hover-disabled</code> to any <code>&lt;tr&gt;</code> to disable the row hover behavior and styling.
+  </div>
 
-  </p>
+</div>
 
-</section>
-
-<!-- =================================================
-END: Tables Hover Rows
-================================================== -->
+Add `.table-row-hover-disabled` to any `&lt;tr&gt;` to disable the row hover behavior and styling.

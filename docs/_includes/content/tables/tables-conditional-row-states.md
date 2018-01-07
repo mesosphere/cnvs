@@ -1,172 +1,278 @@
-<!-- =================================================
-BEGIN: Tables Hover Rows
-================================================== -->
+# Conditional Row States
 
-<section id="tables-conditional-row-states">
+Use contextual classes to color table rows or individual cells.
 
-  <h1>
+| Class       | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| `.selected` | Applies the hover color to a particular row or cell  |
+| `.success`  | Indicates a successful or positive action            |
+| `.warning`  | Indicates a warning that might need attention        |
+| `.danger`   | Indicates a dangerous or potentially negative action |
+{: .table }
 
-    Conditional Row States
+<div class="panel flush-bottom">
 
-  </h1>
+  <div class="panel-cell">
 
-  <p>
+    <table class="table table-hover flush-bottom">
 
-    Use contextual classes to color table rows or individual cells.
+      <thead>
 
-  </p>
+        <tr>
 
-  <table class="table short">
+          <th>
 
-    <thead>
+            First Name
 
-      <tr>
+          </th>
 
-        <th>
+          <th>
 
-          Class
+            Last Name
 
-        </th>
+          </th>
 
-        <th>
+          <th class="active">
 
-          Description
+            Email
 
-        </th>
+          </th>
 
-      </tr>
+          <th>
 
-    </thead>
+            Commits
 
-    <tbody>
+          </th>
 
-      <tr>
+        </tr>
 
-        <td>
+      </thead>
 
-          <code>
+      <tbody>
 
-            .selected
+        <tr>
 
-          </code>
+          <td>
 
-        </td>
+            John
 
-        <td>
+          </td>
 
-          Applies the hover color to a particular row or cell
+          <td>
 
-        </td>
+            Ashenden
 
-      </tr>
+          </td>
 
-      <tr>
+          <td class="active">
 
-        <td>
+            john.ashenden@domain.com
 
-          <code>
+          </td>
 
-            .success
+          <td>
 
-          </code>
+            802
 
-        </td>
+          </td>
 
-        <td>
+        </tr>
 
-          Indicates a successful or positive action
+        <tr class="selected">
 
-        </td>
+          <td>
 
-      </tr>
+            Michael
 
-      <tr>
+          </td>
 
-        <td>
+          <td>
 
-          <code>
+            Lunøe
 
-            .warning
+          </td>
 
-          </code>
+          <td class="active">
 
-        </td>
+            michael.lunoe@domain.com
 
-        <td>
+          </td>
 
-          Indicates a warning that might need attention
+          <td>
 
-        </td>
+            2,401
 
-      </tr>
+          </td>
 
-      <tr>
+        </tr>
 
-        <td>
+        <tr class="">
 
-          <code>
+          <td>
 
-            .danger
+            Rafael
 
-          </code>
+          </td>
 
-        </td>
+          <td>
 
-        <td>
+            Corral
 
-          Indicates a dangerous or potentially negative action
+          </td>
 
-        </td>
+          <td class="active">
 
-      </tr>
+            rafael.corral@domain.com
 
-    </tbody>
+          </td>
 
-  </table>
+          <td>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+            1,532
 
-  <div class="panel flush-bottom">
+          </td>
 
-    <div class="panel-cell">
+        </tr>
 
-      <table class="table table-hover flush-bottom">
+        <tr class="success">
 
-        <thead>
+          <td>
 
-          <tr>
+            Jesse
 
-            <th>
+          </td>
 
-              First Name
+          <td>
 
-            </th>
+            Lash
 
-            <th>
+          </td>
 
-              Last Name
+          <td class="active">
 
-            </th>
+            jesse.lash@domain.com
 
-            <th class="active">
+          </td>
 
-              Email
+          <td>
 
-            </th>
+            104
 
-            <th>
+          </td>
 
-              Commits
+        </tr>
 
-            </th>
+        <tr class="">
 
-          </tr>
+          <td>
 
-        </thead>
+            John
 
-        <tbody>
+          </td>
+
+          <td>
+
+            Ashenden
+
+          </td>
+
+          <td class="active">
+
+            john.ashenden@domain.com
+
+          </td>
+
+          <td>
+
+            802
+
+          </td>
+
+        </tr>
+
+        <tr class="warning">
+
+          <td>
+
+            Michael
+
+          </td>
+
+          <td>
+
+            Lunøe
+
+          </td>
+
+          <td class="active">
+
+            michael.lunoe@domain.com
+
+          </td>
+
+          <td>
+
+            2,401
+
+          </td>
+
+        </tr>
+
+        <tr class="">
+
+          <td>
+
+            Rafael
+
+          </td>
+
+          <td>
+
+            Corral
+
+          </td>
+
+          <td class="active">
+
+            rafael.corral@domain.com
+
+          </td>
+
+          <td>
+
+            1,532
+
+          </td>
+
+        </tr>
+
+        <tr class="danger">
+
+          <td>
+
+            Jesse
+
+          </td>
+
+          <td>
+
+            Lash
+
+          </td>
+
+          <td class="active">
+
+            jesse.lash@domain.com
+
+          </td>
+
+          <td>
+
+            104
+
+          </td>
+
+        </tr>
 
           <tr>
 
@@ -196,254 +302,20 @@ BEGIN: Tables Hover Rows
 
           </tr>
 
-          <tr class="selected">
+      </tbody>
 
-            <td>
-
-              Michael
-
-            </td>
-
-            <td>
-
-              Lunøe
-
-            </td>
-
-            <td class="active">
-
-              michael.lunoe@domain.com
-
-            </td>
-
-            <td>
-
-              2,401
-
-            </td>
-
-          </tr>
-
-          <tr class="">
-
-            <td>
-
-              Rafael
-
-            </td>
-
-            <td>
-
-              Corral
-
-            </td>
-
-            <td class="active">
-
-              rafael.corral@domain.com
-
-            </td>
-
-            <td>
-
-              1,532
-
-            </td>
-
-          </tr>
-
-          <tr class="success">
-
-            <td>
-
-              Jesse
-
-            </td>
-
-            <td>
-
-              Lash
-
-            </td>
-
-            <td class="active">
-
-              jesse.lash@domain.com
-
-            </td>
-
-            <td>
-
-              104
-
-            </td>
-
-          </tr>
-
-          <tr class="">
-
-            <td>
-
-              John
-
-            </td>
-
-            <td>
-
-              Ashenden
-
-            </td>
-
-            <td class="active">
-
-              john.ashenden@domain.com
-
-            </td>
-
-            <td>
-
-              802
-
-            </td>
-
-          </tr>
-
-          <tr class="warning">
-
-            <td>
-
-              Michael
-
-            </td>
-
-            <td>
-
-              Lunøe
-
-            </td>
-
-            <td class="active">
-
-              michael.lunoe@domain.com
-
-            </td>
-
-            <td>
-
-              2,401
-
-            </td>
-
-          </tr>
-
-          <tr class="">
-
-            <td>
-
-              Rafael
-
-            </td>
-
-            <td>
-
-              Corral
-
-            </td>
-
-            <td class="active">
-
-              rafael.corral@domain.com
-
-            </td>
-
-            <td>
-
-              1,532
-
-            </td>
-
-          </tr>
-
-          <tr class="danger">
-
-            <td>
-
-              Jesse
-
-            </td>
-
-            <td>
-
-              Lash
-
-            </td>
-
-            <td class="active">
-
-              jesse.lash@domain.com
-
-            </td>
-
-            <td>
-
-              104
-
-            </td>
-
-          </tr>
-
-            <tr>
-
-              <td>
-
-                John
-
-              </td>
-
-              <td>
-
-                Ashenden
-
-              </td>
-
-              <td class="active">
-
-                john.ashenden@domain.com
-
-              </td>
-
-              <td>
-
-                802
-
-              </td>
-
-            </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;table class="table table-hover"&gt;
-  &hellip;
-&lt;/table&gt;
-</pre>
-
-    </div>
+    </table>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+&lt;table class="table table-hover"&gt;
+  &hellip;
+&lt;/table&gt;
+```
 
-<!-- =================================================
-END: Tables Hover Rows
-================================================== -->
+  </div>
+
+</div>

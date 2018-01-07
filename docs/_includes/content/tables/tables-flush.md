@@ -1,201 +1,173 @@
-<!-- =================================================
-BEGIN: Tables Flush
-================================================== -->
+# Flush Tables
 
-<section id="tables-flush">
+Add `.table-flush` to remove the horizontal padding applied to the first and last cell of a table row.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Flush Tables
+  <div class="panel-cell">
 
-  </h1>
+    <table class="table table-flush table-borderless-outer table-borderless-inner-columns flush-bottom">
 
-  <p>
+      <thead>
 
-    Add <code>.table-flush</code> to remove the horizontal padding applied to the first and last cell of a table row.
+        <tr>
 
-  </p>
+          <th>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+            First Name
 
-  <div class="panel flush-bottom">
+          </th>
 
-    <div class="panel-cell">
+          <th>
 
-      <table class="table table-flush table-borderless-outer table-borderless-inner-columns flush-bottom">
+            Last Name
 
-        <thead>
+          </th>
 
-          <tr>
+          <th class="active">
 
-            <th>
+            Email
 
-              First Name
+          </th>
 
-            </th>
+          <th>
 
-            <th>
+            Commits
 
-              Last Name
+          </th>
 
-            </th>
+        </tr>
 
-            <th class="active">
+      </thead>
 
-              Email
+      <tbody>
 
-            </th>
+        <tr>
 
-            <th>
+          <td>
 
-              Commits
+            John
 
-            </th>
+          </td>
 
-          </tr>
+          <td>
 
-        </thead>
+            Ashenden
 
-        <tbody>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            john.ashenden@domain.com
 
-              John
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            802
 
-              Ashenden
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr class="">
 
-              john.ashenden@domain.com
+          <td>
 
-            </td>
+            Michael
 
-            <td>
+          </td>
 
-              802
+          <td>
 
-            </td>
+            Lunøe
 
-          </tr>
+          </td>
 
-          <tr class="">
+          <td class="active">
 
-            <td>
+            michael.lunoe@domain.com
 
-              Michael
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            2,401
 
-              Lunøe
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr>
 
-              michael.lunoe@domain.com
+          <td>
 
-            </td>
+            Rafael
 
-            <td>
+          </td>
 
-              2,401
+          <td>
 
-            </td>
+            Corral
 
-          </tr>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            rafael.corral@domain.com
 
-              Rafael
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            1,532
 
-              Corral
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr>
 
-              rafael.corral@domain.com
+          <td>
 
-            </td>
+            Jesse
 
-            <td>
+          </td>
 
-              1,532
+          <td>
 
-            </td>
+            Lash
 
-          </tr>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            jesse.lash@domain.com
 
-              Jesse
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            104
 
-              Lash
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+      </tbody>
 
-              jesse.lash@domain.com
-
-            </td>
-
-            <td>
-
-              104
-
-            </td>
-
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;table class="table table-flush table-borderless-outer table-borderless-inner-columns"&gt;
-  &hellip;
-&lt;/table&gt;
-</pre>
-
-    </div>
+    </table>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+&lt;table class="table table-flush table-borderless-outer table-borderless-inner-columns"&gt;
+  &hellip;
+&lt;/table&gt;
+```
 
-<!-- =================================================
-END: Tables Flush
-================================================== -->
+  </div>
+
+</div>

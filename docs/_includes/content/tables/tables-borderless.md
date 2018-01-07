@@ -1,369 +1,184 @@
-<!-- =================================================
-BEGIN: Tables Borderless
-================================================== -->
+# Borderless Tables
 
-<section id="tables-borderless">
+Add `.table-borderless` to remove the outer borders from the table.
 
-  <h1>
+| Class                             | Description                                |
+| --------------------------------- | ------------------------------------------ |
+| `.table-borderless`               | Remove all table borders.                  |
+| `.table-borderless-inner`         | Remove all table inner borders.            |
+| `.table-borderless-inner-columns` | Remove all table inner vertical borders.   |
+| `.table-borderless-inner-rows`    | Remove all table inner horizontal borders. |
+| `.table-borderless-outer`         | Remove all table outer borders.            |
+| `.table-borderless-outer-columns` | Remove all table outer vertical borders.   |
+| `.table-borderless-outer-rows`    | Remove all table outer horizontal borders. |
+{: .table }
 
-    Borderless Tables
+<div class="panel flush-bottom">
 
-  </h1>
+  <div class="panel-cell">
 
-  <p>
+    <table class="table table-borderless-outer table-borderless-inner-columns flush-bottom">
 
-    Add <code>.table-borderless</code> to remove the outer borders from the table.
+      <thead>
 
-  </p>
+        <tr>
 
-  <table class="table short">
+          <th>
 
-    <thead>
+            First Name
 
-      <tr>
+          </th>
 
-        <th>
+          <th>
 
-          Class
+            Last Name
 
-        </th>
+          </th>
 
-        <th>
+          <th class="active">
 
-          Description
+            Email
 
-        </th>
+          </th>
 
-      </tr>
+          <th>
 
-    </thead>
+            Commits
 
-    <tbody>
+          </th>
 
-      <tr>
+        </tr>
 
-        <td>
+      </thead>
 
-          <code>
+      <tbody>
 
-            .table-borderless
+        <tr>
 
-          </code>
+          <td>
 
-        </td>
+            John
 
-        <td>
+          </td>
 
-          Remove all table borders.
+          <td>
 
-        </td>
+            Ashenden
 
-      </tr>
+          </td>
 
-      <tr>
+          <td class="active">
 
-        <td>
+            john.ashenden@domain.com
 
-          <code>
+          </td>
 
-            .table-borderless-inner
+          <td>
 
-          </code>
+            802
 
-        </td>
+          </td>
 
-        <td>
+        </tr>
 
-          Remove all table inner borders.
+        <tr class="">
 
-        </td>
+          <td>
 
-      </tr>
+            Michael
 
-      <tr>
+          </td>
 
-        <td>
+          <td>
 
-          <code>
+            Lunøe
 
-            .table-borderless-inner-columns
+          </td>
 
-          </code>
+          <td class="active">
 
-        </td>
+            michael.lunoe@domain.com
 
-        <td>
+          </td>
 
-          Remove all table inner vertical borders.
+          <td>
 
-        </td>
+            2,401
 
-      </tr>
+          </td>
 
-      <tr>
+        </tr>
 
-        <td>
+        <tr>
 
-          <code>
+          <td>
 
-            .table-borderless-inner-rows
+            Rafael
 
-          </code>
+          </td>
 
-        </td>
+          <td>
 
-        <td>
+            Corral
 
-          Remove all table inner horizontal borders.
+          </td>
 
-        </td>
+          <td class="active">
 
-      </tr>
+            rafael.corral@domain.com
 
-      <tr>
+          </td>
 
-        <td>
+          <td>
 
-          <code>
+            1,532
 
-            .table-borderless-outer
+          </td>
 
-          </code>
+        </tr>
 
-        </td>
+        <tr>
 
-        <td>
+          <td>
 
-          Remove all table outer borders.
+            Jesse
 
-        </td>
+          </td>
 
-      </tr>
+          <td>
 
-      <tr>
+            Lash
 
-        <td>
+          </td>
 
-          <code>
+          <td class="active">
 
-            .table-borderless-outer-columns
+            jesse.lash@domain.com
 
-          </code>
+          </td>
 
-        </td>
+          <td>
 
-        <td>
+            104
 
-          Remove all table outer vertical borders.
+          </td>
 
-        </td>
+        </tr>
 
-      </tr>
+      </tbody>
 
-      <tr>
-
-        <td>
-
-          <code>
-
-            .table-borderless-outer-rows
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove all table outer horizontal borders.
-
-        </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <table class="table table-borderless-outer table-borderless-inner-columns flush-bottom">
-
-        <thead>
-
-          <tr>
-
-            <th>
-
-              First Name
-
-            </th>
-
-            <th>
-
-              Last Name
-
-            </th>
-
-            <th class="active">
-
-              Email
-
-            </th>
-
-            <th>
-
-              Commits
-
-            </th>
-
-          </tr>
-
-        </thead>
-
-        <tbody>
-
-          <tr>
-
-            <td>
-
-              John
-
-            </td>
-
-            <td>
-
-              Ashenden
-
-            </td>
-
-            <td class="active">
-
-              john.ashenden@domain.com
-
-            </td>
-
-            <td>
-
-              802
-
-            </td>
-
-          </tr>
-
-          <tr class="">
-
-            <td>
-
-              Michael
-
-            </td>
-
-            <td>
-
-              Lunøe
-
-            </td>
-
-            <td class="active">
-
-              michael.lunoe@domain.com
-
-            </td>
-
-            <td>
-
-              2,401
-
-            </td>
-
-          </tr>
-
-          <tr>
-
-            <td>
-
-              Rafael
-
-            </td>
-
-            <td>
-
-              Corral
-
-            </td>
-
-            <td class="active">
-
-              rafael.corral@domain.com
-
-            </td>
-
-            <td>
-
-              1,532
-
-            </td>
-
-          </tr>
-
-          <tr>
-
-            <td>
-
-              Jesse
-
-            </td>
-
-            <td>
-
-              Lash
-
-            </td>
-
-            <td class="active">
-
-              jesse.lash@domain.com
-
-            </td>
-
-            <td>
-
-              104
-
-            </td>
-
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;table class="table table-borderless-outer table-borderless-inner-columns"&gt;
-  &hellip;
-&lt;/table&gt;
-</pre>
-
-    </div>
+    </table>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+&lt;table class="table table-borderless-outer table-borderless-inner-columns"&gt;
+  &hellip;
+&lt;/table&gt;
+```
 
-<!-- =================================================
-END: Tables Borderless
-================================================== -->
+  </div>
+
+</div>

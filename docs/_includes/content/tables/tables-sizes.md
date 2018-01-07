@@ -1,379 +1,343 @@
-<!-- =================================================
-BEGIN: Table Sizes
-================================================== -->
+# Table Sizes
 
-<section id="tables-sizes">
+By default, tables display at a standard size.  Additional sizes are available: small and large.  Add classes `.table-small` and `.table-large` respectively to each table to adjust it's size.
 
-  <h1>
+<div class="panel">
 
-    Table Sizes
+  <div class="panel-cell">
 
-  </h1>
+    <table class="table table-small flush-bottom">
 
-  <p>
+      <thead>
 
-    By default, tables display at a standard size.  Additional sizes are available: small and large.  Add classes <code>.table-small</code> and <code>.table-large</code> respectively to each table to adjust it's size.
+        <tr>
 
-  </p>
+          <th>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+            First Name
 
-  <div class="panel">
+          </th>
 
-    <div class="panel-cell">
+          <th>
 
-      <table class="table table-small flush-bottom">
+            Last Name
 
-        <thead>
+          </th>
 
-          <tr>
+          <th class="active">
 
-            <th>
+            Email
 
-              First Name
+          </th>
 
-            </th>
+          <th>
 
-            <th>
+            Commits
 
-              Last Name
+          </th>
 
-            </th>
+        </tr>
 
-            <th class="active">
+      </thead>
 
-              Email
+      <tbody>
 
-            </th>
+        <tr>
 
-            <th>
+          <td>
 
-              Commits
+            John
 
-            </th>
+          </td>
 
-          </tr>
+          <td>
 
-        </thead>
+            Ashenden
 
-        <tbody>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            john.ashenden@domain.com
 
-              John
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            802
 
-              Ashenden
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr class="">
 
-              john.ashenden@domain.com
+          <td>
 
-            </td>
+            Michael
 
-            <td>
+          </td>
 
-              802
+          <td>
 
-            </td>
+            Lunøe
 
-          </tr>
+          </td>
 
-          <tr class="">
+          <td class="active">
 
-            <td>
+            michael.lunoe@domain.com
 
-              Michael
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            2,401
 
-              Lunøe
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr>
 
-              michael.lunoe@domain.com
+          <td>
 
-            </td>
+            Rafael
 
-            <td>
+          </td>
 
-              2,401
+          <td>
 
-            </td>
+            Corral
 
-          </tr>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            rafael.corral@domain.com
 
-              Rafael
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            1,532
 
-              Corral
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+        <tr>
 
-              rafael.corral@domain.com
+          <td>
 
-            </td>
+            Jesse
 
-            <td>
+          </td>
 
-              1,532
+          <td>
 
-            </td>
+            Lash
 
-          </tr>
+          </td>
 
-          <tr>
+          <td class="active">
 
-            <td>
+            jesse.lash@domain.com
 
-              Jesse
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            104
 
-              Lash
+          </td>
 
-            </td>
+        </tr>
 
-            <td class="active">
+      </tbody>
 
-              jesse.lash@domain.com
+    </table>
 
-            </td>
+  </div>
 
-            <td>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-              104
-
-            </td>
-
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
+```html
 &lt;table class="table table-small"&gt;
   &hellip;
 &lt;/table&gt;
-</pre>
-
-    </div>
+```
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+</div>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+<div class="panel flush-bottom">
 
-  <div class="panel flush-bottom">
+  <div class="panel-cell">
 
-    <div class="panel-cell">
+    <table class="table table-large flush-bottom">
 
-      <table class="table table-large flush-bottom">
+      <thead>
 
-        <thead>
+        <tr>
 
-          <tr>
+          <th>
 
-            <th>
+            First Name
 
-              First Name
+          </th>
 
-            </th>
+          <th>
 
-            <th>
+            Last Name
 
-              Last Name
+          </th>
 
-            </th>
+          <th class="active">
 
-            <th class="active">
+            Email
 
-              Email
+          </th>
 
-            </th>
+          <th>
 
-            <th>
+            Commits
 
-              Commits
+          </th>
 
-            </th>
+        </tr>
 
-          </tr>
+      </thead>
 
-        </thead>
+      <tbody>
 
-        <tbody>
+        <tr>
 
-          <tr>
+          <td>
 
-            <td>
+            John
 
-              John
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            Ashenden
 
-              Ashenden
+          </td>
 
-            </td>
+          <td class="active">
 
-            <td class="active">
+            john.ashenden@domain.com
 
-              john.ashenden@domain.com
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            802
 
-              802
+          </td>
 
-            </td>
+        </tr>
 
-          </tr>
+        <tr class="">
 
-          <tr class="">
+          <td>
 
-            <td>
+            Michael
 
-              Michael
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            Lunøe
 
-              Lunøe
+          </td>
 
-            </td>
+          <td class="active">
 
-            <td class="active">
+            michael.lunoe@domain.com
 
-              michael.lunoe@domain.com
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            2,401
 
-              2,401
+          </td>
 
-            </td>
+        </tr>
 
-          </tr>
+        <tr>
 
-          <tr>
+          <td>
 
-            <td>
+            Rafael
 
-              Rafael
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            Corral
 
-              Corral
+          </td>
 
-            </td>
+          <td class="active">
 
-            <td class="active">
+            rafael.corral@domain.com
 
-              rafael.corral@domain.com
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            1,532
 
-              1,532
+          </td>
 
-            </td>
+        </tr>
 
-          </tr>
+        <tr>
 
-          <tr>
+          <td>
 
-            <td>
+            Jesse
 
-              Jesse
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            Lash
 
-              Lash
+          </td>
 
-            </td>
+          <td class="active">
 
-            <td class="active">
+            jesse.lash@domain.com
 
-              jesse.lash@domain.com
+          </td>
 
-            </td>
+          <td>
 
-            <td>
+            104
 
-              104
+          </td>
 
-            </td>
+        </tr>
 
-          </tr>
+      </tbody>
 
-        </tbody>
+    </table>
 
-      </table>
+  </div>
 
-    </div>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
+```html
 &lt;table class="table table-large"&gt;
   &hellip;
 &lt;/table&gt;
-</pre>
-
-    </div>
+```
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Button Sizes
-================================================== -->
+</div>
