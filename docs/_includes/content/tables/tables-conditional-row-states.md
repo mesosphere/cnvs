@@ -311,9 +311,9 @@ Use contextual classes to color table rows or individual cells.
   <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
-&lt;table class="table table-hover"&gt;
-  &hellip;
-&lt;/table&gt;
+<table class="table table-hover">
+  …
+</table>
 ```
 
   </div>

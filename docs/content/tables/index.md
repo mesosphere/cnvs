@@ -7,7 +7,7 @@ page-header:
 toc: true
 ---
 
-For truly tabular data, use the <code>&lt;table&gt;</code> tag and add the class <code>.table</code>.  The table element applies basic stying propeties and padding to the default <code>&lt;table&gt;</code> element.
+For truly tabular data, use the <code><table></code> tag and add the class <code>.table</code>.  The table element applies basic stying propeties and padding to the default <code><table></code> element.
 
 <div class="panel flush-bottom">
 
@@ -170,32 +170,32 @@ For truly tabular data, use the <code>&lt;table&gt;</code> tag and add the class
   <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
-&lt;table class="table"&gt;
+<table class="table">
 
-  &lt;!--Table Head--&gt;
-  &lt;thead&gt;
-    &lt;!--Table Row--&gt;
-    &lt;tr&gt;
-      &lt;!--Table Head Cell--&gt;
-      &lt;th&gt;
-      &lt;/th&gt;
-      &hellip;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
+  <!--Table Head-->
+  <thead>
+    <!--Table Row-->
+    <tr>
+      <!--Table Head Cell-->
+      <th>
+      </th>
+      …
+    </tr>
+  </thead>
 
-  &lt;!--Table Body--&gt;
-  &lt;tbody&gt;
-    &lt;!--Table Row--&gt;
-    &lt;tr&gt;
-      &lt;!--Table Cell--&gt;
-      &lt;td&gt;
-      &lt;/td&gt;
-      &hellip;
-    &lt;/tr&gt;
-    &hellip;
-  &lt;/tbody&gt;
+  <!--Table Body-->
+  <tbody>
+    <!--Table Row-->
+    <tr>
+      <!--Table Cell-->
+      <td>
+      </td>
+      …
+    </tr>
+    …
+  </tbody>
 
-&lt;/table&gt;
+</table>
 ```
 
   </div>

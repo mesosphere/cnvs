@@ -163,9 +163,9 @@ Add `.table-flush` to remove the horizontal padding applied to the first and las
   <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
-&lt;table class="table table-flush table-borderless-outer table-borderless-inner-columns"&gt;
-  &hellip;
-&lt;/table&gt;
+<table class="table table-flush table-borderless-outer table-borderless-inner-columns">
+  …
+</table>
 ```
 
   </div>

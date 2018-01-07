@@ -1,6 +1,6 @@
 # Hover Rows
 
-Add `.table-hover` to enable a hover state on table rows within a `&lt;tbody&gt;`.
+Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
 <div class="panel">
 
@@ -163,13 +163,13 @@ Add `.table-hover` to enable a hover state on table rows within a `&lt;tbody&gt;
   <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
-&lt;table class="table table-hover"&gt;
-  &hellip;
-&lt;/table&gt;
+<table class="table table-hover">
+  …
+</table>
 ```
 
   </div>
 
 </div>
 
-Add `.table-row-hover-disabled` to any `&lt;tr&gt;` to disable the row hover behavior and styling.
+Add `.table-row-hover-disabled` to any `<tr>` to disable the row hover behavior and styling.

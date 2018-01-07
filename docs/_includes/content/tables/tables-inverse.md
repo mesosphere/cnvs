@@ -303,9 +303,9 @@ Add the class `.table-inverse` to any `.table` element to leverage inverse styli
   <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
-&lt;table class="table table-inverse table-borderless-outer table-borderless-inner-columns"&gt;
-  &hellip;
-&lt;/table&gt;
+<table class="table table-inverse table-borderless-outer table-borderless-inner-columns">
+  …
+</table>
 ```
 
   </div>

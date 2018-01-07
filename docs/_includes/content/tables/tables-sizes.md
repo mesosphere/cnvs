@@ -163,9 +163,9 @@ By default, tables display at a standard size.  Additional sizes are available: 
   <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
-&lt;table class="table table-small"&gt;
-  &hellip;
-&lt;/table&gt;
+<table class="table table-small">
+  …
+</table>
 ```
 
   </div>
@@ -333,9 +333,9 @@ By default, tables display at a standard size.  Additional sizes are available: 
   <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
-&lt;table class="table table-large"&gt;
-  &hellip;
-&lt;/table&gt;
+<table class="table table-large">
+  …
+</table>
 ```
 
   </div>
