@@ -60,13 +60,13 @@ var dirs = {
     images: "./docs/_assets/images/**/*.*",
     fonts: "./docs/_assets/fonts/**/*.*",
     dist: {
-      path: "./docs/dist",
-      assets: "./docs/dist/assets",
-      styles: "./docs/dist/assets/styles",
-      javascripts: "./docs/dist/assets/javascripts"
-      vendor: "./docs/dist/assets/javascripts/vendor",
-      images: "./docs/dist/assets/images",
-      fonts: "./docs/dist/assets/fonts",
+      path: "./docs/_site",
+      assets: "./docs/_site/assets",
+      styles: "./docs/_site/assets/styles",
+      javascripts: "./docs/_site/assets/javascripts",
+      vendor: "./docs/_site/assets/javascripts/vendor",
+      images: "./docs/_site/assets/images",
+      fonts: "./docs/_site/assets/fonts",
     }
   }
 };
