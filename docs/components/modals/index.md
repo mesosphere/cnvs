@@ -8,15 +8,11 @@ page-header:
 toc: true
 ---
 
-<p>
+Use the class `.modal` in combination with one or more nested layout components to quickly create a new modal.  Below is an example of simple modal with a header, body, and footer.
 
-  Use the class <code>.modal</code> in combination with one or more nested layout components to quickly create a new modal.  Below is an example of simple modal with a header, body, and footer.
+<div class="panel flush-bottom">
 
-</p>
-
-<div class="panel panel-inverse flush-bottom">
-
-  <div class="panel-cell panel-cell-inverse">
+  <div class="panel-cell panel-cell-dark">
 
     <div class="modal modal-inline">
 

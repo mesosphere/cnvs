@@ -1,84 +1,64 @@
-<!-- =================================================
-BEGIN: Modal Example
-================================================== -->
+# Example
 
-<section id="modals-example">
+Use a button or link to trigger the display of a modal.  CNVS uses the class `.fade` to hide the modal.  Adding the class `.in` to `.fade` will display the modal in.  You can easily override these class styles to create unique keyframe sequences for your project.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Example
+  <div class="panel-cell">
 
-  </h1>
+    <a href="#" class="button" data-toggle="modal" data-target="#myModal">Show Modal</a>
 
-  <p>
+    <div class="modal fade" id="myModal">
 
-    Use a button or link to trigger the display of a modal.  CNVS uses the class <code>.fade</code> to hide the modal.  Adding the class <code>.in</code> to <code>.fade</code> will display the modal in.  You can easily override these class styles to create unique keyframe sequences for your project.
+      <div class="modal-header">
 
-  </p>
+        <h4 class="modal-header-title flush">
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+          Join Our Mailing List
 
-  <div class="panel flush-bottom">
+        </h4>
 
-    <div class="panel-cell">
+      </div>
 
-      <a href="#" class="button" data-toggle="modal" data-target="#myModal">Show Modal</a>
+      <div class="modal-body">
 
-      <div class="modal fade" id="myModal">
+        <p>
 
-        <div class="modal-header">
+          Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
 
-          <h4 class="modal-header-title flush">
+        </p>
 
-            Join Our Mailing List
+        <div class="form flush-bottom">
 
-          </h4>
+          <div class="row">
 
-        </div>
+            <div class="column-small-6">
 
-        <div class="modal-body">
+              <div class="form-group flush-bottom-screen-small">
 
-          <p>
+                <label>
 
-            Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
+                  Full Name
 
-          </p>
+                </label>
 
-          <div class="form flush-bottom">
-
-            <div class="row">
-
-              <div class="column-small-6">
-
-                <div class="form-group flush-bottom-screen-small">
-
-                  <label>
-
-                    Full Name
-
-                  </label>
-
-                  <input class="form-control" type="text">
-
-                </div>
+                <input class="form-control" type="text">
 
               </div>
 
-              <div class="column-small-6">
+            </div>
 
-                <div class="form-group flush-bottom-screen-small">
+            <div class="column-small-6">
 
-                  <label>
+              <div class="form-group flush-bottom-screen-small">
 
-                    Email
+                <label>
 
-                  </label>
+                  Email
 
-                  <input class="form-control" type="email">
+                </label>
 
-                </div>
+                <input class="form-control" type="email">
 
               </div>
 
@@ -88,23 +68,23 @@ BEGIN: Modal Example
 
         </div>
 
-        <div class="modal-footer">
+      </div>
 
-          <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
+      <div class="modal-footer">
 
-            <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+        <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
 
-              Submit
+          <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
 
-            </a>
+            Submit
 
-            <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium" data-dismiss="modal">
+          </a>
 
-              Close
+          <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium" data-dismiss="modal">
 
-            </a>
+            Close
 
-          </div>
+          </a>
 
         </div>
 
@@ -112,26 +92,18 @@ BEGIN: Modal Example
 
     </div>
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
+  </div>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button" data-toggle="modal" data-target="#myModal"&gt;Show Modal&lt;/a&gt;
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-&lt;div class="modal fade" id="myModal"&gt;
+```html
+<a href="#" class="button" data-toggle="modal" data-target="#myModal">Show Modal</a>
+
+<div class="modal fade" id="myModal">
   …
-&lt;/div&gt;
-</pre>
-
-    </div>
+</div>
+```
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Modal Example
-================================================== -->
+</div>

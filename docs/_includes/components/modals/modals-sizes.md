@@ -1,90 +1,54 @@
-<!-- =================================================
-BEGIN: Modal Sizes
-================================================== -->
+# Modal Sizes
 
-<section id="modals-sizes">
+Two additional modal sizes are provided by CNVS using the class modifiers `.modal-small` and `.modal-large`.  The class modifiers only impact the width of the modal and, if defined in CNVS, the inner padding of the header, body, and footer.
 
-  <h1>
+## Small Modal
 
-    Modal Sizes
+Use the class modifier `.modal-small` to reduce the width of your modal.
 
-  </h1>
+<div class="panel flush-bottom">
 
-  <p>
+  <div class="panel-cell panel-cell-dark">
 
-    Two additional modal sizes are provided by CNVS using the class modifiers <code>.modal-small</code> and <code>.modal-large</code>.  The class modifiers only impact the width of the modal and, if defined in CNVS, the inner padding of the header, body, and footer.
+    <div class="modal modal-small modal-inline">
 
-  </p>
+      <div class="modal-content">
 
-  <!-- =================================================
-  BEGIN: Small Modal
-  ================================================== -->
+        <div class="modal-header">
 
-  <section id="modals-sizes-small">
+          <h4 class="modal-header-title text-align-center flush">
 
-    <h2>
+            Modal Header Title
 
-      Small Modal
+          </h4>
 
-    </h2>
+        </div>
 
-    <p>
+        <div class="modal-body">
 
-      Use the class modifier <code>.modal-small</code> to reduce the width of your modal.
+          <p class="text-align-center flush">
 
-    </p>
+            Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+          </p>
 
-    <div class="panel panel-inverse flush-bottom">
+        </div>
 
-      <div class="panel-cell panel-cell-inverse">
+        <div class="modal-footer">
 
-        <div class="modal modal-small modal-inline">
+          <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small">
 
-          <div class="modal-content">
+            <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small">
 
-            <div class="modal-header">
+              Close
 
-              <h4 class="modal-header-title text-align-center flush">
+            </a>
 
-                Modal Header Title
+            <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small">
 
-              </h4>
+              Submit
 
-            </div>
-
-            <div class="modal-body">
-
-              <p class="text-align-center flush">
-
-                Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.
-
-              </p>
-
-            </div>
-
-            <div class="modal-footer">
-
-              <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small">
-
-                <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small">
-
-                  Close
-
-                </a>
-
-                <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small">
-
-                  Submit
-
-                </a>
-
-              </div>
-
-            </div>
+            </a>
 
           </div>
 
@@ -92,97 +56,69 @@ BEGIN: Modal Sizes
 
       </div>
 
-      <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;div class="modal modal-small modal-inline"&gt;
-  …
-&lt;/div&gt;
-</pre>
-
-      </div>
-
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Small Modal
-  ================================================== -->
+```html
+<div class="modal modal-small modal-inline">
+  …
+</div>
+```
 
-  <!-- =================================================
-  BEGIN: Large Modal
-  ================================================== -->
+  </div>
 
-  <section id="modals-sizes-large">
+</div>
 
-    <h2>
+## Large Modal
 
-      Large Modal
+Use the class modifier `.modal-large` to increase the width of your modal.
 
-    </h2>
+<div class="panel flush-bottom">
 
-    <p>
+  <div class="panel-cell panel-cell-dark">
 
-      Use the class modifier <code>.modal-large</code> to increase the width of your modal.
+    <div class="modal modal-large modal-inline">
 
-    </p>
+      <div class="modal-content">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+        <div class="modal-header">
 
-    <div class="panel panel-inverse flush-bottom">
+          <h4 class="modal-header-title flush">
 
-      <div class="panel-cell panel-cell-inverse">
+            Modal Header Title
 
-        <div class="modal modal-large modal-inline">
+          </h4>
 
-          <div class="modal-content">
+        </div>
 
-            <div class="modal-header">
+        <div class="modal-body">
 
-              <h4 class="modal-header-title flush">
+          <p class="flush">
 
-                Modal Header Title
+            Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-              </h4>
+          </p>
 
-            </div>
+        </div>
 
-            <div class="modal-body">
+        <div class="modal-footer">
 
-              <p class="flush">
+          <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
 
-                Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
 
-              </p>
+              Close
 
-            </div>
+            </a>
 
-            <div class="modal-footer">
+            <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
 
-              <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
+              Submit
 
-                <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                  Close
-
-                </a>
-
-                <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                  Submit
-
-                </a>
-
-              </div>
-
-            </div>
+            </a>
 
           </div>
 
@@ -190,30 +126,14 @@ BEGIN: Modal Sizes
 
       </div>
 
-      <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;div class="modal modal-large modal-inline"&gt;
-  …
-&lt;/div&gt;
-</pre>
-
-      </div>
-
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Small Modal
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Modal Sizes
-================================================== -->
+```html
+<div class="modal modal-large modal-inline">
+  …
+</div>
+```
