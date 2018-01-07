@@ -28,7 +28,7 @@ To adjust the margin size apply one of the available divider-specific size class
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
 <div class="divider divider-short">

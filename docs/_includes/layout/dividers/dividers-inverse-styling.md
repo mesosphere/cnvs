@@ -2,15 +2,15 @@
 
 To invert the styling of a divider use the class `.divider-inverse`.
 
-<div class="panel panel-inverse">
+<div class="panel">
 
-  <div class="panel-cell panel-cell-inverse">
+  <div class="panel-cell panel-cell-dark">
 
     <hr class="divider-inverse">
 
   </div>
 
-  <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block" markdown="1">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
 ```html
 <div class="divider-inverse">
