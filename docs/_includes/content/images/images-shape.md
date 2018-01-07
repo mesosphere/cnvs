@@ -1,51 +1,23 @@
-<!-- =================================================
-BEGIN: Responsive Images
-================================================== -->
+# Image Shapes
 
-<section id="image-shape">
+Use one of the provided image shape classes to adjust the general shape of your image.
 
-  <h1>
+<div class="panel">
 
-    Image Shapes
+  <div class="panel-cell text-align-center">
 
-  </h1>
-
-  <p>
-
-    Use one of the provided image shape classes to adjust the general shape of your image.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel">
-
-    <div class="panel-cell text-align-center">
-
-      <img class="image image-rounded" src="holder.js/200x200?auto=yes&bg=323a4e&fg=5b6171">
-      <img class="image image-circle" src="holder.js/200x200?auto=yes&bg=323a4e&fg=5b6171">
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;img src="&hellip;" class="image-rounded"&gt;
-&lt;img src="&hellip;" class="image-circle"&gt;
-</pre>
-
-    </div>
+    <img class="image image-rounded" src="holder.js/200x200?auto=yes&bg=323a4e&fg=5b6171">
+    <img class="image image-circle" src="holder.js/200x200?auto=yes&bg=323a4e&fg=5b6171">
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<img src="…" class="image-rounded">
+<img src="…" class="image-circle">
+```
 
-<!-- =================================================
-END: Responsive Images
-================================================== -->
+  </div>
+
+</div>

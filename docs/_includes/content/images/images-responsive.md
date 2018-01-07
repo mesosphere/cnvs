@@ -1,117 +1,45 @@
-<!-- =================================================
-BEGIN: Responsive Images
-================================================== -->
+# Responsive Images
 
-<section id="image-responsive">
+## Fill Image `.image-fill`
 
-  <h1>
+Images by default assume their source width, though this can be changed in markup by using the `width` and `height` attributes directly on the `<img>` tag. Images are made responsive by adding the class `.image-fill`, setting a `max-width: 100%;` and applying `height: auto;`, filling their parent container.
 
-    Responsive Images
+<div class="panel">
 
-  </h1>
+  <div class="panel-cell text-align-center">
 
-  <!-- =================================================
-  BEGIN: Responsive Images (Fill)
-  ================================================== -->
+    <img class="image-fill" src="holder.js/600x400?auto=yes&bg=323a4e&fg=5b6171">
 
-  <section id="image-responsive-fill">
+  </div>
 
-    <h2>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      Fill Image <code>.image-fill</code>
+```html
+<img src="…" class="image-fill">
+```
 
-    </h2>
+  </div>
 
-    <p>
+</div>
 
-      Images by default assume their source width, though this can be changed in markup by using the <code>width</code> and <code>height</code> attributes directly on the <code>&lt;img&gt;</code> tag. Images are made responsive by adding the class <code>.image-fill</code>, setting a <code>max-width: 100%;</code> and applying <code>height: auto;</code>, filling their parent container.
+## Fluid Image `.image-fluid`
 
-    </p>
+The `.image-fill` class will force an `img` to fill it's parent. However, you may wish to stop filling the parent container once the image reaches it's original width. To do this use the class `.image-fluid`.  Resize your window and observe how the image below adjusts in size.
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+<div class="panel">
 
-    <div class="panel">
+  <div class="panel-cell">
 
-      <div class="panel-cell text-align-center">
+    <img class="image-fluid center-auto" src="holder.js/600x400?auto=yes&bg=323a4e&fg=5b6171">
 
-        <img class="image-fill" src="holder.js/600x400?auto=yes&bg=323a4e&fg=5b6171">
+  </div>
 
-      </div>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+```html
+<img src="…" class="image-fluid">
+```
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;img src="&hellip;" class="image-fill"&gt;
-</pre>
+  </div>
 
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Responsive Images (Fill)
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Responsive Images (Fluid)
-  ================================================== -->
-
-  <section id="image-responsive-fluid">
-
-    <h2>
-
-      Fluid Image <code>.image-fluid</code>
-
-    </h2>
-
-    <p>
-
-      The <code>.image-fill</code> class will force an <code>img</code> to fill it's parent. However, you may wish to stop filling the parent container once the image reaches it's original width. To do this use the class <code>.image-fluid</code>.  Resize your window and observe how the image below adjusts in size.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <img class="image-fluid center-auto" src="holder.js/600x400?auto=yes&bg=323a4e&fg=5b6171">
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;img src="&hellip;" class="image-fluid"&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Responsive Images (Fluid)
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Responsive Images
-================================================== -->
+</div>

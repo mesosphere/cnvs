@@ -8,11 +8,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  Images, denoted by the all-enduring <code>&lt;img&gt;</code> tag, have been a starter in the markup playbook since the early days of the internet.  However, they offer very little in form of responsive sizing or styling.  CNVS attempts to solve this.
-
-</p>
+Images, denoted by the all-enduring `<img>` tag, have been a starter in the markup playbook since the early days of the internet.  However, they offer very little in form of responsive sizing or styling.  CNVS attempts to solve this.
 
 {% include content/images/images-responsive.md %}
 {% include content/images/images-shape.md %}
