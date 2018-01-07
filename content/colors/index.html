@@ -50,11 +50,11 @@ BEGIN: Head
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
   <meta name="title" content ="Colors &bull; CNVS">
-  <meta name="description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
+  <meta name="description" content="Color Palettes">
   <meta name="keywords" content="">
   <meta name="googlebot" content="all">
-  <link rel="canonical" href="http://yourdomain.com/cnvs/content/colors/">
-  <link rel="alternate" type="application/rss+xml" title="CNVS" href="http://yourdomain.com/cnvs/feed.xml" />
+  <link rel="canonical" href="/cnvs/content/colors/index">
+  <link rel="alternate" type="application/rss+xml" title="CNVS" href="/cnvs/feed.xml" />
 
   <!--[if lt IE 9]>
 
@@ -84,11 +84,11 @@ BEGIN: Head
 
   <!-- BEGIN: FAV ICON -->
 
-  <link rel="icon" href="/cnvs/images/components/icons/favicon.ico">
+  <link rel="icon" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <!--[if IE]>
 
-    <link rel="icon shortcut" href="/cnvs/images/components/icons/favicon.ico">
+    <link rel="icon shortcut" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <![endif]-->
 
@@ -105,8 +105,8 @@ BEGIN: Head
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Colors &bull; CNVS">
-  <meta property="og:description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
-  <meta property="og:url" content="ashenden.github.com/canvas">
+  <meta property="og:description" content="Color Palettes">
+  <meta property="og:url" content="mesosphere.github.com/cnvs">
   <meta property="og:site_name" content="Colors &bull; CNVS">
   <meta property="og:image" content="">
 
@@ -124,7 +124,8 @@ BEGIN: Head
   BEGIN: Stylesheets
   ================================================== -->
 
-  <link rel="stylesheet" href="/cnvs/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
 
   <!-- =================================================
   END: Stylesheets
@@ -134,18 +135,15 @@ BEGIN: Head
   BEGIN: Javascripts
   ================================================== -->
 
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery-2.2.0.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/modernizr-custom.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap/modal.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/google-code-prettify/prettify.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery.sticky-kit.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/jquery.waypoints.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/shortcuts/sticky.min.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
-  <link rel="stylesheet" href="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/popper.js/popper.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/tooltip.js/tooltip.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
+
 
   <!-- =================================================
   END: Javascripts
@@ -158,10 +156,6 @@ END: Head
 ================================================== -->
 
 
-  <!-- =================================================
-  BEGIN: Body
-  ================================================== -->
-
   <body>
 
     <!-- BEGIN: Livereload -->
@@ -170,35 +164,40 @@ END: Head
 
 <!-- END: Livereload -->
 
-<!-- =================================================
-BEGIN: Icon SVG Definitions
-================================================== -->
-
 <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <symbol id="icons-square" viewBox="0 0 16 16">
-    <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+    <rect x="0" y="0" width="16" height="16"></rect>
+  </symbol>
+
+  <symbol id="icons-check" viewBox="0 0 16 16">
+    <polygon points="3.11873314 7.88132268 1.8813 9.11876515 5.50000753 12.7375 14.1187 4.11874248 12.8812669 2.8813 5.50000753 10.262615"></polygon>
+  </symbol>
+
+  <symbol id="icons-circle-arrow-up" viewBox="0 0 16 16">
+    <path d="M7.79441138,15.9974098 C7.86273157,15.9991331 7.93126455,16 8,16 C8.06873545,16 8.13726843,15.9991331 8.20558862,15.9974098 L7.79441138,15.9974098 Z M6.99870848,15.9379451 C3.05302219,15.4452736 0,12.0791726 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.0800652 12.9456416,15.4467467 8.99870128,15.9382681 L8.99870128,7.23487303 L10.8799725,9.11614592 L12.1174049,7.87871278 L7.99870488,3.76000977 L3.88000488,7.87871278 L5.11743729,9.11614592 L6.99870848,7.23487303 L6.99870848,15.9379451 Z"></path>
+  </symbol>
+
+  <symbol id="icons-open-external" viewBox="0 0 16 16">
+    <path d="M12,5.41421128 L7.70711128,9.7071 L6.2929,8.29288872 L10.5857887,4 L8,4 L8,2 L14,2 L14,8 L12,8 L12,5.41421128 Z M2,2 L6,2 L6,4 L4,4 L4,12 L12,12 L12,10 L14,10 L14,14 L2,14 L2,2 Z"></path>
+  </symbol>
+
+  <symbol id="icons-users-plus" viewBox="0 0 16 16">
+    <path d="M12,11 L12,9 L11,9 L11,11 L9,11 L9,12 L11,12 L11,14 L12,14 L12,12 L14,12 L14,11 L12,11 Z M10.8703455,7.04370289 C11.0760971,7.01489482 11.2863091,7 11.5,7 C13.9852814,7 16,9.01471863 16,11.5 C16,13.9852814 13.9852814,16 11.5,16 C9.18372317,16 7.27618653,14.2499752 7.02746439,12 L5,12 L5,8.80199104 C6.15887373,7.70537116 7.9676434,7 10,7 C10.2952703,7 10.5858213,7.01488873 10.8703455,7.04370289 Z M10,7 C8.34314575,7 7,5.65685425 7,4 C7,2.34314575 8.34314575,1 10,1 C11.6568542,1 13,2.34314575 13,4 C13,5.65685425 11.6568542,7 10,7 Z" fill-opacity="0.4"></path>
+    <path d="M7.22618149,10.0873965 C6.82947988,10.030053 6.41950301,10 6,10 C3.9676434,10 2.15887373,10.7053712 1,11.801991 L1,15 L8.67133283,15 C7.65183347,14.1750222 7,12.9136331 7,11.5 C7,11.0065534 7.07942252,10.5316569 7.22618149,10.0873965 Z M8.8806793,7.84045667 C8.95835285,7.57377882 9,7.29175301 9,7 C9,5.34314575 7.65685425,4 6,4 C4.34314575,4 3,5.34314575 3,7 C3,8.65685425 4.34314575,10 6,10 C6.50291906,10 6.97693439,9.87624843 7.39325602,9.65753526 C7.72107754,8.92796723 8.23759966,8.30156001 8.8806793,7.84045667 Z"></path>
   </symbol>
 
 </svg>
 
-<!-- =================================================
-END: Icon SVG Definitions
-================================================== -->
 
 
-
-    <!-- =================================================
-    BEGIN: Canvas
-    ================================================== -->
-
-    <div class="canvas  flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
+    <div class="app flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
       <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
-<div class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
+<section class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
 
   
 
@@ -210,7 +209,7 @@ BEGIN: Header
 
   <div class="header-inner">
 
-    <div class="pod pod-narrow pod-short">
+    <div class="pod">
 
       <h1 class="header-logo">
 
@@ -237,15 +236,11 @@ END: Header
 ================================================== -->
 
 
-  <!-- =================================================
-BEGIN: Navigation
-================================================== -->
-
-<nav class="navigation fill">
+  <nav class="navigation fill">
 
   <div class="navigation-inner">
 
-    <div class="container-fluid-narrow pod pod-narrow flush-top flush-bottom">
+    <div class="container-fluid-narrow pod flush-top flush-bottom">
 
       
 
@@ -390,20 +385,6 @@ BEGIN: Navigation
 
   
 
-    <li class=" ">
-
-      <a href="/cnvs/updates/" class="">
-
-        Updates
-
-      </a>
-
-      
-
-    </li>
-
-  
-
 </ul>
 
 
@@ -413,1082 +394,791 @@ BEGIN: Navigation
 
 </nav>
 
-<!-- =================================================
-END: Navigation
-================================================== -->
 
-
-</div>
+</section>
 
 <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
 
-      <!-- =================================================
-      BEGIN: Page
-      ================================================== -->
+      <section class="/content/colors/index page flex-item-grow-1">
 
-      <div class="page flex-item-grow-1">
+        <div class="pod pod-tall">
 
-        
+  <div class="container">
 
+    <section class="page-header pod-tall-bottom">
 
+      
 
+        <p class="h1 page-header-headline flush-top flush-bottom">
 
+          Colors
 
+        </p>
 
+      
 
+      
 
+      
 
-<!-- =================================================
-BEGIN: Page Header
-================================================== -->
+      
 
-<div class="page-header fill fill-light left">
+        <div class="page-navigation pod-tall-top">
 
-  
+          <h6 class="text-uppercase">
 
-  <div class="page-header-inner">
+            Table of Contents
 
-    <div class="container-fluid pod pod-short">
+          </h6>
 
-      <div class="row">
-
-        <div class="column-small-8 column-medium-8 column-large-10">
-
-          <!-- BEGIN: Page Header Title -->
-
-          <h1 class="page-header-title invisible ">
-
-            <?php
-
-            echo $page_header_title;
-
-            ?>
-
-          </h1>
-
-          <!-- END: Page Header Title -->
-
-          
-
-            <!-- BEGIN: Page Header Headline -->
-
-            <div class="row">
-
-              <div class="column-small-12 column-jumbo-10">
-
-                
-
-                  <p class="h6 page-header-subheadline flush  text-align-left ">
-
-                    
-
-                      <a href="/content">
-
-                    
-
-                    Content
-
-                    
-
-                      </a>
-
-                    
-
-                  </p>
-
-                
-
-                <p class="h1 page-header-headline flush-top  text-align-left  flush-bottom">
-
-                  Colors
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <!-- END: Page Header Headline -->
-
-          
-
-          
-
-          
+          <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#color-palettes">Color Palettes</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#neutral-palette">Neutral Palette</a></li>
+<li class="toc-entry toc-h2"><a href="#color-palette">Color Palette</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#color-blending">Color Blending</a></li>
+</ul>
 
         </div>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-<!-- =================================================
-END: Page Header
-================================================== -->
-
-
-        <!-- =================================================
-        BEGIN: Page Content Wrapper
-        ================================================== -->
-
-        <div class="page-content-wrapper flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-large">
-
-          
-
-            <!-- =================================================
-BEGIN: Page Navigation
-================================================== -->
-<!-- flex-screen-large  -->
-<div class="page-navigation flex-item-shrink-0-screen-large flex-item-order-1-screen-large" id="page-navigation">
-
-  <div class="page-navigation-sticky">
-
-    <div class="container-fluid pod">
-
-      <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#colors-palettes" class="">
-
-        Color Palettes
-
-      </a>
-
       
 
-    </li>
+    </section>
 
-  
+    <section class="page-body">
 
-    <li class="">
+      <h1 id="color-palettes">
+<a id="color-palettes" class="anchor" href="#color-palettes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Color Palettes</h1>
 
-      <a href="#colors-blending" class="">
+<p>A neutral palette along with a full color palette offer a wide array of color options for your project. By default, purple <code class="highlighter-rouge">@purple</code> is used across the Canvas UI kit as the primary color.  You can see this carry across forms, buttons, and other components.</p>
 
-        Color Blending
+<h2 id="neutral-palette">
+<a id="neutral-palette" class="anchor" href="#neutral-palette" aria-hidden="true"><span class="octicon octicon-link"></span></a>Neutral Palette</h2>
 
-      </a>
+<div class="row color-swatches">
 
-      
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch black">
 
-    </li>
-
-  
-
-</ul>
-
-
+    <div class="color-swatch-cell">
     </div>
 
-  </div>
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
 
-</div>
+      Black
 
-<!-- =================================================
-END: Page Navigation
-================================================== -->
+    </h5>
 
+    <p class="color-swatch-cell-variable flush-bottom">
 
-          
+      <code>
 
-          <!-- =================================================
-          BEGIN: Page Content
-          ================================================== -->
+        @black
 
-          <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
-
-            <!-- =================================================
-BEGIN: Color
-================================================== -->
-
-<section class="fill" id="color">
-
-  <div class="container-fluid pod">
-
-    <p>
-
-      A neutral palette along with a full color palette offer a wide array of color options for your project. By default, purple <code>@purple</code> is used across the Canvas UI kit as the primary color.  You can see this carry across forms, buttons, and other components.
+      </code>
 
     </p>
 
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch white">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      White
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @white
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch grey-dark">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Dark Grey
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @grey-dark
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch grey-light">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Light Grey
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @grey-light
+
+      </code>
+
+    </p>
+
+  </div>
+
+</div>
+
+<h2 id="color-palette">
+<a id="color-palette" class="anchor" href="#color-palette" aria-hidden="true"><span class="octicon octicon-link"></span></a>Color Palette</h2>
+
+<div class="row color-swatches">
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch purple">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Purple
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @purple
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch blue">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Blue
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @blue
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch red">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Red
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @red
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch orange">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Orange
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @orange
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch yellow">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Yellow
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @yellow
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch green">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Green
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @green
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch pink">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Pink
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @pink
+
+      </code>
+
+    </p>
+
+  </div>
+
+  <div class="column-small-6 column-medium-4 column-large-3 color-swatch cyan">
+
+    <div class="color-swatch-cell">
+    </div>
+
+    <h5 class="color-swatch-cell-label short-top flush-bottom">
+
+      Cyan
+
+    </h5>
+
+    <p class="color-swatch-cell-variable flush-bottom">
+
+      <code>
+
+        @cyan
+
+      </code>
+
+    </p>
+
+  </div>
+
+</div>
+
+<h1 id="color-blending">
+<a id="color-blending" class="anchor" href="#color-blending" aria-hidden="true"><span class="octicon octicon-link"></span></a>Color Blending</h1>
+
+<p>If you are using LESS for your project, a function has been made available to allow you to easily blend white and black with a single color.  This is useful in going lighter or darker with a specific color, while remaining in the same color spectrum.  For example, you may want a purple button to become a slightly darker purple on mouse over.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
     <!-- =================================================
-BEGIN: Color Palettes
-================================================== -->
-
-<section id="colors-palettes">
-
-  <!-- =================================================
-  BEGIN: Color Swatches
-  ================================================== -->
-
-  <h3>
-
-    Neutral Palette
-
-  </h3>
-
-  <div class="row color-swatches">
-
-    <!-- =================================================
-    BEGIN: Color Swatch
+    BEGIN: Color Blend (Neutral)
     ================================================== -->
 
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch black">
+    <div class="color-blend neutral">
 
-      <div class="color-swatch-cell">
+      <div class="color-blend-base">
       </div>
 
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
+      <div class="color-blend-spectrum">
 
-        Black
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-5">
+        </div>
 
-      </h6>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-10">
+        </div>
 
-      <p class="color-swatch-cell-variable flush-bottom">
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-15">
+        </div>
 
-        <code>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-20">
+        </div>
 
-          @black
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-25">
+        </div>
 
-        </code>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-30">
+        </div>
 
-      </p>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-35">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-40">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-45">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-50">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-55">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-65">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-70">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-75">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-80">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-85">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-90">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-95">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-100">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-5">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-10">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-15">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-20">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-25">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-30">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-35">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-40">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-45">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-50">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-55">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-65">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-70">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-75">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-80">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-85">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-90">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-95">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-100">
+        </div>
+
+      </div>
 
     </div>
 
     <!-- =================================================
-    END: Color Swatch
+    BEGIN: Color Blend (Neutral)
     ================================================== -->
 
     <!-- =================================================
-    BEGIN: Color Swatch
+    BEGIN: Color Blend (Purple)
     ================================================== -->
 
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch white">
+    <div class="color-blend purple">
 
-      <div class="color-swatch-cell">
+      <div class="color-blend-base">
       </div>
 
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
+      <div class="color-blend-spectrum">
 
-        White
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-5">
+        </div>
 
-      </h6>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-10">
+        </div>
 
-      <p class="color-swatch-cell-variable flush-bottom">
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-15">
+        </div>
 
-        <code>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-20">
+        </div>
 
-          @white
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-25">
+        </div>
 
-        </code>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-30">
+        </div>
 
-      </p>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-35">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-40">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-45">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-50">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-55">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-65">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-70">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-75">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-80">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-85">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-90">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-95">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-100">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-5">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-10">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-15">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-20">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-25">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-30">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-35">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-40">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-45">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-50">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-55">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-65">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-70">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-75">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-80">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-85">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-90">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-95">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-100">
+        </div>
+
+      </div>
 
     </div>
 
     <!-- =================================================
-    END: Color Swatch
+    BEGIN: Color Blend (Purple)
     ================================================== -->
 
     <!-- =================================================
-    BEGIN: Color Swatch
+    BEGIN: Color Blend (Blue)
     ================================================== -->
 
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch neutral">
+    <div class="color-blend blue flush-bottom">
 
-      <div class="color-swatch-cell">
+      <div class="color-blend-base">
       </div>
 
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
+      <div class="color-blend-spectrum">
 
-        Neutral
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-5">
+        </div>
 
-      </h6>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-10">
+        </div>
 
-      <p class="color-swatch-cell-variable flush-bottom">
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-15">
+        </div>
 
-        <code>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-20">
+        </div>
 
-          @neutral
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-25">
+        </div>
 
-        </code>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-30">
+        </div>
 
-      </p>
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-35">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-40">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-45">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-50">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-55">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-65">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-70">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-75">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-80">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-85">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-90">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-95">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-100">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-5">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-10">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-15">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-20">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-25">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-30">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-35">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-40">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-45">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-50">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-55">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-65">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-70">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-75">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-80">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-85">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-90">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-95">
+        </div>
+
+        <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-100">
+        </div>
+
+      </div>
 
     </div>
 
     <!-- =================================================
-    END: Color Swatch
+    BEGIN: Color Blend (Blue)
     ================================================== -->
 
   </div>
 
-  <!-- =================================================
-  END: Color Swatches
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-
-
-  <!-- =================================================
-  BEGIN: Color Swatches
-  ================================================== -->
-
-  <h3>
-
-    Color Palette
-
-  </h3>
-
-  <div class="row color-swatches">
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch purple">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
-
-        Purple
-
-      </h6>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @purple
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch blue">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
-
-        Blue
-
-      </h6>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @blue
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch red">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
-
-        Red
-
-      </h6>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @red
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch orange">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
-
-        Orange
-
-      </h6>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @orange
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch yellow">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
-
-        Yellow
-
-      </h6>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @yellow
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch green">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
-
-        Green
-
-      </h6>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @green
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch pink">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
-
-        Pink
-
-      </h6>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @pink
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-    <!-- =================================================
-    BEGIN: Color Swatch
-    ================================================== -->
-
-    <div class="column-small-6 column-medium-4 column-large-3 color-swatch cyan">
-
-      <div class="color-swatch-cell">
-      </div>
-
-      <h6 class="color-swatch-cell-label short-top flush-bottom">
-
-        Cyan
-
-      </h6>
-
-      <p class="color-swatch-cell-variable flush-bottom">
-
-        <code>
-
-          @cyan
-
-        </code>
-
-      </p>
-
-    </div>
-
-    <!-- =================================================
-    END: Color Swatch
-    ================================================== -->
-
-  </div>
-
-  <!-- =================================================
-  END: Color Swatches
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Color Palettes
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Color Blending
-================================================== -->
-
-<section id="colors-blending">
-
-  <h2>
-
-    Color Blending
-
-  </h2>
-
-  <p>
-
-    If you are using LESS for your project, a function has been made available to allow you to easily blend white and black with a single color.  This is useful in going lighter or darker with a specific color, while remaining in the same color spectrum.  For example, you may want a purple button to become a slightly darker purple on mouse over.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <!-- =================================================
-      BEGIN: Color Blend (Neutral)
-      ================================================== -->
-
-      <div class="color-blend neutral">
-
-        <div class="color-blend-base">
-        </div>
-
-        <div class="color-blend-spectrum">
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-5">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-10">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-15">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-20">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-25">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-30">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-35">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-40">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-45">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-50">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-55">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-65">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-70">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-75">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-80">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-85">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-90">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-95">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-100">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-5">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-10">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-15">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-20">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-25">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-30">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-35">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-40">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-45">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-50">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-55">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-65">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-70">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-75">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-80">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-85">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-90">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-95">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-100">
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      BEGIN: Color Blend (Neutral)
-      ================================================== -->
-
-      <!-- =================================================
-      BEGIN: Color Blend (Purple)
-      ================================================== -->
-
-      <div class="color-blend purple">
-
-        <div class="color-blend-base">
-        </div>
-
-        <div class="color-blend-spectrum">
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-5">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-10">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-15">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-20">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-25">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-30">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-35">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-40">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-45">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-50">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-55">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-65">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-70">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-75">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-80">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-85">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-90">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-95">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-100">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-5">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-10">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-15">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-20">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-25">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-30">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-35">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-40">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-45">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-50">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-55">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-65">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-70">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-75">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-80">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-85">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-90">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-95">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-100">
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      BEGIN: Color Blend (Purple)
-      ================================================== -->
-
-      <!-- =================================================
-      BEGIN: Color Blend (Blue)
-      ================================================== -->
-
-      <div class="color-blend blue flush-bottom">
-
-        <div class="color-blend-base">
-        </div>
-
-        <div class="color-blend-spectrum">
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-5">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-10">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-15">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-20">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-25">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-30">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-35">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-40">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-45">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-50">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-55">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-65">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-70">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-75">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-80">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-85">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-90">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-95">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-lighten-100">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-5">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-10">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-15">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-20">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-25">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-30">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-35">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-40">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-45">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-50">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-55">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-65">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-70">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-75">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-80">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-85">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-90">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-95">
-          </div>
-
-          <div class="color-blend-spectrum-cell color-blend-spectrum-cell-darken-100">
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      BEGIN: Color Blend (Blue)
-      ================================================== -->
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-less flush-bottom">
-// Lighten Purple by 50%
-color: color-lighten(@purple, 50);
+    <pre><code class="language-less">// Lighten Purple by 50%
+color: tint(@purple, 50%);
 
 // Darken Purple by 50%
-color: color-lighten(@purple, -50);
-</pre>
-
-    </div>
+color: shade(@purple, 50%);
+</code></pre>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+</div>
 
-</section>
 
-<!-- =================================================
-END: Color Blending
-================================================== -->
-
+    </section>
 
   </div>
 
-</section>
-
-<!-- =================================================
-END: Color
-================================================== -->
+</div>
 
 
-          </div>
-
-          <!-- =================================================
-          END: Page Content
-          ================================================== -->
-
-        </div>
-
-        <!-- =================================================
-        END: Page Content Wrapper
-        ================================================== -->
-
-      </div>
-
-      <!-- =================================================
-      END: Page
-      ================================================== -->
+      </section>
 
       
 
@@ -1516,14 +1206,10 @@ END: Footer
     </div>
 
     <!-- =================================================
-    END: Canvas
-    ================================================== -->
-
-    <!-- =================================================
 BEGIN: Javascripts
 ================================================== -->
 
-<script type="text/javascript" src="/cnvs/javascripts/scripts.min.js"></script>
+<script type="text/javascript" src="/cnvs/assets/javascripts/scripts.min.js"></script>
 
 <!-- =================================================
 END: Javascripts
@@ -1531,9 +1217,5 @@ END: Javascripts
 
 
   </body>
-
-  <!-- =================================================
-  END: Body
-  ================================================== -->
 
 </html>

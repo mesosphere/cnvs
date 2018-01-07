@@ -50,11 +50,11 @@ BEGIN: Head
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
   <meta name="title" content ="Forms &bull; CNVS">
-  <meta name="description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
+  <meta name="description" content="Individual form controls automatically receive some global styling. All textual &lt;input&gt;, &lt;textarea&gt;, and &lt;select&gt; elements with .form-contr...">
   <meta name="keywords" content="">
   <meta name="googlebot" content="all">
-  <link rel="canonical" href="http://yourdomain.com/cnvs/components/forms/">
-  <link rel="alternate" type="application/rss+xml" title="CNVS" href="http://yourdomain.com/cnvs/feed.xml" />
+  <link rel="canonical" href="/cnvs/components/forms/index">
+  <link rel="alternate" type="application/rss+xml" title="CNVS" href="/cnvs/feed.xml" />
 
   <!--[if lt IE 9]>
 
@@ -84,11 +84,11 @@ BEGIN: Head
 
   <!-- BEGIN: FAV ICON -->
 
-  <link rel="icon" href="/cnvs/images/components/icons/favicon.ico">
+  <link rel="icon" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <!--[if IE]>
 
-    <link rel="icon shortcut" href="/cnvs/images/components/icons/favicon.ico">
+    <link rel="icon shortcut" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <![endif]-->
 
@@ -105,8 +105,8 @@ BEGIN: Head
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Forms &bull; CNVS">
-  <meta property="og:description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
-  <meta property="og:url" content="ashenden.github.com/canvas">
+  <meta property="og:description" content="Individual form controls automatically receive some global styling. All textual &lt;input&gt;, &lt;textarea&gt;, and &lt;select&gt; elements with .form-contr...">
+  <meta property="og:url" content="mesosphere.github.com/cnvs">
   <meta property="og:site_name" content="Forms &bull; CNVS">
   <meta property="og:image" content="">
 
@@ -124,7 +124,8 @@ BEGIN: Head
   BEGIN: Stylesheets
   ================================================== -->
 
-  <link rel="stylesheet" href="/cnvs/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
 
   <!-- =================================================
   END: Stylesheets
@@ -134,18 +135,15 @@ BEGIN: Head
   BEGIN: Javascripts
   ================================================== -->
 
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery-2.2.0.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/modernizr-custom.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap/modal.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/google-code-prettify/prettify.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery.sticky-kit.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/jquery.waypoints.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/shortcuts/sticky.min.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
-  <link rel="stylesheet" href="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/popper.js/popper.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/tooltip.js/tooltip.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
+
 
   <!-- =================================================
   END: Javascripts
@@ -158,10 +156,6 @@ END: Head
 ================================================== -->
 
 
-  <!-- =================================================
-  BEGIN: Body
-  ================================================== -->
-
   <body>
 
     <!-- BEGIN: Livereload -->
@@ -170,35 +164,40 @@ END: Head
 
 <!-- END: Livereload -->
 
-<!-- =================================================
-BEGIN: Icon SVG Definitions
-================================================== -->
-
 <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <symbol id="icons-square" viewBox="0 0 16 16">
-    <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+    <rect x="0" y="0" width="16" height="16"></rect>
+  </symbol>
+
+  <symbol id="icons-check" viewBox="0 0 16 16">
+    <polygon points="3.11873314 7.88132268 1.8813 9.11876515 5.50000753 12.7375 14.1187 4.11874248 12.8812669 2.8813 5.50000753 10.262615"></polygon>
+  </symbol>
+
+  <symbol id="icons-circle-arrow-up" viewBox="0 0 16 16">
+    <path d="M7.79441138,15.9974098 C7.86273157,15.9991331 7.93126455,16 8,16 C8.06873545,16 8.13726843,15.9991331 8.20558862,15.9974098 L7.79441138,15.9974098 Z M6.99870848,15.9379451 C3.05302219,15.4452736 0,12.0791726 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.0800652 12.9456416,15.4467467 8.99870128,15.9382681 L8.99870128,7.23487303 L10.8799725,9.11614592 L12.1174049,7.87871278 L7.99870488,3.76000977 L3.88000488,7.87871278 L5.11743729,9.11614592 L6.99870848,7.23487303 L6.99870848,15.9379451 Z"></path>
+  </symbol>
+
+  <symbol id="icons-open-external" viewBox="0 0 16 16">
+    <path d="M12,5.41421128 L7.70711128,9.7071 L6.2929,8.29288872 L10.5857887,4 L8,4 L8,2 L14,2 L14,8 L12,8 L12,5.41421128 Z M2,2 L6,2 L6,4 L4,4 L4,12 L12,12 L12,10 L14,10 L14,14 L2,14 L2,2 Z"></path>
+  </symbol>
+
+  <symbol id="icons-users-plus" viewBox="0 0 16 16">
+    <path d="M12,11 L12,9 L11,9 L11,11 L9,11 L9,12 L11,12 L11,14 L12,14 L12,12 L14,12 L14,11 L12,11 Z M10.8703455,7.04370289 C11.0760971,7.01489482 11.2863091,7 11.5,7 C13.9852814,7 16,9.01471863 16,11.5 C16,13.9852814 13.9852814,16 11.5,16 C9.18372317,16 7.27618653,14.2499752 7.02746439,12 L5,12 L5,8.80199104 C6.15887373,7.70537116 7.9676434,7 10,7 C10.2952703,7 10.5858213,7.01488873 10.8703455,7.04370289 Z M10,7 C8.34314575,7 7,5.65685425 7,4 C7,2.34314575 8.34314575,1 10,1 C11.6568542,1 13,2.34314575 13,4 C13,5.65685425 11.6568542,7 10,7 Z" fill-opacity="0.4"></path>
+    <path d="M7.22618149,10.0873965 C6.82947988,10.030053 6.41950301,10 6,10 C3.9676434,10 2.15887373,10.7053712 1,11.801991 L1,15 L8.67133283,15 C7.65183347,14.1750222 7,12.9136331 7,11.5 C7,11.0065534 7.07942252,10.5316569 7.22618149,10.0873965 Z M8.8806793,7.84045667 C8.95835285,7.57377882 9,7.29175301 9,7 C9,5.34314575 7.65685425,4 6,4 C4.34314575,4 3,5.34314575 3,7 C3,8.65685425 4.34314575,10 6,10 C6.50291906,10 6.97693439,9.87624843 7.39325602,9.65753526 C7.72107754,8.92796723 8.23759966,8.30156001 8.8806793,7.84045667 Z"></path>
   </symbol>
 
 </svg>
 
-<!-- =================================================
-END: Icon SVG Definitions
-================================================== -->
 
 
-
-    <!-- =================================================
-    BEGIN: Canvas
-    ================================================== -->
-
-    <div class="canvas  flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
+    <div class="app flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
       <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
-<div class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
+<section class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
 
   
 
@@ -210,7 +209,7 @@ BEGIN: Header
 
   <div class="header-inner">
 
-    <div class="pod pod-narrow pod-short">
+    <div class="pod">
 
       <h1 class="header-logo">
 
@@ -237,15 +236,11 @@ END: Header
 ================================================== -->
 
 
-  <!-- =================================================
-BEGIN: Navigation
-================================================== -->
-
-<nav class="navigation fill">
+  <nav class="navigation fill">
 
   <div class="navigation-inner">
 
-    <div class="container-fluid-narrow pod pod-narrow flush-top flush-bottom">
+    <div class="container-fluid-narrow pod flush-top flush-bottom">
 
       
 
@@ -451,8 +446,13 @@ BEGIN: Navigation
 
   
 
-</ul>
+    <li class=" ">
 
+      <a href="/cnvs/components/tooltips/" class="">
+
+        Tooltips
+
+      </a>
 
       
 
@@ -460,13 +460,8 @@ BEGIN: Navigation
 
   
 
-    <li class=" ">
+</ul>
 
-      <a href="/cnvs/updates/" class="">
-
-        Updates
-
-      </a>
 
       
 
@@ -483,2299 +478,1598 @@ BEGIN: Navigation
 
 </nav>
 
-<!-- =================================================
-END: Navigation
-================================================== -->
 
-
-</div>
+</section>
 
 <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
 
-      <!-- =================================================
-      BEGIN: Page
-      ================================================== -->
+      <section class="/components/forms/index page flex-item-grow-1">
 
-      <div class="page flex-item-grow-1">
+        <div class="pod pod-tall">
 
-        
+  <div class="container">
 
+    <section class="page-header pod-tall-bottom">
 
+      
 
+        <p class="h1 page-header-headline flush-top flush-bottom">
 
+          Forms
 
+        </p>
 
+      
 
+      
 
+      
 
-<!-- =================================================
-BEGIN: Page Header
-================================================== -->
+      
 
-<div class="page-header fill fill-light left">
+        <div class="page-navigation pod-tall-top">
 
-  
+          <h6 class="text-uppercase">
 
-  <div class="page-header-inner">
+            Table of Contents
 
-    <div class="container-fluid pod pod-short">
+          </h6>
+
+          <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#form-controls">Form Controls</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#inputs">Inputs</a></li>
+<li class="toc-entry toc-h2"><a href="#textarea">Textarea</a></li>
+<li class="toc-entry toc-h2"><a href="#checkboxes--radios">Checkboxes & Radios</a></li>
+<li class="toc-entry toc-h2"><a href="#selects">Selects</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#control-sizes">Control Sizes</a></li>
+<li class="toc-entry toc-h1"><a href="#control-states">Control States</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#focus">Focus</a></li>
+<li class="toc-entry toc-h2"><a href="#disabled">Disabled</a></li>
+<li class="toc-entry toc-h2"><a href="#validation">Validation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#inverse-styling">Inverse Styling</a></li>
+<li class="toc-entry toc-h1"><a href="#form-control-feedback">Form Control Feedback</a></li>
+<li class="toc-entry toc-h1"><a href="#form-control-groups">Form Control Groups</a></li>
+</ul>
+
+        </div>
+
+      
+
+    </section>
+
+    <section class="page-body">
+
+      <p>Individual form controls automatically receive some global styling. All textual <code class="highlighter-rouge">&lt;input&gt;</code>, <code class="highlighter-rouge">&lt;textarea&gt;</code>, and <code class="highlighter-rouge">&lt;select&gt;</code> elements with <code class="highlighter-rouge">.form-control</code> are set to <code class="highlighter-rouge">width: 100%;</code> by default. Wrap labels and controls in <code class="highlighter-rouge">.form-group</code> for optimum spacing.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
 
       <div class="row">
 
-        <div class="column-small-8 column-medium-8 column-large-10">
+        <div class="column-small-6">
 
-          <!-- BEGIN: Page Header Title -->
+          <div class="form-group">
 
-          <h1 class="page-header-title invisible ">
+            <label>
 
-            <?php
+              First Name
 
-            echo $page_header_title;
+            </label>
 
-            ?>
+            <input type="text" class="form-control" placeholder="">
 
-          </h1>
+          </div>
 
-          <!-- END: Page Header Title -->
+        </div>
 
-          
+        <div class="column-small-6">
 
-            <!-- BEGIN: Page Header Headline -->
+          <div class="form-group">
 
-            <div class="row">
+            <label>
 
-              <div class="column-small-12 column-jumbo-10">
+              Last Name
 
-                
+            </label>
 
-                  <p class="h6 page-header-subheadline flush  text-align-left ">
+            <input type="text" class="form-control" placeholder="">
 
-                    
+          </div>
 
-                      <a href="/components/">
+        </div>
 
-                    
+        <div class="column-small-6">
 
-                    Components
+          <div class="form-group">
 
-                    
+            <label>
 
-                      </a>
+              Email address
 
-                    
+            </label>
 
-                  </p>
+            <input type="email" class="form-control" placeholder="email@domain.com">
 
-                
+            <p class="form-control-feedback">
 
-                <p class="h1 page-header-headline flush-top  text-align-left  flush-bottom">
+              Please provide a valid email.
 
-                  Forms
+            </p>
 
-                </p>
+          </div>
 
-              </div>
+        </div>
 
-            </div>
+        <div class="column-small-6">
 
-            <!-- END: Page Header Headline -->
+          <div class="form-group">
 
-          
+            <label>
 
-          
+              Password
 
-          
+            </label>
+
+            <input type="password" class="form-control" placeholder="">
+
+            <p class="form-control-feedback">
+
+              Must include at least 1 number and 1 symbol.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label>
+
+              About Me
+
+            </label>
+
+            <textarea class="form-control" rows="3"></textarea>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label>
+
+              I am a...
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="radio-group-a" checked>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Man
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="radio-group-a">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Woman
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="radio-group-a">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Unicorn
+
+            </label>
+
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+      <div class="button-collection flush-bottom">
+
+        <button type="submit" class="button button-primary">
+
+          Submit
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form flush-bottom"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-small-6"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        First Name
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-small-6"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        Last Name
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+…
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-collection flush-bottom"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"button button-primary"</span><span class="nt">&gt;</span>
+    Submit
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div>    </div>
 
   </div>
 
 </div>
 
-<!-- =================================================
-END: Page Header
-================================================== -->
+<h1 id="form-controls">
+<a id="form-controls" class="anchor" href="#form-controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Form Controls</h1>
 
+<h2 id="inputs">
+<a id="inputs" class="anchor" href="#inputs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inputs</h2>
 
-        <!-- =================================================
-        BEGIN: Page Content Wrapper
-        ================================================== -->
+<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.</p>
 
-        <div class="page-content-wrapper flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-large">
+<div class="panel flush-bottom">
 
-          
+  <div class="panel-cell">
 
-            <!-- =================================================
-BEGIN: Page Navigation
-================================================== -->
-<!-- flex-screen-large  -->
-<div class="page-navigation flex-item-shrink-0-screen-large flex-item-order-1-screen-large" id="page-navigation">
+    <form class="form flush-bottom">
 
-  <div class="page-navigation-sticky">
+      <div class="row">
 
-    <div class="container-fluid pod">
+        <div class="column-small-12">
 
-      <ul class="page-navigation-menu list-unstyled">
+          <div class="form-group flush-bottom">
 
-  
-
-    <li class="">
-
-      <a href="#forms-controls" class="">
-
-        Form Controls
-
-      </a>
-
-      
-
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-inputs" class="">
-
-        Inputs
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-textarea" class="">
-
-        Text Area
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-toggles" class="">
-
-        Checkboxes &amp; Radios
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-selects" class="">
-
-        Selects
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-states" class="">
-
-        Control States
-
-      </a>
-
-      
-
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-states-focus" class="">
-
-        Focus
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-states-disabled" class="">
-
-        Disabled
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-states-validation" class="">
-
-        Validation
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-sizes" class="">
-
-        Control Sizes
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-inverse-styling" class="">
-
-        Inverse Styling
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-controls-feedback" class="">
-
-        Form Control Feedback
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#forms-form-control-groups" class="">
-
-        Form Control Groups
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-    </div>
-
-  </div>
-
-</div>
-
-<!-- =================================================
-END: Page Navigation
-================================================== -->
-
-
-          
-
-          <!-- =================================================
-          BEGIN: Page Content
-          ================================================== -->
-
-          <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
-
-            <!-- =================================================
-BEGIN: Forms
-================================================== -->
-
-<section class="fill" id="forms">
-
-  <div class="container-fluid pod">
-
-    <p>
-
-      Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: EXAMPLE
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  First Name
-
-                </label>
-
-                <input type="text" class="form-control" placeholder="">
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Last Name
-
-                </label>
-
-                <input type="text" class="form-control" placeholder="">
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Email address
-
-                </label>
-
-                <input type="email" class="form-control" placeholder="email@domain.com">
-
-                <p class="form-control-feedback">
-
-                  Please provide a valid email.
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Password
-
-                </label>
-
-                <input type="password" class="form-control" placeholder="">
-
-                <p class="form-control-feedback">
-
-                  Must include atleast 1 number and 1 symbol.
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-12">
-
-              <div class="form-group">
-
-                <label>
-
-                  About Me
-
-                </label>
-
-                <textarea class="form-control" rows="3"></textarea>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-12">
-
-              <div class="form-group">
-
-                <label>
-
-                  I am a...
-
-                </label>
-
-                <label class="form-control-toggle form-control-toggle-custom">
-
-                  <input type="radio" name="radio-group-a" checked="checked">
-
-                  <span class="form-control-toggle-indicator"></span>
-
-                  Man
-
-                </label>
-
-                <label class="form-control-toggle form-control-toggle-custom">
-
-                  <input type="radio" name="radio-group-a">
-
-                  <span class="form-control-toggle-indicator"></span>
-
-                  Woman
-
-                </label>
-
-                <label class="form-control-toggle form-control-toggle-custom">
-
-                  <input type="radio" name="radio-group-a">
-
-                  <span class="form-control-toggle-indicator"></span>
-
-                  Unicorn
-
-                </label>
-
-              </div>
-
-            </div>
+            <input type="text" class="form-control" placeholder="Placeholder Text">
 
           </div>
 
-          <div class="button-collection flush-bottom">
+        </div>
 
-            <button type="submit" class="button button-primary">
+      </div>
 
-              Submit
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder Text"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="textarea">
+<a id="textarea" class="anchor" href="#textarea" aria-hidden="true"><span class="octicon octicon-link"></span></a>Textarea</h2>
+
+<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group flush-bottom">
+
+            <textarea class="form-control" placeholder="Placeholder Text" rows="4"></textarea>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder Text"</span> <span class="na">rows=</span><span class="s">"4"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="checkboxes--radios">
+<a id="checkboxes--radios" class="anchor" href="#checkboxes--radios" aria-hidden="true"><span class="octicon octicon-link"></span></a>Checkboxes &amp; Radios</h2>
+
+<p>Checkboxes and radios, both staple toggles of the traditional HTML form, share a single class in CNVS, <code class="highlighter-rouge">.form-control-toggle</code>, to governs layout and basic styling.  Wrap a checkbox or radio in the class <code class="highlighter-rouge">.form-control-toggle</code>, preferrably using a <code class="highlighter-rouge">&lt;label&gt;</code> for added context and accessibility.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label class="form-control-toggle">
+
+              <input type="checkbox">
+
+              First Option
+
+            </label>
+
+            <label class="form-control-toggle">
+
+              <input type="checkbox">
+
+              Second Option
+
+            </label>
+
+            <label class="form-control-toggle disabled">
+
+              <input type="checkbox" disabled>
+
+              Third Option (Disabled)
+
+            </label>
+
+          </div>
+
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle">
+
+              <input type="radio" name="sample-radio-group" checked>
+
+              First Option
+
+            </label>
+
+            <label class="form-control-toggle">
+
+              <input type="radio" name="sample-radio-group">
+
+              Second Option
+
+            </label>
+
+            <label class="form-control-toggle disabled">
+
+              <input type="radio" name="sample-radio-group" disabled>
+
+              Third Option (Disabled)
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-control-toggle"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    First Option
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-control-toggle"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    Second Option
+  <span class="nt">&lt;/label&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h3 id="custom-checkboxes--radios">Custom Checkboxes &amp; Radios</h3>
+
+<p>Looking to take your checkbox or radio toggle to the next level? Add the class <code class="highlighter-rouge">.form-control-toggle-custom</code> to your exisiting <code class="highlighter-rouge">.form-control-toggle</code> wrapped checkbox or radio input.  The <code class="highlighter-rouge">&lt;input&gt;</code> is hidden from view, but still available in the DOM for use in your form.  In order to replace the hidden checkbox or radio component with a styled alternate, you must also inject a new element with the class <code class="highlighter-rouge">.form-control-toggle-indicator</code>. We recommend a simple <code class="highlighter-rouge">&lt;span&gt;</code> for this.</p>
+
+<p>For the checkmark icon, as well as the circle icon for radios, we use base64 embedded SVG icons and adjust the color.</p>
+
+<h4 id="checkboxes">Checkboxes</h4>
+
+<div class="panel pod flush-top flush-horizontal pod-short-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="checkbox" checked>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-control-toggle form-control-toggle"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control-toggle-indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  First Option
+<span class="nt">&lt;/label&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<p>For indetermindate checkboxes, one whose state is neither true nor false, you may leverage the <code class="highlighter-rouge">:indeterminate</code> pseudo class.  However, you must use Javascript magic to manually set this property.  Something like this should work: <code class="highlighter-rouge">$(element).prop('indeterminate', true)</code>.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="checkbox" class="indeterminate">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<h4 id="radios">Radios</h4>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group" checked>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Second Option
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Third Option
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-control-toggle form-control-toggle"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control-toggle-indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  First Option
+<span class="nt">&lt;/label&gt;</span>
+…
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h4 id="disabled">Disabled</h4>
+
+<p>Using the <code class="highlighter-rouge">disabled</code> attribute, placed inline on the checkbox or radio HTML element, will not only make the toggle un-clickable, but also adjusts the appearance to reflect it’s inaccessibility.</p>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
+
+              <input type="checkbox" disabled checked>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
+
+            <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
+
+              <input type="checkbox" disabled>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Second Option
+
+            </label>
+
+          </div>
+
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group" checked disabled>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group" disabled>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Second Option
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom disabled">
+
+              <input type="radio" name="sample-radio-group" disabled>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Third Option
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-control-toggle form-control-toggle"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control-toggle-indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  First Option
+<span class="nt">&lt;/label&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="selects">
+<a id="selects" class="anchor" href="#selects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selects</h2>
+
+<p>Default styling for <code class="highlighter-rouge">select</code> elements are available, or mirror custom control styling by wrapping any select in <code class="highlighter-rouge">.form-control</code> class and add the additional class <code class="highlighter-rouge">.form-control-select</code>.  For selects of type <code class="highlighter-rouge">multiple</code> add the class <code class="highlighter-rouge">.form-control-select-multiple</code>.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <span class="form-control form-control-select">
+
+              <select>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
+
+          </div>
+
+          <div class="form-group flush-bottom">
+
+            <span class="form-control form-control-select form-control-select-multiple">
+
+              <select multiple>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control form-control-select"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select&gt;</span>
+      <span class="nt">&lt;option&gt;</span>1<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option&gt;</span>2<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option&gt;</span>…<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control form-control-select form-control-select-multiple"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">multiple</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option&gt;</span>1<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option&gt;</span>2<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option&gt;</span>…<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="control-sizes">
+<a id="control-sizes" class="anchor" href="#control-sizes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control Sizes</h1>
+
+<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="form-group">
+
+        <label>
+
+          Small
+
+        </label>
+
+        <input type="text" class="form-control form-control-small" placeholder="Input (Small)">
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+
+          Default
+
+        </label>
+
+        <input type="text" class="form-control" placeholder="Input (Default)">
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+
+          Large
+
+        </label>
+
+        <input type="text" class="form-control form-control-large" placeholder="Input (Large)">
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control form-control-small"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control form-control-large"</span><span class="nt">&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="control-states">
+<a id="control-states" class="anchor" href="#control-states" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control States</h1>
+
+<h2 id="focus">
+<a id="focus" class="anchor" href="#focus" aria-hidden="true"><span class="octicon octicon-link"></span></a>Focus</h2>
+
+<p>For form controls, we remove the default <code class="highlighter-rouge">outline</code> style added by most browsers.  On <code class="highlighter-rouge">:focus</code> we apply user-defined styling.  Similar styling attributes can be defined for the <code class="highlighter-rouge">:hover</code> state.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group flush-bottom">
+
+            <input type="text" class="form-control focus" id="form-control-focus" placeholder="Placeholder Text">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<h2 id="disabled-1">
+<a id="disabled" class="anchor" href="#disabled" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disabled</h2>
+
+<p>Add the <code class="highlighter-rouge">disabled</code> boolean attribute on an input to prevent user input and trigger a slightly different look.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group flush-bottom">
+
+            <input type="text" class="form-control" placeholder="Placeholder Text" disabled>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<h2 id="validation">
+<a id="validation" class="anchor" href="#validation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Validation</h2>
+
+<p>Canvas includes validation states for success and error states for all form elements including <code class="highlighter-rouge">.form-control</code>, <code class="highlighter-rouge">checkbox</code>, and <code class="highlighter-rouge">label</code>.  Simply add class <code class="highlighter-rouge">.form-group-success</code> or <code class="highlighter-rouge">.form-group-danger</code> to any <code class="highlighter-rouge">.form-group</code> and all components inside will reflect the appropriate state styling.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-6">
+
+          <div class="form-group">
+
+            <label>
+
+              Default Input
+
+            </label>
+
+            <input type="text" class="form-control" placeholder="Placeholder">
+
+            <p class="form-control-feedback">
+
+              Example block-level help text here.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group">
+
+            <label>
+
+              Default Select
+
+            </label>
+
+            <span class="form-control form-control-select">
+
+              <select>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="column-small-6">
+
+          <div class="form-group form-group-success">
+
+            <label>
+
+              Success Input
+
+            </label>
+
+            <input type="text" class="form-control form-control-success" placeholder="Placeholder">
+
+            <p class="form-control-feedback">
+
+              Everything checks out here. Nice job!
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group form-group-success">
+
+            <label>
+
+              Success Select
+
+            </label>
+
+            <span class="form-control form-control-success form-control-select">
+
+              <select>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="column-small-6">
+
+          <div class="form-group form-group-danger">
+
+            <label>
+
+              Error Input
+
+            </label>
+
+            <input type="text" class="form-control form-control-error" placeholder="Input (Error)">
+
+            <p class="form-control-feedback">
+
+              Sorry this ID already exists. Try another.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group form-group-danger">
+
+            <label>
+
+              Error Select
+
+            </label>
+
+            <span class="form-control form-control-error form-control-select">
+
+              <select>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+    Default Input
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"small flush-bottom"</span><span class="nt">&gt;</span>
+    Example block-level help text here.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-group-success"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+    Success Input
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-control-feedback"</span><span class="nt">&gt;</span>
+    Looks good.
+  <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"small flush-bottom"</span><span class="nt">&gt;</span>
+    Example block-level help text here.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-group-danger"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+    Danger Input
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-control-feedback"</span><span class="nt">&gt;</span>
+    Sorry this ID already exists. Try another.
+  <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"small flush-bottom"</span><span class="nt">&gt;</span>
+    Example block-level help text here.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="inverse-styling">
+<a id="inverse-styling" class="anchor" href="#inverse-styling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inverse Styling</h1>
+
+<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.</p>
+
+<div class="panel">
+
+  <div class="panel-cell panel-cell-dark">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-6">
+
+          <div class="form-group">
+
+            <label class="inverse">
+
+              First Name
+
+            </label>
+
+            <input type="text" class="form-control form-control-inverse" placeholder="">
+
+          </div>
+
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group">
+
+            <label class="inverse">
+
+              Last Name
+
+            </label>
+
+            <input type="text" class="form-control form-control-inverse" placeholder="">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="column-small-6">
+
+          <div class="form-group">
+
+            <label class="inverse">
+
+              Email address
+
+            </label>
+
+            <input type="email" class="form-control form-control-inverse" placeholder="email@domain.com">
+
+            <p class="form-control-feedback inverse">
+
+              Please provide a valid email.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group">
+
+            <label class="inverse">
+
+              Password
+
+            </label>
+
+            <input type="password" class="form-control form-control-inverse" placeholder="">
+
+            <p class="form-control-feedback inverse">
+
+              Must include at least 1 number and 1 symbol.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label class="inverse">
+
+              About Me
+
+            </label>
+
+            <textarea class="form-control form-control-inverse"></textarea>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label class="inverse">
+
+              I am a…
+
+            </label>
+
+            <label class="form-control-toggle inverse form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group" checked>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Man
+
+            </label>
+
+            <label class="form-control-toggle inverse form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Woman
+
+            </label>
+
+            <label class="form-control-toggle inverse form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Unicorn
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="button-collection flush-bottom">
+
+        <button type="submit" class="button button-primary button-stroke button-inverse">
+
+          Submit
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"inverse"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control form-control-inverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-control-feedback inverse"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="form-control-feedback">
+<a id="form-control-feedback" class="anchor" href="#form-control-feedback" aria-hidden="true"><span class="octicon octicon-link"></span></a>Form Control Feedback</h1>
+
+<p>Apply the class <code class="highlighter-rouge">.form-control-feedback</code> to a standard type block to provide contextual feedback  like help text or hint text to form controls and form control groups.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="form-group flush-bottom">
+
+        <label>
+
+          Input with feedback
+
+        </label>
+
+        <input type="text" class="form-control" placeholder="Placeholder">
+
+        <p class="form-control-feedback">
+
+          Example block-level feedback text here.
+
+        </p>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+   Input with help text
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-control-feedback"</span><span class="nt">&gt;</span>
+    Example block-level feedback text here.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="form-control-groups">
+<a id="form-control-groups" class="anchor" href="#form-control-groups" aria-hidden="true"><span class="octicon octicon-link"></span></a>Form Control Groups</h1>
+
+<p>Align elements alongside or inside <code class="highlighter-rouge">.form-control</code> elements by wrapping them in a <code class="highlighter-rouge">.form-control-group</code> element. Use the <code class="highlighter-rouge">.form-control-group-add-on</code> element to position elements.  If you add <code class="highlighter-rouge">.form-control</code> to the wrapping <code class="highlighter-rouge">.form-control-group</code> the <code class="highlighter-rouge">.form-control-group-add-on</code> will live inside the <code class="highlighter-rouge">.form-control</code> rather than outside it.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="form-group">
+
+        <label>
+
+          Input With Add On (Before)
+
+        </label>
+
+        <div class="form-control-group">
+
+          <div class="form-control-group-add-on">
+
+            <button class="button">
+
+              Test
 
             </button>
 
           </div>
 
-        </form>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;form class="form flush-bottom"&gt;
-&lt;div class="row"&gt;
-  &lt;div class="column-small-6"&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label&gt;
-        First Name
-      &lt;/label&gt;
-      &lt;input type="text" class="form-control" placeholder=""&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="column-small-6"&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label&gt;
-        Last Name
-      &lt;/label&gt;
-      &lt;input type="text" class="form-control" placeholder=""&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&hellip;
-&lt;div class="button-collection flush-bottom"&gt;
-  &lt;button type="submit" class="button button-primary"&gt;
-    Submit
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/form&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-    <!-- =================================================
-BEGIN: Form Controls
-================================================== -->
-
-<section id="forms-controls">
-
-  <h2>
-
-    Form Controls
-
-  </h2>
-
-  <section id="forms-controls-inputs">
-
-    <h3>
-
-      Inputs
-
-    </h3>
-
-    <p>
-
-      Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group flush-bottom">
-
-                <input type="text" class="form-control" placeholder="Placeholder Text">
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder Text"&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-  </section>
-
-  <section id="forms-controls-textarea">
-
-    <h3>
-
-      Textarea
-
-    </h3>
-
-    <p>
-
-      Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group flush-bottom">
-
-                <textarea class="form-control" placeholder="Placeholder Text" rows="4"></textarea>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;textarea class="form-control" placeholder="Placeholder Text" rows="4"&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <section id="forms-controls-toggles">
-
-    <h3>
-
-      Checkboxes &amp; Radios
-
-    </h3>
-
-    <p>
-
-      Checkboxes and radios, both staple toggles of the traditional HTML form, share a single class in CNVS, <code>.form-control-toggle</code>, to governs layout and basic styling.  Wrap a checkbox or radio in the class <code>.form-control-toggle</code>, preferrably using a <code>&lt;label&gt;</code> for added context and accessibility.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group">
-
-                <label class="form-control-toggle">
-
-                  <input type="checkbox">
-
-                  First Option
-
-                </label>
-
-                <label class="form-control-toggle">
-
-                  <input type="checkbox">
-
-                  Second Option
-
-                </label>
-
-                <label class="form-control-toggle disabled">
-
-                  <input type="checkbox" disabled="">
-
-                  Third Option (Disabled)
-
-                </label>
-
-              </div>
-
-              <div class="form-group flush-bottom">
-
-                <label class="form-control-toggle">
-
-                  <input type="radio" name="sample-radio-group" checked="">
-
-                  First Option
-
-                </label>
-
-                <label class="form-control-toggle">
-
-                  <input type="radio" name="sample-radio-group">
-
-                  Second Option
-
-                </label>
-
-                <label class="form-control-toggle disabled">
-
-                  <input type="radio" name="sample-radio-group" disabled="">
-
-                  Third Option (Disabled)
-
-                </label>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;label class="form-control-toggle"&gt;
-    &lt;input type="checkbox"&gt;
-    First Option
-  &lt;/label&gt;
-  &lt;label class="form-control-toggle"&gt;
-    &lt;input type="checkbox"&gt;
-    Second Option
-  &lt;/label&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-    <section id="forms-controls-toggles-custom">
-
-      <h4>
-
-        Custom Checkboxes &amp; Radios
-
-      </h4>
-
-      <p>
-
-        Looking to take your checkbox or radio toggle to the next level? Add the class <code>.form-control-toggle-custom</code> to your exisiting <code>.form-control-toggle</code> wrapped checkbox or radio input.  The <code>&lt;input&gt;</code> is hidden from view, but still available in the DOM for use in your form.  In order to replace the hidden checkbox or radio component with a styled alternate, you must also inject a new element with the class <code>.form-control-toggle-indicator</code>. We recommend a simple <code>&lt;span&gt;</code> for this.
-
-      </p>
-
-      <p>
-
-        For the checkmark icon, as well as the circle icon for radios, we use base64 embedded SVG icons and adjust the color.
-
-      </p>
-
-      <section id="forms-controls-toggles-custom-checkboxes">
-
-        <h5>
-
-          Checkboxes
-
-        </h5>
-
-        <!-- =================================================
-        BEGIN: Example
-        ================================================== -->
-
-        <div class="panel pod flush-top flush-horizontal pod-short-bottom">
-
-          <div class="panel-cell">
-
-            <form class="form flush-bottom">
-
-              <div class="row">
-
-                <div class="column-small-12">
-
-                  <div class="form-group flush-bottom">
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="checkbox" checked />
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </form>
-
-          </div>
-
-          <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;label class="form-control-toggle form-control-toggle"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
-  First Option
-&lt;/label&gt;
-</pre>
-
-          </div>
+          <input type="text" class="form-control" placeholder="Placeholder">
 
         </div>
 
-        <!-- =================================================
-        END: Example
-        ================================================== -->
-
-        <p>
-
-          For indetermindate checkboxes, one whose state is neither true nor false, you may leverage the <code>:indeterminate</code> pseudo class.  However, you must use Javascript magic to manually set this property.  Something like this should work: <code>$(element).prop('indeterminate', true)</code>.
-
-        </p>
-
-        <!-- =================================================
-        BEGIN: Example
-        ================================================== -->
-
-        <div class="panel flush-bottom">
-
-          <div class="panel-cell">
-
-            <form class="form flush-bottom">
-
-              <div class="row">
-
-                <div class="column-small-12">
-
-                  <div class="form-group flush-bottom">
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="checkbox" class="indeterminate" />
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </form>
-
-          </div>
-
-        </div>
-
-        <!-- =================================================
-        END: Example
-        ================================================== -->
-
-      </section>
-
-      <section id="forms-controls-toggles-custom-radios">
-
-        <h5>
-
-          Radios
-
-        </h5>
-
-        <!-- =================================================
-        BEGIN: Example
-        ================================================== -->
-
-        <div class="panel flush-bottom">
-
-          <div class="panel-cell">
-
-            <form class="form flush-bottom">
-
-              <div class="row">
-
-                <div class="column-small-12">
-
-                  <div class="form-group flush-bottom">
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group" checked="">
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group">
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Second Option
-
-                    </label>
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group">
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Third Option
-
-                    </label>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </form>
-
-          </div>
-
-          <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;label class="form-control-toggle form-control-toggle"&gt;
-  &lt;input type="radio" /&gt;
-  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
-  First Option
-&lt;/label&gt;
-&hellip;
-</pre>
-
-          </div>
-
-        </div>
-
-        <!-- =================================================
-        END: Example
-        ================================================== -->
-
-      </section>
-
-      <section id="forms-controls-toggles-custom-disabled">
-
-        <h5>
-
-          Disabled
-
-        </h5>
-
-        <p>
-
-          Using the <code>disabled</code> attribute, placed inline on the checkbox or radio HTML element, will not only make the toggle un-clickable, but also adjusts the appearance to reflect it's inaccessibility.
-
-        </p>
-
-        <!-- =================================================
-        BEGIN: Example
-        ================================================== -->
-
-        <div class="panel">
-
-          <div class="panel-cell">
-
-            <form class="form flush-bottom">
-
-              <div class="row">
-
-                <div class="column-small-12">
-
-                  <div class="form-group">
-
-                    <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
-
-                      <input type="checkbox" disabled checked/>
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                    <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
-
-                      <input type="checkbox" disabled />
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Second Option
-
-                    </label>
-
-                  </div>
-
-                  <div class="form-group flush-bottom">
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group" checked="" disabled>
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group" disabled>
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Second Option
-
-                    </label>
-
-                    <label class="form-control-toggle form-control-toggle-custom disabled">
-
-                      <input type="radio" name="sample-radio-group" disabled>
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Third Option
-
-                    </label>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </form>
-
-          </div>
-
-          <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;label class="form-control-toggle form-control-toggle"&gt;
-  &lt;input type="checkbox" disabled /&gt;
-  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
-  First Option
-&lt;/label&gt;
-</pre>
-
-          </div>
-
-        </div>
-
-        <!-- =================================================
-        END: Example
-        ================================================== -->
-
-      </section>
-
-    </section>
-
-  </section>
-
-  <section id="forms-controls-selects">
-
-    <h3>
-
-      Selects
-
-    </h3>
-
-    <p>
-
-      Default styling for <code>select</code> elements are available, or mirror custom control styling by wrapping any select in <code>.form-control</code> class and add the additional class <code>.form-control-select</code>.  For selects of type <code>multiple</code> add the class <code>.form-control-select-multiple</code>.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group">
-
-                <span class="form-control form-control-select">
-
-                  <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-              <div class="form-group flush-bottom">
-
-                <span class="form-control form-control-select form-control-select-multiple">
-
-                  <select multiple>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
-
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+      <div class="form-group">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;span class="form-control form-control-select"&gt;
-    &lt;select&gt;
-      &lt;option&gt;1&lt;/option&gt;
-      &lt;option&gt;2&lt;/option&gt;
-      &lt;option&gt;&hellip;&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
+        <label>
 
-&lt;div class="form-group"&gt;
-  &lt;span class="form-control form-control-select form-control-select-multiple"&gt;
-    &lt;select multiple&gt;
-      &lt;option&gt;1&lt;/option&gt;
-      &lt;option&gt;2&lt;/option&gt;
-      &lt;option&gt;&hellip;&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-</pre>
+          Input With Add On (After)
 
-      </div>
+        </label>
 
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-</section>
-
-<!-- =================================================
-END: Forms Controls
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Form Control Sizes
-================================================== -->
-
-<section id="forms-controls-sizes">
-
-  <h2>
-
-    Control Sizes
-
-  </h2>
-
-  <p>
-
-    Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
-
-  </p>
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <form class="form flush-bottom">
-
-        <div class="form-group">
-
-          <label>
-
-            Mini
-
-          </label>
-
-          <input type="text" class="form-control form-control-mini" placeholder="Input (Mini)">
-
-        </div>
-
-        <div class="form-group">
-
-          <label>
-
-            Small
-
-          </label>
-
-          <input type="text" class="form-control form-control-small" placeholder="Input (Small)">
-
-        </div>
-
-        <div class="form-group">
-
-          <label>
-
-            Default
-
-          </label>
-
-          <input type="text" class="form-control" placeholder="Input (Default)">
-
-        </div>
-
-        <div class="form-group">
-
-          <label>
-
-            Large
-
-          </label>
-
-          <input type="text" class="form-control form-control-large" placeholder="Input (Large)">
-
-        </div>
-
-        <div class="form-group flush-bottom">
-
-          <label>
-
-            Jumbo
-
-          </label>
-
-          <input type="text" class="form-control form-control-jumbo" placeholder="Input (Jumbo)">
-
-        </div>
-
-      </form>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;input type="text" class="form-control form-control-mini"&gt;
-
-&lt;input type="text" class="form-control form-control-small"&gt;
-
-&lt;input type="text" class="form-control"&gt;
-
-&lt;input type="text" class="form-control form-control-large"&gt;
-
-&lt;input type="text" class="form-control form-control-jumbo"&gt;
-</pre>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =================================================
-END: Form Control Sizes
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Form Control States
-================================================== -->
-
-<section id="forms-controls-states">
-
-  <h2>
-
-    Control States
-
-  </h2>
-
-  <section id="forms-controls-states-focus">
-
-    <h3>
-
-      Focus
-
-    </h3>
-
-    <p>
-
-      For form controls, we remove the default <code>outline</code> style added by most browsers.  On <code>:focus</code> we apply user-defined styling.  Similar styling attributes can be defined for the <code>:hover</code> state.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group flush-bottom">
-
-                <input type="text" class="form-control focus" id="form-control-focus" placeholder="Placeholder Text">
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <section id="forms-controls-states-disabled">
-
-    <h3>
-
-      Disabled
-
-    </h3>
-
-    <p>
-
-      Add the <code>disabled</code> boolean attribute on an input to prevent user input and trigger a slightly different look.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group flush-bottom">
-
-                <input type="text" class="form-control" placeholder="Placeholder Text" disabled>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <section id="forms-controls-states-validation">
-
-    <h3>
-
-      Validation
-
-    </h3>
-
-    <p>
-
-      Canvas includes validation states for success and error states for all form elements including <code>.form-control</code>, <code>checkbox</code>, and <code>label</code>.  Simply add class <code>.form-group-success</code> or <code>.form-group-danger</code> to any <code>.form-group</code> and all components inside will reflect the appropriate state styling.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Default Input
-
-                </label>
-
-                <input type="text" class="form-control" placeholder="Placeholder">
-
-                <p class="form-control-feedback">
-
-                  Example block-level help text here.
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Default Select
-
-                </label>
-
-                <span class="form-control form-control-select">
-
-                  <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="column-small-6">
-
-              <div class="form-group form-group-success">
-
-                <label>
-
-                  Success Input
-
-                </label>
-
-                <input type="text" class="form-control form-control-success" placeholder="Placeholder">
-
-                <p class="form-control-feedback">
-
-                  Everything checks out here. Nice job!
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group form-group-success">
-
-                <label>
-
-                  Success Select
-
-                </label>
-
-                <span class="form-control form-control-success form-control-select">
-
-                  <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="column-small-6">
-
-              <div class="form-group form-group-danger">
-
-                <label>
-
-                  Error Input
-
-                </label>
-
-                <input type="text" class="form-control form-control-error" placeholder="Input (Error)">
-
-                <p class="form-control-feedback">
-
-                  Sorry this ID already exists. Try another.
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group form-group-danger">
-
-                <label>
-
-                  Error Select
-
-                </label>
-
-                <span class="form-control form-control-error form-control-select">
-
-                  <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;label&gt;
-    Default Input
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;p class="small flush-bottom"&gt;
-    Example block-level help text here.
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class="form-group form-group-success"&gt;
-  &lt;label&gt;
-    Success Input
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;p class="form-control-feedback"&gt;
-    Looks good.
-  &lt;/p&gt;
-  &lt;p class="small flush-bottom"&gt;
-    Example block-level help text here.
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class="form-group form-group-danger"&gt;
-  &lt;label&gt;
-    Danger Input
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;p class="form-control-feedback"&gt;
-    Sorry this ID already exists. Try another.
-  &lt;/p&gt;
-  &lt;p class="small flush-bottom"&gt;
-    Example block-level help text here.
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-</section>
-
-<!-- =================================================
-BEGIN: Form Control States
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Form Control Sizes
-================================================== -->
-
-<section id="forms-controls-inverse-styling">
-
-  <h2>
-
-    Inverse Styling
-
-  </h2>
-
-  <p>
-
-    Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
-
-  </p>
-
-  <div class="panel panel-inverse">
-
-    <div class="panel-cell panel-cell-inverse">
-
-      <form class="form flush-bottom">
-
-        <div class="row">
-
-          <div class="column-small-6">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                First Name
-
-              </label>
-
-              <input type="text" class="form-control form-control-inverse" placeholder="">
-
-            </div>
-
-          </div>
-
-          <div class="column-small-6">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                Last Name
-
-              </label>
-
-              <input type="text" class="form-control form-control-inverse" placeholder="">
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="column-small-6">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                Email address
-
-              </label>
-
-              <input type="email" class="form-control form-control-inverse" placeholder="email@domain.com">
-
-              <p class="form-control-feedback inverse">
-
-                Please provide a valid email.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="column-small-6">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                Password
-
-              </label>
-
-              <input type="password" class="form-control form-control-inverse" placeholder="">
-
-              <p class="form-control-feedback inverse">
-
-                Must include atleast 1 number and 1 symbol.
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="column-small-12">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                About Me
-
-              </label>
-
-              <textarea class="form-control form-control-inverse"></textarea>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="column-small-12">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                I am a&hellip;
-
-              </label>
-
-              <label class="form-control-toggle inverse form-control-toggle-custom">
-
-                <input type="radio" name="sample-radio-group" checked="">
-
-                <span class="form-control-toggle-indicator"></span>
-
-                Man
-
-              </label>
-
-              <label class="form-control-toggle inverse form-control-toggle-custom">
-
-                <input type="radio" name="sample-radio-group">
-
-                <span class="form-control-toggle-indicator"></span>
-
-                Woman
-
-              </label>
-
-              <label class="form-control-toggle inverse form-control-toggle-custom">
-
-                <input type="radio" name="sample-radio-group">
-
-                <span class="form-control-toggle-indicator"></span>
-
-                Unicorn
-
-              </label>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="button-collection flush-bottom">
-
-          <button type="submit" class="button button-primary button-stroke button-inverse">
-
-            Submit
-
-          </button>
-
-        </div>
-
-      </form>
-
-    </div>
-
-    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;label class="inverse"&gt;
-    &hellip;
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control form-control-inverse"&gt;
-  &lt;p class="form-control-feedback inverse"&gt;
-    &hellip;
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =================================================
-END: Form Control Sizes
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Form Form Control Feedback
-================================================== -->
-
-<section id="forms-controls-feedback">
-
-  <h2>
-
-    Form Control Feedback
-
-  </h2>
-
-  <p>
-
-    Apply the class <code>.form-control-feedback</code> to a standard type block to provide contextual feedback  like help text or hint text to form controls and form control groups.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <form class="form flush-bottom">
-
-        <div class="form-group flush-bottom">
-
-          <label>
-
-            Input with feedback
-
-          </label>
+        <div class="form-control-group">
 
           <input type="text" class="form-control" placeholder="Placeholder">
 
-          <p class="form-control-feedback">
+          <div class="form-control-group-add-on">
 
-            Example block-level feedback text here.
+            <button class="button">
 
-          </p>
+              Test
 
-        </div>
-
-      </form>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;label&gt;
-   Input with help text
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;p class="form-control-feedback"&gt;
-    Example block-level feedback text here.
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-
-
-
-</section>
-
-<!-- =================================================
-END: Form Form Control Feedback
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Form Control Groups
-================================================== -->
-
-<section id="forms-form-control-groups">
-
-  <h2>
-
-    Form Control Groups
-
-  </h2>
-
-  <p>
-
-    Align elements alongside or inside <code>.form-control</code> elements by wrapping them in a <code>.form-control-group</code> element. Use the <code>.form-control-group-add-on</code> element to position elements.  If you add <code>.form-control</code> to the wrapping <code>.form-control-group</code> the <code>.form-control-group-add-on</code> will live inside the <code>.form-control</code> rather than outside it.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <form class="form flush-bottom">
-
-        <div class="form-group">
-
-          <label>
-
-            Input With Add On (Before)
-
-          </label>
-
-          <div class="form-control-group">
-
-            <div class="form-control-group-add-on">
-
-              <button class="button">
-
-                Test
-
-              </button>
-
-            </div>
-
-            <input type="text" class="form-control" placeholder="Placeholder">
+            </button>
 
           </div>
 
         </div>
-
-        <div class="form-group">
-
-          <label>
-
-            Input With Add On (After)
-
-          </label>
-
-          <div class="form-control-group">
-
-            <input type="text" class="form-control" placeholder="Placeholder">
-
-            <div class="form-control-group-add-on">
-
-              <button class="button">
-
-                Test
-
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="form-group">
-
-          <label>
-
-            Input With Nested Add On (Before)
-
-          </label>
-
-          <div class="form-control-group form-control">
-
-            <span class="form-control-group-add-on form-control-group-add-on-prepend">
-
-              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
-
-            </span>
-
-            <input type="text" class="form-control" placeholder="Placeholder">
-
-          </div>
-
-        </div>
-
-        <div class="form-group">
-
-          <label>
-
-            Input With Nested Add On (After)
-
-          </label>
-
-          <div class="form-control-group form-control">
-
-            <input type="text" class="form-control" placeholder="Placeholder">
-
-            <span class="form-control-group-add-on form-control-group-add-on-append">
-
-              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
-
-            </span>
-
-          </div>
-
-        </div>
-
-        <div class="form-group flush-bottom">
-
-          <label>
-
-            Input With Nested Add On (Before &amp; After)
-
-          </label>
-
-          <div class="form-control-group form-control">
-
-            <span class="form-control-group-add-on form-control-group-add-on-prepend">
-
-              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
-
-            </span>
-
-            <input type="text" class="form-control" placeholder="Placeholder">
-
-            <span class="form-control-group-add-on form-control-group-add-on-append">
-
-              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
-
-            </span>
-
-          </div>
-
-        </div>
-
-      </form>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Input With Add On Before --&gt;
-
-&lt;div class="form-control-group"&gt;
-  &lt;div class="form-control-group-add-on"&gt;
-    &hellip;
-  &lt;/div&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-&lt;/div&gt;
-
-&lt;!-- Input With Add On After --&gt;
-
-&lt;div class="form-control-group"&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;div class="form-control-group-add-on"&gt;
-    &hellip;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- Input With Nested Add On Before --&gt;
-
-&lt;div class="form-control-group form-control"&gt;
-  &lt;span class="form-control-group-add-on form-control-group-add-on-prepend"&gt;
-    &hellip;
-  &lt;/span&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-&lt;/div&gt;
-
-&lt;!-- Input With Nested Add On After --&gt;
-
-&lt;div class="form-control-group form-control"&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;span class="form-control-group-add-on form-control-group-add-on-append"&gt;
-    &hellip;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- Input With Nested Add On Before &amp; After --&gt;
-
-&lt;div class="form-control-group form-control"&gt;
-  &lt;span class="form-control-group-add-on form-control-group-add-on-prepend"&gt;
-    &hellip;
-  &lt;/span&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;span class="form-control-group-add-on form-control-group-add-on-append"&gt;
-    &hellip;
-  &lt;/span&gt;
-&lt;/div&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-
-
-
-</section>
-
-<!-- =================================================
-END: Form Control Groups
-================================================== -->
-
-
-  </div>
-
-</section>
-
-<!-- =================================================
-END: Forms
-================================================== -->
-
-
-          </div>
-
-          <!-- =================================================
-          END: Page Content
-          ================================================== -->
-
-        </div>
-
-        <!-- =================================================
-        END: Page Content Wrapper
-        ================================================== -->
 
       </div>
 
-      <!-- =================================================
-      END: Page
-      ================================================== -->
+      <div class="form-group">
+
+        <label>
+
+          Input With Nested Add On (Before)
+
+        </label>
+
+        <div class="form-control-group form-control">
+
+          <span class="form-control-group-add-on form-control-group-add-on-prepend">
+
+            <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+
+          </span>
+
+          <input type="text" class="form-control" placeholder="Placeholder">
+
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+
+          Input With Nested Add On (After)
+
+        </label>
+
+        <div class="form-control-group form-control">
+
+          <input type="text" class="form-control" placeholder="Placeholder">
+
+          <span class="form-control-group-add-on form-control-group-add-on-append">
+
+            <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="form-group flush-bottom">
+
+        <label>
+
+          Input With Nested Add On (Before &amp; After)
+
+        </label>
+
+        <div class="form-control-group form-control">
+
+          <span class="form-control-group-add-on form-control-group-add-on-prepend">
+
+            <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+
+          </span>
+
+          <input type="text" class="form-control" placeholder="Placeholder">
+
+          <span class="form-control-group-add-on form-control-group-add-on-append">
+
+            <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Input With Add On Before --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-control-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-control-group-add-on"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Input With Add On After --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-control-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-control-group-add-on"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Input With Nested Add On Before --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-control-group form-control"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control-group-add-on form-control-group-add-on-prepend"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Input With Nested Add On After --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-control-group form-control"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control-group-add-on form-control-group-add-on-append"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Input With Nested Add On Before &amp;amp; After --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-control-group form-control"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control-group-add-on form-control-group-add-on-prepend"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Placeholder"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-control-group-add-on form-control-group-add-on-append"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+
+    </section>
+
+  </div>
+
+</div>
+
+
+      </section>
 
       
 
@@ -2803,14 +2097,10 @@ END: Footer
     </div>
 
     <!-- =================================================
-    END: Canvas
-    ================================================== -->
-
-    <!-- =================================================
 BEGIN: Javascripts
 ================================================== -->
 
-<script type="text/javascript" src="/cnvs/javascripts/scripts.min.js"></script>
+<script type="text/javascript" src="/cnvs/assets/javascripts/scripts.min.js"></script>
 
 <!-- =================================================
 END: Javascripts
@@ -2818,9 +2108,5 @@ END: Javascripts
 
 
   </body>
-
-  <!-- =================================================
-  END: Body
-  ================================================== -->
 
 </html>

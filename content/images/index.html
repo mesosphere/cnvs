@@ -50,11 +50,11 @@ BEGIN: Head
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
   <meta name="title" content ="Images &bull; CNVS">
-  <meta name="description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
+  <meta name="description" content="Images, denoted by the all-enduring &lt;img&gt; tag, have been a starter in the markup playbook since the early days of the internet.  However, they offer ve...">
   <meta name="keywords" content="">
   <meta name="googlebot" content="all">
-  <link rel="canonical" href="http://yourdomain.com/cnvs/content/images/">
-  <link rel="alternate" type="application/rss+xml" title="CNVS" href="http://yourdomain.com/cnvs/feed.xml" />
+  <link rel="canonical" href="/cnvs/content/images/index">
+  <link rel="alternate" type="application/rss+xml" title="CNVS" href="/cnvs/feed.xml" />
 
   <!--[if lt IE 9]>
 
@@ -84,11 +84,11 @@ BEGIN: Head
 
   <!-- BEGIN: FAV ICON -->
 
-  <link rel="icon" href="/cnvs/images/components/icons/favicon.ico">
+  <link rel="icon" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <!--[if IE]>
 
-    <link rel="icon shortcut" href="/cnvs/images/components/icons/favicon.ico">
+    <link rel="icon shortcut" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <![endif]-->
 
@@ -105,8 +105,8 @@ BEGIN: Head
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Images &bull; CNVS">
-  <meta property="og:description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
-  <meta property="og:url" content="ashenden.github.com/canvas">
+  <meta property="og:description" content="Images, denoted by the all-enduring &lt;img&gt; tag, have been a starter in the markup playbook since the early days of the internet.  However, they offer ve...">
+  <meta property="og:url" content="mesosphere.github.com/cnvs">
   <meta property="og:site_name" content="Images &bull; CNVS">
   <meta property="og:image" content="">
 
@@ -124,7 +124,8 @@ BEGIN: Head
   BEGIN: Stylesheets
   ================================================== -->
 
-  <link rel="stylesheet" href="/cnvs/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
 
   <!-- =================================================
   END: Stylesheets
@@ -134,18 +135,15 @@ BEGIN: Head
   BEGIN: Javascripts
   ================================================== -->
 
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery-2.2.0.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/modernizr-custom.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap/modal.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/google-code-prettify/prettify.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery.sticky-kit.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/jquery.waypoints.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/shortcuts/sticky.min.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
-  <link rel="stylesheet" href="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/popper.js/popper.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/tooltip.js/tooltip.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
+
 
   <!-- =================================================
   END: Javascripts
@@ -158,10 +156,6 @@ END: Head
 ================================================== -->
 
 
-  <!-- =================================================
-  BEGIN: Body
-  ================================================== -->
-
   <body>
 
     <!-- BEGIN: Livereload -->
@@ -170,35 +164,40 @@ END: Head
 
 <!-- END: Livereload -->
 
-<!-- =================================================
-BEGIN: Icon SVG Definitions
-================================================== -->
-
 <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <symbol id="icons-square" viewBox="0 0 16 16">
-    <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+    <rect x="0" y="0" width="16" height="16"></rect>
+  </symbol>
+
+  <symbol id="icons-check" viewBox="0 0 16 16">
+    <polygon points="3.11873314 7.88132268 1.8813 9.11876515 5.50000753 12.7375 14.1187 4.11874248 12.8812669 2.8813 5.50000753 10.262615"></polygon>
+  </symbol>
+
+  <symbol id="icons-circle-arrow-up" viewBox="0 0 16 16">
+    <path d="M7.79441138,15.9974098 C7.86273157,15.9991331 7.93126455,16 8,16 C8.06873545,16 8.13726843,15.9991331 8.20558862,15.9974098 L7.79441138,15.9974098 Z M6.99870848,15.9379451 C3.05302219,15.4452736 0,12.0791726 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.0800652 12.9456416,15.4467467 8.99870128,15.9382681 L8.99870128,7.23487303 L10.8799725,9.11614592 L12.1174049,7.87871278 L7.99870488,3.76000977 L3.88000488,7.87871278 L5.11743729,9.11614592 L6.99870848,7.23487303 L6.99870848,15.9379451 Z"></path>
+  </symbol>
+
+  <symbol id="icons-open-external" viewBox="0 0 16 16">
+    <path d="M12,5.41421128 L7.70711128,9.7071 L6.2929,8.29288872 L10.5857887,4 L8,4 L8,2 L14,2 L14,8 L12,8 L12,5.41421128 Z M2,2 L6,2 L6,4 L4,4 L4,12 L12,12 L12,10 L14,10 L14,14 L2,14 L2,2 Z"></path>
+  </symbol>
+
+  <symbol id="icons-users-plus" viewBox="0 0 16 16">
+    <path d="M12,11 L12,9 L11,9 L11,11 L9,11 L9,12 L11,12 L11,14 L12,14 L12,12 L14,12 L14,11 L12,11 Z M10.8703455,7.04370289 C11.0760971,7.01489482 11.2863091,7 11.5,7 C13.9852814,7 16,9.01471863 16,11.5 C16,13.9852814 13.9852814,16 11.5,16 C9.18372317,16 7.27618653,14.2499752 7.02746439,12 L5,12 L5,8.80199104 C6.15887373,7.70537116 7.9676434,7 10,7 C10.2952703,7 10.5858213,7.01488873 10.8703455,7.04370289 Z M10,7 C8.34314575,7 7,5.65685425 7,4 C7,2.34314575 8.34314575,1 10,1 C11.6568542,1 13,2.34314575 13,4 C13,5.65685425 11.6568542,7 10,7 Z" fill-opacity="0.4"></path>
+    <path d="M7.22618149,10.0873965 C6.82947988,10.030053 6.41950301,10 6,10 C3.9676434,10 2.15887373,10.7053712 1,11.801991 L1,15 L8.67133283,15 C7.65183347,14.1750222 7,12.9136331 7,11.5 C7,11.0065534 7.07942252,10.5316569 7.22618149,10.0873965 Z M8.8806793,7.84045667 C8.95835285,7.57377882 9,7.29175301 9,7 C9,5.34314575 7.65685425,4 6,4 C4.34314575,4 3,5.34314575 3,7 C3,8.65685425 4.34314575,10 6,10 C6.50291906,10 6.97693439,9.87624843 7.39325602,9.65753526 C7.72107754,8.92796723 8.23759966,8.30156001 8.8806793,7.84045667 Z"></path>
   </symbol>
 
 </svg>
 
-<!-- =================================================
-END: Icon SVG Definitions
-================================================== -->
 
 
-
-    <!-- =================================================
-    BEGIN: Canvas
-    ================================================== -->
-
-    <div class="canvas  flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
+    <div class="app flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
       <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
-<div class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
+<section class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
 
   
 
@@ -210,7 +209,7 @@ BEGIN: Header
 
   <div class="header-inner">
 
-    <div class="pod pod-narrow pod-short">
+    <div class="pod">
 
       <h1 class="header-logo">
 
@@ -237,15 +236,11 @@ END: Header
 ================================================== -->
 
 
-  <!-- =================================================
-BEGIN: Navigation
-================================================== -->
-
-<nav class="navigation fill">
+  <nav class="navigation fill">
 
   <div class="navigation-inner">
 
-    <div class="container-fluid-narrow pod pod-narrow flush-top flush-bottom">
+    <div class="container-fluid-narrow pod flush-top flush-bottom">
 
       
 
@@ -390,20 +385,6 @@ BEGIN: Navigation
 
   
 
-    <li class=" ">
-
-      <a href="/cnvs/updates/" class="">
-
-        Updates
-
-      </a>
-
-      
-
-    </li>
-
-  
-
 </ul>
 
 
@@ -413,453 +394,159 @@ BEGIN: Navigation
 
 </nav>
 
-<!-- =================================================
-END: Navigation
-================================================== -->
 
-
-</div>
+</section>
 
 <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
 
-      <!-- =================================================
-      BEGIN: Page
-      ================================================== -->
+      <section class="/content/images/index page flex-item-grow-1">
 
-      <div class="page flex-item-grow-1">
+        <div class="pod pod-tall">
 
-        
+  <div class="container">
 
+    <section class="page-header pod-tall-bottom">
 
+      
 
+        <p class="h1 page-header-headline flush-top short">
 
+          Images
 
+        </p>
 
+      
 
+      
 
+        <p class="page-header-description lead flush-bottom">
 
-<!-- =================================================
-BEGIN: Page Header
-================================================== -->
+          Use one of the built-in CNVS classes to support responsive behavior for your images.
 
-<div class="page-header fill fill-light left">
+        </p>
 
-  
+      
 
-  <div class="page-header-inner">
+      
 
-    <div class="container-fluid pod pod-short">
+      
 
-      <div class="row">
+        <div class="page-navigation pod-tall-top">
 
-        <div class="column-small-8 column-medium-8 column-large-10">
+          <h6 class="text-uppercase">
 
-          <!-- BEGIN: Page Header Title -->
+            Table of Contents
 
-          <h1 class="page-header-title invisible ">
+          </h6>
 
-            <?php
-
-            echo $page_header_title;
-
-            ?>
-
-          </h1>
-
-          <!-- END: Page Header Title -->
-
-          
-
-            <!-- BEGIN: Page Header Headline -->
-
-            <div class="row">
-
-              <div class="column-small-12 column-jumbo-10">
-
-                
-
-                  <p class="h6 page-header-subheadline flush  text-align-left ">
-
-                    
-
-                      <a href="/content">
-
-                    
-
-                    Content
-
-                    
-
-                      </a>
-
-                    
-
-                  </p>
-
-                
-
-                <p class="h1 page-header-headline flush-top  text-align-left  flush-bottom">
-
-                  Images
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <!-- END: Page Header Headline -->
-
-          
-
-          
-
-          
+          <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#responsive-images">Responsive Images</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#fill-image-image-fill">Fill Image .image-fill</a></li>
+<li class="toc-entry toc-h2"><a href="#fluid-image-image-fluid">Fluid Image .image-fluid</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#image-shapes">Image Shapes</a></li>
+</ul>
 
         </div>
 
-      </div>
+      
 
-    </div>
+    </section>
+
+    <section class="page-body">
+
+      <p>Images, denoted by the all-enduring <code class="highlighter-rouge">&lt;img&gt;</code> tag, have been a starter in the markup playbook since the early days of the internet.  However, they offer very little in form of responsive sizing or styling.  CNVS attempts to solve this.</p>
+
+<h1 id="responsive-images">
+<a id="responsive-images" class="anchor" href="#responsive-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responsive Images</h1>
+
+<h2 id="fill-image-image-fill">
+<a id="fill-image-image-fill" class="anchor" href="#fill-image-image-fill" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fill Image <code class="highlighter-rouge">.image-fill</code>
+</h2>
+
+<p>Images by default assume their source width, though this can be changed in markup by using the <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code> attributes directly on the <code class="highlighter-rouge">&lt;img&gt;</code> tag. Images are made responsive by adding the class <code class="highlighter-rouge">.image-fill</code>, setting a <code class="highlighter-rouge">max-width: 100%;</code> and applying <code class="highlighter-rouge">height: auto;</code>, filling their parent container.</p>
+
+<div class="panel">
+
+  <div class="panel-cell text-align-center">
+
+    <img class="image-fill" src="holder.js/600x400?auto=yes&amp;bg=323a4e&amp;fg=5b6171">
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"…"</span> <span class="na">class=</span><span class="s">"image-fill"</span><span class="nt">&gt;</span>
+</code></pre></div>    </div>
 
   </div>
 
 </div>
 
-<!-- =================================================
-END: Page Header
-================================================== -->
+<h2 id="fluid-image-image-fluid">
+<a id="fluid-image-image-fluid" class="anchor" href="#fluid-image-image-fluid" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fluid Image <code class="highlighter-rouge">.image-fluid</code>
+</h2>
 
+<p>The <code class="highlighter-rouge">.image-fill</code> class will force an <code class="highlighter-rouge">img</code> to fill it’s parent. However, you may wish to stop filling the parent container once the image reaches it’s original width. To do this use the class <code class="highlighter-rouge">.image-fluid</code>.  Resize your window and observe how the image below adjusts in size.</p>
 
-        <!-- =================================================
-        BEGIN: Page Content Wrapper
-        ================================================== -->
+<div class="panel">
 
-        <div class="page-content-wrapper flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-large">
+  <div class="panel-cell">
 
-          
+    <img class="image-fluid center-auto" src="holder.js/600x400?auto=yes&amp;bg=323a4e&amp;fg=5b6171">
 
-            <!-- =================================================
-BEGIN: Page Navigation
-================================================== -->
-<!-- flex-screen-large  -->
-<div class="page-navigation flex-item-shrink-0-screen-large flex-item-order-1-screen-large" id="page-navigation">
+  </div>
 
-  <div class="page-navigation-sticky">
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-    <div class="container-fluid pod">
-
-      <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#image-responsive" class="">
-
-        Responsive Images
-
-      </a>
-
-      
-
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#image-responsive-fill" class="">
-
-        Fill Image
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#image-responsive-fluid" class="">
-
-        Fluid Image
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#image-shape" class="">
-
-        Image Shapes
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-    </div>
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"…"</span> <span class="na">class=</span><span class="s">"image-fluid"</span><span class="nt">&gt;</span>
+</code></pre></div>    </div>
 
   </div>
 
 </div>
 
-<!-- =================================================
-END: Page Navigation
-================================================== -->
+<h1 id="image-shapes">
+<a id="image-shapes" class="anchor" href="#image-shapes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Shapes</h1>
 
+<p>Use one of the provided image shape classes to adjust the general shape of your image.</p>
 
-          
+<div class="panel">
 
-          <!-- =================================================
-          BEGIN: Page Content
-          ================================================== -->
+  <div class="panel-cell text-align-center">
 
-          <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
-
-            <div class="container-fluid pod">
-
-  <!-- =================================================
-  BEGIN: Container
-  ================================================== -->
-
-  <section id="images">
-
-    <p class="lead">
-
-      Use one of the built-in CNVS classes to support responsive behavior for your images.
-
-    </p>
-
-    <p>
-
-      Images, denoted by the all-enduring <code>&lt;img&gt;</code> tag, have been a starter in the markup playbook since the early days of the internet.  However, they offer very little in form of responsive sizing or styling.  CNVS attempts to solve this.
-
-    </p>
-
-  </section>
-
-  <!-- =================================================
-  END: Container
-  ================================================== -->
-
-  <!-- =================================================
-BEGIN: Responsive Images
-================================================== -->
-
-<section id="image-responsive">
-
-  <h2>
-
-    Responsive Images
-
-  </h2>
-
-  <!-- =================================================
-  BEGIN: Responsive Images (Fill)
-  ================================================== -->
-
-  <section id="image-responsive-fill">
-
-    <h3>
-
-      Fill Image <code>.image-fill</code>
-
-    </h3>
-
-    <p>
-
-      Images by default assume their source width, though this can be changed in markup by using the <code>width</code> and <code>height</code> attributes directly on the <code>&lt;img&gt;</code> tag. Images are made responsive by adding the class <code>.image-fill</code>, setting a <code>max-width: 100%;</code> and applying <code>height: auto;</code>, filling their parent container.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell text-align-center">
-
-        <img class="image-fill" src="holder.js/600x400?auto=yes&bg=323a4e&fg=5b6171">
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;img src="&hellip;" class="image-fill"&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Responsive Images (Fill)
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Responsive Images (Fluid)
-  ================================================== -->
-
-  <section id="image-responsive-fluid">
-
-    <h3>
-
-      Fluid Image <code>.image-fluid</code>
-
-    </h3>
-
-    <p>
-
-      The <code>.image-fill</code> class will force an <code>img</code> to fill it's parent. However, you may wish to stop filling the parent container once the image reaches it's original width. To do this use the class <code>.image-fluid</code>.  Resize your window and observe how the image below adjusts in size.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <img class="image-fluid center-auto" src="holder.js/600x400?auto=yes&bg=323a4e&fg=5b6171">
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;img src="&hellip;" class="image-fluid"&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Responsive Images (Fluid)
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Responsive Images
-================================================== -->
-
-  <!-- =================================================
-BEGIN: Responsive Images
-================================================== -->
-
-<section id="image-shape">
-
-  <h2>
-
-    Image Shapes
-
-  </h2>
-
-  <p>
-
-    Use one of the provided image shape classes to adjust the general shape of your image.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel">
-
-    <div class="panel-cell text-align-center">
-
-      <img class="image image-rounded" src="holder.js/200x200?auto=yes&bg=323a4e&fg=5b6171">
-      <img class="image image-circle" src="holder.js/200x200?auto=yes&bg=323a4e&fg=5b6171">
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;img src="&hellip;" class="image-rounded"&gt;
-&lt;img src="&hellip;" class="image-circle"&gt;
-</pre>
-
-    </div>
+    <img class="image image-rounded" src="holder.js/200x200?auto=yes&amp;bg=323a4e&amp;fg=5b6171">
+    <img class="image image-circle" src="holder.js/200x200?auto=yes&amp;bg=323a4e&amp;fg=5b6171">
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-</section>
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"…"</span> <span class="na">class=</span><span class="s">"image-rounded"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"…"</span> <span class="na">class=</span><span class="s">"image-circle"</span><span class="nt">&gt;</span>
+</code></pre></div>    </div>
 
-<!-- =================================================
-END: Responsive Images
-================================================== -->
-
+  </div>
 
 </div>
 
 
-          </div>
+    </section>
 
-          <!-- =================================================
-          END: Page Content
-          ================================================== -->
+  </div>
 
-        </div>
+</div>
 
-        <!-- =================================================
-        END: Page Content Wrapper
-        ================================================== -->
 
-      </div>
-
-      <!-- =================================================
-      END: Page
-      ================================================== -->
+      </section>
 
       
 
@@ -887,14 +574,10 @@ END: Footer
     </div>
 
     <!-- =================================================
-    END: Canvas
-    ================================================== -->
-
-    <!-- =================================================
 BEGIN: Javascripts
 ================================================== -->
 
-<script type="text/javascript" src="/cnvs/javascripts/scripts.min.js"></script>
+<script type="text/javascript" src="/cnvs/assets/javascripts/scripts.min.js"></script>
 
 <!-- =================================================
 END: Javascripts
@@ -902,9 +585,5 @@ END: Javascripts
 
 
   </body>
-
-  <!-- =================================================
-  END: Body
-  ================================================== -->
 
 </html>

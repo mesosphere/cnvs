@@ -50,11 +50,11 @@ BEGIN: Head
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
   <meta name="title" content ="Buttons &bull; CNVS">
-  <meta name="description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
+  <meta name="description" content="Canvas adds support for a range of button states and sizes.  Simply add the .button class to any &lt;a&gt; or &lt;button&gt; to get started.">
   <meta name="keywords" content="">
   <meta name="googlebot" content="all">
-  <link rel="canonical" href="http://yourdomain.com/cnvs/components/buttons/">
-  <link rel="alternate" type="application/rss+xml" title="CNVS" href="http://yourdomain.com/cnvs/feed.xml" />
+  <link rel="canonical" href="/cnvs/components/buttons/index">
+  <link rel="alternate" type="application/rss+xml" title="CNVS" href="/cnvs/feed.xml" />
 
   <!--[if lt IE 9]>
 
@@ -84,11 +84,11 @@ BEGIN: Head
 
   <!-- BEGIN: FAV ICON -->
 
-  <link rel="icon" href="/cnvs/images/components/icons/favicon.ico">
+  <link rel="icon" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <!--[if IE]>
 
-    <link rel="icon shortcut" href="/cnvs/images/components/icons/favicon.ico">
+    <link rel="icon shortcut" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <![endif]-->
 
@@ -105,8 +105,8 @@ BEGIN: Head
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Buttons &bull; CNVS">
-  <meta property="og:description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
-  <meta property="og:url" content="ashenden.github.com/canvas">
+  <meta property="og:description" content="Canvas adds support for a range of button states and sizes.  Simply add the .button class to any &lt;a&gt; or &lt;button&gt; to get started.">
+  <meta property="og:url" content="mesosphere.github.com/cnvs">
   <meta property="og:site_name" content="Buttons &bull; CNVS">
   <meta property="og:image" content="">
 
@@ -124,7 +124,8 @@ BEGIN: Head
   BEGIN: Stylesheets
   ================================================== -->
 
-  <link rel="stylesheet" href="/cnvs/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
 
   <!-- =================================================
   END: Stylesheets
@@ -134,18 +135,15 @@ BEGIN: Head
   BEGIN: Javascripts
   ================================================== -->
 
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery-2.2.0.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/modernizr-custom.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap/modal.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/google-code-prettify/prettify.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery.sticky-kit.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/jquery.waypoints.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/shortcuts/sticky.min.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
-  <link rel="stylesheet" href="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/popper.js/popper.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/tooltip.js/tooltip.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
+
 
   <!-- =================================================
   END: Javascripts
@@ -158,10 +156,6 @@ END: Head
 ================================================== -->
 
 
-  <!-- =================================================
-  BEGIN: Body
-  ================================================== -->
-
   <body>
 
     <!-- BEGIN: Livereload -->
@@ -170,35 +164,40 @@ END: Head
 
 <!-- END: Livereload -->
 
-<!-- =================================================
-BEGIN: Icon SVG Definitions
-================================================== -->
-
 <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <symbol id="icons-square" viewBox="0 0 16 16">
-    <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+    <rect x="0" y="0" width="16" height="16"></rect>
+  </symbol>
+
+  <symbol id="icons-check" viewBox="0 0 16 16">
+    <polygon points="3.11873314 7.88132268 1.8813 9.11876515 5.50000753 12.7375 14.1187 4.11874248 12.8812669 2.8813 5.50000753 10.262615"></polygon>
+  </symbol>
+
+  <symbol id="icons-circle-arrow-up" viewBox="0 0 16 16">
+    <path d="M7.79441138,15.9974098 C7.86273157,15.9991331 7.93126455,16 8,16 C8.06873545,16 8.13726843,15.9991331 8.20558862,15.9974098 L7.79441138,15.9974098 Z M6.99870848,15.9379451 C3.05302219,15.4452736 0,12.0791726 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.0800652 12.9456416,15.4467467 8.99870128,15.9382681 L8.99870128,7.23487303 L10.8799725,9.11614592 L12.1174049,7.87871278 L7.99870488,3.76000977 L3.88000488,7.87871278 L5.11743729,9.11614592 L6.99870848,7.23487303 L6.99870848,15.9379451 Z"></path>
+  </symbol>
+
+  <symbol id="icons-open-external" viewBox="0 0 16 16">
+    <path d="M12,5.41421128 L7.70711128,9.7071 L6.2929,8.29288872 L10.5857887,4 L8,4 L8,2 L14,2 L14,8 L12,8 L12,5.41421128 Z M2,2 L6,2 L6,4 L4,4 L4,12 L12,12 L12,10 L14,10 L14,14 L2,14 L2,2 Z"></path>
+  </symbol>
+
+  <symbol id="icons-users-plus" viewBox="0 0 16 16">
+    <path d="M12,11 L12,9 L11,9 L11,11 L9,11 L9,12 L11,12 L11,14 L12,14 L12,12 L14,12 L14,11 L12,11 Z M10.8703455,7.04370289 C11.0760971,7.01489482 11.2863091,7 11.5,7 C13.9852814,7 16,9.01471863 16,11.5 C16,13.9852814 13.9852814,16 11.5,16 C9.18372317,16 7.27618653,14.2499752 7.02746439,12 L5,12 L5,8.80199104 C6.15887373,7.70537116 7.9676434,7 10,7 C10.2952703,7 10.5858213,7.01488873 10.8703455,7.04370289 Z M10,7 C8.34314575,7 7,5.65685425 7,4 C7,2.34314575 8.34314575,1 10,1 C11.6568542,1 13,2.34314575 13,4 C13,5.65685425 11.6568542,7 10,7 Z" fill-opacity="0.4"></path>
+    <path d="M7.22618149,10.0873965 C6.82947988,10.030053 6.41950301,10 6,10 C3.9676434,10 2.15887373,10.7053712 1,11.801991 L1,15 L8.67133283,15 C7.65183347,14.1750222 7,12.9136331 7,11.5 C7,11.0065534 7.07942252,10.5316569 7.22618149,10.0873965 Z M8.8806793,7.84045667 C8.95835285,7.57377882 9,7.29175301 9,7 C9,5.34314575 7.65685425,4 6,4 C4.34314575,4 3,5.34314575 3,7 C3,8.65685425 4.34314575,10 6,10 C6.50291906,10 6.97693439,9.87624843 7.39325602,9.65753526 C7.72107754,8.92796723 8.23759966,8.30156001 8.8806793,7.84045667 Z"></path>
   </symbol>
 
 </svg>
 
-<!-- =================================================
-END: Icon SVG Definitions
-================================================== -->
 
 
-
-    <!-- =================================================
-    BEGIN: Canvas
-    ================================================== -->
-
-    <div class="canvas  flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
+    <div class="app flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
       <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
-<div class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
+<section class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
 
   
 
@@ -210,7 +209,7 @@ BEGIN: Header
 
   <div class="header-inner">
 
-    <div class="pod pod-narrow pod-short">
+    <div class="pod">
 
       <h1 class="header-logo">
 
@@ -237,15 +236,11 @@ END: Header
 ================================================== -->
 
 
-  <!-- =================================================
-BEGIN: Navigation
-================================================== -->
-
-<nav class="navigation fill">
+  <nav class="navigation fill">
 
   <div class="navigation-inner">
 
-    <div class="container-fluid-narrow pod pod-narrow flush-top flush-bottom">
+    <div class="container-fluid-narrow pod flush-top flush-bottom">
 
       
 
@@ -451,8 +446,13 @@ BEGIN: Navigation
 
   
 
-</ul>
+    <li class=" ">
 
+      <a href="/cnvs/components/tooltips/" class="">
+
+        Tooltips
+
+      </a>
 
       
 
@@ -460,13 +460,8 @@ BEGIN: Navigation
 
   
 
-    <li class=" ">
+</ul>
 
-      <a href="/cnvs/updates/" class="">
-
-        Updates
-
-      </a>
 
       
 
@@ -483,481 +478,1669 @@ BEGIN: Navigation
 
 </nav>
 
-<!-- =================================================
-END: Navigation
-================================================== -->
 
-
-</div>
+</section>
 
 <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
 
-      <!-- =================================================
-      BEGIN: Page
-      ================================================== -->
+      <section class="/components/buttons/index page flex-item-grow-1">
 
-      <div class="page flex-item-grow-1">
+        <div class="pod pod-tall">
 
-        
+  <div class="container">
 
+    <section class="page-header pod-tall-bottom">
 
+      
 
+        <p class="h1 page-header-headline flush-top flush-bottom">
 
+          Buttons
 
+        </p>
 
+      
 
+      
 
+      
 
-<!-- =================================================
-BEGIN: Page Header
-================================================== -->
+      
 
-<div class="page-header fill fill-light left">
+        <div class="page-navigation pod-tall-top">
 
-  
+          <h6 class="text-uppercase">
 
-  <div class="page-header-inner">
+            Table of Contents
 
-    <div class="container-fluid pod pod-short">
+          </h6>
 
-      <div class="row">
-
-        <div class="column-small-8 column-medium-8 column-large-10">
-
-          <!-- BEGIN: Page Header Title -->
-
-          <h1 class="page-header-title invisible ">
-
-            <?php
-
-            echo $page_header_title;
-
-            ?>
-
-          </h1>
-
-          <!-- END: Page Header Title -->
-
-          
-
-            <!-- BEGIN: Page Header Headline -->
-
-            <div class="row">
-
-              <div class="column-small-12 column-jumbo-10">
-
-                
-
-                  <p class="h6 page-header-subheadline flush  text-align-left ">
-
-                    
-
-                      <a href="/components/">
-
-                    
-
-                    Components
-
-                    
-
-                      </a>
-
-                    
-
-                  </p>
-
-                
-
-                <p class="h1 page-header-headline flush-top  text-align-left  flush-bottom">
-
-                  Buttons
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <!-- END: Page Header Headline -->
-
-          
-
-          
-
-          
+          <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#button-sizes">Button Sizes</a></li>
+<li class="toc-entry toc-h1"><a href="#button-states">Button States</a></li>
+<li class="toc-entry toc-h1"><a href="#button-types">Button Types</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#rounded-button">Rounded Button</a></li>
+<li class="toc-entry toc-h2"><a href="#outline-button">Outline Button</a></li>
+<li class="toc-entry toc-h2"><a href="#link-button">Link Button</a></li>
+<li class="toc-entry toc-h2"><a href="#combine-button-types">Combine Button Types</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#inverse-styling">Inverse Styling</a></li>
+<li class="toc-entry toc-h1"><a href="#wide-buttons">Wide Buttons</a></li>
+<li class="toc-entry toc-h1"><a href="#narrow-buttons">Narrow Buttons</a></li>
+<li class="toc-entry toc-h1"><a href="#flush-buttons">Flush Buttons</a></li>
+<li class="toc-entry toc-h1"><a href="#block-buttons">Block Buttons</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#responsive-block-buttons">Responsive Block Buttons</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#button-dropdowns">Button Dropdowns</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#single-button-dropdowns">Single Button Dropdowns</a></li>
+<li class="toc-entry toc-h2"><a href="#button-dropdown-sizes">Button Dropdown Sizes</a></li>
+<li class="toc-entry toc-h2"><a href="#styled-button-dropdown">Styled Button Dropdown</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#button-controls">Button Controls</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#toggle-buttons">Toggle Buttons</a></li>
+<li class="toc-entry toc-h2"><a href="#checkbox--radio-button-groups">Checkbox & Radio Button Groups</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#button-content">Button Content</a></li>
+</ul>
 
         </div>
 
-      </div>
+      
 
-    </div>
+    </section>
+
+    <section class="page-body">
+
+      <p>Canvas adds support for a range of button states and sizes.  Simply add the <code class="highlighter-rouge">.button</code> class to any <code class="highlighter-rouge">&lt;a&gt;</code> or <code class="highlighter-rouge">&lt;button&gt;</code> to get started.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <a href="#" class="button">
+
+      Simple Button
+
+    </a>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  Simple Button
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
 
   </div>
 
 </div>
 
-<!-- =================================================
-END: Page Header
-================================================== -->
+<h1 id="button-sizes">
+<a id="button-sizes" class="anchor" href="#button-sizes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Button Sizes</h1>
 
+<p>By default, buttons display at a standard size, comparable to that of an input field.  Four additional sizes are available: mini, small, large, and jumbo.  Add classes <code class="highlighter-rouge">.button-mini</code>, <code class="highlighter-rouge">.button-small</code>, <code class="highlighter-rouge">.button-large</code>, and <code class="highlighter-rouge">.button-jumbo</code> respectively to each button to adjust it’s size.</p>
 
-        <!-- =================================================
-        BEGIN: Page Content Wrapper
-        ================================================== -->
+<div class="panel flush-bottom">
 
-        <div class="page-content-wrapper flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-large">
+  <div class="panel-cell">
 
-          
+    <div class="button-collection button-collection-align-middle flush">
 
-            <!-- =================================================
-BEGIN: Page Navigation
-================================================== -->
-<!-- flex-screen-large  -->
-<div class="page-navigation flex-item-shrink-0-screen-large flex-item-order-1-screen-large" id="page-navigation">
+      <a href="#" class="button button-jumbo">
 
-  <div class="page-navigation-sticky">
-
-    <div class="container-fluid pod">
-
-      <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#buttons-sizes" class="">
-
-        Button Sizes
+        Jumbo
 
       </a>
 
-      
+      <a href="#" class="button button-large">
 
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#buttons-states" class="">
-
-        Button States
+        Large
 
       </a>
 
-      
+      <a href="#" class="button">
 
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#buttons-types" class="">
-
-        Button Types
+        Default
 
       </a>
 
-      
+      <a href="#" class="button button-small">
 
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#buttons-types-rounded" class="">
-
-        Rounded
+        Small
 
       </a>
 
-      
+      <a href="#" class="button button-mini">
 
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#buttons-types-outline" class="">
-
-        Outline
+        Mini
 
       </a>
 
-      
+    </div>
 
-    </li>
+  </div>
 
-  
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-    <li class="">
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Button: Jumbo --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-jumbo"</span><span class="nt">&gt;</span>
+  Jumbo
+<span class="nt">&lt;/a&gt;</span>
 
-      <a href="#buttons-types-link" class="">
+<span class="c">&lt;!-- Button: Large --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-large"</span><span class="nt">&gt;</span>
+  Large
+<span class="nt">&lt;/a&gt;</span>
 
-        Link
+<span class="c">&lt;!-- Button: Default --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  Default
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Small --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-small"</span><span class="nt">&gt;</span>
+  Small
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Mini --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-mini"</span><span class="nt">&gt;</span>
+  Mini
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="button-states">
+<a id="button-states" class="anchor" href="#button-states" aria-hidden="true"><span class="octicon octicon-link"></span></a>Button States</h1>
+
+<p>You may wish to display more than the single button type, either to create separation in the importance of various actions or to communicate the state of an action or form.  Button states make this super easy.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button">
+
+        Default
 
       </a>
 
-      
+      <a href="#" class="button button-primary">
 
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#buttons-types-combine" class="">
-
-        Combined
+        Primary
 
       </a>
 
-      
+      <a href="#" class="button button-success">
 
-    </li>
-
-  
-
-</ul>
-
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#buttons-inverse-styling" class="">
-
-        Button Inverse Styling
+        Success
 
       </a>
 
-      
+      <a href="#" class="button button-warning">
 
-    </li>
+        Warning
 
-  
+      </a>
 
-    <li class="">
+      <a href="#" class="button button-danger">
 
-      <a href="#buttons-wide" class="">
+        Danger
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Button: Default --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  Default
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Primary --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-primary"</span><span class="nt">&gt;</span>
+  Primary
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Success --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-success"</span><span class="nt">&gt;</span>
+  Success
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Warning --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-warning"</span><span class="nt">&gt;</span>
+  Warning
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Danger --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-danger"</span><span class="nt">&gt;</span>
+  Danger
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="button-types">
+<a id="button-types" class="anchor" href="#button-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Button Types</h1>
+
+<p>We realize that one button shape and style, even with it’s available states, may not be enough for the unique needs of your project.  This is why we’ve include a number of additional button types: rounded, outlined, link.</p>
+
+<h2 id="rounded-button">
+<a id="rounded-button" class="anchor" href="#rounded-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rounded Button</h2>
+
+<p>Add the class <code class="highlighter-rouge">.button-rounded</code> to any <code class="highlighter-rouge">.button</code> element to display it with rounded caps.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-rounded">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-rounded button-primary">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-rounded button-success">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-rounded button-warning">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-rounded button-danger">
+
+        Danger
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Button: Default --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-rounded"</span><span class="nt">&gt;</span>
+  Default
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Primary --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-rounded button-primary"</span><span class="nt">&gt;</span>
+  Primary
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="outline-button">
+<a id="outline-button" class="anchor" href="#outline-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Outline Button</h2>
+
+<p>Add the class <code class="highlighter-rouge">.button-*-outline</code> to any <code class="highlighter-rouge">.button</code> element to display it with a thin outline.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-outline">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-outline">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-outline">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-outline">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-outline">
+
+        Danger
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Button: Default --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-outline"</span><span class="nt">&gt;</span>
+  Default
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Primary --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-primary-outline"</span><span class="nt">&gt;</span>
+  Primary
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="link-button">
+<a id="link-button" class="anchor" href="#link-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Link Button</h2>
+
+<p>Add the class <code class="highlighter-rouge">.button-*-link</code> to any <code class="highlighter-rouge">.button</code> element to display it as “text-only”, while retaining the exact size attributes of it’s normal button counterpart.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-link">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-link">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-link">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-link">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-link">
+
+        Danger
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Button: Default --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-link"</span><span class="nt">&gt;</span>
+  Default
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Primary --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-primary-link"</span><span class="nt">&gt;</span>
+  Primary
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="combine-button-types">
+<a id="combine-button-types" class="anchor" href="#combine-button-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combine Button Types</h2>
+
+<p>Want an outlined button that has rounded caps?  Go ahead and combine button classes to yield interesting display combinations.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-outline button-rounded">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-outline button-rounded">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-outline button-rounded">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-outline button-rounded">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-outline button-rounded">
+
+        Danger
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Button: Default --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-outline button-rounded"</span><span class="nt">&gt;</span>
+  Default
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Button: Primary --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-primary-outline button-rounded"</span><span class="nt">&gt;</span>
+  Primary
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="inverse-styling">
+<a id="inverse-styling" class="anchor" href="#inverse-styling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inverse Styling</h1>
+
+<p>Add the class <code class="highlighter-rouge">.button-inverse</code> to any <code class="highlighter-rouge">.button</code> element to leverage inverse styling.</p>
+
+<div class="panel">
+
+  <div class="panel-cell panel-cell-dark">
+
+    <div class="button-collection">
+
+      <a href="#" class="button button-inverse">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary button-inverse">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success button-inverse">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning button-inverse">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger button-inverse">
+
+        Danger
+
+      </a>
+
+    </div>
+
+    <div class="button-collection">
+
+      <a href="#" class="button button-outline button-inverse">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-outline button-inverse">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-outline button-inverse">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-outline button-inverse">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-outline button-inverse">
+
+        Danger
+
+      </a>
+
+    </div>
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button button-link button-inverse">
+
+        Default
+
+      </a>
+
+      <a href="#" class="button button-primary-link button-inverse">
+
+        Primary
+
+      </a>
+
+      <a href="#" class="button button-success-link button-inverse">
+
+        Success
+
+      </a>
+
+      <a href="#" class="button button-warning-link button-inverse">
+
+        Warning
+
+      </a>
+
+      <a href="#" class="button button-danger-link button-inverse">
+
+        Danger
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-inverse"</span><span class="nt">&gt;</span>
+  Default
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="wide-buttons">
+<a id="wide-buttons" class="anchor" href="#wide-buttons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wide Buttons</h1>
+
+<p>Use the class <code class="highlighter-rouge">.button-wide</code> to increase the horizontal padding within a button.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection button-collection-align-middle flush-bottom">
+
+      <a href="#" class="button button-wide">
 
         Wide Button
 
       </a>
 
-      
+      <a href="#" class="button button-primary button-wide">
 
-    </li>
+        Wide Button
 
-  
+      </a>
 
-    <li class="">
+    </div>
 
-      <a href="#buttons-narrow" class="">
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-wide"</span><span class="nt">&gt;</span>
+  Wide Button
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="narrow-buttons">
+<a id="narrow-buttons" class="anchor" href="#narrow-buttons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Narrow Buttons</h1>
+
+<p>Use the class <code class="highlighter-rouge">.button-narrow</code> to decrease the horizontal padding within a button.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection button-collection-align-middle flush-bottom">
+
+      <a href="#" class="button button-narrow">
 
         Narrow Button
 
       </a>
 
-      
+      <a href="#" class="button button-primary button-narrow">
 
-    </li>
+        Narrow Button
 
-  
+      </a>
 
-    <li class="">
+    </div>
 
-      <a href="#buttons-flush" class="">
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-narrow"</span><span class="nt">&gt;</span>
+  Narrow Button
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="flush-buttons">
+<a id="flush-buttons" class="anchor" href="#flush-buttons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flush Buttons</h1>
+
+<p>Use the class <code class="highlighter-rouge">.button-flush</code> to remove the padding within a button. This is useful when you want to assume button like behavior, particulary for <code class="highlighter-rouge">.button-link</code> styling, but do not want the added space created by the padding.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">.button-flush</code></td>
+      <td>Remove the padding entirely.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.button-flush-horizontal</code></td>
+      <td>Remove the horizontal padding.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.button-flush-vertical</code></td>
+      <td>Remove the vertical padding.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.button-flush-top</code></td>
+      <td>Remove the top padding inside of a button.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.button-flush-right</code></td>
+      <td>Remove the right padding inside of a button.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.button-flush-bottom</code></td>
+      <td>Remove the bottom padding inside of a button.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.button-flush-left</code></td>
+      <td>Remove the left padding inside of a button.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection button-collection-align-middle flush-bottom">
+
+      <a href="#" class="button button-flush">
 
         Flush Button
 
       </a>
 
-      
+      <a href="#" class="button button-primary button-flush">
 
-    </li>
+        Flush Button
 
-  
+      </a>
 
-    <li class="">
+    </div>
 
-      <a href="#buttons-block" class="">
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-flush"</span><span class="nt">&gt;</span>
+  Flush Button
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="block-buttons">
+<a id="block-buttons" class="anchor" href="#block-buttons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Block Buttons</h1>
+
+<p>Use the class <code class="highlighter-rouge">.button-block</code> when you need a button to fill the entire width of it’s parent container.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection button-collection-align-middle flush-bottom">
+
+      <a href="#" class="button button-block">
 
         Block Button
 
       </a>
 
-      
+      <a href="#" class="button button-primary button-block">
 
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#buttons-block-responsive" class="">
-
-        Responsive Block Buttons
+        Block Button
 
       </a>
 
-      
+    </div>
 
-    </li>
+  </div>
 
-  
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-</ul>
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-block"</span><span class="nt">&gt;</span>
+  Block Button
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
 
+  </div>
 
-      
+</div>
 
-    </li>
+<h2 id="responsive-block-buttons">
+<a id="responsive-block-buttons" class="anchor" href="#responsive-block-buttons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responsive Block Buttons</h2>
 
-  
+<p>Optional classes are available when you need a button to fill it’s parent container only below a specific screen size.  Add <code class="highlighter-rouge">.button-block-below-screen-*</code>, replacing <code class="highlighter-rouge">*</code> with <code class="highlighter-rouge">-mini</code>, <code class="highlighter-rouge">-small</code>, <code class="highlighter-rouge">-medium</code>, or <code class="highlighter-rouge">-large</code>.  Try it out.  Resize this browser window and observe when the buttons below switch to their Block view.</p>
 
-    <li class="">
+<div class="panel flush-bottom">
 
-      <a href="#buttons-dropdowns" class="">
+  <div class="panel-cell">
 
-        Button Dropdowns
+    <div class="button-collection button-collection-align-middle flush-bottom">
 
-      </a>
+      <a href="#" class="button button-block button-block-below-screen-small">
 
-      
-
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#buttons-dropdowns-single-button" class="">
-
-        Single Button Dropdowns
+        Block Button (Mini)
 
       </a>
 
-      
+      <a href="#" class="button button-block button-block-below-screen-medium">
 
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#buttons-dropdowns-sizing" class="">
-
-        Button Dropdown Sizes
+        Block Button (Small)
 
       </a>
 
-      
+      <a href="#" class="button button-block button-block-below-screen-large">
 
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#buttons-dropdowns-styled" class="">
-
-        Styled Button Dropdowns
+        Block Button (Medium)
 
       </a>
 
-      
+      <a href="#" class="button button-block button-block-below-screen-jumbo">
 
-    </li>
-
-  
-
-</ul>
-
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#buttons-controls" class="">
-
-        Button Controls
+        Block Button (Large)
 
       </a>
 
-      
+    </div>
 
-        <ul class="page-navigation-menu list-unstyled">
+  </div>
 
-  
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-    <li class="">
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Block Button: When Smaller than Screen Mini--&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-block button-block-below-screen-small"</span><span class="nt">&gt;</span>
+  Block Button (Mini)
+<span class="nt">&lt;/a&gt;</span>
 
-      <a href="#buttons-controls-toggle" class="">
+<span class="c">&lt;!-- Block Button: When Smaller than Screen Small--&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-block button-block-below-screen-medium"</span><span class="nt">&gt;</span>
+  Block Button (Small)
+<span class="nt">&lt;/a&gt;</span>
 
-        Toggle Buttons
+<span class="c">&lt;!-- Block Button: When Smaller than Screen Medium--&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-block button-block-below-screen-large"</span><span class="nt">&gt;</span>
+  Block Button (Medium)
+<span class="nt">&lt;/a&gt;</span>
 
-      </a>
+<span class="c">&lt;!-- Block Button: When Smaller than Screen Large--&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button button-block button-block-below-screen-jumbo"</span><span class="nt">&gt;</span>
+  Block Button (Large)
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
 
-      
+  </div>
 
-    </li>
+</div>
 
-  
+<h1 id="button-dropdowns">
+<a id="button-dropdowns" class="anchor" href="#button-dropdowns" aria-hidden="true"><span class="octicon octicon-link"></span></a>Button Dropdowns</h1>
 
-    <li class="">
+<p>Use any button to trigger a dropdown menu by placing it within a <code class="highlighter-rouge">.btn-group</code> and providing the proper menu markup.</p>
 
-      <a href="#buttons-controls-button-groups" class="">
+<h2 id="single-button-dropdowns">
+<a id="single-button-dropdowns" class="anchor" href="#single-button-dropdowns" aria-hidden="true"><span class="octicon octicon-link"></span></a>Single Button Dropdowns</h2>
 
-        Checkbox &amp; Radio Button Groups
+<p>Turn a button into a dropdown toggle with some basic markup changes.</p>
 
-      </a>
+<div class="panel panel-overflow">
 
-      
+  <div class="panel-cell">
 
-    </li>
+    <div class="button-group">
 
-  
+      <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 
-</ul>
+        Toggle Button
 
+      </button>
 
-      
+      <span class="dropdown-menu" role="menu">
 
-    </li>
+        <ul class="dropdown-menu-list">
 
-  
+          <li>
 
-    <li class="">
+            <a href="#">
 
-      <a href="#buttons-content" class="">
+              Action
 
-        Button Content
+            </a>
 
-      </a>
+          </li>
 
-      
+          <li>
 
-    </li>
+            <a href="#">
 
-  
+              Another action
 
-</ul>
+            </a>
 
+          </li>
+
+          <li>
+
+            <a href="#">
+
+              Something else here
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Toggle Button
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu-list"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          Action
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          Another action
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          Something else here
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="button-dropdown-sizes">
+<a id="button-dropdown-sizes" class="anchor" href="#button-dropdown-sizes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Button Dropdown Sizes</h2>
+
+<p>Button dropdowns work with buttons of all sizes.</p>
+
+<div class="panel panel-overflow">
+
+  <div class="panel-cell">
+
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
+
+      <div class="button-group">
+
+        <button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Jumbo
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Large
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Medium
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Small
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Mini
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-collection"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button button-jumbo dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      Jumbo
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+      …
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button button-large dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      Large
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+      …
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      Medium
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+      …
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button button-small dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      Small
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+      …
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button button-mini dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      Mini
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+      …
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="styled-button-dropdown">
+<a id="styled-button-dropdown" class="anchor" href="#styled-button-dropdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Styled Button Dropdown</h2>
+
+<p>Button dropdowns work with all supported button styles. Add .button-stroke or any other included button style class to your button dropdown element. You can even combine styles.</p>
+
+<div class="panel panel-overflow">
+
+  <div class="panel-cell">
+
+    <div class="button-collection button-collection-align-vertical-center flush-bottom">
+
+      <div class="button-group">
+
+        <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-stroke button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-success button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" class="button button-danger button-rounded button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+
+          Button
+
+        </button>
+
+        <span class="dropdown-menu" role="menu">
+
+          <ul class="dropdown-menu-list">
+
+            <li>
+
+              <a href="#">
+
+                Action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Another action
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#">
+
+                Something else here
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </span>
+
+      </div>
 
     </div>
 
@@ -965,2544 +2148,215 @@ BEGIN: Page Navigation
 
 </div>
 
-<!-- =================================================
-END: Page Navigation
-================================================== -->
+<h1 id="button-controls">
+<a id="button-controls" class="anchor" href="#button-controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Button Controls</h1>
 
+<p>Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with our buttons plugin.</p>
 
-          
+<h2 id="toggle-buttons">
+<a id="toggle-buttons" class="anchor" href="#toggle-buttons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Toggle Buttons</h2>
 
-          <!-- =================================================
-          BEGIN: Page Content
-          ================================================== -->
+<p>Add <code class="highlighter-rouge">data-toggle="button"</code> to activate toggling on a single button.</p>
 
-          <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
+<div class="panel flush-bottom">
 
-            <!-- =================================================
-BEGIN: Buttons
-================================================== -->
+  <div class="panel-cell">
 
-<section class="fill" id="buttons">
+    <button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
 
-  <div class="fill">
+      Toggle Button
 
-    <div class="container-fluid pod">
-
-      <p>
-
-        Canvas adds support for a range of button states and sizes.  Simply add the <code>.button</code> class to any <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> to get started.
-
-      </p>
-
-      <!-- =================================================
-      BEGIN: Example
-      ================================================== -->
-
-      <div class="panel flush-bottom">
-
-        <div class="panel-cell">
-
-          <a href="#" class="button">
-
-            Simple Button
-
-          </a>
-
-        </div>
-
-        <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button"&gt;
-  Simple Button
-&lt;/a&gt;
-</pre>
-
-        </div>
-
-      </div>
-
-      <!-- =================================================
-      END: Example
-      ================================================== -->
-
-      <!-- =================================================
-BEGIN: Button Sizes
-================================================== -->
-
-<section id="buttons-sizes">
-
-  <h2>
-
-    Button Sizes
-
-  </h2>
-
-  <p>
-
-    By default, buttons display at a standard size, comparable to that of an input field.  Four additional sizes are available: mini, small, large, and jumbo.  Add classes <code>.button-mini</code>, <code>.button-small</code>, <code>.button-large</code>, and <code>.button-jumbo</code> respectively to each button to adjust it's size.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush">
-
-        <a href="#" class="button button-jumbo">
-
-          Jumbo
-
-        </a>
-
-        <a href="#" class="button button-large">
-
-          Large
-
-        </a>
-
-        <a href="#" class="button">
-
-          Default
-
-        </a>
-
-        <a href="#" class="button button-small">
-
-          Small
-
-        </a>
-
-        <a href="#" class="button button-mini">
-
-          Mini
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Jumbo --&gt;
-&lt;a href="#" class="button button-jumbo"&gt;
-  Jumbo
-&lt;/a&gt;
-
-&lt;!-- Button: Large --&gt;
-&lt;a href="#" class="button button-large"&gt;
-  Large
-&lt;/a&gt;
-
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Small --&gt;
-&lt;a href="#" class="button button-small"&gt;
-  Small
-&lt;/a&gt;
-
-&lt;!-- Button: Mini --&gt;
-&lt;a href="#" class="button button-mini"&gt;
-  Mini
-&lt;/a&gt;
-</pre>
-
-    </div>
+    </button>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-</section>
-
-<!-- =================================================
-END: Button Sizes
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Button States
-================================================== -->
-
-<section id="buttons-states">
-
-  <h2>
-
-    Button States
-
-  </h2>
-
-  <p>
-
-    You may wish to display more than the single button type, either to create separation in the importance of various actions or to communicate the state of an action or form.  Button states make this super easy.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection flush-bottom">
-
-        <a href="#" class="button">
-
-          Default
-
-        </a>
-
-        <a href="#" class="button button-primary">
-
-          Primary
-
-        </a>
-
-        <a href="#" class="button button-success">
-
-          Success
-
-        </a>
-
-        <a href="#" class="button button-warning">
-
-          Warning
-
-        </a>
-
-        <a href="#" class="button button-danger">
-
-          Danger
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-primary"&gt;
-  Primary
-&lt;/a&gt;
-
-&lt;!-- Button: Success --&gt;
-&lt;a href="#" class="button button-success"&gt;
-  Success
-&lt;/a&gt;
-
-&lt;!-- Button: Warning --&gt;
-&lt;a href="#" class="button button-warning"&gt;
-  Warning
-&lt;/a&gt;
-
-&lt;!-- Button: Danger --&gt;
-&lt;a href="#" class="button button-danger"&gt;
-  Danger
-&lt;/a&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Button States
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Button Types
-================================================== -->
-
-<section id="buttons-types">
-
-  <h2>
-
-    Button Types
-
-  </h2>
-
-  <p>
-
-    We realize that one button shape and style, even with it's available states, may not be enough for the unique needs of your project.  This is why we've include a number of additional button types: rounded, outlined, link.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Button Type: Rounded
-  ================================================== -->
-
-  <section id="buttons-types-rounded">
-
-    <h3>
-
-      Rounded Button
-
-    </h3>
-
-    <p>
-
-      Add the class <code>.button-rounded</code> to any <code>.button</code> element to display it with rounded caps.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-collection flush-bottom">
-
-          <a href="#" class="button button-rounded">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-rounded button-primary">
-
-            Primary
-
-          </a>
-
-          <a href="#" class="button button-rounded button-success">
-
-            Success
-
-          </a>
-
-          <a href="#" class="button button-rounded button-warning">
-
-            Warning
-
-          </a>
-
-          <a href="#" class="button button-rounded button-danger">
-
-            Danger
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button button-rounded"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-rounded button-primary"&gt;
-  Primary
-&lt;/a&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Button Type: Rounded
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Button Type: Outline
-  ================================================== -->
-
-  <section id="buttons-types-outline">
-
-    <h3>
-
-      Outline Button
-
-    </h3>
-
-    <p>
-
-      Add the class <code>.button-*-outline</code> to any <code>.button</code> element to display it with a thin outline.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-collection flush-bottom">
-
-          <a href="#" class="button button-outline">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-primary-outline">
-
-            Primary
-
-          </a>
-
-          <a href="#" class="button button-success-outline">
-
-            Success
-
-          </a>
-
-          <a href="#" class="button button-warning-outline">
-
-            Warning
-
-          </a>
-
-          <a href="#" class="button button-danger-outline">
-
-            Danger
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button button-outline"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-primary-outline"&gt;
-  Primary
-&lt;/a&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Button Type: Outline
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Button Type: Link
-  ================================================== -->
-
-  <section id="buttons-types-link">
-
-    <h3>
-
-      Link Button
-
-    </h3>
-
-    <p>
-
-      Add the class <code>.button-*-link</code> to any <code>.button</code> element to display it as "text-only", while retaining the exact size attributes of it's normal button counterpart.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-collection flush-bottom">
-
-          <a href="#" class="button button-link">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-primary-link">
-
-            Primary
-
-          </a>
-
-          <a href="#" class="button button-success-link">
-
-            Success
-
-          </a>
-
-          <a href="#" class="button button-warning-link">
-
-            Warning
-
-          </a>
-
-          <a href="#" class="button button-danger-link">
-
-            Danger
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button button-link"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-primary-link"&gt;
-  Primary
-&lt;/a&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Button Type: Link
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Button Type: Combined
-  ================================================== -->
-
-  <section id="buttons-types-combine">
-
-    <h3>
-
-      Combine Button Types
-
-    </h3>
-
-    <p>
-
-      Want an outlined button that has rounded caps?  Go ahead and combine button classes to yield interesting display combinations.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-collection flush-bottom">
-
-          <a href="#" class="button button-outline button-rounded">
-
-            Default
-
-          </a>
-
-          <a href="#" class="button button-primary-outline button-rounded">
-
-            Primary
-
-          </a>
-
-          <a href="#" class="button button-success-outline button-rounded">
-
-            Success
-
-          </a>
-
-          <a href="#" class="button button-warning-outline button-rounded">
-
-            Warning
-
-          </a>
-
-          <a href="#" class="button button-danger-outline button-rounded">
-
-            Danger
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button button-outline button-rounded"&gt;
-  Default
-&lt;/a&gt;
-
-&lt;!-- Button: Primary --&gt;
-&lt;a href="#" class="button button-primary-outline button-rounded"&gt;
-  Primary
-&lt;/a&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Button Type: Combined
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Button Types
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Button States
-================================================== -->
-
-<section id="buttons-inverse-styling">
-
-  <h2>
-
-    Inverse Styling
-
-  </h2>
-
-  <p>
-
-    Add the class <code>.button-inverse</code> to any <code>.button</code> element to leverage inverse styling.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel panel-inverse">
-
-    <div class="panel-cell panel-cell-inverse">
-
-      <div class="button-collection">
-
-        <a href="#" class="button button-inverse">
-
-          Default
-
-        </a>
-
-        <a href="#" class="button button-primary button-inverse">
-
-          Primary
-
-        </a>
-
-        <a href="#" class="button button-success button-inverse">
-
-          Success
-
-        </a>
-
-        <a href="#" class="button button-warning button-inverse">
-
-          Warning
-
-        </a>
-
-        <a href="#" class="button button-danger button-inverse">
-
-          Danger
-
-        </a>
-
-      </div>
-
-      <div class="button-collection">
-
-        <a href="#" class="button button-outline button-inverse">
-
-          Default
-
-        </a>
-
-        <a href="#" class="button button-primary-outline button-inverse">
-
-          Primary
-
-        </a>
-
-        <a href="#" class="button button-success-outline button-inverse">
-
-          Success
-
-        </a>
-
-        <a href="#" class="button button-warning-outline button-inverse">
-
-          Warning
-
-        </a>
-
-        <a href="#" class="button button-danger-outline button-inverse">
-
-          Danger
-
-        </a>
-
-      </div>
-
-      <div class="button-collection flush-bottom">
-
-        <a href="#" class="button button-link button-inverse">
-
-          Default
-
-        </a>
-
-        <a href="#" class="button button-primary-link button-inverse">
-
-          Primary
-
-        </a>
-
-        <a href="#" class="button button-success-link button-inverse">
-
-          Success
-
-        </a>
-
-        <a href="#" class="button button-warning-link button-inverse">
-
-          Warning
-
-        </a>
-
-        <a href="#" class="button button-danger-link button-inverse">
-
-          Danger
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;a href="#" class="button button-inverse"&gt;
-  Default
-&lt;/a&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Button States
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Wide Buttons
-================================================== -->
-
-<section id="buttons-wide">
-
-  <h2>
-
-    Wide Buttons
-
-  </h2>
-
-  <p>
-
-    Use the class <code>.button-wide</code> to increase the horizontal padding within a button.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush-bottom">
-
-        <a href="#" class="button button-wide">
-
-          Wide Button
-
-        </a>
-
-        <a href="#" class="button button-primary button-wide">
-
-          Wide Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button button-wide"&gt;
-  Wide Button
-&lt;/a&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Wide Buttons
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Narrow Buttons
-================================================== -->
-
-<section id="buttons-narrow">
-
-  <h2>
-
-    Narrow Buttons
-
-  </h2>
-
-  <p>
-
-    Use the class <code>.button-narrow</code> to decrease the horizontal padding within a button.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush-bottom">
-
-        <a href="#" class="button button-narrow">
-
-          Narrow Button
-
-        </a>
-
-        <a href="#" class="button button-primary button-narrow">
-
-          Narrow Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button button-narrow"&gt;
-  Narrow Button
-&lt;/a&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Narrow Buttons
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Narrow Buttons
-================================================== -->
-
-<section id="buttons-flush">
-
-  <h2>
-
-    Flush Buttons
-
-  </h2>
-
-  <p>
-
-    Use the class <code>.button-flush</code> to remove the padding within a button. This is useful when you want to assume button like behavior, particulary for <code>.button-link</code> styling, but do not want the added space created by the padding.
-
-  </p>
-
-  <table class="table short">
-
-    <thead>
-
-      <tr>
-
-        <th>
-
-          Class
-
-        </th>
-
-        <th>
-
-          Description
-
-        </th>
-
-      </tr>
-
-    </thead>
-
-    <tbody>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the padding entirely.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-horizontal
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the horizontal padding.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-vertical
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the vertical padding.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-top
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the top padding inside of a button.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-right
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the right padding inside of a button.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-bottom
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the bottom padding inside of a button.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .button-flush-left
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Remove the left padding inside of a button.
-
-        </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush-bottom">
-
-        <a href="#" class="button button-flush">
-
-          Flush Button
-
-        </a>
-
-        <a href="#" class="button button-primary button-flush">
-
-          Flush Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button button-flush"&gt;
-  Flush Button
-&lt;/a&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Narrow Buttons
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Block Buttons
-================================================== -->
-
-<section id="buttons-block">
-
-  <h2>
-
-    Block Buttons
-
-  </h2>
-
-  <p>
-
-    Use the class <code>.button-block</code> when you need a button to fill the entire width of it's parent container.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection button-collection-align-middle flush-bottom">
-
-        <a href="#" class="button button-block">
-
-          Block Button
-
-        </a>
-
-        <a href="#" class="button button-primary button-block">
-
-          Block Button
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button button-block"&gt;
-  Block Button
-&lt;/a&gt;
-</pre>
-
-    </div>
-
-  </div>
-
-  <!-- =================================================
-  END: Example
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Responsive Block Buttons
-  ================================================== -->
-
-  <section id="buttons-block-responsive">
-
-    <h3>
-
-      Responsive Block Buttons
-
-    </h3>
-
-    <p>
-
-      Optional classes are available when you need a button to fill it's parent container only below a specific screen size.  Add <code>.button-block-below-screen-*</code>, replacing <code>*</code> with <code>-mini</code>, <code>-small</code>, <code>-medium</code>, or <code>-large</code>.  Try it out.  Resize this browser window and observe when the buttons below switch to their Block view.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-collection button-collection-align-middle flush-bottom">
-
-          <a href="#" class="button button-block button-block-below-screen-small">
-
-            Block Button (Mini)
-
-          </a>
-
-          <a href="#" class="button button-block button-block-below-screen-medium">
-
-            Block Button (Small)
-
-          </a>
-
-          <a href="#" class="button button-block button-block-below-screen-large">
-
-            Block Button (Medium)
-
-          </a>
-
-          <a href="#" class="button button-block button-block-below-screen-jumbo">
-
-            Block Button (Large)
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Block Button: When Smaller than Screen Mini--&gt;
-&lt;a href="#" class="button button-block button-block-below-screen-small"&gt;
-  Block Button (Mini)
-&lt;/a&gt;
-
-&lt;!-- Block Button: When Smaller than Screen Small--&gt;
-&lt;a href="#" class="button button-block button-block-below-screen-medium"&gt;
-  Block Button (Small)
-&lt;/a&gt;
-
-&lt;!-- Block Button: When Smaller than Screen Medium--&gt;
-&lt;a href="#" class="button button-block button-block-below-screen-large"&gt;
-  Block Button (Medium)
-&lt;/a&gt;
-
-&lt;!-- Block Button: When Smaller than Screen Large--&gt;
-&lt;a href="#" class="button button-block button-block-below-screen-jumbo"&gt;
-  Block Button (Large)
-&lt;/a&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Block Buttons
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Block Buttons
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Button Dropdowns
-================================================== -->
-
-<section id="buttons-dropdowns">
-
-  <h2>
-
-    Button Dropdowns
-
-  </h2>
-
-  <p>
-
-    Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Single Button Dropdown
-  ================================================== -->
-
-  <section id="buttons-dropdowns-single-button">
-
-    <h3>
-
-      Single Button Dropdowns
-
-    </h3>
-
-    <p>
-
-      Turn a button into a dropdown toggle with some basic markup changes.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel panel-overflow">
-
-      <div class="panel-cell">
-
-        <div class="button-group">
-
-          <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-            Toggle Button
-
-          </button>
-
-          <span class="dropdown-menu" role="menu">
-
-            <ul class="dropdown-menu-list">
-
-              <li>
-
-                <a href="#">
-
-                  Action
-
-                </a>
-
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Another action
-
-                </a>
-
-              </li>
-
-              <li>
-
-                <a href="#">
-
-                  Something else here
-
-                </a>
-
-              </li>
-
-            </ul>
-
-          </span>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group"&gt;
-  &lt;button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
-    Toggle Button
-  &lt;/button&gt;
-  &lt;span class="dropdown-menu" role="menu"&gt;
-    &lt;ul class="dropdown-menu-list"&gt;
-      &lt;li&gt;
-        &lt;a href="#"&gt;
-          Action
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="#"&gt;
-          Another action
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="#"&gt;
-          Something else here
-        &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Single Button Dropdowns
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Sizing
-  ================================================== -->
-
-  <section id="buttons-dropdowns-sizing">
-
-    <h3>
-
-      Button Dropdown Sizes
-
-    </h3>
-
-    <p>
-
-      Button dropdowns work with buttons of all sizes.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel panel-overflow">
-
-      <div class="panel-cell">
-
-        <div class="button-collection button-collection-align-vertical-center flush-bottom">
-
-          <div class="button-group">
-
-            <button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Jumbo
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Large
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Medium
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Small
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Mini
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-collection"&gt;
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button button-jumbo dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
-      Jumbo
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
-      &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button button-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
-      Large
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
-      &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
-      Medium
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
-      &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button button-small dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
-      Small
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
-      &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class="button-group"&gt;
-    &lt;button type="button" class="button button-mini dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
-      Mini
-    &lt;/button&gt;
-    &lt;span class="dropdown-menu" role="menu"&gt;
-      &hellip;
-    &lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Sizing
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Styled button dropdowns
-  ================================================== -->
-
-  <section id="buttons-dropdowns-styled">
-
-    <h3>
-
-      Styled Button Dropdown
-
-    </h3>
-
-    <p>
-
-      Button dropdowns work with all supported button styles. Add .button-stroke or any other included button style class to your button dropdown element. You can even combine styles.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel panel-overflow">
-
-      <div class="panel-cell">
-
-        <div class="button-collection button-collection-align-vertical-center flush-bottom">
-
-          <div class="button-group">
-
-            <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-stroke button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-success button-rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-          <div class="button-group">
-
-            <button type="button" class="button button-danger button-rounded button-stroke dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-
-              Button
-
-            </button>
-
-            <span class="dropdown-menu" role="menu">
-
-              <ul class="dropdown-menu-list">
-
-                <li>
-
-                  <a href="#">
-
-                    Action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Another action
-
-                  </a>
-
-                </li>
-
-                <li>
-
-                  <a href="#">
-
-                    Something else here
-
-                  </a>
-
-                </li>
-
-              </ul>
-
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Styled button dropdowns
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Button Dropdowns
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Button Controls
-================================================== -->
-
-<section id="buttons-controls">
-
-  <h2>
-
-    Button Controls
-
-  </h2>
-
-  <p>
-
-    Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with our buttons plugin.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Toggle Buttons
-  ================================================== -->
-
-  <section id="buttons-controls-toggle">
-
-    <h3>
-
-      Toggle Buttons
-
-    </h3>
-
-    <p>
-
-      Add <code>data-toggle="button"</code> to activate toggling on a single button.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-
-          Toggle Button
-
-        </button>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;button type="button" class="button button-primary" data-toggle="button" aria-pressed="false" autocomplete="off"&gt;
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button button-primary"</span> <span class="na">data-toggle=</span><span class="s">"button"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
   Toggle Button
-&lt;/button&gt;
-</pre>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>    </div>
 
-      </div>
+  </div>
 
-    </div>
+</div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+<h2 id="checkbox--radio-button-groups">
+<a id="checkbox--radio-button-groups" class="anchor" href="#checkbox--radio-button-groups" aria-hidden="true"><span class="octicon octicon-link"></span></a>Checkbox &amp; Radio Button Groups</h2>
 
-  </section>
+<p>Add <code class="highlighter-rouge">data-toggle="buttons"</code> to a <code class="highlighter-rouge">.btn-group</code> containing checkbox or radio inputs to enable toggling in their respective styles.</p>
 
-  <!-- =================================================
-  END: Toggle Buttons
-  ================================================== -->
+<h3 id="checkbox-button-groups">Checkbox Button Groups</h3>
 
-  <!-- =================================================
-  BEGIN: Checkbox & Radio Button Groups
-  ================================================== -->
+<div class="panel flush-bottom">
 
-  <section id="buttons-controls-button-groups">
+  <div class="panel-cell">
 
-    <h3>
+    <div class="button-group" data-toggle="buttons">
 
-      Checkbox &amp; Radio Button Groups
+      <label class="button button-primary active">
 
-    </h3>
+        <input type="checkbox" autocomplete="off" checked> Checkbox 1
 
-    <p>
+      </label>
 
-      Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing checkbox or radio inputs to enable toggling in their respective styles.
+      <label class="button button-primary">
 
-    </p>
+        <input type="checkbox" autocomplete="off"> Checkbox 2
 
-    <h4>
+      </label>
 
-      Checkbox Button Groups
+      <label class="button button-primary">
 
-    </h4>
+        <input type="checkbox" autocomplete="off"> Checkbox 3
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-group" data-toggle="buttons">
-
-          <label class="button button-primary active">
-
-            <input type="checkbox" autocomplete="off" checked> Checkbox 1
-
-          </label>
-
-          <label class="button button-primary">
-
-            <input type="checkbox" autocomplete="off"> Checkbox 2
-
-          </label>
-
-          <label class="button button-primary">
-
-            <input type="checkbox" autocomplete="off"> Checkbox 3
-
-          </label>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group" data-toggle="buttons"&gt;
-  &lt;label class="button button-primary active"&gt;
-    &lt;input type="checkbox" autocomplete="off" checked&gt; Checkbox 1
-  &lt;/label&gt;
-  &lt;label class="button button-primary"&gt;
-    &lt;input type="checkbox" autocomplete="off"&gt; Checkbox 2
-  &lt;/label&gt;
-  &lt;label class="button button-primary"&gt;
-    &lt;input type="checkbox" autocomplete="off"&gt; Checkbox 3
-  &lt;/label&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-    <h4>
-
-      Radio Button Groups
-
-    </h4>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="button-group" data-toggle="buttons">
-
-          <label class="button button-primary active">
-
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
-
-          </label>
-
-          <label class="button button-primary">
-
-            <input type="radio" name="options" id="option1" autocomplete="off"> Radio 2
-
-          </label>
-
-          <label class="button button-primary">
-
-            <input type="radio" name="options" id="option1" autocomplete="off"> Radio 3
-
-          </label>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="button-group" data-toggle="buttons"&gt;
-  &lt;label class="button button-primary active"&gt;
-    &lt;input type="radio" name="options" id="option1" autocomplete="off" checked&gt; Radio 1
-  &lt;/label&gt;
-  &lt;label class="button button-primary"&gt;
-    &lt;input type="radio" name="options" id="option1" autocomplete="off"&gt; Radio 2
-  &lt;/label&gt;
-  &lt;label class="button button-primary"&gt;
-    &lt;input type="radio" name="options" id="option1" autocomplete="off"&gt; Radio 3
-  &lt;/label&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Checkbox & Radio Button Groups
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Button Controls
-================================================== -->
-
-      <!-- =================================================
-BEGIN: Button Content
-================================================== -->
-
-<section id="buttons-content">
-
-  <h2>
-
-    Button Content
-
-  </h2>
-
-  <p>
-
-    By default, buttons are defined so that all content will display vertically centered inside the button.  However, it may be necessary to place more than just text inside of a button.  For example, you may want a small icon next to the button label.  Space will be applied between child elements of a button automatically.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="button-collection flush-bottom">
-
-        <a href="#" class="button">
-
-          <i class="icon icon-mini">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-          <span>
-
-            Button
-
-          </span>
-
-        </a>
-
-        <a href="#" class="button">
-
-          <span>
-
-            Button
-
-          </span>
-
-          <i class="icon icon-mini">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Default --&gt;
-&lt;a href="#" class="button"&gt;
-  &lt;i class="icon icon-mini"&gt;&lt;/i&gt;
-  &lt;span&gt;Button&lt;/span&gt;
-&lt;/a&gt;
-</pre>
+      </label>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-</section>
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-group"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"button button-primary active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span><span class="nt">&gt;</span> Checkbox 1
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"button button-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span> Checkbox 2
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"button button-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span> Checkbox 3
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
 
-<!-- =================================================
-END: Button Content
-================================================== -->
+  </div>
 
+</div>
+
+<h3 id="radio-button-groups">Radio Button Groups</h3>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-group" data-toggle="buttons">
+
+      <label class="button button-primary active">
+
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
+
+      </label>
+
+      <label class="button button-primary">
+
+        <input type="radio" name="options" id="option1" autocomplete="off"> Radio 2
+
+      </label>
+
+      <label class="button button-primary">
+
+        <input type="radio" name="options" id="option1" autocomplete="off"> Radio 3
+
+      </label>
 
     </div>
 
   </div>
 
-</section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-<!-- =================================================
-END: Buttons
-================================================== -->
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button-group"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"button button-primary active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options"</span> <span class="na">id=</span><span class="s">"option1"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span><span class="nt">&gt;</span> Radio 1
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"button button-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options"</span> <span class="na">id=</span><span class="s">"option1"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span> Radio 2
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"button button-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options"</span> <span class="na">id=</span><span class="s">"option1"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span> Radio 3
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="button-content">
+<a id="button-content" class="anchor" href="#button-content" aria-hidden="true"><span class="octicon octicon-link"></span></a>Button Content</h1>
+
+<p>By default, buttons are defined so that all content will display vertically centered inside the button.  However, it may be necessary to place more than just text inside of a button.  For example, you may want a small icon next to the button label.  Space will be applied between child elements of a button automatically.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="button-collection flush-bottom">
+
+      <a href="#" class="button">
+
+        <i class="icon icon-mini">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
+
+        <span>
+
+          Button
+
+        </span>
+
+      </a>
+
+      <a href="#" class="button">
+
+        <span>
+
+          Button
+
+        </span>
+
+        <i class="icon icon-mini">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Button: Default --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-mini"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Button<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
 
 
-          </div>
+    </section>
 
-          <!-- =================================================
-          END: Page Content
-          ================================================== -->
+  </div>
 
-        </div>
+</div>
 
-        <!-- =================================================
-        END: Page Content Wrapper
-        ================================================== -->
 
-      </div>
-
-      <!-- =================================================
-      END: Page
-      ================================================== -->
+      </section>
 
       
 
@@ -3530,14 +2384,10 @@ END: Footer
     </div>
 
     <!-- =================================================
-    END: Canvas
-    ================================================== -->
-
-    <!-- =================================================
 BEGIN: Javascripts
 ================================================== -->
 
-<script type="text/javascript" src="/cnvs/javascripts/scripts.min.js"></script>
+<script type="text/javascript" src="/cnvs/assets/javascripts/scripts.min.js"></script>
 
 <!-- =================================================
 END: Javascripts
@@ -3545,9 +2395,5 @@ END: Javascripts
 
 
   </body>
-
-  <!-- =================================================
-  END: Body
-  ================================================== -->
 
 </html>

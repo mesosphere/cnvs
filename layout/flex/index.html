@@ -50,11 +50,11 @@ BEGIN: Head
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
   <meta name="title" content ="Flex &bull; CNVS">
-  <meta name="description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
+  <meta name="description" content="The flex box model provides an improvement over the block model in that it does not use floats, nor do the flex container’s margins collapse with the margins...">
   <meta name="keywords" content="">
   <meta name="googlebot" content="all">
-  <link rel="canonical" href="http://yourdomain.com/cnvs/layout/flex/">
-  <link rel="alternate" type="application/rss+xml" title="CNVS" href="http://yourdomain.com/cnvs/feed.xml" />
+  <link rel="canonical" href="/cnvs/layout/flex/index">
+  <link rel="alternate" type="application/rss+xml" title="CNVS" href="/cnvs/feed.xml" />
 
   <!--[if lt IE 9]>
 
@@ -84,11 +84,11 @@ BEGIN: Head
 
   <!-- BEGIN: FAV ICON -->
 
-  <link rel="icon" href="/cnvs/images/components/icons/favicon.ico">
+  <link rel="icon" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <!--[if IE]>
 
-    <link rel="icon shortcut" href="/cnvs/images/components/icons/favicon.ico">
+    <link rel="icon shortcut" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <![endif]-->
 
@@ -105,8 +105,8 @@ BEGIN: Head
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Flex &bull; CNVS">
-  <meta property="og:description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
-  <meta property="og:url" content="ashenden.github.com/canvas">
+  <meta property="og:description" content="The flex box model provides an improvement over the block model in that it does not use floats, nor do the flex container’s margins collapse with the margins...">
+  <meta property="og:url" content="mesosphere.github.com/cnvs">
   <meta property="og:site_name" content="Flex &bull; CNVS">
   <meta property="og:image" content="">
 
@@ -124,7 +124,8 @@ BEGIN: Head
   BEGIN: Stylesheets
   ================================================== -->
 
-  <link rel="stylesheet" href="/cnvs/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
 
   <!-- =================================================
   END: Stylesheets
@@ -134,18 +135,15 @@ BEGIN: Head
   BEGIN: Javascripts
   ================================================== -->
 
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery-2.2.0.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/modernizr-custom.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap/modal.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/google-code-prettify/prettify.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery.sticky-kit.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/jquery.waypoints.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/shortcuts/sticky.min.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
-  <link rel="stylesheet" href="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/popper.js/popper.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/tooltip.js/tooltip.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
+
 
   <!-- =================================================
   END: Javascripts
@@ -158,10 +156,6 @@ END: Head
 ================================================== -->
 
 
-  <!-- =================================================
-  BEGIN: Body
-  ================================================== -->
-
   <body>
 
     <!-- BEGIN: Livereload -->
@@ -170,35 +164,40 @@ END: Head
 
 <!-- END: Livereload -->
 
-<!-- =================================================
-BEGIN: Icon SVG Definitions
-================================================== -->
-
 <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <symbol id="icons-square" viewBox="0 0 16 16">
-    <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+    <rect x="0" y="0" width="16" height="16"></rect>
+  </symbol>
+
+  <symbol id="icons-check" viewBox="0 0 16 16">
+    <polygon points="3.11873314 7.88132268 1.8813 9.11876515 5.50000753 12.7375 14.1187 4.11874248 12.8812669 2.8813 5.50000753 10.262615"></polygon>
+  </symbol>
+
+  <symbol id="icons-circle-arrow-up" viewBox="0 0 16 16">
+    <path d="M7.79441138,15.9974098 C7.86273157,15.9991331 7.93126455,16 8,16 C8.06873545,16 8.13726843,15.9991331 8.20558862,15.9974098 L7.79441138,15.9974098 Z M6.99870848,15.9379451 C3.05302219,15.4452736 0,12.0791726 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.0800652 12.9456416,15.4467467 8.99870128,15.9382681 L8.99870128,7.23487303 L10.8799725,9.11614592 L12.1174049,7.87871278 L7.99870488,3.76000977 L3.88000488,7.87871278 L5.11743729,9.11614592 L6.99870848,7.23487303 L6.99870848,15.9379451 Z"></path>
+  </symbol>
+
+  <symbol id="icons-open-external" viewBox="0 0 16 16">
+    <path d="M12,5.41421128 L7.70711128,9.7071 L6.2929,8.29288872 L10.5857887,4 L8,4 L8,2 L14,2 L14,8 L12,8 L12,5.41421128 Z M2,2 L6,2 L6,4 L4,4 L4,12 L12,12 L12,10 L14,10 L14,14 L2,14 L2,2 Z"></path>
+  </symbol>
+
+  <symbol id="icons-users-plus" viewBox="0 0 16 16">
+    <path d="M12,11 L12,9 L11,9 L11,11 L9,11 L9,12 L11,12 L11,14 L12,14 L12,12 L14,12 L14,11 L12,11 Z M10.8703455,7.04370289 C11.0760971,7.01489482 11.2863091,7 11.5,7 C13.9852814,7 16,9.01471863 16,11.5 C16,13.9852814 13.9852814,16 11.5,16 C9.18372317,16 7.27618653,14.2499752 7.02746439,12 L5,12 L5,8.80199104 C6.15887373,7.70537116 7.9676434,7 10,7 C10.2952703,7 10.5858213,7.01488873 10.8703455,7.04370289 Z M10,7 C8.34314575,7 7,5.65685425 7,4 C7,2.34314575 8.34314575,1 10,1 C11.6568542,1 13,2.34314575 13,4 C13,5.65685425 11.6568542,7 10,7 Z" fill-opacity="0.4"></path>
+    <path d="M7.22618149,10.0873965 C6.82947988,10.030053 6.41950301,10 6,10 C3.9676434,10 2.15887373,10.7053712 1,11.801991 L1,15 L8.67133283,15 C7.65183347,14.1750222 7,12.9136331 7,11.5 C7,11.0065534 7.07942252,10.5316569 7.22618149,10.0873965 Z M8.8806793,7.84045667 C8.95835285,7.57377882 9,7.29175301 9,7 C9,5.34314575 7.65685425,4 6,4 C4.34314575,4 3,5.34314575 3,7 C3,8.65685425 4.34314575,10 6,10 C6.50291906,10 6.97693439,9.87624843 7.39325602,9.65753526 C7.72107754,8.92796723 8.23759966,8.30156001 8.8806793,7.84045667 Z"></path>
   </symbol>
 
 </svg>
 
-<!-- =================================================
-END: Icon SVG Definitions
-================================================== -->
 
 
-
-    <!-- =================================================
-    BEGIN: Canvas
-    ================================================== -->
-
-    <div class="canvas  flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
+    <div class="app flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
       <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
-<div class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
+<section class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
 
   
 
@@ -210,7 +209,7 @@ BEGIN: Header
 
   <div class="header-inner">
 
-    <div class="pod pod-narrow pod-short">
+    <div class="pod">
 
       <h1 class="header-logo">
 
@@ -237,15 +236,11 @@ END: Header
 ================================================== -->
 
 
-  <!-- =================================================
-BEGIN: Navigation
-================================================== -->
-
-<nav class="navigation fill">
+  <nav class="navigation fill">
 
   <div class="navigation-inner">
 
-    <div class="container-fluid-narrow pod pod-narrow flush-top flush-bottom">
+    <div class="container-fluid-narrow pod flush-top flush-bottom">
 
       
 
@@ -404,20 +399,6 @@ BEGIN: Navigation
 
   
 
-    <li class=" ">
-
-      <a href="/cnvs/updates/" class="">
-
-        Updates
-
-      </a>
-
-      
-
-    </li>
-
-  
-
 </ul>
 
 
@@ -427,2134 +408,799 @@ BEGIN: Navigation
 
 </nav>
 
-<!-- =================================================
-END: Navigation
-================================================== -->
 
-
-</div>
+</section>
 
 <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
 
-      <!-- =================================================
-      BEGIN: Page
-      ================================================== -->
+      <section class="/layout/flex/index page flex-item-grow-1">
 
-      <div class="page flex-item-grow-1">
+        <div class="pod pod-tall">
 
-        
+  <div class="container">
 
+    <section class="page-header pod-tall-bottom">
 
+      
 
+        <p class="h1 page-header-headline flush-top short">
 
+          Flex
 
+        </p>
 
+      
 
+      
 
+        <p class="page-header-description lead flush-bottom">
 
-<!-- =================================================
-BEGIN: Page Header
-================================================== -->
+          CNVS provides a number of available classes for quickly assigning flex box behavior to your layout through the use of the Flex layout toolkit. Flexbox (or "Flexible Box") provides an efficient set of styles for positioning, aligning, and distributing space among items in a container.
 
-<div class="page-header fill fill-light left">
+        </p>
 
-  
+      
 
-  <div class="page-header-inner">
+      
 
-    <div class="container-fluid pod pod-short">
+      
 
-      <div class="row">
+        <div class="page-navigation pod-tall-top">
 
-        <div class="column-small-8 column-medium-8 column-large-10">
+          <h6 class="text-uppercase">
 
-          <!-- BEGIN: Page Header Title -->
+            Table of Contents
 
-          <h1 class="page-header-title invisible ">
+          </h6>
 
-            <?php
-
-            echo $page_header_title;
-
-            ?>
-
-          </h1>
-
-          <!-- END: Page Header Title -->
-
-          
-
-            <!-- BEGIN: Page Header Headline -->
-
-            <div class="row">
-
-              <div class="column-small-12 column-jumbo-10">
-
-                
-
-                  <p class="h6 page-header-subheadline flush  text-align-left ">
-
-                    
-
-                      <a href="/layout">
-
-                    
-
-                    Layout
-
-                    
-
-                      </a>
-
-                    
-
-                  </p>
-
-                
-
-                <p class="h1 page-header-headline flush-top  text-align-left  flush-bottom">
-
-                  Flex
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <!-- END: Page Header Headline -->
-
-          
-
-          
-
-          
+          <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#flex-options">Flex Options</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#direction-flex-direction-">Direction (.flex-direction-)</a></li>
+<li class="toc-entry toc-h2"><a href="#wrap-items-flex-wrap-items-">Wrap Items (.flex-wrap-items-)</a></li>
+<li class="toc-entry toc-h2"><a href="#align-items-flex-align-items-">Align Items (.flex-align-items-)</a></li>
+<li class="toc-entry toc-h2"><a href="#justify-items-flex-justify-items-">Justify Items (.flex-justify-items-)</a></li>
+<li class="toc-entry toc-h2"><a href="#align-content-flex-align-content-">Align Content (.flex-align-content-)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#flex-item">Flex Item</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#align-flex-item-align-">Align (.flex-item-align-)</a></li>
+<li class="toc-entry toc-h2"><a href="#order-flex-item-order-">Order (.flex-item-order-*)</a></li>
+<li class="toc-entry toc-h2"><a href="#grow-flex-item-grow-">Grow (.flex-item-grow-*)</a></li>
+<li class="toc-entry toc-h2"><a href="#shrink-flex-item-shrink-">Shrink (.flex-item-shrink-*)</a></li>
+<li class="toc-entry toc-h2"><a href="#basis-flex-item-basis-">Basis (.flex-item-basis-)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#responsive-flex-box">Responsive Flex Box</a></li>
+</ul>
 
         </div>
 
-      </div>
+      
 
+    </section>
+
+    <section class="page-body">
+
+      <p>The flex box model provides an improvement over the block model in that it does not use floats, nor do the flex container’s margins collapse with the margins of its contents.  In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.</p>
+
+<h1 id="flex-options">
+<a id="flex-options" class="anchor" href="#flex-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex Options</h1>
+
+<p>CNVS provides a number of available classes for quickly assigning flex box behavior to your layout.  All classes are prefixed with <code class="highlighter-rouge">.flex-</code>.  Classes were selected to be human-readable and don’t necessarily match directly with the related styling properties they invoke.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">.flex</code></td>
+      <td>Apply flex box layout behavior to element.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-inline</code></td>
+      <td>Apply flex box layout behavior to element, but render as inline element.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="direction-flex-direction-">
+<a id="direction-flex-direction-" class="anchor" href="#direction-flex-direction-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Direction (<code class="highlighter-rouge">.flex-direction-</code>)</h2>
+
+<p>The <code class="highlighter-rouge">.flex-direction-</code> property specifies the direction of the flexible items inside the flex container. The default value of flex-direction is row (left-to-right, top-to-bottom).</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<code class="highlighter-rouge">.flex-direction-left-to-right</code> (default)</td>
+      <td>Arrange flex items left to right along a horizontal axis.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-direction-right-to-left</code></td>
+      <td>Arrange flex items right to left along a horizontal axis.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-direction-top-to-bottom</code></td>
+      <td>Arrange flex items top to bottom along a vertical axis.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-direction-bottom-to-top</code></td>
+      <td>Arrange flex items bottom to top along a vertical axis.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-direction flex flex-direction-left-to-right">
+      <div class="example-flex-item example-flex-item-1">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2">
+        2
+      </div>
+      <div class="example-flex-item example-flex-item-3">
+        3
+      </div>
+      <div class="example-flex-item example-flex-item-4">
+        4
+      </div>
     </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-direction-left-to-right"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
 
   </div>
 
 </div>
 
-<!-- =================================================
-END: Page Header
-================================================== -->
-
-
-        <!-- =================================================
-        BEGIN: Page Content Wrapper
-        ================================================== -->
-
-        <div class="page-content-wrapper flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-large">
-
-          
-
-            <!-- =================================================
-BEGIN: Page Navigation
-================================================== -->
-<!-- flex-screen-large  -->
-<div class="page-navigation flex-item-shrink-0-screen-large flex-item-order-1-screen-large" id="page-navigation">
-
-  <div class="page-navigation-sticky">
-
-    <div class="container-fluid pod">
-
-      <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#flex-options" class="">
-
-        Flex Options
-
-      </a>
-
-      
-
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#flex-direction" class="">
-
-        Direction
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-wrap-items" class="">
-
-        Wrap Items
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-align-items" class="">
-
-        Align Items
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-justify-items" class="">
-
-        Justify Items
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-align-content" class="">
-
-        Align Content
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-item" class="">
-
-        Flex Item
-
-      </a>
-
-      
-
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#flex-item-align" class="">
-
-        Align
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-item-order" class="">
-
-        Order
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-item-grow" class="">
-
-        Grow
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-item-shrink" class="">
-
-        Shrink
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-item-basis" class="">
-
-        Basis
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#flex-responsive" class="">
-
-        Responsive Flex
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
+<h2 id="wrap-items-flex-wrap-items-">
+<a id="wrap-items-flex-wrap-items-" class="anchor" href="#wrap-items-flex-wrap-items-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrap Items (<code class="highlighter-rouge">.flex-wrap-items-</code>)</h2>
+
+<p>The <code class="highlighter-rouge">.flex-wrap-items-</code> property specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<code class="highlighter-rouge">.flex-wrap-items-none</code> (default)</td>
+      <td>Do not wrap the flexible items.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-wrap-items</code></td>
+      <td>Wrap the flexible items if needed.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-wrap-items-reverse</code></td>
+      <td>Wrap the flexible items in reverse order if needed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-wrap-items flex flex-direction-left-to-right flex-wrap-items">
+      <div class="example-flex-item example-flex-item-1">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2">
+        2
+      </div>
+      <div class="example-flex-item example-flex-item-3">
+        3
+      </div>
+      <div class="example-flex-item example-flex-item-4">
+        4
+      </div>
+      <div class="example-flex-item example-flex-item-5">
+        5
+      </div>
     </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-wrap-items"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
 
   </div>
 
 </div>
 
-<!-- =================================================
-END: Page Navigation
-================================================== -->
-
-
-          
-
-          <!-- =================================================
-          BEGIN: Page Content
-          ================================================== -->
-
-          <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
-
-            <!-- =================================================
-BEGIN: Flex Box
-================================================== -->
-
-<section class="fill" id="flex">
-
-  <div class="container-fluid pod">
-
-    <p class="lead">
-
-      CNVS provides a number of available classes for quickly assigning flex box behavior to your layout through the use of the Flex layout toolkit. Flexbox (or "Flexible Box") provides an efficient set of styles for positioning, aligning, and distributing space among items in a container.
-
-    </p>
-
-    <p>
-
-      The flex box model provides an improvement over the block model in that it does not use floats, nor do the flex container's margins collapse with the margins of its contents.  In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.
-
-    </p>
-
-    <!-- =================================================
-BEGIN: Flex Box Options
-================================================== -->
-
-<section id="flex-options">
-
-  <h2>
-
-    Flex Options
-
-  </h2>
-
-  <p>
-
-    CNVS provides a number of available classes for quickly assigning flex box behavior to your layout.  All classes are prefixed with <code>.flex-</code>.  Classes were selected to be human-readable and don't necessarily match directly with the related styling prorperties they invoke.
-
-  </p>
-
-  <table class="table short">
-
-    <thead>
-
-      <tr>
-
-        <th>
-
-          Class
-
-        </th>
-
-        <th>
-
-          Description
-
-        </th>
-
-      </tr>
-
-    </thead>
-
-    <tbody>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .flex
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Apply flex box layout behavior to element.
-
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-
-          <code>
-
-            .flex-inline
-
-          </code>
-
-        </td>
-
-        <td>
-
-          Apply flex box layout behavior to element, but render as inline element.
-
-        </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-  <!-- =================================================
-  BEGIN: Flex Box Direction
-  ================================================== -->
-
-  <section id="flex-direction">
-
-    <h3>
-
-      Direction (<code>.flex-direction-</code>)
-
-    </h3>
-
-    <p>
-
-      The <code>.flex-direction-</code> property specifies the direction of the flexible items inside the flex container. The default value of flex-direction is row (left-to-right, top-to-bottom).
-
-    </p>
-
-    <table class="table short">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-direction-left-to-right
-
-            </code>
-
-            (default)
-
-          </td>
-
-          <td>
-
-            Arrange flex items left to right along a horizontal axis.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-direction-right-to-left
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Arrange flex items right to left along a horizontal axis.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-direction-top-to-bottom
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Arrange flex items top to bottom along a vertical axis.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-direction-bottom-to-top
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Arrange flex items bottom to top along a vertical axis.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-direction flex flex-direction-left-to-right">
-          <div class="example-flex-item example-flex-item-1">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2">
-            2
-          </div>
-          <div class="example-flex-item example-flex-item-3">
-            3
-          </div>
-          <div class="example-flex-item example-flex-item-4">
-            4
-          </div>
-        </div>
-
+<h2 id="align-items-flex-align-items-">
+<a id="align-items-flex-align-items-" class="anchor" href="#align-items-flex-align-items-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Align Items (<code class="highlighter-rouge">.flex-align-items-</code>)</h2>
+
+<p>The <code class="highlighter-rouge">.flex-align-items-</code> property vertically aligns the flexible container’s items when the items do not use all available space on the cross-axis.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<code class="highlighter-rouge">.flex-align-items-stretch</code>(default)</td>
+      <td>Items are stretched to fill the container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-items-start</code></td>
+      <td>Items are positioned along top or beginning of the container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-items-end</code></td>
+      <td>Items are positioned along the bottom or end of the container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-items-center</code></td>
+      <td>Items are centered in the container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-items-baseline</code></td>
+      <td>Items are aligned with the baseline of the container.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-align-items flex flex-align-items-end">
+      <div class="example-flex-item example-flex-item-1">
+        1
       </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-direction-left-to-right"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
+      <div class="example-flex-item example-flex-item-2">
+        2
       </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Box Direction
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Flex Box Wrap
-  ================================================== -->
-
-  <section id="flex-wrap-items">
-
-    <h3>
-
-      Wrap Items (<code>.flex-wrap-items-</code>)
-
-    </h3>
-
-    <p>
-
-      The <code>.flex-wrap-items-</code> property specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line.
-
-    </p>
-
-    <table class="table short">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-wrap-items-none
-
-            </code>
-
-            (default)
-
-          </td>
-
-          <td>
-
-            Do not wrap the flexible items.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-wrap-items
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Wrap the flexible items if needed.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-wrap-items-reverse
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Wrap the flexible items in reverse order if needed.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-wrap-items flex flex-direction-left-to-right flex-wrap-items">
-          <div class="example-flex-item example-flex-item-1">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2">
-            2
-          </div>
-          <div class="example-flex-item example-flex-item-3">
-            3
-          </div>
-          <div class="example-flex-item example-flex-item-4">
-            4
-          </div>
-          <div class="example-flex-item example-flex-item-5">
-            5
-          </div>
-        </div>
-
+      <div class="example-flex-item example-flex-item-3">
+        3
       </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-wrap-items"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
+      <div class="example-flex-item example-flex-item-4">
+        4
       </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Box Wrap
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Flex Box Item Alignment
-  ================================================== -->
-
-  <section id="flex-align-items">
-
-    <h3>
-
-      Align Items (<code>.flex-align-items-</code>)
-
-    </h3>
-
-    <p>
-
-      The <code>.flex-align-items-</code> property vertically aligns the flexible container's items when the items do not use all available space on the cross-axis.
-
-    </p>
-
-    <table class="table short">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-items-stretch
-
-            </code>
-
-            (default)
-
-          </td>
-
-          <td>
-
-            Items are stretched to fill the container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-items-start
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Items are positioned along top or beginning of the container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-items-end
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Items are positioned along the bottom or end of the container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-items-center
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Items are centered in the container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-items-baseline
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Items are aligned with the baseline of the container.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-align-items flex flex-align-items-end">
-          <div class="example-flex-item example-flex-item-1">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2">
-            2
-          </div>
-          <div class="example-flex-item example-flex-item-3">
-            3
-          </div>
-          <div class="example-flex-item example-flex-item-4">
-            4
-          </div>
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-align-items-end"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Box Item Alignment
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Flex Box Justify Items
-  ================================================== -->
-
-  <section id="flex-justify-items">
-
-    <h3>
-
-      Justify Items (<code>.flex-justify-items-</code>)
-
-    </h3>
-
-    <p>
-
-      The <code>.flex-justify-items-</code> property horizontally aligns the flexible container's items when the items do not use all available space on the main-axis.
-
-    </p>
-
-    <table class="table short">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-justify-items-start
-
-            </code>
-
-            (default)
-
-          </td>
-
-          <td>
-
-            Items are positioned at the beginning of the container with remaining space after.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-justify-items-end
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Items are positioned at the end of the container with remaining space before.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-justify-items-center
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Items are positioned in the center f the container with remaining space evenly on both sides.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-justify-items-space-between
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Items are positioned with space evenly between them.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-justify-items-space-around
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Items are positioned with space evenly around them.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-justify-items flex flex-justify-items-space-around">
-          <div class="example-flex-item example-flex-item-1">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2">
-            2
-          </div>
-          <div class="example-flex-item example-flex-item-3">
-            3
-          </div>
-          <div class="example-flex-item example-flex-item-4">
-            4
-          </div>
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-justify-items-space-around"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Box Justify Items
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Flex Box Align Content
-  ================================================== -->
-
-  <section id="flex-align-content">
-
-    <h3>
-
-      Align Content (<code>.flex-align-content-</code>)
-
-    </h3>
-
-    <p>
-
-      The <code>.flex-align-content-</code> property modifies the behavior of the flex item wrapping property. It is similar to <code>.flex-align-items-</code>, but instead of aligning flex items, it aligns flex lines.
-
-    </p>
-
-    <p>
-
-      <strong>Note:</strong> this property has no effect when flex wrap is disabled or there is only one line of flex items.
-
-    </p>
-
-    <table class="table short">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-content-stretch
-
-            </code>
-
-            (default)
-
-          </td>
-
-          <td>
-
-            Lines stretch to take up the remaining space.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-content-start
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Align lines at the start of the flex container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-content-end
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Align lines at the end of the flex container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-content-center
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Center lines in the flex container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-content-space-between
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Lines are positioned with space evenly between them.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-align-content-space-around
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Lines are evenly distributed with equal space around each line.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-align-content flex flex-direction-left-to-right flex-wrap-items flex-align-content-space-between">
-          <div class="example-flex-item example-flex-item-1">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2">
-            2
-          </div>
-          <div class="example-flex-item example-flex-item-3">
-            3
-          </div>
-          <div class="example-flex-item example-flex-item-4">
-            4
-          </div>
-          <div class="example-flex-item example-flex-item-5">
-            5
-          </div>
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-wrap-items flex-align-content-space-between"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Box Align Content
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-BEGIN: Flex Box Options
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Flex Item Options
-================================================== -->
-
-<section id="flex-item">
-
-  <h2>
-
-    Flex Item
-
-  </h2>
-
-  <p>
-
-    In many projects, it is necessary to override specific flex behavior on items within the flex container.  For example, you may wish to adjust the order in the flex container, or change the alignment behavior of just one item.  The options below provide may classes prefixed with <code>.flex-item</code> to provide this item-specific support.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Flex Item Align
-  ================================================== -->
-
-  <section id="flex-item-align">
-
-    <h3>
-
-      Align (<code>.flex-item-align-</code>)
-
-    </h3>
-
-    <p>
-
-      The <code>.flex-item-align-</code> overrides the flex container's align-items property for a specific item.  It has the same possible values as the <code>.flex-align-items</code> property.
-
-    </p>
-
-    <table class="table short">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-item-align-start
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Item is positioned along top or beginning of the flex container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-item-align-end
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Item is position at the bottom or end of the flex container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-item-align-center
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Item is centered in the flex container.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-item-align-baseline
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Item is aligned with the baseline of the flex container.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-item-align-stretch
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Item is stretched to fill the flex container.
-
-          </td>
-
-        </tr>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-item-align flex flex-align-items-end">
-          <div class="example-flex-item example-flex-item-1">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2">
-            2
-          </div>
-          <div class="example-flex-item example-flex-item-3 flex-item-align-start">
-            3
-          </div>
-          <div class="example-flex-item example-flex-item-4">
-            4
-          </div>
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-align-items-end"&gt;
-  &hellip;
-  &lt;div class="flex-item-align-start"&gt;
-    3
-  &lt;/div&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Item Align
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Flex Item Order
-  ================================================== -->
-
-  <section id="flex-item-order">
-
-    <h3>
-
-      Order (<code>.flex-item-order-*</code>)
-
-    </h3>
-
-    <p>
-
-      By default, flex items are laid out in the order they appear in the source code.  The <code>.flex-item-order-*</code> property specifies the order of a flexible item relative to the rest of the flexible items inside the same container.  The <code>*</code> suffix will accept any value between <code>-100</code> and <code>100</code>.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-item-order flex flex-direction-left-to-right">
-          <div class="example-flex-item example-flex-item-1 flex-item-order-3">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2">
-            2
-          </div>
-          <div class="example-flex-item example-flex-item-3 flex-item-order-4">
-            3
-          </div>
-          <div class="example-flex-item example-flex-item-4">
-            4
-          </div>
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-direction-left-to-right"&gt;
-  &lt;div class="flex-item-order-3"&gt;
-    1
-  &lt;/div&gt;
-  &lt;div&gt;
-    2
-  &lt;/div&gt;
-  &lt;div class="flex-item-order-4"&gt;
-    3
-  &lt;/div&gt;
-  &lt;div&gt;
-    4
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Item Order
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Flex Item Grow
-  ================================================== -->
-
-  <section id="flex-item-grow">
-
-    <h3>
-
-      Grow (<code>.flex-item-grow-*</code>)
-
-    </h3>
-
-    <p>
-
-      The class <code>.flex-item-grow-*</code> specifies the proportion you wish the item to grow relative to other items when there is more remaining space in the flex container than the width of the items inside.  If other items also have flex grow defined, the proportion will be calculated across all defined flex grow values. For example if there are two objects in your flex container, and the first object has class <code>.flex-item-grow-2</code>, then this object will increase it's size twice that of it's sibling.  Likewise, if the second object has class <code>.flex-item-grow-4</code>, then the first object will increase it's size at 50% (or 2/4ths) that of it's sibling.
-
-    </p>
-
-    <p>
-
-      By default the flex grow property is <code>0</code>. The <code>*</code> suffix in <code>.flex-item-grow-*</code> provided by CNVS will accept any value between <code>0</code> and <code>10</code>.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-item-grow flex flex-direction-left-to-right">
-          <div class="example-flex-item example-flex-item-1 flex-item-grow-2">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2 flex-item-grow-1">
-            2
-          </div>
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex"&gt;
-  &lt;div class="flex-item-grow-2"&gt;
-    1
-  &lt;/div&gt;
-  &lt;div class="flex-item-grow-1"&gt;
-    2
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Item Grow
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Flex Item Shrink
-  ================================================== -->
-
-  <section id="flex-item-shrink">
-
-    <h3>
-
-      Shrink (<code>.flex-item-shrink-*</code>)
-
-    </h3>
-
-    <p>
-
-      The class <code>.flex-item-shrink-*</code> specifies the proportion you wish the item to shrink relative to other items when there is less available space in the flex container than the width of the items inside.  If other items also have flex shrink defined, the proportion items shrinks will be calculated across all defined flex shrink values. For example if there are two objects in your flex container, and the first object has class <code>.flex-item-shrink-2</code>, then this object will decrease it's size twice that of it's sibling.  Likewise, if the second object has class <code>.flex-item-shrink-4</code>, then the first object will decrease it's size at 50% (or 2/4ths) that of it's sibling.
-
-    </p>
-
-    <p>
-
-      By default the flex shrink property is <code>0</code>. The <code>*</code> suffix in <code>.flex-item-shrink-*</code> provided by CNVS will accept any value between <code>0</code> and <code>10</code>.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-item-shrink flex flex-direction-left-to-right">
-          <div class="example-flex-item example-flex-item-1 flex-item-shrink-2" style="flex-basis: 1000px;">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2 flex-item-shrink-1" style="flex-basis: 1000px;">
-            2
-          </div>
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex"&gt;
-  &lt;div class="flex-item-shrink-2" style="width: 1000px;"&gt;
-    1
-  &lt;/div&gt;
-  &lt;div class="flex-item-shrink-1" style="width: 1000px;"&gt;
-    2
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Item Shrink
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Flex Item Basis
-  ================================================== -->
-
-  <section id="flex-item-basis">
-
-    <h3>
-
-      Basis (<code>.flex-item-basis-</code>)
-
-    </h3>
-
-    <p>
-
-      Flex basis defines the default size of an element before any remaining space is distributed between the items. Flex basis accepts the same values as the width and height property (e.g. 40%, 30px, etc...), plus keywords <code>auto</code> and <code>content</code>.  CNVS provides classes that allow you to define the <code>auto</code> and <code>content</code> keyword properties for an item.  However, if you wish to use a specific value, this should be defined in your project-specific styles.
-
-    </p>
-
-    <table class="table short">
-
-      <thead>
-
-        <tr>
-
-          <th>
-
-            Class
-
-          </th>
-
-          <th>
-
-            Description
-
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-item-basis-auto
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Remaining space is distributed based on its <code>flex-grow</code> value.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-item-basis-content
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Remaining space is distributed based on the item's content.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .flex-item-basis-none
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Remaining space is not factored in.
-
-          </td>
-
-        </tr>
-        
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel">
-
-      <div class="panel-cell">
-
-        <div class="example-flex-container example-flex-item-basis flex flex-direction-left-to-right">
-          <div class="example-flex-item example-flex-item-1" style="flex-basis: 100px;">
-            1
-          </div>
-          <div class="example-flex-item example-flex-item-2" style="flex-basis: 50px;">
-            2
-          </div>
-          <div class="example-flex-item example-flex-item-3 flex-item-grow-1">
-            3
-          </div>
-          <div class="example-flex-item example-flex-item-4" style="flex-basis: 100px;">
-            4
-          </div>
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-direction-left-to-right"&gt;
-  &lt;div style="flex-basis: 100px;"&gt;
-    1
-  &lt;/div&gt;
-  &lt;div style="flex-basis: 50px;"&gt;
-    2
-  &lt;/div&gt;
-  &lt;div class="flex-item-grow-1"&gt;
-    3
-  &lt;/div&gt;
-  &lt;div style="flex-basis: 100px;"&gt;
-    4
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Flex Item Basis
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-BEGIN: Flex Item Options
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Flex Responsive
-================================================== -->
-
-<section id="flex-responsive">
-
-  <h2>
-
-    Responsive Flex Box
-
-  </h2>
-
-  <p>
-
-    The flex layout system in CNVS is built to be fully responsive across all included screen-size break-points. In your specific project it may be necessary to adjust flex behavior when moving from mobile devices to desktop screens.  To apply as specific flex behavior at mini, small, medium, and large viewports, add the suffix <code>-screen-small</code>, <code>-screen-medium</code>, <code>-screen-large</code>, or <code>-screen-jumbo</code> respectively to your specific flex class.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel">
-
-    <div class="panel-cell">
-
-      <div class="example-flex-container example-flex-responsive flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium flex-align-items-stretch">
-        <div class="example-flex-item example-flex-item-1 flex-item-grow-3-screen-medium flex-item-order-3-screen-medium">
-          1
-        </div>
-        <div class="example-flex-item example-flex-item-2 flex-item-grow-2-screen-medium flex-item-order-2-screen-medium">
-          2
-        </div>
-        <div class="example-flex-item example-flex-item-3 flex-item-grow-1-screen-medium flex-item-order-0-screen-medium">
-          3
-        </div>
-        <div class="example-flex-item example-flex-item-4 flex-item-grow-4-screen-medium flex-item-order-1-screen-medium flex-item-order--1-screen-jumbo">
-          4
-        </div>
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium flex-align-items-stretch"&gt;
-  &lt;div class="flex-item-grow-3-screen-medium flex-item-order-3-screen-medium"&gt;
-    1
-  &lt;/div&gt;
-  &lt;div class="flex-item-grow-2-screen-medium flex-item-order-2-screen-medium"&gt;
-    2
-  &lt;/div&gt;
-  &lt;div class="flex-item-grow-1-screen-medium flex-item-order-0-screen-medium"&gt;
-    3
-  &lt;/div&gt;
-  &lt;div class="flex-item-grow-4-screen-medium flex-item-order-1-screen-medium flex-item-order--1-screen-jumbo"&gt;
-    4
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-</section>
-
-<!-- =================================================
-BEGIN: Flex Responsive
-================================================== -->
-
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-align-items-end"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
 
   </div>
 
-</section>
+</div>
+
+<h2 id="justify-items-flex-justify-items-">
+<a id="justify-items-flex-justify-items-" class="anchor" href="#justify-items-flex-justify-items-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Justify Items (<code class="highlighter-rouge">.flex-justify-items-</code>)</h2>
+
+<p>The <code class="highlighter-rouge">.flex-justify-items-</code> property horizontally aligns the flexible container’s items when the items do not use all available space on the main-axis.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<code class="highlighter-rouge">.flex-justify-items-start</code> (default)</td>
+      <td>Items are positioned at the beginning of the container with remaining space after.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-justify-items-end</code></td>
+      <td>Items are positioned at the end of the container with remaining space before.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-justify-items-center</code></td>
+      <td>Items are positioned in the center f the container with remaining space evenly on both sides.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-justify-items-space-between</code></td>
+      <td>Items are positioned with space evenly between them.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-justify-items-space-around</code></td>
+      <td>Items are positioned with space evenly around them.</td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- =================================================
-END: Flex
+BEGIN: Example
 ================================================== -->
 
+<div class="panel">
 
-          </div>
+  <div class="panel-cell">
 
-          <!-- =================================================
-          END: Page Content
-          ================================================== -->
-
-        </div>
-
-        <!-- =================================================
-        END: Page Content Wrapper
-        ================================================== -->
-
+    <div class="example-flex-container example-flex-justify-items flex flex-justify-items-space-around">
+      <div class="example-flex-item example-flex-item-1">
+        1
       </div>
+      <div class="example-flex-item example-flex-item-2">
+        2
+      </div>
+      <div class="example-flex-item example-flex-item-3">
+        3
+      </div>
+      <div class="example-flex-item example-flex-item-4">
+        4
+      </div>
+    </div>
 
-      <!-- =================================================
-      END: Page
-      ================================================== -->
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-justify-items-space-around"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="align-content-flex-align-content-">
+<a id="align-content-flex-align-content-" class="anchor" href="#align-content-flex-align-content-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Align Content (<code class="highlighter-rouge">.flex-align-content-</code>)</h2>
+
+<p>The <code class="highlighter-rouge">.flex-align-content-</code> property modifies the behavior of the flex item wrapping property. It is similar to <code class="highlighter-rouge">.flex-align-items-</code>, but instead of aligning flex items, it aligns flex lines.</p>
+
+<p><strong>Note:</strong> this property has no effect when flex wrap is disabled or there is only one line of flex items.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<code class="highlighter-rouge">.flex-align-content-stretch</code> (default)</td>
+      <td>Lines stretch to take up the remaining space.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-content-start</code></td>
+      <td>Align lines at the start of the flex container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-content-end</code></td>
+      <td>Align lines at the end of the flex container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-content-center</code></td>
+      <td>Center lines in the flex container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-content-space-between</code></td>
+      <td>Lines are positioned with space evenly between them.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-align-content-space-around</code></td>
+      <td>Lines are evenly distributed with equal space around each line.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-align-content flex flex-direction-left-to-right flex-wrap-items flex-align-content-space-between">
+      <div class="example-flex-item example-flex-item-1">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2">
+        2
+      </div>
+      <div class="example-flex-item example-flex-item-3">
+        3
+      </div>
+      <div class="example-flex-item example-flex-item-4">
+        4
+      </div>
+      <div class="example-flex-item example-flex-item-5">
+        5
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-wrap-items flex-align-content-space-between"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="flex-item">
+<a id="flex-item" class="anchor" href="#flex-item" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flex Item</h1>
+
+<p>In many projects, it is necessary to override specific flex behavior on items within the flex container.  For example, you may wish to adjust the order in the flex container, or change the alignment behavior of just one item.  The options below provide may classes prefixed with <code class="highlighter-rouge">.flex-item</code> to provide this item-specific support.</p>
+
+<h2 id="align-flex-item-align-">
+<a id="align-flex-item-align-" class="anchor" href="#align-flex-item-align-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Align (<code class="highlighter-rouge">.flex-item-align-</code>)</h2>
+
+<p>The <code class="highlighter-rouge">.flex-item-align-</code> overrides the flex container’s align-items property for a specific item.  It has the same possible values as the <code class="highlighter-rouge">.flex-align-items</code> property.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-item-align-start</code></td>
+      <td>Item is positioned along top or beginning of the flex container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-item-align-end</code></td>
+      <td>Item is position at the bottom or end of the flex container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-item-align-center</code></td>
+      <td>Item is centered in the flex container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-item-align-baseline</code></td>
+      <td>Item is aligned with the baseline of the flex container.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-item-align-stretch</code></td>
+      <td>Item is stretched to fill the flex container.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-item-align flex flex-align-items-end">
+      <div class="example-flex-item example-flex-item-1">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2">
+        2
+      </div>
+      <div class="example-flex-item example-flex-item-3 flex-item-align-start">
+        3
+      </div>
+      <div class="example-flex-item example-flex-item-4">
+        4
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-align-items-end"</span><span class="nt">&gt;</span>
+  …
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-align-start"</span><span class="nt">&gt;</span>
+    3
+  <span class="nt">&lt;/div&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="order-flex-item-order-">
+<a id="order-flex-item-order-" class="anchor" href="#order-flex-item-order-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Order (<code class="highlighter-rouge">.flex-item-order-*</code>)</h2>
+
+<p>By default, flex items are laid out in the order they appear in the source code.  The <code class="highlighter-rouge">.flex-item-order-*</code> property specifies the order of a flexible item relative to the rest of the flexible items inside the same container.  The <code class="highlighter-rouge">*</code> suffix will accept any value between <code class="highlighter-rouge">-100</code> and <code class="highlighter-rouge">100</code>.</p>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-item-order flex flex-direction-left-to-right">
+      <div class="example-flex-item example-flex-item-1 flex-item-order-3">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2">
+        2
+      </div>
+      <div class="example-flex-item example-flex-item-3 flex-item-order-4">
+        3
+      </div>
+      <div class="example-flex-item example-flex-item-4">
+        4
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-direction-left-to-right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-order-3"</span><span class="nt">&gt;</span>
+    1
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    2
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-order-4"</span><span class="nt">&gt;</span>
+    3
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    4
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="grow-flex-item-grow-">
+<a id="grow-flex-item-grow-" class="anchor" href="#grow-flex-item-grow-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grow (<code class="highlighter-rouge">.flex-item-grow-*</code>)</h2>
+
+<p>The class <code class="highlighter-rouge">.flex-item-grow-*</code> specifies the proportion you wish the item to grow relative to other items when there is more remaining space in the flex container than the width of the items inside.  If other items also have flex grow defined, the proportion will be calculated across all defined flex grow values. For example if there are two objects in your flex container, and the first object has class <code class="highlighter-rouge">.flex-item-grow-2</code>, then this object will increase it’s size twice that of it’s sibling.  Likewise, if the second object has class <code class="highlighter-rouge">.flex-item-grow-4</code>, then the first object will increase it’s size at 50% (or 2/4ths) that of it’s sibling.</p>
+
+<p>By default the flex grow property is <code class="highlighter-rouge">0</code>. The <code class="highlighter-rouge">*</code> suffix in <code class="highlighter-rouge">.flex-item-grow-*</code> provided by CNVS will accept any value between <code class="highlighter-rouge">0</code> and <code class="highlighter-rouge">10</code>.</p>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-item-grow flex flex-direction-left-to-right">
+      <div class="example-flex-item example-flex-item-1 flex-item-grow-2">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2 flex-item-grow-1">
+        2
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-grow-2"</span><span class="nt">&gt;</span>
+    1
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-grow-1"</span><span class="nt">&gt;</span>
+    2
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="shrink-flex-item-shrink-">
+<a id="shrink-flex-item-shrink-" class="anchor" href="#shrink-flex-item-shrink-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shrink (<code class="highlighter-rouge">.flex-item-shrink-*</code>)</h2>
+
+<p>The class <code class="highlighter-rouge">.flex-item-shrink-*</code> specifies the proportion you wish the item to shrink relative to other items when there is less available space in the flex container than the width of the items inside.  If other items also have flex shrink defined, the proportion items shrinks will be calculated across all defined flex shrink values. For example if there are two objects in your flex container, and the first object has class <code class="highlighter-rouge">.flex-item-shrink-2</code>, then this object will decrease it’s size twice that of it’s sibling.  Likewise, if the second object has class <code class="highlighter-rouge">.flex-item-shrink-4</code>, then the first object will decrease it’s size at 50% (or 2/4ths) that of it’s sibling.</p>
+
+<p>By default the flex shrink property is <code class="highlighter-rouge">0</code>. The <code class="highlighter-rouge">*</code> suffix in <code class="highlighter-rouge">.flex-item-shrink-*</code> provided by CNVS will accept any value between <code class="highlighter-rouge">0</code> and <code class="highlighter-rouge">10</code>.</p>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-item-shrink flex flex-direction-left-to-right">
+      <div class="example-flex-item example-flex-item-1 flex-item-shrink-2" style="flex-basis: 1000px;">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2 flex-item-shrink-1" style="flex-basis: 1000px;">
+        2
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-shrink-2"</span> <span class="na">style=</span><span class="s">"width: 1000px;"</span><span class="nt">&gt;</span>
+    1
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-shrink-1"</span> <span class="na">style=</span><span class="s">"width: 1000px;"</span><span class="nt">&gt;</span>
+    2
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h2 id="basis-flex-item-basis-">
+<a id="basis-flex-item-basis-" class="anchor" href="#basis-flex-item-basis-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basis (<code class="highlighter-rouge">.flex-item-basis-</code>)</h2>
+
+<p>Flex basis defines the default size of an element before any remaining space is distributed between the items. Flex basis accepts the same values as the width and height property (e.g. 40%, 30px, etc…), plus keywords <code class="highlighter-rouge">auto</code> and <code class="highlighter-rouge">content</code>.  CNVS provides classes that allow you to define the <code class="highlighter-rouge">auto</code> and <code class="highlighter-rouge">content</code> keyword properties for an item.  However, if you wish to use a specific value, this should be defined in your project-specific styles.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-item-basis-auto</code></td>
+      <td>Remaining space is distributed based on its <code class="highlighter-rouge">flex-grow</code> value.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-item-basis-content</code></td>
+      <td>Remaining space is distributed based on the item’s content.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.flex-item-basis-none</code></td>
+      <td>Remaining space is not factored in.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-item-basis flex flex-direction-left-to-right">
+      <div class="example-flex-item example-flex-item-1" style="flex-basis: 100px;">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2" style="flex-basis: 50px;">
+        2
+      </div>
+      <div class="example-flex-item example-flex-item-3 flex-item-grow-1">
+        3
+      </div>
+      <div class="example-flex-item example-flex-item-4" style="flex-basis: 100px;">
+        4
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-direction-left-to-right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"flex-basis: 100px;"</span><span class="nt">&gt;</span>
+    1
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"flex-basis: 50px;"</span><span class="nt">&gt;</span>
+    2
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-grow-1"</span><span class="nt">&gt;</span>
+    3
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"flex-basis: 100px;"</span><span class="nt">&gt;</span>
+    4
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="responsive-flex-box">
+<a id="responsive-flex-box" class="anchor" href="#responsive-flex-box" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responsive Flex Box</h1>
+
+<p>The flex layout system in CNVS is built to be fully responsive across all included screen-size break-points. In your specific project it may be necessary to adjust flex behavior when moving from mobile devices to desktop screens.  To apply as specific flex behavior at mini, small, medium, and large viewports, add the suffix <code class="highlighter-rouge">-screen-small</code>, <code class="highlighter-rouge">-screen-medium</code>, <code class="highlighter-rouge">-screen-large</code>, or <code class="highlighter-rouge">-screen-jumbo</code> respectively to your specific flex class.</p>
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <div class="example-flex-container example-flex-responsive flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium flex-align-items-stretch">
+      <div class="example-flex-item example-flex-item-1 flex-item-grow-3-screen-medium flex-item-order-3-screen-medium">
+        1
+      </div>
+      <div class="example-flex-item example-flex-item-2 flex-item-grow-2-screen-medium flex-item-order-2-screen-medium">
+        2
+      </div>
+      <div class="example-flex-item example-flex-item-3 flex-item-grow-1-screen-medium flex-item-order-0-screen-medium">
+        3
+      </div>
+      <div class="example-flex-item example-flex-item-4 flex-item-grow-4-screen-medium flex-item-order-1-screen-medium flex-item-order--1-screen-jumbo">
+        4
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium flex-align-items-stretch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-grow-3-screen-medium flex-item-order-3-screen-medium"</span><span class="nt">&gt;</span>
+    1
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-grow-2-screen-medium flex-item-order-2-screen-medium"</span><span class="nt">&gt;</span>
+    2
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-grow-1-screen-medium flex-item-order-0-screen-medium"</span><span class="nt">&gt;</span>
+    3
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-item-grow-4-screen-medium flex-item-order-1-screen-medium flex-item-order--1-screen-jumbo"</span><span class="nt">&gt;</span>
+    4
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+
+    </section>
+
+  </div>
+
+</div>
+
+
+      </section>
 
       
 
@@ -2582,14 +1228,10 @@ END: Footer
     </div>
 
     <!-- =================================================
-    END: Canvas
-    ================================================== -->
-
-    <!-- =================================================
 BEGIN: Javascripts
 ================================================== -->
 
-<script type="text/javascript" src="/cnvs/javascripts/scripts.min.js"></script>
+<script type="text/javascript" src="/cnvs/assets/javascripts/scripts.min.js"></script>
 
 <!-- =================================================
 END: Javascripts
@@ -2597,9 +1239,5 @@ END: Javascripts
 
 
   </body>
-
-  <!-- =================================================
-  END: Body
-  ================================================== -->
 
 </html>

@@ -50,11 +50,11 @@ BEGIN: Head
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <html prefix="og: http://ogp.me/ns#">
   <meta name="title" content ="Modals &bull; CNVS">
-  <meta name="description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
+  <meta name="description" content="Use the class .modal in combination with one or more nested layout components to quickly create a new modal.  Below is an example of simple modal with a head...">
   <meta name="keywords" content="">
   <meta name="googlebot" content="all">
-  <link rel="canonical" href="http://yourdomain.com/cnvs/components/modals/">
-  <link rel="alternate" type="application/rss+xml" title="CNVS" href="http://yourdomain.com/cnvs/feed.xml" />
+  <link rel="canonical" href="/cnvs/components/modals/index">
+  <link rel="alternate" type="application/rss+xml" title="CNVS" href="/cnvs/feed.xml" />
 
   <!--[if lt IE 9]>
 
@@ -84,11 +84,11 @@ BEGIN: Head
 
   <!-- BEGIN: FAV ICON -->
 
-  <link rel="icon" href="/cnvs/images/components/icons/favicon.ico">
+  <link rel="icon" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <!--[if IE]>
 
-    <link rel="icon shortcut" href="/cnvs/images/components/icons/favicon.ico">
+    <link rel="icon shortcut" href="/cnvs/assets/images/components/icons/favicon.ico">
 
   <![endif]-->
 
@@ -105,8 +105,8 @@ BEGIN: Head
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Modals &bull; CNVS">
-  <meta property="og:description" content="CNVS (pronounced 'Canvas') is a system of user interface elements and components for use across Mesosphere sites and products. CNVS defines stylistic guidelines for the design and structure of digital interfaces in an effort to ensure consistency in brand and interaction.">
-  <meta property="og:url" content="ashenden.github.com/canvas">
+  <meta property="og:description" content="Use the class .modal in combination with one or more nested layout components to quickly create a new modal.  Below is an example of simple modal with a head...">
+  <meta property="og:url" content="mesosphere.github.com/cnvs">
   <meta property="og:site_name" content="Modals &bull; CNVS">
   <meta property="og:image" content="">
 
@@ -124,7 +124,8 @@ BEGIN: Head
   BEGIN: Stylesheets
   ================================================== -->
 
-  <link rel="stylesheet" href="/cnvs/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/styles/styles.css">
+  <link rel="stylesheet" href="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
 
   <!-- =================================================
   END: Stylesheets
@@ -134,18 +135,15 @@ BEGIN: Head
   BEGIN: Javascripts
   ================================================== -->
 
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery-2.2.0.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/modernizr-custom.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/bootstrap/modal.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/google-code-prettify/prettify.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/jquery.sticky-kit.min.js"></script>
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/jquery.waypoints.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/cnvs/javascripts/vendor/waypoints/shortcuts/sticky.min.js"></script> -->
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
-  <script type="text/javascript" src="/cnvs/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
-  <link rel="stylesheet" href="/cnvs/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/jquery.sticky-kit.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/imsky-holder-8220898/holder.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/popper.js/popper.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/tooltip.js/tooltip.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="/cnvs/assets/javascripts/vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.js"></script>
+
 
   <!-- =================================================
   END: Javascripts
@@ -158,10 +156,6 @@ END: Head
 ================================================== -->
 
 
-  <!-- =================================================
-  BEGIN: Body
-  ================================================== -->
-
   <body>
 
     <!-- BEGIN: Livereload -->
@@ -170,35 +164,40 @@ END: Head
 
 <!-- END: Livereload -->
 
-<!-- =================================================
-BEGIN: Icon SVG Definitions
-================================================== -->
-
 <svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <symbol id="icons-square" viewBox="0 0 16 16">
-    <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+    <rect x="0" y="0" width="16" height="16"></rect>
+  </symbol>
+
+  <symbol id="icons-check" viewBox="0 0 16 16">
+    <polygon points="3.11873314 7.88132268 1.8813 9.11876515 5.50000753 12.7375 14.1187 4.11874248 12.8812669 2.8813 5.50000753 10.262615"></polygon>
+  </symbol>
+
+  <symbol id="icons-circle-arrow-up" viewBox="0 0 16 16">
+    <path d="M7.79441138,15.9974098 C7.86273157,15.9991331 7.93126455,16 8,16 C8.06873545,16 8.13726843,15.9991331 8.20558862,15.9974098 L7.79441138,15.9974098 Z M6.99870848,15.9379451 C3.05302219,15.4452736 0,12.0791726 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.0800652 12.9456416,15.4467467 8.99870128,15.9382681 L8.99870128,7.23487303 L10.8799725,9.11614592 L12.1174049,7.87871278 L7.99870488,3.76000977 L3.88000488,7.87871278 L5.11743729,9.11614592 L6.99870848,7.23487303 L6.99870848,15.9379451 Z"></path>
+  </symbol>
+
+  <symbol id="icons-open-external" viewBox="0 0 16 16">
+    <path d="M12,5.41421128 L7.70711128,9.7071 L6.2929,8.29288872 L10.5857887,4 L8,4 L8,2 L14,2 L14,8 L12,8 L12,5.41421128 Z M2,2 L6,2 L6,4 L4,4 L4,12 L12,12 L12,10 L14,10 L14,14 L2,14 L2,2 Z"></path>
+  </symbol>
+
+  <symbol id="icons-users-plus" viewBox="0 0 16 16">
+    <path d="M12,11 L12,9 L11,9 L11,11 L9,11 L9,12 L11,12 L11,14 L12,14 L12,12 L14,12 L14,11 L12,11 Z M10.8703455,7.04370289 C11.0760971,7.01489482 11.2863091,7 11.5,7 C13.9852814,7 16,9.01471863 16,11.5 C16,13.9852814 13.9852814,16 11.5,16 C9.18372317,16 7.27618653,14.2499752 7.02746439,12 L5,12 L5,8.80199104 C6.15887373,7.70537116 7.9676434,7 10,7 C10.2952703,7 10.5858213,7.01488873 10.8703455,7.04370289 Z M10,7 C8.34314575,7 7,5.65685425 7,4 C7,2.34314575 8.34314575,1 10,1 C11.6568542,1 13,2.34314575 13,4 C13,5.65685425 11.6568542,7 10,7 Z" fill-opacity="0.4"></path>
+    <path d="M7.22618149,10.0873965 C6.82947988,10.030053 6.41950301,10 6,10 C3.9676434,10 2.15887373,10.7053712 1,11.801991 L1,15 L8.67133283,15 C7.65183347,14.1750222 7,12.9136331 7,11.5 C7,11.0065534 7.07942252,10.5316569 7.22618149,10.0873965 Z M8.8806793,7.84045667 C8.95835285,7.57377882 9,7.29175301 9,7 C9,5.34314575 7.65685425,4 6,4 C4.34314575,4 3,5.34314575 3,7 C3,8.65685425 4.34314575,10 6,10 C6.50291906,10 6.97693439,9.87624843 7.39325602,9.65753526 C7.72107754,8.92796723 8.23759966,8.30156001 8.8806793,7.84045667 Z"></path>
   </symbol>
 
 </svg>
 
-<!-- =================================================
-END: Icon SVG Definitions
-================================================== -->
 
 
-
-    <!-- =================================================
-    BEGIN: Canvas
-    ================================================== -->
-
-    <div class="canvas  flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
+    <div class="app flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
       <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
-<div class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
+<section class="sidebar custom-scrollbar flex flex-direction-top-to-bottom flex-item-shrink-0">
 
   
 
@@ -210,7 +209,7 @@ BEGIN: Header
 
   <div class="header-inner">
 
-    <div class="pod pod-narrow pod-short">
+    <div class="pod">
 
       <h1 class="header-logo">
 
@@ -237,15 +236,11 @@ END: Header
 ================================================== -->
 
 
-  <!-- =================================================
-BEGIN: Navigation
-================================================== -->
-
-<nav class="navigation fill">
+  <nav class="navigation fill">
 
   <div class="navigation-inner">
 
-    <div class="container-fluid-narrow pod pod-narrow flush-top flush-bottom">
+    <div class="container-fluid-narrow pod flush-top flush-bottom">
 
       
 
@@ -451,8 +446,13 @@ BEGIN: Navigation
 
   
 
-</ul>
+    <li class=" ">
 
+      <a href="/cnvs/components/tooltips/" class="">
+
+        Tooltips
+
+      </a>
 
       
 
@@ -460,13 +460,8 @@ BEGIN: Navigation
 
   
 
-    <li class=" ">
+</ul>
 
-      <a href="/cnvs/updates/" class="">
-
-        Updates
-
-      </a>
 
       
 
@@ -483,347 +478,130 @@ BEGIN: Navigation
 
 </nav>
 
-<!-- =================================================
-END: Navigation
-================================================== -->
 
-
-</div>
+</section>
 
 <!-- =================================================
 BEGIN: Canvas Sidebar
 ================================================== -->
 
 
-      <!-- =================================================
-      BEGIN: Page
-      ================================================== -->
+      <section class="/components/modals/index page flex-item-grow-1">
 
-      <div class="page flex-item-grow-1">
+        <div class="pod pod-tall">
 
-        
+  <div class="container">
 
+    <section class="page-header pod-tall-bottom">
 
+      
 
+        <p class="h1 page-header-headline flush-top short">
 
+          Modals
 
+        </p>
 
+      
 
+      
 
+        <p class="page-header-description lead flush-bottom">
 
-<!-- =================================================
-BEGIN: Page Header
-================================================== -->
+          Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
 
-<div class="page-header fill fill-light left">
+        </p>
 
-  
+      
 
-  <div class="page-header-inner">
+      
 
-    <div class="container-fluid pod pod-short">
+      
 
-      <div class="row">
+        <div class="page-navigation pod-tall-top">
 
-        <div class="column-small-8 column-medium-8 column-large-10">
+          <h6 class="text-uppercase">
 
-          <!-- BEGIN: Page Header Title -->
+            Table of Contents
 
-          <h1 class="page-header-title invisible ">
+          </h6>
 
-            <?php
-
-            echo $page_header_title;
-
-            ?>
-
-          </h1>
-
-          <!-- END: Page Header Title -->
-
-          
-
-            <!-- BEGIN: Page Header Headline -->
-
-            <div class="row">
-
-              <div class="column-small-12 column-jumbo-10">
-
-                
-
-                  <p class="h6 page-header-subheadline flush  text-align-left ">
-
-                    
-
-                      <a href="/components/">
-
-                    
-
-                    Components
-
-                    
-
-                      </a>
-
-                    
-
-                  </p>
-
-                
-
-                <p class="h1 page-header-headline flush-top  text-align-left  flush-bottom">
-
-                  Modals
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <!-- END: Page Header Headline -->
-
-          
-
-          
-
-          
+          <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#example">Example</a></li>
+<li class="toc-entry toc-h1"><a href="#modal-structure">Modal Structure</a></li>
+<li class="toc-entry toc-h1"><a href="#modal-sizes">Modal Sizes</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#small-modal">Small Modal</a></li>
+<li class="toc-entry toc-h2"><a href="#large-modal">Large Modal</a></li>
+</ul>
+</li>
+</ul>
 
         </div>
 
+      
+
+    </section>
+
+    <section class="page-body">
+
+      <p>Use the class <code class="highlighter-rouge">.modal</code> in combination with one or more nested layout components to quickly create a new modal.  Below is an example of simple modal with a header, body, and footer.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell panel-cell-dark">
+
+    <div class="modal modal-inline">
+
+      <div class="modal-header">
+
+        <h4 class="modal-header-title flush">
+
+          Join Our Mailing List
+
+        </h4>
+
       </div>
 
-    </div>
+      <div class="modal-body">
 
-  </div>
+        <p>
 
-</div>
+          Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
 
-<!-- =================================================
-END: Page Header
-================================================== -->
+        </p>
 
+        <div class="form flush-bottom">
 
-        <!-- =================================================
-        BEGIN: Page Content Wrapper
-        ================================================== -->
+          <div class="row">
 
-        <div class="page-content-wrapper flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-large">
+            <div class="column-small-6">
 
-          
+              <div class="form-group flush-bottom-screen-small">
 
-            <!-- =================================================
-BEGIN: Page Navigation
-================================================== -->
-<!-- flex-screen-large  -->
-<div class="page-navigation flex-item-shrink-0-screen-large flex-item-order-1-screen-large" id="page-navigation">
+                <label>
 
-  <div class="page-navigation-sticky">
+                  Full Name
 
-    <div class="container-fluid pod">
+                </label>
 
-      <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#modals-structure" class="">
-
-        Modal Structure
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#modals-sizes" class="">
-
-        Modal Sizes
-
-      </a>
-
-      
-
-        <ul class="page-navigation-menu list-unstyled">
-
-  
-
-    <li class="">
-
-      <a href="#modals-sizes-small" class="">
-
-        Small Modal
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-    <li class="">
-
-      <a href="#modals-sizes-large" class="">
-
-        Large Modal
-
-      </a>
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-      
-
-    </li>
-
-  
-
-</ul>
-
-
-    </div>
-
-  </div>
-
-</div>
-
-<!-- =================================================
-END: Page Navigation
-================================================== -->
-
-
-          
-
-          <!-- =================================================
-          BEGIN: Page Content
-          ================================================== -->
-
-          <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
-
-            <!-- =================================================
-BEGIN: Modals
-================================================== -->
-
-<section class="fill" id="modals">
-
-  <div class="container-fluid pod">
-
-    <!-- =================================================
-    BEGIN: Modals Overview
-    ================================================== -->
-
-    <section id="modals-overview">
-
-      <p class="lead">
-
-        Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
-
-      </p>
-
-      <p>
-
-        Use the class <code>.modal</code> in combination with one or more nested layout components to quickly create a new modal.  Below is an example of simple modal with a header, body, and footer.
-
-      </p>
-
-      <!-- =================================================
-      BEGIN: Example
-      ================================================== -->
-
-      <div class="panel panel-inverse flush-bottom">
-
-        <div class="panel-cell panel-cell-inverse">
-
-          <div class="modal modal-inline">
-
-            <div class="modal-header">
-
-              <h5 class="modal-header-title flush">
-
-                Join Our Mailing List
-
-              </h5>
-
-            </div>
-
-            <div class="modal-body">
-
-              <p>
-
-                Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
-
-              </p>
-
-              <div class="form flush-bottom">
-
-                <div class="row">
-
-                  <div class="column-small-6">
-
-                    <div class="form-group flush-bottom-screen-small">
-
-                      <label>
-
-                        Full Name
-
-                      </label>
-
-                      <input class="form-control" type="text">
-
-                    </div>
-
-                  </div>
-
-                  <div class="column-small-6">
-
-                    <div class="form-group flush-bottom-screen-small">
-
-                      <label>
-
-                        Email
-
-                      </label>
-
-                      <input class="form-control" type="email">
-
-                    </div>
-
-                  </div>
-
-                </div>
+                <input class="form-control" type="text">
 
               </div>
 
             </div>
 
-            <div class="modal-footer">
+            <div class="column-small-6">
 
-              <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
+              <div class="form-group flush-bottom-screen-small">
 
-                <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+                <label>
 
-                  Submit
+                  Email
 
-                </a>
+                </label>
 
-                <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                  Close
-
-                </a>
+                <input class="form-control" type="email">
 
               </div>
 
@@ -835,103 +613,298 @@ BEGIN: Modals
 
       </div>
 
-      <!-- =================================================
-      END: Example
-      ================================================== -->
+      <div class="modal-footer">
 
-    </section>
+        <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
 
-    <!-- =================================================
-    END: Modals Overview
-    ================================================== -->
+          <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
 
-    <!-- =================================================
-BEGIN: Modal Example
-================================================== -->
+            Submit
 
-<section id="modals-example">
+          </a>
 
-  <h2>
+          <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
 
-    Example
+            Close
 
-  </h2>
+          </a>
 
-  <p>
+        </div>
 
-    Use a button or link to trigger the display of a modal.  CNVS uses the class <code>.fade</code> to hide the modal.  Adding the class <code>.in</code> to <code>.fade</code> will display the modal in.  You can easily override these class styles to create unique keyframe sequences for your project.
+      </div>
 
-  </p>
+    </div>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+  </div>
 
-  <div class="panel flush-bottom">
+</div>
 
-    <div class="panel-cell">
+<h1 id="example">
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h1>
 
-      <a href="#" class="button" data-toggle="modal" data-target="#myModal">Show Modal</a>
+<p>Use a button or link to trigger the display of a modal.  CNVS uses the class <code class="highlighter-rouge">.fade</code> to hide the modal.  Adding the class <code class="highlighter-rouge">.in</code> to <code class="highlighter-rouge">.fade</code> will display the modal in.  You can easily override these class styles to create unique keyframe sequences for your project.</p>
 
-      <div class="modal fade" id="myModal">
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <a href="#" class="button" data-toggle="modal" data-target="#myModal">Show Modal</a>
+
+    <div class="modal fade" id="myModal">
+
+      <div class="modal-header">
+
+        <h4 class="modal-header-title flush">
+
+          Join Our Mailing List
+
+        </h4>
+
+      </div>
+
+      <div class="modal-body">
+
+        <p>
+
+          Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
+
+        </p>
+
+        <div class="form flush-bottom">
+
+          <div class="row">
+
+            <div class="column-small-6">
+
+              <div class="form-group flush-bottom-screen-small">
+
+                <label>
+
+                  Full Name
+
+                </label>
+
+                <input class="form-control" type="text">
+
+              </div>
+
+            </div>
+
+            <div class="column-small-6">
+
+              <div class="form-group flush-bottom-screen-small">
+
+                <label>
+
+                  Email
+
+                </label>
+
+                <input class="form-control" type="email">
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
+
+          <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+
+            Submit
+
+          </a>
+
+          <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium" data-dismiss="modal">
+
+            Close
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#myModal"</span><span class="nt">&gt;</span>Show Modal<span class="nt">&lt;/a&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"myModal"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+  </div>
+
+</div>
+
+<h1 id="modal-structure">
+<a id="modal-structure" class="anchor" href="#modal-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modal Structure</h1>
+
+<p>To create a new modal use the <code class="highlighter-rouge">.modal</code> class. A modal is composed of 3 primary sections, all of which are optional and can be used interchangeably – <code class="highlighter-rouge">.modal-header</code>, <code class="highlighter-rouge">.modal-body</code>, and <code class="highlighter-rouge">.modal-footer</code>.  Looking for just the body and footer? It’s as simple as not including <code class="highlighter-rouge">.modal-header</code> in your modal.</p>
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <div class="modal modal-inline">
+
+      <div class="modal-header text-align-center">
+
+        `.modal-header`
+
+      </div>
+
+      <div class="modal-body text-align-center">
+
+        `.modal-body`
+
+      </div>
+
+      <div class="modal-footer text-align-center">
+
+        `.modal-footer`
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+    …
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+
+    <h1 id="modal-sizes">
+<a id="modal-sizes" class="anchor" href="#modal-sizes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modal Sizes</h1>
+
+    <p>Two additional modal sizes are provided by CNVS using the class modifiers <code class="highlighter-rouge">.modal-small</code> and <code class="highlighter-rouge">.modal-large</code>.  The class modifiers only impact the width of the modal and, if defined in CNVS, the inner padding of the header, body, and footer.</p>
+
+    <h2 id="small-modal">
+<a id="small-modal" class="anchor" href="#small-modal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Small Modal</h2>
+
+    <p>Use the class modifier <code class="highlighter-rouge">.modal-small</code> to reduce the width of your modal.</p>
+
+    <div class="panel flush-bottom">
+
+  <div class="panel-cell panel-cell-dark">
+
+    <div class="modal modal-small modal-inline">
+
+      <div class="modal-content">
 
         <div class="modal-header">
 
-          <h5 class="modal-header-title flush">
+          <h4 class="modal-header-title text-align-center flush">
 
-            Join Our Mailing List
+            Modal Header Title
 
-          </h5>
+          </h4>
 
         </div>
 
         <div class="modal-body">
 
-          <p>
+          <p class="text-align-center flush">
 
-            Stay updated on the latest news and releases from CNVS. Join our mailing list today. We hate spam too.
+            Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.
 
           </p>
 
-          <div class="form flush-bottom">
+        </div>
 
-            <div class="row">
+        <div class="modal-footer">
 
-              <div class="column-small-6">
+          <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small">
 
-                <div class="form-group flush-bottom-screen-small">
+            <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small">
 
-                  <label>
+              Close
 
-                    Full Name
+            </a>
 
-                  </label>
+            <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small">
 
-                  <input class="form-control" type="text">
+              Submit
 
-                </div>
-
-              </div>
-
-              <div class="column-small-6">
-
-                <div class="form-group flush-bottom-screen-small">
-
-                  <label>
-
-                    Email
-
-                  </label>
-
-                  <input class="form-control" type="email">
-
-                </div>
-
-              </div>
-
-            </div>
+            </a>
 
           </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
+
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal modal-small modal-inline"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>        </div>
+
+      </div>
+
+</div>
+
+    <h2 id="large-modal">
+<a id="large-modal" class="anchor" href="#large-modal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Large Modal</h2>
+
+    <p>Use the class modifier <code class="highlighter-rouge">.modal-large</code> to increase the width of your modal.</p>
+
+    <div class="panel flush-bottom">
+
+  <div class="panel-cell panel-cell-dark">
+
+    <div class="modal modal-large modal-inline">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <h4 class="modal-header-title flush">
+
+            Modal Header Title
+
+          </h4>
+
+        </div>
+
+        <div class="modal-body">
+
+          <p class="flush">
+
+            Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+          </p>
 
         </div>
 
@@ -939,377 +912,49 @@ BEGIN: Modal Example
 
           <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
 
-            <a href="#" class="button button-primary flex-item-order-1-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-end-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-              Submit
-
-            </a>
-
-            <a href="#" class="button flex-item-order-0-screen-small flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-align-start-screen-medium flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium" data-dismiss="modal">
+            <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
 
               Close
 
             </a>
 
+            <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
+
+              Submit
+
+            </a>
+
           </div>
 
         </div>
 
       </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;a href="#" class="button" data-toggle="modal" data-target="#myModal"&gt;Show Modal&lt;/a&gt;
-
-&lt;div class="modal fade" id="myModal"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block">
 
-</section>
-
-<!-- =================================================
-END: Modal Example
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Modal Structure
-================================================== -->
-
-<section id="modals-structure">
-
-  <h2>
-
-    Modal Structure
-
-  </h2>
-
-  <p>
-
-    To create a new modal use the <code>.modal</code> class. A modal is composed of 3 primary sections, all of which are optional and can be used interchangeably -- <code>.modal-header</code>, <code>.modal-body</code>, and <code>.modal-footer</code>.  Looking for just the body and footer? It's as simple as not including <code>.modal-header</code> in your modal.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="modal modal-inline">
-
-        <div class="modal-header text-align-center">
-
-          <code>.modal-header</code>
-
-        </div>
-
-        <div class="modal-body text-align-center">
-
-          <code>.modal-body</code>
-
-        </div>
-
-        <div class="modal-footer text-align-center">
-
-          <code>.modal-footer</code>
-
-        </div>
-
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal modal-large modal-inline"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>        </div>
       </div>
+</div>
+  </div>
+</div>
 
-    </div>
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="modal"&gt;
-  &lt;div class="modal-header"&gt;
-    &hellip;
-  &lt;/div&gt;
-  &lt;div class="modal-body"&gt;
-    &hellip;
-  &lt;/div&gt;
-  &lt;div class="modal-footer"&gt;
-    &hellip;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-    </div>
+    </section>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+</div>
 
-</section>
 
-<!-- =================================================
-END: Modal Structure
-================================================== -->
-
-    <!-- =================================================
-BEGIN: Modal Sizes
-================================================== -->
-
-<section id="modals-sizes">
-
-  <h2>
-
-    Modal Sizes
-
-  </h2>
-
-  <p>
-
-    Two additional modal sizes are provided by CNVS using the class modifiers <code>.modal-small</code> and <code>.modal-large</code>.  The class modifiers only impact the width of the modal and, if defined in CNVS, the inner padding of the header, body, and footer.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Small Modal
-  ================================================== -->
-
-  <section id="modals-sizes-small">
-
-    <h3>
-
-      Small Modal
-
-    </h3>
-
-    <p>
-
-      Use the class modifier <code>.modal-small</code> to reduce the width of your modal.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel panel-inverse flush-bottom">
-
-      <div class="panel-cell panel-cell-inverse">
-
-        <div class="modal modal-small modal-inline">
-
-          <div class="modal-content">
-
-            <div class="modal-header">
-
-              <h5 class="modal-header-title text-align-center flush">
-
-                Modal Header Title
-
-              </h5>
-
-            </div>
-
-            <div class="modal-body">
-
-              <p class="text-align-center flush">
-
-                Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.
-
-              </p>
-
-            </div>
-
-            <div class="modal-footer">
-
-              <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small">
-
-                <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small">
-
-                  Close
-
-                </a>
-
-                <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small">
-
-                  Submit
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;div class="modal modal-small modal-inline"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Small Modal
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Large Modal
-  ================================================== -->
-
-  <section id="modals-sizes-large">
-
-    <h3>
-
-      Large Modal
-
-    </h3>
-
-    <p>
-
-      Use the class modifier <code>.modal-large</code> to increase the width of your modal.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel panel-inverse flush-bottom">
-
-      <div class="panel-cell panel-cell-inverse">
-
-        <div class="modal modal-large modal-inline">
-
-          <div class="modal-content">
-
-            <div class="modal-header">
-
-              <h5 class="modal-header-title flush">
-
-                Modal Header Title
-
-              </h5>
-
-            </div>
-
-            <div class="modal-body">
-
-              <p class="flush">
-
-                Maecenas faucibus mollis interdum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-              </p>
-
-            </div>
-
-            <div class="modal-footer">
-
-              <div class="button-collection flush-bottom flex flex-direction-top-to-bottom flex-align-items-stretch-screen-small flex-direction-left-to-right-screen-small flex-justify-items-space-between-screen-medium">
-
-                <a href="#" class="button flex-item-align-start-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                  Close
-
-                </a>
-
-                <a href="#" class="button button-primary flex-item-align-end-screen-medium flex-item-grow-1-screen-small flex-item-basis-none-screen-small flex-item-grow-0-screen-medium flex-item-basis-auto-screen-medium">
-
-                  Submit
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;div class="modal modal-large modal-inline"&gt;
-  &hellip;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Small Modal
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Modal Sizes
-================================================== -->
-
-
-  </div>
-
-</section>
-
-<!-- =================================================
-END: Modals
-================================================== -->
-
-
-          </div>
-
-          <!-- =================================================
-          END: Page Content
-          ================================================== -->
-
-        </div>
-
-        <!-- =================================================
-        END: Page Content Wrapper
-        ================================================== -->
-
-      </div>
-
-      <!-- =================================================
-      END: Page
-      ================================================== -->
+      </section>
 
       
 
@@ -1337,14 +982,10 @@ END: Footer
     </div>
 
     <!-- =================================================
-    END: Canvas
-    ================================================== -->
-
-    <!-- =================================================
 BEGIN: Javascripts
 ================================================== -->
 
-<script type="text/javascript" src="/cnvs/javascripts/scripts.min.js"></script>
+<script type="text/javascript" src="/cnvs/assets/javascripts/scripts.min.js"></script>
 
 <!-- =================================================
 END: Javascripts
@@ -1352,9 +993,5 @@ END: Javascripts
 
 
   </body>
-
-  <!-- =================================================
-  END: Body
-  ================================================== -->
 
 </html>
