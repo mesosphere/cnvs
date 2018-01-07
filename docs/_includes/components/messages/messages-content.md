@@ -1,69 +1,45 @@
-<!-- =================================================
-BEGIN: Message States
-================================================== -->
+# Message Content
 
-<section id="messages-content">
+You can include more than body text in a message. Messages can support any HTML content. All type styling will be retained. However, if you add the class `.message-type-styling` to any typographic element, the preferred message type color and styling will be applied. For links, add the class `.message-link` to any `<a>`.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Message Content
+  <div class="panel-cell">
 
-  </h1>
+    <div class="message message-danger flush-bottom">
 
-  <p>
+      <h3 class="flush-top message-type-style">
 
-    You can include more than body text in a message. Messages can support any HTML content. All type styling will be retained. However, if you add the class <code>.message-type-styling</code> to any typographic element, the preferred message type color and styling will be applied. For links, add the class <code>.message-link</code> to any <code>&lt;a&gt;</code>.
+        Some Important Headline
 
-  </p>
+      </h3>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      <p>
 
-  <div class="panel flush-bottom">
+        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
 
-    <div class="panel-cell">
+      </p>
 
-      <div class="message message-danger flush-bottom">
-
-        <h3 class="flush-top message-type-style">
-
-          Some Important Headline
-
-        </h3>
-
-        <p>
-
-          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-
-        </p>
-
-        <a href="#" class="message-link">Sure, let's do that thing</a>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="message message-danger"&gt;
-  &lt;h3 class="message-type-style"&gt;
-    Some Important Headline
-  &lt;/h3&gt;
-  &lt;p&gt;
-    Cras justo odio …
-  &lt;/p&gt;
-  &lt;a href="#" class="message-link"&gt;Sure, let's do that thing&lt;/a&gt;
-&lt;/div&gt;
-</pre>
+      <a href="#" class="message-link">Sure, let's do that thing</a>
 
     </div>
 
   </div>
 
-</section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<!-- =================================================
-END: Icons
-================================================== -->
+```html
+<div class="message message-danger">
+  <h3 class="message-type-style">
+    Some Important Headline
+  </h3>
+  <p>
+    Cras justo odio …
+  </p>
+  <a href="#" class="message-link">Sure, let's do that thing</a>
+</div>
+```
+
+  </div>
+
+</div>

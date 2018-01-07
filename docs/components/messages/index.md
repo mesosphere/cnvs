@@ -8,11 +8,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  Use messages in your project to convey information, provide tips, communicate success, or even flag and notify the user of errors. Wrap your message in an element with the class <code>.message</code> to apply the default message appearance. Any HTML can live inside a message, though content is typically limited to text and simple actions.
-
-</p>
+Use messages in your project to convey information, provide tips, communicate success, or even flag and notify the user of errors. Wrap your message in an element with the class `.message` to apply the default message appearance. Any HTML can live inside a message, though content is typically limited to text and simple actions.
 
 <div class="panel flush-bottom">
 
@@ -26,13 +22,13 @@ toc: true
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="message"&gt;
-  &lt;strong&gt;Information:&lt;/strong&gt; This is a relevant message you should read.
-&lt;/div&gt;
-</pre>
+```html
+<div class="message">
+  <strong>Information:</strong> This is a relevant message you should read.
+</div>
+```
 
   </div>
 
