@@ -8,5 +8,5 @@ page-header:
 toc: true
 ---
 
-{% include layout/responsive-utilities/responsive-utilities-responsive-options.html %}
-{% include layout/responsive-utilities/responsive-utilities-print-options.html %}
+{% include layout/responsive-utilities/responsive-utilities-responsive-options.md %}
+{% include layout/responsive-utilities/responsive-utilities-print-options.md %}
