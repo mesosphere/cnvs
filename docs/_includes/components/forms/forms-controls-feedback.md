@@ -1,80 +1,49 @@
-<!-- =================================================
-BEGIN: Form Form Control Feedback
-================================================== -->
+# Form Control Feedback
 
-<section id="forms-controls-feedback">
+Apply the class `.form-control-feedback` to a standard type block to provide contextual feedback  like help text or hint text to form controls and form control groups.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Form Control Feedback
+  <div class="panel-cell">
 
-  </h1>
+    <form class="form flush-bottom">
 
-  <p>
+      <div class="form-group flush-bottom">
 
-    Apply the class <code>.form-control-feedback</code> to a standard type block to provide contextual feedback  like help text or hint text to form controls and form control groups.
+        <label>
 
-  </p>
+          Input with feedback
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+        </label>
 
-  <div class="panel flush-bottom">
+        <input type="text" class="form-control" placeholder="Placeholder">
 
-    <div class="panel-cell">
+        <p class="form-control-feedback">
 
-      <form class="form flush-bottom">
+          Example block-level feedback text here.
 
-        <div class="form-group flush-bottom">
+        </p>
 
-          <label>
+      </div>
 
-            Input with feedback
-
-          </label>
-
-          <input type="text" class="form-control" placeholder="Placeholder">
-
-          <p class="form-control-feedback">
-
-            Example block-level feedback text here.
-
-          </p>
-
-        </div>
-
-      </form>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;label&gt;
-   Input with help text
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;p class="form-control-feedback"&gt;
-    Example block-level feedback text here.
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-    </div>
+    </form>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
+```html
+<div class="form-group">
+  <label>
+   Input with help text
+  </label>
+  <input type="text" class="form-control" placeholder="Placeholder">
+  <p class="form-control-feedback">
+    Example block-level feedback text here.
+  </p>
+</div>
+```
 
+  </div>
 
-
-</section>
-
-<!-- =================================================
-END: Form Form Control Feedback
-================================================== -->
+</div>

@@ -1,694 +1,518 @@
-<!-- =================================================
-BEGIN: Form Controls
-================================================== -->
+# Form Controls
 
-<section id="forms-controls">
+## Inputs
 
-  <h1>
+Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
 
-    Form Controls
+<div class="panel flush-bottom">
 
-  </h1>
+  <div class="panel-cell">
 
-  <section id="forms-controls-inputs">
+    <form class="form flush-bottom">
 
-    <h2>
+      <div class="row">
 
-      Inputs
+        <div class="column-small-12">
 
-    </h2>
+          <div class="form-group flush-bottom">
 
-    <p>
-
-      Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group flush-bottom">
-
-                <input type="text" class="form-control" placeholder="Placeholder Text">
-
-              </div>
-
-            </div>
+            <input type="text" class="form-control" placeholder="Placeholder Text">
 
           </div>
 
-        </form>
+        </div>
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+    </form>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder Text"&gt;
-&lt;/div&gt;
-</pre>
+  </div>
 
-      </div>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-    </div>
+```html
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Placeholder Text">
+</div>
+```
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+  </div>
 
-  </section>
+</div>
 
-  <section id="forms-controls-textarea">
+## Textarea
 
-    <h2>
+Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
 
-      Textarea
+<div class="panel flush-bottom">
 
-    </h2>
+  <div class="panel-cell">
 
-    <p>
+    <form class="form flush-bottom">
 
-      Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
+      <div class="row">
 
-    </p>
+        <div class="column-small-12">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+          <div class="form-group flush-bottom">
 
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group flush-bottom">
-
-                <textarea class="form-control" placeholder="Placeholder Text" rows="4"></textarea>
-
-              </div>
-
-            </div>
+            <textarea class="form-control" placeholder="Placeholder Text" rows="4"></textarea>
 
           </div>
 
-        </form>
+        </div>
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+    </form>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;textarea class="form-control" placeholder="Placeholder Text" rows="4"&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-</pre>
+  </div>
 
-      </div>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-    </div>
+```html
+<div class="form-group">
+  <textarea class="form-control" placeholder="Placeholder Text" rows="4"></textarea>
+</div>
+```
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+</div>
 
-  <section id="forms-controls-toggles">
+## Checkboxes &amp; Radios
 
-    <h2>
+Checkboxes and radios, both staple toggles of the traditional HTML form, share a single class in CNVS, `.form-control-toggle`, to governs layout and basic styling.  Wrap a checkbox or radio in the class `.form-control-toggle`, preferrably using a `<label>` for added context and accessibility.
 
-      Checkboxes &amp; Radios
+<div class="panel flush-bottom">
 
-    </h2>
+  <div class="panel-cell">
 
-    <p>
+    <form class="form flush-bottom">
 
-      Checkboxes and radios, both staple toggles of the traditional HTML form, share a single class in CNVS, <code>.form-control-toggle</code>, to governs layout and basic styling.  Wrap a checkbox or radio in the class <code>.form-control-toggle</code>, preferrably using a <code>&lt;label&gt;</code> for added context and accessibility.
+      <div class="row">
 
-    </p>
+        <div class="column-small-12">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+          <div class="form-group">
 
-    <div class="panel flush-bottom">
+            <label class="form-control-toggle">
 
-      <div class="panel-cell">
+              <input type="checkbox">
 
-        <form class="form flush-bottom">
+              First Option
 
-          <div class="row">
+            </label>
 
-            <div class="column-small-12">
+            <label class="form-control-toggle">
 
-              <div class="form-group">
+              <input type="checkbox">
 
-                <label class="form-control-toggle">
+              Second Option
 
-                  <input type="checkbox">
+            </label>
 
-                  First Option
+            <label class="form-control-toggle disabled">
 
-                </label>
+              <input type="checkbox" disabled="">
 
-                <label class="form-control-toggle">
+              Third Option (Disabled)
 
-                  <input type="checkbox">
-
-                  Second Option
-
-                </label>
-
-                <label class="form-control-toggle disabled">
-
-                  <input type="checkbox" disabled="">
-
-                  Third Option (Disabled)
-
-                </label>
-
-              </div>
-
-              <div class="form-group flush-bottom">
-
-                <label class="form-control-toggle">
-
-                  <input type="radio" name="sample-radio-group" checked="">
-
-                  First Option
-
-                </label>
-
-                <label class="form-control-toggle">
-
-                  <input type="radio" name="sample-radio-group">
-
-                  Second Option
-
-                </label>
-
-                <label class="form-control-toggle disabled">
-
-                  <input type="radio" name="sample-radio-group" disabled="">
-
-                  Third Option (Disabled)
-
-                </label>
-
-              </div>
-
-            </div>
+            </label>
 
           </div>
 
-        </form>
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle">
+
+              <input type="radio" name="sample-radio-group" checked="">
+
+              First Option
+
+            </label>
+
+            <label class="form-control-toggle">
+
+              <input type="radio" name="sample-radio-group">
+
+              Second Option
+
+            </label>
+
+            <label class="form-control-toggle disabled">
+
+              <input type="radio" name="sample-radio-group" disabled="">
+
+              Third Option (Disabled)
+
+            </label>
+
+          </div>
+
+        </div>
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+    </form>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;label class="form-control-toggle"&gt;
-    &lt;input type="checkbox"&gt;
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<div class="form-group">
+  <label class="form-control-toggle">
+    <input type="checkbox">
     First Option
-  &lt;/label&gt;
-  &lt;label class="form-control-toggle"&gt;
-    &lt;input type="checkbox"&gt;
+  </label>
+  <label class="form-control-toggle">
+    <input type="checkbox">
     Second Option
-  &lt;/label&gt;
+  </label>
   …
-&lt;/div&gt;
-</pre>
+</div>
+```
+
+  </div>
+
+</div>
+
+### Custom Checkboxes &amp; Radios
+
+Looking to take your checkbox or radio toggle to the next level? Add the class `.form-control-toggle-custom` to your exisiting `.form-control-toggle` wrapped checkbox or radio input.  The `<input>` is hidden from view, but still available in the DOM for use in your form.  In order to replace the hidden checkbox or radio component with a styled alternate, you must also inject a new element with the class `.form-control-toggle-indicator`. We recommend a simple `<span>` for this.
+
+For the checkmark icon, as well as the circle icon for radios, we use base64 embedded SVG icons and adjust the color.
+
+#### Checkboxes
+
+<div class="panel pod flush-top flush-horizontal pod-short-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="checkbox" checked />
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+    </form>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-    <section id="forms-controls-toggles-custom">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      <h3>
-
-        Custom Checkboxes &amp; Radios
-
-      </h3>
-
-      <p>
-
-        Looking to take your checkbox or radio toggle to the next level? Add the class <code>.form-control-toggle-custom</code> to your exisiting <code>.form-control-toggle</code> wrapped checkbox or radio input.  The <code>&lt;input&gt;</code> is hidden from view, but still available in the DOM for use in your form.  In order to replace the hidden checkbox or radio component with a styled alternate, you must also inject a new element with the class <code>.form-control-toggle-indicator</code>. We recommend a simple <code>&lt;span&gt;</code> for this.
-
-      </p>
-
-      <p>
-
-        For the checkmark icon, as well as the circle icon for radios, we use base64 embedded SVG icons and adjust the color.
-
-      </p>
-
-      <section id="forms-controls-toggles-custom-checkboxes">
-
-        <h4>
-
-          Checkboxes
-
-        </h4>
-
-        <!-- =================================================
-        BEGIN: Example
-        ================================================== -->
-
-        <div class="panel pod flush-top flush-horizontal pod-short-bottom">
-
-          <div class="panel-cell">
-
-            <form class="form flush-bottom">
-
-              <div class="row">
-
-                <div class="column-small-12">
-
-                  <div class="form-group flush-bottom">
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="checkbox" checked />
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </form>
-
-          </div>
-
-          <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;label class="form-control-toggle form-control-toggle"&gt;
-  &lt;input type="checkbox" checked /&gt;
-  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
+```html
+<label class="form-control-toggle form-control-toggle">
+  <input type="checkbox" checked />
+  <span class="form-control-toggle-indicator"></span>
   First Option
-&lt;/label&gt;
-</pre>
+</label>
+```
+
+  </div>
+
+</div>
+
+For indetermindate checkboxes, one whose state is neither true nor false, you may leverage the `:indeterminate` pseudo class.  However, you must use Javascript magic to manually set this property.  Something like this should work: `$(element).prop('indeterminate', true)`.
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="checkbox" class="indeterminate" />
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
 
           </div>
 
         </div>
 
-        <!-- =================================================
-        END: Example
-        ================================================== -->
+      </div>
 
-        <p>
+    </form>
 
-          For indetermindate checkboxes, one whose state is neither true nor false, you may leverage the <code>:indeterminate</code> pseudo class.  However, you must use Javascript magic to manually set this property.  Something like this should work: <code>$(element).prop('indeterminate', true)</code>.
+  </div>
 
-        </p>
+</div>
 
-        <!-- =================================================
-        BEGIN: Example
-        ================================================== -->
+#### Radios
 
-        <div class="panel flush-bottom">
+<div class="panel flush-bottom">
 
-          <div class="panel-cell">
+  <div class="panel-cell">
 
-            <form class="form flush-bottom">
+    <form class="form flush-bottom">
 
-              <div class="row">
+      <div class="row">
 
-                <div class="column-small-12">
+        <div class="column-small-12">
 
-                  <div class="form-group flush-bottom">
+          <div class="form-group flush-bottom">
 
-                    <label class="form-control-toggle form-control-toggle-custom">
+            <label class="form-control-toggle form-control-toggle-custom">
 
-                      <input type="checkbox" class="indeterminate" />
+              <input type="radio" name="sample-radio-group" checked="">
 
-                      <span class="form-control-toggle-indicator"></span>
+              <span class="form-control-toggle-indicator"></span>
 
-                      First Option
+              First Option
 
-                    </label>
+            </label>
 
-                  </div>
+            <label class="form-control-toggle form-control-toggle-custom">
 
-                </div>
+              <input type="radio" name="sample-radio-group">
 
-              </div>
+              <span class="form-control-toggle-indicator"></span>
 
-            </form>
+              Second Option
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Third Option
+
+            </label>
 
           </div>
 
         </div>
 
-        <!-- =================================================
-        END: Example
-        ================================================== -->
+      </div>
 
-      </section>
+    </form>
 
-      <section id="forms-controls-toggles-custom-radios">
+  </div>
 
-        <h4>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-          Radios
-
-        </h4>
-
-        <!-- =================================================
-        BEGIN: Example
-        ================================================== -->
-
-        <div class="panel flush-bottom">
-
-          <div class="panel-cell">
-
-            <form class="form flush-bottom">
-
-              <div class="row">
-
-                <div class="column-small-12">
-
-                  <div class="form-group flush-bottom">
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group" checked="">
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group">
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Second Option
-
-                    </label>
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group">
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Third Option
-
-                    </label>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </form>
-
-          </div>
-
-          <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;label class="form-control-toggle form-control-toggle"&gt;
-  &lt;input type="radio" /&gt;
-  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
+```html
+<label class="form-control-toggle form-control-toggle">
+  <input type="radio" />
+  <span class="form-control-toggle-indicator"></span>
   First Option
-&lt;/label&gt;
+</label>
 …
-</pre>
+```
+
+  </div>
+
+</div>
+
+#### Disabled
+
+Using the `disabled` attribute, placed inline on the checkbox or radio HTML element, will not only make the toggle un-clickable, but also adjusts the appearance to reflect it's inaccessibility.
+
+<div class="panel">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
+
+              <input type="checkbox" disabled checked/>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
+
+            <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
+
+              <input type="checkbox" disabled />
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Second Option
+
+            </label>
+
+          </div>
+
+          <div class="form-group flush-bottom">
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group" checked="" disabled>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              First Option
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group" disabled>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Second Option
+
+            </label>
+
+            <label class="form-control-toggle form-control-toggle-custom disabled">
+
+              <input type="radio" name="sample-radio-group" disabled>
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Third Option
+
+            </label>
 
           </div>
 
         </div>
 
-        <!-- =================================================
-        END: Example
-        ================================================== -->
+      </div>
 
-      </section>
+    </form>
 
-      <section id="forms-controls-toggles-custom-disabled">
+  </div>
 
-        <h4>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-          Disabled
-
-        </h4>
-
-        <p>
-
-          Using the <code>disabled</code> attribute, placed inline on the checkbox or radio HTML element, will not only make the toggle un-clickable, but also adjusts the appearance to reflect it's inaccessibility.
-
-        </p>
-
-        <!-- =================================================
-        BEGIN: Example
-        ================================================== -->
-
-        <div class="panel">
-
-          <div class="panel-cell">
-
-            <form class="form flush-bottom">
-
-              <div class="row">
-
-                <div class="column-small-12">
-
-                  <div class="form-group">
-
-                    <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
-
-                      <input type="checkbox" disabled checked/>
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                    <label class="form-control-toggle checkbox-inline form-control-toggle-custom">
-
-                      <input type="checkbox" disabled />
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Second Option
-
-                    </label>
-
-                  </div>
-
-                  <div class="form-group flush-bottom">
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group" checked="" disabled>
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      First Option
-
-                    </label>
-
-                    <label class="form-control-toggle form-control-toggle-custom">
-
-                      <input type="radio" name="sample-radio-group" disabled>
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Second Option
-
-                    </label>
-
-                    <label class="form-control-toggle form-control-toggle-custom disabled">
-
-                      <input type="radio" name="sample-radio-group" disabled>
-
-                      <span class="form-control-toggle-indicator"></span>
-
-                      Third Option
-
-                    </label>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </form>
-
-          </div>
-
-          <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;label class="form-control-toggle form-control-toggle"&gt;
-  &lt;input type="checkbox" disabled /&gt;
-  &lt;span class="form-control-toggle-indicator"&gt;&lt;/span&gt;
+```html
+<label class="form-control-toggle form-control-toggle">
+  <input type="checkbox" disabled />
+  <span class="form-control-toggle-indicator"></span>
   First Option
-&lt;/label&gt;
-</pre>
+</label>
+```
+
+  </div>
+
+</div>
+
+## Selects
+
+Default styling for `select` elements are available, or mirror custom control styling by wrapping any select in `.form-control` class and add the additional class `.form-control-select`.  For selects of type `multiple` add the class `.form-control-select-multiple`.
+
+<div class="panel flush-bottom">
+
+  <div class="panel-cell">
+
+    <form class="form flush-bottom">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <span class="form-control form-control-select">
+
+              <select>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
+
+          </div>
+
+          <div class="form-group flush-bottom">
+
+            <span class="form-control form-control-select form-control-select-multiple">
+
+              <select multiple>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
 
           </div>
 
         </div>
 
-        <!-- =================================================
-        END: Example
-        ================================================== -->
-
-      </section>
-
-    </section>
-
-  </section>
-
-  <section id="forms-controls-selects">
-
-    <h2>
-
-      Selects
-
-    </h2>
-
-    <p>
-
-      Default styling for <code>select</code> elements are available, or mirror custom control styling by wrapping any select in <code>.form-control</code> class and add the additional class <code>.form-control-select</code>.  For selects of type <code>multiple</code> add the class <code>.form-control-select-multiple</code>.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group">
-
-                <span class="form-control form-control-select">
-
-                  <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-              <div class="form-group flush-bottom">
-
-                <span class="form-control form-control-select form-control-select-multiple">
-
-                  <select multiple>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
-
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+    </form>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;span class="form-control form-control-select"&gt;
-    &lt;select&gt;
-      &lt;option&gt;1&lt;/option&gt;
-      &lt;option&gt;2&lt;/option&gt;
-      &lt;option&gt;…&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
+  </div>
 
-&lt;div class="form-group"&gt;
-  &lt;span class="form-control form-control-select form-control-select-multiple"&gt;
-    &lt;select multiple&gt;
-      &lt;option&gt;1&lt;/option&gt;
-      &lt;option&gt;2&lt;/option&gt;
-      &lt;option&gt;…&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-</pre>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      </div>
+```html
+<div class="form-group">
+  <span class="form-control form-control-select">
+    <select>
+      <option>1</option>
+      <option>2</option>
+      <option>…</option>
+    </select>
+  </span>
+</div>
 
-    </div>
+<div class="form-group">
+  <span class="form-control form-control-select form-control-select-multiple">
+    <select multiple>
+      <option>1</option>
+      <option>2</option>
+      <option>…</option>
+    </select>
+  </span>
+</div>
+```
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
-
-</section>
-
-<!-- =================================================
-END: Forms Controls
-================================================== -->
+</div>

@@ -1,357 +1,281 @@
-<!-- =================================================
-BEGIN: Form Control States
-================================================== -->
+# Control States
 
-<section id="forms-controls-states">
+## Focus
 
-  <h1>
+For form controls, we remove the default `outline` style added by most browsers.  On `:focus` we apply user-defined styling.  Similar styling attributes can be defined for the `:hover` state.
 
-    Control States
+<div class="panel flush-bottom">
 
-  </h1>
+  <div class="panel-cell">
 
-  <section id="forms-controls-states-focus">
+    <form class="form flush-bottom">
 
-    <h2>
+      <div class="row">
 
-      Focus
+        <div class="column-small-12">
 
-    </h2>
+          <div class="form-group flush-bottom">
 
-    <p>
-
-      For form controls, we remove the default <code>outline</code> style added by most browsers.  On <code>:focus</code> we apply user-defined styling.  Similar styling attributes can be defined for the <code>:hover</code> state.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group flush-bottom">
-
-                <input type="text" class="form-control focus" id="form-control-focus" placeholder="Placeholder Text">
-
-              </div>
-
-            </div>
+            <input type="text" class="form-control focus" id="form-control-focus" placeholder="Placeholder Text">
 
           </div>
 
-        </form>
+        </div>
 
       </div>
 
-    </div>
+    </form>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+</div>
 
-  <section id="forms-controls-states-disabled">
+## Disabled
 
-    <h2>
+Add the `disabled` boolean attribute on an input to prevent user input and trigger a slightly different look.
 
-      Disabled
+<div class="panel flush-bottom">
 
-    </h2>
+  <div class="panel-cell">
 
-    <p>
+    <form class="form flush-bottom">
 
-      Add the <code>disabled</code> boolean attribute on an input to prevent user input and trigger a slightly different look.
+      <div class="row">
 
-    </p>
+        <div class="column-small-12">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+          <div class="form-group flush-bottom">
 
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <form class="form flush-bottom">
-
-          <div class="row">
-
-            <div class="column-small-12">
-
-              <div class="form-group flush-bottom">
-
-                <input type="text" class="form-control" placeholder="Placeholder Text" disabled>
-
-              </div>
-
-            </div>
+            <input type="text" class="form-control" placeholder="Placeholder Text" disabled>
 
           </div>
 
-        </form>
+        </div>
 
       </div>
 
-    </div>
+    </form>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+</div>
 
-  <section id="forms-controls-states-validation">
+## Validation
 
-    <h2>
+Canvas includes validation states for success and error states for all form elements including `.form-control`, `checkbox`, and `label`.  Simply add class `.form-group-success` or `.form-group-danger` to any `.form-group` and all components inside will reflect the appropriate state styling.
 
-      Validation
+<div class="panel flush-bottom">
 
-    </h2>
+  <div class="panel-cell">
 
-    <p>
+    <form class="form flush-bottom">
 
-      Canvas includes validation states for success and error states for all form elements including <code>.form-control</code>, <code>checkbox</code>, and <code>label</code>.  Simply add class <code>.form-group-success</code> or <code>.form-group-danger</code> to any <code>.form-group</code> and all components inside will reflect the appropriate state styling.
+      <div class="row">
 
-    </p>
+        <div class="column-small-6">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+          <div class="form-group">
 
-    <div class="panel flush-bottom">
+            <label>
 
-      <div class="panel-cell">
+              Default Input
 
-        <form class="form flush-bottom">
+            </label>
 
-          <div class="row">
+            <input type="text" class="form-control" placeholder="Placeholder">
 
-            <div class="column-small-6">
+            <p class="form-control-feedback">
 
-              <div class="form-group">
+              Example block-level help text here.
 
-                <label>
-
-                  Default Input
-
-                </label>
-
-                <input type="text" class="form-control" placeholder="Placeholder">
-
-                <p class="form-control-feedback">
-
-                  Example block-level help text here.
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group">
-
-                <label>
-
-                  Default Select
-
-                </label>
-
-                <span class="form-control form-control-select">
-
-                  <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-            </div>
+            </p>
 
           </div>
 
-          <div class="row">
+        </div>
 
-            <div class="column-small-6">
+        <div class="column-small-6">
 
-              <div class="form-group form-group-success">
+          <div class="form-group">
 
-                <label>
+            <label>
 
-                  Success Input
+              Default Select
 
-                </label>
+            </label>
 
-                <input type="text" class="form-control form-control-success" placeholder="Placeholder">
+            <span class="form-control form-control-select">
 
-                <p class="form-control-feedback">
+              <select>
 
-                  Everything checks out here. Nice job!
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
 
-                </p>
+              </select>
 
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group form-group-success">
-
-                <label>
-
-                  Success Select
-
-                </label>
-
-                <span class="form-control form-control-success form-control-select">
-
-                  <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-            </div>
+            </span>
 
           </div>
 
-          <div class="row">
-
-            <div class="column-small-6">
-
-              <div class="form-group form-group-danger">
-
-                <label>
-
-                  Error Input
-
-                </label>
-
-                <input type="text" class="form-control form-control-error" placeholder="Input (Error)">
-
-                <p class="form-control-feedback">
-
-                  Sorry this ID already exists. Try another.
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="column-small-6">
-
-              <div class="form-group form-group-danger">
-
-                <label>
-
-                  Error Select
-
-                </label>
-
-                <span class="form-control form-control-error form-control-select">
-
-                  <select>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-
-                  </select>
-
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </form>
+        </div>
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+      <div class="row">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;label&gt;
+        <div class="column-small-6">
+
+          <div class="form-group form-group-success">
+
+            <label>
+
+              Success Input
+
+            </label>
+
+            <input type="text" class="form-control form-control-success" placeholder="Placeholder">
+
+            <p class="form-control-feedback">
+
+              Everything checks out here. Nice job!
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group form-group-success">
+
+            <label>
+
+              Success Select
+
+            </label>
+
+            <span class="form-control form-control-success form-control-select">
+
+              <select>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="column-small-6">
+
+          <div class="form-group form-group-danger">
+
+            <label>
+
+              Error Input
+
+            </label>
+
+            <input type="text" class="form-control form-control-error" placeholder="Input (Error)">
+
+            <p class="form-control-feedback">
+
+              Sorry this ID already exists. Try another.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="column-small-6">
+
+          <div class="form-group form-group-danger">
+
+            <label>
+
+              Error Select
+
+            </label>
+
+            <span class="form-control form-control-error form-control-select">
+
+              <select>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<div class="form-group">
+  <label>
     Default Input
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;p class="small flush-bottom"&gt;
+  </label>
+  <input type="text" class="form-control" placeholder="Placeholder">
+  <p class="small flush-bottom">
     Example block-level help text here.
-  &lt;/p&gt;
-&lt;/div&gt;
+  </p>
+</div>
 
-&lt;div class="form-group form-group-success"&gt;
-  &lt;label&gt;
+<div class="form-group form-group-success">
+  <label>
     Success Input
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;p class="form-control-feedback"&gt;
+  </label>
+  <input type="text" class="form-control" placeholder="Placeholder">
+  <p class="form-control-feedback">
     Looks good.
-  &lt;/p&gt;
-  &lt;p class="small flush-bottom"&gt;
+  </p>
+  <p class="small flush-bottom">
     Example block-level help text here.
-  &lt;/p&gt;
-&lt;/div&gt;
+  </p>
+</div>
 
-&lt;div class="form-group form-group-danger"&gt;
-  &lt;label&gt;
+<div class="form-group form-group-danger">
+  <label>
     Danger Input
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;p class="form-control-feedback"&gt;
+  </label>
+  <input type="text" class="form-control" placeholder="Placeholder">
+  <p class="form-control-feedback">
     Sorry this ID already exists. Try another.
-  &lt;/p&gt;
-  &lt;p class="small flush-bottom"&gt;
+  </p>
+  <p class="small flush-bottom">
     Example block-level help text here.
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
+  </p>
+</div>
+```
 
-      </div>
+  </div>
 
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-</section>
-
-<!-- =================================================
-BEGIN: Form Control States
-================================================== -->
+</div>

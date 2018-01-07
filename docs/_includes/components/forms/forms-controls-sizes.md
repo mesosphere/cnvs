@@ -1,83 +1,63 @@
-<!-- =================================================
-BEGIN: Form Control Sizes
-================================================== -->
+# Control Sizes
 
-<section id="forms-controls-sizes">
+Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Control Sizes
+  <div class="panel-cell">
 
-  </h1>
+    <form class="form flush-bottom">
 
-  <p>
+      <div class="form-group">
 
-    Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
+        <label>
 
-  </p>
+          Small
 
-  <div class="panel flush-bottom">
+        </label>
 
-    <div class="panel-cell">
+        <input type="text" class="form-control form-control-small" placeholder="Input (Small)">
 
-      <form class="form flush-bottom">
+      </div>
 
-        <div class="form-group">
+      <div class="form-group">
 
-          <label>
+        <label>
 
-            Small
+          Default
 
-          </label>
+        </label>
 
-          <input type="text" class="form-control form-control-small" placeholder="Input (Small)">
+        <input type="text" class="form-control" placeholder="Input (Default)">
 
-        </div>
+      </div>
 
-        <div class="form-group">
+      <div class="form-group">
 
-          <label>
+        <label>
 
-            Default
+          Large
 
-          </label>
+        </label>
 
-          <input type="text" class="form-control" placeholder="Input (Default)">
+        <input type="text" class="form-control form-control-large" placeholder="Input (Large)">
 
-        </div>
+      </div>
 
-        <div class="form-group">
-
-          <label>
-
-            Large
-
-          </label>
-
-          <input type="text" class="form-control form-control-large" placeholder="Input (Large)">
-
-        </div>
-
-      </form>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-
-&lt;input type="text" class="form-control form-control-small"&gt;
-
-&lt;input type="text" class="form-control"&gt;
-
-&lt;input type="text" class="form-control form-control-large"&gt;
-</pre>
-    </div>
+    </form>
 
   </div>
 
-</section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<!-- =================================================
-END: Form Control Sizes
-================================================== -->
+```html
+<input type="text" class="form-control form-control-small">
+
+<input type="text" class="form-control">
+
+<input type="text" class="form-control form-control-large">
+```
+
+  </div>
+
+</div>

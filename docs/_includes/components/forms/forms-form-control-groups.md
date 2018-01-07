@@ -1,224 +1,193 @@
-<!-- =================================================
-BEGIN: Form Control Groups
-================================================== -->
+# Form Control Groups
 
-<section id="forms-form-control-groups">
+Align elements alongside or inside `.form-control` elements by wrapping them in a `.form-control-group` element. Use the `.form-control-group-add-on` element to position elements.  If you add `.form-control` to the wrapping `.form-control-group` the `.form-control-group-add-on` will live inside the `.form-control` rather than outside it.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Form Control Groups
+  <div class="panel-cell">
 
-  </h1>
+    <form class="form flush-bottom">
 
-  <p>
+      <div class="form-group">
 
-    Align elements alongside or inside <code>.form-control</code> elements by wrapping them in a <code>.form-control-group</code> element. Use the <code>.form-control-group-add-on</code> element to position elements.  If you add <code>.form-control</code> to the wrapping <code>.form-control-group</code> the <code>.form-control-group-add-on</code> will live inside the <code>.form-control</code> rather than outside it.
+        <label>
 
-  </p>
+          Input With Add On (Before)
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+        </label>
 
-  <div class="panel flush-bottom">
+        <div class="form-control-group">
 
-    <div class="panel-cell">
+          <div class="form-control-group-add-on">
 
-      <form class="form flush-bottom">
+            <button class="button">
 
-        <div class="form-group">
+              Test
 
-          <label>
+            </button>
 
-            Input With Add On (Before)
+          </div>
 
-          </label>
+          <input type="text" class="form-control" placeholder="Placeholder">
 
-          <div class="form-control-group">
+        </div>
 
-            <div class="form-control-group-add-on">
+      </div>
 
-              <button class="button">
+      <div class="form-group">
 
-                Test
+        <label>
 
-              </button>
+          Input With Add On (After)
 
-            </div>
+        </label>
 
-            <input type="text" class="form-control" placeholder="Placeholder">
+        <div class="form-control-group">
+
+          <input type="text" class="form-control" placeholder="Placeholder">
+
+          <div class="form-control-group-add-on">
+
+            <button class="button">
+
+              Test
+
+            </button>
 
           </div>
 
         </div>
 
-        <div class="form-group">
+      </div>
 
-          <label>
+      <div class="form-group">
 
-            Input With Add On (After)
+        <label>
 
-          </label>
+          Input With Nested Add On (Before)
 
-          <div class="form-control-group">
+        </label>
 
-            <input type="text" class="form-control" placeholder="Placeholder">
+        <div class="form-control-group form-control">
 
-            <div class="form-control-group-add-on">
+          <span class="form-control-group-add-on form-control-group-add-on-prepend">
 
-              <button class="button">
+            <span style="display: block; background: black; width: 16px; height: 16px;"></span>
 
-                Test
+          </span>
 
-              </button>
-
-            </div>
-
-          </div>
+          <input type="text" class="form-control" placeholder="Placeholder">
 
         </div>
 
-        <div class="form-group">
+      </div>
 
-          <label>
+      <div class="form-group">
 
-            Input With Nested Add On (Before)
+        <label>
 
-          </label>
+          Input With Nested Add On (After)
 
-          <div class="form-control-group form-control">
+        </label>
 
-            <span class="form-control-group-add-on form-control-group-add-on-prepend">
+        <div class="form-control-group form-control">
 
-              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+          <input type="text" class="form-control" placeholder="Placeholder">
 
-            </span>
+          <span class="form-control-group-add-on form-control-group-add-on-append">
 
-            <input type="text" class="form-control" placeholder="Placeholder">
+            <span style="display: block; background: black; width: 16px; height: 16px;"></span>
 
-          </div>
-
-        </div>
-
-        <div class="form-group">
-
-          <label>
-
-            Input With Nested Add On (After)
-
-          </label>
-
-          <div class="form-control-group form-control">
-
-            <input type="text" class="form-control" placeholder="Placeholder">
-
-            <span class="form-control-group-add-on form-control-group-add-on-append">
-
-              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
-
-            </span>
-
-          </div>
+          </span>
 
         </div>
 
-        <div class="form-group flush-bottom">
+      </div>
 
-          <label>
+      <div class="form-group flush-bottom">
 
-            Input With Nested Add On (Before &amp; After)
+        <label>
 
-          </label>
+          Input With Nested Add On (Before &amp; After)
 
-          <div class="form-control-group form-control">
+        </label>
 
-            <span class="form-control-group-add-on form-control-group-add-on-prepend">
+        <div class="form-control-group form-control">
 
-              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+          <span class="form-control-group-add-on form-control-group-add-on-prepend">
 
-            </span>
+            <span style="display: block; background: black; width: 16px; height: 16px;"></span>
 
-            <input type="text" class="form-control" placeholder="Placeholder">
+          </span>
 
-            <span class="form-control-group-add-on form-control-group-add-on-append">
+          <input type="text" class="form-control" placeholder="Placeholder">
 
-              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+          <span class="form-control-group-add-on form-control-group-add-on-append">
 
-            </span>
+            <span style="display: block; background: black; width: 16px; height: 16px;"></span>
 
-          </div>
+          </span>
 
         </div>
 
-      </form>
+      </div>
 
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Input With Add On Before --&gt;
-
-&lt;div class="form-control-group"&gt;
-  &lt;div class="form-control-group-add-on"&gt;
-    …
-  &lt;/div&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-&lt;/div&gt;
-
-&lt;!-- Input With Add On After --&gt;
-
-&lt;div class="form-control-group"&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;div class="form-control-group-add-on"&gt;
-    …
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- Input With Nested Add On Before --&gt;
-
-&lt;div class="form-control-group form-control"&gt;
-  &lt;span class="form-control-group-add-on form-control-group-add-on-prepend"&gt;
-    …
-  &lt;/span&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-&lt;/div&gt;
-
-&lt;!-- Input With Nested Add On After --&gt;
-
-&lt;div class="form-control-group form-control"&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;span class="form-control-group-add-on form-control-group-add-on-append"&gt;
-    …
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- Input With Nested Add On Before &amp; After --&gt;
-
-&lt;div class="form-control-group form-control"&gt;
-  &lt;span class="form-control-group-add-on form-control-group-add-on-prepend"&gt;
-    …
-  &lt;/span&gt;
-  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
-  &lt;span class="form-control-group-add-on form-control-group-add-on-append"&gt;
-    …
-  &lt;/span&gt;
-&lt;/div&gt;
-</pre>
-
-    </div>
+    </form>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
+```html
+<!-- Input With Add On Before -->
 
+<div class="form-control-group">
+  <div class="form-control-group-add-on">
+    …
+  </div>
+  <input type="text" class="form-control" placeholder="Placeholder">
+</div>
 
+<!-- Input With Add On After -->
 
-</section>
+<div class="form-control-group">
+  <input type="text" class="form-control" placeholder="Placeholder">
+  <div class="form-control-group-add-on">
+    …
+  </div>
+</div>
 
-<!-- =================================================
-END: Form Control Groups
-================================================== -->
+<!-- Input With Nested Add On Before -->
+
+<div class="form-control-group form-control">
+  <span class="form-control-group-add-on form-control-group-add-on-prepend">
+    …
+  </span>
+  <input type="text" class="form-control" placeholder="Placeholder">
+</div>
+
+<!-- Input With Nested Add On After -->
+
+<div class="form-control-group form-control">
+  <input type="text" class="form-control" placeholder="Placeholder">
+  <span class="form-control-group-add-on form-control-group-add-on-append">
+    …
+  </span>
+</div>
+
+<!-- Input With Nested Add On Before &amp; After -->
+
+<div class="form-control-group form-control">
+  <span class="form-control-group-add-on form-control-group-add-on-prepend">
+    …
+  </span>
+  <input type="text" class="form-control" placeholder="Placeholder">
+  <span class="form-control-group-add-on form-control-group-add-on-append">
+    …
+  </span>
+</div>
+```
+
+  </div>
+
+</div>

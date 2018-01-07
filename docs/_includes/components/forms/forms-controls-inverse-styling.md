@@ -1,213 +1,193 @@
-<!-- =================================================
-BEGIN: Form Control Sizes
-================================================== -->
+# Inverse Styling
 
-<section id="forms-controls-inverse-styling">
+Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
 
-  <h1>
+<div class="panel">
 
-    Inverse Styling
+  <div class="panel-cell panel-cell-dark">
 
-  </h1>
+    <form class="form flush-bottom">
 
-  <p>
+      <div class="row">
 
-    Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.
+        <div class="column-small-6">
 
-  </p>
+          <div class="form-group">
 
-  <div class="panel panel-inverse">
+            <label class="inverse">
 
-    <div class="panel-cell panel-cell-inverse">
+              First Name
 
-      <form class="form flush-bottom">
+            </label>
 
-        <div class="row">
-
-          <div class="column-small-6">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                First Name
-
-              </label>
-
-              <input type="text" class="form-control form-control-inverse" placeholder="">
-
-            </div>
-
-          </div>
-
-          <div class="column-small-6">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                Last Name
-
-              </label>
-
-              <input type="text" class="form-control form-control-inverse" placeholder="">
-
-            </div>
+            <input type="text" class="form-control form-control-inverse" placeholder="">
 
           </div>
 
         </div>
 
-        <div class="row">
+        <div class="column-small-6">
 
-          <div class="column-small-6">
+          <div class="form-group">
 
-            <div class="form-group">
+            <label class="inverse">
 
-              <label class="inverse">
+              Last Name
 
-                Email address
+            </label>
 
-              </label>
-
-              <input type="email" class="form-control form-control-inverse" placeholder="email@domain.com">
-
-              <p class="form-control-feedback inverse">
-
-                Please provide a valid email.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="column-small-6">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                Password
-
-              </label>
-
-              <input type="password" class="form-control form-control-inverse" placeholder="">
-
-              <p class="form-control-feedback inverse">
-
-                Must include at least 1 number and 1 symbol.
-
-              </p>
-
-            </div>
+            <input type="text" class="form-control form-control-inverse" placeholder="">
 
           </div>
 
         </div>
 
-        <div class="row">
+      </div>
 
-          <div class="column-small-12">
+      <div class="row">
 
-            <div class="form-group">
+        <div class="column-small-6">
 
-              <label class="inverse">
+          <div class="form-group">
 
-                About Me
+            <label class="inverse">
 
-              </label>
+              Email address
 
-              <textarea class="form-control form-control-inverse"></textarea>
+            </label>
 
-            </div>
+            <input type="email" class="form-control form-control-inverse" placeholder="email@domain.com">
 
-          </div>
+            <p class="form-control-feedback inverse">
 
-        </div>
+              Please provide a valid email.
 
-        <div class="row">
-
-          <div class="column-small-12">
-
-            <div class="form-group">
-
-              <label class="inverse">
-
-                I am a…
-
-              </label>
-
-              <label class="form-control-toggle inverse form-control-toggle-custom">
-
-                <input type="radio" name="sample-radio-group" checked="">
-
-                <span class="form-control-toggle-indicator"></span>
-
-                Man
-
-              </label>
-
-              <label class="form-control-toggle inverse form-control-toggle-custom">
-
-                <input type="radio" name="sample-radio-group">
-
-                <span class="form-control-toggle-indicator"></span>
-
-                Woman
-
-              </label>
-
-              <label class="form-control-toggle inverse form-control-toggle-custom">
-
-                <input type="radio" name="sample-radio-group">
-
-                <span class="form-control-toggle-indicator"></span>
-
-                Unicorn
-
-              </label>
-
-            </div>
+            </p>
 
           </div>
 
         </div>
 
-        <div class="button-collection flush-bottom">
+        <div class="column-small-6">
 
-          <button type="submit" class="button button-primary button-stroke button-inverse">
+          <div class="form-group">
 
-            Submit
+            <label class="inverse">
 
-          </button>
+              Password
+
+            </label>
+
+            <input type="password" class="form-control form-control-inverse" placeholder="">
+
+            <p class="form-control-feedback inverse">
+
+              Must include at least 1 number and 1 symbol.
+
+            </p>
+
+          </div>
 
         </div>
 
-      </form>
+      </div>
 
-    </div>
+      <div class="row">
 
-    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
+        <div class="column-small-12">
 
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;div class="form-group"&gt;
-  &lt;label class="inverse"&gt;
-    …
-  &lt;/label&gt;
-  &lt;input type="text" class="form-control form-control-inverse"&gt;
-  &lt;p class="form-control-feedback inverse"&gt;
-    …
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
+          <div class="form-group">
 
-    </div>
+            <label class="inverse">
+
+              About Me
+
+            </label>
+
+            <textarea class="form-control form-control-inverse"></textarea>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <div class="form-group">
+
+            <label class="inverse">
+
+              I am a…
+
+            </label>
+
+            <label class="form-control-toggle inverse form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group" checked="">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Man
+
+            </label>
+
+            <label class="form-control-toggle inverse form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Woman
+
+            </label>
+
+            <label class="form-control-toggle inverse form-control-toggle-custom">
+
+              <input type="radio" name="sample-radio-group">
+
+              <span class="form-control-toggle-indicator"></span>
+
+              Unicorn
+
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="button-collection flush-bottom">
+
+        <button type="submit" class="button button-primary button-stroke button-inverse">
+
+          Submit
+
+        </button>
+
+      </div>
+
+    </form>
 
   </div>
 
-</section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<!-- =================================================
-END: Form Control Sizes
-================================================== -->
+```html
+<div class="form-group">
+  <label class="inverse">
+    …
+  </label>
+  <input type="text" class="form-control form-control-inverse">
+  <p class="form-control-feedback inverse">
+    …
+  </p>
+</div>
+```
+
+  </div>
+
+</div>

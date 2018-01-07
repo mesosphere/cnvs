@@ -7,15 +7,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.
-
-</p>
-
-<!-- =================================================
-BEGIN: EXAMPLE
-================================================== -->
+Individual form controls automatically receive some global styling. All textual `<input>`, `<textarea>`, and `<select>` elements with `.form-control` are set to `width: 100%;` by default. Wrap labels and controls in `.form-group` for optimum spacing.
 
 <div class="panel flush-bottom">
 
@@ -177,36 +169,36 @@ BEGIN: EXAMPLE
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;form class="form flush-bottom"&gt;
-&lt;div class="row"&gt;
-  &lt;div class="column-small-6"&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label&gt;
+```html
+<form class="form flush-bottom">
+<div class="row">
+  <div class="column-small-6">
+    <div class="form-group">
+      <label>
         First Name
-      &lt;/label&gt;
-      &lt;input type="text" class="form-control" placeholder=""&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="column-small-6"&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label&gt;
+      </label>
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+  <div class="column-small-6">
+    <div class="form-group">
+      <label>
         Last Name
-      &lt;/label&gt;
-      &lt;input type="text" class="form-control" placeholder=""&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+      </label>
+      <input type="text" class="form-control" placeholder="">
+    </div>
+  </div>
+</div>
 …
-&lt;div class="button-collection flush-bottom"&gt;
-  &lt;button type="submit" class="button button-primary"&gt;
+<div class="button-collection flush-bottom">
+  <button type="submit" class="button button-primary">
     Submit
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/form&gt;
-</pre>
+  </button>
+</div>
+</form>
+```
 
   </div>
 
