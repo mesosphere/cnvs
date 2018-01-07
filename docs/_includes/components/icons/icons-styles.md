@@ -1,64 +1,70 @@
-<!-- =================================================
-BEGIN: Icon Styles
-================================================== -->
+# Icon Styles
 
-<section id="icons-styles">
+Like with sizes, Canvas also provides a number of built in styles to apply to your icons.  These styles modify only the `color` and `fill` properties, which means they work with SVG and Font defined icons, not bitmap icons.  For bitmap images, you will need to introdue an alternate means (e.g. sprite sheet) for dynamically switching between image styles.
 
-  <h1>
+<table class="table short">
 
-    Icon Styles
+  <thead>
 
-  </h1>
-  
-  <p>
+    <tr>
 
-    Like with sizes, Canvas also provides a number of built in styles to apply to your icons.  These styles modify only the <code>color</code> and <code>fill</code> properties, which means they work with SVG and Font defined icons, not bitmap icons.  For bitmap images, you will need to introdue an alternate means (e.g. sprite sheet) for dynamically switching between image styles.
+      <th>
 
-  </p>
+        Class
 
-  <table class="table short">
+      </th>
 
-    <thead>
+      <th>
 
-      <tr>
+        Example
 
-        <th>
+      </th>
 
-          Class
+      <th>
 
-        </th>
+        Class
 
-        <th>
+      </th>
 
-          Example
+      <th>
 
-        </th>
+        Example
 
-        <th>
+      </th>
 
-          Class
+    </tr>
 
-        </th>
+  </thead>
 
-        <th>
+  <tbody>
 
-          Example
+    <tr>
 
-        </th>
+      <td>
 
-      </tr>
+        <code>
 
-    </thead>
+          .icon-black
 
-    <tbody>
+        </code>
 
-      <tr>
+      </td>
+
+      <td>
+
+        <i class="icon icon-mini icon-black">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
+
+      </td>
 
         <td>
 
           <code>
 
-            .icon-black
+            .icon-white
 
           </code>
 
@@ -66,7 +72,7 @@ BEGIN: Icon Styles
 
         <td>
 
-          <i class="icon icon-mini icon-black">
+          <i class="icon icon-mini icon-white">
             <svg class="">
               <use xlink:href="#icons-square"></use>
             </svg>
@@ -74,35 +80,35 @@ BEGIN: Icon Styles
 
         </td>
 
-          <td>
+    </tr>
 
-            <code>
+    <tr>
 
-              .icon-white
+      <td>
 
-            </code>
+        <code>
 
-          </td>
+          .icon-blue
 
-          <td>
+        </code>
 
-            <i class="icon icon-mini icon-white">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
+      </td>
 
-          </td>
+      <td>
 
-      </tr>
+        <i class="icon icon-mini icon-blue">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-      <tr>
+      </td>
 
         <td>
 
           <code>
 
-            .icon-blue
+            .icon-red
 
           </code>
 
@@ -110,7 +116,7 @@ BEGIN: Icon Styles
 
         <td>
 
-          <i class="icon icon-mini icon-blue">
+          <i class="icon icon-mini icon-red">
             <svg class="">
               <use xlink:href="#icons-square"></use>
             </svg>
@@ -118,35 +124,35 @@ BEGIN: Icon Styles
 
         </td>
 
-          <td>
+    </tr>
 
-            <code>
+    <tr>
 
-              .icon-red
+      <td>
 
-            </code>
+        <code>
 
-          </td>
+          .icon-orange
 
-          <td>
+        </code>
 
-            <i class="icon icon-mini icon-red">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
+      </td>
 
-          </td>
+      <td>
 
-      </tr>
+        <i class="icon icon-mini icon-orange">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-      <tr>
+      </td>
 
         <td>
 
           <code>
 
-            .icon-orange
+            .icon-yellow
 
           </code>
 
@@ -154,7 +160,7 @@ BEGIN: Icon Styles
 
         <td>
 
-          <i class="icon icon-mini icon-orange">
+          <i class="icon icon-mini icon-yellow">
             <svg class="">
               <use xlink:href="#icons-square"></use>
             </svg>
@@ -162,35 +168,35 @@ BEGIN: Icon Styles
 
         </td>
 
-          <td>
+    </tr>
 
-            <code>
+    <tr>
 
-              .icon-yellow
+      <td>
 
-            </code>
+        <code>
 
-          </td>
+          .icon-green
 
-          <td>
+        </code>
 
-            <i class="icon icon-mini icon-yellow">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
+      </td>
 
-          </td>
+      <td>
 
-      </tr>
+        <i class="icon icon-mini icon-green">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-      <tr>
+      </td>
 
         <td>
 
           <code>
 
-            .icon-green
+            .icon-purple
 
           </code>
 
@@ -198,7 +204,7 @@ BEGIN: Icon Styles
 
         <td>
 
-          <i class="icon icon-mini icon-green">
+          <i class="icon icon-mini icon-purple">
             <svg class="">
               <use xlink:href="#icons-square"></use>
             </svg>
@@ -206,35 +212,35 @@ BEGIN: Icon Styles
 
         </td>
 
-          <td>
+    </tr>
 
-            <code>
+    <tr>
 
-              .icon-purple
+      <td>
 
-            </code>
+        <code>
 
-          </td>
+          .icon-pink
 
-          <td>
+        </code>
 
-            <i class="icon icon-mini icon-purple">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
+      </td>
 
-          </td>
+      <td>
 
-      </tr>
+        <i class="icon icon-mini icon-pink">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-      <tr>
+      </td>
 
         <td>
 
           <code>
 
-            .icon-pink
+            .icon-gold
 
           </code>
 
@@ -242,7 +248,7 @@ BEGIN: Icon Styles
 
         <td>
 
-          <i class="icon icon-mini icon-pink">
+          <i class="icon icon-mini icon-gold">
             <svg class="">
               <use xlink:href="#icons-square"></use>
             </svg>
@@ -250,35 +256,35 @@ BEGIN: Icon Styles
 
         </td>
 
-          <td>
+    </tr>
 
-            <code>
+    <tr>
 
-              .icon-gold
+      <td>
 
-            </code>
+        <code>
 
-          </td>
+          .icon-cyan
 
-          <td>
+        </code>
 
-            <i class="icon icon-mini icon-gold">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
+      </td>
 
-          </td>
+      <td>
 
-      </tr>
+        <i class="icon icon-mini icon-cyan">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-      <tr>
+      </td>
 
         <td>
 
           <code>
 
-            .icon-cyan
+            .icon-orchid
 
           </code>
 
@@ -286,7 +292,7 @@ BEGIN: Icon Styles
 
         <td>
 
-          <i class="icon icon-mini icon-cyan">
+          <i class="icon icon-mini icon-orchid">
             <svg class="">
               <use xlink:href="#icons-square"></use>
             </svg>
@@ -294,34 +300,8 @@ BEGIN: Icon Styles
 
         </td>
 
-          <td>
+    </tr>
 
-            <code>
+  </tbody>
 
-              .icon-orchid
-
-            </code>
-
-          </td>
-
-          <td>
-
-            <i class="icon icon-mini icon-orchid">
-              <svg class="">
-                <use xlink:href="#icons-square"></use>
-              </svg>
-            </i>
-
-          </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-</section>
-
-<!-- =================================================
-END: Icon Styles
-================================================== -->
+</table>

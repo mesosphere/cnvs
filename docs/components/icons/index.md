@@ -7,23 +7,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  A simple and easy to use icon class is available in Canvas.  The icon class <code>.icon</code> assumes very little about the actual icon itself, but instead serves as an easily modifiable container in which you can define or place your icon -- whether that icon is an SVG, font, or bitmap.  Canvas does not include icon glyphs or fonts by default, relying on the user to specify how these should be configured.
-
-</p>
-
-<!-- =================================================
-BEGIN: Icon SVG Definitions
-================================================== -->
-
-<svg xmlns="http://www.w3.org/2000/svg" style="visibility: hidden; position: absolute; top: 0; left: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-  <symbol id="icons-square" viewBox="0 0 16 16">
-    <rect sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
-  </symbol>
-
-</svg>
+A simple and easy to use icon class is available in Canvas.  The icon class <code>.icon</code> assumes very little about the actual icon itself, but instead serves as an easily modifiable container in which you can define or place your icon -- whether that icon is an SVG, font, or bitmap.  Canvas does not include icon glyphs or fonts by default, relying on the user to specify how these should be configured.
 
 <div class="panel flush-bottom">
 
@@ -37,11 +21,11 @@ BEGIN: Icon SVG Definitions
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;i class='icon icon-medium'&gt&lt;i&gt;
-</pre>
+```html
+<i class='icon icon-medium'></i>
+```
 
   </div>
 

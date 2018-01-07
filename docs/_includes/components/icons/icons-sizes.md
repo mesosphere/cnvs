@@ -1,237 +1,217 @@
-<!-- =================================================
-BEGIN: Icon Sizes
-================================================== -->
+# Icon Sizes
 
-<section id="icons-sizes">
+Thinks of the `icon` elements as a bounding box in which you can place &mdash; either inside or directly as a background &mdash; any image, SVG, or font.  The bounding box is rectangular, but by default, they are defined as square (1:1).  Canvas provides 5 unique icon sizes (defined below).  The sizes can be easily changed.  Furthermore, these sizes are consider responsive, with the dimensions changing as defined by the user, with changes in screen size.
 
-  <h1>
+<table class="table short">
 
-    Icon Sizes
+  <thead>
 
-  </h1>
+    <tr>
 
-  <p>
+      <th>
 
-    Thinks of the <code>icon</code> elements as a bounding box in which you can place &mdash; either inside or directly as a background &mdash; any image, SVG, or font.  The bounding box is rectangular, but by default, they are defined as square (1:1).  Canvas provides 5 unique icon sizes (defined below).  The sizes can be easily changed.  Furthermore, these sizes are consider responsive, with the dimensions changing as defined by the user, with changes in screen size.
+        Class
 
-  </p>
+      </th>
 
-  <table class="table short">
+      <th>
 
-    <thead>
+        Base Size
 
-      <tr>
+      </th>
 
-        <th>
+      <th>
 
-          Class
+        Example
 
-        </th>
+      </th>
 
-        <th>
+    </tr>
 
-          Base Size
+  </thead>
 
-        </th>
+  <tbody>
 
-        <th>
+    <tr>
 
-          Example
+      <td>
 
-        </th>
+        <code>
 
-      </tr>
+          .icon-mini
 
-    </thead>
+        </code>
 
-    <tbody>
+      </td>
 
-      <tr>
+      <td>
 
-        <td>
+        16x16
 
-          <code>
+      </td>
 
-            .icon-mini
+      <td>
 
-          </code>
+        <i class="icon icon-mini icon-purple">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-        </td>
+      </td>
 
-        <td>
+    </tr>
 
-          16x16
+    <tr>
 
-        </td>
+      <td>
 
-        <td>
+        <code>
 
-          <i class="icon icon-mini icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
+          .icon-small
 
-        </td>
+        </code>
 
-      </tr>
+      </td>
 
-      <tr>
+      <td>
 
-        <td>
+        24x24
 
-          <code>
+      </td>
 
-            .icon-small
+      <td>
 
-          </code>
+        <i class="icon icon-small icon-purple">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-        </td>
+      </td>
 
-        <td>
+    </tr>
 
-          24x24
+    <tr>
 
-        </td>
+      <td>
 
-        <td>
+        <code>
 
-          <i class="icon icon-small icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
+          .icon-medium
 
-        </td>
+        </code>
 
-      </tr>
+      </td>
 
-      <tr>
+      <td>
 
-        <td>
+        32x32
 
-          <code>
+      </td>
 
-            .icon-medium
+      <td>
 
-          </code>
+        <i class="icon icon-medium icon-purple">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-        </td>
+      </td>
 
-        <td>
+    </tr>
 
-          32x32
+    <tr>
 
-        </td>
+      <td>
 
-        <td>
+        <code>
 
-          <i class="icon icon-medium icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
+          .icon-large
 
-        </td>
+        </code>
 
-      </tr>
+      </td>
 
-      <tr>
+      <td>
 
-        <td>
+        48x48
 
-          <code>
+      </td>
 
-            .icon-large
+      <td>
 
-          </code>
+        <i class="icon icon-large icon-purple">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-        </td>
+      </td>
 
-        <td>
+    </tr>
 
-          48x48
+    <tr>
 
-        </td>
+      <td>
 
-        <td>
+        <code>
 
-          <i class="icon icon-large icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
+          .icon-jumbo
 
-        </td>
+        </code>
 
-      </tr>
+      </td>
 
-      <tr>
+      <td>
 
-        <td>
+        64x64
 
-          <code>
+      </td>
 
-            .icon-jumbo
+      <td>
 
-          </code>
+        <i class="icon icon-jumbo icon-purple">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-        </td>
+      </td>
 
-        <td>
+    </tr>
 
-          64x64
+    <tr>
 
-        </td>
+      <td>
 
-        <td>
+        <code>
 
-          <i class="icon icon-jumbo icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
+          .icon-huge
 
-        </td>
+        </code>
 
-      </tr>
+      </td>
 
-      <tr>
+      <td>
 
-        <td>
+        96x96
 
-          <code>
+      </td>
 
-            .icon-huge
+      <td>
 
-          </code>
+        <i class="icon icon-huge icon-purple">
+          <svg class="">
+            <use xlink:href="#icons-square"></use>
+          </svg>
+        </i>
 
-        </td>
+      </td>
 
-        <td>
+    </tr>
 
-          96x96
+  </tbody>
 
-        </td>
-
-        <td>
-
-          <i class="icon icon-huge icon-purple">
-            <svg class="">
-              <use xlink:href="#icons-square"></use>
-            </svg>
-          </i>
-
-        </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-</section>
-
-<!-- =================================================
-END: Icon Sizes
-================================================== -->
+</table>
