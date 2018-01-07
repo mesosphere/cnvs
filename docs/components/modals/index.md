@@ -106,6 +106,6 @@ toc: true
 
 </div>
 
-{% include components/modals/modals-example.html %}
-{% include components/modals/modals-structure.html %}
-{% include components/modals/modals-sizes.html %}
+{% include components/modals/modals-example.md %}
+{% include components/modals/modals-structure.md %}
+{% include components/modals/modals-sizes.md %}

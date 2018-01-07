@@ -88,10 +88,10 @@ BEGIN: Example
 
 </div>
 
-{% include components/dropdowns/dropdowns-menu-list.html %}
-{% include components/dropdowns/dropdowns-headers.html %}
-{% include components/dropdowns/dropdowns-dividers.html %}
-{% include components/dropdowns/dropdowns-menu-list-states.html %}
-{% include components/dropdowns/dropdowns-menu-inverted.html %}
-{% include components/dropdowns/dropdowns-menu-list-item-content.html %}
-{% include components/dropdowns/dropdowns-alignment.html %}
+{% include components/dropdowns/dropdowns-menu-list.md %}
+{% include components/dropdowns/dropdowns-headers.md %}
+{% include components/dropdowns/dropdowns-dividers.md %}
+{% include components/dropdowns/dropdowns-menu-list-states.md %}
+{% include components/dropdowns/dropdowns-menu-inverted.md %}
+{% include components/dropdowns/dropdowns-menu-list-item-content.md %}
+{% include components/dropdowns/dropdowns-alignment.md %}

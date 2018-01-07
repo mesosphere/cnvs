@@ -52,5 +52,5 @@ BEGIN: Example
 
 </div>
 
-{% include components/panels/panels-cells.html %}
-{% include components/panels/panels-styling.html %}
+{% include components/panels/panels-cells.md %}
+{% include components/panels/panels-styling.md %}

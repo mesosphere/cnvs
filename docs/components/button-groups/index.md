@@ -164,4 +164,4 @@ toc: true
 
 </div>
 
-{% include components/button-groups/button-group-styles.html %}
+{% include components/button-groups/button-group-styles.md %}

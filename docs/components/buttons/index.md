@@ -41,14 +41,14 @@ BEGIN: Example
 
 </div>
 
-{% include components/buttons/buttons-sizes.html %}
-{% include components/buttons/buttons-states.html %}
-{% include components/buttons/buttons-types.html %}
-{% include components/buttons/buttons-inverse-styling.html %}
-{% include components/buttons/buttons-wide.html %}
-{% include components/buttons/buttons-narrow.html %}
-{% include components/buttons/buttons-flush.html %}
-{% include components/buttons/buttons-block.html %}
-{% include components/buttons/buttons-dropdowns.html %}
-{% include components/buttons/buttons-controls.html %}
-{% include components/buttons/buttons-content.html %}
+{% include components/buttons/buttons-sizes.md %}
+{% include components/buttons/buttons-states.md %}
+{% include components/buttons/buttons-types.md %}
+{% include components/buttons/buttons-inverse-styling.md %}
+{% include components/buttons/buttons-wide.md %}
+{% include components/buttons/buttons-narrow.md %}
+{% include components/buttons/buttons-flush.md %}
+{% include components/buttons/buttons-block.md %}
+{% include components/buttons/buttons-dropdowns.md %}
+{% include components/buttons/buttons-controls.md %}
+{% include components/buttons/buttons-content.md %}

@@ -7,5 +7,5 @@ page-header:
 toc: true
 ---
 
-{% include content/colors/colors-palettes.html %}
-{% include content/colors/colors-blending.html %}
+{% include content/colors/colors-palettes.md %}
+{% include content/colors/colors-blending.md %}

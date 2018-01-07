@@ -47,5 +47,5 @@ BEGIN: Icon SVG Definitions
 
 </div>
 
-{% include components/icons/icons-sizes.html %}
-{% include components/icons/icons-styles.html %}
+{% include components/icons/icons-sizes.md %}
+{% include components/icons/icons-styles.md %}

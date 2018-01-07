@@ -38,7 +38,7 @@ toc: true
 
 </div>
 
-{% include components/messages/messages-states.html %}
-{% include components/messages/messages-inverse-styling.html %}
-{% include components/messages/messages-content.html %}
-{% include components/messages/messages-dismissible.html %}
+{% include components/messages/messages-states.md %}
+{% include components/messages/messages-inverse-styling.md %}
+{% include components/messages/messages-content.md %}
+{% include components/messages/messages-dismissible.md %}

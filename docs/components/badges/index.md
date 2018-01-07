@@ -47,5 +47,5 @@ BEGIN: Example
 END: Example
 ================================================== -->
 
-{% include components/badges/badges-states.html %}
-{% include components/badges/badges-rounded.html %}
+{% include components/badges/badges-states.md %}
+{% include components/badges/badges-rounded.md %}

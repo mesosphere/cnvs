@@ -32,5 +32,5 @@ toc: true
 
 </div>
 
-{% include components/tooltips/tooltips-positions.html %}
-{% include components/tooltips/tooltips-interactive-demo.html %}
+{% include components/tooltips/tooltips-positions.md %}
+{% include components/tooltips/tooltips-interactive-demo.md %}

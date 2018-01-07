@@ -7,5 +7,5 @@ page-header:
 toc: true
 ---
 
-{% include layout/code/code-inline.html %}
-{% include layout/code/code-preformatted.html %}
+{% include layout/code/code-inline.md %}
+{% include layout/code/code-preformatted.md %}

@@ -212,9 +212,9 @@ BEGIN: EXAMPLE
 
 </div>
 
-{% include components/forms/forms-controls.html %}
-{% include components/forms/forms-controls-sizes.html %}
-{% include components/forms/forms-controls-states.html %}
-{% include components/forms/forms-controls-inverse-styling.html %}
-{% include components/forms/forms-controls-feedback.html %}
-{% include components/forms/forms-form-control-groups.html %}
+{% include components/forms/forms-controls.md %}
+{% include components/forms/forms-controls-sizes.md %}
+{% include components/forms/forms-controls-states.md %}
+{% include components/forms/forms-controls-inverse-styling.md %}
+{% include components/forms/forms-controls-feedback.md %}
+{% include components/forms/forms-form-control-groups.md %}

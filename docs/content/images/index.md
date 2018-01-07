@@ -14,5 +14,5 @@ toc: true
 
 </p>
 
-{% include content/images/images-responsive.html %}
-{% include content/images/images-shape.html %}
+{% include content/images/images-responsive.md %}
+{% include content/images/images-shape.md %}

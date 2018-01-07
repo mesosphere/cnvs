@@ -53,4 +53,4 @@ toc: true
 
 </div>
 
-{% include components/button-collection/button-collection-vertical-alignment.html %}
+{% include components/button-collection/button-collection-vertical-alignment.md %}

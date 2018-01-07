@@ -210,9 +210,9 @@ BEGIN: Example
 
 </div>
 
-{% include content/tables/tables-hover-rows.html %}
-{% include content/tables/tables-borderless.html %}
-{% include content/tables/tables-flush.html %}
-{% include content/tables/tables-conditional-row-states.html %}
-{% include content/tables/tables-inverse.html %}
-{% include content/tables/tables-sizes.html %}
+{% include content/tables/tables-hover-rows.md %}
+{% include content/tables/tables-borderless.md %}
+{% include content/tables/tables-flush.md %}
+{% include content/tables/tables-conditional-row-states.md %}
+{% include content/tables/tables-inverse.md %}
+{% include content/tables/tables-sizes.md %}
