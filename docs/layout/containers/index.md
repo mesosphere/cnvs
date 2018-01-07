@@ -17,11 +17,7 @@ page-navigation:
     link: #containers-fluid-variants
 ---
 
-<p>
+In Canvas, containers can be used independent of the [Grid System](/layout/grid). Properties such as a width and margin for the container vary depending on both the class and screen resolution. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
 
-  In Canvas, containers can be used independent of the <a href="/layout/grid">Grid System</a>. Properties such as a width and margin for the container vary depending on both the class and screen resolution. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
-
-</p>
-
-{% include layout/containers/containers-fixed.html %}
-{% include layout/containers/containers-fluid.html %}
+{% include layout/containers/containers-fixed.md %}
+{% include layout/containers/containers-fluid.md %}
