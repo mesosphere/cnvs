@@ -7,11 +7,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  Buttons render easily as objects inline with other elements.  When you have a group of buttons, use the <code>.button-collection</code> element to wrap a set of buttons.  A button collection defines simple rules governing the space between buttons both horizontally and vertically.
-
-</p>
+Buttons render easily as objects inline with other elements.  When you have a group of buttons, use the `.button-collection` element to wrap a set of buttons.  A button collection defines simple rules governing the space between buttons both horizontally and vertically.
 
 <div class="panel flush-bottom">
 
@@ -35,19 +31,19 @@ toc: true
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;!-- Button: Collection --&gt;
-&lt;div class="button-collection"&gt;
-&lt;a href="#" class="button button-primary"&gt;
-  Primary Button
-&lt;/a&gt;
-&lt;a href="#" class="button"&gt;
-  Button
-&lt;/a&gt;
-&lt;/div&gt;
-</pre>
+```html
+<!-- Button: Collection -->
+<div class="button-collection">
+  <a href="#" class="button button-primary">
+    Primary Button
+  </a>
+  <a href="#" class="button">
+    Button
+  </a>
+</div>
+```
 
   </div>
 
