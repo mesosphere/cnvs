@@ -8,15 +8,7 @@ page-header:
 toc: true
 ---
 
-<p>
-
-  To create a new panel use the <code>.panel</code> class. By itself, a panel is pretty basic - offering nothing more than box styling and outer spacing.  Use one or more nested panel cells (<code>.panel-cell</code>) to create a layout that fits your specific project requirements.
-
-</p>
-
-<!-- =================================================
-BEGIN: Example
-================================================== -->
+To create a new panel use the <code>.panel</code> class. By itself, a panel is pretty basic - offering nothing more than box styling and outer spacing.  Use one or more nested panel cells (<code>.panel-cell</code>) to create a layout that fits your specific project requirements.
 
 <div class="panel flush-bottom">
 
@@ -40,13 +32,13 @@ BEGIN: Example
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="panel"&gt;
+```html
+<div class="panel">
   …
-&lt;/div&gt;
-</pre>
+</div>
+```
 
   </div>
 

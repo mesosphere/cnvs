@@ -1,320 +1,136 @@
-<!-- =================================================
-BEGIN: Panel Structure
-================================================== -->
+# Panel Cell
 
-<section id="panels-cells">
+The panel cell (`.panel-cell`) is the basic building block of panels. Any number of panel cells can be used in a panel.  Panel cells offer a variety of spacing and styling options.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Panel Cell
+  <div class="panel-cell">
 
-  </h1>
+    <div class="panel panel-inline">
 
-  <p>
+      <div class="panel-cell text-align-center">
 
-    The panel cell (<code>.panel-cell</code>) is the basic building block of panels. Any number of panel cells can be used in a panel.  Panel cells offer a variety of spacing and styling options.
-
-  </p>
-
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
-
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <div class="panel panel-inline">
-
-        <div class="panel-cell text-align-center">
-
-          <code>.panel-cell</code>
-
-        </div>
-
-        <div class="panel-cell text-align-center">
-
-          <code>.panel-cell</code>
-
-        </div>
-
-        <div class="panel-cell text-align-center">
-
-          <code>.panel-cell</code>
-
-        </div>
+        <code>.panel-cell</code>
 
       </div>
 
-    </div>
+      <div class="panel-cell text-align-center">
 
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
+        <code>.panel-cell</code>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="panel"&gt;
-  &lt;div class="panel-cell"&gt;
-    …
-  &lt;/div&gt;
-  &lt;div class="panel-cell"&gt;
-    …
-  &lt;/div&gt;
-  &lt;div class="panel-cell"&gt;
-    …
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+      </div>
+
+      <div class="panel-cell text-align-center">
+
+        <code>.panel-cell</code>
+
+      </div>
 
     </div>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  BEGIN: Panel Cell Size Modifiers
-  ================================================== -->
+```html
+<div class="panel">
+  <div class="panel-cell">
+    …
+  </div>
+  <div class="panel-cell">
+    …
+  </div>
+  <div class="panel-cell">
+    …
+  </div>
+</div>
+```
 
-  <section id="panels-cells-size-modifiers">
+  </div>
 
-    <h2>
+</div>
 
-      Size Modifiers
+## Size Modifiers
 
-    </h2>
+To adjust the inner padding applied to a panel cell, use one of the available panel-specific size classes. For example, simply using the class `.panel-cell-short` will reduce padding evenly above and below the panel cell.  Use of these modifiers allows you the ability to create unique panel layouts to meet your specific project needs.
 
-    <p>
+| Class                  | Description                              |
+| ---------------------- | ---------------------------------------- |
+| `.panel-cell-shorter`  | Reduce the vertical margins to 25%.      |
+| `.panel-cell-short`    | Reduce the vertical margins to 50%.      |
+| `.panel-cell-tall`     | Increase the vertical margins by 150%.   |
+| `.panel-cell-taller`   | Increase the vertical margins by 200%.   |
+| `.panel-cell-narrower` | Reduce the horizontal margins to 25%.    |
+| `.panel-cell-narrow`   | Reduce the horizontal margins to 50%.    |
+| `.panel-cell-wide`     | Increase the horizontal margins by 150%. |
+| `.panel-cell-wider`    | Increase the horizontal margins by 200%. |
+{: .table }
 
-      To adjust the inner padding applied to a panel cell, use one of the available panel-specific size classes. For example, simply using the class <code>.panel-cell-short</code> will reduce padding evenly above and below the panel cell.  Use of these modifiers allows you the ability to create unique panel layouts to meet your specific project needs.
+<div class="panel flush-bottom">
 
-    </p>
+  <div class="panel-cell">
 
-    <table class="table short">
+    <div class="row">
 
-      <thead>
+      <div class="column-12 column-small-6 column-medium-6 column-large-6 column-jumbo-5 column-jumbo-offset-1">
 
-        <tr>
+        <div class="panel">
 
-          <th>
+          <div class="panel-cell">
 
-            Class
+            <h3 class="flush-top">
 
-          </th>
+              Event Name
 
-          <th>
+            </h3>
 
-            Description
+            <p class="flush-bottom">
 
-          </th>
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
 
-        </tr>
+            </p>
 
-      </thead>
+          </div>
 
-      <tbody>
+          <div class="panel-cell panel-cell-short text-align-center">
 
-        <tr>
+            <a href="#" class="button button-primary">
 
-          <td>
+              Learn More &rarr;
 
-            <code>
+            </a>
 
-              .panel-cell-shorter
+          </div>
 
-            </code>
+        </div>
 
-          </td>
+      </div>
 
-          <td>
+      <div class="column-12 column-small-6 column-medium-6 column-large-6 column-jumbo-5">
 
-            Reduce the vertical margins to 25%.
+        <div class="panel">
 
-          </td>
+          <div class="layout-box pods-options-size-direction-modifier">
 
-        </tr>
+            <div class="layout-box-item layout-box-item-margin">
 
-        <tr>
+              <div class="layout-box-item layout-box-item-padding panel-cell">
 
-          <td>
+                <div class="layout-box-item layout-box-item-content">
 
-            <code>
+                  <h3 class="flush-top">
 
-              .panel-cell-short
+                    Event Name
 
-            </code>
+                  </h3>
 
-          </td>
+                  <p class="flush-bottom">
 
-          <td>
+                    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
 
-            Reduce the vertical margins to 50%.
+                  </p>
 
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-tall
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Increase the vertical margins by 150%.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-taller
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Increase the vertical margins by 200%.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-narrower
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Reduce the horizontal margins to 25%.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-narrow
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Reduce the horizontal margins to 50%.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-wide
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Increase the horizontal margins by 150%.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-wider
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Increase the horizontal margins by 200%.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="row">
-
-          <div class="column-12 column-small-6 column-medium-6 column-large-6 column-jumbo-5 column-jumbo-offset-1">
-
-            <div class="panel">
-
-              <div class="panel-cell">
-
-                <h3 class="flush-top">
-
-                  Event Name
-
-                </h3>
-
-                <p class="flush-bottom">
-
-                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
-
-                </p>
-
-              </div>
-
-              <div class="panel-cell panel-cell-short text-align-center">
-
-                <a href="#" class="button button-primary">
-
-                  Learn More &rarr;
-
-                </a>
+                </div>
 
               </div>
 
@@ -322,55 +138,19 @@ BEGIN: Panel Structure
 
           </div>
 
-          <div class="column-12 column-small-6 column-medium-6 column-large-6 column-jumbo-5">
+          <div class="layout-box pods-options-size-direction-modifier">
 
-            <div class="panel">
+            <div class="layout-box-item layout-box-item-margin">
 
-              <div class="layout-box pods-options-size-direction-modifier">
+              <div class="layout-box-item layout-box-item-padding panel-cell panel-cell-short">
 
-                <div class="layout-box-item layout-box-item-margin">
+                <div class="layout-box-item layout-box-item-content text-align-center">
 
-                  <div class="layout-box-item layout-box-item-padding panel-cell">
+                  <a href="#" class="button button-primary">
 
-                    <div class="layout-box-item layout-box-item-content">
+                    Learn More &rarr;
 
-                      <h3 class="flush-top">
-
-                        Event Name
-
-                      </h3>
-
-                      <p class="flush-bottom">
-
-                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
-
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="layout-box pods-options-size-direction-modifier">
-
-                <div class="layout-box-item layout-box-item-margin">
-
-                  <div class="layout-box-item layout-box-item-padding panel-cell panel-cell-short">
-
-                    <div class="layout-box-item layout-box-item-content text-align-center">
-
-                      <a href="#" class="button button-primary">
-
-                        Learn More &rarr;
-
-                      </a>
-
-                    </div>
-
-                  </div>
+                  </a>
 
                 </div>
 
@@ -384,220 +164,92 @@ BEGIN: Panel Structure
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="panel"&gt;
-  &lt;div class="panel-cell"&gt;
-    …
-  &lt;/div&gt;
-  &lt;div class="panel-cell panel-cell-short"&gt;
-    …
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Panel Cell Size Modifiers
-  ================================================== -->
+```html
+<div class="panel">
+  <div class="panel-cell">
+    …
+  </div>
+  <div class="panel-cell panel-cell-short">
+    …
+  </div>
+</div>
+```
 
-  <!-- =================================================
-  BEGIN: Panel Cell Size Direction Modifiers
-  ================================================== -->
+  </div>
 
-  <section id="panels-cells-size-direction-modifiers">
+</div>
 
-    <h2>
+## Size Direction Modifiers
 
-      Size Direction Modifiers
+Add `-top`, `-right`, `-bottom`, or `-left` to the end of the size modifier class to adjust margin only in the direction implied by the direction modifier.
 
-    </h2>
+| Class                  | Description                                   |
+| ---------------------- | --------------------------------------------- |
+| `.panel-cell-*-top`    | Adjust margin above the panel-cell.           |
+| `.panel-cell-*-right`  | Adjust margin to the right of the panel-cell. |
+| `.panel-cell-*-bottom` | Adjust margin below the panel-cell.           |
+| `.panel-cell-*-left`   | Adjust margin to the left of the panel-cell.  |
+{: .table }
 
-    <p>
+<div class="panel flush-bottom">
 
-      Add <code>-top</code>, <code>-right</code>, <code>-bottom</code>, or <code>-left</code> to the end of the size modifier class to adjust margin only in the direction implied by the direction modifier.
+  <div class="panel-cell">
 
-    </p>
+    <div class="row">
 
-    <table class="table short">
+      <div class="column-12 column-small-6 column-medium-6 column-large-6 column-jumbo-5 column-jumbo-offset-1">
 
-      <thead>
+        <div class="panel">
 
-        <tr>
+          <div class="panel-cell panel-cell-taller-bottom panel-cell-wider-right">
 
-          <th>
+            <h3 class="flush-top">
 
-            Class
+              Event Name
 
-          </th>
+            </h3>
 
-          <th>
+            <p class="flush-bottom">
 
-            Description
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
 
-          </th>
-
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-*-top
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Adjust margin above the panel-cell.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-*-right
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Adjust margin to the right of the panel-cell.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-*-bottom
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Adjust margin below the panel-cell.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-*-left
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Adjust margin to the left of the panel-cell.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="row">
-
-          <div class="column-12 column-small-6 column-medium-6 column-large-6 column-jumbo-5 column-jumbo-offset-1">
-
-            <div class="panel">
-
-              <div class="panel-cell panel-cell-taller-bottom panel-cell-wider-right">
-
-                <h3 class="flush-top">
-
-                  Event Name
-
-                </h3>
-
-                <p class="flush-bottom">
-
-                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
-
-                </p>
-
-              </div>
-
-            </div>
+            </p>
 
           </div>
 
-          <div class="column-12 column-small-6 column-medium-6 column-large-6 column-jumbo-5">
+        </div>
 
-            <div class="panel">
+      </div>
 
-              <div class="layout-box pods-options-size-direction-modifier">
+      <div class="column-12 column-small-6 column-medium-6 column-large-6 column-jumbo-5">
 
-                <div class="layout-box-item layout-box-item-margin">
+        <div class="panel">
 
-                  <div class="layout-box-item layout-box-item-padding panel-cell panel-cell-taller-bottom panel-cell-wider-right">
+          <div class="layout-box pods-options-size-direction-modifier">
 
-                    <div class="layout-box-item layout-box-item-content">
+            <div class="layout-box-item layout-box-item-margin">
 
-                      <h3 class="flush-top">
+              <div class="layout-box-item layout-box-item-padding panel-cell panel-cell-taller-bottom panel-cell-wider-right">
 
-                        Event Name
+                <div class="layout-box-item layout-box-item-content">
 
-                      </h3>
+                  <h3 class="flush-top">
 
-                      <p class="flush-bottom">
+                    Event Name
 
-                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
+                  </h3>
 
-                      </p>
+                  <p class="flush-bottom">
 
-                    </div>
+                    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus.
 
-                  </div>
+                  </p>
 
                 </div>
 
@@ -611,32 +263,20 @@ BEGIN: Panel Structure
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="panel"&gt;
-  &lt;div class="panel-cell panel-cell-taller-bottom panel-cell-wider-right"&gt;
-    …
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: panels-cell Size Direction Modifiers
-  ================================================== -->
+```html
+<div class="panel">
+  <div class="panel-cell panel-cell-taller-bottom panel-cell-wider-right">
+    …
+  </div>
+</div>
+```
 
-</section>
+  </div>
 
-<!-- =================================================
-END: Panel Structure
-================================================== -->
+</div>

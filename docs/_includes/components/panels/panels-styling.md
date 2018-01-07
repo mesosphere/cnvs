@@ -1,66 +1,30 @@
-<!-- =================================================
-BEGIN: Panel Styling
-================================================== -->
+# Panel Styling
 
-<section id="panels-styling">
+Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
 
-  <h1>
+## Inverse Panels
 
-    Panel Styling
+Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
 
-  </h1>
+<div class="panel flush-bottom">
 
-  <p>
+  <div class="panel-cell">
 
-    Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
+    <div class="row">
 
-  </p>
+      <div class="column-12 column-small-8 column-small-offset-2 column-medium-8 column-medium-offset-2 column-large-8 column-large-offset-2 column-jumbo-6 column-jumbo-offset-3">
 
-  <!-- =================================================
-  BEGIN: Panel Inverse Styling
-  ================================================== -->
+        <div class="panel panel-inverse">
 
-  <section id="panels-styling-inverse">
+          <div class="panel-cell">
 
-    <h2>
+          </div>
 
-      Inverse Panels
+          <div class="panel-cell">
 
-    </h2>
+          </div>
 
-    <p>
-
-      Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
-
-    </p>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="row">
-
-          <div class="column-12 column-small-8 column-small-offset-2 column-medium-8 column-medium-offset-2 column-large-8 column-large-offset-2 column-jumbo-6 column-jumbo-offset-3">
-
-            <div class="panel panel-inverse">
-
-              <div class="panel-cell">
-
-              </div>
-
-              <div class="panel-cell">
-
-              </div>
-
-              <div class="panel-cell">
-
-              </div>
-
-            </div>
+          <div class="panel-cell">
 
           </div>
 
@@ -68,179 +32,70 @@ BEGIN: Panel Styling
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+    </div>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="panel panel-inverse"&gt;
+  </div>
+
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
+
+```html
+<div class="panel panel-inverse">
   …
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-      </div>
+  </div>
 
-    </div>
+</div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+## Panel Cell Styling
 
-  </section>
+Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
 
-  <!-- =================================================
-  END: Panel Inverse Styling
-  ================================================== -->
+| Class                    | Description                           |
+| ------------------------ | ------------------------------------- |
+| `.panel-cell-borderless` | Remove all borders from panel cell.   |
+| `.panel-cell-light`      | Add a light background to panel cell. |
+| `.panel-cell-dark`       | Add a dark background to panel cell.  |
+{: .table }
 
-  <!-- =================================================
-  BEGIN: Panel Cells Styling
-  ================================================== -->
+<div class="panel flush-bottom">
 
-  <section id="panels-cells-styling">
+  <div class="panel-cell">
 
-    <h2>
+    <div class="row">
 
-      Panel Cell Styling
+      <div class="column-12 column-small-8 column-small-offset-2 column-medium-8 column-medium-offset-2 column-large-8 column-large-offset-2 column-jumbo-6 column-jumbo-offset-3">
 
-    </h2>
+        <div class="panel">
 
-    <p>
+          <div class="panel-cell panel-cell-borderless panel-cell-short-bottom text-align-center">
 
-      Panel support supplied by CNVS is largely limited to layout, leaving much of the styling preference up to the individual or team utilizing panels in their specific project.  However, we have include some basic styling options to make panels immediately useful out-of-the-box.
+            <span class="h4 flush">
 
-    </p>
+              Frontend Developer
 
-    <table class="table short">
+            </span>
 
-      <thead>
+          </div>
 
-        <tr>
+          <div class="panel-cell flush-top">
 
-          <th>
+            <p class="text-align-center flush">
 
-            Class
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo vol luctus.
 
-          </th>
+            </p>
 
-          <th>
+          </div>
 
-            Description
+          <div class="panel-cell panel-cell-light panel-cell-short text-align-center">
 
-          </th>
+            <a href="#" class="button button-success button-rounded">
 
-        </tr>
+              Apply Today &rarr;
 
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-borderless
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Remove all borders from panel cell.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-light
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Add a light background to panel cell.
-
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <code>
-
-              .panel-cell-dark
-
-            </code>
-
-          </td>
-
-          <td>
-
-            Add a dark background to panel cell.
-
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
-
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <div class="row">
-
-          <div class="column-12 column-small-8 column-small-offset-2 column-medium-8 column-medium-offset-2 column-large-8 column-large-offset-2 column-jumbo-6 column-jumbo-offset-3">
-
-            <div class="panel">
-
-              <div class="panel-cell panel-cell-borderless panel-cell-short-bottom text-align-center">
-
-                <span class="h4 flush">
-
-                  Frontend Developer
-
-                </span>
-
-              </div>
-
-              <div class="panel-cell flush-top">
-
-                <p class="text-align-center flush">
-
-                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo vol luctus.
-
-                </p>
-
-              </div>
-
-              <div class="panel-cell panel-cell-light panel-cell-short text-align-center">
-
-                <a href="#" class="button button-success button-rounded">
-
-                  Apply Today &rarr;
-
-                </a>
-
-              </div>
-
-            </div>
+            </a>
 
           </div>
 
@@ -248,38 +103,26 @@ BEGIN: Panel Styling
 
       </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="panel"&gt;
-  &lt;div class="panel-cell panel-cell-borderless panel-cell-short-bottom"&gt;
-    …
-  &lt;/div&gt;
-  &lt;div class="panel-cell flush-top"&gt;
-    …
-  &lt;/div&gt;
-  &lt;div class="panel-cell panel-cell-dark panel-cell-short"&gt;
-    …
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-      </div>
-
     </div>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+  </div>
 
-  </section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  END: Panel Cells Styling
-  ================================================== -->
+```html
+<div class="panel">
+  <div class="panel-cell panel-cell-borderless panel-cell-short-bottom">
+    …
+  </div>
+  <div class="panel-cell flush-top">
+    …
+  </div>
+  <div class="panel-cell panel-cell-dark panel-cell-short">
+    …
+  </div>
+</div>
+```
 
-</section>
+  </div>
 
-<!-- =================================================
-END: Panel Styling
-================================================== -->
+</div>
