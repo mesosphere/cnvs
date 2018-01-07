@@ -27,7 +27,6 @@ $(function() {
     --------------------------------------------------------------------------- */
 
     $.app = {};
-    $.app.stage = $("#stage");
     $.app.scrollbar_width = get_scrollbar_width();
 
     /* ---------------------------------------------------------------------------
@@ -60,8 +59,6 @@ $(function() {
     Initialize tooltip
     --------------------------------------------------------------------------- */
 
-    //$('[data-toggle="tooltip"]').tooltip()
-
     $('[data-toggle="tooltip"]').each(function() {
       var placement = 'top';
 
@@ -88,12 +85,6 @@ $(function() {
     });
 
     /* ---------------------------------------------------------------------------
-    Google Code Pretty Print
-    --------------------------------------------------------------------------- */
-
-    window.prettyPrint && prettyPrint();
-
-    /* ---------------------------------------------------------------------------
     Form Control Group Focus Event
     --------------------------------------------------------------------------- */
 
@@ -110,14 +101,6 @@ $(function() {
     /* ---------------------------------------------------------------------------
     Sticky Sidebar Page Navigation
     --------------------------------------------------------------------------- */
-
-    // $('.sidebar').stick_in_parent({
-    //   parent: $('.canvas')
-    // });
-
-    // $('.page-navigation-sticky').stick_in_parent({
-    //   parent: $('#page-navigation')
-    // });
 
     $(".custom-scrollbar").mCustomScrollbar({
       theme: 'dark',
@@ -173,53 +156,12 @@ $(function() {
 
   function window_scroll() {
 
-    var scroll_top = $(window).scrollTop() - $('.canvas').offset().top;
+    var scroll_top = $(window).scrollTop() - $('.app').offset().top;
     console.log("window_scroll()");
 
   }
 
   window.window_scroll = window_scroll;
-
-
-
-  /* ---------------------------------------------------------------------------
-  Page Content Navigation Update
-  --------------------------------------------------------------------------- */
-
-  /* function page_content_navigation_update() {
-
-    var scroll_top = $(window).scrollTop() - $('.canvas').offset().top;
-    var page_content_navigation = $('#page-content-navigation');
-
-    page_content_navigation.find('li').each(function() {
-
-      $(this).children('a').each(function() {
-
-        var el = $($(this).attr('href'));
-
-        if (el != null) {
-
-          var el_top = el.offset().top;
-          var el_height = el.height();
-
-          if ((scroll_top >= (el_top - 1)) && (scroll_top < (el_top + el_height))) {
-
-            $(this).parent().addClass('active');
-
-          } else {
-
-            $(this).parent().removeClass('active');
-
-          }
-
-
-        }
-
-      })
-
-    });
-
-  } */
 
 
 
