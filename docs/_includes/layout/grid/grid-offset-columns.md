@@ -1,6 +1,6 @@
 # Offset Columns
 
-Offset columns, shifting them to the right, by using the `.column-offset-*` classes &mdash; replacing the `*` with the number of columns to shift by. For example, `.column-offset-3` will move the column over by 3 columns. Use direction modifiers, in the format `.column-small-offset-*`, to offset at the designated screen size breakpoint.
+Offset columns, shifting them to the right, by using the `.column-offset-*` classes -- replacing the `*` with the number of columns to shift by. For example, `.column-offset-3` will move the column over by 3 columns. Use direction modifiers, in the format `.column-small-offset-*`, to offset at the designated screen size breakpoint.
 
 <div class="panel pod pod-short-bottom pod-short-top flush-horizontal" markdown="1">
 

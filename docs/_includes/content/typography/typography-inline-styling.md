@@ -4,7 +4,7 @@ For all text elements, classes are made available to adjust the styling inline. 
 
 ## Emphasis
 
-When you want to emphasis the importance the text, use the class `.emphasis`. All text included text elements &mdash; headings, body text, lead &mdash; had added support for emphasized text.
+When you want to emphasis the importance the text, use the class `.emphasis`. All text included text elements -- headings, body text, lead -- had added support for emphasized text.
 
 <div class="panel flush-bottom">
 
@@ -52,7 +52,7 @@ When you want to emphasis the importance the text, use the class `.emphasis`. Al
 
 ## Muted
 
-When you want to demphasis the importance text, use the class `.muted`. All text included text elements &mdash; headings, body text, lead &mdash; had added support for muted text.
+When you want to demphasis the importance text, use the class `.muted`. All text included text elements -- headings, body text, lead -- had added support for muted text.
 
 <div class="panel flush-bottom">
 

@@ -8,7 +8,7 @@ page-header:
 toc: true
 ---
 
-Use the class `.pod` to apply vertical and horizontal margin to any component. By default, margin is applied evenly to all sides of the pod. However, with the provided classes you can override this to behave differently &mdash; taller, shorter, narower, wider, or no padding at all.
+Use the class `.pod` to apply vertical and horizontal margin to any component. By default, margin is applied evenly to all sides of the pod. However, with the provided classes you can override this to behave differently -- taller, shorter, narower, wider, or no padding at all.
 
 <div class="panel">
 

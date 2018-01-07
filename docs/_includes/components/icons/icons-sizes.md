@@ -1,6 +1,6 @@
 # Icon Sizes
 
-Thinks of the `icon` elements as a bounding box in which you can place &mdash; either inside or directly as a background &mdash; any image, SVG, or font.  The bounding box is rectangular, but by default, they are defined as square (1:1).  Canvas provides 5 unique icon sizes (defined below).  The sizes can be easily changed.  Furthermore, these sizes are consider responsive, with the dimensions changing as defined by the user, with changes in screen size.
+Thinks of the `icon` elements as a bounding box in which you can place -- either inside or directly as a background -- any image, SVG, or font.  The bounding box is rectangular, but by default, they are defined as square (1:1).  Canvas provides 5 unique icon sizes (defined below).  The sizes can be easily changed.  Furthermore, these sizes are consider responsive, with the dimensions changing as defined by the user, with changes in screen size.
 
 <table class="table short">
 
