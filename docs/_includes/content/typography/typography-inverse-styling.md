@@ -1,123 +1,89 @@
-<!-- =================================================
-BEGIN: Inverse Styling
-================================================== -->
+# Inverse Styling
 
-<section id="typography-inverse-styling">
+All typographic elements have support for inverted styling.  This is useful when text is resting on a dark background.  Add the class `.inverse` to any text element to leverage the inverted styling.
 
-  <h1>
+The inverse styling even has added support for the `.emphasis` and `.muted` inline styling classes.
 
-    Inverse Styling
+<div class="panel">
 
-  </h1>
+  <div class="panel-cell panel-cell-dark panel-cell-inverse">
 
-  <p>
+    <span class="h1 inverse flush-top">
 
-    All typographic elements have support for inverted styling.  This is useful when text is resting on a dark background.  Add the class <code>.inverse</code> to any text element to leverage the inverted styling.
+      h1 Heading Text
 
-  </p>
+    </span>
 
-  <p>
+    <span class="h2 inverse">
 
-    The inverse styling even has added support for the <code>.emphasis</code> and <code>.muted</code> inline styling classes.
+      h2 Heading Text
 
-  </p>
+    </span>
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+    <span class="h3 inverse">
 
-  <div class="panel panel-inverse">
+      h3 Heading Text
 
-    <div class="panel-cell panel-cell-inverse">
+    </span>
 
+    <span class="h4 inverse">
 
-      <h1 class="inverse flush-top">
+      h4 Heading Text
 
-        h1 Heading Text
+    </span>
 
-      </h1>
+    <span class="h5 inverse">
 
-      <h2 class="inverse">
+      h5 Heading Text
 
-        h2 Heading Text
+    </span>
 
-      </h2>
+    <span class="h6 inverse">
 
-      <h3 class="inverse">
+      h6 Heading Text
 
-        h3 Heading Text
+    </span>
 
-      </h3>
+    <p class="lead inverse">
 
-      <h4 class="inverse">
+      Dramatically visualize <span class="emphasis">customer</span> directed convergence without revolutionary ROI.
 
-        h4 Heading Text
+    </p>
 
-      </h4>
+    <p class="inverse">
 
-      <h5 class="inverse">
+      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
 
-        h5 Heading Text
+    </p>
 
-      </h5>
+    <p class="inverse flush-bottom">
 
-      <h6 class="inverse">
+      Efficiently unleash <span class="muted">cross-media</span> information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
 
-        h6 Heading Text
-
-      </h6>
-
-      <p class="lead inverse">
-
-        Dramatically visualize <span class="emphasis">customer</span> directed convergence without revolutionary ROI.
-
-      </p>
-
-      <p class="inverse">
-
-        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-
-      </p>
-
-      <p class="inverse flush-bottom">
-
-        Efficiently unleash <span class="muted">cross-media</span> information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
-
-      </p>
-
-    </div>
-
-    <div class="panel-cell panel-cell-dark panel-cell-inverse panel-cell-code-block">
-
-<pre class="prettyprint code-block-inverse transparent flush lang-html">
-&lt;h1 class="inverse"&gt;
-  h1 Heading Text
-&lt;/h1&gt;
-
-&lt;p class="lead inverse"&gt;
-  Dramatically visualize &lt;span class="emphasis"&gt;emphasized&lt;/span&gt; directed&hellip;
-&lt;/p&gt;
-
-&lt;p class="inverse"&gt;
-  Collaboratively administrate empowered&hellip;
-&lt;/p&gt;
-
-&lt;p class="inverse"&gt;
-  Efficiently unleash &lt;span class="muted"&gt;cross-media&lt;/span&gt; information&hellip;
-&lt;/p&gt;
-</pre>
-
-    </div>
+    </p>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
+```html
+<h1 class="inverse">
+  h1 Heading Text
+</h1>
 
-</section>
+<p class="lead inverse">
+  Dramatically visualize <span class="emphasis">emphasized</span> directed…
+</p>
 
-<!-- =================================================
-END: Inverse Styling
-================================================== -->
+<p class="inverse">
+  Collaboratively administrate empowered…
+</p>
+
+<p class="inverse">
+  Efficiently unleash <span class="muted">cross-media</span> information…
+</p>
+```
+
+  </div>
+
+</div>

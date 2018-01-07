@@ -1,75 +1,47 @@
-<!-- =================================================
-BEGIN: Transformation
-================================================== -->
+# Transformation
 
-<section id="typography-text-transformation">
+Transform text in components with text capitalization classes.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Transformation
+  <div class="panel-cell">
 
-  </h1>
+    <p class="text-uppercase">
 
-  <p>
+      Uppercase text
 
-    Transform text in components with text capitalization classes.
+    </p>
 
-  </p>
+    <p class="text-lowercase">
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      Lowercase text.
 
-  <div class="panel flush-bottom">
+    </p>
 
-    <div class="panel-cell">
+    <p class="text-capitalize">
 
-      <p class="text-uppercase">
+      Capitalized text.
 
-        Uppercase text
-
-      </p>
-
-      <p class="text-lowercase">
-
-        Lowercase text.
-
-      </p>
-
-      <p class="text-capitalize">
-
-        Capitalized text.
-
-      </p>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;p class="text-uppercase"&gt;
-  Uppercase text
-&lt;/p&gt;
-
-&lt;p class="text-lowercase"&gt;
-  Lowercase text.
-&lt;/p&gt;
-
-&lt;p class="text-capitalize"&gt;
-  Capitalized text.
-&lt;/p&gt;
-</pre>
-
-    </div>
+    </p>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<p class="text-uppercase">
+  Uppercase text
+</p>
 
-<!-- =================================================
-END: Transformation
-================================================== -->
+<p class="text-lowercase">
+  Lowercase text.
+</p>
+
+<p class="text-capitalize">
+  Capitalized text.
+</p>
+```
+
+  </div>
+
+</div>

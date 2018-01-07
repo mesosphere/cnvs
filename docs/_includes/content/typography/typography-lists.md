@@ -1,521 +1,373 @@
-<!-- =================================================
-BEGIN: Lists
-================================================== -->
+# Lists
 
-<section id="typography-lists">
+Align text using the supplied alignment classes.  By default text is aligned left.
 
-  <h1>
+## Ordered Lists
 
-    Lists
+A list of items in which the order does explicitly matter.
 
-  </h1>
+<div class="panel flush-bottom">
 
-  <p>
+  <div class="panel-cell">
 
-    Align text using the supplied alignment classes.  By default text is aligned left.
+    <ol class="flush-bottom I">
 
-  </p>
+      <li>
 
+        Lorem ipsum dolor sit amet
 
+      </li>
 
-  <!-- =================================================
-  BEGIN: Ordered Lists
-  ================================================== -->
+      <li>
 
-  <section id="typography-lists-ordered">
+        Consectetur adipiscing elit
 
-    <h2>
+      </li>
 
-      Ordered Lists
+      <li>
 
-    </h2>
+        Integer molestie lorem at massa
 
-    <p>
+      </li>
 
-      A list of items in which the order does explicitly matter.
+      <li>
 
-    </p>
+        Facilisis in pretium nisl aliquet
 
+      </li>
 
+      <li>
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+        Nulla volutpat aliquam velit
 
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <ol class="flush-bottom I">
+        <ol class="a">
 
           <li>
 
-            Lorem ipsum dolor sit amet
+            Phasellus iaculis neque
 
           </li>
 
           <li>
 
-            Consectetur adipiscing elit
+            Purus sodales ultricies
 
           </li>
 
           <li>
 
-            Integer molestie lorem at massa
+            Vestibulum laoreet porttitor sem
 
           </li>
 
           <li>
 
-            Facilisis in pretium nisl aliquet
-
-          </li>
-
-          <li>
-
-            Nulla volutpat aliquam velit
-
-            <ol class="a">
-
-              <li>
-
-                Phasellus iaculis neque
-
-              </li>
-
-              <li>
-
-                Purus sodales ultricies
-
-              </li>
-
-              <li>
-
-                Vestibulum laoreet porttitor sem
-
-              </li>
-
-              <li>
-
-                Ac tristique libero volutpat at
-
-              </li>
-
-            </ol>
-
-          </li>
-
-          <li>
-
-            Faucibus porta lacus fringilla vel
-
-          </li>
-
-          <li>
-
-            Aenean sit amet erat nunc
-
-          </li>
-
-          <li>
-
-            Eget porttitor lorem
+            Ac tristique libero volutpat at
 
           </li>
 
         </ol>
 
-      </div>
+      </li>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+      <li>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;ol&gt;
-  &lt;li&gt;
-    &hellip;
-  &lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+        Faucibus porta lacus fringilla vel
 
-      </div>
+      </li>
 
-    </div>
+      <li>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+        Aenean sit amet erat nunc
 
-  </section>
+      </li>
 
-  <!-- =================================================
-  END: Ordered Lists
-  ================================================== -->
+      <li>
 
+        Eget porttitor lorem
 
+      </li>
 
-  <!-- =================================================
-  BEGIN: Unordered Lists
-  ================================================== -->
+    </ol>
 
-  <section id="typography-lists-unordered">
+  </div>
 
-    <h2>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      Unordered Lists
+```html
+<ol>
+  <li>
+    …
+  </li>
+</ol>
+```
 
-    </h2>
+  </div>
 
-    <p>
+</div>
 
-      A list of items in which the order does not explicitly matter.
+## Unordered Lists
 
-    </p>
+A list of items in which the order does not explicitly matter.
 
+<div class="panel flush-bottom">
 
+  <div class="panel-cell">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+    <ul class="flush-bottom">
 
-    <div class="panel flush-bottom">
+      <li>
 
-      <div class="panel-cell">
+        Lorem ipsum dolor sit amet
 
-        <ul class="flush-bottom">
+      </li>
+
+      <li>
+
+        Consectetur adipiscing elit
+
+      </li>
+
+      <li>
+
+        Integer molestie lorem at massa
+
+      </li>
+
+      <li>
+
+        Facilisis in pretium nisl aliquet
+
+      </li>
+
+      <li>
+
+        Nulla volutpat aliquam velit
+
+        <ul>
 
           <li>
 
-            Lorem ipsum dolor sit amet
+            Phasellus iaculis neque
 
           </li>
 
           <li>
 
-            Consectetur adipiscing elit
+            Purus sodales ultricies
 
           </li>
 
           <li>
 
-            Integer molestie lorem at massa
+            Vestibulum laoreet porttitor sem
 
           </li>
 
           <li>
 
-            Facilisis in pretium nisl aliquet
-
-          </li>
-
-          <li>
-
-            Nulla volutpat aliquam velit
-
-            <ul>
-
-              <li>
-
-                Phasellus iaculis neque
-
-              </li>
-
-              <li>
-
-                Purus sodales ultricies
-
-              </li>
-
-              <li>
-
-                Vestibulum laoreet porttitor sem
-
-              </li>
-
-              <li>
-
-                Ac tristique libero volutpat at
-
-              </li>
-
-            </ul>
-
-          </li>
-
-          <li>
-
-            Faucibus porta lacus fringilla vel
-
-          </li>
-
-          <li>
-
-            Aenean sit amet erat nunc
-
-          </li>
-
-          <li>
-
-            Eget porttitor lorem
+            Ac tristique libero volutpat at
 
           </li>
 
         </ul>
 
-      </div>
+      </li>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+      <li>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;ul&gt;
-  &lt;li&gt;
-    &hellip;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+        Faucibus porta lacus fringilla vel
 
-      </div>
+      </li>
 
-    </div>
+      <li>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+        Aenean sit amet erat nunc
 
-  </section>
+      </li>
 
-  <!-- =================================================
-  END: Unordered Lists
-  ================================================== -->
+      <li>
 
+        Eget porttitor lorem
 
+      </li>
 
-  <!-- =================================================
-  BEGIN: Unstyled Lists
-  ================================================== -->
+    </ul>
 
-  <section id="typography-lists-unstyled">
+  </div>
 
-    <h2>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      Unstyled Lists
+```html
+<ul>
+  <li>
+    …
+  </li>
+</ul>
+```
 
-    </h2>
+  </div>
 
-    <p>
+</div>
 
-      Remove the default list-style and left margin on list items (immediate children only). This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well.
+## Unstyled Lists
 
-    </p>
+Remove the default list-style and left margin on list items (immediate children only). This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well.
 
+<div class="panel flush-bottom">
 
+  <div class="panel-cell">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+    <ul class="list-unstyled flush-bottom">
 
-    <div class="panel flush-bottom">
+      <li>
 
-      <div class="panel-cell">
+        Lorem ipsum dolor sit amet
 
-        <ul class="list-unstyled flush-bottom">
+      </li>
+
+      <li>
+
+        Consectetur adipiscing elit
+
+      </li>
+
+      <li>
+
+        Integer molestie lorem at massa
+
+      </li>
+
+      <li>
+
+        Facilisis in pretium nisl aliquet
+
+      </li>
+
+      <li>
+
+        Nulla volutpat aliquam velit
+
+        <ul>
 
           <li>
 
-            Lorem ipsum dolor sit amet
+            Phasellus iaculis neque
 
           </li>
 
           <li>
 
-            Consectetur adipiscing elit
+            Purus sodales ultricies
 
           </li>
 
           <li>
 
-            Integer molestie lorem at massa
+            Vestibulum laoreet porttitor sem
 
           </li>
 
           <li>
 
-            Facilisis in pretium nisl aliquet
-
-          </li>
-
-          <li>
-
-            Nulla volutpat aliquam velit
-
-            <ul>
-
-              <li>
-
-                Phasellus iaculis neque
-
-              </li>
-
-              <li>
-
-                Purus sodales ultricies
-
-              </li>
-
-              <li>
-
-                Vestibulum laoreet porttitor sem
-
-              </li>
-
-              <li>
-
-                Ac tristique libero volutpat at
-
-              </li>
-
-            </ul>
-
-          </li>
-
-          <li>
-
-            Faucibus porta lacus fringilla vel
-
-          </li>
-
-          <li>
-
-            Aenean sit amet erat nunc
-
-          </li>
-
-          <li>
-
-            Eget porttitor lorem
+            Ac tristique libero volutpat at
 
           </li>
 
         </ul>
 
-      </div>
+      </li>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+      <li>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;ul class="list-unstyled"&gt;
-  &lt;li&gt;
-    &hellip;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+        Faucibus porta lacus fringilla vel
 
-      </div>
+      </li>
 
-    </div>
+      <li>
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+        Aenean sit amet erat nunc
 
-  </section>
+      </li>
 
-  <!-- =================================================
-  END: Unstyled Lists
-  ================================================== -->
+      <li>
 
+        Eget porttitor lorem
 
+      </li>
 
-  <!-- =================================================
-  BEGIN: Inline Lists
-  ================================================== -->
+    </ul>
 
-  <section id="typography-lists-inline">
+  </div>
 
-    <h2>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      Inline Lists
+```html
+<ul class="list-unstyled">
+  <li>
+    …
+  </li>
+</ul>
+```
 
-    </h2>
+  </div>
 
-    <p>
+</div>
 
-      Display list <code>&lt;li&gt;</code> inline rather than vertical stacked using the class <code>.list-inline</code> on any <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.
+## Inline Lists
 
-    </p>
+Display list `<li>` inline rather than vertical stacked using the class `.list-inline` on any `<ul>` or `<ol>`.
 
+<div class="panel flush-bottom">
 
+  <div class="panel-cell">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+    <ul class="list-inline flush-bottom">
 
-    <div class="panel flush-bottom">
+      <li>
 
-      <div class="panel-cell">
+        List item
 
-        <ul class="list-inline flush-bottom">
+      </li>
 
-          <li>
+      <li>
 
-            List item
+        List item
 
-          </li>
+      </li>
 
-          <li>
+      <li>
 
-            List item
+        List item
 
-          </li>
+      </li>
 
-          <li>
+      <li>
 
-            List item
+        List item
 
-          </li>
+      </li>
 
-          <li>
+      <li>
 
-            List item
+        List item
 
-          </li>
+      </li>
 
-          <li>
+    </ul>
 
-            List item
+  </div>
 
-          </li>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-        </ul>
+```html
+<ul class="list-inline">
+  <li>
+    …
+  </li>
+</ul>
+```
 
-      </div>
+  </div>
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;ul class="list-inline"&gt;
-  &lt;li&gt;
-    &hellip;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-  </section>
-
-  <!-- =================================================
-  END: Inline Lists
-  ================================================== -->
-
-</section>
-
-<!-- =================================================
-END: Lists
-================================================== -->
+</div>

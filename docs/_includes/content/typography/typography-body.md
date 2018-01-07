@@ -1,200 +1,113 @@
-<!-- =================================================
-BEGIN: Body Text
-================================================== -->
+# Body Text
 
-<section id="typography-body">
+Body copy, text wrapped in a simple `<p>` tag, lays the foundation for all other text attributes and elements.  Every element of body copy, and really any text, is definable by canvas.
 
-  <h1 class="flush-top">
+<div class="panel flush-bottom">
 
-    Body Text
+  <div class="panel-cell">
 
-  </h1>
+    <p class="">
 
-  <p>
+      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
 
-    Body copy, text wrapped in a simple <code>&lt;p&gt;</code> tag, lays the foundation for all other text attributes and elements.  Every element of body copy, and really any text, is definable by canvas.
+    </p>
 
-  </p>
+    <p class="flush-bottom">
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
 
-  <div class="panel flush-bottom">
-
-    <div class="panel-cell">
-
-      <p class="">
-
-        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-
-      </p>
-
-      <p class="flush-bottom">
-
-        Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
-
-      </p>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html lang-html flush-bottom">
-&lt;p&gt;
-  Collaboratively administrate empowered&hellip;
-&lt;/p&gt;
-
-&lt;p&gt;
-  Efficiently unleash cross-media information&hellip;
-&lt;/p&gt;
-</pre>
-
-    </div>
+    </p>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-  <!-- =================================================
-  BEGIN: Lead Text
-  ================================================== -->
+```html
+<p>
+  Collaboratively administrate empowered…
+</p>
 
-  <section id="typography-body-lead">
+<p>
+  Efficiently unleash cross-media information…
+</p>
+```
 
-    <h2>
+  </div>
 
-      Lead Text
+</div>
 
-    </h2>
+## Lead Text
 
-    <p>
+Increase the importance of your body copy by adding the class `.lead`. Lead is only a class, and not an HTML tag, but may be useful when you want to retain the semantic nature of a paragraph, but are not willing to classify it as a heading.
 
-      Increase the importance of your body copy by adding the class <code>.lead</code>. Lead is only a class, and not an HTML tag, but may be useful when you want to retain the semantic nature of a paragraph, but are not willing to classify it as a heading.
+<div class="panel flush-bottom">
 
-    </p>
+  <div class="panel-cell">
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+    <p class="lead">
 
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <p class="lead">
-
-          Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
-
-        </p>
-
-        <p class="flush-bottom">
-
-          Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
-
-        </p>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;p class="lead"&gt;
-  Collaboratively administrate empowered&hellip;
-&lt;/p&gt;
-
-&lt;p&gt;
-  Efficiently unleash cross-media information&hellip;
-&lt;/p&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-    <!-- =================================================
-    END: Example
-    ================================================== -->
-
-
-  </section>
-
-  <!-- =================================================
-  END: Lead Text
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Small Text
-  ================================================== -->
-
-  <section id="typography-body-small">
-
-    <h2>
-
-      Small Text
-
-    </h2>
-
-    <p>
-
-      For less important body text, add the class <code>.small</code>. Small text is useful for legal fine-print, instructional text, or supporting details.
+      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
 
     </p>
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+    <p class="flush-bottom">
 
-    <div class="panel flush-bottom">
+      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
 
-      <div class="panel-cell">
+    </p>
 
-        <p>
+  </div>
 
-          Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-        </p>
+```html
+<p class="lead">
+  Collaboratively administrate empowered…
+</p>
 
-        <p class="small flush-bottom">
+<p>
+  Efficiently unleash cross-media information…
+</p>
+```
 
-          Collaboratively administrate empowered markets via plug-and-play networks.
+  </div>
 
-        </p>
+</div>
 
-      </div>
+## Small Text
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+For less important body text, add the class `.small`. Small text is useful for legal fine-print, instructional text, or supporting details.
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;p&gt;
-  Collaboratively administrate empowered&hellip;
-&lt;/p&gt;
+<div class="panel flush-bottom">
 
-&lt;p class="small"&gt;
-  Efficiently unleash cross-media information&hellip;
-&lt;/p&gt;
-</pre>
+  <div class="panel-cell">
 
-      </div>
+    <p>
 
-    </div>
+      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
 
-    <!-- =================================================
-    END: Example
-    ================================================== -->
+    </p>
 
+    <p class="small flush-bottom">
 
-  </section>
+      Collaboratively administrate empowered markets via plug-and-play networks.
 
-  <!-- =================================================
-  END: Small Text
-  ================================================== -->
+    </p>
 
+  </div>
 
-</section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<!-- =================================================
-END: Body Text
-================================================== -->
+```html
+<p>
+  Collaboratively administrate empowered…
+</p>
+
+<p class="small">
+  Efficiently unleash cross-media information…
+</p>
+```
+
+  </div>
+
+</div>

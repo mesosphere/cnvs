@@ -1,167 +1,99 @@
-<!-- =================================================
-BEGIN: Inline Styling
-================================================== -->
+# Inline Styling
 
-<section id="typography-inline-styling">
+For all text elements, classes are made available to adjust the styling inline.  For example, increase the emphasis of text to convey importance.
 
-  <h1>
+## Emphasis
 
-    Inline Styling
+When you want to emphasis the importance the text, use the class `.emphasis`. All text included text elements &mdash; headings, body text, lead &mdash; had added support for emphasized text.
 
-  </h1>
+<div class="panel flush-bottom">
 
-  <p class="flush-bottom">
+  <div class="panel-cell">
 
-    For all text elements, classes are made available to adjust the styling inline.  For example, increase the emphasis of text to convey importance.
+    <span class="h1 flush-top">
 
-  </p>
+      Heading with <span class="emphasis">emphasized</span> text
 
-  <!-- =================================================
-  BEGIN: Inline Styling (emphasis)
-  ================================================== -->
+    </span>
 
-  <section id="typography-inline-styling-emphasis">
+    <p class="lead">
 
-    <h2>
-
-      Emphasis
-
-    </h2>
-
-    <p>
-
-      When you want to emphasis the importance the text, use the class <code>.emphasis</code>. All text included text elements &mdash; headings, body text, lead &mdash; had added support for emphasized text.
+      Quickly <span class="emphasis">maximize</span> timely deliverables for deliverables without functional solutions.
 
     </p>
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+    <p class="flush-bottom">
 
-    <div class="panel flush-bottom">
-
-      <div class="panel-cell">
-
-        <h1 class="flush-top">
-
-          Heading with <span class="emphasis">emphasized</span> text
-
-        </h1>
-
-        <p class="lead">
-
-          Quickly <span class="emphasis">maximize</span> timely deliverables for deliverables without functional solutions.
-
-        </p>
-
-        <p class="flush-bottom">
-
-          Efficiently unleash <span class="emphasis">cross-media</span> information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
-
-        </p>
-
-      </div>
-
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;h1 class="flush-top"&gt;
-  Heading with &lt;span class="emphasis"&gt;emphasized&lt;/span&gt; text
-&lt;/h1&gt;
-
-&lt;p class="lead"&gt;
-  Quickly &lt;span class="emphasis"&gt;maximize&lt;/span&gt; timely&hellip;
-&lt;/p&gt;
-
-&lt;p class="flush-bottom"&gt;
-  Efficiently unleash &lt;span class="emphasis"&gt;cross-media&lt;/span&gt; inf&hellip;
-&lt;/p&gt;
-</pre>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =================================================
-  END: Inline Styling (emphasis)
-  ================================================== -->
-
-  <!-- =================================================
-  BEGIN: Inline Styling (muted)
-  ================================================== -->
-
-  <section id="typography-inline-styling-muted">
-
-    <h2>
-
-      Muted
-
-    </h2>
-
-    <p>
-
-      When you want to demphasis the importance text, use the class <code>.muted</code>. All text included text elements &mdash; headings, body text, lead &mdash; had added support for muted text.
+      Efficiently unleash <span class="emphasis">cross-media</span> information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
 
     </p>
 
-    <!-- =================================================
-    BEGIN: Example
-    ================================================== -->
+  </div>
 
-    <div class="panel flush-bottom">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-      <div class="panel-cell">
+```html
+<h1 class="flush-top">
+  Heading with <span class="emphasis">emphasized</span> text
+</h1>
 
-        <h1 class="flush-top">
+<p class="lead">
+  Quickly <span class="emphasis">maximize</span> timely…
+</p>
 
-          Heading with <span class="muted">muted</span> text
+<p class="flush-bottom">
+  Efficiently unleash <span class="emphasis">cross-media</span> inf…
+</p>
+```
 
-        </h1>
+  </div>
 
-        <p class="lead">
+</div>
 
-          Quickly <span class="muted">maximize</span> timely deliverables for deliverables without functional solutions.
+## Muted
 
-        </p>
+When you want to demphasis the importance text, use the class `.muted`. All text included text elements &mdash; headings, body text, lead &mdash; had added support for muted text.
 
-        <p class="flush-bottom">
+<div class="panel flush-bottom">
 
-          Efficiently unleash <span class="muted">cross-media</span> information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
+  <div class="panel-cell">
 
-        </p>
+    <span class="h1 flush-top">
 
-      </div>
+      Heading with <span class="muted">muted</span> text
 
-      <div class="panel-cell panel-cell-light panel-cell-code-block">
+    </span>
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;h1 class="flush-top"&gt;
-  Heading with &lt;span class="muted"&gt;muted&lt;/span&gt; text
-&lt;/h1&gt;
+    <p class="lead">
 
-&lt;p class="lead"&gt;
-  Quickly &lt;span class="muted"&gt;maximize&lt;/span&gt; timely&hellip;
-&lt;/p&gt;
+      Quickly <span class="muted">maximize</span> timely deliverables for deliverables without functional solutions.
 
-&lt;p class="flush-bottom"&gt;
-  Efficiently unleash &lt;span class="muted"&gt;cross-media&lt;/span&gt; inf&hellip;
-&lt;/p&gt;
-</pre>
+    </p>
 
-      </div>
+    <p class="flush-bottom">
 
-    </div>
+      Efficiently unleash <span class="muted">cross-media</span> information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets.
 
-  </section>
+    </p>
 
-  <!-- =================================================
-  END: Inline Styling (muted)
-  ================================================== -->
+  </div>
 
-</section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<!-- =================================================
-END: Inline Styling
-================================================== -->
+```html
+<h1 class="flush-top">
+  Heading with <span class="muted">muted</span> text
+</h1>
+
+<p class="lead">
+  Quickly <span class="muted">maximize</span> timely…
+</p>
+
+<p class="flush-bottom">
+  Efficiently unleash <span class="muted">cross-media</span> inf…
+</p>
+```
+
+  </div>
+
+</div>

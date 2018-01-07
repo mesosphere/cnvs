@@ -1,101 +1,77 @@
-<!-- =================================================
-BEGIN: Headings
-================================================== -->
+# Headings
 
-<section id="typography-headings">
+All standard HTML heading tags from `<h1>` through `<h5>` are available. In addition the class `.h1` through `.h5` classes are available, for when you want to match the font styling of a heading but don't want to adjust the tag.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Headings
+  <div class="panel-cell">
 
-  </h1>
+    <span class="h1 flush-top">
 
-  <p>
+      h1 Heading Text
 
-    All standard HTML heading tags from <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code> are available. In addition the class <code>.h1</code> through <code>.h5</code> classes are available, for when you want to match the font styling of a heading but don't want to adjust the tag.
+    </span>
 
-  </p>
+    <span class="h2">
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      h2 Heading Text
 
-  <div class="panel flush-bottom">
+    </span>
 
-    <div class="panel-cell">
+    <span class="h3">
 
-      <h1 class="flush-top">
+      h3 Heading Text
 
-        h1 Heading Text
+    </span>
 
-      </h1>
+    <span class="h4">
 
-      <h2>
+      h4 Heading Text
 
-        h2 Heading Text
+    </span>
 
-      </h2>
+    <span class="h5">
 
-      <h3>
+      h5 Heading Text
 
-        h3 Heading Text
+    </span>
 
-      </h3>
+    <span class="h6 flush-bottom">
 
-      <h4>
+      h6 Heading Text
 
-        h4 Heading Text
-
-      </h4>
-
-      <h5>
-
-        h5 Heading Text
-
-      </h5>
-
-      <h6 class="flush-bottom">
-
-        h6 Heading Text
-
-      </h6>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;h1&gt;
-  h1 Heading Text
-&lt;/h1&gt;
-
-&lt;h2&gt;
-  h2 Heading Text
-&lt;/h2&gt;
-
-&lt;h3&gt;
-  h3 Heading Text
-&lt;/h3&gt;
-
-&lt;h4&gt;
-  h4 Heading Text
-&lt;/h4&gt;
-
-&lt;h5&gt;
-  h5 Heading Text
-&lt;/h5&gt;
-
-&lt;h6&gt;
-  h6 Heading Text
-&lt;/h6&gt;
-</pre>
-
-    </div>
+    </span>
 
   </div>
 
-</section>
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<!-- =================================================
-END: Headings
-================================================== -->
+```html
+<h1>
+  h1 Heading Text
+</h1>
+
+<h2>
+  h2 Heading Text
+</h2>
+
+<h3>
+  h3 Heading Text
+</h3>
+
+<h4>
+  h4 Heading Text
+</h4>
+
+<h5>
+  h5 Heading Text
+</h5>
+
+<h6>
+  h6 Heading Text
+</h6>
+```
+
+  </div>
+
+</div>

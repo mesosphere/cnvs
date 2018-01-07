@@ -1,95 +1,67 @@
-<!-- =================================================
-BEGIN: Alignment
-================================================== -->
+# Alignment
 
-<section id="typography-text-alignment">
+Align text using the supplied alignment classes.  By default text is aligned left.
 
-  <h1>
+<div class="panel flush-bottom">
 
-    Alignment
+  <div class="panel-cell">
 
-  </h1>
+    <p class="text-align-left">
 
-  <p>
+      Left aligned text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
 
-    Align text using the supplied alignment classes.  By default text is aligned left.
+    </p>
 
-  </p>
+    <p class="text-align-center">
 
-  <!-- =================================================
-  BEGIN: Example
-  ================================================== -->
+      Center aligned text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
 
-  <div class="panel flush-bottom">
+    </p>
 
-    <div class="panel-cell">
+    <p class="text-align-right">
 
-      <p class="text-align-left">
+      Right aligned text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
 
-        Left aligned text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
+    </p>
 
-      </p>
+    <p class="text-align-justify">
 
-      <p class="text-align-center">
+      Justify aligned text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
 
-        Center aligned text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
+    </p>
 
-      </p>
+    <p class="text-align-nowrap">
 
-      <p class="text-align-right">
+      No wrap text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
 
-        Right aligned text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
-
-      </p>
-
-      <p class="text-align-justify">
-
-        Justify aligned text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
-
-      </p>
-
-      <p class="text-align-nowrap">
-
-        No wrap text. Cartibulum ercisco buglossa montepessulanus bicrotum cosidero auricolor menda boo bubo pernot io anilis lento infrequens cit circumvolutor crux. Congregalis chrysoprassos vanesco carptor galbanus veles septimpliciter corripio assuo bua arferia?
-
-      </p>
-
-    </div>
-
-    <div class="panel-cell panel-cell-light panel-cell-code-block">
-
-<pre class="prettyprint transparent flush lang-html">
-&lt;p class="text-align-left"&gt;
-  Left aligned text.
-&lt;/p&gt;
-
-&lt;p class="text-align-center"&gt;
-  Center aligned text.
-&lt;/p&gt;
-
-&lt;p class="text-align-right"&gt;
-  Right aligned text.
-&lt;/p&gt;
-
-&lt;p class="text-align-justify"&gt;
-  Justify aligned text.
-&lt;/p&gt;
-
-&lt;p class="text-align-nowrap"&gt;
-  No wrap text.
-&lt;/p&gt;
-</pre>
-
-    </div>
+    </p>
 
   </div>
 
-  <!-- =================================================
-  END: Example
-  ================================================== -->
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-</section>
+```html
+<p class="text-align-left">
+  Left aligned text.
+</p>
 
-<!-- =================================================
-END: Alignment
-================================================== -->
+<p class="text-align-center">
+  Center aligned text.
+</p>
+
+<p class="text-align-right">
+  Right aligned text.
+</p>
+
+<p class="text-align-justify">
+  Justify aligned text.
+</p>
+
+<p class="text-align-nowrap">
+  No wrap text.
+</p>
+```
+
+  </div>
+
+</div>
