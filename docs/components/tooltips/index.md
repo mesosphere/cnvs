@@ -20,13 +20,13 @@ toc: true
 
   </div>
 
-  <div class="panel-cell panel-cell-light panel-cell-code-block">
+  <div class="panel-cell panel-cell-light panel-cell-code-block" markdown="1">
 
-<pre class="prettyprint transparent flush lang-html">
-&lt;div class="tooltip"&gt;
+```html
+<div class="tooltip">
   This is a simple tooltip
-&lt;/div&gt;
-</pre>
+</div>
+```
 
   </div>
 
