@@ -1,25 +1,25 @@
 // Load plugins
 
 var argv          = require('yargs').argv,
-    autoprefixer  = require("gulp-autoprefixer"),
+    autoprefixer  = require('gulp-autoprefixer'),
     browserSync   = require('browser-sync'),
     clean         = require('gulp-clean'),
-    concat        = require("gulp-concat"),
-    cp            = require('child_process')
-    gulp          = require("gulp"),
+    concat        = require('gulp-concat'),
+    cp            = require('child_process'),
+    gulp          = require('gulp'),
     htmlmin       = require('gulp-htmlmin'),
     ifElse        = require('gulp-if-else'),
-    jekyll        = require('gulp-jekyll');
-    less          = require("gulp-less"),
-    minifyCSS     = require("gulp-minify-css"),
+    jekyll        = require('gulp-jekyll'),
+    less          = require('gulp-less'),
+    minifyCSS     = require('gulp-minify-css'),
     notify        = require('gulp-notify'),
-    plumber       = require("gulp-plumber"),
-    rename        = require("gulp-rename"),
-    sourcemaps    = require("gulp-sourcemaps"),
+    plumber       = require('gulp-plumber'),
+    rename        = require('gulp-rename'),
+    runSequence   = require('run-sequence'),
+    sourcemaps    = require('gulp-sourcemaps'),
     stylelint     = require('gulp-stylelint'),
-    uglify        = require("gulp-uglify"),
-    util          = require("gulp-util");
-    watchLess     = require('gulp-watch-less');
+    uglify        = require('gulp-uglify'),
+    util          = require('gulp-util');
 
 // Define Variables
 
@@ -102,39 +102,25 @@ var files = {
 
 gulp.task('default', ['serve']);
 
-// Build and Serve Documentation
-
-gulp.task('serve', ['build'], function() {
-
-  ifElse(argv.production, function() {
-
-    config = config_vars.prod;
-
-  }, function() {
-
-    config = config_vars.dev;
-
-  });
-
-  gulp.start('docs:serve');
-
-});
-
 // Build cnvs and Documentation
 
 gulp.task('build', ['cnvs:build', 'docs:build']);
 
+// Build and Serve Documentation
+
+gulp.task('serve', function(callback) { runSequence('build', 'docs:serve', callback);});
+
 // Build cnvs Styles
 
-gulp.task("cnvs:build", ["cnvs:styles"]);
+gulp.task('cnvs:build', ['cnvs:styles']);
 
 // Build Documentation Styles, Javascript, and Move Assets
 
-gulp.task("docs:build", ["docs:move", "docs:styles", "docs:javascripts"]);
+gulp.task('docs:build', function(callback) { runSequence('jekyll-build', 'docs:move', 'docs:styles', 'docs:javascripts', callback);});
 
 // Serve Documentation Site
 
-gulp.task("docs:serve", ["browser-sync", "watch"]);
+gulp.task('docs:serve', function(callback) { runSequence('browser-sync', 'watch', callback);});
 
 // Clean CNVS and Documentation Distribution Directories
 
@@ -152,12 +138,12 @@ gulp.task('clean', function() {
 
 // Watch for file changes
 
-gulp.task("watch", function () {
+gulp.task('watch', function () {
 
-  gulp.watch([dirs.docs.styles + "/**/*.less"], ["docs:styles"]);
-  gulp.watch([dirs.docs.javascripts + "/**/*.js"], ["docs:javascripts"]);
-  gulp.watch([dirs.cnvs.styles + "/**/*.less"], ["cnvs:styles", "docs:styles"]);
-  gulp.watch([dirs.docs.path + '/images/**/*'], ["docs:move"]);
+  gulp.watch([dirs.docs.styles + '/**/*.less'], ['docs:styles']);
+  gulp.watch([dirs.docs.javascripts + '/**/*.js'], ['docs:javascripts']);
+  gulp.watch([dirs.docs.images + '/**/*'], ['docs:move']);
+  gulp.watch([dirs.cnvs.styles + '/**/*.less'], ['cnvs:styles', 'docs:styles']);
   gulp.watch([
     dirs.docs.path + '/**/*.html',
     dirs.docs.path + '/**/*.md',
@@ -307,15 +293,15 @@ gulp.task("docs:javascripts", function () {
 
 });
 
-// Start Jekyll Server then start Documentation Site
+// Start Documentation Site
 
-gulp.task('browser-sync', ['jekyll-build'], function() {
+gulp.task('browser-sync', function() {
 
   var files = [
-      dirs.docs.dist.styles + '/**/*.css',
-      dirs.docs.dist.javascripts + '**/*.js',
-      dirs.docs.dist + 'images/**/*'
-   ];
+    dirs.docs.dist.styles + '/**/*.css',
+    dirs.docs.dist.javascripts + '**/*.js',
+    dirs.docs.dist + 'images/**/*'
+  ];
 
   browserSync({
     files: files,
@@ -332,6 +318,12 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 // Start Jekyll Server
 
 gulp.task('jekyll-build', function (done) {
+
+  ifElse(argv.production, function() {
+    config = config_vars.prod;
+  }, function() {
+    config = config_vars.dev;
+  });
 
   browserSync.notify(messages.jekyllBuild);
 
