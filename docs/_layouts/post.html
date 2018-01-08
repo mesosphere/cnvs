@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<div class="pod pod-tall">
+
+  <div class="container">
+
+    <section class="page-header pod-tall-bottom">
+
+      {% if page.page-header.headline != null and page.page-header.headline != empty %}
+
+        <p class="h1 page-header-headline flush-top {% if page.page-header.description != null and page.page-header.description != empty or page.page-header.actions != null %}short{% else %}flush-bottom{% endif %}">
+
+          {{ page.page-header.headline }}
+
+        </p>
+
+      {% endif %}
+
+      {% if page.page-header.description != null and page.page-header.description != empty %}
+
+        <p class="page-header-description lead {% if page.page-header.actions == null %}flush-bottom{% endif %}">
+
+          {{ page.page-header.description }}
+
+        </p>
+
+      {% endif %}
+
+      {% if page.page-header.actions != null %}
+
+        <div class="button-collection flush-bottom {{ page-header-actions-alignment-class }}">
+
+          {% for item in page.page-header.actions %}
+
+            <a href="{{ item.link }}" class="button {{ item.class }}" id="{% if item.id != null and item.id != empty %}{{ item.id }}{% endif %}" {% if item.modal != null and item.modal != empty %}data-toggle="modal" data-target="{{ item.modal }}"{% endif %}>
+
+              {{ item.label }}
+
+            </a>
+
+          {% endfor %}
+
+        </div>
+
+      {% endif %}
+
+      {% if page.toc %}
+
+        <div class="page-navigation pod-tall-top">
+
+          <h6 class="text-uppercase">
+
+            Table of Contents
+
+          </h6>
+
+          {{ content | toc_only }}
+
+        </div>
+
+      {% endif %}
+
+    </section>
+
+    <section class="page-body">
+
+      {{ content | inject_anchors }}
+
+    </section>
+
+  </div>
+
+</div>

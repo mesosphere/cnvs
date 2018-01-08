@@ -26,67 +26,19 @@
 
   {% include layout/head.html %}
 
-  <!-- =================================================
-  BEGIN: Body
-  ================================================== -->
-
   <body>
 
     {% include layout/body-head.html %}
 
-    <!-- =================================================
-    BEGIN: Canvas
-    ================================================== -->
-
-    <div class="canvas {{ page.id }} flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
+    <div class="app flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-medium">
 
       {% include layout/sidebar.html %}
 
-      <!-- =================================================
-      BEGIN: Page
-      ================================================== -->
+      <section class="{{ page.id }} page flex-item-grow-1">
 
-      <div class="page flex-item-grow-1">
+        {{ content }}
 
-        {% include layout/page-header.html %}
-
-        <!-- =================================================
-        BEGIN: Page Content Wrapper
-        ================================================== -->
-
-        <div class="page-content-wrapper flex flex-direction-top-to-bottom flex-direction-left-to-right-screen-large">
-
-          {% if page.page-navigation %}
-
-            {% include layout/page-navigation.html %}
-
-          {% endif %}
-
-          <!-- =================================================
-          BEGIN: Page Content
-          ================================================== -->
-
-          <div class="page-content flex flex-direction-top-to-bottom flex-item-grow-1">
-
-            {{ content }}
-
-          </div>
-
-          <!-- =================================================
-          END: Page Content
-          ================================================== -->
-
-        </div>
-
-        <!-- =================================================
-        END: Page Content Wrapper
-        ================================================== -->
-
-      </div>
-
-      <!-- =================================================
-      END: Page
-      ================================================== -->
+      </section>
 
       {% include layout/modals.html %}
 
@@ -94,16 +46,8 @@
 
     </div>
 
-    <!-- =================================================
-    END: Canvas
-    ================================================== -->
-
     {% include layout/body-foot.html %}
 
   </body>
-
-  <!-- =================================================
-  END: Body
-  ================================================== -->
 
 </html>
