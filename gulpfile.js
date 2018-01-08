@@ -1,35 +1,26 @@
 // Load plugins
 
-var args          = require('get-gulp-args')(),
-    autoprefixer  = require('gulp-autoprefixer'),
-    browserSync   = require('browser-sync'),
-    clean         = require('gulp-clean'),
-    concat        = require('gulp-concat'),
-    cp            = require('child_process'),
-    gulp          = require('gulp'),
-    ifElse        = require('gulp-if-else'),
-    jekyll        = require('gulp-jekyll'),
-    less          = require('gulp-less'),
-    minifyCSS     = require('gulp-minify-css'),
-    notify        = require('gulp-notify'),
-    plumber       = require('gulp-plumber'),
-    rename        = require('gulp-rename'),
-    runSequence   = require('run-sequence'),
-    sourcemaps    = require('gulp-sourcemaps'),
-    stylelint     = require('gulp-stylelint'),
-    uglify        = require('gulp-uglify'),
-    util          = require('gulp-util'),
-    watch         = require('gulp-watch');
+var argv          = require('yargs').argv;
+var autoprefixer  = require('gulp-autoprefixer');
+var browserSync   = require('browser-sync');
+var concat        = require('gulp-concat');
+var cp            = require('child_process');
+var gulp          = require('gulp');
+var ifElse        = require('gulp-if-else');
+var less          = require('gulp-less');
+var minifyCSS     = require('gulp-minify-css');
+var notify        = require('gulp-notify');
+var plumber       = require('gulp-plumber');
+var rename        = require('gulp-rename');
+var sourcemaps    = require('gulp-sourcemaps');
+var stylelint     = require('gulp-stylelint');
+var uglify        = require('gulp-uglify');
+var util          = require('gulp-util');
 
 // Define Variables
 
-var reload        = browserSync.reload;
-var config        = {};
-var messages = {
-  jekyllBuild: 'Running $ jekyll build'
-};
-
-var config_vars   = {
+var config = {};
+var config_vars = {
   dev: {
 
     jekyllConfig: "_config.dev.yml"
@@ -40,6 +31,10 @@ var config_vars   = {
     jekyllConfig: "_config.yml"
 
   }
+};
+var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+var messages = {
+  jekyllBuild: 'Running $ jekyll build'
 };
 
 var dirs = {
@@ -102,39 +97,27 @@ var files = {
 
 gulp.task('default', ['serve']);
 
+// Build and Serve Documentation
+
+gulp.task('serve', ['browser-sync', 'watch']);
+
 // Build cnvs and Documentation
 
 gulp.task('build', ['cnvs:build', 'docs:build']);
 
-// Build and Serve Documentation
-
-gulp.task('serve', function(callback) { runSequence('build', 'docs:serve', callback);});
-
-// Build cnvs Styles
+// Build CNVS Styles
 
 gulp.task('cnvs:build', ['cnvs:styles']);
 
 // Build Documentation Styles, Javascript, and Move Assets
 
-gulp.task('docs:build', function(callback) { runSequence('jekyll-build', 'docs:move', 'docs:styles', 'docs:javascripts', callback);});
+gulp.task('docs:build', ['docs:styles', 'docs:javascripts', 'docs:move']);
 
 // Serve Documentation Site
 
-gulp.task('docs:serve', ['browser-sync', 'watch']);
+gulp.task('docs:dist', ['docs:build', 'jekyll-build']);
 
-// Clean CNVS and Documentation Distribution Directories
-
-gulp.task('clean', function() {
-
-  return gulp.src([
-      dirs.cnvs.dist.path,
-      dirs.docs.dist.path
-    ], {
-      read: false
-    })
-    .pipe(clean());
-
-});
+// Watch for changes
 
 gulp.task('watch', function () {
 
@@ -168,7 +151,7 @@ gulp.task("docs:move", function () {
 
 // Compile and Process cnvs Styles
 
-gulp.task("cnvs:styles", ["cnvs:stylelint"], function () {
+gulp.task("cnvs:styles", function () {
 
   return gulp.src(dirs.cnvs.styles + "/" + files.cnvs.styles + ".less")
     .pipe(plumber())
@@ -202,6 +185,7 @@ gulp.task("cnvs:styles", ["cnvs:stylelint"], function () {
       includeContent: false,
       sourceRoot: dirs.cnvs.styles
     }))
+    .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest(dirs.cnvs.dist.styles));
 
 });
@@ -222,7 +206,7 @@ gulp.task("cnvs:stylelint", function () {
 
 // Compile and Process Documentation Styles
 
-gulp.task("docs:styles", ["docs:stylelint"], function () {
+gulp.task("docs:styles", function () {
 
   return gulp.src(dirs.docs.styles + "/" + files.docs.styles + ".less")
     .pipe(plumber())
@@ -256,6 +240,7 @@ gulp.task("docs:styles", ["docs:stylelint"], function () {
       includeContent: false,
       sourceRoot: dirs.docs.styles
     }))
+    .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest(dirs.docs.dist.styles));
 
 });
@@ -299,7 +284,7 @@ gulp.task("docs:javascripts", function () {
 
 // Start Documentation Site
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', ['docs:build', 'jekyll-build'], function() {
 
   var files = [
     dirs.docs.dist.styles + '/**/*.css',
@@ -323,7 +308,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('jekyll-build', function (done) {
 
-  ifElse(args.production, function() {
+  ifElse(argv.production, function() {
     config = config_vars.prod;
   }, function() {
     config = config_vars.dev;
@@ -331,13 +316,16 @@ gulp.task('jekyll-build', function (done) {
 
   browserSync.notify(messages.jekyllBuild);
 
-  var spawn = require('child_process').spawn;
-
-  var jekyll = spawn('jekyll', ['build', '--config=' + dirs.docs.path + '/' + config.jekyllConfig, '--source=' + dirs.docs.path, '--destination=' + dirs.docs.dist.path], {
-    stdio: 'inherit'
-  }).on('close', done);
-
-  return jekyll;
+  return cp.spawn(
+    jekyll,
+    [
+      'build',
+      '--config=' + dirs.docs.path + '/' + config.jekyllConfig,
+      '--source=' + dirs.docs.path,
+      '--destination=' + dirs.docs.dist.path
+    ], {
+      stdio: 'inherit'
+    }).on('close', done);
 
 });
 
