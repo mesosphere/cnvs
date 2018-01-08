@@ -1,13 +1,12 @@
 // Load plugins
 
-var argv          = require('yargs').argv,
+var args          = require('get-gulp-args')(),
     autoprefixer  = require('gulp-autoprefixer'),
     browserSync   = require('browser-sync'),
     clean         = require('gulp-clean'),
     concat        = require('gulp-concat'),
     cp            = require('child_process'),
     gulp          = require('gulp'),
-    htmlmin       = require('gulp-htmlmin'),
     ifElse        = require('gulp-if-else'),
     jekyll        = require('gulp-jekyll'),
     less          = require('gulp-less'),
@@ -19,14 +18,15 @@ var argv          = require('yargs').argv,
     sourcemaps    = require('gulp-sourcemaps'),
     stylelint     = require('gulp-stylelint'),
     uglify        = require('gulp-uglify'),
-    util          = require('gulp-util');
+    util          = require('gulp-util'),
+    watch         = require('gulp-watch');
 
 // Define Variables
 
 var reload        = browserSync.reload;
 var config        = {};
 var messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+  jekyllBuild: 'Running $ jekyll build'
 };
 
 var config_vars   = {
@@ -120,7 +120,7 @@ gulp.task('docs:build', function(callback) { runSequence('jekyll-build', 'docs:m
 
 // Serve Documentation Site
 
-gulp.task('docs:serve', function(callback) { runSequence('browser-sync', 'watch', callback);});
+gulp.task('docs:serve', ['browser-sync', 'watch']);
 
 // Clean CNVS and Documentation Distribution Directories
 
@@ -135,8 +135,6 @@ gulp.task('clean', function() {
     .pipe(clean());
 
 });
-
-// Watch for file changes
 
 gulp.task('watch', function () {
 
@@ -214,7 +212,10 @@ gulp.task("cnvs:stylelint", function () {
 
   return gulp.src(dirs.cnvs.styles + '/**/*.less')
     .pipe(stylelint({
-      reporters: [{formatter: 'string', console: true}]
+      reporters: [{
+        formatter: 'string',
+        console: false
+      }]
     }));
 
 });
@@ -265,7 +266,10 @@ gulp.task("docs:stylelint", function () {
 
   return gulp.src(dirs.docs.styles + '/**/*.less')
     .pipe(stylelint({
-      reporters: [{formatter: 'string', console: true}]
+      reporters: [{
+        formatter: 'string',
+        console: false
+      }]
     }));
 
 });
@@ -319,7 +323,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('jekyll-build', function (done) {
 
-  ifElse(argv.production, function() {
+  ifElse(args.production, function() {
     config = config_vars.prod;
   }, function() {
     config = config_vars.dev;
