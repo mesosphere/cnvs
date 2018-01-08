@@ -8,9 +8,9 @@ layout: default
 
     <section class="page-header pod-tall-bottom">
 
-      {% if (page.page-header.headline != null) and (page.page-header.headline != empty) %}
+      {% if page.page-header.headline != null and page.page-header.headline != empty %}
 
-        <p class="h1 page-header-headline flush-top {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
+        <p class="h1 page-header-headline flush-top {% if page.page-header.description != null and page.page-header.description != empty or page.page-header.actions != null %}short{% else %}flush-bottom{% endif %}">
 
           {{ page.page-header.headline }}
 
@@ -18,9 +18,9 @@ layout: default
 
       {% endif %}
 
-      {% if (page.page-header.description != null) and (page.page-header.description != empty) %}
+      {% if page.page-header.description != null and page.page-header.description != empty %}
 
-        <p class="page-header-description lead {% if (page.page-header.actions == null) %}flush-bottom{% endif %}">
+        <p class="page-header-description lead {% if page.page-header.actions == null %}flush-bottom{% endif %}">
 
           {{ page.page-header.description }}
 
@@ -28,13 +28,13 @@ layout: default
 
       {% endif %}
 
-      {% if (page.page-header.actions != null) %}
+      {% if page.page-header.actions != null %}
 
         <div class="button-collection flush-bottom {{ page-header-actions-alignment-class }}">
 
           {% for item in page.page-header.actions %}
 
-            <a href="{{ item.link }}" class="button {{ item.class }}" id="{% if (item.id != null) and (item.id != empty) %}{{ item.id }}{% endif %}" {% if (item.modal != null) and (item.modal != empty) %}data-toggle="modal" data-target="{{ item.modal }}"{% endif %}>
+            <a href="{{ item.link }}" class="button {{ item.class }}" id="{% if item.id != null and item.id != empty %}{{ item.id }}{% endif %}" {% if item.modal != null and item.modal != empty %}data-toggle="modal" data-target="{{ item.modal }}"{% endif %}>
 
               {{ item.label }}
 
