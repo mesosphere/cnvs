@@ -8,7 +8,7 @@ page-header:
 toc: true
 ---
 
-<div class="panel pod pod-short-bottom pod-short-top flush-horizontal">
+<div class="panel flush-horizontal">
 
   <div class="panel-cell">
 
@@ -245,7 +245,7 @@ The column width and position can change based on both screen resolution and cla
 
 Offset columns, shifting them to the right, by using the `.column-offset-*` classes -- replacing the `*` with the number of columns to shift by. For example, `.column-offset-3` will move the column over by 3 columns. Use direction modifiers, in the format `.column-small-offset-*`, to offset at the designated screen size breakpoint.
 
-<div class="panel pod pod-short-bottom pod-short-top flush-horizontal" markdown="1">
+<div class="panel flush-horizontal" markdown="1">
 
   <div class="panel-cell">
 
@@ -349,7 +349,7 @@ Offset columns, shifting them to the right, by using the `.column-offset-*` clas
 
 The CNVS Grid System supports an infinite number of nested grids. This means, in a given `.column-*` you can add a child `.row`, effectively establishing a new grid. Be careful to always wrap your nested columns in a new `.row`.
 
-<div class="panel pod pod-short-bottom pod-short-top flush-horizontal"  markdown="1">
+<div class="panel flush-horizontal"  markdown="1">
 
   <div class="panel-cell">
 
@@ -448,7 +448,7 @@ Size modifiers are available if you wish to have a grid with narrower or wider g
 | `.row-wide`   | Increase the gutter width between columns.   |
 {: .table }
 
-<div class="panel pod pod-short-bottom pod-short-top flush-horizontal">
+<div class="panel flush-horizontal">
 
   <div class="panel-cell">
 
