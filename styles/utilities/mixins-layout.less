@@ -24,28 +24,54 @@ classes are created just for that screen-size (e.g. h2.short-top-screen-small).
 
   & when not (@modifier = null) {
 
-    &-top,
-    &-top@{class-suffix} {
-      .property-variant(@class, margin-top, @modifier, @screen-size);
-      .property-variant(@class, padding-top, @modifier, @screen-size);
+    & when (@screen-size = null) {
+
+      &-top@{class-suffix} {
+        .property-variant(@class, margin-top, @modifier, @screen-size);
+        .property-variant(@class, padding-top, @modifier, @screen-size);
+      }
+
+      &-bottom@{class-suffix} {
+        .property-variant(@class, margin-bottom, @modifier, @screen-size);
+        .property-variant(@class, padding-bottom, @modifier, @screen-size);
+      }
+
+      &-left@{class-suffix} {
+        .property-variant(@class, margin-left, @modifier, @screen-size);
+        .property-variant(@class, padding-left, @modifier, @screen-size);
+      }
+
+      &-right@{class-suffix} {
+        .property-variant(@class, margin-right, @modifier, @screen-size);
+        .property-variant(@class, padding-right, @modifier, @screen-size);
+      }
     }
 
-    &-bottom,
-    &-bottom@{class-suffix} {
-      .property-variant(@class, margin-bottom, @modifier, @screen-size);
-      .property-variant(@class, padding-bottom, @modifier, @screen-size);
-    }
+    & when not (@screen-size = null) {
 
-    &-left,
-    &-left@{class-suffix} {
-      .property-variant(@class, margin-left, @modifier, @screen-size);
-      .property-variant(@class, padding-left, @modifier, @screen-size);
-    }
+      &-top,
+      &-top@{class-suffix} {
+        .property-variant(@class, margin-top, @modifier, @screen-size);
+        .property-variant(@class, padding-top, @modifier, @screen-size);
+      }
 
-    &-right,
-    &-right@{class-suffix} {
-      .property-variant(@class, margin-right, @modifier, @screen-size);
-      .property-variant(@class, padding-right, @modifier, @screen-size);
+      &-bottom,
+      &-bottom@{class-suffix} {
+        .property-variant(@class, margin-bottom, @modifier, @screen-size);
+        .property-variant(@class, padding-bottom, @modifier, @screen-size);
+      }
+
+      &-left,
+      &-left@{class-suffix} {
+        .property-variant(@class, margin-left, @modifier, @screen-size);
+        .property-variant(@class, padding-left, @modifier, @screen-size);
+      }
+
+      &-right,
+      &-right@{class-suffix} {
+        .property-variant(@class, margin-right, @modifier, @screen-size);
+        .property-variant(@class, padding-right, @modifier, @screen-size);
+      }
     }
   }
 }

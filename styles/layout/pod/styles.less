@@ -2,40 +2,171 @@
   /* Pod */
 
   .pod {
-    .element-spacing(pod, null, null);
+    .property-variant(pod, margin-bottom, null, null);
+    .property-variant(pod, margin-left, null, null);
+    .property-variant(pod, margin-right, null, null);
+    .property-variant(pod, margin-top, null, null);
+    .property-variant(pod, padding-bottom, null, null);
+    .property-variant(pod, padding-left, null, null);
+    .property-variant(pod, padding-right, null, null);
+    .property-variant(pod, padding-top, null, null);
+
+    &-top {
+      .property-variant(pod, margin-top, null, null);
+      .property-variant(pod, padding-top, null, null);
+    }
+
+    &-bottom {
+      .property-variant(pod, margin-bottom, null, null);
+      .property-variant(pod, padding-bottom, null, null);
+    }
+
+    &-left {
+      .property-variant(pod, margin-left, null, null);
+      .property-variant(pod, padding-left, null, null);
+    }
+
+    &-right {
+      .property-variant(pod, margin-right, null, null);
+      .property-variant(pod, padding-right, null, null);
+    }
 
     /* Pod Layout Variants */
 
     &-shorter {
-      .element-spacing(pod, shorter, null);
+      .property-variant(pod, margin-top, shorter, null);
+      .property-variant(pod, margin-bottom, shorter, null);
+      .property-variant(pod, padding-top, shorter, null);
+      .property-variant(pod, padding-bottom, shorter, null);
+    }
+
+    &-shorter-top {
+      .property-variant(pod, margin-top, shorter, null);
+      .property-variant(pod, padding-top, shorter, null);
+    }
+
+    &-shorter-bottom {
+      .property-variant(pod, margin-bottom, shorter, null);
+      .property-variant(pod, padding-bottom, shorter, null);
     }
 
     &-short {
-      .element-spacing(pod, short, null);
+      .property-variant(pod, margin-top, short, null);
+      .property-variant(pod, margin-bottom, short, null);
+      .property-variant(pod, padding-top, short, null);
+      .property-variant(pod, padding-bottom, short, null);
+    }
+
+    &-short-top {
+      .property-variant(pod, margin-top, short, null);
+      .property-variant(pod, padding-top, short, null);
+    }
+
+    &-short-bottom {
+      .property-variant(pod, margin-bottom, short, null);
+      .property-variant(pod, padding-bottom, short, null);
     }
 
     &-tall {
-      .element-spacing(pod, tall, null);
+      .property-variant(pod, margin-top, tall, null);
+      .property-variant(pod, margin-bottom, tall, null);
+      .property-variant(pod, padding-top, tall, null);
+      .property-variant(pod, padding-bottom, tall, null);
+    }
+
+    &-tall-top {
+      .property-variant(pod, margin-top, tall, null);
+      .property-variant(pod, padding-top, tall, null);
+    }
+
+    &-tall-bottom {
+      .property-variant(pod, margin-bottom, tall, null);
+      .property-variant(pod, padding-bottom, tall, null);
     }
 
     &-taller {
-      .element-spacing(pod, taller, null);
+      .property-variant(pod, margin-top, taller, null);
+      .property-variant(pod, margin-bottom, taller, null);
+      .property-variant(pod, padding-top, taller, null);
+      .property-variant(pod, padding-bottom, taller, null);
+    }
+
+    &-taller-top {
+      .property-variant(pod, margin-top, taller, null);
+      .property-variant(pod, padding-top, taller, null);
+    }
+
+    &-taller-bottom {
+      .property-variant(pod, margin-bottom, taller, null);
+      .property-variant(pod, padding-bottom, taller, null);
     }
 
     &-narrower {
-      .element-spacing(pod, narrower, null);
+      .property-variant(pod, margin-left, narrower, null);
+      .property-variant(pod, margin-right, narrower, null);
+      .property-variant(pod, padding-left, narrower, null);
+      .property-variant(pod, padding-right, narrower, null);
+    }
+
+    &-narrower-left {
+      .property-variant(pod, margin-left, narrower, null);
+      .property-variant(pod, padding-left, narrower, null);
+    }
+
+    &-narrower-right {
+      .property-variant(pod, margin-right, narrower, null);
+      .property-variant(pod, padding-right, narrower, null);
     }
 
     &-narrow {
-      .element-spacing(pod, narrow, null);
+      .property-variant(pod, margin-left, narrow, null);
+      .property-variant(pod, margin-right, narrow, null);
+      .property-variant(pod, padding-left, narrow, null);
+      .property-variant(pod, padding-right, narrow, null);
+    }
+
+    &-narrow-left {
+      .property-variant(pod, margin-left, narrow, null);
+      .property-variant(pod, padding-left, narrow, null);
+    }
+
+    &-narrow-right {
+      .property-variant(pod, margin-right, narrow, null);
+      .property-variant(pod, padding-right, narrow, null);
     }
 
     &-wide {
-      .element-spacing(pod, wide, null);
+      .property-variant(pod, margin-left, wide, null);
+      .property-variant(pod, margin-right, wide, null);
+      .property-variant(pod, padding-left, wide, null);
+      .property-variant(pod, padding-right, wide, null);
+    }
+
+    &-wide-left {
+      .property-variant(pod, margin-left, wide, null);
+      .property-variant(pod, padding-left, wide, null);
+    }
+
+    &-wide-right {
+      .property-variant(pod, margin-right, wide, null);
+      .property-variant(pod, padding-right, wide, null);
     }
 
     &-wider {
-      .element-spacing(pod, wider, null);
+      .property-variant(pod, margin-left, wider, null);
+      .property-variant(pod, margin-right, wider, null);
+      .property-variant(pod, padding-left, wider, null);
+      .property-variant(pod, padding-right, wider, null);
+    }
+
+    &-wider-left {
+      .property-variant(pod, margin-left, wider, null);
+      .property-variant(pod, padding-left, wider, null);
+    }
+
+    &-wider-right {
+      .property-variant(pod, margin-right, wider, null);
+      .property-variant(pod, padding-right, wider, null);
     }
   }
 
@@ -43,23 +174,47 @@
   [class*=' pod'] {
 
     &.flush {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+
+    &.flush-vertical {
+      margin-bottom: 0;
+      margin-top: 0;
       padding-bottom: 0;
       padding-top: 0;
     }
 
+    &.flush-horizontal {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     &.flush-top {
+      margin-top: 0;
       padding-top: 0;
     }
 
     &.flush-bottom {
+      margin-bottom: 0;
       padding-bottom: 0;
     }
 
     &.flush-left {
+      margin-left: 0;
       padding-left: 0;
     }
 
     &.flush-right {
+      margin-right: 0;
       padding-right: 0;
     }
   }
@@ -73,40 +228,199 @@
       /* Pod */
 
       .pod {
-        .element-spacing(pod, null, screen-small);
+        .property-variant(pod, margin-bottom, null, screen-small);
+        .property-variant(pod, margin-left, null, screen-small);
+        .property-variant(pod, margin-right, null, screen-small);
+        .property-variant(pod, margin-top, null, screen-small);
+        .property-variant(pod, padding-bottom, null, screen-small);
+        .property-variant(pod, padding-left, null, screen-small);
+        .property-variant(pod, padding-right, null, screen-small);
+        .property-variant(pod, padding-top, null, screen-small);
+
+        &-top,
+        &-top-screen-small {
+          .property-variant(pod, margin-top, null, screen-small);
+          .property-variant(pod, padding-top, null, screen-small);
+        }
+
+        &-bottom,
+        &-bottom-screen-small {
+          .property-variant(pod, margin-bottom, null, screen-small);
+          .property-variant(pod, padding-bottom, null, screen-small);
+        }
+
+        &-left,
+        &-left-screen-small {
+          .property-variant(pod, margin-left, null, screen-small);
+          .property-variant(pod, padding-left, null, screen-small);
+        }
+
+        &-right,
+        &-right-screen-small {
+          .property-variant(pod, margin-right, null, screen-small);
+          .property-variant(pod, padding-right, null, screen-small);
+        }
 
         /* Pod Layout Variants */
 
-        &-shorter {
-          .element-spacing(pod, shorter, screen-small);
+        &-shorter,
+        &-shorter-screen-small {
+          .property-variant(pod, margin-top, shorter, screen-small);
+          .property-variant(pod, margin-bottom, shorter, screen-small);
+          .property-variant(pod, padding-top, shorter, screen-small);
+          .property-variant(pod, padding-bottom, shorter, screen-small);
         }
 
-        &-short {
-          .element-spacing(pod, short, screen-small);
+        &-shorter-top,
+        &-shorter-top-screen-small {
+          .property-variant(pod, margin-top, shorter, screen-small);
+          .property-variant(pod, padding-top, shorter, screen-small);
         }
 
-        &-tall {
-          .element-spacing(pod, tall, screen-small);
+        &-shorter-bottom,
+        &-shorter-bottom-screen-small {
+          .property-variant(pod, margin-bottom, shorter, screen-small);
+          .property-variant(pod, padding-bottom, shorter, screen-small);
         }
 
-        &-taller {
-          .element-spacing(pod, taller, screen-small);
+        &-short,
+        &-short-screen-small {
+          .property-variant(pod, margin-top, short, screen-small);
+          .property-variant(pod, margin-bottom, short, screen-small);
+          .property-variant(pod, padding-top, short, screen-small);
+          .property-variant(pod, padding-bottom, short, screen-small);
         }
 
-        &-narrower {
-          .element-spacing(pod, narrower, screen-small);
+        &-short-top,
+        &-short-top-screen-small {
+          .property-variant(pod, margin-top, short, screen-small);
+          .property-variant(pod, padding-top, short, screen-small);
         }
 
-        &-narrow {
-          .element-spacing(pod, narrow, screen-small);
+        &-short-bottom,
+        &-short-bottom-screen-small {
+          .property-variant(pod, margin-bottom, short, screen-small);
+          .property-variant(pod, padding-bottom, short, screen-small);
         }
 
-        &-wide {
-          .element-spacing(pod, wide, screen-small);
+        &-tall,
+        &-tall-screen-small {
+          .property-variant(pod, margin-top, tall, screen-small);
+          .property-variant(pod, margin-bottom, tall, screen-small);
+          .property-variant(pod, padding-top, tall, screen-small);
+          .property-variant(pod, padding-bottom, tall, screen-small);
         }
 
-        &-wider {
-          .element-spacing(pod, wider, screen-small);
+        &-tall-top,
+        &-tall-top-screen-small {
+          .property-variant(pod, margin-top, tall, screen-small);
+          .property-variant(pod, padding-top, tall, screen-small);
+        }
+
+        &-tall-bottom,
+        &-tall-bottom-screen-small {
+          .property-variant(pod, margin-bottom, tall, screen-small);
+          .property-variant(pod, padding-bottom, tall, screen-small);
+        }
+
+        &-taller,
+        &-taller-screen-small {
+          .property-variant(pod, margin-top, taller, screen-small);
+          .property-variant(pod, margin-bottom, taller, screen-small);
+          .property-variant(pod, padding-top, taller, screen-small);
+          .property-variant(pod, padding-bottom, taller, screen-small);
+        }
+
+        &-taller-top,
+        &-taller-top-screen-small {
+          .property-variant(pod, margin-top, taller, screen-small);
+          .property-variant(pod, padding-top, taller, screen-small);
+        }
+
+        &-taller-bottom,
+        &-taller-bottom-screen-small {
+          .property-variant(pod, margin-bottom, taller, screen-small);
+          .property-variant(pod, padding-bottom, taller, screen-small);
+        }
+
+        &-narrower,
+        &-narrower-screen-small {
+          .property-variant(pod, margin-left, narrower, screen-small);
+          .property-variant(pod, margin-right, narrower, screen-small);
+          .property-variant(pod, padding-left, narrower, screen-small);
+          .property-variant(pod, padding-right, narrower, screen-small);
+        }
+
+        &-narrower-left,
+        &-narrower-left-screen-small {
+          .property-variant(pod, margin-left, narrower, screen-small);
+          .property-variant(pod, padding-left, narrower, screen-small);
+        }
+
+        &-narrower-right,
+        &-narrower-right-screen-small {
+          .property-variant(pod, margin-right, narrower, screen-small);
+          .property-variant(pod, padding-right, narrower, screen-small);
+        }
+
+        &-narrow,
+        &-narrow-screen-small {
+          .property-variant(pod, margin-left, narrow, screen-small);
+          .property-variant(pod, margin-right, narrow, screen-small);
+          .property-variant(pod, padding-left, narrow, screen-small);
+          .property-variant(pod, padding-right, narrow, screen-small);
+        }
+
+        &-narrow-left,
+        &-narrow-left-screen-small {
+          .property-variant(pod, margin-left, narrow, screen-small);
+          .property-variant(pod, padding-left, narrow, screen-small);
+        }
+
+        &-narrow-right,
+        &-narrow-right-screen-small {
+          .property-variant(pod, margin-right, narrow, screen-small);
+          .property-variant(pod, padding-right, narrow, screen-small);
+        }
+
+        &-wide,
+        &-wide-screen-small {
+          .property-variant(pod, margin-left, wide, screen-small);
+          .property-variant(pod, margin-right, wide, screen-small);
+          .property-variant(pod, padding-left, wide, screen-small);
+          .property-variant(pod, padding-right, wide, screen-small);
+        }
+
+        &-wide-left,
+        &-wide-left-screen-small {
+          .property-variant(pod, margin-left, wide, screen-small);
+          .property-variant(pod, padding-left, wide, screen-small);
+        }
+
+        &-wide-right,
+        &-wide-right-screen-small {
+          .property-variant(pod, margin-right, wide, screen-small);
+          .property-variant(pod, padding-right, wide, screen-small);
+        }
+
+        &-wider,
+        &-wider-screen-small {
+          .property-variant(pod, margin-left, wider, screen-small);
+          .property-variant(pod, margin-right, wider, screen-small);
+          .property-variant(pod, padding-left, wider, screen-small);
+          .property-variant(pod, padding-right, wider, screen-small);
+        }
+
+        &-wider-left,
+        &-wider-left-screen-small {
+          .property-variant(pod, margin-left, wider, screen-small);
+          .property-variant(pod, padding-left, wider, screen-small);
+        }
+
+        &-wider-right,
+        &-wider-right-screen-small {
+          .property-variant(pod, margin-right, wider, screen-small);
+          .property-variant(pod, padding-right, wider, screen-small);
         }
       }
     }
@@ -121,40 +435,227 @@
       /* Pod */
 
       .pod {
-        .element-spacing(pod, null, screen-medium);
+        .property-variant(pod, margin-bottom, null, screen-medium);
+        .property-variant(pod, margin-left, null, screen-medium);
+        .property-variant(pod, margin-right, null, screen-medium);
+        .property-variant(pod, margin-top, null, screen-medium);
+        .property-variant(pod, padding-bottom, null, screen-medium);
+        .property-variant(pod, padding-left, null, screen-medium);
+        .property-variant(pod, padding-right, null, screen-medium);
+        .property-variant(pod, padding-top, null, screen-medium);
+
+        &-top,
+        &-top-screen-small,
+        &-top-screen-medium {
+          .property-variant(pod, margin-top, null, screen-medium);
+          .property-variant(pod, padding-top, null, screen-medium);
+        }
+
+        &-bottom,
+        &-bottom-screen-small,
+        &-bottom-screen-medium {
+          .property-variant(pod, margin-bottom, null, screen-medium);
+          .property-variant(pod, padding-bottom, null, screen-medium);
+        }
+
+        &-left,
+        &-left-screen-small,
+        &-left-screen-medium {
+          .property-variant(pod, margin-left, null, screen-medium);
+          .property-variant(pod, padding-left, null, screen-medium);
+        }
+
+        &-right,
+        &-right-screen-small,
+        &-right-screen-medium {
+          .property-variant(pod, margin-right, null, screen-medium);
+          .property-variant(pod, padding-right, null, screen-medium);
+        }
 
         /* Pod Layout Variants */
 
-        &-shorter {
-          .element-spacing(pod, shorter, screen-medium);
+        &-shorter,
+        &-shorter-screen-small,
+        &-shorter-screen-medium {
+          .property-variant(pod, margin-top, shorter, screen-medium);
+          .property-variant(pod, margin-bottom, shorter, screen-medium);
+          .property-variant(pod, padding-top, shorter, screen-medium);
+          .property-variant(pod, padding-bottom, shorter, screen-medium);
         }
 
-        &-short {
-          .element-spacing(pod, short, screen-medium);
+        &-shorter-top,
+        &-shorter-top-screen-small,
+        &-shorter-top-screen-medium {
+          .property-variant(pod, margin-top, shorter, screen-medium);
+          .property-variant(pod, padding-top, shorter, screen-medium);
         }
 
-        &-tall {
-          .element-spacing(pod, tall, screen-medium);
+        &-shorter-bottom,
+        &-shorter-bottom-screen-small,
+        &-shorter-bottom-screen-medium {
+          .property-variant(pod, margin-bottom, shorter, screen-medium);
+          .property-variant(pod, padding-bottom, shorter, screen-medium);
         }
 
-        &-taller {
-          .element-spacing(pod, taller, screen-medium);
+        &-short,
+        &-short-screen-small,
+        &-short-screen-medium {
+          .property-variant(pod, margin-top, short, screen-medium);
+          .property-variant(pod, margin-bottom, short, screen-medium);
+          .property-variant(pod, padding-top, short, screen-medium);
+          .property-variant(pod, padding-bottom, short, screen-medium);
         }
 
-        &-narrower {
-          .element-spacing(pod, narrower, screen-medium);
+        &-short-top,
+        &-short-top-screen-small,
+        &-short-top-screen-medium {
+          .property-variant(pod, margin-top, short, screen-medium);
+          .property-variant(pod, padding-top, short, screen-medium);
         }
 
-        &-narrow {
-          .element-spacing(pod, narrow, screen-medium);
+        &-short-bottom,
+        &-short-bottom-screen-small,
+        &-short-bottom-screen-medium {
+          .property-variant(pod, margin-bottom, short, screen-medium);
+          .property-variant(pod, padding-bottom, short, screen-medium);
         }
 
-        &-wide {
-          .element-spacing(pod, wide, screen-medium);
+        &-tall,
+        &-tall-screen-small,
+        &-tall-screen-medium {
+          .property-variant(pod, margin-top, tall, screen-medium);
+          .property-variant(pod, margin-bottom, tall, screen-medium);
+          .property-variant(pod, padding-top, tall, screen-medium);
+          .property-variant(pod, padding-bottom, tall, screen-medium);
         }
 
-        &-wider {
-          .element-spacing(pod, wider, screen-medium);
+        &-tall-top,
+        &-tall-top-screen-small,
+        &-tall-top-screen-medium {
+          .property-variant(pod, margin-top, tall, screen-medium);
+          .property-variant(pod, padding-top, tall, screen-medium);
+        }
+
+        &-tall-bottom,
+        &-tall-bottom-screen-small,
+        &-tall-bottom-screen-medium {
+          .property-variant(pod, margin-bottom, tall, screen-medium);
+          .property-variant(pod, padding-bottom, tall, screen-medium);
+        }
+
+        &-taller,
+        &-taller-screen-small,
+        &-taller-screen-medium {
+          .property-variant(pod, margin-top, taller, screen-medium);
+          .property-variant(pod, margin-bottom, taller, screen-medium);
+          .property-variant(pod, padding-top, taller, screen-medium);
+          .property-variant(pod, padding-bottom, taller, screen-medium);
+        }
+
+        &-taller-top,
+        &-taller-top-screen-small,
+        &-taller-top-screen-medium {
+          .property-variant(pod, margin-top, taller, screen-medium);
+          .property-variant(pod, padding-top, taller, screen-medium);
+        }
+
+        &-taller-bottom,
+        &-taller-bottom-screen-small,
+        &-taller-bottom-screen-medium {
+          .property-variant(pod, margin-bottom, taller, screen-medium);
+          .property-variant(pod, padding-bottom, taller, screen-medium);
+        }
+
+        &-narrower,
+        &-narrower-screen-small,
+        &-narrower-screen-medium {
+          .property-variant(pod, margin-left, narrower, screen-medium);
+          .property-variant(pod, margin-right, narrower, screen-medium);
+          .property-variant(pod, padding-left, narrower, screen-medium);
+          .property-variant(pod, padding-right, narrower, screen-medium);
+        }
+
+        &-narrower-left,
+        &-narrower-left-screen-small,
+        &-narrower-left-screen-medium {
+          .property-variant(pod, margin-left, narrower, screen-medium);
+          .property-variant(pod, padding-left, narrower, screen-medium);
+        }
+
+        &-narrower-right,
+        &-narrower-right-screen-small,
+        &-narrower-right-screen-medium {
+          .property-variant(pod, margin-right, narrower, screen-medium);
+          .property-variant(pod, padding-right, narrower, screen-medium);
+        }
+
+        &-narrow,
+        &-narrow-screen-small,
+        &-narrow-screen-medium {
+          .property-variant(pod, margin-left, narrow, screen-medium);
+          .property-variant(pod, margin-right, narrow, screen-medium);
+          .property-variant(pod, padding-left, narrow, screen-medium);
+          .property-variant(pod, padding-right, narrow, screen-medium);
+        }
+
+        &-narrow-left,
+        &-narrow-left-screen-small,
+        &-narrow-left-screen-medium {
+          .property-variant(pod, margin-left, narrow, screen-medium);
+          .property-variant(pod, padding-left, narrow, screen-medium);
+        }
+
+        &-narrow-right,
+        &-narrow-right-screen-small,
+        &-narrow-right-screen-medium {
+          .property-variant(pod, margin-right, narrow, screen-medium);
+          .property-variant(pod, padding-right, narrow, screen-medium);
+        }
+
+        &-wide,
+        &-wide-screen-small,
+        &-wide-screen-medium {
+          .property-variant(pod, margin-left, wide, screen-medium);
+          .property-variant(pod, margin-right, wide, screen-medium);
+          .property-variant(pod, padding-left, wide, screen-medium);
+          .property-variant(pod, padding-right, wide, screen-medium);
+        }
+
+        &-wide-left,
+        &-wide-left-screen-small,
+        &-wide-left-screen-medium {
+          .property-variant(pod, margin-left, wide, screen-medium);
+          .property-variant(pod, padding-left, wide, screen-medium);
+        }
+
+        &-wide-right,
+        &-wide-right-screen-small,
+        &-wide-right-screen-medium {
+          .property-variant(pod, margin-right, wide, screen-medium);
+          .property-variant(pod, padding-right, wide, screen-medium);
+        }
+
+        &-wider,
+        &-wider-screen-small,
+        &-wider-screen-medium {
+          .property-variant(pod, margin-left, wider, screen-medium);
+          .property-variant(pod, margin-right, wider, screen-medium);
+          .property-variant(pod, padding-left, wider, screen-medium);
+          .property-variant(pod, padding-right, wider, screen-medium);
+        }
+
+        &-wider-left,
+        &-wider-left-screen-small,
+        &-wider-left-screen-medium {
+          .property-variant(pod, margin-left, wider, screen-medium);
+          .property-variant(pod, padding-left, wider, screen-medium);
+        }
+
+        &-wider-right,
+        &-wider-right-screen-small,
+        &-wider-right-screen-medium {
+          .property-variant(pod, margin-right, wider, screen-medium);
+          .property-variant(pod, padding-right, wider, screen-medium);
         }
       }
     }
@@ -169,40 +670,255 @@
       /* Pod */
 
       .pod {
-        .element-spacing(pod, null, screen-large);
+        .property-variant(pod, margin-bottom, null, screen-large);
+        .property-variant(pod, margin-left, null, screen-large);
+        .property-variant(pod, margin-right, null, screen-large);
+        .property-variant(pod, margin-top, null, screen-large);
+        .property-variant(pod, padding-bottom, null, screen-large);
+        .property-variant(pod, padding-left, null, screen-large);
+        .property-variant(pod, padding-right, null, screen-large);
+        .property-variant(pod, padding-top, null, screen-large);
+
+        &-top,
+        &-top-screen-small,
+        &-top-screen-medium,
+        &-top-screen-large {
+          .property-variant(pod, margin-top, null, screen-large);
+          .property-variant(pod, padding-top, null, screen-large);
+        }
+
+        &-bottom,
+        &-bottom-screen-small,
+        &-bottom-screen-medium,
+        &-bottom-screen-large {
+          .property-variant(pod, margin-bottom, null, screen-large);
+          .property-variant(pod, padding-bottom, null, screen-large);
+        }
+
+        &-left,
+        &-left-screen-small,
+        &-left-screen-medium,
+        &-left-screen-large {
+          .property-variant(pod, margin-left, null, screen-large);
+          .property-variant(pod, padding-left, null, screen-large);
+        }
+
+        &-right,
+        &-right-screen-small,
+        &-right-screen-medium,
+        &-right-screen-large {
+          .property-variant(pod, margin-right, null, screen-large);
+          .property-variant(pod, padding-right, null, screen-large);
+        }
 
         /* Pod Layout Variants */
 
-        &-shorter {
-          .element-spacing(pod, shorter, screen-large);
+        &-shorter,
+        &-shorter-screen-small,
+        &-shorter-screen-medium,
+        &-shorter-screen-large {
+          .property-variant(pod, margin-top, shorter, screen-large);
+          .property-variant(pod, margin-bottom, shorter, screen-large);
+          .property-variant(pod, padding-top, shorter, screen-large);
+          .property-variant(pod, padding-bottom, shorter, screen-large);
         }
 
-        &-short {
-          .element-spacing(pod, short, screen-large);
+        &-shorter-top,
+        &-shorter-top-screen-small,
+        &-shorter-top-screen-medium,
+        &-shorter-top-screen-large {
+          .property-variant(pod, margin-top, shorter, screen-large);
+          .property-variant(pod, padding-top, shorter, screen-large);
         }
 
-        &-tall {
-          .element-spacing(pod, tall, screen-large);
+        &-shorter-bottom,
+        &-shorter-bottom-screen-small,
+        &-shorter-bottom-screen-medium,
+        &-shorter-bottom-screen-large {
+          .property-variant(pod, margin-bottom, shorter, screen-large);
+          .property-variant(pod, padding-bottom, shorter, screen-large);
         }
 
-        &-taller {
-          .element-spacing(pod, taller, screen-large);
+        &-short,
+        &-short-screen-small,
+        &-short-screen-medium,
+        &-short-screen-large {
+          .property-variant(pod, margin-top, short, screen-large);
+          .property-variant(pod, margin-bottom, short, screen-large);
+          .property-variant(pod, padding-top, short, screen-large);
+          .property-variant(pod, padding-bottom, short, screen-large);
         }
 
-        &-narrower {
-          .element-spacing(pod, narrower, screen-large);
+        &-short-top,
+        &-short-top-screen-small,
+        &-short-top-screen-medium,
+        &-short-top-screen-large {
+          .property-variant(pod, margin-top, short, screen-large);
+          .property-variant(pod, padding-top, short, screen-large);
         }
 
-        &-narrow {
-          .element-spacing(pod, narrow, screen-large);
+        &-short-bottom,
+        &-short-bottom-screen-small,
+        &-short-bottom-screen-medium,
+        &-short-bottom-screen-large {
+          .property-variant(pod, margin-bottom, short, screen-large);
+          .property-variant(pod, padding-bottom, short, screen-large);
         }
 
-        &-wide {
-          .element-spacing(pod, wide, screen-large);
+        &-tall,
+        &-tall-screen-small,
+        &-tall-screen-medium,
+        &-tall-screen-large {
+          .property-variant(pod, margin-top, tall, screen-large);
+          .property-variant(pod, margin-bottom, tall, screen-large);
+          .property-variant(pod, padding-top, tall, screen-large);
+          .property-variant(pod, padding-bottom, tall, screen-large);
         }
 
-        &-wider {
-          .element-spacing(pod, wider, screen-large);
+        &-tall-top,
+        &-tall-top-screen-small,
+        &-tall-top-screen-medium,
+        &-tall-top-screen-large {
+          .property-variant(pod, margin-top, tall, screen-large);
+          .property-variant(pod, padding-top, tall, screen-large);
+        }
+
+        &-tall-bottom,
+        &-tall-bottom-screen-small,
+        &-tall-bottom-screen-medium,
+        &-tall-bottom-screen-large {
+          .property-variant(pod, margin-bottom, tall, screen-large);
+          .property-variant(pod, padding-bottom, tall, screen-large);
+        }
+
+        &-taller,
+        &-taller-screen-small,
+        &-taller-screen-medium,
+        &-taller-screen-large {
+          .property-variant(pod, margin-top, taller, screen-large);
+          .property-variant(pod, margin-bottom, taller, screen-large);
+          .property-variant(pod, padding-top, taller, screen-large);
+          .property-variant(pod, padding-bottom, taller, screen-large);
+        }
+
+        &-taller-top,
+        &-taller-top-screen-small,
+        &-taller-top-screen-medium,
+        &-taller-top-screen-large {
+          .property-variant(pod, margin-top, taller, screen-large);
+          .property-variant(pod, padding-top, taller, screen-large);
+        }
+
+        &-taller-bottom,
+        &-taller-bottom-screen-small,
+        &-taller-bottom-screen-medium,
+        &-taller-bottom-screen-large {
+          .property-variant(pod, margin-bottom, taller, screen-large);
+          .property-variant(pod, padding-bottom, taller, screen-large);
+        }
+
+        &-narrower,
+        &-narrower-screen-small,
+        &-narrower-screen-medium,
+        &-narrower-screen-large {
+          .property-variant(pod, margin-left, narrower, screen-large);
+          .property-variant(pod, margin-right, narrower, screen-large);
+          .property-variant(pod, padding-left, narrower, screen-large);
+          .property-variant(pod, padding-right, narrower, screen-large);
+        }
+
+        &-narrower-left,
+        &-narrower-left-screen-small,
+        &-narrower-left-screen-medium,
+        &-narrower-left-screen-large {
+          .property-variant(pod, margin-left, narrower, screen-large);
+          .property-variant(pod, padding-left, narrower, screen-large);
+        }
+
+        &-narrower-right,
+        &-narrower-right-screen-small,
+        &-narrower-right-screen-medium,
+        &-narrower-right-screen-large {
+          .property-variant(pod, margin-right, narrower, screen-large);
+          .property-variant(pod, padding-right, narrower, screen-large);
+        }
+
+        &-narrow,
+        &-narrow-screen-small,
+        &-narrow-screen-medium,
+        &-narrow-screen-large {
+          .property-variant(pod, margin-left, narrow, screen-large);
+          .property-variant(pod, margin-right, narrow, screen-large);
+          .property-variant(pod, padding-left, narrow, screen-large);
+          .property-variant(pod, padding-right, narrow, screen-large);
+        }
+
+        &-narrow-left,
+        &-narrow-left-screen-small,
+        &-narrow-left-screen-medium,
+        &-narrow-left-screen-large {
+          .property-variant(pod, margin-left, narrow, screen-large);
+          .property-variant(pod, padding-left, narrow, screen-large);
+        }
+
+        &-narrow-right,
+        &-narrow-right-screen-small,
+        &-narrow-right-screen-medium,
+        &-narrow-right-screen-large {
+          .property-variant(pod, margin-right, narrow, screen-large);
+          .property-variant(pod, padding-right, narrow, screen-large);
+        }
+
+        &-wide,
+        &-wide-screen-small,
+        &-wide-screen-medium,
+        &-wide-screen-large {
+          .property-variant(pod, margin-left, wide, screen-large);
+          .property-variant(pod, margin-right, wide, screen-large);
+          .property-variant(pod, padding-left, wide, screen-large);
+          .property-variant(pod, padding-right, wide, screen-large);
+        }
+
+        &-wide-left,
+        &-wide-left-screen-small,
+        &-wide-left-screen-medium,
+        &-wide-left-screen-large {
+          .property-variant(pod, margin-left, wide, screen-large);
+          .property-variant(pod, padding-left, wide, screen-large);
+        }
+
+        &-wide-right,
+        &-wide-right-screen-small,
+        &-wide-right-screen-medium,
+        &-wide-right-screen-large {
+          .property-variant(pod, margin-right, wide, screen-large);
+          .property-variant(pod, padding-right, wide, screen-large);
+        }
+
+        &-wider,
+        &-wider-screen-small,
+        &-wider-screen-medium,
+        &-wider-screen-large {
+          .property-variant(pod, margin-left, wider, screen-large);
+          .property-variant(pod, margin-right, wider, screen-large);
+          .property-variant(pod, padding-left, wider, screen-large);
+          .property-variant(pod, padding-right, wider, screen-large);
+        }
+
+        &-wider-left,
+        &-wider-left-screen-small,
+        &-wider-left-screen-medium,
+        &-wider-left-screen-large {
+          .property-variant(pod, margin-left, wider, screen-large);
+          .property-variant(pod, padding-left, wider, screen-large);
+        }
+
+        &-wider-right,
+        &-wider-right-screen-small,
+        &-wider-right-screen-medium,
+        &-wider-right-screen-large {
+          .property-variant(pod, margin-right, wider, screen-large);
+          .property-variant(pod, padding-right, wider, screen-large);
         }
       }
     }
@@ -217,40 +933,283 @@
       /* Pod */
 
       .pod {
-        .element-spacing(pod, null, screen-jumbo);
+        .property-variant(pod, margin-bottom, null, screen-jumbo);
+        .property-variant(pod, margin-left, null, screen-jumbo);
+        .property-variant(pod, margin-right, null, screen-jumbo);
+        .property-variant(pod, margin-top, null, screen-jumbo);
+        .property-variant(pod, padding-bottom, null, screen-jumbo);
+        .property-variant(pod, padding-left, null, screen-jumbo);
+        .property-variant(pod, padding-right, null, screen-jumbo);
+        .property-variant(pod, padding-top, null, screen-jumbo);
+
+        &-top,
+        &-top-screen-small,
+        &-top-screen-medium,
+        &-top-screen-large,
+        &-top-screen-jumbo {
+          .property-variant(pod, margin-top, null, screen-jumbo);
+          .property-variant(pod, padding-top, null, screen-jumbo);
+        }
+
+        &-bottom,
+        &-bottom-screen-small,
+        &-bottom-screen-medium,
+        &-bottom-screen-large,
+        &-bottom-screen-jumbo {
+          .property-variant(pod, margin-bottom, null, screen-jumbo);
+          .property-variant(pod, padding-bottom, null, screen-jumbo);
+        }
+
+        &-left,
+        &-left-screen-small,
+        &-left-screen-medium,
+        &-left-screen-large,
+        &-left-screen-jumbo {
+          .property-variant(pod, margin-left, null, screen-jumbo);
+          .property-variant(pod, padding-left, null, screen-jumbo);
+        }
+
+        &-right,
+        &-right-screen-small,
+        &-right-screen-medium,
+        &-right-screen-large,
+        &-right-screen-jumbo {
+          .property-variant(pod, margin-right, null, screen-jumbo);
+          .property-variant(pod, padding-right, null, screen-jumbo);
+        }
 
         /* Pod Layout Variants */
 
-        &-shorter {
-          .element-spacing(pod, shorter, screen-jumbo);
+        &-shorter,
+        &-shorter-screen-small,
+        &-shorter-screen-medium,
+        &-shorter-screen-large,
+        &-shorter-screen-jumbo {
+          .property-variant(pod, margin-top, shorter, screen-jumbo);
+          .property-variant(pod, margin-bottom, shorter, screen-jumbo);
+          .property-variant(pod, padding-top, shorter, screen-jumbo);
+          .property-variant(pod, padding-bottom, shorter, screen-jumbo);
         }
 
-        &-short {
-          .element-spacing(pod, short, screen-jumbo);
+        &-shorter-top,
+        &-shorter-top-screen-small,
+        &-shorter-top-screen-medium,
+        &-shorter-top-screen-large,
+        &-shorter-top-screen-jumbo {
+          .property-variant(pod, margin-top, shorter, screen-jumbo);
+          .property-variant(pod, padding-top, shorter, screen-jumbo);
         }
 
-        &-tall {
-          .element-spacing(pod, tall, screen-jumbo);
+        &-shorter-bottom,
+        &-shorter-bottom-screen-small,
+        &-shorter-bottom-screen-medium,
+        &-shorter-bottom-screen-large,
+        &-shorter-bottom-screen-jumbo {
+          .property-variant(pod, margin-bottom, shorter, screen-jumbo);
+          .property-variant(pod, padding-bottom, shorter, screen-jumbo);
         }
 
-        &-taller {
-          .element-spacing(pod, taller, screen-jumbo);
+        &-short,
+        &-short-screen-small,
+        &-short-screen-medium,
+        &-short-screen-large,
+        &-short-screen-jumbo {
+          .property-variant(pod, margin-top, short, screen-jumbo);
+          .property-variant(pod, margin-bottom, short, screen-jumbo);
+          .property-variant(pod, padding-top, short, screen-jumbo);
+          .property-variant(pod, padding-bottom, short, screen-jumbo);
         }
 
-        &-narrower {
-          .element-spacing(pod, narrower, screen-jumbo);
+        &-short-top,
+        &-short-top-screen-small,
+        &-short-top-screen-medium,
+        &-short-top-screen-large,
+        &-short-top-screen-jumbo {
+          .property-variant(pod, margin-top, short, screen-jumbo);
+          .property-variant(pod, padding-top, short, screen-jumbo);
         }
 
-        &-narrow {
-          .element-spacing(pod, narrow, screen-jumbo);
+        &-short-bottom,
+        &-short-bottom-screen-small,
+        &-short-bottom-screen-medium,
+        &-short-bottom-screen-large,
+        &-short-bottom-screen-jumbo {
+          .property-variant(pod, margin-bottom, short, screen-jumbo);
+          .property-variant(pod, padding-bottom, short, screen-jumbo);
         }
 
-        &-wide {
-          .element-spacing(pod, wide, screen-jumbo);
+        &-tall,
+        &-tall-screen-small,
+        &-tall-screen-medium,
+        &-tall-screen-large,
+        &-tall-screen-jumbo {
+          .property-variant(pod, margin-top, tall, screen-jumbo);
+          .property-variant(pod, margin-bottom, tall, screen-jumbo);
+          .property-variant(pod, padding-top, tall, screen-jumbo);
+          .property-variant(pod, padding-bottom, tall, screen-jumbo);
         }
 
-        &-wider {
-          .element-spacing(pod, wider, screen-jumbo);
+        &-tall-top,
+        &-tall-top-screen-small,
+        &-tall-top-screen-medium,
+        &-tall-top-screen-large,
+        &-tall-top-screen-jumbo {
+          .property-variant(pod, margin-top, tall, screen-jumbo);
+          .property-variant(pod, padding-top, tall, screen-jumbo);
+        }
+
+        &-tall-bottom,
+        &-tall-bottom-screen-small,
+        &-tall-bottom-screen-medium,
+        &-tall-bottom-screen-large,
+        &-tall-bottom-screen-jumbo {
+          .property-variant(pod, margin-bottom, tall, screen-jumbo);
+          .property-variant(pod, padding-bottom, tall, screen-jumbo);
+        }
+
+        &-taller,
+        &-taller-screen-small,
+        &-taller-screen-medium,
+        &-taller-screen-large,
+        &-taller-screen-jumbo {
+          .property-variant(pod, margin-top, taller, screen-jumbo);
+          .property-variant(pod, margin-bottom, taller, screen-jumbo);
+          .property-variant(pod, padding-top, taller, screen-jumbo);
+          .property-variant(pod, padding-bottom, taller, screen-jumbo);
+        }
+
+        &-taller-top,
+        &-taller-top-screen-small,
+        &-taller-top-screen-medium,
+        &-taller-top-screen-large,
+        &-taller-top-screen-jumbo {
+          .property-variant(pod, margin-top, taller, screen-jumbo);
+          .property-variant(pod, padding-top, taller, screen-jumbo);
+        }
+
+        &-taller-bottom,
+        &-taller-bottom-screen-small,
+        &-taller-bottom-screen-medium,
+        &-taller-bottom-screen-large,
+        &-taller-bottom-screen-jumbo {
+          .property-variant(pod, margin-bottom, taller, screen-jumbo);
+          .property-variant(pod, padding-bottom, taller, screen-jumbo);
+        }
+
+        &-narrower,
+        &-narrower-screen-small,
+        &-narrower-screen-medium,
+        &-narrower-screen-large,
+        &-narrower-screen-jumbo {
+          .property-variant(pod, margin-left, narrower, screen-jumbo);
+          .property-variant(pod, margin-right, narrower, screen-jumbo);
+          .property-variant(pod, padding-left, narrower, screen-jumbo);
+          .property-variant(pod, padding-right, narrower, screen-jumbo);
+        }
+
+        &-narrower-left,
+        &-narrower-left-screen-small,
+        &-narrower-left-screen-medium,
+        &-narrower-left-screen-large,
+        &-narrower-left-screen-jumbo {
+          .property-variant(pod, margin-left, narrower, screen-jumbo);
+          .property-variant(pod, padding-left, narrower, screen-jumbo);
+        }
+
+        &-narrower-right,
+        &-narrower-right-screen-small,
+        &-narrower-right-screen-medium,
+        &-narrower-right-screen-large,
+        &-narrower-right-screen-jumbo {
+          .property-variant(pod, margin-right, narrower, screen-jumbo);
+          .property-variant(pod, padding-right, narrower, screen-jumbo);
+        }
+
+        &-narrow,
+        &-narrow-screen-small,
+        &-narrow-screen-medium,
+        &-narrow-screen-large,
+        &-narrow-screen-jumbo {
+          .property-variant(pod, margin-left, narrow, screen-jumbo);
+          .property-variant(pod, margin-right, narrow, screen-jumbo);
+          .property-variant(pod, padding-left, narrow, screen-jumbo);
+          .property-variant(pod, padding-right, narrow, screen-jumbo);
+        }
+
+        &-narrow-left,
+        &-narrow-left-screen-small,
+        &-narrow-left-screen-medium,
+        &-narrow-left-screen-large,
+        &-narrow-left-screen-jumbo {
+          .property-variant(pod, margin-left, narrow, screen-jumbo);
+          .property-variant(pod, padding-left, narrow, screen-jumbo);
+        }
+
+        &-narrow-right,
+        &-narrow-right-screen-small,
+        &-narrow-right-screen-medium,
+        &-narrow-right-screen-large,
+        &-narrow-right-screen-jumbo {
+          .property-variant(pod, margin-right, narrow, screen-jumbo);
+          .property-variant(pod, padding-right, narrow, screen-jumbo);
+        }
+
+        &-wide,
+        &-wide-screen-small,
+        &-wide-screen-medium,
+        &-wide-screen-large,
+        &-wide-screen-jumbo {
+          .property-variant(pod, margin-left, wide, screen-jumbo);
+          .property-variant(pod, margin-right, wide, screen-jumbo);
+          .property-variant(pod, padding-left, wide, screen-jumbo);
+          .property-variant(pod, padding-right, wide, screen-jumbo);
+        }
+
+        &-wide-left,
+        &-wide-left-screen-small,
+        &-wide-left-screen-medium,
+        &-wide-left-screen-large,
+        &-wide-left-screen-jumbo {
+          .property-variant(pod, margin-left, wide, screen-jumbo);
+          .property-variant(pod, padding-left, wide, screen-jumbo);
+        }
+
+        &-wide-right,
+        &-wide-right-screen-small,
+        &-wide-right-screen-medium,
+        &-wide-right-screen-large,
+        &-wide-right-screen-jumbo {
+          .property-variant(pod, margin-right, wide, screen-jumbo);
+          .property-variant(pod, padding-right, wide, screen-jumbo);
+        }
+
+        &-wider,
+        &-wider-screen-small,
+        &-wider-screen-medium,
+        &-wider-screen-large,
+        &-wider-screen-jumbo {
+          .property-variant(pod, margin-left, wider, screen-jumbo);
+          .property-variant(pod, margin-right, wider, screen-jumbo);
+          .property-variant(pod, padding-left, wider, screen-jumbo);
+          .property-variant(pod, padding-right, wider, screen-jumbo);
+        }
+
+        &-wider-left,
+        &-wider-left-screen-small,
+        &-wider-left-screen-medium,
+        &-wider-left-screen-large,
+        &-wider-left-screen-jumbo {
+          .property-variant(pod, margin-left, wider, screen-jumbo);
+          .property-variant(pod, padding-left, wider, screen-jumbo);
+        }
+
+        &-wider-right,
+        &-wider-right-screen-small,
+        &-wider-right-screen-medium,
+        &-wider-right-screen-large,
+        &-wider-right-screen-jumbo {
+          .property-variant(pod, margin-right, wider, screen-jumbo);
+          .property-variant(pod, padding-right, wider, screen-jumbo);
         }
       }
     }
