@@ -7,6 +7,10 @@ CNVS is available both as a standalone directory and as a [Node Module](https://
 * Clone the repository: `git clone https://github.com/mesosphere/cnvs.git`
 * Install with [npm](https://www.npmjs.com/): `npm install cnvs`
 
+# Requirements
+
+Node 9.4.x is required. We suggest using [nvm](https://github.com/creationix/nvm) or [n](https://github.com/tj/n) to keep multiple Node versions on your system.
+
 # Project Structure
 
 Within the download or check-out you'll find the following directories and files:
